@@ -172,7 +172,7 @@
             <d-cite key="nadam"></d-cite>
         </h2>
         <p>$$ w_{t+1} =w_{t}-\frac{\alpha}{\sqrt{\hat{v}_{t}}+\epsilon} \cdot \beta_{1}
-            \hat{m}_{t-1} - \frac{1-\beta_{1}}{1-\beta_{1}^{t}} \cdot g_t $$</p>
+            \hat{m}_{t} - \frac{1-\beta_{1}}{1-\beta_{1}^{t}} \cdot g_t $$</p>
         <p>where</p>
         <p>$$
             \begin{aligned}
@@ -303,7 +303,7 @@
             &=\left\{\begin{array}{cc}{\frac{v_t}{1-\beta_{2}^{t}}} & {\text { if } p_{t}>4} \\ {1} & {\text {
             otherwise }}\end{array}\right.\\ r_{t}
             &=\left\{\begin{array}{cc}{\sqrt{\frac{\left(p_{t}-4\right)\left(p_{t}-2\right)
-            p_{\infty}}{\left(p_{\infty}-4\right)\left(p_{\infty}-2\right) p_{\infty}}}} & {\text { if } p_{t}>4} \\ {1}
+            p_{\infty}}{\left(p_{\infty}-4\right)\left(p_{\infty}-2\right) p_{t}}}} & {\text { if } p_{t}>4} \\ {1}
             & {\text { otherwise }}\end{array}\right.\end{aligned}
             $$</p>
         <p>and</p>
