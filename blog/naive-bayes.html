@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Naive Bayes classifier</title>
+
+    <meta name="description" content="Notes on naive Bayes for categorical and continuous data">
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <meta name="robots" content="index,follow"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@remykarem">
+    <meta name="twitter:creator" content="@remykarem">
+    <meta name="twitter:url" content="https://remykarem.github.io/blog/naive-bayes.html">
+    <meta name="twitter:title" content="Naive Bayes classifier">
+    <meta name="twitter:description" content="Notes on naive Bayes for categorical and continuous data">
+    <meta name="twitter:image" content="https://remykarem.github.io/blog/naivebayes.png">
+    <meta name="twitter:image:alt" content="">
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        .dropdown {
+            background-color: rgb(247, 247, 247);
+            padding: 8px;
+        }
+
+        /* https://github.com/KaTeX/KaTeX/issues/327 */
+        @media only screen and (max-width: 600px) {
+            .katex-display > .katex {
+                padding-top: 4px;
+                max-width: 100%;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <d-front-matter>
+        <script type="text/json">{
+            "title": "Naive Bayes classifier",
+            "description": "",
+            "authors": [
+                {
+                "author": "Raimi bin Karim",
+                "authorURL": "https://raibosome.github.io",
+
+                "affiliationURL": "https://aisingapore.org"
+                }
+            ],
+            "katex": {
+                "delimiters": [
+                {"left": "$", "right": "$", "display": false},
+                {"left": "$$", "right": "$$", "display": true}
+                ]
+            }
+            }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>Naive Bayes classifier</h1>
+        <p>Notes on naive Bayes for categorical and continuous data</p>
+        <p>Last updated: 4 Oct 2019</p>
+    </d-title>
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#categorical">Naive Bayes for categorical data</a>
+                </li>
+                <li><a href="#continuous">Naive Bayes for continuous data</a></li>
+                <li><a href="#questions">Questions</a></li>
+            </ul>
+
+            <div>
+                <p>It is recommended that the reader have a basic understanding of the following:</p>
+                <ul>
+                    <li><a href="probability-distributions.html#categorical">Categorical</a> and
+                        <a href="probability-distributions.html#normal">Gaussian</a> distributions</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Conditional_probability_distribution">Conditional
+                            distribution</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes' theorem</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <d-article>
+
+        <h2 id="introduction">Introduction</h2>
+        <p>Naive Bayes classifiers are a set of supervised learning algorithms based on
+            applying <strong><a href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes' theorem</a></strong>,
+            but with <strong>strong independence assumptions</strong> <em>between</em> the features given the
+            value of the class variable (hence naive).
+        </p>
+        <p>There are different naive Bayes classifiers like Gaussian Naive Bayes,
+            Multinomial Naive Bayes and Bernoulli Naive Bayes. These classifiers
+            differ mainly by the <strong>assumptions</strong> they make on the distribution of every feature
+            given the value of the class variable.
+        </p>
+        <p>For this post, we focus on 2 use cases of naive Bayes for classification: categorical data and continuous data.
+            For the first, we will assume a <a href="probability-distributions.html#categorical">
+                categorical distribution</a> on
+            the features. For the latter, we assume a
+            <a href="probability-distributions.html#normal">Gaussian distribution</a>.
+            For each use case, we will break it down for you into these sections:
+            <ul>
+                <li>Data</li>
+                <li>Task</li>
+                <li>Assumptions</li>
+                <li>Pre-calculations</li>
+                <li>Inference</li>
+                <li>Code</li>
+            </ul>
+        </p>
+        <p>Now let's get on to it!</p>
+
+
+        <h2 id="categorical">Naive Bayes for categorical data</h2>
+        <h3>Data</h3>
+        <p>We collected data from 10 engineers: what OS (macOS, Linux or Windows)
+            and deep learning framework (TensorFlow, Keras or PyTorch) they use, and
+            their favourite fast food (KFC or McD).
+        </p>
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>y</th>
+                <th>x1</th>
+                <th>x2</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>KFC</td>
+                <td>macOS</td>
+                <td>TensorFlow</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>KFC</td>
+                <td>Linux</td>
+                <td>Keras</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>McD</td>
+                <td>Linux</td>
+                <td>TensorFlow</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>KFC</td>
+                <td>macOS</td>
+                <td>Keras</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>KFC</td>
+                <td>Linux</td>
+                <td>Keras</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>KFC</td>
+                <td>Windows</td>
+                <td>Keras</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>McD</td>
+                <td>macOS</td>
+                <td>PyTorch</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>McD</td>
+                <td>Windows</td>
+                <td>PyTorch</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>KFC</td>
+                <td>Linux</td>
+                <td>Keras</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>KFC</td>
+                <td>macOS</td>
+                <td>PyTorch</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>?</td>
+                <td>macOS</td>
+                <td>PyTorch</td>
+            </tr>
+            <caption>Table 1</caption>
+        </table>
+
+
+        <h3>Task</h3>
+        <p>The task is to predict if a person who uses macOS and PyTorch likes KFC or McD.</p>
+
+
+        <h3>Assumptions</h3>
+        <p>We assume that, given a particular value $y$, the distribution of $x_1$ is
+            independent of $x_2$ <d-footnote>This is to say that among those people who like
+                KFC, their choice of using an OS is independent of using a deep learning, and
+                vice versa (this is not true, we know, hence it's a naïve assumption).
+                The same can be said for McD: among those people who like
+                McD, their choice of using an OS is independent of using a deep learning, and
+                vice versa.
+            </d-footnote>. We also assume that each of these distributions are
+            categorical <d-footnote>This is like throwing a (biased) die with 3 faces.</d-footnote>.
+        </p>
+
+
+        <h3>Pre-calculations</h3>
+        <p>Based on the 10 datapoints, we can estimate the following:</p>
+        <p>$$
+            p(y) =
+            \left\{\begin{array}{ll}
+            {7/10} & {\text{if } y=\text{KFC}} \\
+            {3/10} & {\text{if } y=\text{McD}} \\
+            \end{array}\right.
+            $$</p>
+        <div id="contents" class="base-grid">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>Where did these numbers come from?</summary>
+                    <p class="dropdown">Out of the 10 data points, 7 are labelled as KFC and 3 are McD.</p>
+                </details>
+            </nav>
+        </div>
+        <p>$$
+            p(x_1|y=\text{KFC}) =
+            \left\{\begin{array}{ll}
+            {3/7} & {\text{if } x_1=\text{macOS}} \\
+            {3/7} & {\text{if } x_1=\text{Linux}} \\
+            {1/7} & {\text{if } x_1=\text{Windows}} \\
+            \end{array}\right.
+            $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>Where did these numbers come from?</summary>
+                    <p class="dropdown">Under the $x_1$ column of the 7 data points which are labelled as KFC,
+                        3 are macOS, 3 are Linux and 1 is Windows.
+                    </p>
+                </details>
+            </nav>
+        </div>
+        <p>$$
+            p(x_2|y=\text{KFC}) =
+            \left\{\begin{array}{ll}
+            {1/7} & {\text{if } x_2=\text{TensorFlow}} \\
+            {5/7} & {\text{if } x_2=\text{Keras}} \\
+            {1/7} & {\text{if } x_2=\text{PyTorch}} \\
+            \end{array}\right.
+            $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>Where did these numbers come from?</summary>
+                    <p class="dropdown">Under the $x_2$ column of the 7 data points which are labelled as KFC,
+                        5 are Keras, 1 is TensorFlow and 1 is PyTorch.
+                    </p>
+                </details>
+            </nav>
+        </div>
+        <p>$$
+            p(x_1|y=\text{McD}) =
+            \left\{\begin{array}{ll}
+            {1/3} & {\text{if } x_1=\text{macOS}} \\
+            {1/3} & {\text{if } x_1=\text{Linux}} \\
+            {1/3} & {\text{if } x_1=\text{Windows}} \\
+            \end{array}\right.
+            $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>Where did these numbers come from?</summary>
+                    <p class="dropdown">Under the $x_1$ column of the 3 data points which are labelled as McD,
+                        1 is macOS, 1 is Linux and 1 is Windows.
+                    </p>
+                </details>
+            </nav>
+        </div>
+        <p>$$
+            p(x_2|y=\text{McD}) =
+            \left\{\begin{array}{ll}
+            {1/3} & {\text{if } x_2=\text{TensorFlow}} \\
+            {0/3} & {\text{if } x_2=\text{Keras}} \\
+            {2/3} & {\text{if } x_2=\text{PyTorch}} \\
+            \end{array}\right.
+            $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>Where did these numbers come from?</summary>
+                    <p class="dropdown">Under the $x_2$ column of the 3 data points which are labelled as KFC,
+                        1 is TensorFlow and 2 are PyTorch.
+                    </p>
+                </details>
+            </nav>
+        </div>
+        <p>Take it for granted that these estimates are based on <a
+                href="https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation">
+                Maximum A Posteriori (MAP) estimation</a>.</p>
+
+
+        <h3>Inference</h3>
+        <p>We want to predict a co-worker's favourite fast food.
+            Knowing that he uses macOS and PyTorch, we can find the probability of KFC
+            being his favourite food <d-footnote>The probability of him liking McD is just taking
+                one minus the above.</d-footnote>:</p>
+        <p>$$ p(\text{eat KFC}|\text{use macOS \& PyTorch}) \\ $$</p>
+        <p>$$ = p(y=\text{KFC}|x_1=\text{macOS}, x_2=\text{PyTorch}) \\ $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <div class="dropdown">
+                        <p>Use Bayes' theorem:</p>
+                        <p>$$ p(y|x) = \frac{p(x|y)p(y)}{p(x)} $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ = \frac{p(x_1=\text{macOS}, x_2=\text{PyTorch}|y=\text{KFC}) \cdot p(y=\text{KFC})}
+            {p(x_1=\text{macOS}, x_2=\text{PyTorch})} $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <p class="dropdown">Expand the denominator</p>
+                </details>
+            </nav>
+        </div>
+        <p>$$ = \frac{p(x_1=\text{macOS}, x_2=\text{PyTorch}|y=\text{KFC}) \cdot p(y=\text{KFC})}
+            {\sum_{i=\text{KFC,McD}} p(x_1=\text{macOS}, x_2=\text{PyTorch}|y=i) \cdot p(y=i)} $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <div class="dropdown">
+                        <p>Naive Bayes assumes independence. So we can do this:</p>
+                        <p>$$ p(x_1,x_2|y) = p(x_1|y) \times p(x_2|y) $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ = \frac{p(x_1=\text{macOS}|y=\text{KFC}) \cdot p(x_2=\text{PyTorch}|y=\text{KFC}) \cdot p(y=\text{KFC})}
+            {\sum_{i=\text{KFC,McD}} p(x_1=\text{macOS}|y=i) \cdot p(x_2=\text{PyTorch}|y=i) \cdot p(y=i)} $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <div class="dropdown">
+                        <p>We know <strong>all</strong> these values based on the pre-calculations!
+                            Let's substitute them into this! Here, let me help you:</p>
+                        <p>$$ p(x_1=\text{macOS}|y=\text{KFC}) = \frac{3}{7} $$</p>
+                        <p>$$ p(x_2=\text{PyTorch}|y=\text{KFC}) = \frac{1}{7} $$</p>
+                        <p>$$ p(y=\text{KFC}) = \frac{7}{10} $$</p>
+                        <p>$$ p(x_1=\text{macOS}|y=\text{McD}) = \frac{1}{3} $$</p>
+                        <p>$$ p(x_2=\text{PyTorch}|y=\text{McD}) = \frac{2}{3} $$</p>
+                        <p>$$ p(y=\text{McD}) = \frac{3}{10} $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ = \frac{(\frac{3}{7})(\frac{1}{7})(\frac{7}{10})}
+            {(\frac{3}{7})(\frac{1}{7})(\frac{7}{10}) + (\frac{1}{3})(\frac{2}{3})(\frac{3}{10})} $$</p>
+        <p>$$ = 0.39 $$</p>
+        <p>It is more probable that this co-worker of ours likes McD instead!<d-footnote>That's
+            contrary to what you might have thought, right? And that's because we have a training
+            example with someone who uses macOS and PyTorch but likes KFC, in row 10 of Table 1.
+            However, remember that we estimated the parameters of this categorical distribution
+            based on empirical data. Firstly, we experience a class imbalance in the dataset.
+            Secondly, Have a look at the denominator in the fraction before deriving the probability of 0.39:
+            $(\frac{3}{7})(\frac{1}{7})(\frac{7}{10}) + (\frac{1}{3})(\frac{2}{3})(\frac{3}{10})$.
+            Our data tells us that 2 out of 3 (66%) of the people who like McD use
+            PyTorch. That's relatively higher than the proportion of the people who like KFC
+            and use PyTorch (1 out of 7 = 14%). This value (14%) is the main contributor to the
+            lower probability we see for KFC.
+        </d-footnote></p>
+
+        <h3>Code</h3>
+        <p>Unfortunately, scikit-learn (one of Python's most popular machine learning libraries)
+            has no implementation for categorical naive Bayes 😭.
+            See the GitHub issue <a href="https://github.com/scikit-learn/scikit-learn/issues/10856">here</a>.
+        </p>
+
+
+        <h2 id="continuous">Naive Bayes for continuous data</h2>
+        <h3>Data</h3>
+        <p>We collected data from 10 engineers: their height (cm) and weight (kg), and
+            their favourite fast food (KFC or McD).</p>
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>y</th>
+                <th>x1</th>
+                <th>x2</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>KFC</td>
+                <td>180</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>KFC</td>
+                <td>165</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>McD</td>
+                <td>167</td>
+                <td>62</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>KFC</td>
+                <td>178</td>
+                <td>63</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>KFC</td>
+                <td>174</td>
+                <td>69</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>KFC</td>
+                <td>166</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>McD</td>
+                <td>167</td>
+                <td>59</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>McD</td>
+                <td>165</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>KFC</td>
+                <td>173</td>
+                <td>68</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>KFC</td>
+                <td>178</td>
+                <td>71</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>?</td>
+                <td>177</td>
+                <td>72</td>
+            </tr>
+            <caption>Table 2</caption>
+        </table>
+
+
+        <h3>Task</h3>
+        <p>The task is to predict if a person who is 177cm tall and weighs 72kg likes
+             KFC or McD.</p>
+
+
+        <h3>Assumptions</h3>
+        <p>We assume that, given a particular value $y$, the distribution of $x_1$ is
+            independent of $x_2$ <d-footnote>This is to say that among those people who like
+                KFC, their height is independent of their weight, and
+                vice versa (this is not true, we know, hence it's a naïve assumption).
+                The same can be said for McD: among those people who like
+                McD, their height is independent of their weight, and
+                vice versa.
+            </d-footnote>. We also assume that each of these distributions are
+            <strong>Gaussian</strong> <d-footnote>This is a decent assumption for
+                natural phenomena.</d-footnote>.
+            The type of naive Bayes classifier we are using for this task is thus called
+            <strong>Gaussian naive Bayes</strong>.
+        </p>
+
+
+        <h3>Pre-calculations</h3>
+        <p>Based on the 10 datapoints, we can estimate:</p>
+        <p>$$
+            p(y) =
+            \left\{\begin{array}{ll}
+            {7/10} & {\text{if } y=\text{KFC}} \\
+            {3/10} & {\text{if } y=\text{McD}} \\
+            \end{array}\right.
+            $$</p>
+        <p>We estimate their distributions using the data (i.e., conditioned on $y$'s):</p>
+        <p>$$ p(x_1|y=\text{KFC}) = \frac{1}{\sqrt{2\pi(35)}} \exp(-\frac{(x_1-173)^2}{2(35)}) $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>Where did 173 and 35 come from?</summary>
+                    <div class="dropdown">
+                        <p>Estimate the mean:</p>
+                        <p>$$ \mu = \frac{1}{6} (180+165+178+174+166+173+178) = 173 $$</p>
+                        <p>Estimate the squared standard deviation:</p>
+                        <p>$$ \begin{aligned}
+                            \sigma^2 = \frac{1}{5} [&(180-173)^2+(165-173)^2+(178-173)^2+\\
+                            &(174-173)^2+(166-173)^2+(173-173)^2+\\
+                            &(178-173)^2] = 35
+                            \end{aligned} $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ p(x_2|y=\text{KFC}) = \frac{1}{\sqrt{2\pi(31)}} \exp(-\frac{(x_1-67)^2}{2(31)}) $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>Where did 67 and 31 come from?</summary>
+                    <div class="dropdown">
+                        <p>$$ \mu = \frac{1}{6} (75 + 61 + 63 + 69 + 60 + 68 + 71) = 67 $$</p>
+                        <p>$$ \begin{aligned}
+                            \sigma^2 = \frac{1}{5} [&(75-67)^2+(61-67)^2+(63-67)^2+ \\
+                            &(69-67)^2+(60-67)^2+(68-67)^2+\\
+                            &(71-67)^2] = 31
+                            \end{aligned} $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ p(x_1|y=\text{McD}) = \frac{1}{\sqrt{2\pi(1.33)}} \exp(-\frac{(x_1-166)^2}{2(1.33)}) $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>Where did 166 and 1.33 come from?</summary>
+                    <div class="dropdown">
+                        <p>$$ \mu = \frac{1}{3} (167+167+165) = 166 $$</p>
+                        <p>$$ \begin{aligned}
+                            \sigma^2 &= \frac{1}{2} [(167-166)^2+(167-166)^2+(165-166)^2] \\
+                            &= 1.33
+                            \end{aligned} $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ p(x_2|y=\text{McD}) = \frac{1}{\sqrt{2\pi(2.33)}} \exp(-\frac{(x_1-60)^2}{2(2.33)}) $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>Where did 60 and 2.33 come from?</summary>
+                    <div class="dropdown">
+                        <p>$$ \mu = \frac{1}{3} (62+59+60) = 60 $$</p>
+                        <p>$$ \begin{aligned}
+                            \sigma^2 &= \frac{1}{2} [(62-60)^2+(59-60)^2+(60-60)^2] \\
+                            &= 2.33
+                            \end{aligned} $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>Take it for granted that these estimates are based on <a
+                href="https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation">
+                Maximum A Posteriori (MAP) estimation</a>.</p>
+
+
+        <h3>Inference</h3>
+        <p>We want to find the probability of a co-worker's favourite food being a KFC,
+            knowing that he is 177cm tall and weighs 72kg.
+        </p>
+        <p>$$ p(y=\text{KFC}|x_1=177, x_2=72) $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <div class="dropdown">
+                        <p>Use Bayes' theorem:</p>
+                        <p>$$ p(y|x) = \frac{p(x|y)p(y)}{p(x)} $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ = \frac{p(x_1=177, x_2=72|y=\text{KFC}) \cdot p(y=\text{KFC})}
+            {p(x_1=177, x_2=72)} $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <p class="dropdown">Expand the denominator</p>
+                </details>
+            </nav>
+        </div>
+        <p>$$ = \frac{p(x_1=177, x_2=72|y=\text{KFC}) \cdot p(y=\text{KFC})}
+            {\sum_{i=\text{KFC,McD}} p(x_1=177, x_2=72|y=i) \cdot p(y=i)} $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <div class="dropdown">
+                        <p>Naive Bayes assumes independence. So we can do this:</p>
+                        <p>$$ p(x_1,x_2|y) = p(x_1|y) \times p(x_2|y) $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ = \frac{p(x_1=177|y=\text{KFC}) \cdot p(x_2=72|y=\text{KFC}) \cdot p(y=\text{KFC})}
+            {\sum_{i=\text{KFC,McD}} p(x_1=177|y=i) \cdot p(x_2=72|y=i) \cdot p(y=i)} $$</p>
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <div class="dropdown">
+                        <p>We know <strong>all</strong> these values based on the pre-calculations!
+                            Let's substitute them into this! Here, let me help you:</p>
+                        <p>$$ p(x_1=177|y=\text{KFC}) = 0.0532 $$</p>
+                        <p>$$ p(x_2=72|y=\text{KFC}) = 0.0400 $$</p>
+                        <p>$$ p(y=\text{KFC}) = \frac{7}{10} $$</p>
+                        <p>$$ p(x_1=177|y=\text{McD}) = 0 $$</p>
+                        <p>$$ p(x_2=72|y=\text{McD}) = 0 $$</p>
+                        <p>$$ p(y=\text{McD}) = \frac{3}{10} $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ = \frac{(0.0532)(0.0400)(\frac{7}{10})}
+            {(0.0532)(0.0400)(\frac{7}{10}) + (0)(0)(\frac{3}{10})} $$</p>
+        <p>$$ = 1 $$</p>
+        <p>It's almost certain that this person will like KFC! <d-footnote>
+            Compare the distributions of $x$'s given KFC and $x$'s given McD and you'll
+            understand why we obtain this extreme result.
+        </d-footnote></p>
+
+
+        <h3>Code</h3>
+        <d-code block language="python">
+            import numpy as np
+            from sklearn.naive_bayes import GaussianNB
+
+            X = [[180,75], [165,61], [167,62],
+                 [178,63], [174,69], [166,60],
+                 [167,59], [165,60], [173,68],
+                 [178,71]]
+            y = [0,0,1,0,0,0,1,1,0,0]
+            X = np.array(X)
+            y = np.array(y)
+
+            clf = GaussianNB()
+            clf.fit(X, y)
+            clf.predict([[177,72]])
+        </d-code>
+
+
+
+        <h2 id="questions">Questions</h2>
+        <p>Some questions to ponder upon:</p>
+        <ul>
+            <li>What if we have both categorical and continuous data?</li>
+            <li>Why do we need to make use of the conditional probabilities
+                when calculating $p(x)$?</li>
+            <li>The probability of any exact value for a continuous distributions is 0.
+                Why are the calculations above not equal to 0? See the StackOverflow question
+                <a href="https://stats.stackexchange.com/questions/26624/pdfs-and-probability-in-naive-bayes-classification">
+                here</a> for answer.
+            </li>
+            <li>Why does the estimate for sample variance use $N-1$ instead of $N$? See
+                <a href="https://en.wikipedia.org/wiki/Bessel%27s_correction">Bessel's
+                    correction</a> for an explanation.
+            </li>
+        </ul>
+
+        <d-appendix>
+            <h3>Conditional probability</h3>
+            <p>$$ P(A | B)=\frac{P(A \cap B)}{P(B)} $$</p>
+
+            <h3>Conditional independence</h3>
+            <p>$$ P(A \cap B | C)=\operatorname{Pr}(A | C) P(B | C) $$</p>
+
+            <h3>Bayes' theorem</h3>
+            <p>$$ P(A | B)=\frac{P(B | A) P(A)}{P(B)} $$</p>
+
+            <h3>Sample variance</h3>
+            <p>The unbiased estimator for sample variance is</p>
+            <p>$$ \frac{1}{N-1} \sum_{i=1}^N (x_i - \hat{\mu}) $$</p>
+
+
+            <h3>References</h3>
+            <p><a
+                    href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier">https://en.wikipedia.org/wiki/Naive_Bayes_classifier</a>
+            </p>
+            <p><a
+                    href="https://scikit-learn.org/stable/modules/naive_bayes.html">https://scikit-learn.org/stable/modules/naive_bayes.html</a>
+            </p>
+
+            <d-footnote-list></d-footnote-list>
+
+        </d-appendix>
+</body>
+
+</html>

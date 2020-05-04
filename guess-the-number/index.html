@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Number guessing game</title>
+
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    body {
+      width: 50%;
+      max-width: 800px;
+      min-width: 480px;
+      margin: 0 auto;
+    }
+
+    .lastResult {
+      color: white;
+      padding: 3px;
+    }
+
+    .guessesCountdown {
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Number guessing game</h1>
+
+  <p>We have selected a random number between 1 and 50. If you strategise carefully, you can guess it in 10 turns or fewer.
+    We'll tell you if your guess was too high or too low.</p>
+
+  <div class="form">
+    <p class="guessesCountdown"></p>
+    <label for="guessField">Enter a guess: </label>
+    <input type="text" id="guessField" class="guessField">
+    <input type="submit" value="Submit guess" class="guessSubmit">
+  </div>
+
+  <div class="resultParas">
+    <p class="guesses"></p>
+    <p class="difference"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
+  </div>
+
+  <script>
+    // Generate our random number
+    var randomNumber = Math.floor(Math.random() * 50) + 1;
+
+    // Get text input and submit button from the form
+    var guessField = document.querySelector('.guessField');
+    var guessSubmit = document.querySelector('.guessSubmit');
+
+    // For display
+    var guessesCountdown = document.querySelector('.guessesCountdown');
+    var guesses = document.querySelector('.guesses');
+    var difference = document.querySelector('.difference');
+    var lastResult = document.querySelector('.lastResult');
+    var lowOrHi = document.querySelector('.lowOrHi');
+
+    var guessCount = 1;
+    var guessesLeft = 6;
+    var guessPrev = 0;
+    var fontSize = 16;
+    var resetButton;
+
+    guessesCountdown.textContent = 'Guesses left: ' + guessesLeft;
+
+        // Listens for click
+    guessSubmit.addEventListener('click', checkGuess);
+
+
+    // document.getElementById('.guessField').addEventListener('keydown', function (e) {
+    //   console.log("hello");
+    // });
+
+    function checkGuess() {
+
+      var userGuess = Number(guessField.value);
+      // var diff = 
+      // console.log(diff);
+      difference.textContent = 'Difference between last guess and the previous: ' + Math.abs(userGuess - guessPrev);
+      guessPrev = userGuess;
+
+      if (guessCount === 1) {
+        guesses.textContent = 'Previous guesses: ';
+      }
+      guesses.textContent += userGuess + ' ';
+
+      if (userGuess === randomNumber) {
+        lastResult.textContent = 'Correct! You managed to do it in ' + guessCount + ' guesses.';
+        lastResult.style.backgroundColor = 'green';
+        lowOrHi.textContent = '';
+        guessesCountdown.style.fontSize = "16px";
+        setGameOver();
+      } else if (guessCount === 6) {
+        lastResult.textContent = '!!!GAME OVER!!! The number you were trying so hard to guess was just ' + randomNumber;
+        setGameOver();
+      } else {
+        lastResult.textContent = 'Wrong!';
+        lastResult.style.backgroundColor = 'red';
+        if (userGuess < randomNumber) {
+          lowOrHi.textContent = 'Last guess was too low!';
+        } else if (userGuess > randomNumber) {
+          lowOrHi.textContent = 'Last guess was too high!';
+        }
+      }
+
+      guessCount++;
+      guessesLeft--;
+      fontSize += 1
+      guessesCountdown.style.fontSize = fontSize + 'px';
+      guessField.value = '';
+      // guessField.focus();
+
+      guessesCountdown.textContent = 'Guesses left: ' + guessesLeft;
+    }
+
+    function setGameOver() {
+      guessField.disabled = true;
+      guessSubmit.disabled = true;
+      resetButton = document.createElement('button');
+      resetButton.textContent = 'Start new game';
+      document.body.appendChild(resetButton);
+      resetButton.addEventListener('click', resetGame);
+    }
+
+    function resetGame() {
+      guessCount = 1;
+
+      var resetParas = document.querySelectorAll('.resultParas p');
+      for (var i = 0; i < resetParas.length; i++) {
+        resetParas[i].textContent = '';
+      }
+
+      resetButton.parentNode.removeChild(resetButton);
+
+      guessField.disabled = false;
+      guessSubmit.disabled = false;
+      guessField.value = '';
+      guessesLeft = 6
+      guessField.focus();
+
+      lastResult.style.backgroundColor = 'white';
+
+      randomNumber = Math.floor(Math.random() * 1000) + 1;
+    }
+
+
+    
+
+
+  </script>
+</body>
+
+</html>

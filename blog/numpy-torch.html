@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NumPy and PyTorch APIs</title>
+
+    <meta name="description" content="Notes on naive Bayes for categorical and continuous data">
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <meta name="robots" content="index,follow"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@remykarem">
+    <meta name="twitter:creator" content="@remykarem">
+    <meta name="twitter:url" content="https://remykarem.github.io/blog/naive-bayes.html">
+    <meta name="twitter:title" content="Naive Bayes classifier">
+    <meta name="twitter:description" content="Notes on naive Bayes for categorical and continuous data">
+    <meta name="twitter:image" content="https://remykarem.github.io/blog/naivebayes.png">
+    <meta name="twitter:image:alt" content="">
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        .dropdown {
+            background-color: rgb(247, 247, 247);
+            padding: 8px;
+        }
+
+        /* https://github.com/KaTeX/KaTeX/issues/327 */
+        @media only screen and (max-width: 600px) {
+            .katex-display>.katex {
+                padding-top: 4px;
+                max-width: 100%;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <d-front-matter>
+        <script type="text/json">{
+            "title": "Naive Bayes classifier",
+            "description": "",
+            "authors": [
+                {
+                "author": "Raimi bin Karim",
+                "authorURL": "https://raibosome.github.io",
+
+                "affiliationURL": "https://aisingapore.org"
+                }
+            ],
+            "katex": {
+                "delimiters": [
+                {"left": "$", "right": "$", "display": false},
+                {"left": "$$", "right": "$$", "display": true}
+                ]
+            }
+            }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>NumPy and PyTorch APIs</h1>
+        <p>Notes on naive Bayes for categorical and continuous data</p>
+        <p>Last updated: 22 Oct 2019</p>
+    </d-title>
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#categorical">Naive Bayes for categorical data</a>
+                </li>
+                <li><a href="#continuous">Naive Bayes for continuous data</a></li>
+                <li><a href="#questions">Questions</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <d-article>
+
+
+        <h3>Creation</h3>
+
+        <table>
+            <tr>
+                <th>NumPy</th>
+                <th>PyTorch</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>np.zeros</td>
+                <td>torch.zeros</td>
+                <td>Tensor of zeros</td>
+            </tr>
+            <tr>
+                <td>np.ones</td>
+                <td>torch.ones</td>
+            </tr>
+            <tr>
+                <td>np.empty</td>
+                <td>torch.empty</td>
+            </tr>
+            <tr>
+                <td>np.array</td>
+                <td>torch.tensor</td>
+            </tr>
+            <tr>
+                <td>np.arange</td>
+                <td>torch.arange</td>
+            </tr>
+            <tr>
+                <td>np.random.rand</td>
+                <td>torch.rand</td>
+                <td>Uniform distribution</td>
+            </tr>
+            <tr>
+                <td>np.random.randn</td>
+                <td>torch.randn</td>
+                <td>Gaussian distribution</td>
+            </tr>
+            <tr>
+                <td>np.random.randint</td>
+                <td>torch.randint</td>
+            </tr>
+            <caption>Table 1</caption>
+        </table>
+
+        <h3>Operations</h3>
+
+        <table>
+            <tr>
+                <th>NumPy</th>
+                <th>PyTorch</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>np.add</td>
+                <td>torch.add</td>
+            </tr>
+            <tr>
+                <td>np.subtract</td>
+                <td>torch.sub</td>
+            </tr>
+            <tr>
+                <td>np.power</td>
+                <td>torch.pow</td>
+            </tr>
+            <tr>
+                <td>np.ndarray.add</td>
+                <td>torch.Tensor.add</td>
+            </tr>
+            <tr>
+                <td>np.ndarray.subtract</td>
+                <td>torch.Tensor.sub</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>NumPy</th>
+                <th>PyTorch</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>np.sin</td>
+                <td>torch.sin</td>
+            </tr>
+            <tr>
+                <td>np.cos</td>
+                <td>torch.cos</td>
+            </tr>
+        </table>
+
+        <h3>Shape Manipulation</h3>
+
+        <table>
+            <tr>
+                <th>NumPy</th>
+                <th>PyTorch</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>np.ndarray.reshape</td>
+                <td>torch.Tensor.reshape</td>
+            </tr>
+            <tr>
+                <td>np.ndarray.repeat</td>
+                <td>torch.Tensor.repeat</td>
+                <td>???</td>
+            </tr>
+            <tr>
+                <td>np.repeat</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>np.ndarray.transpose</td>
+                <td>torch.Tensor.transpose</td>
+            </tr>
+        </table>
+
+        <h3>Infos</h3>
+
+        <table>
+            <tr>
+                <th>NumPy</th>
+                <th>PyTorch</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>np.ndarray.shape</td>
+                <td>torch.Tensor.shape</td>
+            </tr>
+            <tr>
+                <td>np.ndarray.dtype</td>
+                <td>torch.Tensor.dtype</td>
+            </tr>
+        </table>
+
+        <h3>Data types</h3>
+
+        <table>
+            <tr>
+                <th>NumPy</th>
+                <th>PyTorch</th>
+            </tr>
+            <tr>
+                <td>np.ndarray.astype</td>
+                <td>torch.Tensor.type</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>NumPy</th>
+                <th>PyTorch</th>
+            </tr>
+            <tr>
+                <td>np.int8</td>
+                <td>torch.randint</td>
+            </tr>
+        </table>
+
+
+
+
+        <d-appendix>
+
+            <d-footnote-list></d-footnote-list>
+
+        </d-appendix>
+</body>
+
+</html>

@@ -1,0 +1,512 @@
+<!doctype <!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<head>
+    <title>Transliterator</title>
+    <style>
+        html {
+            text-align: center;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            width: 50%;
+        }
+
+        .threeCol {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        input {
+            font-size: 16px;
+        }
+
+        textarea {
+            max-width: 100%
+        }
+
+        .fixedDiv {
+            /* position: fixed; */
+        }
+    </style>
+    
+    <!-- Chatbot -->
+    <script type="text/javascript">(function (t, e) { var r = function (t) { try { var r = e.head || e.getElementsByTagName("head")[0]; a = e.createElement("script"); a.setAttribute("type", "text/javascript"); a.setAttribute("src", t); r.appendChild(a); } catch (t) { } }; t.CollectId = "5c094ab65c854b285067c9d0"; r("https://collectcdn.com/launcher.js"); })(window, document);</script>
+</head>
+
+<body>
+    <div class="fixedDiv">
+        <h1>Arabic Reverse Transliterator</h1>
+        <p>Looking to type in arabic but wish you could type faster? You're in the right place!</p>
+
+        <h2>Enter romanised text below:</h2>
+        <p>Case-sensitive. Do not capitalise the first letter in sentence unnecessarily.</p>
+        <textarea rows="4" cols="100" id="romanText" class="romanText" autocapitalize="off"></textarea>
+        <br>
+        <input type="submit" value="Submit" class="romanTextSubmit">
+        <input type="submit" value="Clear" class="romanTextClear">
+
+        <h2>Your text in arabic:</h2>
+        <h4 class="output"></h4>
+        <br>
+        <!-- <button onclick="">Toggle vowels</button> -->
+    </div>
+
+    <h2>Examples</h2>
+
+    <!-- <table style="overflow-x:auto;">
+        <tr>
+            <th>Arabic</th>
+            <th>Romanised</th>
+        </tr>
+        <tr>
+            <td>kataba kaatibuN kitaabaN fee mak*tabat"iN</td>
+            <td>كَتَبَ كَاتِبٌ كِتَابًا فِي مَكْتَبَةٍ</td>
+        </tr>
+        <tr>
+            <td>chou bta7kee yaa 7abib*tee?</td>
+            <td>شُو بتَحكِي يَا حَبِبْتِي؟</td>
+        </tr>
+        <tr>
+            <td>2ana 2asra3 minnak waminkum</td>
+            <td>أَنا أَسرَع مِنَّك وَمِنكُم</td>
+        </tr>
+    </table> -->
+
+    <table style="overflow-x:auto;" class="threeCol">
+        <tr>
+            <th>Wrong</th>
+            <th>Correct</th>
+            <th>Arabic</th>
+        </tr>
+        <tr>
+            <td>almasjid</td>
+            <td>al-masjid</td>
+            <td>المَسجِد</td>
+        </tr>
+        <tr>
+            <td>assalaamualaikum</td>
+            <td>as-salaamu 3alaikum</td>
+            <td>السَّلَامُ عَلَيْكُم </td>
+        </tr>
+        <tr>
+            <td>alhamdulillah</td>
+            <td>al-7amdu lillah</td>
+            <td>الحَمدُ لله
+            </td>
+        </tr>
+        <tr>
+            <td>shukran</td>
+            <td>shukraN</td>
+            <td>شُكرًا</td>
+        </tr>
+        <tr>
+            <td>madrasa / madrasah</td>
+            <td>madrasat"</td>
+            <td>مَدرَسَة</td>
+        </tr>
+    </table>
+
+    <h2>Special Characters</h2>
+
+    <table class="threeCol" style="overflow-x:auto;">
+        <tr>
+            <th>Property</th>
+            <th>Symbol</th>
+            <th>Usage</th>
+            <th>Without symbol</th>
+            <th>With symbol</th>
+        </tr>
+        <tr>
+            <td>alif maq9oura</td>
+            <td>^</td>
+            <td>3alaa^</td>
+            <td>عَلَا</td>
+            <td>عَلَى</td>
+        </tr>
+        <tr>
+            <td>taa2 marbuTa</td>
+            <td>t"</td>
+            <td>madrasat"</td>
+            <td>مَدرَسَت</td>
+            <td>مَدرَسَة</td>
+        </tr>
+        <tr>
+            <td>silent alef</td>
+            <td>|</td>
+            <td>kafarou|</td>
+            <td>كَفَرُو</td>
+            <td>كَفَرُوا</td>
+        </tr>
+        <tr>
+            <td>sukoon</td>
+            <td>*</td>
+            <td>em*ti7aan</td>
+            <td>اِمتِحَان</td>
+            <td>اِمْتِحَان</td>
+        </tr>
+    </table>
+
+    <h2>Special Consonants to Remember</h2>
+
+    <table style="overflow-x:auto;">
+        <tr>
+            <th>Romanised</th>
+            <th>Arabic</th>
+        </tr>
+        <tr>
+            <td>th</td>
+            <td>ث</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>ح</td>
+        </tr>
+        <tr>
+            <td>j / g</td>
+            <td>ج</td>
+        </tr>
+        <tr>
+            <td>kh / 5</td>
+            <td>خ</td>
+        </tr>
+        <tr>
+            <td>dz / d'</td>
+            <td>ذ</td>
+        </tr>
+        <tr>
+            <td>sh / ch / s'</td>
+            <td>ش</td>
+        </tr>
+        <tr>
+            <td>9 / S</td>
+            <td>ص</td>
+        </tr>
+        <tr>
+            <td>dh / 9'</td>
+            <td>ض</td>
+        </tr>
+        <tr>
+            <td>T</td>
+            <td>ط</td>
+        </tr>
+        <tr>
+            <td>Z</td>
+            <td>ظ</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>ع</td>
+        </tr>
+        <tr>
+            <td>gh / 3'</td>
+            <td>غ</td>
+        </tr>
+        <tr>
+            <td>t"</td>
+            <td>ة</td>
+        </tr>
+    </table>
+
+    <h2>Notes</h2>
+    <p>Use of this web app requires basic knowledge of Arabic.</p>
+    <p>We do not support romanised variants for consonants in Arabic dialects. For example, 'g' is often used to romanise the
+        letter ق</p>
+    <p>This web app is still in beta version.</p>
+    <p>See the source code on GitHub
+        <a href="https://github.com/raibosome/raibosome.github.io/blob/master/arabic-transliterator/index.html">here</a>
+    </p>
+    <p>Found a bug? Submit
+        <a href="https://github.com/raibosome/raibosome.github.io/issues">here</a>
+    </p>
+    <br>
+    <p>Bytehouse 2018</p>
+    <script>
+        const fatha = 'َ';
+        const dhamma = 'ُ';
+        const kasra = 'ِ';
+
+        const alifSeatTop = 'أ';
+        const alifSeatBtm = 'إ';
+        const wawSeat = 'ؤ';
+        const yaaSeat = 'ئ';
+
+        const hamza = 'ء';
+
+        var romanText = document.querySelector('.romanText');
+        var submitButton = document.querySelector('.romanTextSubmit');
+        var clearButton = document.querySelector('.romanTextClear');
+
+        var outputText = document.querySelector('.output');
+
+        function transliterate() {
+            var final = " " + romanText.value;
+            // if (final.substring(0,1) === 'i')
+
+
+            // standardise variations
+            final = final.concat(" ")
+                .replace(/[\u201C]/g, "\"").replace(/[\u201D]/g, "\"")
+                .replace(/[\u2018]/g, "\'").replace(/[\u2019]/g, "\'")
+
+                // standardisation
+                .replace(/el-/g, 'al-')
+
+                .replace(/ee/g, 'ii')
+                .replace(/ou/g, 'uu')
+                .replace(/oo/g, 'uu')
+                .replace(/e/g, 'i')
+                .replace(/o/g, 'u')
+
+                .replace(/a\'/g, '3')
+                .replace(/kh/g, '5')
+                .replace(/d\'/g, 'dz')
+                .replace(/s\'/g, 'sh')
+                .replace(/ch/g, 'sh')
+                .replace(/sy/g, 'sh')
+                .replace(/S/g, '9')
+                .replace(/9'/g, 'dh')
+                .replace(/3'/g, 'gh')
+
+                // sun letters -.-
+                .replace(/ath-/g, 'al-')
+                .replace(/ad-/g, 'al-')
+                .replace(/adz-/g, 'al-')
+                .replace(/ar-/g, 'al-')
+                .replace(/az-/g, 'al-')
+                .replace(/as-/g, 'al-')
+                .replace(/ash-/g, 'al-')
+                .replace(/aS-/g, 'al-')
+                .replace(/adh-/g, 'al-')
+                .replace(/aT-/g, 'al-')
+                .replace(/aZ-/g, 'al-')
+                ;
+
+            console.log(final);
+
+            // Need to decide what to replace hamza with
+            // var hamzaReplacement = processOneHamza(final);
+
+            final = final
+                // Special words
+                .replace(/2ana/g, 'أَنا')
+                .replace(/billah/g, 'biallah')
+                .replace(/allah/g, 'الله')
+                .replace(/lillah/g, 'لله')
+                .replace(/hadza/g, 'هذا')
+                .replace(/dzalik/g, 'ذلك')
+
+                .replace(/\*/g, 'ْ')
+
+                .replace(/ i/g, ' اِ')
+                .replace(/ 2aa/g, 'آ') // takes care of first words too
+                .replace(/ 2a/g, ' أَ') // takes care of first words too
+                .replace(/ 2u/g, ' أُ') // takes care of first words too
+                .replace(/ 2i/g, ' إِ') // takes care of first words too
+                .replace(/al-2aa/g, 'الآ') // takes care of first words too
+                .replace(/al-2a/g, 'الأَ') // takes care of first words too
+                .replace(/al-2u/g, 'الأُ') // takes care of first words too
+                .replace(/al-2i/g, 'الإِ') // takes care of first words too
+
+                .replace(/aa2a /g, 'aa' + hamza + 'a ')
+                .replace(/aa2i /g, 'aa' + hamza + 'i ')
+                .replace(/a2i/g, 'a' + yaaSeat + 'i')
+                .replace(/u2i/g, 'u' + yaaSeat + 'i')
+                .replace(/i2i/g, 'i' + yaaSeat + 'i')
+                .replace(/i2a/g, 'i' + yaaSeat + 'a')
+                .replace(/a2a/g, 'a' + alifSeatTop + 'a')
+                .replace(/u2a/g, 'u' + wawSeat + 'a')
+                .replace(/u2/g, 'u' + wawSeat)
+                .replace(/a2/g, 'a' + alifSeatTop)
+                .replace(/i2/g, 'i' + yaaSeat)
+                .replace(/2u/g, wawSeat + 'u')
+
+                // Long vowels (must come first)
+                .replace(/aa\^/g, 'َى')
+                .replace(/aa/g, 'َا')
+                .replace(/ii/g, 'ِي')
+                .replace(/uu/g, 'ُو')
+
+                // Diphthongs
+                .replace(/ai/g, 'َيْ')
+                .replace(/ei/g, 'َيْ')
+                // .replace(/ay/g, 'َيْ')
+                .replace(/au/g, 'َوْ')
+
+                // al- and shamsiya letters
+                .replace(/al-th/g, 'al-thth')
+                .replace(/thth/g, 'ثّ') // 
+                .replace(/al-t\'/g, 'al-t\'t\'') //
+                .replace(/t't'/g, 'ثّ') // 
+
+                .replace(/al-dz/g, 'al-dzdz')
+                .replace(/dzdz/g, 'ذّ') //
+
+                .replace(/al-sh/g, 'al-shsh')
+                .replace(/shsh/g, 'شّ')
+
+                .replace(/al-dh/g, 'al-dhdh')
+                .replace(/dhdh/g, 'ضّ')
+
+                .replace(/al-d/g, 'al-dd')
+                .replace(/al-t/g, 'al-tt')
+                .replace(/al-s/g, 'al-ss')
+                .replace(/al-r/g, 'al-rr')
+                .replace(/al-z/g, 'al-zz')
+                .replace(/al-9/g, 'al-99')
+                .replace(/al-T/g, 'al-TT')
+                .replace(/al-Z/g, 'al-ZZ')
+                .replace(/al-n/g, 'al-nn')
+
+                .replace(/bil-/g, 'bial-')
+                .replace(/al-/g, 'ال')
+
+
+                // Vowels
+                .replace(/aN/g, 'ًا')
+                .replace(/uN/g, 'ٌ')
+                .replace(/iN/g, 'ٍ')
+                .replace(/a/g, 'َ')
+                .replace(/i/g, 'ِ')
+                .replace(/e/g, 'ِ')
+                .replace(/u/g, 'ُ')
+                .replace(/o/g, 'ُ')
+                .replace(/\|/g, 'ا') // silent alif for verbs
+
+                // Shaddated consonants
+                .replace(/bb/g, 'بّ')
+                .replace(/tt/g, 'تّ')
+                .replace(/jj/g, 'جّ')
+                .replace(/77/g, 'حّ')
+                .replace(/55/g, 'خّ')
+                .replace(/dd/g, 'دّ')
+                .replace(/rr/g, 'رّ')
+                .replace(/zz/g, 'زّ')
+                .replace(/ss/g, 'سّ')
+                .replace(/99/g, 'صّ')
+                .replace(/TT/g, 'طّ')
+                .replace(/ZZ/g, 'ظّ')
+                .replace(/ghgh/g, 'غ')
+                .replace(/33/g, 'عّ')
+                .replace(/ff/g, 'فّ')
+                .replace(/qq/g, 'قّ')
+                .replace(/kk/g, 'كّ')
+                .replace(/ll/g, 'لّ')
+                .replace(/mm/g, 'مّ')
+                .replace(/nn/g, 'نّ')
+                .replace(/ww/g, 'وّ')
+                .replace(/hh/g, 'هّ')
+                .replace(/yy/g, 'يّ')
+
+                // Consonants
+                .replace(/b/g, 'ب')
+                .replace(/th/g, 'ث')
+                .replace(/t"/g, 'ة')
+                .replace(/t'/g, 'ث') // 
+                .replace(/t/g, 'ت')
+                .replace(/j/g, 'ج')
+                .replace(/7/g, 'ح')
+                .replace(/5/g, 'خ')
+                .replace(/dh/g, 'ض')
+                .replace(/dz/g, 'ذ')
+                .replace(/d/g, 'د')
+                .replace(/r/g, 'ر')
+                .replace(/z/g, 'ز')
+                .replace(/sh/g, 'ش')
+                .replace(/s/g, 'س')
+                .replace(/9/g, 'ص')
+                .replace(/T/g, 'ط')
+                .replace(/Z/g, 'ظ')
+                .replace(/gh/g, 'غ')
+                .replace(/g/g, 'j') // 
+                .replace(/3/g, 'ع')
+                .replace(/f/g, 'ف')
+                .replace(/q/g, 'ق')
+                .replace(/k/g, 'ك')
+                .replace(/l/g, 'ل')
+                .replace(/m/g, 'م')
+                .replace(/n/g, 'ن')
+                .replace(/w/g, 'و')
+                .replace(/h/g, 'ه')
+                .replace(/2/g, 'ء') // others
+                .replace(/y/g, 'ي')
+
+                // Punctuation
+                .replace(/\?/g, '؟')
+
+                // TODO not showing period at the correct position
+                .replace(/\./g, '.');
+
+
+            // final = processHamza(final);
+
+            outputText.textContent = final;
+
+        }
+
+        function clearText() {
+            romanText.value = "";
+        }
+
+        function removeVowels(input) {
+            input.replace(/َ/g, '').replace(/ِ/g, '').replace(/ُ/g, '')
+                .replace(/ً/g, '').replace(/ٍ/g, '').replace(/ٌ/g, '')
+                .replace(/ْ/g, '')
+        }
+
+        // for one instance
+        function processOneHamza(input) {
+
+            var n = input.indexOf(hamza);
+            console.log(n);
+            if (n === -1) {
+                console.log('no hamza');
+                return input;
+            } else {
+                console.log('hamza exists');
+
+                // first position
+                var minus2 = input.charAt(n - 2);
+                var minus1 = input.charAt(n - 1);
+                var plus1 = input.charAt(n + 1);
+
+                console.log(minus2);
+                console.log(minus1);
+                console.log(plus1);
+
+                switch (minus1) {
+                    case fatha: input.replace('', ''); break;
+                    case kasra: ;
+                }
+
+                console.log('input is ' + input);
+
+                return input;
+            }
+        }
+
+        submitButton.addEventListener('click', transliterate);
+        clearButton.addEventListener('click', clearText);
+
+    </script>
+</body>
+
+</html>

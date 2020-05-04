@@ -1,0 +1,14 @@
+{
+    "areas": [
+        {
+            "name": "IKEA ALexandra",
+            "lat": 1.2880072,
+            "lng": 103.8038333
+        },
+        {
+            "name": "IKEA Tampines",
+            "lat": 1.374177,
+            "lng": 103.9300986
+        }
+    ]
+}

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <d-front-matter>
+        <script type="text/json">{
+            "title": "Probability distributions (WIP)",
+            "description": "",
+            "authors": [
+                {
+                "author": "Raimi bin Karim",
+                "authorURL": "https://raibosome.github.io",
+
+                "affiliationURL": "https://aisingapore.org"
+                }
+            ],
+            "katex": {
+                "delimiters": [
+                {"left": "$", "right": "$", "display": false},
+                {"left": "$$", "right": "$$", "display": true}
+                ]
+            }
+            }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>Probability distributions</h1>
+        <p>Notes on probability distributions</p>
+        <p>Last updated: 1 Mar 2020</p>
+    </d-title>
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#bernoulli">Bernoulli</a></li>
+                <li><a href="#categorical">Categorical</a></li>
+                <li><a href="#geometric">Geometric</a></li>
+                <li><a href="#binomial">Binomial</a></li>
+                <li><a href="#poisson">Poisson</a></li>
+                <li><a href="#exponential">Exponential</a></li>
+                <li>Weibull</li>
+                <li><a href="#uniform">Uniform</a></li>
+                <li><a href="#normal">Normal</a></li>
+                <li><a href="#chi-square">Chi-square</a></li>
+                <li><a href="#t">Student's t</a></li>
+                <li><a href="#f">F</a></li>
+                <li>Cauchy</li>
+                <li><a href="#gamma">Gamma</a></li>
+                <li><a href="#beta">Beta</a></li>
+                <li><a href="#multinomial">Multinomial</a></li>
+                <li><a href="#negative-binomial">Negative Binomial</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <d-article>
+
+        <h2 id="bernoulli">Bernoulli</h2>
+        <p>Say in an experiment (eg. coin toss) you observe <strong>two</strong> outcomes $x=\{0,1\}$.
+            Set the probability of seeing "1" (usually the positive one) to $0.8$.
+            Accordingly, this follows that probability of seeing "0" is $1-0.8=0.2$. So</p>
+        <p>$$ P(X=1) = 0.8 $$</p>
+        <p>and</p>
+        <p>$$ P(X=0) = 0.2 $$</p>
+        <p>can be rewritten as</p>
+        <p>$$ P(X=x) =
+            \left\{\begin{array}{ll}{0.8} & {x=1} \\ {0.2} & {x=0} \end{array}\right.
+            $$</p>
+        <p>which can be rewritten as</p>
+        <p>$$ P(X=x) = (0.8)^x (0.2)^{1-x} $$</p>
+        <h3>Definition</h3>
+        <p>$$ P(X=x) = p^x(1-p)^{1-x} $$</p>
+        <p>where $p$ is the probability of the positive outcome.</p>
+        <ul>
+            <li>1 trial</li>
+            <li>2 outcomes</li>
+            <ul>
+                <li>1 of the outcomes ("success") has probability $p$</li>
+            </ul>
+        </ul>
+        <p>What happens if you have $n$ trials where only the last is a success?
+            What happens if you have $n$ trials, $k$ of which are successes?
+            What happens if you have $K$ different outcomes?</p>
+        <h3>Uses</h3>
+        <ul>
+            <li>Modelling the outcome of a coin toss.</li>
+        </ul>
+
+
+        <h2 id="categorical">Categorical</h2>
+        <p>Also known as generalised Bernoulli distribution or multinoulli distribution.</p>
+        <p>This probability distribution describes the possible results of a random variable
+            that takes<strong> one of $K$ possible categories</strong>. Moreover, the probability
+            of each category is separately specified. An example would be that of a die.
+        </p>
+        <h3>Definition</h3>
+        <p>There are 3 ways to define such a distribution:</p>
+        <p>$$ p(x=i) = p_i $$</p>
+        <p>or</p>
+        <p>$$ p(x) = p_1^{1_{x=1}} p_2^{1_{x=1}} \cdots p_k^{1_{x=1}} $$</p>
+        <p>or</p>
+        <p>$$ p(x) = 1_{x=1} p_1 + 1_{x=2} p_2 + \cdots +  1_{x=k} p_k $$</p>
+        <p>where $1$ is the indicator function.
+        <ul>
+            <li>1 trial</li>
+            <li>$K$ outcomes</li>
+            <ul>
+                <li>Each outcome has a ("success") probability of $p_i$</li>
+            </ul>
+        </ul>
+        <h3>Uses</h3>
+        <ul>
+            <li>Modelling the outcome of a die throw.</li>
+        </ul>
+
+
+        <h2 id="geometric">Geometric</h2>
+        <h3>Intuition</h3>
+        <p>Say you need to conduct an experiment. This experiment involves repeating (called trials)
+            until we get what we want. In each trial, there are only <strong>two</strong> outcomes,
+            $\{0,1\}$. The probability of observing 1 (usually set to what we want) is $p$. This follows that observing
+            0
+            is $1-p$. What is the probability of <strong>finally</strong> getting 1 in one trial?
+        </p>
+        <p>$$ p $$</p>
+        <p>And in 2 trials (getting 0 then 1)?</p>
+        <p>$$ (1-p)p $$</p>
+        <p>And in $10$ trials (getting 0 nine times then 1)?</p>
+        <p>$$ (1-p)^9p $$</p>
+        <h3>Definition</h3>
+        <p>And in $k$ trials (getting 0 $k-1$ times then 1)?</p>
+        <p>$$ P(X=k)= (1-p)^{k-1}p $$</p>
+        <ul>
+            <li>$k$ trials</li>
+            <ul>
+                <li>last trial is a success</li>
+            </ul>
+            <li>2 outcomes</li>
+            <ul>
+                <li>1 of the outcomes ("success") has probability $p$</li>
+            </ul>
+        </ul>
+        <h3>Uses</h3>
+        <ul>
+            <li>Modelling the no. of times a die is thrown until a "1" is seen.</li>
+        </ul>
+
+
+        <h2 id="binomial">Binomial</h2>
+        <h3>Story</h3>
+        <p>Say there is a biased coin where seeing heads has a probability 0.8.
+            Flipping this coin 4 times and noting if it's heads or tails, I get</p>
+        <p>$$ \{H, H, H, T\} $$</p>
+        <p>exactly in that order. That's 3 heads. What's the probability of getting the above?</p>
+        <p>$$ 0.8 \times 0.8 \times 0.8 \times 0.3 = (0.8)^3 (0.2)^1 = 0.1024$$</p>
+        <p>Now what if I flipped 4 times, what's the probability of seeing 3 heads?
+            It can't be $0.1024$ because that's just the probability of seeing $\{H,H,H,T\}$
+            exactly in that order. When I flip the coin 4 times, there are definitely other
+            combinations that give 3 heads like $\{T, H, H, H\}$.
+        </p>
+        <p>Let's list down all the possible combinations there can be
+            from flipping the coin 4 times and getting 3 heads:</p>
+        <p>$$ \{H,H,H,T\}, \{H,H,T,H\}, $$</p>
+        <p>$$ \{H,T,H,H\}, \{T,H,H,H\} $$</p>
+        <p>That's 4. Thankfully, we have a calculator that can do ${4 \choose 3}$ = 4.
+            Now let's list down the probabilities of each combination (they're all the same):
+        </p>
+        <table>
+            <tr>
+                <th>Combination</th>
+                <th>Probability</th>
+            </tr>
+            <tr>
+                <td>$\{H,H,H,T\}$</td>
+                <td>$(0.8)^3 (0.2)^1$</td>
+            </tr>
+            <tr>
+                <td>$\{H,H,T,H\}$</td>
+                <td>$(0.8)^3 (0.2)^1$</td>
+            </tr>
+            <tr>
+                <td>$\{H,T,H,H\}$</td>
+                <td>$(0.8)^3 (0.2)^1$</td>
+            </tr>
+            <tr>
+                <td>$\{T,H,H,H\}$</td>
+                <td>$(0.8)^3 (0.2)^1$</td>
+            </tr>
+        </table>
+        <p>Adding these probabilities up gives us</p>
+        <p>$ {4 \choose 3} (0.8)^3 (0.2)^1 = 4 (0.8)^3 (0.2)^1 = 0.4096$</p>
+        <p>It is said that the <strong>number of heads</strong> you would see in 4 coin flips
+            can be modelled by a Binomial distribution. That is to say, you would be able to tell:
+            <ul>
+                <li>the probability of seeing only 1 head</li>
+                <li>the probability of seeing only 2 heads</li>
+                <li>the probability of seeing only 3 heads</li>
+                <li>the probability of seeing all 4 heads</li>
+            </ul>
+            Also note that, inherently, a coin flip can only produce one of two outcomes (hence "bi").
+            "nomial" comes from the Greek word "nomos", which means parts.
+        </p>
+        <h3>Definition</h3>
+        <p>$$ P(X=k)= {n \choose k} p^k (1-p)^{n-k} $$</p>
+        <ul>
+            <li>$n$ trials</li>
+            <ul>
+                <li>$k$ of which are successes</li>
+            </ul>
+            <li>2 outcomes</li>
+            <ul>
+                <li>1 of the outcomes ("success") has probability $p$</li>
+            </ul>
+        </ul>
+        <p>What happens if you have $(k+r)$ trials, $k$ of which are successes and $r$ are failures?</p>
+        <p>What happens if you are allowed a billion (or gazillion) trials but only 1 of which is a success
+            and its probability is very, very small?</p>
+
+
+        <h2 id="poisson">Poisson</h2>
+        <h3>Intuition</h3>
+        <p>The Binomial distribution models the number of successes (with probability $p$)
+            from $n$ independent trials. So far, the term "trial" has been used to refer to
+            acts like flipping a biased coin, giving a medication to a person who might
+            react adversely with probability 0.9 and so on. What if we project the concept
+            of "trials" in Binomial distribution onto time and space? What would this mean?
+        </p>
+        <p>As an example, suppose you play a slap game with an opponent:
+            You are given 10 trials and at every trial, you will slap the opponent's hand,
+            for which you hit with probability 60% or miss with 40%. The number of hits
+            can be modelled using a Binomial distribution.
+        </p>
+        <p>Coming back to the idea of time projection, we can imagine <strong>every second</strong>
+            as a trial. Thus, you can look at the game this way:
+            You are given 10 seconds and at every second, you will slap the opponent's hand,
+            for which you hit with probability 60% or miss with 40%. The number of hits is
+            still modelled as a Binomial distribution.
+        </p>
+        <p>Now what if I told you that in this time frame of 10s, you can slap the opponent
+            without having to do it at every tick of the second-hand? That would be more
+            thrilling, wouldn't it 😈?
+        </p>
+        <p>But how would you have to rephrase the problem such that the rules of the game
+            still apply?
+        </p>
+        <p>Firstly, note that the number of trials in that 10s now becomes extremely large. We're 
+            not measuring in seconds anymore. We're measuring in milliseconds. Or even 
+            microseconds. Or even microseconds. Heck, it's the concept of time we're talking about. 
+            It's not even discrete! We're talking about <strong>infinitely many</strong> trials,
+            i.e. when $n$ approaches $\infty$.
+        </p>
+        <p>Secondly, note that in the Binomial setting, we have 10 trials and 60% success
+            as the parameters of the distribution. Does this mean that in the above setting 
+            (Poisson setting, no points for this one), we have $\infty$ trials and still
+            60% successful slap for <em>every</em> trial 😱? How can we port these rules 
+            in the infinite-trials setting such that the game is still fair? The answer is
+            taking a simple average. Taking $10 \times 60\%$ tells us that for the Binomial setting
+            there will be 6 successful slaps. This means that in the Poisson setting, 
+            there should still be 6 successful slaps on an average despite the infinitely many trials.
+        </p>
+        <p>But wait, what happened to the success probability, you might ask?
+            This number has to go very small. It can't be 60%. That's not fair, because
+            you are changing the rules of the game. It has to be small. And I mean 
+            infinitesimally small. So small that when I take that large $n$ to multiply
+            with this small $p$, I get 6. You don't have to care about the number
+            of trials or the probability of success anymore. You just have to care about
+            the average number, 6, which encapsulates these two numbers.
+        </p>
+        <p>And so this becomes the Poisson distribution. And here's a re-writeup of the game:
+            You are given 10s to slap the opponent's hand for which 6, on the average,
+            are successful hits.
+        </p>
+        <p>As it turns out, setting $n$ to $\infty$ approximates the Binomial PMF \
+            to a nicer-looking form (see below).
+        </p>
+        <p>'Trials' in the Binomial distribution are usually attributed to man-made trials.
+            In the Poisson distribution, 'trials' are driven by time and space,
+            things that man cannot control.
+        </p>
+        <h3>Law of rare events / Poisson limit theorem</h3>
+        <p>The Poisson distribution is an approximation to the Binomial distribution
+            when we are allowed to have as many trials, $n$, as we want, i.e.
+            when $n$ in the Binomial PMF goes to $\infty$:</p>
+        <p>$$
+            \lim _{n \rightarrow \infty} P(X=k) \\
+            =\lim _{n \rightarrow \infty} {n \choose k} p^{k}(1-p)^{n-k} $$ </p>
+        <p>Reparametrise $\lambda = np$. This represents the no. of times an event occurs.
+            This also indirectly specifies a time period within which this event can occur.
+            Consequently, $p = \frac{\lambda}{n}.$ </p>
+        <p>$$
+            =\lim _{n \rightarrow \infty} {n \choose k}
+            \left(\frac{\lambda}{n}\right)^{k}\left(1-\frac{\lambda}{n}\right)^{n-k} \\
+            =\lim _{n \rightarrow \infty} \frac{n !}{k !(n-k) !}
+            \left(\frac{\lambda}{n}\right)^{k}\left(1-\frac{\lambda}{n}\right)^{n-k} $$ </p>
+        <p>Let's shift $\lambda$'s and $k$'s to the left.</p>
+        <p>$$
+            =\lim _{n \rightarrow \infty} \frac{\lambda^{k}}{k !} \cdot \frac{n !}{(n-k) !}
+            \left(\frac{1}{n}\right)^{k}\left(1-\frac{\lambda}{n}\right)^{n-k} $$ </p>
+        <p>Expand $n!$</p>
+        <p>$$ =\lim _{n \rightarrow \infty} \frac{\lambda^{k}}{k !} \cdot \frac{n(n-1)(n-2) ...
+            (n-(k-1))(n-k)(n-(k+1))...(2)(1)}{n^k(n-k)!} \left(1-\frac{\lambda}{n}\right)^{n-k} $$ </p>
+        <p>Cancel $(n-k)!$ from the numerator and denominator.</p>
+        <p>$$ =\lim _{n \rightarrow \infty} \frac{\lambda^{k}}{k !}\left(\frac{n}{n} \cdot \frac{n-1}{n} \cdot
+            \frac{n-2}{n} \cdots \frac{n-(k-1)}{n}\right)\left(1-\frac{\lambda}{n}\right)^{n-k} $$ </p>
+        <p>The second term converges to 1 as $n$ approaches $\infty$.</p>
+        <p>$$
+            =\lim _{n \rightarrow \infty} \frac{\lambda^{k}}{k !} (1) \left(1-\frac{\lambda}{n}\right)^{n-k} \\
+            =\lim _{n \rightarrow \infty} \frac{\lambda^{k}}{k !}\left(1-\frac{\lambda}{n}\right)^{n}
+            \left(1-\frac{\lambda}{n}\right)^{-k} $$</p>
+        <p>The last term converges to 1 as $n$ approaches $\infty$.</p>
+        <p>$$
+            =\lim _{n \rightarrow \infty} \frac{\lambda^{k}}{k !}\left(1-\frac{\lambda}{n}\right)^{n} \left(1\right) \\
+            =\lim _{n \rightarrow \infty} \frac{\lambda^{k}}{k !}\left(1+\frac{-\lambda}{n}\right)^{n} $$ </p>
+        <p>The last term converges to $e^{-\lambda}$ as $n$ approaches $\infty$.</p>
+        <p>$$ =e^{-\lambda} \frac{\lambda^{k}}{k !} $$</p>
+        <h3>Definition</h3>
+        <p>Probability of (observing) an event (whose rate of occurring is $\lambda$) occurring
+            $k$ times in a given period (one unit time) is given by</p>
+        <p>$$ P(X=k) = e^{-\lambda} \frac{\lambda^{k}}{k !} $$</p>
+        <h3>Proof of convergence from Binomial distribution</h3>
+        <p>Inspired by <a
+                href="https://medium.com/@andrew.chamberlain/deriving-the-poisson-distribution-from-the-binomial-distribution-840cc1668239">this
+                post</a>.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Poisson_limit_theorem">
+                Law of rare events or Poisson limit theorem</a> states that the
+            Poisson distribution may be used as an approximation to the binomial distribution.</p>
+
+
+        <h2 id="exponential">Exponential</h2>
+        <p>The exponential distribution is an extension of Poisson distribution. 
+            The Poisson PMF measure the probability of seeing an event occur $k$ times in 
+            one time period. This means we can measure the probability whether an event 
+            occurs, i.e. the event occurs more than 0 times, which translates to $k=1,2,..$.</p>
+        <p>$$ P(\text{event occurred}) = P(X=1) + P(X=2) + ... $$</p>
+        <p>or if the event does not occur at all:</p>
+        <p>$$ P(\text{event does not occur}) = P(X=0) $$</p>
+        <p>What happens if we want to know the probability 
+            of <em>not observing</em> an event within 3 units of time?
+        </p>
+        <p>$$ \begin{aligned}
+            & P(\text{0 events occur in the 1st time unit}) \times \\
+            & P(\text{0 events occur in the 2nd time unit}) \times \\
+            & P(\text{0 events occur in the 3rd time unit}) \\
+            = & e^{-\lambda} \frac{\lambda^{0}}{0 !} \times e^{-\lambda} \frac{\lambda^{0}}{0 !} \times e^{-\lambda}
+            \frac{\lambda^{0}}{0 !} \\
+            = & e^{-3\lambda}
+            \end{aligned} $$</p>
+        <p>The probabilities are multiplied because these events are independent from each other.
+            We can also look at it differently and ask, "what's the probability of <em>(the first) observation</em> an
+            event
+            after 3 units of time?"</p>
+        <p>$$ P(\text{event observed after 3 units of time}) = e^{-3\lambda} $$</p>
+        <p>
+            which can be rephrased as what's the probability that $T$, the unit of time
+            of (first) observing the event is more than 3?
+        </p>
+        <p>$$ P(T > 3) = e^{-3\lambda} $$</p>
+        <p>And the probability of observing an event after $t$ units of time?</p>
+        <p>$$ P(T > t) = e^{-\lambda t} $$</p>
+        <p>And so this is the <strong>exponential distribution</strong>. Intuitions and derivation
+            <a href="https://medium.com/@aerinykim/what-is-exponential-distribution-7bdd08590e2a">here</a>.</p>
+        <h3>Definition</h3>
+        <p>$$ P(T \leq t) = 1 - e^{-\lambda x} $$</p>
+        <h3>Memoryless property</h3>
+        <p>This property of the exponential distribution says that
+            if one does not experience a car accident in $10$ days,
+            the probability of experiencing a car accident in $(10+2)$ days
+            is the same as the probability of experiencing a car accident in $2$ days.</p>
+        <p>$$ P(T > 10 + 2 | T > 10) = P(T > 2) $$</p>
+        <p>And more formally</p>
+        <p>$$ P(T > a + b | T > a) = P(T > b) $$</p>
+        <h3>Uses</h3>
+        <ul>
+            <li>Modelling events that have a <strong>constant (hazard) rate through time</strong>, like car accidents
+            (based on the article above).</li>
+        </ul>
+
+
+        <h2 id="uniform">Uniform</h2>
+        <p>For an experiment with 6 different outcomes ${1,2,3,4,5,6}$, each with <strong>equal</strong>
+            probability, what is the probability of seeing any outcome?</p>
+        <p>$$ \frac{1}{6} $$</p>
+        <p>For an experiment with $n$ different outcomes, each with <strong>equal</strong>
+            probability, what is the probability of observing an outcome?</p>
+        <p>$$ P(X=x) = \frac{1}{n} $$</p>
+        <ul>
+            <li>1 trial</li>
+            <li>$n$ outcomes</li>
+            <ul>
+                <li>each outcome has equal probability, $\frac{1}{n}$</li>
+            </ul>
+        </ul>
+
+
+        <h2 id="normal">Normal / Gaussian</h2>
+        <h3>Definition</h3>
+        <p>$$X \sim \mathcal{N}(\mu,\sigma^2)$$</p>
+        <p>$$
+            f(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma ^2}}
+            $$
+        </p>
+        <p>$$Z \sim \mathcal{N}(0,1)$$</p>
+        <p>$$
+            f(x) = \frac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}
+            $$
+        </p>
+        <p>How is the normal distribution derived? 🤔</p>
+        <h3>Uses</h3>
+        <ul>
+            <li>Modelling the height of boys in a school.</li>
+        </ul>
+
+
+        <h2 id="chi-square">Chi-square</h2>
+        <p>If $Z_i$'s are independent, then</p>
+        <p>$$
+            \sum_{i=1}^{k} Z_i^2 \sim \chi^{2}(k)
+            $$</p>
+        <p>Why? 🤔</p>
+        <h3>Definition</h3>
+        <p>$$
+            f(x) = \frac{1}{2^{k / 2} \Gamma(k / 2)} x^{k / 2-1} e^{-x / 2}
+            $$
+        </p>
+        <p>How is this distribution derived? 🤔</p>
+        <h3>Uses</h3>
+        <ul>
+            <li>Modelling a Chi-square test statistic which tests for dependence 
+                between two (random) variables.</li>
+        </ul>
+
+
+        <h2 id="t">Student's t</h2>
+        <p>If $Z \sim \mathcal{N}(0,1)$ and $V \sim \chi^2(m)$ are independent, then</p>
+        <p>$$
+            \frac{Z}{V/\sqrt{m}} \sim t(m)
+            $$</p>
+        <h3>Definition</h3>
+        <p>$$
+            f(x) =
+            \frac{\Gamma\left(\frac{\nu+1}{2}\right)}{\sqrt{\nu \pi}
+            \Gamma\left(\frac{\nu}{2}\right)}\left(1+\frac{x^{2}}{\nu}\right)^{-\frac{\nu+1}{2}}
+            $$
+        </p>
+        <p>How is this distribution derived? 🤔</p>
+
+
+        <h2 id="f">F</h2>
+        <p>If $V \sim \chi^2(m)$ and $W \sim \chi^2(n)$ are independent, then</p>
+        <p>$$
+            \frac{V/m}{W/n} \sim F(m,n)
+            $$</p>
+        <h3>Definition</h3>
+        <p>$$
+            f(x) =
+            \frac{\sqrt{\frac{\left(d_{1} x\right)^{d_{1}} d_{2}^{d_{2}}}{\left(d_{1} x+d_{2}\right)^{d_{1}+d_{2}}}}}{x
+            B\left(\frac{d_{1}}{2}, \frac{d_{2}}{2}\right)}
+            $$
+        </p>
+        <p>How is this distribution derived? 🤔</p>
+        <h3>Uses</h3>
+        <ul>
+            <li>Models the distribution of a test statistic called F-test. This test estimates
+                the degree of linear dependency between two random variables.</li>
+        </ul>
+
+
+        <h2 id="gamma">Gamma</h2>
+        <h3>Definition</h3>
+        <p>$$
+            f(x) = \frac{\beta^{\alpha}}{\Gamma(\alpha)} x^{\alpha-1} e^{-\beta x}
+            $$
+        </p>
+        <p>How is this distribution derived? 🤔</p>
+
+
+        <h2 id="beta">Beta</h2>
+        <h3>Definition</h3>
+        <p>$$
+            f(x) = \frac{x^{\alpha-1}(1-x)^{\beta-1}}{\mathrm{B}(\alpha, \beta)}
+            $$</p>
+        <p>where</p>
+        <p>$$
+            \mathrm{B}(\alpha, \beta)=\frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}
+            $$</p>
+        <p>How is this distribution derived? 🤔</p>
+
+
+        <h2 id="multinomial">Multinomial</h2>
+        <h3>Definition</h3>
+        <p>$$ P(X=k)=
+            \frac{n !}{x_{1} ! \cdots x_{k} !} p_{1}^{x_{1}} \cdot \cdots p_{k}^{x_{k}}
+            $$</p>
+        <ul>
+            <li>$n$ trials</li>
+            <li>$k$ outcomes</li>
+            <ul>
+                <li>Each outcome has probability $p_k$
+                </li>
+            </ul>
+        </ul>
+
+
+        <h2 id="negative-binomial">Negative binomial</h2>
+        <h3>Definition</h3>
+        <p>$$ P(X=k)= {k+r-1 \choose k} p^k (1-p)^r $$</p>
+        <ul>
+            <li>$(k + r)$ trials</li>
+            <ul>
+                <li>$k$ of which are successes</li>
+                <li>$r$ of which are failures</li>
+            </ul>
+            <li>2 outcomes</li>
+            <ul>
+                <li>1 of the outcomes ("success") has probability $p$, the other ("failure")
+                    has probability $1-p$
+                </li>
+            </ul>
+        </ul>
+
+    </d-article>
+
+
+
+
+    <d-appendix>
+        <h3>Distribution</h3>
+        <p>A distribution is a frequency count for certain values.</p>
+        <p>Eg. The distribution of grades (where grades can be Grade A, Grade B and Grade C)
+            in a class tells us
+            <ul>
+                <li>the number of people who scored Grade A,</li>
+                <li>the number of people who scored Grade B, and</li>
+                <li>the number of people who scored Grade C.</li>
+            </ul>
+        </p>
+        <h3>Probability distribution</h3>
+        <p>A probability distribution is the probabilities for all possible values.</p>
+        <p>Eg. The probability distribution of grades (where grades can be Grade A, Grade B
+            and Grade C) in a class tells us
+            <ul>
+                <li>the probability of scoring Grade A,</li>
+                <li>the probability of scoring Grade B, and</li>
+                <li>the probability of scoring Grade C.</li>
+            </ul>
+        </p>
+        <p>These probabilities must add up to 1.</p>
+        <h3>Probability mass function (PMF)</h3>
+        <p>A probability mass function is a 'formula' for obtaining
+            all the probabilities of the possible values.</p>
+        <h3>Gamma function</h3>
+        <p>For any positive integer $n$,</p>
+        <p>$$ \Gamma(n)=(n-1)! $$</p>
+        <h3>Beta function</h3>
+        <p>For any real number $x,y>0$,</p>
+        <p>$$ \mathrm{B}(x, y)=\int_{0}^{1} t^{x-1}(1-t)^{y-1} dt $$</p>
+        <h3>Resources</h3>
+        <p><a href="https://statdist.ksmzn.com/">https://statdist.ksmzn.com/</a></p>
+        <d-footnote-list></d-footnote-list>
+        <d-bibliography src="references.bib"></d-bibliography>
+        <d-citation-list></d-citation-list>
+    </d-appendix>
+
+    <!-- https://keras.io/losses/ -->
+    <!-- https://en.wikipedia.org/wiki/Mean_absolute_percentage_error -->
+    <!-- https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html -->
+
+</body>
+
+</html>

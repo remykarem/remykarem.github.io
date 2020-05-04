@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" description="A cheat sheet of stochastic gradient descent optimisers"
+        content="width=device-width, initial-scale=1">
+    <title>Cheat Sheet: Stochastic Gradient Descent Optimisers</title>
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <d-front-matter>
+        <script type="text/json">{
+                "title": "Stochastic gradient descent optimisers",
+                "description": "",
+                "authors": [
+                  {
+                    "author": "Raimi bin Karim",
+                    "authorURL": "https://raibosome.github.io",
+
+                    "affiliationURL": "https://aisingapore.org"
+                  }
+                ],
+                "katex": {
+                  "delimiters": [
+                    {"left": "$", "right": "$", "display": false},
+                    {"left": "$$", "right": "$$", "display": true}
+                  ]
+                }
+                }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>Stochastic gradient descent optimisers</h1>
+        <p>A cheat sheet of stochastic gradient descent optimisers</p>
+        <p>Last updated: 22 Sep 2019</p>
+    </d-title>
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <p>(sorted by publication date)</p>
+            <ul>
+                <li><a href="#vanilla">Vanilla SGD</a></li>
+                <li><a href="#momentum">Momentum</a></li>
+                <li>Averaged SGD</li>
+                <li><a href="#adagrad">AdaGrad</a></li>
+                <li><a href="#adadelta">Adadelta</a></li>
+                <li><a href="#rmsprop">RMSProp</a></li>
+                <li><a href="#nesterov">Nesterov-accelerated gradient</a></li>
+                <li><a href="#adam">Adam</a></li>
+                <li><a href="#adamax">AdaMax</a></li>
+                <li><a href="#nadam">Nadam</a></li>
+                <li><a href="#sgdw">SGDW</a></li>
+                <li><a href="#adamw">AdamW</a></li>
+                <li>LARS</a></li>
+                <li><a href="#swa">SWA</a></li>
+                <li><a href="#amsgrad">AMSGrad</a></li>
+                <li>LAMB</li>
+                <li><a href="#novograd">NovoGrad</a></li>
+                <li><a href="#radam">RAdam</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <d-article>
+
+        <h4>Categories</h4>
+        <p>Stochastic gradient descent (SGD) optimisers can be broadly categorised into
+            (1) <strong>adaptive</strong> learning rate schemes (e.g. Adam and RMSProp)
+            and (2) <strong>accelerated</strong> schemes (e.g. Nesterov)
+            <d-cite key="lookahead"></d-cite>.
+        </p>
+
+        <h4>Notation</h4>
+        <ul>
+            <li>$w_t$ &#8212; weight at time step $t$</li>
+            <li>$g_t$ &#8212; gradient w.r.t. $w$ at time step $t$</li>
+            <li>$\alpha$ &#8212; learning rate</li>
+            <li>$\lambda$ &#8212; weight decay parameter</li>
+            <li>$\epsilon$ &#8212; a very small number, used to prevent division by zero</li>
+            <li>$m$ &#8212; estimate for first moment of gradient</li>
+            <li>$v$ &#8212; estimate for second moment of gradient</li>
+            <li>$^{(l)}$ &#8212; specific to layer $l$</li>
+            <li>$||\cdot|| $ &#8212; absolute value</li>
+            <li>$||\cdot||_2 $ &#8212;
+                <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)#Euclidean_norm">Euclidean/L2 norm</a></li>
+        </ul>
+
+        <h2 id="vanilla">Vanilla SGD</h2>
+        <p>$$ w_{t+1}=w_{t}-\alpha g_t $$</p>
+
+        <h2 id="momentum">Momentum<d-cite key="momentum"></d-cite>
+        </h2>
+        <p>$$ w_{t+1} =w_{t}-\alpha m_t $$</p>
+        <p>where</p>
+        <p>$$ m_t =\beta m_{t-1}+(1-\beta) g_t $$</p>
+
+        <h2 id="adagrad">AdaGrad (adaptive gradient)<d-cite key="adagrad"></d-cite>
+        </h2>
+        <p>$$ w_{t+1} = w_{t}-\frac{\alpha}{\sqrt{v_t+\epsilon}} \cdot g_t $$</p>
+        <p>where</p>
+        <p>$$ v_t =v_{t-1}+\left[g_t\right]^{2} $$</p>
+
+        <h2 id="adadelta">Adadelta<d-cite key="adadelta"></d-cite>
+        </h2>
+        <p>$$ w_{t+1} =w_{t}-\frac{\sqrt{D_{t-1}+\epsilon}}{\sqrt{v_t+\epsilon}} \cdot g_t $$</p>
+        <p>where</p>
+        <p>$$
+            \begin{aligned} D_{t} &=\beta D_{t-1}+(1-\beta)\left[\Delta w_{t}\right]^{2} \\ v_t &=\beta
+            v_{t-1}+(1-\beta)\left[g_t\right]^{2} \end{aligned}
+            $$</p>
+
+        <h2 id="rmsprop">RMSProp<d-cite key="rmsprop"></d-cite>
+        </h2>
+        <p>$$ w_{t+1} =w_{t}-\frac{\alpha}{\sqrt{v_t+\epsilon}} \cdot g_t $$</p>
+        <p>where</p>
+        <p>$$ v_t =\beta v_{t-1}+(1-\beta)\left[g_t\right]^{2} $$</p>
+
+        <h2 id="nesterov">Nesterov-accelerated gradient<d-cite key="nesterov"></d-cite>
+        </h2>
+        <p>$$ w_{t+1} =w_{t}-\alpha m_t $$</p>
+        <p>where</p>
+        <p>$$ m_t =\beta m_{t-1}+(1-\beta) g_* $$</p>
+        <p>Note that $g_*$ is the gradient of $w_*$, where</p>
+        <p>$$ w_* =w_{t}-\alpha m_{t-1} $$</p>
+
+        <h2 id="adam">Adam (adaptive moment estimation)<d-cite key="adam"></d-cite>
+        </h2>
+        <p>$$ w_{t+1} =w_{t}-\frac{\alpha}{\sqrt{\hat{v}_{t}}+\epsilon} \cdot \hat{m}_{t} $$</p>
+        <p>where</p>
+        <p>$$ \begin{aligned} \hat{m}_{t} &=\frac{m_t}{1-\beta_{1}^{t}} \\ \hat{v}_{t} &=\frac{v_t}{1-\beta_{2}^{t}}
+            \end{aligned} $$</p>
+        <p>and</p>
+        <p>$$ \begin{aligned}
+            m_t &=\beta_{1} m_{t-1}+\left(1-\beta_{1}\right) g_t \\
+            v_t &=\beta_{2} v_{t-1}+\left(1-\beta_{2}\right)\left[g_t\right]^{2}
+            \end{aligned}
+            $$</p>
+
+        <h2 id="adamax">AdaMax<d-cite key="adam"></d-cite>
+        </h2>
+        <p>$$ w_{t+1} =w_{t}-\alpha \cdot \frac{\hat{m}_{t}}{s_t} $$</p>
+        <p>where</p>
+        <p>$$ \hat{m}_{t} =\frac{m_t}{1-\beta_{1}^{t}} $$</p>
+        <p>and</p>
+        <p>$$
+            \begin{aligned} m_t &=\beta_{1} m_{t-1}+\left(1-\beta_{1}\right) g_t \\
+            s_t &=\max \left(\beta_{2} s_{t-1},\left|g_t\right|\right) \end{aligned}
+            $$</p>
+
+        <h2 id="nadam">Nadam (Nesterov-accelerated Adam)
+            <d-cite key="nadam"></d-cite>
+        </h2>
+        <p>$$ w_{t+1} =w_{t}-\frac{\alpha}{\sqrt{\hat{v}_{t}}+\epsilon} \cdot \beta_{1}
+            \hat{m}_{t-1} - \frac{1-\beta_{1}}{1-\beta_{1}^{t}} \cdot g_t $$</p>
+        <p>where</p>
+        <p>$$
+            \begin{aligned}
+            \hat{m}_{t} &=\frac{m_t}{1-\beta_{1}^{t}} \\ \hat{v}_{t} &=\frac{v_t}{1-\beta_{2}^{t}} \end{aligned}
+            $$</p>
+        <p>and</p>
+        <p>$$ \begin{aligned} m_t &=\beta_{1} m_{t-1}+\left(1-\beta_{1}\right) g_t \\
+            v_t &=\beta_{2} v_{t-1}+\left(1-\beta_{2}\right)\left[g_t\right]^{2}
+            \end{aligned} $$</p>
+
+        <h2 id="sgdw">SGDW (SGD with decoupled weight decay)<d-cite key="sgdw-adamw"></d-cite>
+        </h2>
+        <p>Note: SGDW is equivalent to optimising a loss function with L2 regularisation
+            using SGD with momentum <em>and</em> weight decay (see <a href="#weight-decay-and-l2">appendix</a>).
+            Scheduler rate is set to 1 for readability.</p>
+        <p>$$ w_{t+1} = w_{t}-\alpha m_t - \lambda w_t $$</p>
+        <p>where</p>
+        <p>$$ m_t =\beta m_{t-1}+(1-\beta) g_t $$</p>
+
+        <h2 id="adamw">AdamW (Adam with decoupled weight decay)<d-cite key="sgdw-adamw"></d-cite>
+        </h2>
+        <p>Note: Here the scheduler rate is set to 1 for readability.</p>
+        <p>$$ w_{t+1} =w_{t}-\frac{\alpha}{\sqrt{\hat{v}_{t}}+\epsilon} \cdot \hat{m}_{t} - \lambda w_t$$</p>
+        <p>where</p>
+        <p>$$ \begin{aligned} \hat{m}_{t} &=\frac{m_t}{1-\beta_{1}^{t}} \\ \hat{v}_{t} &=\frac{v_t}{1-\beta_{2}^{t}}
+            \end{aligned} $$</p>
+        <p>and</p>
+        <p>$$ \begin{aligned}
+            m_t &=\beta_{1} m_{t-1}+\left(1-\beta_{1}\right) g_t \\
+            v_t &=\beta_{2} v_{t-1}+\left(1-\beta_{2}\right)\left[g_t\right]^{2}
+            \end{aligned}
+            $$</p>
+
+        <!-- <h2 id="lars">LARS<d-cite key="lars"></d-cite>
+            </d-cite>
+        </h2>
+        <p><strong>Note that weight update is done per layer, indicated by the superscript $^{(l)}$.</strong></p>
+        <p>$$
+            w_{t+1}^{(l)} =w_{t}^{(l)}- \alpha^{(l)} \cdot \frac{m_t^{(l)}}{||m_t^{(l)}||}
+            $$</p>
+        <p>where</p>
+        <p>$$
+            \begin{aligned}
+
+            \alpha^{(l)} &=
+            \eta \cdot \frac{\left\|w^{(l)}_t\right\|}{\left\| \frac{\partial L}{\partial w_{t}^{(l)}} \right\|_2+\lambda \left\|w^{(l)}_t\right\|_2} \\
+            m_t^{(l)} &=\beta m_{t-1}^{(l)}+\left(1-\beta\right) (\frac{\partial L}{\partial w_{t}^{(l)}} + \lambda
+            w_t^{(l)}) \\
+            \end{aligned}
+            $$</p>
+            <p>and $\eta$ is the global learning rate.</p> -->
+
+        <h2 id="swa">SWA (stochastic weight averaging)<d-cite key="swa"></d-cite>
+        </h2>
+        <p>Apart from</p>
+        <p>$$ w_{t+1}=w_{t}-\alpha g_t $$</p>
+        <p>the optimiser maintains another set of weights $m$ which will be used
+            in the final model. The update of $m$ is:</p>
+        <p>$$
+            m_{t+1}=\left\{\begin{array}{lr}
+            {\beta_t m_t + (1-\beta_t) w_t} & {\text{if mod} (t,c) = 0} \\
+            {m_t} & {\text { otherwise }}
+            \end{array}\right.
+            $$</p>
+        <p>where $m$ is updated with the running average every $c$ time steps and</p>
+        <p>$$ \beta_t = \frac{t}{t+c} $$</p>
+        <p>The equations look different from the paper but are essentially identical
+            due to my reparametrisation (see <a href="#swa-reparam">appendix</a>).
+        </p>
+
+        <h2 id="amsgrad">AMSGrad<d-cite key="amsgrad"></d-cite>
+        </h2>
+        <p>$$ w_{t+1} = w_{t}-\frac{\alpha}{\sqrt{\hat{v}_{t}}+\epsilon} \cdot m_t $$</p>
+        <p>where</p>
+        <p>$$ \hat{v}_{t} =\max \left(\hat{v}_{t-1}, v_t\right) $$</p>
+        <p>and</p>
+        <p>$$
+            \begin{aligned} m_t &=\beta_{1} m_{t-1}+\left(1-\beta_{1}\right) g_t \\
+            v_t &=\beta_{2} v_{t-1}+\left(1-\beta_{2}\right)\left[g_t\right]^{2}
+            \end{aligned}$$</p>
+
+        <!-- <h2 id="lamb">LAMB (Layer-wise Adaptive Moments optimizer for Batch training)<d-cite key="lamb"></d-cite><d-cite key="tds-lamb"></d-cite>
+        </h2>
+        <p><strong>Note that weight update is done per layer, indicated by the superscript $^{(l)}$.</strong></p>
+        <p>$$
+            w_{t+1}^{(l)} =w_{t}^{(l)}-\frac{\alpha^{(l)}}{\sqrt{\hat{v}_{t}^{(l)}+\epsilon}} \cdot \hat{m}_t^{(l)} -
+            \alpha^{(l)} \lambda w_{t}^{(l)}
+            $$</p>
+        <p>where</p>
+        <p>$$
+            \begin{aligned}
+            \hat{m}_{t}^{(l)} &=\frac{m_t^{(l)}}{1-\beta_{1}^{t}} \\
+            \hat{v}_{t}^{(l)} &=\frac{v_t^{(l)}}{1-\beta_{2}^{t}} \\
+            \alpha^{(l)} &= \alpha \cdot \frac{r_1}{r_2}
+            \end{aligned}
+            $$</p>
+        <p>and</p>
+        <p>$$
+            \begin{aligned}
+
+            m_t^{(l)} &=\beta_{1} m_{t-1}^{(l)}+\left(1-\beta_{1}\right) \frac{\partial L}{\partial w_{t}^{(l)}} \\
+            v_t^{(l)} &=\beta_{2} v_{t-1}^{(l)}+\left(1-\beta_{2}\right)\left[\frac{\partial L}{\partial
+            w_{t}^{(l)}}\right]^{2} \\
+            r_{1} &= \left\|w_t^{(l)}\right\|_{2} \\
+            r_{2} &=\left\|\frac{\hat{m}_{t}^{(l)}}{\sqrt{\hat{v}_{t}^{(l)}+\epsilon}}+\lambda w_{t}^{(l)} \right\|_{2}
+
+            \end{aligned}
+            $$</p> -->
+
+        <h2 id="novograd">NovoGrad<d-cite key="novograd"></d-cite>
+        </h2>
+        <p>Note that weight update is done per layer, indicated by the superscript $^{(l)}$.</p>
+        <p>$$ w_{t+1}^{(l)} =w_{t}^{(l)} - \alpha m_t^{(l)} $$</p>
+        <p>where</p>
+        <p>$$ m_t^{(l)} = \beta_{1} m_{t-1}^{(l)} + \left(1-\beta_{1}\right) ( \frac{1}{\sqrt{v_t^{(l)}} + \epsilon}
+            \cdot g_t^{(l)} + \lambda w_t^{(l)} ) $$</p>
+        <p>and</p>
+        <p>$$ v_t^{(l)} = \beta_{2} v_{t-1}^{(l)} + \left(1-\beta_{2}\right) \left\| g_t^{(l)}\right\| _2 $$</p>
+
+        <h2 id="radam">RAdam (Rectified Adam)<d-cite key="radam"></d-cite>
+        </h2>
+        <p>$$
+            w_{t+1}=w_{t}-\frac{\alpha}{\sqrt{\hat{v}_{t}}+\epsilon} \cdot r_{t} \hat{m}_{t}
+            $$</p>
+        <p>where</p>
+        <p>$$
+            \begin{aligned} \hat{m}_{t} &=\frac{m_t}{1-\beta_{1}^{t}} \\ \hat{v}_{t}
+            &=\left\{\begin{array}{cc}{\frac{v_t}{1-\beta_{2}^{t}}} & {\text { if } p_{t}>4} \\ {1} & {\text {
+            otherwise }}\end{array}\right.\\ r_{t}
+            &=\left\{\begin{array}{cc}{\sqrt{\frac{\left(p_{t}-4\right)\left(p_{t}-2\right)
+            p_{\infty}}{\left(p_{\infty}-4\right)\left(p_{\infty}-2\right) p_{\infty}}}} & {\text { if } p_{t}>4} \\ {1}
+            & {\text { otherwise }}\end{array}\right.\end{aligned}
+            $$</p>
+        <p>and</p>
+        <p>$$
+            \begin{aligned} m_t &=\beta_{1} m_{t-1}+\left(1-\beta_{1}\right) g_t \\
+            v_t &=\beta_{2} v_{t-1}+\left(1-\beta_{2}\right)\left[g_t\right]^{2} \\
+            p_{t} &=p_{\infty}-\frac{\beta_{2}^{t}}{1-\beta_{2}^{t}} \cdot 2 t \\ p_{\infty} &=\frac{2}{1-\beta_{2}}-1
+            \end{aligned}
+            $$</p>
+
+    </d-article>
+
+    <d-appendix>
+        <h3>Updates and corrections</h3>
+        <p>If you see mistakes or want to suggest changes, kindly email me at raimi.bkarim@gmail.com</p>
+        <h3 id="weight-decay">Weight decay<d-cite key="weight-decay"></d-cite>
+        </h3>
+        <p>$$ w_{t+1} = (1-\lambda)w_t - \alpha g_t$$</p>
+        <h3 id="weight-decay-and-l2">Weight decay and L2</h3>
+        <p>SGD with L2 regularisation is the same as SGD with weight decay, as proven in <d-cite key="sgdw-adamw">
+            </d-cite>.</p>
+        <p>For a loss function with L2 regularisation and regularisation parameter $\lambda^{\prime}$ , we have:</p>
+        <p>$$ f(w) = L(w) + \frac{1}{2}\lambda^{\prime}||w||_2^2 $$</p>
+        <p>and its corresponding gradient descent weight update is:</p>
+        <p>$$ \begin{aligned} w_{t+1}
+            &= w_t - \alpha \frac{\partial f}{\partial w} \\
+            &= w_t - \alpha \frac{\partial L}{\partial w} - \alpha \lambda^{\prime} w_t \end{aligned}$$</p>
+        <p>For SGD with weight decay $\lambda$ but no regularisation, the gradient update is</p>
+        <p>$$ \begin{aligned} w_{t+1} &= (1-\lambda)w_t - \alpha \frac{\partial L}{\partial w} \\
+            &= w_t - \alpha \frac{\partial L}{\partial w} - \lambda w_t \end{aligned} $$</p>
+        <p>Here we can see that $\lambda$ is just a reparametrisation of $\lambda = \alpha \lambda^{\prime}$.</p>
+        <h3 id="swa-reparam">SWA reparametrisation</h3>
+        <p>From the pseudo code in the paper and taking $n_{\text{models}}=n$, the update is</p>
+        <p>$$ \begin{aligned}
+            w_{\mathrm{SWA}} &= \frac{w_{\mathrm{SWA}} \cdot n+w}{n+1} \\
+            &= \frac{n}{n+1} w_{\mathrm{SWA}} + \frac{1}{n+1} w \\
+            &= \frac{n}{n+1} w_{\mathrm{SWA}} + \frac{(n+1)-n}{n+1} w \\
+            &= \frac{n}{n+1} w_{\mathrm{SWA}} + (1-\frac{n}{n+1}) w \\
+            &= \beta w_{\mathrm{SWA}} + (1-\beta) w
+            \end{aligned}$$</p>
+        <p>where $\beta = \frac{n}{n+1}$. And because $n=n_{\text{models}}=\frac{t}{c},$</p>
+        <p>$$ \begin{aligned}
+            \beta = \frac{t/c}{t/c+1} = \frac{t/c}{(t+c)/c} = \frac{t}{t+c}
+            \end{aligned}$$</p>
+        <d-footnote-list></d-footnote-list>
+        <d-bibliography src="references.bib"></d-bibliography>
+        <h3>Related</h3>
+        <p><a
+                href="https://towardsdatascience.com/10-gradient-descent-optimisation-algorithms-86989510b5e9">https://towardsdatascience.com/10-gradient-descent-optimisation-algorithms-86989510b5e9</a>
+        </p>
+        <h3>References</h3>
+        <p><a
+                href="http://ruder.io/optimizing-gradient-descent/index.html">http://ruder.io/optimizing-gradient-descent/index.html</a>
+        </p>
+        <p><a href="https://keras.io/optimizers/">https://keras.io/optimizers/</a></p>
+    </d-appendix>
+
+    <!-- https://towardsdatascience.com/an-intuitive-understanding-of-the-lamb-optimizer-46f8c0ae4866 -->
+
+</body>
+
+</html>
