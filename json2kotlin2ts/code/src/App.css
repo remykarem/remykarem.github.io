@@ -1,0 +1,108 @@
+html {
+  background-color: rgb(235, 235, 235);
+}
+
+.container {
+  min-width: 512px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.App {
+  text-align: center;
+  background-color: rgb(228, 228, 228);
+  padding: 20px;
+}
+
+footer {
+  text-align: left;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.error-message {
+  color: rgb(247, 113, 113);
+}
+
+li > a, p > a {
+  color: #359494;
+}
+li > a:hover, p > a:hover {
+  color: #2a6969;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+li > code {
+  color: #b459b4;
+}
+
+.App-a {
+  text-decoration: none;
+  color: #26BE7F;
+}
+
+.App-code {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+	white-space: pre;
+	width: 100%;
+	display: block;
+	padding: 24px;
+	font: 14px/1.5em 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+	outline: none;
+	border: none;
+	resize: vertical;
+	height: 60vh;
+	overflow: scroll;
+	tab-size: 4;
+  text-align: left;
+  background-color: #232323;
+  color: #dedede;
+  border-radius: 8px;
+}
+
+p, h3, li {
+  color: rgb(59, 59, 59);
+}
+
+tbody {
+  padding: 28px;
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
