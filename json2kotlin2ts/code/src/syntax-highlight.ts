@@ -19,7 +19,7 @@ hljs.registerLanguage(Language.Kotlin, kotlin);
 hljs.registerLanguage(Language.TypeScript, typescript);
 
 const highlight = (text: string, language: Language): string => {
-    return hljs.highlight(language, text).value;
+    return hljs.highlight(text, { language: language }).value;
 };
 
 export default highlight;

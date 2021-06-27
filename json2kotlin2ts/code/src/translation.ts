@@ -14,6 +14,8 @@ const uncapitalize = (text: string) => {
     return text.charAt(0).toLowerCase() + text.slice(1);
 }
 
+export const translateJson2Kotlin = (code: string) => translate(Language.Kotlin, Language.JSON, code)!.text;
+export const translateKotlin2Ts = (code: string) => translate(Language.TypeScript, Language.Kotlin, code)!.text;
 export const translate = (target: Language, source: Language, text: string): { text: string, error: string } | undefined => {
 
 	if (source === Language.JSON && target === Language.Kotlin) {

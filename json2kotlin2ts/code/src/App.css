@@ -57,8 +57,12 @@ li > a:hover, p > a:hover {
   font-size: calc(10px + 2vmin);
 }
 
-li > code {
-  color: #b459b4;
+code * {
+  color: #c92e2e;
+}
+
+> code {
+  color: #c92e2e;
 }
 
 .App-a {
@@ -67,6 +71,29 @@ li > code {
 }
 
 .App-code {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+	white-space: pre;
+	width: 100%;
+	display: block;
+	padding: 24px;
+	font: 14px/1.5em 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+	outline: none;
+	border: none;
+	resize: vertical;
+	height: 60vh;
+	overflow: scroll;
+	tab-size: 4;
+  text-align: left;
+  background-color: #232323;
+  color: #dedede;
+  border-radius: 8px;
+}
+
+.App-code-to-delete {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
