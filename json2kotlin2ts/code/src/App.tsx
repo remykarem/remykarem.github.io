@@ -89,6 +89,7 @@ const Footer = () => (
     </ul>
     <p>To-do (see mood)</p>
     <ul>
+      <li>JSON array</li>
       <li>Maintain caret position (DOM &#128549;)</li>
       <li>Cmd Z (DOM &#128549;)</li>
       <li>Tab behaviour (DOM &#128549;)</li>
