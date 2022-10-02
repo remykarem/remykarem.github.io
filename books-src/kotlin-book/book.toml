@@ -1,0 +1,15 @@
+[book]
+authors = ["Raimi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Kotlin Book"
+
+[output.html.playground]
+editable = true
+
+[output.html]
+site-url = "/books/kotlin-book/"
+
+[build]
+build-dir = "../../books/kotlin-book"
