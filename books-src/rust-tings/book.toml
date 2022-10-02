@@ -1,0 +1,12 @@
+[book]
+authors = ["remykarem"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Rust tings"
+
+[output.html]
+site-url = "/books/rust-tings/"
+
+[build]
+build-dir = "../../books/rust-tings"
