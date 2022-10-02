@@ -12,4 +12,4 @@ editable = true
 site-url = "/books/kotlin-book/"
 
 [build]
-build-dir = "../../books/kotlin-book"
+build-dir = "../../kotlin-book"

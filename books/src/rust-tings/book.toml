@@ -9,4 +9,4 @@ title = "Rust tings"
 site-url = "/books/rust-tings/"
 
 [build]
-build-dir = "../../books/rust-tings"
+build-dir = "../../rust-tings"
