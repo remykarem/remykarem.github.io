@@ -14,7 +14,7 @@
         - [Lazy vs. late-init property](./classes_and_objects/class/lazy_vs_late-init_property.md)
         - [Constructor](./classes_and_objects/class/constructor.md)
         - [Init](./classes_and_objects/class/init.md)
-    - [Data class]()
+    - [Data class](./classes_and_objects/data_class.md)
     - [Sealed class](./classes_and_objects/sealed_class.md)
     - [Interface]()
     - [Delegate pattern](./classes_and_objects/delegate_pattern.md)

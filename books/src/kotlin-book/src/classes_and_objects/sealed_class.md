@@ -1,45 +1,35 @@
 # Sealed class
 
-Sealed classes or interfaces provide more control to the inheritance hierarchy.
-
-A (parent) class with **enumerated** (child) classes
-
-(Recall that Kotlin's classes are final)
-
-Sealed class
+Sealed classes are like enums with data.
 
 ```kotlin
-sealed class Employee
+sealed class Employee {
+	data class Manager(val name: String, val age: Int): Employee()
+	data class SeniorDev(val name: String): Employee()
+}
 
-data class Manager(val name: String, val age: Int): Employee()
-data class SeniorDev(val name: String): Employee()
-
-val employee: Employee = SeniorDev("al")
-val message = when(employee) {
-	is Manager -> "Hello sir"
-	is SeniorDev -> "Hi!"
+fun main() {
+	val employee: Employee = Employee.SeniorDev("Jonah")
+	when (employee) {
+		is Employee.Manager -> println("Manager: ${employee.name}, Age: ${employee.age}")
+		is Employee.SeniorDev -> println("SeniorDev: ${employee.name}")
+	}
 }
 ```
 
-Class
+Sealed classes in Kotlin is very similar to Rust's enums. Here is the Rust equivalent of the Kotlin code above.
 
-```kotlin
-open class Employee2
+```Rust
+enum Employee {
+    Manager { name: String, age: u8 },
+    SeniorDev { name: String },
+}
 
-data class Manager(val name: String, val age: Int): Employee2()
-data class SeniorDev(val name: String): Employee2()
-
-val employee: Employee2 = SeniorDev("al")
-val message = when(employee) {
-	is Manager -> "Hello sir"
-	is SeniorDev -> "Hi!"
-	else -> "??"
+fn main() {
+    let employee = Employee::SeniorDev { name: "Jonah".to_string() };
+    match employee {
+        Employee::Manager { name, age } => println!("Manager: {}, Age: {}", name, age),
+        Employee::SeniorDev { name } => println!("SeniorDev: {}", name),
+    }
 }
 ```
-
-
-> 💡 Sealed classes cannot be inherited outside of this file.
-
-
-> 💡 Sealed classes can list down ("enumerate") all the subclasses. Normal classes can do that too, but you need to add an else branch.
-
