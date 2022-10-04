@@ -13,6 +13,7 @@ fun main() {
             return 1
         }
     }
+    println(item.minimise())
 }
 ```
 
@@ -36,6 +37,7 @@ fun main() {
             return 100
         }
     }
-    println(item.javaClass.name)
+    println(item.minimise())
+    println(item.maximise())
 }
 ```

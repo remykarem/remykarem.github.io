@@ -4,7 +4,7 @@ Data class is like a `class` but automatically allows you to:
 
 * compare between objects (via `equals()`/`hashCode()`)
 
-    Two `Person`s with the same name are equal:
+    Two `Person`s with the same name are (structurally) equal:
 
     ```kotlin
     data class Person(val name: String)
@@ -16,7 +16,7 @@ Data class is like a `class` but automatically allows you to:
     }
     ```
 
-    In contrast, two `Person`s defined with `class` are not equal.
+    In contrast, two `Person`s defined with `class` are (structurally) not equal.
 
     ```kotlin
     class Person(name: String)
