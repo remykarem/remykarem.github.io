@@ -1,6 +1,6 @@
 # Cron job
 
-```kotlin
+```kotlin,noplayground
 @Component
 class WeeklyReportScheduler {
 

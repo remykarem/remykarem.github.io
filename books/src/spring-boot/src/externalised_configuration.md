@@ -1,4 +1,4 @@
-# Properties
+# Externalised configuration
 
 ```kotlin,noplayground
 @ConstructorBinding

@@ -27,12 +27,11 @@
     
     ```kotlin
     class UuidValidator : ConstraintValidator<ValidUUIDField, String> {
-    
         override fun isValid(
             UUID: String,
             context: ConstraintValidatorContext
         ): Boolean {
-    				return false
+            return false
         }
     }
     ```

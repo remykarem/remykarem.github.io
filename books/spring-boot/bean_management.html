@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Caching - Spring Boot</title>
+        <title>Bean management - Spring Boot</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded "><a href="properties.html"><strong aria-hidden="true">1.</strong> Properties</a></li><li class="chapter-item expanded "><a href="converters.html"><strong aria-hidden="true">2.</strong> Converters</a></li><li class="chapter-item expanded "><a href="interceptors.html"><strong aria-hidden="true">3.</strong> Interceptors</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">4.</strong> Filters</a></li><li class="chapter-item expanded "><a href="http_client.html"><strong aria-hidden="true">5.</strong> HTTP client</a></li><li class="chapter-item expanded "><a href="cron_job.html"><strong aria-hidden="true">6.</strong> Cron job</a></li><li class="chapter-item expanded "><a href="validation.html"><strong aria-hidden="true">7.</strong> Validation</a></li><li class="chapter-item expanded "><a href="serialisation.html"><strong aria-hidden="true">8.</strong> Serialisation</a></li><li class="chapter-item expanded "><a href="caching.html" class="active"><strong aria-hidden="true">9.</strong> Caching</a></li><li class="chapter-item expanded "><a href="persistence.html"><strong aria-hidden="true">10.</strong> Persistence</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">11.</strong> Testing</a></li><li class="chapter-item expanded "><a href="concepts.html"><strong aria-hidden="true">12.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/application_context.html"><strong aria-hidden="true">12.1.</strong> Application context</a></li><li class="chapter-item expanded "><a href="concepts/web_servlet.html"><strong aria-hidden="true">12.2.</strong> Web servlet</a></li><li class="chapter-item expanded "><a href="concepts/filter.html"><strong aria-hidden="true">12.3.</strong> Filter</a></li></ol></li><li class="chapter-item expanded "><a href="common_starters.html"><strong aria-hidden="true">13.</strong> Common starters</a></li><li class="chapter-item expanded "><a href="spring_security.html"><strong aria-hidden="true">14.</strong> Spring Security</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded "><a href="bean_management.html" class="active"><strong aria-hidden="true">1.</strong> Bean management</a></li><li class="chapter-item expanded "><a href="externalised_configuration.html"><strong aria-hidden="true">2.</strong> Externalised configuration</a></li><li class="chapter-item expanded "><a href="converters.html"><strong aria-hidden="true">3.</strong> Converters</a></li><li class="chapter-item expanded "><a href="interceptors.html"><strong aria-hidden="true">4.</strong> Interceptors</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">5.</strong> Filters</a></li><li class="chapter-item expanded "><a href="http_client.html"><strong aria-hidden="true">6.</strong> HTTP client</a></li><li class="chapter-item expanded "><a href="cron_job.html"><strong aria-hidden="true">7.</strong> Cron job</a></li><li class="chapter-item expanded "><a href="validation.html"><strong aria-hidden="true">8.</strong> Validation</a></li><li class="chapter-item expanded "><a href="serialisation.html"><strong aria-hidden="true">9.</strong> Serialisation</a></li><li class="chapter-item expanded "><a href="persistence.html"><strong aria-hidden="true">10.</strong> Persistence</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Exception handling</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Caching</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> Testing</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> Annotation processing</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.</strong> Swagger</div></li><li class="chapter-item expanded "><a href="concepts.html"><strong aria-hidden="true">16.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/application_context.html"><strong aria-hidden="true">16.1.</strong> Application context</a></li><li class="chapter-item expanded "><a href="concepts/web_servlet.html"><strong aria-hidden="true">16.2.</strong> Web servlet</a></li><li class="chapter-item expanded "><a href="concepts/filter.html"><strong aria-hidden="true">16.3.</strong> Filter</a></li></ol></li><li class="chapter-item expanded "><a href="common_starters.html"><strong aria-hidden="true">17.</strong> Common starters</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="spring_security.html"><strong aria-hidden="true">18.</strong> Spring Security</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,17 +142,65 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="caching"><a class="header" href="#caching">Caching</a></h1>
+                        <h1 id="bean-management"><a class="header" href="#bean-management">Bean management</a></h1>
+<p><strong>Beans</strong> are nothing but Java objects in the application. In Spring, they are managed by the IoC. What you have to do is to <em>register</em> them, and Spring will instantiate for you. Thereafter you can use them anywhere in the codebase via dependency injection.</p>
+<h3 id="registering-beans"><a class="header" href="#registering-beans">Registering beans</a></h3>
+<p>There are 3 ways to register beans:</p>
+<ul>
+<li>
+<p>Class declaration - <code>@Service</code>, <code>@Component</code> etc.</p>
+<pre><code class="language-kotlin noplayground">@Service
+class SomeService {
+    fun doSomething() {
+        //
+    }
+}</code></pre>
+</li>
+<li>
+<p>Function declaration in a <code>@Configuration</code> class - <code>@Bean</code></p>
+<pre><code class="language-kotlin noplayground">@Configuration
+class SomeConfiguration {
+    @Bean
+    fun mySmallBean() {
+        //
+    }
+}</code></pre>
+</li>
+<li>
+<p>Import from another library</p>
+</li>
+</ul>
+<h3 id="include-bean-dependencies"><a class="header" href="#include-bean-dependencies">Include bean dependencies</a></h3>
+<p>Declare the dependencies in the constructor of a class declaration.</p>
+<h3 id="conditional-registration"><a class="header" href="#conditional-registration">Conditional registration</a></h3>
+<ul>
+<li>
+<p>On existence of beans</p>
+<ul>
+<li><code>@ConditionalOnMissingBean</code></li>
+<li><code>@ConditionalOnProperty</code></li>
+</ul>
+</li>
+<li>
+<p>On Spring Profile</p>
+<ul>
+<li><code>@Profile</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="registering-beans-with-same-name"><a class="header" href="#registering-beans-with-same-name">Registering beans with same name</a></h3>
+<p>This usually occurs if the type of the bean is an interface, or when you have 2 different configuration classes having the same function name.</p>
+<p><code>@Qualifier</code>, <code>@Primary</code></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="serialisation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="preface.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="persistence.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="externalised_configuration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -162,11 +210,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="serialisation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="preface.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="persistence.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="externalised_configuration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

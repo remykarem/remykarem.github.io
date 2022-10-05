@@ -8,7 +8,7 @@
       private val headerModifierInterceptor: HeaderModifierInterceptor
     ) {
     
-    		@Bean
+        @Bean
         fun restTemplate(converter: MappingJackson2HttpMessageConverter): RestTemplate {
             val requestFactory =
                 ClientHttpRequestFactoryBuilder.buildClientHttpRequestFactory(restTemplateProperties)
