@@ -27,3 +27,11 @@ This can also be included in the compiler flag `-Xjsr305`.
 [JSR-223](https://jcp.org/en/jsr/detail?id=223)
 
 `javax.scripting`
+
+## Contexts and Dependency Injection for Java 2.0
+
+Aka CDI
+
+[JSR-365](https://jcp.org/en/jsr/detail?id=365)
+
+Includes `@Inject` specification
