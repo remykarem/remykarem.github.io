@@ -1,33 +1,57 @@
 # Scope functions
 
-- Returns self
-    - context is self: `apply`
-    - context is arg: `also`
-- Returns final result
-    - context is self: `run`, `with`
-    - context is arg: `let` (can pass function)
+There are 5 scoped functions - `let`, `apply`, `run`, `also` and `with`.
 
-## **apply**
-
-- When you need to (1) create an object & (2) set some things to it (useful for old Java libraries)
-
-```kotlin
-val adam = Person("Adam").apply {
-  age = 32
-  city = "London"   
-	address = "bla"       
-}
-```
+The only scoped functions that I use are `let` and `apply`.
 
 ## **let**
 
-- When you want to go to the happy path if you have ****nulls
-- When you want to perform multiple actions on the object
+For me I use the `let` idiom mainly when dealing with `null`s.
 
 ```kotlin
-val alice = Person("Alice", 20).let {
-	println(this)
-	this.moveTo("London")
+fun printName(name: String) {
+	println(name)
+}
+
+fun main() {
+	val name: String? = "Harry"
+	name?.let { printName(it) }
+}
+```
+
+or use a function reference:
+
+```kotlin
+fun printName(name: String) {
+	println(name)
+}
+
+fun main() {
+	val name: String? = "Harry"
+	name?.let(::printName)
+}
+```
+
+## **apply**
+
+I use `apply` a lot, especially with old Java libraries.
+
+Instead of:
+
+```kotlin,noplayground
+val person = Person("Adam")
+person.age = 32
+person.city = "London"   
+person.address = "bla"  
+```
+
+do:
+
+```kotlin,noplayground
+val person = Person("Adam").apply {
+	age = 32
+	city = "London"   
+	address = "bla"       
 }
 ```
 

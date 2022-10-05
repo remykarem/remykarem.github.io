@@ -16,15 +16,15 @@ fun main() {
 With methods
 
 ```kotlin
-class Box<T>(private val item: T) {
-    fun getItem(): T {
+class Box<T>(val item: T) {
+    fun getInnerItem(): T {
         return item
     }
 }
 
 fun main() {
     val box = Box(10)
-    println(box.getItem())
+    println(box.getInnerItem())
 }
 ```
 
@@ -35,34 +35,38 @@ interface Minimisable {
     fun minimise(): Int
 }
 
-open class Box<T: Minimisable>(private val item: T) {
+class Box<T: Minimisable>(val item: T) {
     fun getMinimisedItem(): Int {
         return item.minimise()
     }
 }
 
-val item = object : Minimisable {
-    override fun minimise(): Int {
-        return 100
+fun main() {
+    val item = object : Minimisable {
+        override fun minimise(): Int {
+            return 100
+        }
     }
+    val box = Box(item)
+    println(box)
 }
-
-val box = Box(item)
 ```
 
 ```kotlin
-// Single upperbound
-class Box<T>(private valitem: T) where T: Minimisable{
+class Box<T>(val item: T) where T: Minimisable {
 fun getMinimisedItem(): Int {
     return item.minimise()
     }
 }
-val item =object:Minimisable{
-override fun minimise(): Int {
-return 100
+
+fun main() {
+    val item = object : Minimisable {
+        override fun minimise(): Int {
+            return 100
+        }
     }
+    val box = Box(item)
 }
-val box = Box(item)
 ```
 
 Multiple upperbounds
@@ -82,16 +86,18 @@ class Box<T>(private val item: T)
 ```
 
 ```kotlin
-class Stuff:Minimisable,Maximisable{
-override fun minimise(): Int {
-return 5
+class Stuff: Minimisable, Maximisable {
+    override fun minimise(): Int {
+        return 5
     }
-override fun maximise(): Int {
-return 100
+    override fun maximise(): Int {
+        return 100
     }
 }
-val item = Stuff()
-val box = Box(item)
+fun main() {
+    val item = Stuff()
+    val box = Box(item)
+}
 ```
 
 multiple types

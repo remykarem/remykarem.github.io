@@ -2,6 +2,28 @@
 
 Used for singleton or one-time class overrides.
 
+Simple object declaration
+
+```kotlin
+val someObject = object {
+    val num = 5
+}
+println(someObject.num)
+```
+
+Object declaration with a method
+
+```kotlin
+val someObject = object {
+    fun greet() {
+        println("Hello!")
+    }
+}
+someObject.greet()
+```
+
+Object that inherits from an interface
+
 ```kotlin
 interface Minimisable {
     fun minimise(): Int
