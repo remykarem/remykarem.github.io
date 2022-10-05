@@ -1,6 +1,8 @@
 # Summary
 
-- [Preface](./preface.md)
+[Preface](./preface.md)
+
+- [Java distributions](./java_distributions.md)
 - [Kotlin std library](./std_library/std_library.md)
     - [Collections](./std_library/collections.md)
     - [Mutability](./std_library/mutability.md)
