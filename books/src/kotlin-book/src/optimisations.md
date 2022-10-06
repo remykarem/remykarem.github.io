@@ -25,3 +25,5 @@ inline fun <reified T> doSomething(value: T) {
 ```
 
 While copying the body of an inline function, the compiler also replaces the type parameter T with the actual type argument that is specified or inferred in the function call.
+
+## Tail recursion
