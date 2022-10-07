@@ -15,5 +15,3 @@ Here are the different Java distributions for the OpenJDK implementation:
 | GraalVM Community Edition | GraalVM      | Yes |
 
 TCK (Technology Compatibility Kit) is a suite of tests that checks for JSR compliance. Java distribution builds are usually TCK-tested.
-
-(I think) each distribution has its own release cycle.

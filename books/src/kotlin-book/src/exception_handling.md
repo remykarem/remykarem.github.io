@@ -1,21 +1,11 @@
 # Exception handling
 
-There are different exception handling models in Kotlin.
+| API                      | Client code handling | Enforced?               |
+|--------------------------|----------------------|-------------------------|
+| `throw` expression       | `try`/`except`       | No                      |
+| Nullable return type     | Type system          | Yes, by the type system |
+| Sealed class return type | Type system          | Yes, by the type system |
 
-## Throw
+The sealed class idiom can be seen in the standard library's [`Result`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) or Arrow's [`Either`](https://arrow-kt.io/docs/apidocs/arrow-core/arrow.core/-either/).
 
-You can write `throw` expressions that will cause the program to crash.
-
-Note that your API can alert client code (Java, Swift, or Objective-C) that you are throwing using the `@Throws` annotation.
-
-## Try-catch
-
-We're still bound to Java's world of try-catch if we use Java libraries.
-
-## Result
-
-This is similar to Rust's `Result` type.
-
-## Unhandled
-
-Some functions still throw an exception (eg. the indexing operator of a list), but the compiler won't warn you about that.
+> ⚠️ Take note that the compiler doesn't enforce catching exceptions thrown by libraries.

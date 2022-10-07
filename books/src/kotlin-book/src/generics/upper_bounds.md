@@ -2,32 +2,6 @@
 
 Default upper bound is `Any?`.
 
-Simple
-
-```kotlin
-class Box<T>(item: T)
-
-fun main() {
-    val box = Box(10)
-    println(box)
-}
-```
-
-With methods
-
-```kotlin
-class Box<T>(val item: T) {
-    fun getInnerItem(): T {
-        return item
-    }
-}
-
-fun main() {
-    val box = Box(10)
-    println(box.getInnerItem())
-}
-```
-
 Single upperbound
 
 ```kotlin

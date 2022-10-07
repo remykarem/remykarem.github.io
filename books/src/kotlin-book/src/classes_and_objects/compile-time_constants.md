@@ -56,7 +56,7 @@ fun main() {
 }
 ```
 
-Some functions work, however due to *const evaluation*:
+Some functions work, however, due to *const evaluation*:
 
 ```kotlin
 const val CHARACTER = "Hello".get(0)
