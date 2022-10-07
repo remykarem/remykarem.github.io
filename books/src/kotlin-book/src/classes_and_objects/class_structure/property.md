@@ -1,4 +1,4 @@
-# Class property
+# Property
 
 Class properties are computed once in the lifetime of a class.
 

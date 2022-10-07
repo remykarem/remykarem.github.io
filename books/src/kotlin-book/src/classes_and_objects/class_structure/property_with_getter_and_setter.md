@@ -1,4 +1,4 @@
-# Getter and setter property
+# With getter and setter
 
 For a property that has a getter and a setter, the property:
 1. must be `var`

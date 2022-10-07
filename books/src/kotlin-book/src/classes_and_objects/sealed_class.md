@@ -1,6 +1,8 @@
 # Sealed class
 
-Sealed classes are like enums with data.
+Sealed classes are a powerful feature in Kotlin. They are akin to the types in Rust and Haskell ecosystem.
+
+A sealed class is idiomatically used as an enum with arbitrary data structures.
 
 ```kotlin
 sealed class Employee {
@@ -17,7 +19,7 @@ fun main() {
 }
 ```
 
-Sealed classes in Kotlin is very similar to Rust's enums. Here is the Rust equivalent of the Kotlin code above.
+Here is the Rust equivalent of the Kotlin code above.
 
 ```Rust
 enum Employee {
@@ -33,3 +35,5 @@ fn main() {
     }
 }
 ```
+
+Sealed classes is an exciting feature because it gives programmers more flexibility in modelling data.

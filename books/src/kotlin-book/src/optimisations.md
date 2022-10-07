@@ -16,6 +16,12 @@ fun <T: Any> doSomething(value: T, type: KClass<T>) {
 }
 ```
 
+```kotlin
+value class Person {
+
+}
+```
+
 but Kotlin handles it better:
 
 ```kotlin
@@ -27,3 +33,11 @@ inline fun <reified T> doSomething(value: T) {
 While copying the body of an inline function, the compiler also replaces the type parameter T with the actual type argument that is specified or inferred in the function call.
 
 ## Tail recursion
+
+## Arrays with primitives
+
+https://kt.academy/article/ek-arrays
+
+## Sequence
+
+https://kt.academy/article/ek-sequence

@@ -1,4 +1,4 @@
-# Setter property
+# Property with setter
 
 This is how you add a setter:
 

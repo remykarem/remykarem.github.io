@@ -1,57 +1,55 @@
 # Enum class
 
 Useful Kotlin built-in extensions:
+* [`enumValueOf`](#enumvalueof)
+* [`enumValues`](#enumvaluew)
 
-* [`enumValueOf`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/enum-value-of.html)
+---
 
-    ```kotlin,noplayground
-    public inline fun <reified T : Enum<T>> enumValueOf(name: String): T
-    ```
+## `enumValueOf`
 
-    Usage:
 
-    ```kotlin
-    enum class Status {
-        Approved,
-        Rejected,
-    }
+```kotlin
+enum class Status {
+    Approved,
+    Rejected,
+}
 
-    fun main() {
-        val status = enumValueOf<Status>("Approved")
-        println(status)
-    }
-    ```
+fun main() {
+    val status = enumValueOf<Status>("Approved")
+    println(status)
+}
+```
 
-    ⚠️ Gotcha: You have to remember to catch the exception yourself if the parse fails (yucks) (instead of the API returning a nullable). Below will throw an `IllegalArgumentException`:
+⚠️ Gotcha: You have to remember to catch the exception yourself if the parse fails (yucks) (instead of the API returning a nullable). Below will throw an `IllegalArgumentException`:
 
-    ```kotlin
-    enum class Status {
-        Approved,
-        Rejected,
-    }
+```kotlin
+enum class Status {
+    Approved,
+    Rejected,
+}
 
-    fun main() {
-        val status = enumValueOf<Status>("Approvedssss")
-        println(status)
-    }
-    ```
+fun main() {
+    val status = enumValueOf<Status>("Approvedssss")
+    println(status)
+}
+```
 
-* [`enumValues`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/enum-values.html)
+[Reference](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/enum-value-of.html)
 
-    ```kotlin,noplayground
-    public inline fun <reified T : Enum<T>> enumValues(): Array<T>
-    ```
 
-    Usage:
+## `enumValueOf`
 
-    ```kotlin
-    enum class Status {
-        Approved,
-        Rejected,
-    }
+```kotlin
+enum class Status {
+    Approved,
+    Rejected,
+}
 
-    fun main() {
-        val statuses = enumValues<Status>().toList()
-        println(statuses)
-    }
-    ```
+fun main() {
+    val statuses = enumValues<Status>().toList()
+    println(statuses)
+}
+```
+
+[Reference](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/enum-values.html)

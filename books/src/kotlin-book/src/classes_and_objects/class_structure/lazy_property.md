@@ -1,6 +1,6 @@
 # Lazy property
 
-You can initialise a property lazily. A lazy property is like a cached property in Python.
+You can initialise a property lazily, i.e. the value will be computed only when you call it.
     
 ```kotlin
 class Person(val height: Float, val weight: Float) {

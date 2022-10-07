@@ -1,6 +1,6 @@
 # Interface
 
-Note that interfaces can declare functions *and/or properties*.
+Note that in Kotlin, interfaces can declare functions *and/or properties*. Here is an example with a property:
 
 ```kotlin
 interface Hello {

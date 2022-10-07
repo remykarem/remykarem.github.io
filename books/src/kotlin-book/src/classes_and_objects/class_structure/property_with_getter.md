@@ -1,4 +1,4 @@
-# Getter property
+# Property with getter
 
 If we want `area` to be computed on the fly,
 
@@ -24,7 +24,7 @@ fun main() {
 > class Rectangle(var height: Int, var width: Int) {
 > 	fun getArea() = this.height * this.width
 > }
-
+>
 > fun main() {
 >    val rectangle = Rectangle(10, 2)
 >    println(rectangle.getArea())
