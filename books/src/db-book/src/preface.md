@@ -1,0 +1,6 @@
+# Preface
+
+Resources:
+* [Carnegie Mellon University, Introduction to Database Systems (Fall 2019)](https://www.youtube.com/playlist?list=PLSE8ODhjZXjbohkNBWQs_otTrBTrjyohi)
+* [Boston University, Introduction to Database Systems (Fall 2016)](https://www.cs.bu.edu/faculty/gkollios/cs460f17/)
+* [UC Berkeley, Introduction to Database Systems (Fall 2020)](https://cs186berkeley.net/fa20/)
