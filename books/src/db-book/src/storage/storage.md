@@ -1,23 +1,21 @@
-# Disk space management
+# Access methods
 
-How data is persisted onto the disk is managed by the disk space manager.
+When you run a database query, data needs to be accessed. We need to find a way to organise the data to support fast access.
 
-The disk space manager provides APIs for [**records**](tuple.md).
+Access methods organise [**pages**](page.md) into *database files*, and organise the data in these pages too. Here are some of the ways:
+
+Data is stored on the disk as an OS file. A database file knows how to decode the contents of an OS file.
 
 ```kotlin
-interface DiskSpaceManager {
-    fun getRecord(recordId: RecordId) {}
-    fun insertRecord(record: Record) {}
-    fun deleteRecord(recordId: RecordId) {}
-    fun modifyRecord(recordId: RecordId) {}
-    fun scanAllRecords(): List<Record> {}
+interface DatabaseFile {
+    fun iterate() {}
 }
 ```
 
-Internally, the disk space manager organises the records as [**pages**](page.md) of records. A collection of pages is called a *file*. There are different ways to organise the pages of a file:
+> ⚠️ Note that a *database file* is **not** an OS file. It is an abstraction.
 
-* Unordered (heap) file organisation
-    * List
-    * Page directory
-* Sorted file organisation
-* Clustered file organisation
+What happens when an iteration is requested from a heap file?
+
+1. A heap file calls BufferManager to ensure that the necessary pages are loaded in memory.
+
+2. If not in memory, the BufferManager calls (???) the database file to read page from disk.

@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Main functionality</li><li class="chapter-item expanded "><a href="storage/storage.html"><strong aria-hidden="true">1.</strong> Disk space management</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="storage/tuple.html"><strong aria-hidden="true">1.1.</strong> Record</a></li><li class="chapter-item expanded "><a href="storage/page.html"><strong aria-hidden="true">1.2.</strong> Page</a></li><li class="chapter-item expanded "><a href="storage/heap_file.html"><strong aria-hidden="true">1.3.</strong> File</a></li></ol></li><li class="chapter-item expanded "><a href="buffer_management/buffer_management.html"><strong aria-hidden="true">2.</strong> Buffer management</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="buffer_management/frame_and_buffer_pool.html"><strong aria-hidden="true">2.1.</strong> Frame & buffer pool</a></li><li class="chapter-item expanded "><a href="buffer_management/buffer_manager.html"><strong aria-hidden="true">2.2.</strong> Buffer manager</a></li><li class="chapter-item expanded "><a href="buffer_management/optimisations.html"><strong aria-hidden="true">2.3.</strong> Optimisations</a></li></ol></li><li class="chapter-item expanded "><a href="indexing.html"><strong aria-hidden="true">3.</strong> Indexing</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Guarantees</li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Concurrency control</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> Transaction</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Atomicity</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.</strong> Correctness</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> Isolation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.5.</strong> Durability</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Recovery</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">API</li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Query processing</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Query execution</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Query planning</div></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Main functionality</li><li class="chapter-item expanded "><a href="storage/storage.html"><strong aria-hidden="true">1.</strong> Accessing data</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.1.</strong> Data structures</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="storage/tuple.html"><strong aria-hidden="true">1.1.1.</strong> Record</a></li><li class="chapter-item expanded "><a href="storage/page.html"><strong aria-hidden="true">1.1.2.</strong> Page</a></li></ol></li><li class="chapter-item expanded "><a href="storage/access_methods.html"><strong aria-hidden="true">1.2.</strong> Access methods</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="storage/heap_file.html"><strong aria-hidden="true">1.2.1.</strong> Heap file</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.2.2.</strong> Sorted file</div></li><li class="chapter-item expanded "><a href="indexing.html"><strong aria-hidden="true">1.2.3.</strong> Index</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="buffer_management/buffer_management.html"><strong aria-hidden="true">2.</strong> Buffer management</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="buffer_management/frame_and_buffer_pool.html"><strong aria-hidden="true">2.1.</strong> Frame & buffer pool</a></li><li class="chapter-item expanded "><a href="buffer_management/buffer_manager.html"><strong aria-hidden="true">2.2.</strong> Buffer manager</a></li><li class="chapter-item expanded "><a href="buffer_management/optimisations.html"><strong aria-hidden="true">2.3.</strong> Optimisations</a></li></ol></li><li class="chapter-item expanded "><a href="disk_space_management.html"><strong aria-hidden="true">3.</strong> Disk space management</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Important features</li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Concurrency</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> Transaction</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Atomicity</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.</strong> Correctness</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> Isolation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.5.</strong> Durability</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Recovery</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Query API</li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Query processing</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Query execution</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Query planning</div></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,30 +150,29 @@
 <li><a href="https://www.cs.bu.edu/faculty/gkollios/cs460f17/">Boston University, Introduction to Database Systems (Fall 2016)</a></li>
 <li><a href="https://cs186berkeley.net/fa20/">UC Berkeley, Introduction to Database Systems (Fall 2020)</a></li>
 <li><a href="https://thodrek.github.io/cs564-fall17/">University of Wisconsin-Madison, Database Management Systems: Design and Implementation (Fall 2020)</a></li>
+<li><a href="https://courses.cs.washington.edu/courses/cse444/19wi/">University of Washington, CSE 444 Database Internals, Winter 2019</a></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="disk-space-management"><a class="header" href="#disk-space-management">Disk space management</a></h1>
-<p>How data is persisted onto the disk is managed by the disk space manager.</p>
-<p>The disk space manager provides APIs for <a href="storage/tuple.html"><strong>records</strong></a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="access-methods"><a class="header" href="#access-methods">Access methods</a></h1>
+<p>When you run a database query, data needs to be accessed. We need to find a way to organise the data to support fast access.</p>
+<p>Access methods organise <a href="storage/page.html"><strong>pages</strong></a> into <em>database files</em>, and organise the data in these pages too. Here are some of the ways:</p>
+<p>Data is stored on the disk as an OS file. A database file knows how to decode the contents of an OS file.</p>
 <pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
-</span>interface DiskSpaceManager {
-    fun getRecord(recordId: RecordId) {}
-    fun insertRecord(record: Record) {}
-    fun deleteRecord(recordId: RecordId) {}
-    fun modifyRecord(recordId: RecordId) {}
-    fun scanAllRecords(): List&lt;Record&gt; {}
+</span>interface DatabaseFile {
+    fun iterate() {}
 }
 <span class="boring">}</span></code></pre></pre>
-<p>Internally, the disk space manager organises the records as <a href="storage/page.html"><strong>pages</strong></a> of records. A collection of pages is called a <em>file</em>. There are different ways to organise the pages of a file:</p>
-<ul>
-<li>Unordered (heap) file organisation
-<ul>
-<li>List</li>
-<li>Page directory</li>
-</ul>
+<blockquote>
+<p>⚠️ Note that a <em>database file</em> is <strong>not</strong> an OS file. It is an abstraction.</p>
+</blockquote>
+<p>What happens when an iteration is requested from a heap file?</p>
+<ol>
+<li>
+<p>A heap file calls BufferManager to ensure that the necessary pages are loaded in memory.</p>
 </li>
-<li>Sorted file organisation</li>
-<li>Clustered file organisation</li>
-</ul>
+<li>
+<p>If not in memory, the BufferManager calls (???) the database file to read page from disk.</p>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tuplerecord"><a class="header" href="#tuplerecord">Tuple/record</a></h1>
 <p>A record can have 2 different formats:</p>
 <ul>
@@ -245,6 +244,18 @@
 <li>Records are written downwards (from start to end of page)</li>
 <li>Slots are written upwards (from end to start of page)</li>
 </ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="access-methods-1"><a class="header" href="#access-methods-1">Access methods</a></h1>
+<p>aka stores</p>
+<ul>
+<li>Unsorted (heap) file organisation
+<ul>
+<li>List</li>
+<li>Page directory</li>
+</ul>
+</li>
+<li>Sorted file organisation</li>
+<li>Clustered file organisation</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="heap-file"><a class="header" href="#heap-file">Heap file</a></h1>
 <p>A <em>file</em> is a <strong>collection of <a href="storage/page.html">pages</a></strong>. The file should support:</p>
 <ul>
@@ -258,26 +269,11 @@
     val records: HashMap&lt;PageId, List&lt;RecordId&gt;&gt;
 }
 <span class="boring">}</span></code></pre></pre>
-<p>Example of a file:</p>
-<pre><code class="language-txt">+------------------------------+
-|                              |
-+------------------------------+
-|                              | &lt;- contains metadata
-+------------------------------+
-|                              |
-+------------------------------+
-|                              |
-+------------------------------+
-|                              | &lt;- contains page 1
-+------------------------------+
-|                              | &lt;- contains page 2
-+------------------------------+
-|                              | &lt;- contains page 3
-+------------------------------+
-</code></pre>
-<blockquote>
-<p><strong>System catalogs</strong> are where you can store metadata about the file structure (eg. heap file) etc.</p>
-</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="indexing"><a class="header" href="#indexing">Indexing</a></h1>
+<p>The DBMS ensures that the contents of the table and the index are logically in sync.</p>
+<ul>
+<li>B+ tree</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="buffer-management"><a class="header" href="#buffer-management">Buffer management</a></h1>
 <p>The key idea is that reading and writing to disk is slow. We somehow need to cache data.</p>
 <p>As such, data must be in RAM for DBMS to operate on it. However, we can;t keep all the data in memory.</p>
@@ -328,11 +324,12 @@ pin page and return address
 <li>Prefetching based on query plan</li>
 <li>Scan sharing</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="indexing"><a class="header" href="#indexing">Indexing</a></h1>
-<p>The DBMS ensures that the contents of the table and the index are logically in sync.</p>
-<ul>
-<li>B+ tree</li>
-</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="disk-space-management"><a class="header" href="#disk-space-management">Disk space management</a></h1>
+<p>The job of a disk space manager is to allocate space on the disk for database files.</p>
+<p>Design choice: how many OS files?</p>
+<blockquote>
+<p>💡 SQLite uses 1 OS file for the entire database.</p>
+</blockquote>
 
                     </main>
 
