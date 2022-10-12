@@ -4,8 +4,8 @@
 
 # Main functionality
 
-- [Storage management](./storage/storage.md)
-    - [Tuple/record](./storage/tuple.md)
+- [Disk space management](./storage/storage.md)
+    - [Record](./storage/tuple.md)
     - [Page](./storage/page.md)
     - [File](./storage/heap_file.md)
 

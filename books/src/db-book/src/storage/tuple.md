@@ -17,3 +17,5 @@ A record can have 2 different formats:
     * Array of field offsets
 
 A **record ID** identifies a tuple. A record ID is typically `(page_id, slot_number)`.
+
+> This contiguous storage is a setup for a row store.

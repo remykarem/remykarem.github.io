@@ -1,8 +1,18 @@
 # Heap file
 
 A *file* is a **collection of [pages](page.md)**. The file should support:
-* iterate over the pages
-* perform read, cread, update, delete on the pages.
+* iterating over the pages
+* performing read, cread, update, delete on the pages.
+
+
+
+```kotlin
+interface PageManagement {
+    val pages: HashMap<PageId, Page>
+    val freeSpaces: HashMap<PageId, Int>
+    val records: HashMap<PageId, List<RecordId>>
+}
+```
 
 Example of a file:
 
@@ -23,13 +33,5 @@ Example of a file:
 |                              | <- contains page 3
 +------------------------------+
 ```
-
-Implementations:
-
-* Heap file
-    * Linked list
-    * Page directory
-* Sorted file
-* Clustered file
 
 > **System catalogs** are where you can store metadata about the file structure (eg. heap file) etc.
