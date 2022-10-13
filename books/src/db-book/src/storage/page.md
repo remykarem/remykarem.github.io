@@ -1,6 +1,8 @@
 # Page
 
-A *page* is a fixed-size block of data consisting of records. It is typically 4096 bytes.
+A *page* or a *block is a fixed-size block of data consisting of records. It is typically 4096 bytes.
+
+A page is the unit of (i) storage allocation and (ii) data transfer.
 
 There are different page formats:
 * **Slotted Page** (most common)

@@ -115,20 +115,19 @@ function playground_text(playground) {
             edition = "2021";
         }
         var params = {
-            args: "",
-            files: [
-                {
-                    name: "File.kt",
-                    text: text,
-                    publicId: ""
-                }
-            ],
-            confType: "java"
+            version: "stable",
+            optimize: "0",
+            code: text,
+            edition: edition
+        };
+
+        if (text.indexOf("#![feature") !== -1) {
+            params.version = "nightly";
         }
 
         result_block.innerText = "Running...";
 
-        fetch_with_timeout("https://api.kotlinlang.org//api/1.7.10/compiler/run", {
+        fetch_with_timeout("https://play.rust-lang.org/evaluate.json", {
             headers: {
                 'Content-Type': "application/json",
             },
@@ -138,11 +137,11 @@ function playground_text(playground) {
         })
         .then(response => response.json())
         .then(response => {
-            if (response.text.trim() === '') {
+            if (response.result.trim() === '') {
                 result_block.innerText = "No output";
                 result_block.classList.add("result-no-output");
             } else {
-                result_block.innerText = response.text.replace("<outStream>", "").replace("</outStream>", "");
+                result_block.innerText = response.result;
                 result_block.classList.remove("result-no-output");
             }
         })
@@ -161,11 +160,11 @@ function playground_text(playground) {
         .filter(function (node) {return !node.parentElement.classList.contains("header"); });
 
     if (window.ace) {
-        // language-kotlin class needs to be removed for editable
+        // language-rust class needs to be removed for editable
         // blocks or highlightjs will capture events
         code_nodes
             .filter(function (node) {return node.classList.contains("editable"); })
-            .forEach(function (block) { block.classList.remove('language-kotlin'); });
+            .forEach(function (block) { block.classList.remove('language-rust'); });
 
         Array
         code_nodes
@@ -179,7 +178,7 @@ function playground_text(playground) {
     // even if highlighting doesn't apply
     code_nodes.forEach(function (block) { block.classList.add('hljs'); });
 
-    Array.from(document.querySelectorAll("code.language-kotlin")).forEach(function (block) {
+    Array.from(document.querySelectorAll("code.language-rust")).forEach(function (block) {
 
         var lines = Array.from(block.querySelectorAll('.boring'));
         // If no lines were hidden, return

@@ -34,13 +34,13 @@
     </head>
     <body>
         <!-- Provide site root to javascript -->
-        <script>
+        <script type="text/javascript">
             var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
+        <script type="text/javascript">
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -56,7 +56,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
+        <script type="text/javascript">
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -68,7 +68,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
+        <script type="text/javascript">
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Main functionality</li><li class="chapter-item expanded "><a href="../disk_space_management.html"><strong aria-hidden="true">1.</strong> Disk space management</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.1.</strong> Data structures</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../storage/tuple.html"><strong aria-hidden="true">1.1.1.</strong> Record</a></li><li class="chapter-item expanded "><a href="../storage/page.html"><strong aria-hidden="true">1.1.2.</strong> Page</a></li><li class="chapter-item expanded "><a href="../indexing.html"><strong aria-hidden="true">1.1.3.</strong> Index</a></li></ol></li><li class="chapter-item expanded "><a href="../storage/access_methods.html"><strong aria-hidden="true">1.2.</strong> File organisation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../storage/heap_file.html" class="active"><strong aria-hidden="true">1.2.1.</strong> Heap file</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.2.2.</strong> Sorted file</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../buffer_management/buffer_management.html"><strong aria-hidden="true">2.</strong> Buffer management</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../buffer_management/frame_and_buffer_pool.html"><strong aria-hidden="true">2.1.</strong> Frame & buffer pool</a></li><li class="chapter-item expanded "><a href="../buffer_management/buffer_manager.html"><strong aria-hidden="true">2.2.</strong> Buffer manager</a></li><li class="chapter-item expanded "><a href="../buffer_management/optimisations.html"><strong aria-hidden="true">2.3.</strong> Optimisations</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">Important features</li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Concurrency</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> Transaction</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Atomicity</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Correctness</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.4.</strong> Isolation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.5.</strong> Durability</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Recovery</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Query API</li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Query processing</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.</strong> Processing models</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> Access methods</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Query execution</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Query planning</div></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Storage management</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Data structures</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../disk_space_management.html"><strong aria-hidden="true">1.1.</strong> File</a></li><li class="chapter-item expanded "><a href="../storage/tuple.html"><strong aria-hidden="true">1.2.</strong> Record</a></li><li class="chapter-item expanded "><a href="../storage/heap_file.html" class="active"><strong aria-hidden="true">1.3.</strong> Heap file</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.4.</strong> Sorted file</div></li></ol></li><li class="chapter-item expanded "><a href="../buffer_management/buffer_management.html"><strong aria-hidden="true">2.</strong> Buffer management</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../storage/page.html"><strong aria-hidden="true">2.1.</strong> Page</a></li><li class="chapter-item expanded "><a href="../buffer_management/frame_and_buffer_pool.html"><strong aria-hidden="true">2.2.</strong> Frame & buffer pool</a></li><li class="chapter-item expanded "><a href="../buffer_management/buffer_manager.html"><strong aria-hidden="true">2.3.</strong> Buffer manager</a></li><li class="chapter-item expanded "><a href="../buffer_management/optimisations.html"><strong aria-hidden="true">2.4.</strong> Optimisations</a></li></ol></li><li class="chapter-item expanded "><a href="../indexing.html"><strong aria-hidden="true">3.</strong> Indexing</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Important features</li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Transactional</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Concurrent</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Recoverable</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Query API</li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Query processing</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Processing models</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.2.</strong> Access methods</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Query execution</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Query planning</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">SQL</li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Basic</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Intermediate</div></li><li class="chapter-item expanded "><a href="../sql/advanced.html"><strong aria-hidden="true">12.</strong> Advanced</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> Physical storage systems</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> Big Data</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">14.1.</strong> Distributed file systems</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.2.</strong> Streaming data</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.3.</strong> Graph databases</div></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -132,7 +132,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
+                <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -148,13 +148,12 @@
 <li>iterating over the pages</li>
 <li>performing read, cread, update, delete on the pages.</li>
 </ul>
-<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
-</span>interface PageManagement {
+<pre><code class="language-kotlin">interface PageManagement {
     val pages: HashMap&lt;PageId, Page&gt;
     val freeSpaces: HashMap&lt;PageId, Int&gt;
     val records: HashMap&lt;PageId, List&lt;RecordId&gt;&gt;
 }
-<span class="boring">}</span></code></pre></pre>
+</code></pre>
 <h2 id="pushing-updates-to-disk"><a class="header" href="#pushing-updates-to-disk">Pushing updates to disk</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Event</th><th>Write page to disk?</th></tr></thead><tbody>
 <tr><td>Insert record</td><td>No</td></tr>
@@ -166,7 +165,7 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../storage/access_methods.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../storage/tuple.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -180,7 +179,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../storage/access_methods.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../storage/tuple.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
@@ -192,7 +191,7 @@
         </div>
 
         <!-- Livereload script (if served using the cli tool) -->
-        <script>
+        <script type="text/javascript">
             const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
             const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
             const socket = new WebSocket(wsAddress);
@@ -210,18 +209,18 @@
 
 
 
-        <script>
+        <script type="text/javascript">
             window.playground_copyable = true;
         </script>
 
 
-        <script src="../elasticlunr.min.js" charset="utf-8"></script>
-        <script src="../mark.min.js" charset="utf-8"></script>
-        <script src="../searcher.js" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="../clipboard.min.js" charset="utf-8"></script>
-        <script src="../highlight.js" charset="utf-8"></script>
-        <script src="../book.js" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
 

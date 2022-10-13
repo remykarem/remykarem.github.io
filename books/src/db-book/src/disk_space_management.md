@@ -1,4 +1,4 @@
-# Disk space management
+# File
 
 aka file storage, storage management
 
@@ -12,3 +12,11 @@ There are different ways to do this. **File organisation** looks into this.
 Design choice: how many OS files? One OS file for each relation?
 
 > 💡 SQLite uses 1 OS file for the entire database.
+
+aka stores
+
+* Unsorted (heap) file organisation
+    * List
+    * Page directory
+* Sorted file organisation
+* Clustered file organisation
