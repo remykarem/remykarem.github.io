@@ -13,3 +13,11 @@ interface PageManagement {
     val records: HashMap<PageId, List<RecordId>>
 }
 ```
+
+## Pushing updates to disk
+
+Event | Write page to disk?
+-----|-----
+Insert record | No
+Delete record | No
+Add new page | Yes
