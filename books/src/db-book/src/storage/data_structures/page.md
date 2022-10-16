@@ -1,6 +1,8 @@
 # Page
 
-A *page* or a *block is a fixed-size block of data consisting of records, indexes etc. (most systems will not mix the different types together within a page). It is typically 4096 bytes.
+A *database page* (or simply a *page*) is a block is a fixed-size block of data consisting of records, indexes etc. (most systems will not mix the different types together within a page). It is typically 4096 bytes.
+
+> A database page is not the same as the *hardware page* or *OS page*.
 
 A page is the unit of (i) storage allocation and (ii) data transfer.
 

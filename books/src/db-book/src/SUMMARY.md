@@ -13,12 +13,12 @@
     - [Index](./indexing/indexing.md)
     - [Page](./storage/data_structures/page.md)
     - [Record](./storage/data_structures/record.md)
+    - [Others](./storage/data_structures/others.md)
 
 - [Buffer management](./storage/buffer_management/buffer_management.md)
     - [Frame & buffer pool](./storage/buffer_management/frame_and_buffer_pool.md)
     - [Buffer manager](./storage/buffer_management/buffer_manager.md)
     - [Optimisations](./storage/buffer_management/optimisations.md)
-
 
 ---
 

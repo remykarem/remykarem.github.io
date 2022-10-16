@@ -6,3 +6,5 @@ Resources:
 * [UC Berkeley, Introduction to Database Systems (Fall 2020)](https://cs186berkeley.net/fa20/)
 * [University of Wisconsin-Madison, Database Management Systems: Design and Implementation (Fall 2020)](https://thodrek.github.io/cs564-fall17/)
 * [University of Washington, CSE 444 Database Internals, Winter 2019](https://courses.cs.washington.edu/courses/cse444/19wi/)
+
+The high-level design is like virtual memory.

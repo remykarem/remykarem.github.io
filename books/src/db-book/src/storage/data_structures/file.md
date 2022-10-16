@@ -1,6 +1,8 @@
 # File
 
-aka file storage, table store
+A **database file** (or **file** or **table store**) is a collection of [pages](page.md). The file should support:
+* iterating over the pages
+* performing read, cread, update, delete on the pages.
 
 The job of a disk space manager is:
 * to manage the **database files**
@@ -20,17 +22,12 @@ SQLite     | 1 OS file for the entire database
 SQL Server |
 MySQL      |
 
-aka stores
-
 * Unsorted (heap) file organisation
     * List
     * Page directory
 * Sorted file organisation
 * Clustered file organisation
 
-A *file* is a **collection of [pages](page.md)**. The file should support:
-* iterating over the pages
-* performing read, cread, update, delete on the pages.
 
 
 
@@ -49,4 +46,3 @@ Event | Write page to disk?
 Insert record | No
 Delete record | No
 Add new page | Yes
-
