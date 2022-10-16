@@ -1,8 +1,9 @@
 # Indexing
 
-The DBMS ensures that the contents of the table and the index are logically in sync.
+The DBMS ensures that the contents of the table and the index are logically in sync. Note that primary keys are always indexed.
 
 Two types of indices:
+
 * **Ordered indices - B+ tree (common)**
 * Hash indices - Hash table
 

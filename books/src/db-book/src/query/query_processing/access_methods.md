@@ -14,8 +14,7 @@ interface DatabaseFile {
 
 > ⚠️ Note that a *database file* is **not** an OS file. It is an abstraction.
 
-What happens when an iteration is requested from a heap file?
+The different types of access methods are:
 
-1. A heap file calls BufferManager to ensure that the necessary pages are loaded in memory.
-
-2. If not in memory, the BufferManager calls (???) the database file to read page from disk.
+* Sequential scan
+* Index scan
