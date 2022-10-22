@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Memory management - os-book</title>
+        <title>Process memory - os-book</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="io.html"><strong aria-hidden="true">1.</strong> I/O</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Process abstraction</div></li><li class="chapter-item expanded "><a href="process_memory.html"><strong aria-hidden="true">3.</strong> Process memory</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Process scheduling</div></li><li class="chapter-item expanded "><a href="threads.html"><strong aria-hidden="true">5.</strong> Threads</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Inter-process communication</div></li><li class="chapter-item expanded "><a href="memory_management.html" class="active"><strong aria-hidden="true">7.</strong> Memory management</a></li><li class="chapter-item expanded "><a href="system_calls.html"><strong aria-hidden="true">8.</strong> System calls</a></li><li class="chapter-item expanded "><a href="vectorisation.html"><strong aria-hidden="true">9.</strong> Vectorisation</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="file_system_management.html"><strong aria-hidden="true">11.</strong> File system management</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Disk scheduling</div></li><li class="chapter-item expanded "><a href="shell.html"><strong aria-hidden="true">13.</strong> Shell</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="io.html"><strong aria-hidden="true">1.</strong> I/O</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Process abstraction</div></li><li class="chapter-item expanded "><a href="process_memory.html" class="active"><strong aria-hidden="true">3.</strong> Process memory</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Process scheduling</div></li><li class="chapter-item expanded "><a href="threads.html"><strong aria-hidden="true">5.</strong> Threads</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Inter-process communication</div></li><li class="chapter-item expanded "><a href="memory_management.html"><strong aria-hidden="true">7.</strong> Memory management</a></li><li class="chapter-item expanded "><a href="system_calls.html"><strong aria-hidden="true">8.</strong> System calls</a></li><li class="chapter-item expanded "><a href="vectorisation.html"><strong aria-hidden="true">9.</strong> Vectorisation</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="file_system_management.html"><strong aria-hidden="true">11.</strong> File system management</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Disk scheduling</div></li><li class="chapter-item expanded "><a href="shell.html"><strong aria-hidden="true">13.</strong> Shell</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,31 +142,144 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="memory-management"><a class="header" href="#memory-management">Memory management</a></h1>
-<p><strong>Dynamic memory allocation</strong></p>
-<p>allocate and deallocate objects</p>
-<p><strong>Garbage collection</strong></p>
-<p>mutator and collector</p>
+                        <h1 id="process-memory"><a class="header" href="#process-memory">Process memory</a></h1>
+<h2 id="windows-os"><a class="header" href="#windows-os">Windows OS</a></h2>
+<p><strong>## Windows OS</strong></p>
 <ul>
-<li>Mark-sweep collection</li>
-<li>Mark compact collection</li>
-<li>Copying collection</li>
-<li>Reference counting</li>
+<li>
+<p>PE file format - format for all executables</p>
+</li>
+<li>
+<p>Header</p>
+</li>
+<li>
+<p>Import</p>
+</li>
+<li>
+<p>Export</p>
+</li>
+<li>
+<p>Timestamp</p>
+</li>
+<li>
+<p>Sections</p>
+</li>
+<li>
+<p><code>.text</code></p>
+</li>
+<li>
+<p><code>.rdata</code></p>
+</li>
+<li>
+<p><code>.data</code></p>
+</li>
+<li>
+<p><code>.rsrc</code></p>
+</li>
 </ul>
-<p>Demand paging</p>
-<p><a href="https://stackoverflow.com/questions/8506865/when-a-binary-file-runs-does-it-copy-its-entire-binary-data-into-memory-at-once">When a binary file runs, does it copy its entire binary data into memory at once?</a></p>
-<p>Page fault and memory swap</p>
-<p><a href="https://scoutapm.com/blog/understanding-page-faults-and-memory-swap-in-outs-when-should-you-worry">Understanding page faults and memory swap-in/outs: when should you worry?</a></p>
+<h2 id="data-representation"><a class="header" href="#data-representation">Data representation</a></h2>
+<ul>
+<li>Intel CPUs: least significant address (&quot;endian&quot;) is put a lower address (&quot;little&quot;). This is called <strong>little endian</strong>.</li>
+</ul>
+<p>For example, the data <code>0x4f9c3d</code> is represented as such:</p>
+<pre><code class="language-txt">address data
+
+   0x11
+   0x10
+   0x09
+   0x08 4f
+   0x07 9c
+   0x06 3d
+   0x05
+   0x04
+   0x03
+   0x02
+   0x01
+</code></pre>
+<h2 id="process-memory-layout"><a class="header" href="#process-memory-layout">Process memory layout</a></h2>
+<ul>
+<li>text</li>
+<li>initialised data</li>
+<li>uninitialised data</li>
+<li>stack
+<ul>
+<li>
+<p>a stack frame is added whenever a function is called</p>
+</li>
+<li>
+<p>in intel systems, stack grows <em>downwards</em> (high address to low address)</p>
+</li>
+<li>
+<p>a stack frame (notice it goes upwards)</p>
+</li>
+</ul>
+</li>
+<li>heap</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture">von Neumann architecture</a>.</p>
+<pre><code>Address 
+
+                                         0xdec3
+                                         0xdec2
+                                         0xdec1
+                                         0xdec0 &lt;- rbp (0?) 
+            3c) ret;                     0xdebf         
+         move up thru                    0xdebe         
+                                         ..            function parameters
+                                         0xdeb2
+                                         0xdeb1
+                                         0xdeb0 &lt;- rsp (1?) (initial rsp); where the stack pointer points at initially
+                                         0xdeaf // return address
+                                         0xdeae // return address
+                                         0xdead // return address
+                  (3c) ret;              0xdeac // return address
+       return to this address            0xdeab // return address
+                                         0xdeaa // return address
+                                         0xdea0 // return address
+                                         0xdea9 // return address
+$rsp moved up 8 bytes because value
+  of the previous base pointer is 
+  goes back into the RBP register
+                    pop rbp; (3b) rsp -&gt; 0xdea8 &lt;- rsp (1c) (call); $rsp moved down 8 bytes because a return address (8 bytes) is pushed
+                                         0xdea7 // prev. base pointer aka prev frame
+                                         0xdea6 // prev. base pointer aka prev frame
+                                         0xdea5 // prev. base pointer aka prev frame
+                                         0xdea4 // prev. base pointer aka prev frame
+                                         0xdea3 // prev. base pointer aka prev frame
+                                         0xdea2 // prev. base pointer aka prev frame
+                                         0xdea1 // prev. base pointer aka prev frame
+**$rsp moved up through 
+            local variables; (3a) rsp** -&gt; 0xdea0 &lt;- rsp (2a) push rbp; $rsp moved down 8 bytes because value of RBP is pushed.
+                                                &lt;- rbp (2b) mov rbp,rsp; set $rbp's value to the value of $rsp
+                                                ******** new base pointer ********
+                                         0xde99 // local variables
+                                         0xde98 // local variables
+                                         0xde97 // local variables
+                                         0xde96 // local variables
+                                         0xde95 // local variables
+                                         0xde94 // local variables
+                                         0xde93 // local variables
+                                         0xde92 // local variables
+                                         0xde91 // local variables
+                                         0xde90 &lt;- rsp (2c) sub rsp,0x10; $rsp moved down to make space for local variables
+                                                ******** new stack pointer ********
+</code></pre>
+<p>EAX used in multiplication and division
+• EBP and ESP are used for tracking the stack
+• EAX is used to store the return value for call
+• ECX is used as a counting variable
+• ESI and EDI are used for copying data in loops
+• (Source and Destination)</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="threads.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="io.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="system_calls.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="threads.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -176,11 +289,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="threads.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="io.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="system_calls.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="threads.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

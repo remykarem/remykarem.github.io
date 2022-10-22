@@ -2,11 +2,15 @@
 
 # Virtualisation
 
+- [I/O](./io.md)
 - [Process abstraction]()
+- [Process memory](./process_memory.md)
 - [Process scheduling]()
 - [Threads](./threads.md)
 - [Inter-process communication]()
 - [Memory management](./memory_management.md)
+- [System calls](./system_calls.md)
+- [Vectorisation](./vectorisation.md)
 
 ---
 

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Memory management - os-book</title>
+        <title>System calls - os-book</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="io.html"><strong aria-hidden="true">1.</strong> I/O</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Process abstraction</div></li><li class="chapter-item expanded "><a href="process_memory.html"><strong aria-hidden="true">3.</strong> Process memory</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Process scheduling</div></li><li class="chapter-item expanded "><a href="threads.html"><strong aria-hidden="true">5.</strong> Threads</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Inter-process communication</div></li><li class="chapter-item expanded "><a href="memory_management.html" class="active"><strong aria-hidden="true">7.</strong> Memory management</a></li><li class="chapter-item expanded "><a href="system_calls.html"><strong aria-hidden="true">8.</strong> System calls</a></li><li class="chapter-item expanded "><a href="vectorisation.html"><strong aria-hidden="true">9.</strong> Vectorisation</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="file_system_management.html"><strong aria-hidden="true">11.</strong> File system management</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Disk scheduling</div></li><li class="chapter-item expanded "><a href="shell.html"><strong aria-hidden="true">13.</strong> Shell</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="io.html"><strong aria-hidden="true">1.</strong> I/O</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Process abstraction</div></li><li class="chapter-item expanded "><a href="process_memory.html"><strong aria-hidden="true">3.</strong> Process memory</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Process scheduling</div></li><li class="chapter-item expanded "><a href="threads.html"><strong aria-hidden="true">5.</strong> Threads</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Inter-process communication</div></li><li class="chapter-item expanded "><a href="memory_management.html"><strong aria-hidden="true">7.</strong> Memory management</a></li><li class="chapter-item expanded "><a href="system_calls.html" class="active"><strong aria-hidden="true">8.</strong> System calls</a></li><li class="chapter-item expanded "><a href="vectorisation.html"><strong aria-hidden="true">9.</strong> Vectorisation</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="file_system_management.html"><strong aria-hidden="true">11.</strong> File system management</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Disk scheduling</div></li><li class="chapter-item expanded "><a href="shell.html"><strong aria-hidden="true">13.</strong> Shell</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,31 +142,52 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="memory-management"><a class="header" href="#memory-management">Memory management</a></h1>
-<p><strong>Dynamic memory allocation</strong></p>
-<p>allocate and deallocate objects</p>
-<p><strong>Garbage collection</strong></p>
-<p>mutator and collector</p>
+                        <h1 id="system-calls"><a class="header" href="#system-calls">System calls</a></h1>
+<p><code>man -k .</code>  Get system calls</p>
+<p><strong>File descriptors and opening files</strong></p>
+<pre><code class="language-c">#include &lt;fcntl.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+int fd1, fd2;
+
+fd1 = open(&quot;hello.txt&quot;, O_RDONLY);
+if (fd1 &lt; 0) {
+perror(&quot;c1&quot;);
+exit(1);
+  }
+
+fd2 = open(&quot;hello.txt&quot;, O_RDONLY);
+if (fd2 &lt; 0) {
+perror(&quot;c1&quot;);
+exit(1);
+  }
+</code></pre>
+<h1 id="files"><a class="header" href="#files">Files</a></h1>
 <ul>
-<li>Mark-sweep collection</li>
-<li>Mark compact collection</li>
-<li>Copying collection</li>
-<li>Reference counting</li>
+<li><code>open</code></li>
+<li><code>read</code></li>
+<li><code>write</code></li>
+<li><code>execve</code></li>
 </ul>
-<p>Demand paging</p>
-<p><a href="https://stackoverflow.com/questions/8506865/when-a-binary-file-runs-does-it-copy-its-entire-binary-data-into-memory-at-once">When a binary file runs, does it copy its entire binary data into memory at once?</a></p>
-<p>Page fault and memory swap</p>
-<p><a href="https://scoutapm.com/blog/understanding-page-faults-and-memory-swap-in-outs-when-should-you-worry">Understanding page faults and memory swap-in/outs: when should you worry?</a></p>
+<h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
+<ul>
+<li><code>connect</code></li>
+<li><code>send</code></li>
+<li><code>recv</code></li>
+<li><code>sendto</code></li>
+<li><code>recvfrom</code></li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="threads.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="memory_management.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="system_calls.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="vectorisation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -176,11 +197,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="threads.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="memory_management.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="system_calls.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="vectorisation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
