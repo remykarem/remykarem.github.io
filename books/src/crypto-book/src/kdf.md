@@ -2,6 +2,10 @@
 
 Key-derivation functions
 
+```
+secret_value -> key
+```
+
 [https://blog.boot.dev/cryptography/key-derivation-functions/](https://blog.boot.dev/cryptography/key-derivation-functions/)
 
 The algorithms use *key stretching* techniques that include:
@@ -26,7 +30,7 @@ Types of KDF
     - Bcrypt
         
         ```
-        $**2a**$07$wHirdrK4OLB0vk9r3fiseeYjQaCZ0bIeKY9qLsNep/I2nZAXbOb7m
+        $2a$07$wHirdrK4OLB0vk9r3fiseeYjQaCZ0bIeKY9qLsNep/I2nZAXbOb7m
         ```
         
     - Scrypt
@@ -38,7 +42,7 @@ Types of KDF
     - Argon
         
         ```
-        $**argon2d**$v=19$m=1024,t=16,p=4$c2FsdDEyM3NhbHQxMjM$2dVtFVPCezhvjtyu2PaeXOeBR+RUZ6SqhtD/+QF4F1o
+        $argon2d$v=19$m=1024,t=16,p=4$c2FsdDEyM3NhbHQxMjM$2dVtFVPCezhvjtyu2PaeXOeBR+RUZ6SqhtD/+QF4F1o
         ```
         
 - Block cipher-based

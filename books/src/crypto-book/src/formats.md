@@ -54,3 +54,40 @@ Standard format for public key certificates
     ```
     
     new cert from existing private key
+
+---
+
+
+PEM is an encoding
+
+PKCS* is a format/structured container
+
+pkcs1
+
+- MIIEo… MIIEp…
+- old format
+- openssl genrsa
+- 
+- openssl asn1parse -in key.pem
+returns a seq of 9 integers
+- 
+
+pkcs8
+
+- MIIEv…
+- modern format
+- openssl genpkey -algorithm rsa (-pkeyopt rsa_keygen_bits:2048)
+- openssl pkcs8 -topk8 -in private_key.pem -out private_key.p8 (-nocrypt)
+- openssl asn1parse -in key.pem
+- 
+
+pkcs8 pub
+
+- MIIB…
+- modern format
+- openssl rsa -in file -pubout
+- openssl asn1parse -in key.pem
+
+csr
+
+- openssl req -newkey rsa:2048 -nodes -keyout domain.key -out domain.csr

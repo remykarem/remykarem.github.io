@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>MAC - crypto-book</title>
+        <title>ECDSA - crypto-book</title>
 
 
         <!-- Custom HTML head -->
@@ -31,16 +31,18 @@
 
         <!-- Custom theme stylesheets -->
 
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
         <!-- Provide site root to javascript -->
-        <script>
+        <script type="text/javascript">
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
+        <script type="text/javascript">
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -56,7 +58,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
+        <script type="text/javascript">
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -68,7 +70,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
+        <script type="text/javascript">
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -81,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li class="chapter-item expanded "><a href="mac.html" class="active"><strong aria-hidden="true">3.</strong> MAC</a></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">4.</strong> Digital signature</a></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">5.</strong> Utils</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">6.</strong> Code</a></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">7.</strong> KDF</a></li><li class="chapter-item expanded "><a href="formats.html"><strong aria-hidden="true">8.</strong> Formats</a></li><li class="chapter-item expanded "><a href="certificates.html"><strong aria-hidden="true">9.</strong> Certificates</a></li><li class="chapter-item expanded "><a href="bulk_cipher.html"><strong aria-hidden="true">10.</strong> Bulk cipher</a></li><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">11.</strong> AES</a></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">12.</strong> Padding</a></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">13.</strong> Digital certificate</a></li><li class="chapter-item expanded "><a href="jwe.html"><strong aria-hidden="true">14.</strong> JWE</a></li><li class="chapter-item expanded "><a href="asymmetric_keys.html"><strong aria-hidden="true">15.</strong> Asymmetric keys</a></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">16.</strong> Key exchange</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="md5.html"><strong aria-hidden="true">2.1.</strong> MD5</a></li><li class="chapter-item expanded "><a href="sha.html"><strong aria-hidden="true">2.2.</strong> SHA</a></li></ol></li><li class="chapter-item expanded "><a href="keyed_hash_functions.html"><strong aria-hidden="true">3.</strong> Keyed hash functions</a></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">4.</strong> Key derivation functions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Random number generator functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Block cipher functions</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">6.1.</strong> AES</a></li></ol></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">7.</strong> Padding</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Cryptosystem</li><li class="chapter-item expanded "><a href="rsa.html"><strong aria-hidden="true">8.</strong> RSA</a></li><li class="chapter-item expanded "><a href="ecdsa.html" class="active"><strong aria-hidden="true">9.</strong> ECDSA</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> ECDH</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Formats</li><li class="chapter-item expanded "><a href="formats.html"><strong aria-hidden="true">11.</strong> Formats</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Standards</li><li class="chapter-item expanded "><a href="jwe.html"><strong aria-hidden="true">12.</strong> JWT</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="checksum.html"><strong aria-hidden="true">13.</strong> Checksum</a></li><li class="chapter-item expanded "><a href="ciphertext.html"><strong aria-hidden="true">14.</strong> Ciphertext</a></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">15.</strong> Digital signature</a></li><li class="chapter-item expanded "><a href="certificates.html"><strong aria-hidden="true">16.</strong> Certificates</a></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">17.</strong> Digital certificate</a></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">18.</strong> Key exchange</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">19.</strong> Stored password</div></li><li class="spacer"></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">20.</strong> Utils</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">21.</strong> Code</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -132,7 +134,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
+                <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -142,39 +144,21 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="mac"><a class="header" href="#mac">MAC</a></h1>
-<p>HMAC</p>
-<p>Message Authentication Code, aka &quot;keyed hash functions&quot;</p>
-<p>Hash-based Message Authentication Code</p>
-<pre><code class="language-tsx">generateMac(mac_key, message) -&gt; auth_code
-</code></pre>
-<pre><code class="language-tsx">generateHmac(mac_key, message, hash_function) -&gt; auth_code
-</code></pre>
-<p>where <code>hash_function</code> can be any cryptographic hash function</p>
-<p>Me</p>
-<hr />
-<pre><code class="language-tsx">**mac_key** = generateMacKey()
-</code></pre>
-<p>Send you the <strong>mac_key</strong></p>
-<pre><code class="language-tsx">auth_code = generateMac(**mac_key**, message)
-</code></pre>
-<p>Send you (auth_code, message)</p>
-<p>You</p>
-<hr />
-<p>Got the <strong>mac_key</strong></p>
-<p>Got the (auth_code, message)</p>
-<pre><code class="language-tsx">generateMac(**mac_key**, message) == code
-</code></pre>
+                        <h1 id="ecdsa"><a class="header" href="#ecdsa">ECDSA</a></h1>
+<p>Elliptic-curve Digital Signature Algorithm</p>
+<p>Keywords: Elliptic curve, Discrete logarithm problem</p>
+<p>modern, smaller, faster, more efficient</p>
+<p><a href="https://blog.boot.dev/cryptography/elliptic-curve-cryptography/">https://blog.boot.dev/cryptography/elliptic-curve-cryptography/</a></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="hash_functions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="rsa.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="digital_signature.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="formats.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -184,11 +168,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="hash_functions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="rsa.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="digital_signature.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="formats.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -196,7 +180,7 @@
         </div>
 
         <!-- Livereload script (if served using the cli tool) -->
-        <script>
+        <script type="text/javascript">
             const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
             const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
             const socket = new WebSocket(wsAddress);
@@ -214,18 +198,18 @@
 
 
 
-        <script>
+        <script type="text/javascript">
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js" charset="utf-8"></script>
-        <script src="mark.min.js" charset="utf-8"></script>
-        <script src="searcher.js" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="clipboard.min.js" charset="utf-8"></script>
-        <script src="highlight.js" charset="utf-8"></script>
-        <script src="book.js" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
 
