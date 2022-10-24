@@ -10,44 +10,37 @@
 - [Keyed hash functions](./keyed_hash_functions.md)
 - [Key derivation functions](./kdf.md)
 - [Random number generator functions]()
-- [Block cipher functions]()
+- [Key generator]()
+    - [Random]()
+    - [RSA](./rsa.md)
+    - [ECDSA](./ecdsa.md)
+- [Encyption]()
     - [AES](./aes.md)
+        - [Basic]()
+        - [AEAD]()
+    - [RSA]()
+    - [ECDSA]()
+- [Key agreement](./key_exchange.md)
+    - [ECDH]()
+- [Hybrid]()
+    - [PGP]()
 - [Padding](./padding.md)
 
 ---
-
-# Cryptosystem
-
-- [RSA](./rsa.md)
-- [ECDSA](./ecdsa.md)
-- [PGP]()
-- [ECDH]()
-
----
-
-# Formats
 
 - [Formats](./formats.md)
 
 ---
 
-# Standards
+# I want to generate...
 
-- [RSASSA-PKCS1-v1_5](./rsa_ssa_pkcs1.md)
-- [RSASSA-PSS](./rsa_pss.md)
-- [JWT](./jwe.md)
-
----
-
-# Applications
-
+- [Keys]()
 - [Checksum](./checksum.md)
-- [Data encryption](./ciphertext.md)
+- [MAC]()
 - [Digital signature](./digital_signature.md)
-- [Certificates](./certificates.md)
+- [Ciphertext](./ciphertext.md)
 - [Digital certificate](./digital_certificate.md)
-- [Key exchange](./key_exchange.md)
-- [Stored password]()
+- [Derived keys]()
 
 ---
 

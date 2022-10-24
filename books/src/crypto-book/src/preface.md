@@ -25,3 +25,12 @@ Non-repudiation — the signer cannot deny that they signed (because...?)
 Resistant to attacks — the item cannot be easily guessed
 
 [https://en.wikipedia.org/wiki/Confusion_and_diffusion](https://en.wikipedia.org/wiki/Confusion_and_diffusion)
+
+Ting | Confidentiality | Authenticity | Integrity | Symmetry | Output randomness
+-----|-----------------|--------------|------------|----|---------------
+MAC  | ❌ | ✅ | ✅ | Symmetric | Either
+Digital signature   | ❌ | ✅ | ✅ | Asymmetric | ?
+Deterministic AEAD | ✅ | ✅ | - | Symmetric | Deterministic
+AEAD ciphertext | ✅ | ✅ | -| Symmetric | Random
+Basic AES ciphertext | ✅ | ? | -| Symmetric | Random
+Public-key ciphertext | ✅ | ✅ | -| Asymmetric | Random

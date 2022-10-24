@@ -1,9 +1,5 @@
 # Formats / encoding
 
-Encoding
-
-- Base64
-
 File
 
 - PEM format is base64; `.pem`
@@ -67,10 +63,8 @@ pkcs1
 - MIIEo… MIIEp…
 - old format
 - openssl genrsa
-- 
 - openssl asn1parse -in key.pem
 returns a seq of 9 integers
-- 
 
 pkcs8
 
@@ -79,7 +73,6 @@ pkcs8
 - openssl genpkey -algorithm rsa (-pkeyopt rsa_keygen_bits:2048)
 - openssl pkcs8 -topk8 -in private_key.pem -out private_key.p8 (-nocrypt)
 - openssl asn1parse -in key.pem
-- 
 
 pkcs8 pub
 
