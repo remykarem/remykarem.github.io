@@ -1,0 +1,3 @@
+# Process substitution
+
+`<(...)` for files

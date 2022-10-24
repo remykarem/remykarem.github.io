@@ -1,0 +1,12 @@
+[book]
+authors = ["Raimi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "shell-book"
+
+[output.html]
+site-url = "/books/shell-book/"
+
+[build]
+build-dir = "../../shell-book"

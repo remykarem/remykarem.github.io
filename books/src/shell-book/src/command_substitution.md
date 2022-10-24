@@ -1,0 +1,3 @@
+# Command substitution
+
+`$(...)` ****for outputs
