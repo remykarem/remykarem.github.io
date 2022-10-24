@@ -14,7 +14,11 @@ Integrity — proof that the item is not altered
 
 Authenticity/authentication — proof that the item comes from a known source
 
-Confidentiality/Privacy — no one can read (and understand) the message in the item
+Confidentiality/Privacy/secrecy — no one can read (and understand) the message in the item
+
+Symmetry — if there is content encryption, is the same key used for both encryption and decryption?
+
+Randomisation - if there is content encryption, will the same plaintext yield different ciphertexts?
 
 Non-repudiation — the signer cannot deny that they signed (because...?)
 

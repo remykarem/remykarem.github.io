@@ -33,17 +33,17 @@
         <!-- Custom theme stylesheets -->
 
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -59,7 +59,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -71,7 +71,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="md5.html"><strong aria-hidden="true">2.1.</strong> MD5</a></li><li class="chapter-item expanded "><a href="sha.html"><strong aria-hidden="true">2.2.</strong> SHA</a></li></ol></li><li class="chapter-item expanded "><a href="keyed_hash_functions.html"><strong aria-hidden="true">3.</strong> Keyed hash functions</a></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">4.</strong> Key derivation functions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Random number generator functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Block cipher functions</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">6.1.</strong> AES</a></li></ol></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">7.</strong> Padding</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Cryptosystem</li><li class="chapter-item expanded "><a href="rsa.html"><strong aria-hidden="true">8.</strong> RSA</a></li><li class="chapter-item expanded "><a href="ecdsa.html"><strong aria-hidden="true">9.</strong> ECDSA</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> ECDH</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Formats</li><li class="chapter-item expanded "><a href="formats.html"><strong aria-hidden="true">11.</strong> Formats</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Standards</li><li class="chapter-item expanded "><a href="jwe.html"><strong aria-hidden="true">12.</strong> JWT</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="checksum.html"><strong aria-hidden="true">13.</strong> Checksum</a></li><li class="chapter-item expanded "><a href="ciphertext.html"><strong aria-hidden="true">14.</strong> Ciphertext</a></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">15.</strong> Digital signature</a></li><li class="chapter-item expanded "><a href="certificates.html"><strong aria-hidden="true">16.</strong> Certificates</a></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">17.</strong> Digital certificate</a></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">18.</strong> Key exchange</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">19.</strong> Stored password</div></li><li class="spacer"></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">20.</strong> Utils</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">21.</strong> Code</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="md5.html"><strong aria-hidden="true">2.1.</strong> MD5</a></li><li class="chapter-item expanded "><a href="sha.html"><strong aria-hidden="true">2.2.</strong> SHA</a></li></ol></li><li class="chapter-item expanded "><a href="keyed_hash_functions.html"><strong aria-hidden="true">3.</strong> Keyed hash functions</a></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">4.</strong> Key derivation functions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Random number generator functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Block cipher functions</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">6.1.</strong> AES</a></li></ol></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">7.</strong> Padding</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Cryptosystem</li><li class="chapter-item expanded "><a href="rsa.html"><strong aria-hidden="true">8.</strong> RSA</a></li><li class="chapter-item expanded "><a href="ecdsa.html"><strong aria-hidden="true">9.</strong> ECDSA</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> PGP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> ECDH</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Formats</li><li class="chapter-item expanded "><a href="formats.html"><strong aria-hidden="true">12.</strong> Formats</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Standards</li><li class="chapter-item expanded "><a href="rsa_ssa_pkcs1.html"><strong aria-hidden="true">13.</strong> RSASSA-PKCS1-v1_5</a></li><li class="chapter-item expanded "><a href="rsa_pss.html"><strong aria-hidden="true">14.</strong> RSASSA-PSS</a></li><li class="chapter-item expanded "><a href="jwe.html"><strong aria-hidden="true">15.</strong> JWT</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="checksum.html"><strong aria-hidden="true">16.</strong> Checksum</a></li><li class="chapter-item expanded "><a href="ciphertext.html"><strong aria-hidden="true">17.</strong> Data encryption</a></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">18.</strong> Digital signature</a></li><li class="chapter-item expanded "><a href="certificates.html"><strong aria-hidden="true">19.</strong> Certificates</a></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">20.</strong> Digital certificate</a></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">21.</strong> Key exchange</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">22.</strong> Stored password</div></li><li class="spacer"></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">23.</strong> Utils</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">24.</strong> Code</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -135,7 +135,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -153,7 +153,9 @@
 <p>&quot;item&quot; = document, message, password</p>
 <p>Integrity — proof that the item is not altered</p>
 <p>Authenticity/authentication — proof that the item comes from a known source</p>
-<p>Confidentiality/Privacy — no one can read (and understand) the message in the item</p>
+<p>Confidentiality/Privacy/secrecy — no one can read (and understand) the message in the item</p>
+<p>Symmetry — if there is content encryption, is the same key used for both encryption and decryption?</p>
+<p>Randomisation - if there is content encryption, will the same plaintext yield different ciphertexts?</p>
 <p>Non-repudiation — the signer cannot deny that they signed (because...?)</p>
 <p>Resistant to attacks — the item cannot be easily guessed</p>
 <p><a href="https://en.wikipedia.org/wiki/Confusion_and_diffusion">https://en.wikipedia.org/wiki/Confusion_and_diffusion</a></p>
@@ -470,6 +472,22 @@ returns a seq of 9 integers</li>
 <ul>
 <li>openssl req -newkey rsa:2048 -nodes -keyout domain.key -out domain.csr</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rsassa-pkcs1-v1_5"><a class="header" href="#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a></h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7518#section-3.3">https://datatracker.ietf.org/doc/html/rfc7518#section-3.3</a></p>
+<ul>
+<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#RS256">RS256</a> - RSA PKCS#1 signature with SHA-256</li>
+<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#RS384">RS384</a> - RSA PKCS#1 signature with SHA-384</li>
+<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#RS512">RS512</a> - RSA PKCS#1 signature with SHA-512</li>
+</ul>
+<p>💡 RFC 7518</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rsassa-pss"><a class="header" href="#rsassa-pss">RSASSA-PSS</a></h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7518#section-3.5">https://datatracker.ietf.org/doc/html/rfc7518#section-3.5</a></p>
+<ul>
+<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#PS256">PS256</a> - RSA PSS signature with SHA-256</li>
+<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#PS384">PS384</a> - RSA PSS signature with SHA-384</li>
+<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#PS512">PS512</a> - RSA PSS signature with SHA-512</li>
+</ul>
+<p>💡 RFC 7518</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="jwe"><a class="header" href="#jwe">JWE</a></h1>
 <h1 id="json-object-signing-and-encryption-group-jose"><a class="header" href="#json-object-signing-and-encryption-group-jose">JSON Object Signing and Encryption group (JOSE)</a></h1>
 <p>ff</p>
@@ -569,35 +587,24 @@ lsndfvndf → I_AM_THE_KEY
 <p>aka &quot;public key cryptography&quot;</p>
 <p><em>Either of the keys can be used to encrypt a message</em>; the opposite key from the one used to encrypt the message is used for decryption.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="digital-signature"><a class="header" href="#digital-signature">Digital signature</a></h1>
-<p>The goal of digital signature is... authenticity?</p>
+<p>The goal of digital signature is... integrity and authenticity?</p>
 <ul>
-<li><a href="./rsa.html">RSA</a></li>
-<li><a href="./ecdsa.html">ECDSA</a></li>
-<li><a href="./jwe.html">JWT</a></li>
-</ul>
-<h1 id="jws"><a class="header" href="#jws">JWS</a></h1>
+<li>
+<p><a href="./rsa.html">RSA</a></p>
+</li>
+<li>
+<p><a href="./ecdsa.html">ECDSA</a></p>
+</li>
+<li>
+<p><a href="./jwe.html">JWT</a></p>
 <p>JSON Web Signature, RFC 7515</p>
 <ul>
 <li>RSA PKCS1-v1.5</li>
 <li>RSA PSS</li>
 <li>ECDSA</li>
 </ul>
-<h2 id="rsassa-pkcs1-v1_5"><a class="header" href="#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a></h2>
-<p><a href="https://datatracker.ietf.org/doc/html/rfc7518#section-3.3">https://datatracker.ietf.org/doc/html/rfc7518#section-3.3</a></p>
-<ul>
-<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#RS256">RS256</a> - RSA PKCS#1 signature with SHA-256</li>
-<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#RS384">RS384</a> - RSA PKCS#1 signature with SHA-384</li>
-<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#RS512">RS512</a> - RSA PKCS#1 signature with SHA-512</li>
+</li>
 </ul>
-<p>💡 RFC 7518</p>
-<h2 id="rsassa-pss"><a class="header" href="#rsassa-pss">RSASSA-PSS</a></h2>
-<p><a href="https://datatracker.ietf.org/doc/html/rfc7518#section-3.5">https://datatracker.ietf.org/doc/html/rfc7518#section-3.5</a></p>
-<ul>
-<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#PS256">PS256</a> - RSA PSS signature with SHA-256</li>
-<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#PS384">PS384</a> - RSA PSS signature with SHA-384</li>
-<li><a href="https://static.javadoc.io/com.nimbusds/nimbus-jose-jwt/5.1/com/nimbusds/jose/JWSAlgorithm.html#PS512">PS512</a> - RSA PSS signature with SHA-512</li>
-</ul>
-<p>💡 RFC 7518</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="certificates"><a class="header" href="#certificates">Certificates</a></h1>
 <p>A certificate authority is a trusted 3rd party that does:</p>
 <ul>
@@ -635,7 +642,8 @@ lsndfvndf → I_AM_THE_KEY
 <ul>
 <li>
 <p>Code</p>
-<pre><code class="language-kotlin">note over alice: file.txt
+<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
+</span>note over alice: file.txt
 alice-&gt;alice: create\n key pair
 note over alice: pubkey\nptekey\n file.txt
 note over bob: cert\n bob pubkey\n bob ptekey
@@ -661,7 +669,7 @@ alice-&gt;bob: file.enc
 note over bob: file.enc\nsymkey.pem\n symkey.enc\n bob pubkey\n bob ptekey
 bob-&gt;bob: decrypt\n file.enc\n with symkey.pem
 note over bob: file.txt\n file.enc\nsymkey.pem\n symkey.enc\n bob pubkey\n bob ptekey
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="utils"><a class="header" href="#utils">Utils</a></h1>
@@ -687,22 +695,25 @@ note over bob: file.txt\n file.enc\nsymkey.pem\n symkey.enc\n bob pubkey\n bob p
 </ol>
 <h1 id="kotlin"><a class="header" href="#kotlin">Kotlin</a></h1>
 <p><code>KeySpec</code> — A public or private key in encoded format. Encodings include PKCS #8, X.509????</p>
-<pre><code class="language-kotlin">val pkcS8EncodedKeySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode(&quot;sdfvs331s&quot;))
-</code></pre>
+<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
+</span>val pkcS8EncodedKeySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode(&quot;sdfvs331s&quot;))
+<span class="boring">}</span></code></pre></pre>
 <p><code>KeyFactory</code> — Generate private and public from <code>keySpec</code> key specifications</p>
-<pre><code class="language-kotlin">val keyFactory = KeyFactory.getInstance(&quot;RSA&quot;)
+<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
+</span>val keyFactory = KeyFactory.getInstance(&quot;RSA&quot;)
 val privateKey = keyFactory.generatePrivate(keySpec)
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p><code>Signature</code></p>
 <p>Given <code>privateKey: PrivateKey</code>,</p>
-<pre><code class="language-kotlin">val privateSignature = Signature.getInstance(&quot;SHA256withRSA&quot;)
+<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
+</span>val privateSignature = Signature.getInstance(&quot;SHA256withRSA&quot;)
 
 privateSignature.initSign(privateKey)
 
 privateSignature.update(&quot;payload to encrypt&quot;.encodeToByteArray())
 
 val signature = privateSignature.sign()
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <pre><code class="language-java">byte[] publicBytes = Base64.decodeBase64(publicK);
 X509EncodedKeySpec keySpec = new X509EncodedKeySpec(publicBytes);
 KeyFactory keyFactory = KeyFactory.getInstance(&quot;RSA&quot;);
@@ -727,7 +738,7 @@ PublicKey pubKey = keyFactory.generatePublic(keySpec);
         </div>
 
         <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
+        <script>
             const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
             const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
             const socket = new WebSocket(wsAddress);
@@ -745,22 +756,22 @@ PublicKey pubKey = keyFactory.generatePublic(keySpec);
 
 
 
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" charset="utf-8"></script>
+        <script src="mark.min.js" charset="utf-8"></script>
+        <script src="searcher.js" charset="utf-8"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" charset="utf-8"></script>
+        <script src="highlight.js" charset="utf-8"></script>
+        <script src="book.js" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
 
-        <script type="text/javascript">
+        <script>
         window.addEventListener('load', function() {
             MathJax.Hub.Register.StartupHook('End', function() {
                 window.setTimeout(window.print, 100);
