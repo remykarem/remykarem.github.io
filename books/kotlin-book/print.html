@@ -1542,6 +1542,10 @@ fun main() {
 <li>Platform types</li>
 <li>1..10 iteration inclusive</li>
 </ul>
+<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
+</span>var s = String(encryption.encrypt(&quot;fatcow&quot;), StandardCharsets.UTF_8)
+<span class="boring">}</span></code></pre></pre>
+<p>&quot;The common mistake is trying to use the bytes.toString() to get the string from the bytes; The bytes.toString() only returns the address of the object in memory, NOT converting byte[] to a string!&quot;</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="common-design-patterns"><a class="header" href="#common-design-patterns">Common design patterns</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="singleton"><a class="header" href="#singleton">Singleton</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="factory-method"><a class="header" href="#factory-method">Factory method</a></h1>
