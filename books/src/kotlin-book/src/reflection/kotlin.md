@@ -5,6 +5,7 @@
 A class reference has the type [`KClass`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/) with properties like:
 
 * `java` - runtime Java class reference
+* `javaClass` runtime Java class of an object
 * `qualifiedName`
 
 ```kotlin
