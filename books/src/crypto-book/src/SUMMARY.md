@@ -24,6 +24,7 @@
     - [ECDH]()
 - [Hybrid]()
     - [PGP]()
+    - [GPG]()
 - [Padding](./padding.md)
 
 ---
@@ -32,7 +33,7 @@
 
 ---
 
-# I want to generate...
+# Applications
 
 - [Keys]()
 - [Checksum](./checksum.md)
@@ -41,6 +42,7 @@
 - [Ciphertext](./ciphertext.md)
 - [Digital certificate](./digital_certificate.md)
 - [Derived keys]()
+- [SSH](./ssh.md)
 
 ---
 

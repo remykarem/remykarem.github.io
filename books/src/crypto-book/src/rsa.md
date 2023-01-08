@@ -4,6 +4,10 @@ Rivest-Shamir-Adleman; 1995
 
 Keywords: modular exponentiation, prime factorisation, co-prime, greatest common divisor, prime numbers
 
+```bash
+openssl genpkey -out privatekey.pem -algorithm RSA -pkeyopt rsa_keygen_bits:2048
+```
+
 ```
 (plaintext, public_key) -> ciphertext
 
