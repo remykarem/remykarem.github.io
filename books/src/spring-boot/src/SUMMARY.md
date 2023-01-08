@@ -14,7 +14,7 @@
 - [Persistence](./persistence.md)
 - [Exception handling]()
 - [Caching]()
-- [Testing]()
+- [Testing](./testing.md)
 - [Annotation processing]()
 - [Swagger]()
 - [Concepts](./concepts.md)
@@ -22,5 +22,6 @@
     - [Web servlet](./concepts/web_servlet.md)
     - [Filter](./concepts/filter.md)
 - [Common starters](./common_starters.md)
+- [Gotchas](./gotchas.md)
 ---
 - [Spring Security](./spring_security.md)
