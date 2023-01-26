@@ -4,94 +4,87 @@ Rivest-Shamir-Adleman; 1995
 
 Keywords: modular exponentiation, prime factorisation, co-prime, greatest common divisor, prime numbers
 
-```bash
-openssl genpkey -out privatekey.pem -algorithm RSA -pkeyopt rsa_keygen_bits:2048
-```
-
-```
-(plaintext, public_key) -> ciphertext
-
-(ciphertext, private_key) -> plaintext
-```
-
-RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus \\( n \\): one of 1024, 2048, 3072, 4096, 8129, 16,384 bits.
+RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus \\( n \\): one of 1024, 2048, 3072, 4096, 8129, 16,384 bits. NIST recommends 2048 [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf).
 
 For PKCS1 v1.5, the message to encrypt should be **no longer than the public modulus minus 11 bytes**. [http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15](http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15).
 
-Find three large integers \\(d\\), \\(e\\) and \\( n \\) such that
-
-$$
-m^ed = m (\bmod n) \forall m \in [0,n)
-$$
-
-- **secret exponent**: \\(d \\), where "d" possibly means "(the ability to) decrypt"
-- public key exponent: \\(e \\), commonly chosen as 65,537
-- public modulus: \\( n \\)
+- secret exponent: \\(d \\)
+- key exponent: \\(e \\)
+- modulus: \\( n \\)
 - message: \\(m \\)
 - cipher: \\(c \\)
 
-## Generate key pair
+## How it works
 
-In a cryptosystem you can generate the public and private keys. Here's how to generate them for RSA:
+A message \\(m \\) is encrypted by taking the modular exponentation \\(e \\) to get the cipher \\(c \\). 
+
+$$
+c = m^e \bmod n
+$$
+
+The process is reversed using modular inverse (\\(d \\)).
+
+$$
+m = c^d \bmod n
+$$
+
+This means that \\(e \\) and \\(d \\) should be related like so:
+
+$$
+ed = 1 \bmod \phi(n)
+$$
+
+## Generate key pair
 
 1. Choose 2 *large prime numbers* such that their product is of the required bit length. For didactic purposes we use small numbers:
     
     $$ p=3, q=11 $$
     
-2. Compute \\( n \\) and \\( \phi \\).
+2. Compute \\( n \\) and \\( \phi(n) \\).
     
     $$
     n = pq = 33
     $$
     
     $$
-    \phi= (p-1)(q-1)=20
+    \phi(n) = (p-1)(q-1)=20
     $$
 
-    > 💡 The \\( \phi \\) has something to do with [Euler's totient function](https://en.wikipedia.org/wiki/Euler%27s_totient_function), something we'll need for a theorem in the next step.
+    > 💡 Note that to get back \\( p \\) and \\( q \\) from \\( n \\) is called prime factorisation and is a hard problem. If you solve it, you're in.
+
+    > 💡 \\( \phi(n) \\) is called [Euler's totient function](https://en.wikipedia.org/wiki/Euler%27s_totient_function). This function is chosen because it's hard to calculate without knowing \\( p \\) and \\( q \\).
+
+    > 💡 \\( \phi(n) \\) is the "internal secret."
     
-3. Choose \\(e \\) such that
-    * \\(1 < e < \phi \\)
-    * \\( e \\) and \\( \phi \\) are co-prime. For example, 14 and 21 are not coprime because gcd(14, 21) ≠ 1.
+3. Choose \\(e \\) to be used for modular exponentation such that:
+    * \\(1 < e < \phi(n) \\)
+        > 💡 Why? SO post [here](https://crypto.stackexchange.com/questions/87018/rsa-algorithm-must-e-be-less-than-varphin).
+
+    * \\( e \\) and \\( \phi(n) \\) are co-prime. 
     
-    In practice, this number is usually chosen to be 65,537. But for didactic purposes, we'll choose:
+        > 💡 If they are not co-prime, it becomes impossible to decrypt uniquely (see SO post [here](https://crypto.stackexchange.com/questions/12255/in-rsa-why-is-it-important-to-choose-e-so-that-it-is-coprime-to-%CF%86n)).
+
+    If \\( e \\) and \\( \phi(n) \\) are not co-prime, then from Euler's theorem, \\( e \\) and \\( n \\) are not co-prime (?). If that is the case
+
+    For didactic purposes, we'll choose:
 
     $$
     e = 7
     $$
+
+    > 💡 In practice, this number is usually chosen to be 65,537, which is a prime number.
     
 
-4. **Solve** \\(d \\) such that
+4. To reverse the encryption, we need \\( d \\) to perform the inverse of modulo, such that \\(ed \bmod \phi =1 \\).
+
+    Solve \\(d \\) such that
     1. \\(1 < d < \phi \\)
-    2. \\((d \times e) \bmod \phi =1 \\)
-        
-        > 💡 This is where the magic happens! See [Number theory](https://www.notion.so/Number-theory-3c7b334d25b74651b224c4998d3697f9).
-        
-    
+
+
 Your **public key** is: (\\(e \\), \\( n \\))
 
 Your **private key** is: (\\(d \\), \\( n \\))
     
-## Encrypt
+## RSA in the wild
 
-Compute cipher, \\( c \\), of plaintext message \\( m \\):
-    
-$$
-m^e \bmod n
-$$
-
-In the example, \\( c \\) is 29.
-
-## Decrypt
-    
-Compute plaintext message \\( m \\) of cipher \\( c \\):
-    
-$$
-c^d \bmod n
-$$
-
-Recall that \\(c \\) is defined as \\( m^e \bmod n \\) so we substitute:
-
-$$
-(m^e \bmod n)^d \bmod n
-$$
+RSA is usually used with padding.
