@@ -33,17 +33,17 @@
         <!-- Custom theme stylesheets -->
 
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -59,7 +59,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -71,7 +71,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="md5.html"><strong aria-hidden="true">2.1.</strong> MD5</a></li><li class="chapter-item expanded "><a href="sha.html"><strong aria-hidden="true">2.2.</strong> SHA</a></li></ol></li><li class="chapter-item expanded "><a href="keyed_hash_functions.html"><strong aria-hidden="true">3.</strong> Keyed hash functions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Random number generator functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Public-key cryptosystem</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="rsa.html"><strong aria-hidden="true">5.1.</strong> RSA</a></li><li class="chapter-item expanded "><a href="ecdsa.html"><strong aria-hidden="true">5.2.</strong> ECDSA</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Encyption</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">6.1.</strong> AES</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.1.</strong> Basic</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.2.</strong> AEAD</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> RSA</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> ECDSA</div></li></ol></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">7.</strong> Key derivation functions</a></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">8.</strong> Key agreement</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> ECDH</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Hybrid</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> PGP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> GPG</div></li></ol></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">10.</strong> Padding</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="formats.html"><strong aria-hidden="true">11.</strong> Formats</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="keys.html"><strong aria-hidden="true">12.</strong> Keys</a></li><li class="chapter-item expanded "><a href="checksum.html"><strong aria-hidden="true">13.</strong> Checksum</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> MAC</div></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">15.</strong> Digital signature</a></li><li class="chapter-item expanded "><a href="ciphertext.html"><strong aria-hidden="true">16.</strong> Ciphertext</a></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">17.</strong> Digital certificate</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> Derived keys</div></li><li class="chapter-item expanded "><a href="ssh.html"><strong aria-hidden="true">19.</strong> SSH</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">20.</strong> Utils</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">21.</strong> Code</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="md5.html"><strong aria-hidden="true">2.1.</strong> MD5</a></li><li class="chapter-item expanded "><a href="sha.html"><strong aria-hidden="true">2.2.</strong> SHA</a></li></ol></li><li class="chapter-item expanded "><a href="keyed_hash_functions.html"><strong aria-hidden="true">3.</strong> Keyed hash functions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Random number generator functions</div></li><li class="chapter-item expanded "><a href="public_key_cryptosystem.html"><strong aria-hidden="true">5.</strong> Public-key cryptosystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rsa.html"><strong aria-hidden="true">5.1.</strong> RSA</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rsa_encryption_schemes.html"><strong aria-hidden="true">5.1.1.</strong> Encryption schemes</a></li><li class="chapter-item expanded "><a href="rsa_digital_signature_schemes.html"><strong aria-hidden="true">5.1.2.</strong> Digital signature schemes</a></li></ol></li><li class="chapter-item expanded "><a href="ecdsa.html"><strong aria-hidden="true">5.2.</strong> Elliptic curve</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.</strong> Edwards curve</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.</strong> ElGamal</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Block ciphers</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">6.1.</strong> AES</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.1.</strong> Basic</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.2.</strong> AEAD</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">7.</strong> Key derivation functions</a></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">8.</strong> Key agreement</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> ECDH</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Hybrid</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> PGP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> GPG</div></li></ol></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">10.</strong> Padding</a></li><li class="chapter-item expanded "><a href="formats.html"><strong aria-hidden="true">11.</strong> Formats</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="keys.html"><strong aria-hidden="true">12.</strong> Keys</a></li><li class="chapter-item expanded "><a href="ciphertext.html"><strong aria-hidden="true">13.</strong> Encryption schemes</a></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">14.</strong> Digital signature</a></li><li class="chapter-item expanded "><a href="checksum.html"><strong aria-hidden="true">15.</strong> Checksum</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">16.</strong> MAC</div></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">17.</strong> Digital certificate</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> Derived keys</div></li><li class="chapter-item expanded "><a href="ssh.html"><strong aria-hidden="true">19.</strong> SSH</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">20.</strong> Utils</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">21.</strong> Code</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -135,7 +135,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -188,6 +188,11 @@
 <li>HMAC - hash-based MAC eg. HMAC-SHA256</li>
 <li>CMAC- cipher-based MAC</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="public-key-cryptosystem"><a class="header" href="#public-key-cryptosystem">Public-key cryptosystem</a></h1>
+<ul>
+<li>Has an encyrption algorithm</li>
+<li>Has a digital signature algorithm</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="rsa"><a class="header" href="#rsa">RSA</a></h1>
 <p>Rivest-Shamir-Adleman; 1995</p>
 <p>RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus \( n \): one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf">here</a>.</p>
@@ -204,7 +209,7 @@
 m = (m^{ed}) \bmod n
 $$</p>
 <blockquote>
-<p>💡 Note that the symmetry between \( e \) and \( d \) does not extend to most cryptosystems.</p>
+<p>💡 Note that while the encryption-decryption symmetry exists between \( e \) and \( d \), this symmetry does not extend to most cryptosystems.</p>
 </blockquote>
 <h2 id="how-it-works"><a class="header" href="#how-it-works">How it works</a></h2>
 <p><img src="rsa.png" alt="How RSA works" /></p>
@@ -218,15 +223,72 @@ $$</p>
 <li>Multiplicative modulo inverse</li>
 <li>Chinese remainder theorem</li>
 </ul>
+<p>Trapdoor functions:</p>
+<ul>
+<li>Product of two large prime numbers</li>
+<li>Euler's totient function</li>
+</ul>
 <h2 id="rsa-in-the-wild"><a class="header" href="#rsa-in-the-wild">RSA in the wild</a></h2>
 <p>RSA is usually used with padding.</p>
 <h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
 <p>https://leimao.github.io/article/RSA-Algorithm/</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="encryption-schemes"><a class="header" href="#encryption-schemes">Encryption schemes</a></h1>
+<p>There are 2 main encryption schemes (as seen <a href="https://en.wikipedia.org/wiki/PKCS_1#Schemes">here</a>):</p>
+<ul>
+<li>RSAES-OAEP</li>
+<li>RSAES-PKCS #1 v1.5 (old)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="digital-signature-schemes"><a class="header" href="#digital-signature-schemes">Digital signature schemes</a></h1>
+<p>There are 2 main encryption schemes (as seen <a href="https://en.wikipedia.org/wiki/PKCS_1#Schemes">here</a>):</p>
+<ul>
+<li>RSASSA-PSS</li>
+<li>RSASSA-PKCS1-v1_5 (old)</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ecdsa"><a class="header" href="#ecdsa">ECDSA</a></h1>
-<p>Elliptic-curve Digital Signature Algorithm</p>
-<p>Keywords: Elliptic curve, Discrete logarithm problem</p>
-<p>modern, smaller, faster, more efficient</p>
-<p><a href="https://blog.boot.dev/cryptography/elliptic-curve-cryptography/">https://blog.boot.dev/cryptography/elliptic-curve-cryptography/</a></p>
+<p>2nd-gen cryptosystem.</p>
+<h2 id="trapdoor-function"><a class="header" href="#trapdoor-function">Trapdoor function</a></h2>
+<p>$$
+f_{\text {curve}}(P_\text{start_point},n_\text{hops}) \rightarrow P_\text{end_point}
+$$</p>
+<p>Private key: n_hops
+Public key: P_endpoint</p>
+<p>where the curve is of the form</p>
+<p>$$
+y^2 = x^3 + ax + b
+$$</p>
+<p>Computing the private key from the public key is called the elliptic curve discrete logarithm function.</p>
+<ul>
+<li>
+<p>NIST curve secp256k1</p>
+<p>$$
+y^2 = x^3 + 7
+$$</p>
+</li>
+</ul>
+<p>Forms</p>
+<ul>
+<li>
+<p>Weierstrass form</p>
+<p>$$
+y^2 = x^3 + ax + b
+$$</p>
+<p>Examples: <code>secp256k1</code></p>
+</li>
+<li>
+<p>Montgomery form</p>
+<p>$$
+by^2 = x^3 + ax^2 + x
+$$</p>
+<p>Examples: <code>Curve25519</code></p>
+</li>
+<li>
+<p>Edwards form</p>
+<p>$$
+x^2 + y^2 = 1 + dx^2y^2
+$$</p>
+<p>Examples: <code>Curve448</code></p>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="aes"><a class="header" href="#aes">AES</a></h1>
 <p>A <em>deterministic</em> symmetric encryption algorithm operating on blocks</p>
 <pre><code>(plaintext, key) -&gt; ciphertext
@@ -337,7 +399,8 @@ alg key mode
 <ul>
 <li>
 <p>Code</p>
-<pre><code class="language-kotlin">note over alice: file.txt
+<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
+</span>note over alice: file.txt
 alice-&gt;alice: create\n key pair
 note over alice: pubkey\nptekey\n file.txt
 note over bob: cert\n bob pubkey\n bob ptekey
@@ -363,7 +426,7 @@ alice-&gt;bob: file.enc
 note over bob: file.enc\nsymkey.pem\n symkey.enc\n bob pubkey\n bob ptekey
 bob-&gt;bob: decrypt\n file.enc\n with symkey.pem
 note over bob: file.txt\n file.enc\nsymkey.pem\n symkey.enc\n bob pubkey\n bob ptekey
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="padding"><a class="header" href="#padding">Padding</a></h1>
@@ -466,36 +529,61 @@ returns a seq of 9 integers</li>
 <li>openssl req -newkey rsa:2048 -nodes -keyout domain.key -out domain.csr</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="keys"><a class="header" href="#keys">Keys</a></h1>
-<h2 id="openssl"><a class="header" href="#openssl">OpenSSL</a></h2>
+<h2 id="rsa-1"><a class="header" href="#rsa-1">RSA</a></h2>
 <p>Generate private key in PKCS#8 format. <code>genpkey</code> is obsolete. Use <code>gen*</code>.</p>
 <pre><code class="language-bash">openssl genrsa -out secret.pem 2048
 </code></pre>
 <p>Output public key from a private key (note that it contains info about the public key).</p>
-<pre><code class="language-bash">openssl rsa -in hello.pem -pubout -out hello.pem.pub
+<pre><code class="language-bash">openssl rsa -in secret.pem -pubout -out secret.pem.pub
 </code></pre>
 <p>Get modulus:</p>
 <pre><code class="language-bash">openssl rsa -in secret.pem -modulus -noout
 </code></pre>
 <p>Convert format</p>
-<pre><code class="language-bash">openssl pkcs12 -export -inkey hello.pem -in cert.pem -out cert.pfx
+<pre><code class="language-bash">openssl pkcs12 -export -inkey secret.pem -in cert.pem -out cert.pfx
 </code></pre>
+<h2 id="ecc"><a class="header" href="#ecc">ECC</a></h2>
+<pre><code class="language-bash">openssl genpkey -algorithm Ed25519 -out secret.pem
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="encryption-schemes-1"><a class="header" href="#encryption-schemes-1">Encryption schemes</a></h1>
+<p>Ciphertext offers confidentiality and authenticity.</p>
+<ul>
+<li>
+<p>RSAES-OAEP</p>
+<pre><code class="language-bash">openssl pkeyutl -encrypt -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256 -inkey secret.pem -in plaintext.txt | base64 &gt; encrypted2.txt
+</code></pre>
+</li>
+<li>
+<p>RSAES-PKCS #1 v1.5</p>
+<pre><code class="language-bash">openssl pkeyutl -encrypt -inkey secret.pem -in plaintext.txt | base64 &gt; encrypted2.txt
+</code></pre>
+</li>
+</ul>
+<p>See the <code>openssl-pkeyutl</code> docs (OpenSSL 3.0) <a href="https://www.openssl.org/docs/man3.0/man1/openssl-pkeyutl.html">here</a>.</p>
+<h2 id="block-ciphers"><a class="header" href="#block-ciphers">Block ciphers</a></h2>
+<pre><code class="language-bash">openssl enc -aes-256-cbc -in hello.txt &gt; hello.txt.enc
+</code></pre>
+<pre><code class="language-bash">openssl enc -aes-256-cbc -d -in hello.txt.enc &gt; hello.txt
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="digital-signature"><a class="header" href="#digital-signature">Digital signature</a></h1>
+<ul>
+<li>RSA
+<ul>
+<li>PKCS1-v1.5</li>
+<li>PSS</li>
+</ul>
+</li>
+<li>ECDSA</li>
+<li>Ed25519</li>
+<li>JWS</li>
+<li>AWS Sigv4</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="checksum"><a class="header" href="#checksum">Checksum</a></h1>
 <p>The goal of checksum is to verify integrity.</p>
 <p>It's common to check checksums when downloading files from websites.</p>
 <ul>
 <li>Anaconda uses <a href="md5.html">MD5</a> to compare checksums. <a href="https://anaconda.org/conda-forge/boto3/files">Here</a> is an example of the usage of checksum for boto3 package which is an AWS client (click on the (i) icon).</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="digital-signature"><a class="header" href="#digital-signature">Digital signature</a></h1>
-<ul>
-<li>ECDSA</li>
-<li>Ed25519</li>
-<li>RSA PKCS1-v1.5</li>
-<li>RSA PSS</li>
-<li>JWS</li>
-<li>AWS Sigv4</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ciphertext"><a class="header" href="#ciphertext">Ciphertext</a></h1>
-<p>Ciphertext offers confidentiality and authenticity.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="digital-certificate"><a class="header" href="#digital-certificate">Digital certificate</a></h1>
 <p>CSR</p>
 <p>openssl</p>
@@ -563,22 +651,25 @@ b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
 </ol>
 <h1 id="kotlin"><a class="header" href="#kotlin">Kotlin</a></h1>
 <p><code>KeySpec</code> — A public or private key in encoded format. Encodings include PKCS #8, X.509????</p>
-<pre><code class="language-kotlin">val pkcS8EncodedKeySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode(&quot;sdfvs331s&quot;))
-</code></pre>
+<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
+</span>val pkcS8EncodedKeySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode(&quot;sdfvs331s&quot;))
+<span class="boring">}</span></code></pre></pre>
 <p><code>KeyFactory</code> — Generate private and public from <code>keySpec</code> key specifications</p>
-<pre><code class="language-kotlin">val keyFactory = KeyFactory.getInstance(&quot;RSA&quot;)
+<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
+</span>val keyFactory = KeyFactory.getInstance(&quot;RSA&quot;)
 val privateKey = keyFactory.generatePrivate(keySpec)
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p><code>Signature</code></p>
 <p>Given <code>privateKey: PrivateKey</code>,</p>
-<pre><code class="language-kotlin">val privateSignature = Signature.getInstance(&quot;SHA256withRSA&quot;)
+<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
+</span>val privateSignature = Signature.getInstance(&quot;SHA256withRSA&quot;)
 
 privateSignature.initSign(privateKey)
 
 privateSignature.update(&quot;payload to encrypt&quot;.encodeToByteArray())
 
 val signature = privateSignature.sign()
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <pre><code class="language-java">byte[] publicBytes = Base64.decodeBase64(publicK);
 X509EncodedKeySpec keySpec = new X509EncodedKeySpec(publicBytes);
 KeyFactory keyFactory = KeyFactory.getInstance(&quot;RSA&quot;);
@@ -603,7 +694,7 @@ PublicKey pubKey = keyFactory.generatePublic(keySpec);
         </div>
 
         <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
+        <script>
             const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
             const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
             const socket = new WebSocket(wsAddress);
@@ -621,22 +712,22 @@ PublicKey pubKey = keyFactory.generatePublic(keySpec);
 
 
 
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" charset="utf-8"></script>
+        <script src="mark.min.js" charset="utf-8"></script>
+        <script src="searcher.js" charset="utf-8"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" charset="utf-8"></script>
+        <script src="highlight.js" charset="utf-8"></script>
+        <script src="book.js" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
 
-        <script type="text/javascript">
+        <script>
         window.addEventListener('load', function() {
             MathJax.Hub.Register.StartupHook('End', function() {
                 window.setTimeout(window.print, 100);

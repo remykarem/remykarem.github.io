@@ -1,8 +1,9 @@
 # Digital signature
 
+* RSA
+    * PKCS1-v1.5
+    * PSS
 * ECDSA
 * Ed25519
-* RSA PKCS1-v1.5
-* RSA PSS
 * JWS
 * AWS Sigv4

@@ -18,7 +18,7 @@ $$
 m = (m^{ed}) \bmod n
 $$
 
-> 💡 Note that the symmetry between \\( e \\) and \\( d \\) does not extend to most cryptosystems.
+> 💡 Note that while the encryption-decryption symmetry exists between \\( e \\) and \\( d \\), this symmetry does not extend to most cryptosystems.
 
 ## How it works
 
@@ -33,6 +33,10 @@ $$
 * Euler's totient function
 * Multiplicative modulo inverse
 * Chinese remainder theorem
+
+Trapdoor functions:
+* Product of two large prime numbers
+* Euler's totient function
     
 ## RSA in the wild
 
