@@ -1,6 +1,8 @@
-# ECDSA
+# ECC
 
 2nd-gen cryptosystem.
+
+Breaking ECC is an _elliptic curve discrete logarithm_ problem.
 
 ## Trapdoor function
 
@@ -16,8 +18,6 @@ where the curve is of the form
 $$
 y^2 = x^3 + ax + b
 $$
-
-Computing the private key from the public key is called the elliptic curve discrete logarithm function.
 
 * NIST curve secp256k1
 

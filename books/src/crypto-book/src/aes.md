@@ -29,13 +29,13 @@ Block ciphers can operate in a *mode of operation*. This involves *repeated* XOR
 
 ---
 
-AES is a block cipher that operates on blocks of **128 bits (16 bytes)**. It breaks the plaintext into similar size blocks.
+AES is a block cipher that operates on **blocks of 128 bits (16 bytes)**. It breaks the plaintext into similar size blocks.
 
 The shared keys can be of length 128, 192 or 256 bits.
 
 An **initialisation vector** (IV) is used to ensure that the same plaintext will not always get encrypted to the same ciphertext. The IV is needed when decrypting the ciphertext.
 
-A **mode** or **encyrption mode** is the algorithm used to encrypt data. It defines how you encrypt or re-encrypt every small block, etc.
+A **mode** or **encyrption mode** is the algorithm used to encrypt data which has more than 1 block. It defines how you encrypt or re-encrypt every small block, etc.
 
 * ECB
 * CBC

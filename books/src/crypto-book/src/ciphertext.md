@@ -15,7 +15,7 @@ Ciphertext offers confidentiality and authenticity.
     openssl pkeyutl -encrypt -inkey secret.pem -in plaintext.txt | base64 > encrypted2.txt
     ```
 
-See the `openssl-pkeyutl` docs (OpenSSL 3.0) [here](https://www.openssl.org/docs/man3.0/man1/openssl-pkeyutl.html).
+See the `openssl-pkeyutl` docs (OpenSSL 3.0) [here](https://www.openssl.org/docs/man3.0/man1/openssl-pkeyutl.html). Note that `rsautl` is deprecated.
 
 
 ## Block ciphers

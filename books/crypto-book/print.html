@@ -33,17 +33,17 @@
         <!-- Custom theme stylesheets -->
 
         <!-- MathJax -->
-        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
         <!-- Provide site root to javascript -->
-        <script>
+        <script type="text/javascript">
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
+        <script type="text/javascript">
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -59,7 +59,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
+        <script type="text/javascript">
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -71,7 +71,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
+        <script type="text/javascript">
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="md5.html"><strong aria-hidden="true">2.1.</strong> MD5</a></li><li class="chapter-item expanded "><a href="sha.html"><strong aria-hidden="true">2.2.</strong> SHA</a></li></ol></li><li class="chapter-item expanded "><a href="keyed_hash_functions.html"><strong aria-hidden="true">3.</strong> Keyed hash functions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Random number generator functions</div></li><li class="chapter-item expanded "><a href="public_key_cryptosystem.html"><strong aria-hidden="true">5.</strong> Public-key cryptosystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rsa.html"><strong aria-hidden="true">5.1.</strong> RSA</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rsa_encryption_schemes.html"><strong aria-hidden="true">5.1.1.</strong> Encryption schemes</a></li><li class="chapter-item expanded "><a href="rsa_digital_signature_schemes.html"><strong aria-hidden="true">5.1.2.</strong> Digital signature schemes</a></li></ol></li><li class="chapter-item expanded "><a href="ecdsa.html"><strong aria-hidden="true">5.2.</strong> Elliptic curve</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.</strong> Edwards curve</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.</strong> ElGamal</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Block ciphers</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">6.1.</strong> AES</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.1.</strong> Basic</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.2.</strong> AEAD</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">7.</strong> Key derivation functions</a></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">8.</strong> Key agreement</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> ECDH</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Hybrid</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> PGP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> GPG</div></li></ol></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">10.</strong> Padding</a></li><li class="chapter-item expanded "><a href="formats.html"><strong aria-hidden="true">11.</strong> Formats</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="keys.html"><strong aria-hidden="true">12.</strong> Keys</a></li><li class="chapter-item expanded "><a href="ciphertext.html"><strong aria-hidden="true">13.</strong> Encryption schemes</a></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">14.</strong> Digital signature</a></li><li class="chapter-item expanded "><a href="checksum.html"><strong aria-hidden="true">15.</strong> Checksum</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">16.</strong> MAC</div></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">17.</strong> Digital certificate</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> Derived keys</div></li><li class="chapter-item expanded "><a href="ssh.html"><strong aria-hidden="true">19.</strong> SSH</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">20.</strong> Utils</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">21.</strong> Code</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="md5.html"><strong aria-hidden="true">2.1.</strong> MD5</a></li><li class="chapter-item expanded "><a href="sha.html"><strong aria-hidden="true">2.2.</strong> SHA</a></li></ol></li><li class="chapter-item expanded "><a href="keyed_hash_functions.html"><strong aria-hidden="true">3.</strong> Keyed hash functions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Random number generator functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Block ciphers</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">5.1.</strong> AES</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.1.</strong> Basic</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.2.</strong> AEAD</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="public_key_cryptosystem.html"><strong aria-hidden="true">6.</strong> Public-key cryptosystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rsa.html"><strong aria-hidden="true">6.1.</strong> RSA</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rsa_encryption_schemes.html"><strong aria-hidden="true">6.1.1.</strong> Encryption schemes</a></li><li class="chapter-item expanded "><a href="rsa_digital_signature_schemes.html"><strong aria-hidden="true">6.1.2.</strong> Digital signature schemes</a></li></ol></li><li class="chapter-item expanded "><a href="ecdsa.html"><strong aria-hidden="true">6.2.</strong> ECC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ecc_encryption_schemes.html"><strong aria-hidden="true">6.2.1.</strong> Encryption schemes</a></li><li class="chapter-item expanded "><a href="ecc_digital_signature_schemes.html"><strong aria-hidden="true">6.2.2.</strong> Digital signature schemes</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> ElGamal</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Hybrid cryptosystem</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> PGP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.2.</strong> GPG</div></li></ol></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">8.</strong> Key derivation functions</a></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">9.</strong> Key agreement</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> ECDH</div></li></ol></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">10.</strong> Padding</a></li><li class="chapter-item expanded "><a href="formats.html"><strong aria-hidden="true">11.</strong> Formats</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="keys.html"><strong aria-hidden="true">12.</strong> Keys</a></li><li class="chapter-item expanded "><a href="ciphertext.html"><strong aria-hidden="true">13.</strong> Encryption schemes</a></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">14.</strong> Digital signature</a></li><li class="chapter-item expanded "><a href="checksum.html"><strong aria-hidden="true">15.</strong> Checksum</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">16.</strong> MAC</div></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">17.</strong> Digital certificate</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> Derived keys</div></li><li class="chapter-item expanded "><a href="ssh.html"><strong aria-hidden="true">19.</strong> SSH</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">20.</strong> Utils</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">21.</strong> Code</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -135,7 +135,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
+                <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -149,19 +149,69 @@
 <p><a href="https://cryptobook.nakov.com/">https://cryptobook.nakov.com</a></p>
 <p><a href="https://connect2id.com/products/nimbus-jose-jwt/examples">https://connect2id.com/products/nimbus-jose-jwt/examples</a></p>
 <p>https://developers.google.com/tink/deterministic-encryption</p>
+<h1 id="scenarios"><a class="header" href="#scenarios">Scenarios</a></h1>
+<ul>
+<li>
+<p>Only encrypting the HTTP payload (&quot;confidentiality&quot;)</p>
+<p>An attacker might not be able to read the data in transit. But they may be able to flip bits without detection. A GET can be changed to PUT by flipping bits, without interfering with the ciphertext.</p>
+</li>
+<li>
+<p>Only appending a checksum (&quot;data integrity&quot;)</p>
+<p>An attacker can generate a correct sum.</p>
+</li>
+</ul>
 <h1 id="goals"><a class="header" href="#goals">Goals</a></h1>
-<p>&quot;item&quot; = document, message, password</p>
+<p>Typically, you want to make sure that the <em>data</em> you receive:</p>
+<ol>
+<li>came from a known source (<strong>authenticity</strong>)</li>
+<li>was not altered during transmission (<strong>integrity</strong>)</li>
+<li>(optional) not understood by anyone during the transmission (<strong>confidential</strong>)</li>
+</ol>
+<p>You also want to make sure that <em>attackers</em>:</p>
+<ol>
+<li>cannot reuse any submitted proofs (<strong>resistance to replay attack</strong>)</li>
+<li>cannot find any pattern from the encryption (<strong>high entropy</strong>, dependent on the encryption algorithm)</li>
+</ol>
+<p>You also want to make sure that the <em>sender</em>:</p>
+<ol>
+<li>cannot deny sending the information or deny the authenticity of the signature (<strong>non-repudiation</strong>). This can be achieved by the concept of a unique key not meant to be shared (<strong>private key</strong>).</li>
+</ol>
+<p>Based on these requirements, here is an example infrastructure:</p>
+<ul>
+<li>There are 2 sets of keys:
+<ul>
+<li>For encryption - sender has the public key X, receiver has a private key Y.</li>
+<li>For signing - sender has the private key A, receiver has a public key B.</li>
+</ul>
+</li>
+<li>Sender encrypts payload (confidentiality, authenticity) with the public key X.</li>
+<li>Sender signs payload together with current timestamp (resistance to replay attack) with private key A.</li>
+</ul>
+<p>Definitions:</p>
+<ul>
+<li>
 <p>Integrity — proof that the item is not altered</p>
+</li>
+<li>
 <p>Authenticity/authentication — proof that the item comes from a known source</p>
-<p>Confidentiality/Privacy/secrecy — no one can read (and understand) the message in the item</p>
+</li>
+<li>
+<p>Confidentiality/privacy/secrecy — no one can read (and understand) the message in the item</p>
+</li>
+<li>
 <p>Symmetry — if there is content encryption, is the same key used for both encryption and decryption?</p>
+</li>
+<li>
 <p>Randomisation - if there is content encryption, will the same plaintext yield different ciphertexts?</p>
+</li>
+<li>
 <p>Non-repudiation — the signer cannot deny that they signed (because...?)</p>
-<p>Resistant to attacks — the item cannot be easily guessed</p>
+</li>
+</ul>
 <p><a href="https://en.wikipedia.org/wiki/Confusion_and_diffusion">https://en.wikipedia.org/wiki/Confusion_and_diffusion</a></p>
 <div class="table-wrapper"><table><thead><tr><th>Ting</th><th>Confidentiality</th><th>Authenticity</th><th>Integrity</th><th>Symmetry</th><th>Output randomness</th></tr></thead><tbody>
-<tr><td>MAC</td><td>❌</td><td>✅</td><td>✅</td><td>Symmetric</td><td>Either</td></tr>
-<tr><td>Digital signature</td><td>❌</td><td>✅</td><td>✅</td><td>Asymmetric</td><td>?</td></tr>
+<tr><td>MAC</td><td>❌</td><td>❌</td><td>✅</td><td>Symmetric</td><td>Either</td></tr>
+<tr><td>Digital signature, HMAC</td><td>❌</td><td>✅</td><td>✅</td><td>Asymmetric</td><td>?</td></tr>
 <tr><td>Deterministic AEAD</td><td>✅</td><td>✅</td><td>-</td><td>Symmetric</td><td>Deterministic</td></tr>
 <tr><td>AEAD ciphertext</td><td>✅</td><td>✅</td><td>-</td><td>Symmetric</td><td>Random</td></tr>
 <tr><td>Basic AES ciphertext</td><td>✅</td><td>?</td><td>-</td><td>Symmetric</td><td>Random</td></tr>
@@ -188,13 +238,68 @@
 <li>HMAC - hash-based MAC eg. HMAC-SHA256</li>
 <li>CMAC- cipher-based MAC</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="aes"><a class="header" href="#aes">AES</a></h1>
+<p>A <em>deterministic</em> symmetric encryption algorithm operating on blocks</p>
+<pre><code>(plaintext, key) -&gt; ciphertext
+
+(ciphertext, key) -&gt; plaintext
+</code></pre>
+<hr />
+<p>💡 A <strong>block</strong> is a fixed-length group of <em>bits</em></p>
+<ul>
+<li>AES (Advanced Encryption Standard)</li>
+<li>DES (Data Encryption Standard)</li>
+</ul>
+<p>Block ciphers can operate in a <em>mode of operation</em>. This involves <em>repeated</em> XOR-ing a block etc. to achieve confidentiality and authentication. Involves some initial randomness (IV). Here are some:</p>
+<ul>
+<li>Confidentiality + Authentication
+<ul>
+<li>GCM</li>
+<li>EAX</li>
+</ul>
+</li>
+<li>Confidentiality
+<ul>
+<li>CBC — each block depends on the proper encryption block before it</li>
+<li>ECB</li>
+<li>CFB</li>
+<li>CTR</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>AES is a block cipher that operates on <strong>blocks of 128 bits (16 bytes)</strong>. It breaks the plaintext into similar size blocks.</p>
+<p>The shared keys can be of length 128, 192 or 256 bits.</p>
+<p>An <strong>initialisation vector</strong> (IV) is used to ensure that the same plaintext will not always get encrypted to the same ciphertext. The IV is needed when decrypting the ciphertext.</p>
+<p>A <strong>mode</strong> or <strong>encyrption mode</strong> is the algorithm used to encrypt data which has more than 1 block. It defines how you encrypt or re-encrypt every small block, etc.</p>
+<ul>
+<li>ECB</li>
+<li>CBC</li>
+<li>CFB</li>
+<li>OFB</li>
+<li>CTR</li>
+</ul>
+<pre><code class="language-txt">AES-128-CBC 
+ ^   ^   ^
+ |   |   |
+alg key mode
+  length
+</code></pre>
+<p>Finally, the ciphertext will include the initialisation vector and ciphertext.</p>
+<p>Note that some modes allow partial decryption, like the CTR.</p>
+<p>Resources:</p>
+<ul>
+<li><a href="https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97">https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97</a></li>
+<li><a href="https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/">https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/</a></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="public-key-cryptosystem"><a class="header" href="#public-key-cryptosystem">Public-key cryptosystem</a></h1>
 <ul>
 <li>Has an encyrption algorithm</li>
 <li>Has a digital signature algorithm</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="rsa"><a class="header" href="#rsa">RSA</a></h1>
-<p>Rivest-Shamir-Adleman; 1995</p>
+<p>Rivest-Shamir-Adleman; 1995; 1st-gen cryptosystem.</p>
+<p>Breaking RSA is an <em>integer factorisation</em> problem.</p>
 <p>RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus \( n \): one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf">here</a>.</p>
 <p>For PKCS1 v1.5, the message to encrypt should be <strong>no longer than the public modulus minus 11 bytes</strong>. <a href="http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15">http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15</a>.</p>
 <ul>
@@ -203,6 +308,11 @@
 <li>modulus: \( n \)</li>
 <li>message: \(m \)</li>
 <li>cipher: \(c \)</li>
+</ul>
+<h2 id="trapdoor-functions"><a class="header" href="#trapdoor-functions">Trapdoor function(s)</a></h2>
+<ul>
+<li>Product of two large prime numbers</li>
+<li>Euler's totient function</li>
 </ul>
 <h2 id="main-idea"><a class="header" href="#main-idea">Main idea</a></h2>
 <p>$$
@@ -223,20 +333,13 @@ $$</p>
 <li>Multiplicative modulo inverse</li>
 <li>Chinese remainder theorem</li>
 </ul>
-<p>Trapdoor functions:</p>
-<ul>
-<li>Product of two large prime numbers</li>
-<li>Euler's totient function</li>
-</ul>
-<h2 id="rsa-in-the-wild"><a class="header" href="#rsa-in-the-wild">RSA in the wild</a></h2>
-<p>RSA is usually used with padding.</p>
 <h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
 <p>https://leimao.github.io/article/RSA-Algorithm/</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="encryption-schemes"><a class="header" href="#encryption-schemes">Encryption schemes</a></h1>
 <p>There are 2 main encryption schemes (as seen <a href="https://en.wikipedia.org/wiki/PKCS_1#Schemes">here</a>):</p>
 <ul>
 <li>RSAES-OAEP</li>
-<li>RSAES-PKCS #1 v1.5 (old)</li>
+<li>RSAES-PKCS1-v1_5 (old)</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="digital-signature-schemes"><a class="header" href="#digital-signature-schemes">Digital signature schemes</a></h1>
 <p>There are 2 main encryption schemes (as seen <a href="https://en.wikipedia.org/wiki/PKCS_1#Schemes">here</a>):</p>
@@ -244,8 +347,9 @@ $$</p>
 <li>RSASSA-PSS</li>
 <li>RSASSA-PKCS1-v1_5 (old)</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ecdsa"><a class="header" href="#ecdsa">ECDSA</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ecc"><a class="header" href="#ecc">ECC</a></h1>
 <p>2nd-gen cryptosystem.</p>
+<p>Breaking ECC is an <em>elliptic curve discrete logarithm</em> problem.</p>
 <h2 id="trapdoor-function"><a class="header" href="#trapdoor-function">Trapdoor function</a></h2>
 <p>$$
 f_{\text {curve}}(P_\text{start_point},n_\text{hops}) \rightarrow P_\text{end_point}
@@ -256,7 +360,6 @@ Public key: P_endpoint</p>
 <p>$$
 y^2 = x^3 + ax + b
 $$</p>
-<p>Computing the private key from the public key is called the elliptic curve discrete logarithm function.</p>
 <ul>
 <li>
 <p>NIST curve secp256k1</p>
@@ -289,59 +392,11 @@ $$</p>
 <p>Examples: <code>Curve448</code></p>
 </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="aes"><a class="header" href="#aes">AES</a></h1>
-<p>A <em>deterministic</em> symmetric encryption algorithm operating on blocks</p>
-<pre><code>(plaintext, key) -&gt; ciphertext
-
-(ciphertext, key) -&gt; plaintext
-</code></pre>
-<hr />
-<p>💡 A <strong>block</strong> is a fixed-length group of <em>bits</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="encryption-schemes-1"><a class="header" href="#encryption-schemes-1">Encryption schemes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="digital-signature-schemes-1"><a class="header" href="#digital-signature-schemes-1">Digital signature schemes</a></h1>
 <ul>
-<li>AES (Advanced Encryption Standard)</li>
-<li>DES (Data Encryption Standard)</li>
-</ul>
-<p>Block ciphers can operate in a <em>mode of operation</em>. This involves <em>repeated</em> XOR-ing a block etc. to achieve confidentiality and authentication. Involves some initial randomness (IV). Here are some:</p>
-<ul>
-<li>Confidentiality + Authentication
-<ul>
-<li>GCM</li>
-<li>EAX</li>
-</ul>
-</li>
-<li>Confidentiality
-<ul>
-<li>CBC — each block depends on the proper encryption block before it</li>
-<li>ECB</li>
-<li>CFB</li>
-<li>CTR</li>
-</ul>
-</li>
-</ul>
-<hr />
-<p>AES is a block cipher that operates on blocks of <strong>128 bits (16 bytes)</strong>. It breaks the plaintext into similar size blocks.</p>
-<p>The shared keys can be of length 128, 192 or 256 bits.</p>
-<p>An <strong>initialisation vector</strong> (IV) is used to ensure that the same plaintext will not always get encrypted to the same ciphertext. The IV is needed when decrypting the ciphertext.</p>
-<p>A <strong>mode</strong> or <strong>encyrption mode</strong> is the algorithm used to encrypt data. It defines how you encrypt or re-encrypt every small block, etc.</p>
-<ul>
-<li>ECB</li>
-<li>CBC</li>
-<li>CFB</li>
-<li>OFB</li>
-<li>CTR</li>
-</ul>
-<pre><code class="language-txt">AES-128-CBC 
- ^   ^   ^
- |   |   |
-alg key mode
-  length
-</code></pre>
-<p>Finally, the ciphertext will include the initialisation vector and ciphertext.</p>
-<p>Note that some modes allow partial decryption, like the CTR.</p>
-<p>Resources:</p>
-<ul>
-<li><a href="https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97">https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97</a></li>
-<li><a href="https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/">https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/</a></li>
+<li>ECDSA</li>
+<li>EdDSA</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kdf"><a class="header" href="#kdf">KDF</a></h1>
 <p>Key-derivation functions</p>
@@ -399,8 +454,7 @@ alg key mode
 <ul>
 <li>
 <p>Code</p>
-<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
-</span>note over alice: file.txt
+<pre><code class="language-kotlin">note over alice: file.txt
 alice-&gt;alice: create\n key pair
 note over alice: pubkey\nptekey\n file.txt
 note over bob: cert\n bob pubkey\n bob ptekey
@@ -426,7 +480,7 @@ alice-&gt;bob: file.enc
 note over bob: file.enc\nsymkey.pem\n symkey.enc\n bob pubkey\n bob ptekey
 bob-&gt;bob: decrypt\n file.enc\n with symkey.pem
 note over bob: file.txt\n file.enc\nsymkey.pem\n symkey.enc\n bob pubkey\n bob ptekey
-<span class="boring">}</span></code></pre></pre>
+</code></pre>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="padding"><a class="header" href="#padding">Padding</a></h1>
@@ -542,10 +596,10 @@ returns a seq of 9 integers</li>
 <p>Convert format</p>
 <pre><code class="language-bash">openssl pkcs12 -export -inkey secret.pem -in cert.pem -out cert.pfx
 </code></pre>
-<h2 id="ecc"><a class="header" href="#ecc">ECC</a></h2>
+<h2 id="ecc-1"><a class="header" href="#ecc-1">ECC</a></h2>
 <pre><code class="language-bash">openssl genpkey -algorithm Ed25519 -out secret.pem
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="encryption-schemes-1"><a class="header" href="#encryption-schemes-1">Encryption schemes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="encryption-schemes-2"><a class="header" href="#encryption-schemes-2">Encryption schemes</a></h1>
 <p>Ciphertext offers confidentiality and authenticity.</p>
 <ul>
 <li>
@@ -559,13 +613,17 @@ returns a seq of 9 integers</li>
 </code></pre>
 </li>
 </ul>
-<p>See the <code>openssl-pkeyutl</code> docs (OpenSSL 3.0) <a href="https://www.openssl.org/docs/man3.0/man1/openssl-pkeyutl.html">here</a>.</p>
+<p>See the <code>openssl-pkeyutl</code> docs (OpenSSL 3.0) <a href="https://www.openssl.org/docs/man3.0/man1/openssl-pkeyutl.html">here</a>. Note that <code>rsautl</code> is deprecated.</p>
 <h2 id="block-ciphers"><a class="header" href="#block-ciphers">Block ciphers</a></h2>
 <pre><code class="language-bash">openssl enc -aes-256-cbc -in hello.txt &gt; hello.txt.enc
 </code></pre>
 <pre><code class="language-bash">openssl enc -aes-256-cbc -d -in hello.txt.enc &gt; hello.txt
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="digital-signature"><a class="header" href="#digital-signature">Digital signature</a></h1>
+<blockquote>
+<p>💡 Typically we say <em>sign</em> with the private key and <em>verify</em> with the public key instead of &quot;encrypt&quot; and &quot;decrypt&quot; respectively.</p>
+</blockquote>
+<p>Signing usually involve a hash function and padding.</p>
 <ul>
 <li>RSA
 <ul>
@@ -651,25 +709,22 @@ b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
 </ol>
 <h1 id="kotlin"><a class="header" href="#kotlin">Kotlin</a></h1>
 <p><code>KeySpec</code> — A public or private key in encoded format. Encodings include PKCS #8, X.509????</p>
-<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
-</span>val pkcS8EncodedKeySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode(&quot;sdfvs331s&quot;))
-<span class="boring">}</span></code></pre></pre>
+<pre><code class="language-kotlin">val pkcS8EncodedKeySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode(&quot;sdfvs331s&quot;))
+</code></pre>
 <p><code>KeyFactory</code> — Generate private and public from <code>keySpec</code> key specifications</p>
-<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
-</span>val keyFactory = KeyFactory.getInstance(&quot;RSA&quot;)
+<pre><code class="language-kotlin">val keyFactory = KeyFactory.getInstance(&quot;RSA&quot;)
 val privateKey = keyFactory.generatePrivate(keySpec)
-<span class="boring">}</span></code></pre></pre>
+</code></pre>
 <p><code>Signature</code></p>
 <p>Given <code>privateKey: PrivateKey</code>,</p>
-<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
-</span>val privateSignature = Signature.getInstance(&quot;SHA256withRSA&quot;)
+<pre><code class="language-kotlin">val privateSignature = Signature.getInstance(&quot;SHA256withRSA&quot;)
 
 privateSignature.initSign(privateKey)
 
 privateSignature.update(&quot;payload to encrypt&quot;.encodeToByteArray())
 
 val signature = privateSignature.sign()
-<span class="boring">}</span></code></pre></pre>
+</code></pre>
 <pre><code class="language-java">byte[] publicBytes = Base64.decodeBase64(publicK);
 X509EncodedKeySpec keySpec = new X509EncodedKeySpec(publicBytes);
 KeyFactory keyFactory = KeyFactory.getInstance(&quot;RSA&quot;);
@@ -694,7 +749,7 @@ PublicKey pubKey = keyFactory.generatePublic(keySpec);
         </div>
 
         <!-- Livereload script (if served using the cli tool) -->
-        <script>
+        <script type="text/javascript">
             const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
             const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
             const socket = new WebSocket(wsAddress);
@@ -712,22 +767,22 @@ PublicKey pubKey = keyFactory.generatePublic(keySpec);
 
 
 
-        <script>
+        <script type="text/javascript">
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js" charset="utf-8"></script>
-        <script src="mark.min.js" charset="utf-8"></script>
-        <script src="searcher.js" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="clipboard.min.js" charset="utf-8"></script>
-        <script src="highlight.js" charset="utf-8"></script>
-        <script src="book.js" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
 
-        <script>
+        <script type="text/javascript">
         window.addEventListener('load', function() {
             MathJax.Hub.Register.StartupHook('End', function() {
                 window.setTimeout(window.print, 100);

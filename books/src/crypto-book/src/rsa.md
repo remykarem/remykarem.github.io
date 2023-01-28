@@ -1,6 +1,8 @@
 # RSA
 
-Rivest-Shamir-Adleman; 1995
+Rivest-Shamir-Adleman; 1995; 1st-gen cryptosystem.
+
+Breaking RSA is an _integer factorisation_ problem.
 
 RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus \\( n \\): one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf).
 
@@ -11,6 +13,11 @@ For PKCS1 v1.5, the message to encrypt should be **no longer than the public mod
 - modulus: \\( n \\)
 - message: \\(m \\)
 - cipher: \\(c \\)
+
+## Trapdoor function(s)
+
+* Product of two large prime numbers
+* Euler's totient function
 
 ## Main idea
 
@@ -33,15 +40,7 @@ $$
 * Euler's totient function
 * Multiplicative modulo inverse
 * Chinese remainder theorem
-
-Trapdoor functions:
-* Product of two large prime numbers
-* Euler's totient function
     
-## RSA in the wild
-
-RSA is usually used with padding.
-
 ## Resources
 
 https://leimao.github.io/article/RSA-Algorithm/
