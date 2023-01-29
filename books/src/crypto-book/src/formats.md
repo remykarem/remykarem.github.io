@@ -80,7 +80,3 @@ pkcs8 pub
 - modern format
 - openssl rsa -in file -pubout
 - openssl asn1parse -in key.pem
-
-csr
-
-- openssl req -newkey rsa:2048 -nodes -keyout domain.key -out domain.csr

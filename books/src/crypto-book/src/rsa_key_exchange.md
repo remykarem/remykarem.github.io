@@ -13,3 +13,5 @@ m is the secret key
 * client and server each computes h:
 h = hash(m, pubkey, …) (nneded for future ssh session)
 encrypteddata = m(plaintext)
+
+## RSA + Diffie-Hellman

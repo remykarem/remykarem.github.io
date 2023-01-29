@@ -1,15 +1,21 @@
 # DH
 
-## DHKE
-
 The Diffie–Hellman key exchange (**DH** or **DHKE**) method allows two parties that have no prior knowledge of each other to jointly establish a shared secret key over an insecure channel.
 
-* Concepts
-    * Primitive root modulo
-    * Multiplicative group of integers modulo
-    * Modular exponentation
-* Trapdoor function: modular exponentaition?
-* DHKE problem: discrete logarithm problem
+Breaking DH is a discrete logarithm problem.
+
+## Important concepts
+
+* Primitive root modulo
+* Multiplicative group of integers modulo
+* Modular exponentation
+* Modular arithmetic
+
+## Trapdoor function
+
+Modular exponentiation?
+
+## How it works
 
 Define secret \\( s \\) and an agreed modulo \\( p \\) (which is prime):
 

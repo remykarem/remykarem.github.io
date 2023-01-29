@@ -14,6 +14,16 @@ For PKCS1 v1.5, the message to encrypt should be **no longer than the public mod
 - message: \\(m \\)
 - cipher: \\(c \\)
 
+## Important concepts
+
+* Modular arithmetic
+* [Euler's theorem](https://en.wikipedia.org/wiki/Euler%27s_theorem)
+* Prime numbers and co-primes
+* Prime factorisation
+* Euler's totient function
+* Multiplicative modulo inverse
+* Chinese remainder theorem
+
 ## Trapdoor function(s)
 
 * Product of two large prime numbers
@@ -30,16 +40,6 @@ $$
 ## How it works
 
 ![How RSA works](rsa.png)
-
-## Important concepts:
-
-* Modular arithmetic
-* [Euler's theorem](https://en.wikipedia.org/wiki/Euler%27s_theorem)
-* Prime numbers and co-primes
-* Prime factorisation
-* Euler's totient function
-* Multiplicative modulo inverse
-* Chinese remainder theorem
     
 ## Resources
 
