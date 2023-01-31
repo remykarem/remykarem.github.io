@@ -25,8 +25,3 @@ example public key
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMpa7OiqjPnIWgkmsNjIXucypfQ4i111sA6p1937E1Yg username@user123
 ```
 
-## Compare fingerprints between a key pair
-
-```bash
-ssh-keygen -l -f <privatekey_file>; ssh-keygen -l -f <publickey_file>;
-```
