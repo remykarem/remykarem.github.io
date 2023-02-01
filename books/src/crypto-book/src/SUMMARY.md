@@ -41,6 +41,7 @@
 
 # Applications
 
+- [Random bytes](./rand.md)
 - [Key generation](./keys.md)
 - [Encryption algorithms](./ciphertext.md)
 - [Digital signature algorithms](./digital_signature.md)
