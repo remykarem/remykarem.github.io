@@ -40,6 +40,13 @@ $$
 ## How it works
 
 ![How RSA works](rsa.png)
+
+💡 Fyi RSA is multiplicative homomorphic, i.e.
+
+$$
+E(m_1) \times E(m_2) = m_1^e \times m_2^e = (m_1 \times m_2)^e=E(m_1\times m_2)
+$$
+
     
 ## Resources
 
