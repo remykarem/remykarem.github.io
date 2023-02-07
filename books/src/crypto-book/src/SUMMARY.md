@@ -36,6 +36,7 @@
     - [DH](./diffie_hellman.md)
 - [Padding](./padding.md)
 - [Formats](./formats.md)
+- [Standards](./standards.md)
 
 ---
 
