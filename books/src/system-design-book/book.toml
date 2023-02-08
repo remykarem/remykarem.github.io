@@ -1,0 +1,15 @@
+[book]
+authors = ["Raimi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "system-design-book"
+
+[output.html.playground]
+editable = true
+
+[output.html]
+site-url = "/books/system-design-book/"
+
+[build]
+build-dir = "../../system-design-book"
