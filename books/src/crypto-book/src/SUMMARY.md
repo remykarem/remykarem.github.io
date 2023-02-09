@@ -35,7 +35,17 @@
 - [Key exchange](./key_exchange.md)
     - [DH](./diffie_hellman.md)
 - [Padding](./padding.md)
-- [Formats](./formats.md)
+- [Encodings]()
+    - [PEM](./pem.md)
+    - [DER](./der.md)
+    - [P12/PFX (PKCS #12)]()
+- [Structured container formats]()
+    - [PKCS #1](./pkcs1.md)
+    - [PKCS #8](./pkcs8.md)
+    - [X.509](./x509.md)
+    - [Java KeyStore]()
+    - [PVK]()
+    - [JWK/JWKS]()
 - [Standards](./standards.md)
 
 ---

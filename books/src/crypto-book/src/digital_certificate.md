@@ -40,3 +40,9 @@ openssl s_client -showcerts -servername stackoverflow.com -connect stackoverflow
 ```
 
 Based on [this](https://stackoverflow.com/questions/7885785/using-openssl-to-get-the-certificate-from-a-server) StackOverflow post.
+
+new cert (new private key etc.)
+
+```bash
+openssl req -newkey rsa:2048 -nodes -keyout domain.key -x509 -days 365 -out domain.crt
+```
