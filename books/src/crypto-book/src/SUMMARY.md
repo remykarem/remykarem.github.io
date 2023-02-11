@@ -30,14 +30,18 @@
 - [Hybrid cryptosystem]()
     - [PGP]()
     - [GPG]()
-    - [ECIES]()
 - [KDF](./kdf.md)
+    - [Bcrypt]()
+    - [Scrypt]()
+    - [Argon]()
 - [Key exchange](./key_exchange.md)
     - [DH](./diffie_hellman.md)
 - [Padding](./padding.md)
 - [Encodings]()
     - [PEM](./pem.md)
     - [DER](./der.md)
+    - [JWT](./jwt.md)
+    - [JWK / JWKS](./jwk.md)
     - [P12/PFX (PKCS #12)]()
 - [Structured container formats]()
     - [PKCS #1](./pkcs1.md)
@@ -45,8 +49,7 @@
     - [X.509](./x509.md)
     - [Java KeyStore]()
     - [PVK]()
-    - [JWK/JWKS]()
-- [Standards](./standards.md)
+- [Other standards](./standards.md)
 
 ---
 
@@ -61,7 +64,6 @@
 - [HMAC](./hmac.md)
 - [Digital certificate](./digital_certificate.md)
 - [CSR](./csr.md)
-- [TLS]()
 - [Utils](./utils.md)
 
 ---

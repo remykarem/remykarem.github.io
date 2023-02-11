@@ -2,6 +2,8 @@
 
 Rivest-Shamir-Adleman; 1995; 1st-gen cryptosystem.
 
+[RFC 8017](https://datatracker.ietf.org/doc/html/rfc8017) - PKCS #1: RSA Cryptography Specifications Version 2.2
+
 Breaking RSA is an _integer factorisation_ problem.
 
 RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus \\( n \\): one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf).
