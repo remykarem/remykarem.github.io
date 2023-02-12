@@ -34,5 +34,5 @@
 
 # Applications
 
-- [Text processing]()
+- [Text processing](./text-processing.md)
 - [Image processing](./image_processing.md)
