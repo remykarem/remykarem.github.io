@@ -2,13 +2,20 @@
 
 ## OpenSSL
 
-Generate private key in PKCS#8 format. `genpkey` is obsolete. Use `gen*`.
+Generate private key in PKCS #8 format. `genpkey` is obsolete. Use `gen*`.
 
 ```bash
 openssl genrsa -out secret.pem 2048
 ```
 
-Output public key from a private key (note that it contains info about the public key).
+Output DER format and base64-encode it.
+
+```bash
+openssl rsa -in secret.pem -outform der -out secret.der
+base64 -i secret.der
+```
+
+Output public key from a private key.
 
 ```bash
 openssl rsa -in secret.pem -pubout -out secret.pem.pub
@@ -24,26 +31,23 @@ For more info, run `man openssl-rsa` or `man openssl-genrsa` etc.
 
 ---
 
-## Kotlin
+## Java/Kotlin standard library
 
+Concepts:
 
-1. Decode the Base64 encoding
-2. Decode the PKCS8 or X509 into a `KeySpec` object
-3. Create a `KeyFactory` instance.
-4. Generate private or public from these 2
+* `java.security.spec.KeySpec` 
 
- 
-`KeySpec` — A public or private key in encoded format. Encodings include PKCS #8, X.509????
+    A public or private key in the corresponding structured container format aka key spec. Keys can be specified by its components e.g. `RSAPrivateKeySpec` or its binary (DER encoding) e.g. `PKCS8EncodedKeySpec` and `X509EncodedKeySpec`. Other KeySpecs like `OpenSSHPrivateKeySpec` can be obtained from third-party libraries like Bouncy Castle.
 
-```kotlin
-val pkcS8EncodedKeySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode("sdfvs331s"))
-```
+* `java.security.KeyFactory`
 
-`KeyFactory` — Generate private and public from `keySpec` key specifications
+    A factory method to generate private and public from `KeySpec`.
+
+Code:
 
 ```kotlin
-val keyFactory = KeyFactory.getInstance("RSA")
-val privateKey = keyFactory.generatePrivate(keySpec)
+val keySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode("MIIEwAIBADANB..."))
+val privateKey = KeyFactory.getInstance("RSA").generatePrivate(keySpec)
 ```
 
 `Signature`

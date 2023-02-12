@@ -45,7 +45,7 @@
     - [P12/PFX (PKCS #12)]()
     - [SSH2](./ssh2.md)
     - [OpenSSH](./openssh.md)
-- [Structured container formats]()
+- [Structured container formats](./structured_container_formats.md)
     - [PKCS #1](./pkcs1.md)
     - [PKCS #8](./pkcs8.md)
     - [X.509](./x509.md)
