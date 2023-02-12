@@ -1,4 +1,31 @@
-# Code
+# RSA
+
+## OpenSSL
+
+Generate private key in PKCS#8 format. `genpkey` is obsolete. Use `gen*`.
+
+```bash
+openssl genrsa -out secret.pem 2048
+```
+
+Output public key from a private key (note that it contains info about the public key).
+
+```bash
+openssl rsa -in secret.pem -pubout -out secret.pem.pub
+```
+
+Convert format
+
+```bash
+openssl pkcs12 -export -inkey secret.pem -in cert.pem -out cert.pfx
+```
+
+For more info, run `man openssl-rsa` or `man openssl-genrsa` etc.
+
+---
+
+## Kotlin
+
 
 1. Decode the Base64 encoding
 2. Decode the PKCS8 or X509 into a `KeySpec` object
@@ -6,9 +33,6 @@
 4. Generate private or public from these 2
 
  
-
-# Kotlin
-
 `KeySpec` — A public or private key in encoded format. Encodings include PKCS #8, X.509????
 
 ```kotlin

@@ -43,6 +43,8 @@
     - [JWT](./jwt.md)
     - [JWK / JWKS](./jwk.md)
     - [P12/PFX (PKCS #12)]()
+    - [SSH2](./ssh2.md)
+    - [OpenSSH](./openssh.md)
 - [Structured container formats]()
     - [PKCS #1](./pkcs1.md)
     - [PKCS #8](./pkcs8.md)
@@ -56,16 +58,14 @@
 # Applications
 
 - [Random bytes](./rand.md)
-- [Key generation](./keys.md)
+- [Keys]()
+    - [RSA](./code.md)
+    - [ECC](./keys/ecc.md)
+    - [SSH](./keys/ssh.md)
 - [Encryption algorithms](./ciphertext.md)
 - [Digital signature algorithms](./digital_signature.md)
 - [Checksum](./checksum.md)
 - [Fingerprint](./fingerprint.md)
 - [HMAC](./hmac.md)
 - [Digital certificate](./digital_certificate.md)
-- [CSR](./csr.md)
 - [Utils](./utils.md)
-
----
-
-- [Code](./code.md)

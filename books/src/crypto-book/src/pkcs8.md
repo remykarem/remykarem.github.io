@@ -1,21 +1,7 @@
 # PKCS #8
 
-Standards that define extra padding etc of private key
+[RFC 5208](https://datatracker.ietf.org/doc/html/rfc5208)
 
-- PKCS#8; common format for RSA; req by java
+PKCS #8 applies to all PKI keys. It provides an option to encrypt the private key.
 
-pkcs8
-
-- MIIEv…
-- modern format
-- openssl genpkey -algorithm rsa (-pkeyopt rsa_keygen_bits:2048)
-- openssl pkcs8 -topk8 -in private_key.pem -out private_key.p8 (-nocrypt)
-- openssl asn1parse -in key.pem
-
-pkcs8 pub
-
-- MIIB…
-- modern format
-- openssl rsa -in file -pubout
-- openssl asn1parse -in key.pem
-
+In Java, it is the required format for RSA.
