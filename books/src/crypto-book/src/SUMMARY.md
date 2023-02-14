@@ -46,11 +46,13 @@
         - [OpenSSH](./openssh.md)
     - [Binary-based]()
         - [DER](./der.md)
-        - [P12/PFX (PKCS #12)]()
-        - [JKS]()
+        - [P12/PFX/PKCS #12](./p12-pfx.md)
+        - [JKS](./jks.md)
 - [Structured container formats](./structured_container_formats.md)
-    - [PKCS #1](./pkcs1.md)
+    - [PKCS #1 (RSA)](./pkcs1.md)
     - [PKCS #8](./pkcs8.md)
+    - [PKCS #11]()
+    - [PKCS #12](./pkcs12.md)
     - [X.509](./x509.md)
     - [PVK]()
 - [Other standards](./standards.md)
@@ -59,7 +61,7 @@
 
 # Applications
 
-- [Random bytes](./rand.md)
+- [Secure random bytes](./rand.md)
 - [Keys]()
     - [RSA](./code.md)
     - [ECC](./keys/ecc.md)
