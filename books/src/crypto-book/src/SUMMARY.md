@@ -48,8 +48,8 @@
         - [P7B/PKCS #7]()
     - [Binary-based]()
         - [DER](./der.md)
-        - [P12/PFX/PKCS #12](./p12-pfx.md)
-        - [JKS](./jks.md)
+        - [.p12/PFX/PKCS #12](./p12-pfx.md)
+        - [.jks](./jks.md)
 - [Formats](./structured_container_formats.md)
     - [PKCS #1 (RSA)](./pkcs1.md)
     - [PKCS #7]()
@@ -76,6 +76,7 @@
 - [HMAC](./hmac.md)
 - [Digital certificate](./digital_certificate.md)
 - [Utils](./utils.md)
+- [PKCS #12](./pkcs12-stuff.md)
 
 ---
 

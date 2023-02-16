@@ -1,5 +1,11 @@
 # PKCS #12
 
-This file can contain a private, its corresponding certificate, and any number of additional certificates that make up a certificate chain.
+[RFC 7292](https://datatracker.ietf.org/doc/html/rfc7292)
 
-This format can also be password-protected.
+From Wikipedia:
+
+This standard defines an archive file format for storing multiple cryptographic objects in a single file. Additionally, like PKCS #8, it can be encrypted.
+
+It is commonly used to *bundle* a private key with its X.509 certificate or to bundle all the members of a chain trust.
+
+Java's [keystore](./jks.md) format is PKCS #12.

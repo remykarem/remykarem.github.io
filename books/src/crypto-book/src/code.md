@@ -1,5 +1,8 @@
 # RSA
 
+* [OpenSSL](#openssl)
+* [Java/Kotlin standard library](#javakotlin-standard-library)
+
 ## OpenSSL
 
 Generate private key in PKCS #8 format. `genpkey` is obsolete. Use `gen*`.
