@@ -24,4 +24,11 @@ S8lh0lHCwVGlVq0Jqtmp7ieyVOZ0mbU6T2KCDwkL3mWWSiVZc+cjh3EOsXtyzuiq
 -----END RSA PRIVATE KEY-----
 ```
 
+or 
+
+```
+-----BEGIN EC PRIVATE KEY-----
+...
+```
+
 Example: [Cloudflare Certificate](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/)

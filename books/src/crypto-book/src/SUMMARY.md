@@ -9,11 +9,12 @@
     - [SHA](./sha.md)
 - [MAC](./keyed_hash_functions.md)
     - [HMAC](./mac/hmac.md)
+    - [SipHash]()
+    - [Poly1305]()
 - [Random number generator functions]()
 - [Block ciphers](./ciphers.md)
     - [AES](./aes.md)
-        - [Basic]()
-        - [AEAD]()
+    - [AEAD]()
     - [ChaCha20-Poly1305]()
     - [Threefish]()
     - [DES]()
@@ -44,17 +45,19 @@
         - [JWKS](./jwk.md)
         - [SSH2](./ssh2.md)
         - [OpenSSH](./openssh.md)
+        - [P7B/PKCS #7]()
     - [Binary-based]()
         - [DER](./der.md)
         - [P12/PFX/PKCS #12](./p12-pfx.md)
         - [JKS](./jks.md)
-- [Structured container formats](./structured_container_formats.md)
+- [Formats](./structured_container_formats.md)
     - [PKCS #1 (RSA)](./pkcs1.md)
+    - [PKCS #7]()
     - [PKCS #8](./pkcs8.md)
     - [PKCS #11]()
     - [PKCS #12](./pkcs12.md)
+    - [SEC 1 (ECC)](./sec-1.md)
     - [X.509](./x509.md)
-    - [PVK]()
 - [Other standards](./standards.md)
 
 ---
@@ -73,3 +76,10 @@
 - [HMAC](./hmac.md)
 - [Digital certificate](./digital_certificate.md)
 - [Utils](./utils.md)
+
+---
+
+# Attacks
+
+- [Brute-force attack]()
+- [Length extension attack]()

@@ -9,10 +9,9 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
 ## Important concepts
 
 * Elliptic curve, point multiplication
-* Galois field / finite field
-* Prime field
+* Galois field / finite field, prime field
 * Characteristic of a ring
-* Square root modulo (of prime number)
+* Modular arithmetic: square root modulo (of prime number)
 * Prime numbers
 * Discrete logarithm
 

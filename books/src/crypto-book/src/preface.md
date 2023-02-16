@@ -6,6 +6,12 @@
 
 https://developers.google.com/tink/deterministic-encryption
 
+# Implementations
+
+* OpenSSL 1.x
+* OpenSSL 3.x
+* LibreSSL (macOS) - `/usr/bin/openssl`
+
 # Scenarios
 
 * Only encrypting the HTTP payload ("confidentiality")
