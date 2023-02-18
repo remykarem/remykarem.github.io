@@ -150,8 +150,14 @@
 <p>Note that unlike RSA, ECC does not inherently have an encryption algorithm. Instead, it is mainly used to establish a shared secret key that can be used for symmetric encryption.</p>
 <h2 id="important-concepts"><a class="header" href="#important-concepts">Important concepts</a></h2>
 <ul>
-<li>Elliptic curve, point multiplication</li>
-<li>Galois field / finite field, prime field</li>
+<li>Elliptic curve over an infinite field vs. Galois field and its properties
+<ul>
+<li>Galois field/Finite field (defined by modulo) - an EC finite field has a finite set of (valid) <em>n</em> points (&quot;order of the curve&quot;). The field is usually a prime number.</li>
+<li>Point addition</li>
+<li>Point multiplication / scalar multiplication</li>
+<li>Subgroup - a point P in a finite field can have a fixed number of valid points when multiplied with any integer.</li>
+</ul>
+</li>
 <li>Characteristic of a ring</li>
 <li>Modular arithmetic: square root modulo (of prime number)</li>
 <li>Prime numbers</li>
@@ -159,8 +165,17 @@
 </ul>
 <h2 id="main-idea"><a class="header" href="#main-idea">Main idea</a></h2>
 <ul>
-<li>nP is the public key, where n is the secret key and P is a curve point.</li>
+<li>G - generator point / base point defined by the creator of the curve</li>
+<li>d - <strong>private key</strong>; scalar value</li>
+<li>(x,y) = dG - <strong>public key</strong>; a point on the curve</li>
 </ul>
+<p>(No inherent encryption)</p>
+<ul>
+<li>To encrypt a message using ECC, the sender chooses a random scalar k and uses the recipient's public key P to derive a point Q on the curve: Q = kP. The sender then uses the x-coordinate of Q as a shared secret to encrypt the message. The encryption process is typically performed using a symmetric encryption algorithm such as AES.</li>
+<li>Decryption: To decrypt a message using ECC, the recipient uses their private key d to derive the point Q on the curve that was used to generate the shared secret: Q = dP. The recipient can then use the x-coordinate of Q to decrypt the message.</li>
+</ul>
+<h2 id="trapdoor-function"><a class="header" href="#trapdoor-function">Trapdoor function</a></h2>
+<p>Scalar multiplication of a point on an EC over a prime field.</p>
 <h2 id="common-curves"><a class="header" href="#common-curves">Common curves</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Curve name</th><th>Form</th><th>Field</th></tr></thead><tbody>
 <tr><td><a href="https://en.wikipedia.org/wiki/Curve25519">Curve25519</a></td><td>Montgomery</td><td>\( 2^{255} - 19 \)</td></tr>
@@ -188,6 +203,12 @@ $$</p>
 <p>Edwards form</p>
 <p>$$
 x^2 + y^2 = 1 + dx^2y^2
+$$</p>
+</li>
+<li>
+<p>Twisted Edwards form</p>
+<p>$$
+ax^2 + y^2 = 1 + dx^2y^2
 $$</p>
 </li>
 </ul>

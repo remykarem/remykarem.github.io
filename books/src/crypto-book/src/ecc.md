@@ -8,8 +8,11 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
 
 ## Important concepts
 
-* Elliptic curve, point multiplication
-* Galois field / finite field, prime field
+* Elliptic curve over an infinite field vs. Galois field and its properties
+    * Galois field/Finite field (defined by modulo) - an EC finite field has a finite set of (valid) *n* points ("order of the curve"). The field is usually a prime number.
+    * Point addition
+    * Point multiplication / scalar multiplication
+    * Subgroup - a point P in a finite field can have a fixed number of valid points when multiplied with any integer.
 * Characteristic of a ring
 * Modular arithmetic: square root modulo (of prime number)
 * Prime numbers
@@ -17,7 +20,17 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
 
 ## Main idea
 
-* nP is the public key, where n is the secret key and P is a curve point.
+* G - generator point / base point defined by the creator of the curve
+* d - **private key**; scalar value
+* (x,y) = dG - **public key**; a point on the curve
+
+(No inherent encryption)
+* To encrypt a message using ECC, the sender chooses a random scalar k and uses the recipient's public key P to derive a point Q on the curve: Q = kP. The sender then uses the x-coordinate of Q as a shared secret to encrypt the message. The encryption process is typically performed using a symmetric encryption algorithm such as AES.
+* Decryption: To decrypt a message using ECC, the recipient uses their private key d to derive the point Q on the curve that was used to generate the shared secret: Q = dP. The recipient can then use the x-coordinate of Q to decrypt the message.
+
+## Trapdoor function
+
+Scalar multiplication of a point on an EC over a prime field.
 
 ## Common curves
 
@@ -49,6 +62,11 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
     x^2 + y^2 = 1 + dx^2y^2
     $$
 
+* Twisted Edwards form
+
+    $$
+    ax^2 + y^2 = 1 + dx^2y^2
+    $$
 
 ## References
 
