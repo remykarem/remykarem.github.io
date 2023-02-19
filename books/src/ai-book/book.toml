@@ -1,0 +1,13 @@
+[book]
+authors = ["Raimi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "ai-book"
+
+[output.html]
+site-url = "/books/ai-book/"
+mathjax-support = true
+
+[build]
+build-dir = "../../ai-book"
