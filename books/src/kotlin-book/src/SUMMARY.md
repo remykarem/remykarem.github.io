@@ -3,6 +3,7 @@
 [Preface](./preface.md)
 
 - [Java distributions](./java_distributions.md)
+- [Java setup](./java_setup.md)
 - [Std library](./std_library/std_library.md)
     - [Kotlin std library](./std_library/kotlin_std_library/kotlin_std_library.md)
         - [Collections](./std_library/kotlin_std_library/collections.md)
