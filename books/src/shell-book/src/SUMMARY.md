@@ -29,6 +29,7 @@
 - [Tests](./tests.md)
 - [Heredocs](./heredocs.md)
 - [Gotchas](./gotchas.md)
+- [Sourcing](./sourcing.md)
 
 --- 
 
