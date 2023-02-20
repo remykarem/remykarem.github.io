@@ -9,14 +9,31 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
 ## Important concepts
 
 * Elliptic curve over an infinite field vs. Galois field and its properties
-    * Galois field/Finite field (defined by modulo) - an EC finite field has a finite set of (valid) *n* points ("order of the curve"). The field is usually a prime number.
+    * Order of the curve - an EC finite field has a finite set of (valid) *n* points
+    * Galois field/Finite field (defined by modulo) - the field is usually a prime number.
     * Point addition
     * Point multiplication / scalar multiplication
-    * Subgroup - a point P in a finite field can have a fixed number of valid points when multiplied with any integer.
+    * Group - a point P in a finite field can have a fixed number of valid points ("**order of the group**") when multiplied with any integer. these points make up a group
+    * Point of infinity
+    * Cofactor - Order of the curve / order of a group
 * Characteristic of a ring
 * Modular arithmetic: square root modulo (of prime number)
 * Prime numbers
-* Discrete logarithm
+* Logarithm problem
+
+    Find \\( n \\) such that
+
+    $$
+    2^n = 16
+    $$
+
+* Discrete logarithm problem
+
+    Find \\( n \\) such that
+
+    $$
+    2^n mod 17 = 16
+    $$
 
 ## Main idea
 
@@ -32,11 +49,14 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
 
 Scalar multiplication of a point on an EC over a prime field.
 
+Finding the reverse of this is the discrete logarithm problem (which I have yet to figure out how to arrive at that).
+
 ## Common curves
 
-|Curve name| Form | Field |
+|Curve name| Form | Prime field, p |
 |----|---| --- |
 |[Curve25519](https://en.wikipedia.org/wiki/Curve25519)| Montgomery | \\( 2^{255} - 19 \\) |
+|[Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519)| Twisted Edwards | \\( 2^{255} - 19 \\) |
 |NIST P-256|Weierstrass | \\( 2^{256} - 2^{224} + 2^{192} + 2^{96} - 1 \\) |
 |NIST P-384| Weierstrass | \\( 2^{384} - 2^{128} - 2^{96} + 2^{32} - 1 \\) |
 |secp256k1| Weierstrass | \\( 2^{256} - 2^{32} - 977 \\) |
@@ -72,3 +92,4 @@ Scalar multiplication of a point on an EC over a prime field.
 
 * https://trustica.cz/category/ecc/page/3/
 * https://safecurves.cr.yp.to/
+* https://andrea.corbellini.name/ecc/interactive/modk-mul.html 😍
