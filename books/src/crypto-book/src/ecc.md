@@ -10,16 +10,14 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
 
 * Elliptic curve over an infinite field vs. Galois field and its properties
     * Order of the curve - an EC finite field has a finite set of (valid) *n* points
-    * Galois field/Finite field (defined by modulo) - the field is usually a prime number.
+    * Galois field/Finite field (defined by modulo) - an EC finite field has a finite set of (valid) *n* points ("order of the curve"). The field is usually a prime number.
+    * Elliptic curve point multiplication / scalar multiplication
+    * Subgroup - a point P in a finite field can have a fixed number of valid points when multiplied with any integer.
     * Point addition
     * Point multiplication / scalar multiplication
     * Group - a point P in a finite field can have a fixed number of valid points ("**order of the group**") when multiplied with any integer. these points make up a group
     * Point of infinity
     * Cofactor - Order of the curve / order of a group
-* Characteristic of a ring
-* Modular arithmetic: square root modulo (of prime number)
-* Prime numbers
-* Logarithm problem
 
     Find \\( n \\) such that
 
@@ -34,6 +32,11 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
     $$
     2^n mod 17 = 16
     $$
+* Characteristic of a ring
+* Modular arithmetic: square root modulo (of prime number)
+* Prime numbers
+* Discrete logarithm
+* [Group theory](https://en.wikipedia.org/wiki/Group_(mathematics)), group law for elliptic curves
 
 ## Main idea
 
@@ -90,6 +93,7 @@ Finding the reverse of this is the discrete logarithm problem (which I have yet 
 
 ## References
 
+* [Elliptic Curve Cryptography: a gentle introduction](https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/)
 * https://trustica.cz/category/ecc/page/3/
-* https://safecurves.cr.yp.to/
-* https://andrea.corbellini.name/ecc/interactive/modk-mul.html 😍
+* [SafeCurves](https://safecurves.cr.yp.to/)
+* [Elliptic Curve tool](https://andrea.corbellini.name/ecc/interactive/reals-add.html)

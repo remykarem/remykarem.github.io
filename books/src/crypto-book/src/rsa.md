@@ -1,8 +1,8 @@
 # RSA
 
-Rivest-Shamir-Adleman; 1995; 1st-gen cryptosystem.
+[RFC 8017](https://datatracker.ietf.org/doc/html/rfc8017)
 
-[RFC 8017](https://datatracker.ietf.org/doc/html/rfc8017) - PKCS #1: RSA Cryptography Specifications Version 2.2
+Rivest-Shamir-Adleman; 1995; 1st-gen cryptosystem.
 
 Breaking RSA is an _integer factorisation_ problem.
 
@@ -15,6 +15,10 @@ For PKCS1 v1.5, the message to encrypt should be **no longer than the public mod
 - modulus: \\( n \\)
 - message: \\(m \\)
 - cipher: \\(c \\)
+
+$$
+(n, e, d)
+$$
 
 ## Important concepts
 
@@ -29,7 +33,12 @@ For PKCS1 v1.5, the message to encrypt should be **no longer than the public mod
 ## Trapdoor function(s)
 
 * Product of two large prime numbers
-* Euler's totient function
+
+$$
+n = pq
+$$
+
+* Euler's totient function, \\( \phi(n) \\).
 
 ## Main idea
 
@@ -52,4 +61,6 @@ $$
     
 ## Resources
 
-https://leimao.github.io/article/RSA-Algorithm/
+* [RSA paper](https://people.csail.mit.edu/rivest/Rsapaper.pdf)
+* [RSA Algorithm](https://leimao.github.io/article/RSA-Algorithm/)
+* [Speeding up modular exponentiation using CRT](https://exploringnumbertheory.wordpress.com/2015/11/16/speeding-up-modular-exponentiation-using-crt/)

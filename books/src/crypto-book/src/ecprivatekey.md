@@ -1,6 +1,8 @@
-# SEC 1
+# ECPrivateKey
 
-OpenSSL uses the private key format specified in 'SEC 1: Elliptic Curve Cryptography' (http://www.secg.org/). 
+aka SEC1 format
+
+[RFC 5915](https://datatracker.ietf.org/doc/html/rfc5915)
 
 The corresponding PEM encoding looks like this:
 
