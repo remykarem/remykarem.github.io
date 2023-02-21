@@ -49,25 +49,38 @@ Based on these requirements, here is an example infrastructure:
 
 Definitions:
 
-* Integrity — proof that the item is not altered
+* **Integrity** — proof that the item is not altered
 
-* Authenticity/authentication — proof that the item comes from a known source
+* **Confidentiality/privacy/secrecy** — no one can read (and understand) the message in the item
 
-* Confidentiality/privacy/secrecy — no one can read (and understand) the message in the item
+* **Authenticity/authentication** — proof that the item comes from a known source
 
-* Symmetry — if there is content encryption, is the same key used for both encryption and decryption?
+* **Non-repudiation** — the signer cannot deny that they signed. Stronger property that not only provides authenticity but also prevents the sender from denying they sent the message.
 
 * Randomisation - if there is content encryption, will the same plaintext yield different ciphertexts?
 
-* Non-repudiation — the signer cannot deny that they signed (because...?)
-
 [https://en.wikipedia.org/wiki/Confusion_and_diffusion](https://en.wikipedia.org/wiki/Confusion_and_diffusion)
 
-Ting | Confidentiality | Authenticity | Integrity | Symmetry | Output randomness
------|-----------------|--------------|------------|----|---------------
-MAC  | ❌ | ❌ | ✅ | Symmetric | Either
-Digital signature, HMAC   | ❌ | ✅ | ✅ | Asymmetric | ?
-Deterministic AEAD | ✅ | ✅ | - | Symmetric | Deterministic
-AEAD ciphertext | ✅ | ✅ | -| Symmetric | Random
-Basic AES ciphertext | ✅ | ? | -| Symmetric | Random
-Public-key ciphertext | ✅ | ✅ | -| Asymmetric | Random
+Authenticity proofs
+
+Ting                  | Authenticity |
+----------------------|-------|
+Digital certificate   | ✅ |
+
+Proofs / signatures / proof of integrity
+
+Ting                  | Integrity | Authenticity  | Nonrepudiation | Output randomness
+----------------------|-------|--------------|------------|--------------
+Checksum              | ✅ | ❌ | ❌ | Deterministic
+MAC                   | ✅ | ✅ | ❌ | Deterministic
+HMAC                  | ✅ | ✅ | ❌ | Deterministic
+Digital signature     | ✅ | ✅ | ✅ | Random
+
+Encryption
+
+Ting                  | Confidentiality | Authenticity | Integrity  | Nonrepudiation | Output randomness
+----------------------|-----------------|--------------|------------|------------|---
+Deterministic AEAD    | ✅ | ✅ | - | ? | Deterministic
+AEAD ciphertext       | ✅ | ✅ | - | ? | Random
+Basic AES ciphertext  | ✅ |  ? | - | ? | Random
+Public-key ciphertext | ✅ | ✅ | - | ? | Random

@@ -9,7 +9,6 @@
 
         <!-- Custom HTML head -->
         
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -36,6 +35,7 @@
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="md5.html"><strong aria-hidden="true">2.1.</strong> MD5</a></li><li class="chapter-item expanded "><a href="sha.html"><strong aria-hidden="true">2.2.</strong> SHA</a></li></ol></li><li class="chapter-item expanded "><a href="keyed_hash_functions.html"><strong aria-hidden="true">3.</strong> MAC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="mac/hmac.html"><strong aria-hidden="true">3.1.</strong> HMAC</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> SipHash</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Poly1305</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Random number generator functions</div></li><li class="chapter-item expanded "><a href="ciphers.html"><strong aria-hidden="true">5.</strong> Block ciphers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">5.1.</strong> AES</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> AEAD</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.</strong> ChaCha20-Poly1305</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.</strong> Threefish</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> DES</div></li></ol></li><li class="chapter-item expanded "><a href="public_key_cryptosystem.html"><strong aria-hidden="true">6.</strong> Public-key cryptosystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="dsa.html"><strong aria-hidden="true">6.1.</strong> DSA</a></li><li class="chapter-item expanded "><a href="rsa.html"><strong aria-hidden="true">6.2.</strong> RSA</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rsa_encryption_schemes.html"><strong aria-hidden="true">6.2.1.</strong> Encryption algorithms</a></li><li class="chapter-item expanded "><a href="rsa_digital_signature_schemes.html"><strong aria-hidden="true">6.2.2.</strong> Digital signature algorithms</a></li><li class="chapter-item expanded "><a href="rsa_key_exchange.html"><strong aria-hidden="true">6.2.3.</strong> Key exchange algorithms</a></li></ol></li><li class="chapter-item expanded "><a href="ecc.html"><strong aria-hidden="true">6.3.</strong> ECC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ecc_digital_signature_schemes.html"><strong aria-hidden="true">6.3.1.</strong> Digital signature algorithms</a></li><li class="chapter-item expanded "><a href="ecc_key_exchange.html"><strong aria-hidden="true">6.3.2.</strong> Key exchange algorithms</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> ElGamal</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Hybrid cryptosystem</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> PGP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.2.</strong> GPG</div></li></ol></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">8.</strong> KDF</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> Bcrypt</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> Scrypt</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> Argon</div></li></ol></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">9.</strong> Key exchange</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="diffie_hellman.html"><strong aria-hidden="true">9.1.</strong> DH</a></li></ol></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">10.</strong> Padding</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Encodings</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.1.</strong> Text-based</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="pem.html"><strong aria-hidden="true">11.1.1.</strong> PEM</a></li><li class="chapter-item expanded "><a href="jwt.html"><strong aria-hidden="true">11.1.2.</strong> JWT</a></li><li class="chapter-item expanded "><a href="jwk.html"><strong aria-hidden="true">11.1.3.</strong> JWKS</a></li><li class="chapter-item expanded "><a href="ssh2.html"><strong aria-hidden="true">11.1.4.</strong> SSH2</a></li><li class="chapter-item expanded "><a href="openssh.html"><strong aria-hidden="true">11.1.5.</strong> OpenSSH</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.1.6.</strong> P7B/PKCS #7</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.</strong> Binary-based</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="der.html"><strong aria-hidden="true">11.2.1.</strong> DER</a></li><li class="chapter-item expanded "><a href="p12-pfx.html"><strong aria-hidden="true">11.2.2.</strong> .p12/PFX/PKCS #12</a></li><li class="chapter-item expanded "><a href="jks.html"><strong aria-hidden="true">11.2.3.</strong> .jks</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="structured_container_formats.html"><strong aria-hidden="true">12.</strong> Formats</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="pkcs1.html"><strong aria-hidden="true">12.1.</strong> PKCS #1 (RSA)</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.2.</strong> PKCS #7</div></li><li class="chapter-item expanded "><a href="pkcs8.html"><strong aria-hidden="true">12.3.</strong> PKCS #8</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.4.</strong> PKCS #11</div></li><li class="chapter-item expanded "><a href="pkcs12.html"><strong aria-hidden="true">12.5.</strong> PKCS #12</a></li><li class="chapter-item expanded "><a href="sec-1.html"><strong aria-hidden="true">12.6.</strong> SEC 1 (ECC)</a></li><li class="chapter-item expanded "><a href="x509.html"><strong aria-hidden="true">12.7.</strong> X.509</a></li></ol></li><li class="chapter-item expanded "><a href="standards.html"><strong aria-hidden="true">13.</strong> Other standards</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="rand.html"><strong aria-hidden="true">14.</strong> Secure random bytes</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.</strong> Keys</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">15.1.</strong> RSA</a></li><li class="chapter-item expanded "><a href="keys/ecc.html"><strong aria-hidden="true">15.2.</strong> ECC</a></li><li class="chapter-item expanded "><a href="keys/ssh.html"><strong aria-hidden="true">15.3.</strong> SSH</a></li></ol></li><li class="chapter-item expanded "><a href="ciphertext.html"><strong aria-hidden="true">16.</strong> Encryption algorithms</a></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">17.</strong> Digital signature algorithms</a></li><li class="chapter-item expanded "><a href="checksum.html"><strong aria-hidden="true">18.</strong> Checksum</a></li><li class="chapter-item expanded "><a href="fingerprint.html"><strong aria-hidden="true">19.</strong> Fingerprint</a></li><li class="chapter-item expanded "><a href="hmac.html"><strong aria-hidden="true">20.</strong> HMAC</a></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">21.</strong> Digital certificate</a></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">22.</strong> Utils</a></li><li class="chapter-item expanded "><a href="pkcs12-stuff.html"><strong aria-hidden="true">23.</strong> PKCS #12</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Attacks</li><li class="chapter-item expanded "><div><strong aria-hidden="true">24.</strong> Brute-force attack</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">25.</strong> Length extension attack</div></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="md5.html"><strong aria-hidden="true">2.1.</strong> MD5</a></li><li class="chapter-item expanded "><a href="sha.html"><strong aria-hidden="true">2.2.</strong> SHA</a></li></ol></li><li class="chapter-item expanded "><a href="keyed_hash_functions.html"><strong aria-hidden="true">3.</strong> MAC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="mac/hmac.html"><strong aria-hidden="true">3.1.</strong> HMAC</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> SipHash</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Poly1305</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Random number generator functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Traditional ciphers</div></li><li class="chapter-item expanded "><a href="ciphers.html"><strong aria-hidden="true">6.</strong> Block ciphers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">6.1.</strong> AES</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> AEAD</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> ChaCha20-Poly1305</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> Threefish</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> DES</div></li></ol></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">7.</strong> Digital signature algorithms</a></li><li class="chapter-item expanded "><a href="public_key_cryptosystem.html"><strong aria-hidden="true">8.</strong> Public-key cryptosystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="dsa.html"><strong aria-hidden="true">8.1.</strong> DSA</a></li><li class="chapter-item expanded "><a href="rsa.html"><strong aria-hidden="true">8.2.</strong> RSA</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rsa_encryption_schemes.html"><strong aria-hidden="true">8.2.1.</strong> Encryption algorithms</a></li><li class="chapter-item expanded "><a href="rsa_digital_signature_schemes.html"><strong aria-hidden="true">8.2.2.</strong> Digital signature algorithms</a></li><li class="chapter-item expanded "><a href="rsa_key_exchange.html"><strong aria-hidden="true">8.2.3.</strong> Key exchange algorithms</a></li></ol></li><li class="chapter-item expanded "><a href="ecc.html"><strong aria-hidden="true">8.3.</strong> ECC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ecc_digital_signature_schemes.html"><strong aria-hidden="true">8.3.1.</strong> Digital signature algorithms</a></li><li class="chapter-item expanded "><a href="ecc_key_exchange.html"><strong aria-hidden="true">8.3.2.</strong> Key exchange algorithms</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.4.</strong> ElGamal</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Hybrid cryptosystem</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> PGP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> GPG</div></li></ol></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">10.</strong> KDF</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">10.1.</strong> Bcrypt</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.2.</strong> Scrypt</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.3.</strong> Argon</div></li></ol></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">11.</strong> Key exchange</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="diffie_hellman.html"><strong aria-hidden="true">11.1.</strong> DH</a></li></ol></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">12.</strong> Padding</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> Encodings</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">13.1.</strong> Text-based</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="pem.html"><strong aria-hidden="true">13.1.1.</strong> PEM</a></li><li class="chapter-item expanded "><a href="jwt.html"><strong aria-hidden="true">13.1.2.</strong> JWT</a></li><li class="chapter-item expanded "><a href="jwk.html"><strong aria-hidden="true">13.1.3.</strong> JWKS</a></li><li class="chapter-item expanded "><a href="ssh2.html"><strong aria-hidden="true">13.1.4.</strong> SSH2</a></li><li class="chapter-item expanded "><a href="openssh.html"><strong aria-hidden="true">13.1.5.</strong> OpenSSH</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.1.6.</strong> P7B/PKCS #7</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.2.</strong> Binary-based</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="der.html"><strong aria-hidden="true">13.2.1.</strong> DER</a></li><li class="chapter-item expanded "><a href="p12-pfx.html"><strong aria-hidden="true">13.2.2.</strong> .p12/PFX/PKCS #12</a></li><li class="chapter-item expanded "><a href="jks.html"><strong aria-hidden="true">13.2.3.</strong> .jks</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="structured_container_formats.html"><strong aria-hidden="true">14.</strong> Formats</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="pkcs1.html"><strong aria-hidden="true">14.1.</strong> PKCS #1 (RSA)</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.2.</strong> PKCS #7</div></li><li class="chapter-item expanded "><a href="pkcs8.html"><strong aria-hidden="true">14.3.</strong> PKCS #8</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.4.</strong> PKCS #11</div></li><li class="chapter-item expanded "><a href="pkcs12.html"><strong aria-hidden="true">14.5.</strong> PKCS #12</a></li><li class="chapter-item expanded "><a href="sec-1.html"><strong aria-hidden="true">14.6.</strong> SEC 1 (ECC)</a></li><li class="chapter-item expanded "><a href="x509.html"><strong aria-hidden="true">14.7.</strong> X.509</a></li></ol></li><li class="chapter-item expanded "><a href="standards.html"><strong aria-hidden="true">15.</strong> Other standards</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="rand.html"><strong aria-hidden="true">16.</strong> Secure random bytes</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.</strong> Keys</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">17.1.</strong> RSA</a></li><li class="chapter-item expanded "><a href="keys/ecc.html"><strong aria-hidden="true">17.2.</strong> ECC</a></li><li class="chapter-item expanded "><a href="keys/ssh.html"><strong aria-hidden="true">17.3.</strong> SSH</a></li></ol></li><li class="chapter-item expanded "><a href="ciphertext.html"><strong aria-hidden="true">18.</strong> Encryption algorithms</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">19.</strong> Digital signature algorithms</div></li><li class="chapter-item expanded "><a href="checksum.html"><strong aria-hidden="true">20.</strong> Checksum</a></li><li class="chapter-item expanded "><a href="fingerprint.html"><strong aria-hidden="true">21.</strong> Fingerprint</a></li><li class="chapter-item expanded "><a href="hmac.html"><strong aria-hidden="true">22.</strong> HMAC</a></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">23.</strong> Digital certificate</a></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">24.</strong> Utils</a></li><li class="chapter-item expanded "><a href="pkcs12-stuff.html"><strong aria-hidden="true">25.</strong> PKCS #12</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Attacks</li><li class="chapter-item expanded "><div><strong aria-hidden="true">26.</strong> Brute-force attack</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">27.</strong> Length extension attack</div></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -102,7 +102,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -196,32 +196,41 @@
 <p>Definitions:</p>
 <ul>
 <li>
-<p>Integrity — proof that the item is not altered</p>
+<p><strong>Integrity</strong> — proof that the item is not altered</p>
 </li>
 <li>
-<p>Authenticity/authentication — proof that the item comes from a known source</p>
+<p><strong>Confidentiality/privacy/secrecy</strong> — no one can read (and understand) the message in the item</p>
 </li>
 <li>
-<p>Confidentiality/privacy/secrecy — no one can read (and understand) the message in the item</p>
+<p><strong>Authenticity/authentication</strong> — proof that the item comes from a known source</p>
 </li>
 <li>
-<p>Symmetry — if there is content encryption, is the same key used for both encryption and decryption?</p>
+<p><strong>Non-repudiation</strong> — the signer cannot deny that they signed. Stronger property that not only provides authenticity but also prevents the sender from denying they sent the message.</p>
 </li>
 <li>
 <p>Randomisation - if there is content encryption, will the same plaintext yield different ciphertexts?</p>
 </li>
-<li>
-<p>Non-repudiation — the signer cannot deny that they signed (because...?)</p>
-</li>
 </ul>
 <p><a href="https://en.wikipedia.org/wiki/Confusion_and_diffusion">https://en.wikipedia.org/wiki/Confusion_and_diffusion</a></p>
-<div class="table-wrapper"><table><thead><tr><th>Ting</th><th>Confidentiality</th><th>Authenticity</th><th>Integrity</th><th>Symmetry</th><th>Output randomness</th></tr></thead><tbody>
-<tr><td>MAC</td><td>❌</td><td>❌</td><td>✅</td><td>Symmetric</td><td>Either</td></tr>
-<tr><td>Digital signature, HMAC</td><td>❌</td><td>✅</td><td>✅</td><td>Asymmetric</td><td>?</td></tr>
-<tr><td>Deterministic AEAD</td><td>✅</td><td>✅</td><td>-</td><td>Symmetric</td><td>Deterministic</td></tr>
-<tr><td>AEAD ciphertext</td><td>✅</td><td>✅</td><td>-</td><td>Symmetric</td><td>Random</td></tr>
-<tr><td>Basic AES ciphertext</td><td>✅</td><td>?</td><td>-</td><td>Symmetric</td><td>Random</td></tr>
-<tr><td>Public-key ciphertext</td><td>✅</td><td>✅</td><td>-</td><td>Asymmetric</td><td>Random</td></tr>
+<p>Authenticity proofs</p>
+<div class="table-wrapper"><table><thead><tr><th>Ting</th><th>Authenticity</th></tr></thead><tbody>
+<tr><td>Digital certificate</td><td>✅</td></tr>
+</tbody></table>
+</div>
+<p>Proofs / signatures / proof of integrity</p>
+<div class="table-wrapper"><table><thead><tr><th>Ting</th><th>Integrity</th><th>Authenticity</th><th>Nonrepudiation</th><th>Output randomness</th></tr></thead><tbody>
+<tr><td>Checksum</td><td>✅</td><td>❌</td><td>❌</td><td>Deterministic</td></tr>
+<tr><td>MAC</td><td>✅</td><td>✅</td><td>❌</td><td>Deterministic</td></tr>
+<tr><td>HMAC</td><td>✅</td><td>✅</td><td>❌</td><td>Deterministic</td></tr>
+<tr><td>Digital signature</td><td>✅</td><td>✅</td><td>✅</td><td>Random</td></tr>
+</tbody></table>
+</div>
+<p>Encryption</p>
+<div class="table-wrapper"><table><thead><tr><th>Ting</th><th>Confidentiality</th><th>Authenticity</th><th>Integrity</th><th>Nonrepudiation</th><th>Output randomness</th></tr></thead><tbody>
+<tr><td>Deterministic AEAD</td><td>✅</td><td>✅</td><td>-</td><td>?</td><td>Deterministic</td></tr>
+<tr><td>AEAD ciphertext</td><td>✅</td><td>✅</td><td>-</td><td>?</td><td>Random</td></tr>
+<tr><td>Basic AES ciphertext</td><td>✅</td><td>?</td><td>-</td><td>?</td><td>Random</td></tr>
+<tr><td>Public-key ciphertext</td><td>✅</td><td>✅</td><td>-</td><td>?</td><td>Random</td></tr>
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="hash-functions"><a class="header" href="#hash-functions">Hash functions</a></h1>
 <p>aka &quot;hash function&quot;, &quot;hashing algorithm&quot;, &quot;message digest algorithm&quot;</p>
@@ -299,6 +308,23 @@ alg key mode
 <ul>
 <li><a href="https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97">https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97</a></li>
 <li><a href="https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/">https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="digital-signature"><a class="header" href="#digital-signature">Digital signature</a></h1>
+<blockquote>
+<p>💡 Typically we say <em>sign</em> with the private key and <em>verify</em> with the public key instead of &quot;encrypt&quot; and &quot;decrypt&quot; respectively.</p>
+</blockquote>
+<p>Signing usually involves a hash function and padding.</p>
+<ul>
+<li>RSA
+<ul>
+<li>PKCS1-v1.5</li>
+<li>PSS</li>
+</ul>
+</li>
+<li>ECDSA</li>
+<li>Ed25519</li>
+<li>JWS</li>
+<li>AWS Sigv4</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="public-key-cryptosystem"><a class="header" href="#public-key-cryptosystem">Public-key cryptosystem</a></h1>
 <ul>
@@ -900,21 +926,19 @@ base64 -i secret.der
 </li>
 </ul>
 <p>Code:</p>
-<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
-</span>val keySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode(&quot;MIIEwAIBADANB...&quot;))
+<pre><code class="language-kotlin">val keySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode(&quot;MIIEwAIBADANB...&quot;))
 val privateKey = KeyFactory.getInstance(&quot;RSA&quot;).generatePrivate(keySpec)
-<span class="boring">}</span></code></pre></pre>
+</code></pre>
 <p><code>Signature</code></p>
 <p>Given <code>privateKey: PrivateKey</code>,</p>
-<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
-</span>val privateSignature = Signature.getInstance(&quot;SHA256withRSA&quot;)
+<pre><code class="language-kotlin">val privateSignature = Signature.getInstance(&quot;SHA256withRSA&quot;)
 
 privateSignature.initSign(privateKey)
 
 privateSignature.update(&quot;payload to encrypt&quot;.encodeToByteArray())
 
 val signature = privateSignature.sign()
-<span class="boring">}</span></code></pre></pre>
+</code></pre>
 <pre><code class="language-java">byte[] publicBytes = Base64.decodeBase64(publicK);
 X509EncodedKeySpec keySpec = new X509EncodedKeySpec(publicBytes);
 KeyFactory keyFactory = KeyFactory.getInstance(&quot;RSA&quot;);
@@ -951,23 +975,6 @@ PublicKey pubKey = keyFactory.generatePublic(keySpec);
 </code></pre>
 <pre><code class="language-bash">openssl enc -aes-256-cbc -d -in hello.txt.enc &gt; hello.txt
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="digital-signature"><a class="header" href="#digital-signature">Digital signature</a></h1>
-<blockquote>
-<p>💡 Typically we say <em>sign</em> with the private key and <em>verify</em> with the public key instead of &quot;encrypt&quot; and &quot;decrypt&quot; respectively.</p>
-</blockquote>
-<p>Signing usually involves a hash function and padding.</p>
-<ul>
-<li>RSA
-<ul>
-<li>PKCS1-v1.5</li>
-<li>PSS</li>
-</ul>
-</li>
-<li>ECDSA</li>
-<li>Ed25519</li>
-<li>JWS</li>
-<li>AWS Sigv4</li>
-</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="checksum"><a class="header" href="#checksum">Checksum</a></h1>
 <p>The goal of checksum is to verify integrity.</p>
 <ul>
@@ -1119,13 +1126,13 @@ PublicKey pubKey = keyFactory.generatePublic(keySpec);
         </script>
 
 
-        <script src="elasticlunr.min.js" charset="utf-8"></script>
-        <script src="mark.min.js" charset="utf-8"></script>
-        <script src="searcher.js" charset="utf-8"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="clipboard.min.js" charset="utf-8"></script>
-        <script src="highlight.js" charset="utf-8"></script>
-        <script src="book.js" charset="utf-8"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 
@@ -1137,5 +1144,6 @@ PublicKey pubKey = keyFactory.generatePublic(keySpec);
         });
         </script>
 
+    </div>
     </body>
 </html>
