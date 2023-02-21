@@ -19,6 +19,8 @@
         - [Pose estimation]()
         - [Hand pose estimation]()
         - [Reidentification]()
+    - [Models](./computer-vision/models.md)
+
 - [NLP]()
     - [Tasks]()
         - [Language modelling]()
