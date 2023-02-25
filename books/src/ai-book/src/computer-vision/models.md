@@ -21,6 +21,7 @@
 | 2018 | EfficientNet        | Image        |
 |      | BigGAN              |              | GAN              |        |
 | 2020 | StyleGAN            | Image        | GAN              |
+|      | ViT                 | Image?       | ?                |        |
 | 2021 | DALL•E              | Image + text | Transformer      |        |
 |      | CLIP                | Image + text | Transformer      |        |
 |      | Latent Diffusion    |

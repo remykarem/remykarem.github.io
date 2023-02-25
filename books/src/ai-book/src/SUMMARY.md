@@ -3,37 +3,47 @@
 # Domains / data
 
 - [General]()
-    - [EDA](./general/eda.md)
-    - [Processing]()
-    - [Tasks]()
-        - [Anomaly detection]()
+
+  - [EDA](./general/eda.md)
+  - [Processing]()
+  - [Tasks]()
+    - [Anomaly detection]()
 
 - [Computer vision]()
-    - [EDA]()
-    - [Processing]()
-    - [Tasks]()
-        - [Image classification]()
-        - [Semantic segmentation]()
-        - [Object detection]()
-        - [Instance segmentation]()
-        - [Pose estimation]()
-        - [Hand pose estimation]()
-        - [Reidentification]()
-    - [Models](./computer-vision/models.md)
+
+  - [EDA]()
+  - [Processing]()
+  - [Tasks]()
+    - [Image classification]()
+    - [Semantic segmentation]()
+    - [Object detection]()
+    - [Instance segmentation]()
+    - [Pose estimation]()
+    - [Hand pose estimation]()
+    - [Reidentification]()
+  - [Models](./computer-vision/models.md)
 
 - [NLP]()
-    - [Tasks]()
-        - [Language modelling]()
-        - [Topic modelling]()
-        - [Sequence modelling]()
-    - [Tasks]()
-        - [Summarisation]()
-        - [Machine translation]()
+
+  - [Tasks]()
+    - [Language modelling]()
+    - [Topic modelling]()
+    - [Sequence modelling]()
+  - [Tasks]()
+    - [Summarisation]()
+    - [Machine translation]()
+  - [Pretraining tasks](./pretraining.md)
+  - [Models](./nlp/models.md)
+
+- [Multimodal]()
+
+  - [Pretraining tasks](./multimodal/pretraining.md)
+  - [Models](./multimodal/models.md)
+
 - [Planning]()
 - [Graph mining]()
 - [Time series]()
 - [Audio]()
-- [Multimodal]()
 
 ---
 
@@ -44,10 +54,10 @@
 ---
 
 - [Classes of algorithms]()
-    - [Supervised learning]()
-    - [Unsupervised learning]()
-        - [Clustering algorithms](./clustering-algorithms.md)
-        - [Dimensionality reduction algorithms]()
+  - [Supervised learning]()
+  - [Unsupervised learning]()
+    - [Clustering algorithms](./clustering-algorithms.md)
+    - [Dimensionality reduction algorithms]()
 - [AutoML]()
 - [Metrics]()
 - [Loss functions]()
@@ -56,7 +66,6 @@
 ---
 
 # 'Learning' types
-
 
 - [Self-supervised learning]()
 - [Semi-supervised learning]()
@@ -68,30 +77,36 @@
 
 # Models / algorithms
 
-- [k-NN](./k-nn.md)
+- [Association rule mining]()
+- [Decision tree](./decision-tree.md)
 - [DBSCAN](./dbscan.md)
+- [Diffusion model]()
+- [Evolutionary algorithms]()
+- [Gaussian process]()
+- [GMM](./gmm.md)
+- [Hierachical clustering](./hierarchical-clustering.md)
+- [HMM]()
+- [Gradient boosting](./gradient-boosting.md)
+- [k-NN](./k-nn.md)
+- [k-means](./k-means.md)
+- [KDE]()
+- [LDA]()
 - [Linear models](./linear-models.md)
 - [Logistic regression](./logistic-regression.md)
-- [Naive Bayes](./naive-bayes.md)
-- [k-means](./k-means.md)
-- [Hierachical clustering](./hierarchical-clustering.md)
-- [GMM](./gmm.md)
 - [Mean shift](./mean-shift.md)
-- [Decision tree](./decision-tree.md)
-- [SVM](./svm.md)
-- [Ensemble]()
+- [Naive Bayes](./naive-bayes.md)
 - [Neural networks]()
-- [PGM]()
-- [LDA]()
-- [Gaussian process]()
-- [Evolutionary algorithms]()
-- [Association rule mining]()
-- [HMM]()
-- [KDE]()
-- [t-SNE](./t-sne.md)
-- [UMAP](./umap.md)
+    - [CNN]()
+    - [RNN]()
+    - [LSTM]()
+    - [Transformer]()
+    - [GAN]()
 - [PCA](./pca.md)
-- [Gradient boosting](./gradient-boosting.md)
+- [PGM]()
+- [SVM](./svm.md)
+- [t-SNE](./t-sne.md)
+- [Tree ensembles]()
+- [UMAP](./umap.md)
 
 ---
 
