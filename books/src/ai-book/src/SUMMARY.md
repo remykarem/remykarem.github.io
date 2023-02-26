@@ -160,3 +160,4 @@
 
 - [Concept drift](./concept-drift.md)
 - [Interpretable AI](./interpretable-ai.md)
+- [Adversarial AI](./adversarial-ai.md)
