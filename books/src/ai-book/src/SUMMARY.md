@@ -35,6 +35,7 @@
     - [Topic modelling](./topic-modelling.md)
     - [Sequence modelling](./sequence-modelling.md)
   - [Tasks]()
+    - [Common sense reasoning]()
     - [Summarisation](./summarisation.md)
     - [Machine translation](./machine-translation.md)
   - [Pretraining tasks](./pretraining.md)
