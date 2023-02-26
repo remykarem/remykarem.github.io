@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Intro to DL - ai-book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Domains / data</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> General</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="general/eda.html"><strong aria-hidden="true">1.1.</strong> EDA</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.2.</strong> Processing</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="anomaly-detection.html"><strong aria-hidden="true">1.3.1.</strong> Anomaly detection</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Vision</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> EDA</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.2.</strong> Processing</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.1.</strong> Image classification</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.2.</strong> Semantic segmentation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.3.</strong> Object detection</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.4.</strong> Instance segmentation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.5.</strong> Pose estimation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.6.</strong> Hand pose estimation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.7.</strong> Reidentification</div></li></ol></li><li class="chapter-item expanded "><a href="computer-vision/models.html"><strong aria-hidden="true">2.4.</strong> Models</a></li></ol></li><li class="chapter-item expanded "><a href="language.html"><strong aria-hidden="true">3.</strong> Language</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="processing.html"><strong aria-hidden="true">3.1.</strong> Processing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tokenisation.html"><strong aria-hidden="true">3.1.1.</strong> Tokenisatin</a></li><li class="chapter-item expanded "><a href="embeddings.html"><strong aria-hidden="true">3.1.2.</strong> Embeddings</a></li><li class="chapter-item expanded "><a href="encoding.html"><strong aria-hidden="true">3.1.3.</strong> Encoding</a></li><li class="chapter-item expanded "><a href="representation.html"><strong aria-hidden="true">3.1.4.</strong> Representation</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="language-modelling.html"><strong aria-hidden="true">3.2.1.</strong> Language modelling</a></li><li class="chapter-item expanded "><a href="topic-modelling.html"><strong aria-hidden="true">3.2.2.</strong> Topic modelling</a></li><li class="chapter-item expanded "><a href="sequence-modelling.html"><strong aria-hidden="true">3.2.3.</strong> Sequence modelling</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="summarisation.html"><strong aria-hidden="true">3.3.1.</strong> Summarisation</a></li><li class="chapter-item expanded "><a href="machine-translation.html"><strong aria-hidden="true">3.3.2.</strong> Machine translation</a></li></ol></li><li class="chapter-item expanded "><a href="pretraining.html"><strong aria-hidden="true">3.4.</strong> Pretraining tasks</a></li><li class="chapter-item expanded "><a href="nlp/models.html"><strong aria-hidden="true">3.5.</strong> Models</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Multimodal</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="multimodal/pretraining.html"><strong aria-hidden="true">4.1.</strong> Pretraining tasks</a></li><li class="chapter-item expanded "><a href="multimodal/models.html"><strong aria-hidden="true">4.2.</strong> Models</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Planning</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Graph mining</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Time series</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Audio</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concepts</li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Knowledge distillation</div></li><li class="spacer"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Classes of algorithms</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">10.1.</strong> Supervised learning</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.2.</strong> Unsupervised learning</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="clustering-algorithms.html"><strong aria-hidden="true">10.2.1.</strong> Clustering algorithms</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.2.2.</strong> Dimensionality reduction algorithms</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> AutoML</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Metrics</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> Loss functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> Hyperparameter optimisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">'Learning' types</li><li class="chapter-item expanded "><a href="self-supervised-learning.html"><strong aria-hidden="true">15.</strong> Self-supervised learning</a></li><li class="chapter-item expanded "><a href="semi-supervised-learning.html"><strong aria-hidden="true">16.</strong> Semi-supervised learning</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.</strong> Deep learning</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="intro-to-dl.html" class="active"><strong aria-hidden="true">17.1.</strong> Intro to DL</a></li><li class="chapter-item expanded "><a href="tensor-libraries.html"><strong aria-hidden="true">17.2.</strong> Tensor libraries</a></li><li class="chapter-item expanded "><a href="sparse-matrices.html"><strong aria-hidden="true">17.3.</strong> Sparse matrices</a></li><li class="chapter-item expanded "><a href="transfer-learning.html"><strong aria-hidden="true">17.4.</strong> Transfer learning</a></li><li class="chapter-item expanded "><a href="weight-initialisation.html"><strong aria-hidden="true">17.5.</strong> Weight initialisation</a></li><li class="chapter-item expanded "><a href="bonus-questions.html"><strong aria-hidden="true">17.6.</strong> Bonus questions</a></li><li class="chapter-item expanded "><a href="frameworks.html"><strong aria-hidden="true">17.7.</strong> Frameworks</a></li><li class="chapter-item expanded "><a href="improving-predictive-power.html"><strong aria-hidden="true">17.8.</strong> Improving predictive power</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.9.</strong> SGD optimisers</div></li><li class="chapter-item expanded "><a href="limitations-and-new-frontiers.html"><strong aria-hidden="true">17.10.</strong> Limitations and new frontiers</a></li><li class="chapter-item expanded "><a href="backpropagation-softmax-and-categorical-cross.html"><strong aria-hidden="true">17.11.</strong> Backpropagation softmax and categorical cross</a></li><li class="chapter-item expanded "><a href="hyperparameter-search.html"><strong aria-hidden="true">17.12.</strong> hyperparameter-search</a></li><li class="chapter-item expanded "><a href="layers.html"><strong aria-hidden="true">17.13.</strong> layers</a></li><li class="chapter-item expanded "><a href="improving-speed-accuracy.html"><strong aria-hidden="true">17.14.</strong> improving-speed-accuracy</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> Machine learning</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">19.</strong> Reinforcement learning</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">20.</strong> Bayesian learning</div></li><li class="chapter-item expanded "><a href="deep-generative-models.html"><strong aria-hidden="true">21.</strong> Deep generative models</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Models / algorithms</li><li class="chapter-item expanded "><div><strong aria-hidden="true">22.</strong> Association rule mining</div></li><li class="chapter-item expanded "><a href="decision-tree.html"><strong aria-hidden="true">23.</strong> Decision tree</a></li><li class="chapter-item expanded "><a href="dbscan.html"><strong aria-hidden="true">24.</strong> DBSCAN</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">25.</strong> Diffusion model</div></li><li class="chapter-item expanded "><a href="evolutionary-algorithms.html"><strong aria-hidden="true">26.</strong> Evolutionary algorithms</a></li><li class="chapter-item expanded "><a href="gaussian-process.html"><strong aria-hidden="true">27.</strong> Gaussian process</a></li><li class="chapter-item expanded "><a href="gmm.html"><strong aria-hidden="true">28.</strong> GMM</a></li><li class="chapter-item expanded "><a href="hierarchical-clustering.html"><strong aria-hidden="true">29.</strong> Hierachical clustering</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">30.</strong> HMM</div></li><li class="chapter-item expanded "><a href="gradient-boosting.html"><strong aria-hidden="true">31.</strong> Gradient boosting</a></li><li class="chapter-item expanded "><a href="k-nn.html"><strong aria-hidden="true">32.</strong> k-NN</a></li><li class="chapter-item expanded "><a href="k-means.html"><strong aria-hidden="true">33.</strong> k-means</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">34.</strong> KDE</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">35.</strong> LDA</div></li><li class="chapter-item expanded "><a href="linear-models.html"><strong aria-hidden="true">36.</strong> Linear models</a></li><li class="chapter-item expanded "><a href="logistic-regression.html"><strong aria-hidden="true">37.</strong> Logistic regression</a></li><li class="chapter-item expanded "><a href="mean-shift.html"><strong aria-hidden="true">38.</strong> Mean shift</a></li><li class="chapter-item expanded "><a href="naive-bayes.html"><strong aria-hidden="true">39.</strong> Naive Bayes</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">40.</strong> Neural networks</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">40.1.</strong> CNN</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">40.2.</strong> RNN</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">40.3.</strong> LSTM</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">40.4.</strong> Transformer</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">40.5.</strong> GAN</div></li></ol></li><li class="chapter-item expanded "><a href="pca.html"><strong aria-hidden="true">41.</strong> PCA</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">42.</strong> PGM</div></li><li class="chapter-item expanded "><a href="svm.html"><strong aria-hidden="true">43.</strong> SVM</a></li><li class="chapter-item expanded "><a href="t-sne.html"><strong aria-hidden="true">44.</strong> t-SNE</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">45.</strong> Tree ensembles</div></li><li class="chapter-item expanded "><a href="umap.html"><strong aria-hidden="true">46.</strong> UMAP</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Representations</li><li class="chapter-item expanded "><div><strong aria-hidden="true">47.</strong> Distance metric</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">48.</strong> Similarity search</div></li><li class="chapter-item expanded "><a href="similarity-measures.html"><strong aria-hidden="true">49.</strong> Similarity measures</a></li><li class="chapter-item expanded "><a href="dimensionality-reduction.html"><strong aria-hidden="true">50.</strong> Dimensionality reduction</a></li><li class="chapter-item expanded "><a href="ann.html"><strong aria-hidden="true">51.</strong> ANN</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Tasks / problems</li><li class="chapter-item expanded "><a href="survival-analysis.html"><strong aria-hidden="true">52.</strong> Survival analysis</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">53.</strong> Market basket analysis</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">54.</strong> Recommender system</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">System design</li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Others</li><li class="chapter-item expanded "><a href="concept-drift.html"><strong aria-hidden="true">55.</strong> Concept drift</a></li><li class="chapter-item expanded "><a href="interpretable-ai.html"><strong aria-hidden="true">56.</strong> Interpretable AI</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ai-book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="intro-to-dl"><a class="header" href="#intro-to-dl">Intro to DL</a></h1>
+<h1 id="terminologies"><a class="header" href="#terminologies"><strong>Terminologies</strong></a></h1>
+<ul>
+<li>architecture = model = network = algorithm</li>
+<li>input = image = tensor = image matrix</li>
+<li>output = convolved feature</li>
+<li>input channels = input maps = depth</li>
+<li>output channels = feature maps = activation map</li>
+<li>filter = kernel = weights = feature extractor = convolution = feature detector</li>
+<li>feature = structure (low-level, high-level)</li>
+<li>resolution = dimension = size</li>
+<li>depth = no. of channels/filters</li>
+<li>class</li>
+<li>example = observation = sample</li>
+<li>Epoch = training step</li>
+<li>Batch = iteration</li>
+<li>Filter</li>
+<li>Downsample = encode</li>
+<li>Upsample = decode</li>
+</ul>
+<h1 id="why-deep-learning"><a class="header" href="#why-deep-learning"><strong>Why deep learning?</strong></a></h1>
+<ul>
+<li>Classical ML: Features are hand engineered. Hand engineered features are
+<ol>
+<li>Time-consuming</li>
+<li>Brittle</li>
+<li>Not scalable</li>
+</ol>
+</li>
+<li>DL: Features are <strong>learned</strong>. Deep learning is able to extract salient information from raw data by developing a hierarchical representation of features. This automatic feature extraction is an intrinsic component of the architecture. For this reason, deep learning is often described as <strong>representation learning</strong>.</li>
+</ul>
+<p>Why now?</p>
+<ol>
+<li>Big data. Data is becoming more pervasive.</li>
+<li>Hardware</li>
+<li>Software</li>
+</ol>
+<h1 id="universal-approximation-theorem"><a class="header" href="#universal-approximation-theorem"><strong>Universal approximation theorem</strong></a></h1>
+<p>A feedforward network with a single (hidden) layer is sufficient to approximate, to an arbitrary precision, any continuous function. (Neural networks are excellent function approximators.)</p>
+<p><a href="https://twitter.com/gabrielpeyre/status/1304645917648269312">https://twitter.com/gabrielpeyre/status/1304645917648269312</a></p>
+<h1 id="normalising-feature-values"><a class="header" href="#normalising-feature-values"><strong>Normalising feature values</strong></a></h1>
+<ul>
+<li>Roughly zero-centered, -1 to 1 often works well and roughly <strong>all our inputs are of the same scale</strong>.</li>
+<li>Helps gradient descent converge. Avoid NaN</li>
+<li>Avoiding outlier values can also help</li>
+<li>Can use:
+<ul>
+<li>Linear scaling</li>
+<li>Log scaling</li>
+<li>Max min clipping</li>
+</ul>
+</li>
+</ul>
+<h1 id="networks"><a class="header" href="#networks"><strong>Networks</strong></a></h1>
+<p>Perceptron (no hidden layer, with nonlinearity)</p>
+<p>Deep neural network (multi-layer perceptron)</p>
+<h1 id="perceptron-components"><a class="header" href="#perceptron-components"><strong>Perceptron components</strong></a></h1>
+<ul>
+<li>Inputs + Weights + bias. A high bias means that a neuron is more likely activated despite its weights.</li>
+<li>Linear combination</li>
+<li>Non-linearity (nonlinear activation functions)</li>
+<li>Output</li>
+</ul>
+<p>Note that a combination of linear models is still linear ie b + wx + wx.</p>
+<h1 id="activation-functions"><a class="header" href="#activation-functions"><strong>Activation functions</strong></a></h1>
+<p>Decides if a neuron should be on or off, and if on, how useful is it. They also ensure that values are contained and don’t explode.</p>
+<ul>
+<li>Sigmoid</li>
+<li>Softmax</li>
+<li>ReLU (Rectified Linear Unit)</li>
+<li>Leaky ReLU</li>
+<li>CELU (Continuously Differentiable Exponential Linear Unit)</li>
+<li>GELU (Gaussian Error Linear Unit)</li>
+<li>Swish</li>
+</ul>
+<p>Importance of activation function and nonlinearity</p>
+<p>The purpose of activation functions is to introduce non-linearities into the network. In real life, almost all of our data is non linear. Nonlinearities allow you to approximate arbitrarily complex functions by introducing nonlinearities into decision boundaries.</p>
+<h1 id="loss-function"><a class="header" href="#loss-function"><strong>Loss function</strong></a></h1>
+<p>cost function</p>
+<p>objective function</p>
+<p>empirical loss</p>
+<p>empirical risk</p>
+<p>Binary cross entropy / negative log loss</p>
+<p>Formulated by Claude Shannon, this loss function compares how different two distributions (true and predicted) are.</p>
+<h1 id="optimisation"><a class="header" href="#optimisation"><strong>Optimisation</strong></a></h1>
+<p>Solving the weights of a network with loss function is a non-convex optimisation. Proper initialisation matters. If network is composed of differentiable functions, then we can probably learn from it using gradient descent.</p>
+<h1 id="gradient-descent"><a class="header" href="#gradient-descent"><strong>Gradient descent</strong></a></h1>
+<p><a href="https://www.youtube.com/watch?v=aircAruvnKk">https://www.youtube.com/watch?v=aircAruvnKk</a></p>
+<p>Compute gradient using backpropagation = chain rule. How does a small change in one weight affect the final loss? Should a weight get nudged up or down? Which ones give most bang for buck (which one will have more effect on the cost function)?</p>
+<p>We can compute the <strong>best direction</strong> that is mathematically guaranteed to be the direction of the steepest descend. This direction is related to the gradient of the loss function.</p>
+<p>Backpropagation</p>
+<p>Backpropagation can be thought of as gates communicating to each other, whether they want their outputs to increase or decrease, so as to make the final output value higher or lower.</p>
+<p>Backpropagation will ensure that weights that need to be updated are updated <strong>proportionately</strong> to the loss function. Gradient signals are “distributed” to everyone.</p>
+<p>Gradient on x*w</p>
+<p>If x were extremely large (no preprocessing done), gradient of w will be very large too. As a result, one needs to compensate by lowering the learning rate by that factor. Another method is to perform <strong>batch normalisation</strong>. Gradients can also vanish because each additional layer can successfully reduce signals through activation functions like sigmoid. One way to prevent this is to use other activation functions like ReLU.</p>
+<p>Learning rate</p>
+<p>If you set your learning rate too small, you’re not really trusting your gradient on each step. What can happen is that you can get stuck in local minima, because you’re not being as aggressive as you should be to escape them. If you set your learning rate too large, you can overshoot completely and diverge. Setting the learning rate can be challenging in practice such that you avoid the local minima but small off such that you still converge.</p>
+<p>How to set learning rate?</p>
+<ul>
+<li>Try different learning rates</li>
+<li>Design a learning rate that ‘adapts’ to the landscape.</li>
+<li>Learning rate schedulers</li>
+<li>One-fit cycle</li>
+<li>Depends on batch size (larger batch size means you are trusting the gradient more so learning rate can be increased)</li>
+</ul>
+<p>Learning rate schedulers</p>
+<ul>
+<li>Constant</li>
+<li>Time-based decay</li>
+<li>Step decay</li>
+<li>Exponential decay</li>
+<li>Lambda</li>
+<li>Multistep LR</li>
+<li>Cosine annealing LR</li>
+<li>ReduceLR on plateau</li>
+<li>Cyclic</li>
+</ul>
+<h1 id="gradient-descent-optimisation-algorithms"><a class="header" href="#gradient-descent-optimisation-algorithms"><strong>Gradient descent optimisation algorithms</strong></a></h1>
+<ul>
+<li>Vanilla</li>
+<li>Momentum</li>
+<li>NAG</li>
+<li>RMSProp</li>
+<li>Adam</li>
+<li>RAdam</li>
+<li>SWA</li>
+</ul>
+<h1 id="batch-gradient-descent-mini-batch-gradient-descent-stochastic-gradient-descent"><a class="header" href="#batch-gradient-descent-mini-batch-gradient-descent-stochastic-gradient-descent"><strong>(Batch) gradient descent, mini-batch gradient descent, stochastic gradient descent</strong></a></h1>
+<p>Gradient in gradient descent is expensive to compute over all data points. Stochastic gradient descent computes over <strong>a single data point chosen randomly</strong>. The term &quot;stochastic&quot; comes from the fact that the gradient based on a single training sample is a &quot;stochastic approximation&quot; of the &quot;true&quot; cost gradient. The downside of using a single point is that it’s going to be too noisy. Middle ground is to take a mini-batch, where true gradient is approximated by taking the average of the gradients.</p>
+<ul>
+<li>More accurate estimation of gradient
+<ul>
+<li>Smoother convergence</li>
+<li><strong>Allows for larger learning rates</strong> (because we trust the gradients more)</li>
+</ul>
+</li>
+</ul>
+<p>Stochastic gradient descent can be also taken to mean batch gradient descent.</p>
+<h1 id="overfitting--regularisation"><a class="header" href="#overfitting--regularisation"><strong>Overfitting &amp; regularisation</strong></a></h1>
+<ul>
+<li>Dropout: randomly set some of the activation of the hidden neurons to 0 with some probability (usually 50%)</li>
+<li>Early stopping</li>
+<li>JUMP START</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="semi-supervised-learning.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="tensor-libraries.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="semi-supervised-learning.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="tensor-libraries.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

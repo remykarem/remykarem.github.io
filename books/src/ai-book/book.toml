@@ -11,3 +11,7 @@ mathjax-support = true
 
 [build]
 build-dir = "../../ai-book"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]

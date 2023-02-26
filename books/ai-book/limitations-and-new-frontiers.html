@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Limitations and new frontiers - ai-book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Domains / data</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> General</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="general/eda.html"><strong aria-hidden="true">1.1.</strong> EDA</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.2.</strong> Processing</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="anomaly-detection.html"><strong aria-hidden="true">1.3.1.</strong> Anomaly detection</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Vision</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> EDA</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.2.</strong> Processing</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.1.</strong> Image classification</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.2.</strong> Semantic segmentation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.3.</strong> Object detection</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.4.</strong> Instance segmentation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.5.</strong> Pose estimation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.6.</strong> Hand pose estimation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.7.</strong> Reidentification</div></li></ol></li><li class="chapter-item expanded "><a href="computer-vision/models.html"><strong aria-hidden="true">2.4.</strong> Models</a></li></ol></li><li class="chapter-item expanded "><a href="language.html"><strong aria-hidden="true">3.</strong> Language</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="processing.html"><strong aria-hidden="true">3.1.</strong> Processing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tokenisation.html"><strong aria-hidden="true">3.1.1.</strong> Tokenisatin</a></li><li class="chapter-item expanded "><a href="embeddings.html"><strong aria-hidden="true">3.1.2.</strong> Embeddings</a></li><li class="chapter-item expanded "><a href="encoding.html"><strong aria-hidden="true">3.1.3.</strong> Encoding</a></li><li class="chapter-item expanded "><a href="representation.html"><strong aria-hidden="true">3.1.4.</strong> Representation</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="language-modelling.html"><strong aria-hidden="true">3.2.1.</strong> Language modelling</a></li><li class="chapter-item expanded "><a href="topic-modelling.html"><strong aria-hidden="true">3.2.2.</strong> Topic modelling</a></li><li class="chapter-item expanded "><a href="sequence-modelling.html"><strong aria-hidden="true">3.2.3.</strong> Sequence modelling</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="summarisation.html"><strong aria-hidden="true">3.3.1.</strong> Summarisation</a></li><li class="chapter-item expanded "><a href="machine-translation.html"><strong aria-hidden="true">3.3.2.</strong> Machine translation</a></li></ol></li><li class="chapter-item expanded "><a href="pretraining.html"><strong aria-hidden="true">3.4.</strong> Pretraining tasks</a></li><li class="chapter-item expanded "><a href="nlp/models.html"><strong aria-hidden="true">3.5.</strong> Models</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Multimodal</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="multimodal/pretraining.html"><strong aria-hidden="true">4.1.</strong> Pretraining tasks</a></li><li class="chapter-item expanded "><a href="multimodal/models.html"><strong aria-hidden="true">4.2.</strong> Models</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Planning</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Graph mining</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Time series</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Audio</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concepts</li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Knowledge distillation</div></li><li class="spacer"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Classes of algorithms</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">10.1.</strong> Supervised learning</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.2.</strong> Unsupervised learning</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="clustering-algorithms.html"><strong aria-hidden="true">10.2.1.</strong> Clustering algorithms</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.2.2.</strong> Dimensionality reduction algorithms</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> AutoML</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Metrics</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> Loss functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> Hyperparameter optimisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">'Learning' types</li><li class="chapter-item expanded "><a href="self-supervised-learning.html"><strong aria-hidden="true">15.</strong> Self-supervised learning</a></li><li class="chapter-item expanded "><a href="semi-supervised-learning.html"><strong aria-hidden="true">16.</strong> Semi-supervised learning</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.</strong> Deep learning</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="intro-to-dl.html"><strong aria-hidden="true">17.1.</strong> Intro to DL</a></li><li class="chapter-item expanded "><a href="tensor-libraries.html"><strong aria-hidden="true">17.2.</strong> Tensor libraries</a></li><li class="chapter-item expanded "><a href="sparse-matrices.html"><strong aria-hidden="true">17.3.</strong> Sparse matrices</a></li><li class="chapter-item expanded "><a href="transfer-learning.html"><strong aria-hidden="true">17.4.</strong> Transfer learning</a></li><li class="chapter-item expanded "><a href="weight-initialisation.html"><strong aria-hidden="true">17.5.</strong> Weight initialisation</a></li><li class="chapter-item expanded "><a href="bonus-questions.html"><strong aria-hidden="true">17.6.</strong> Bonus questions</a></li><li class="chapter-item expanded "><a href="frameworks.html"><strong aria-hidden="true">17.7.</strong> Frameworks</a></li><li class="chapter-item expanded "><a href="improving-predictive-power.html"><strong aria-hidden="true">17.8.</strong> Improving predictive power</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.9.</strong> SGD optimisers</div></li><li class="chapter-item expanded "><a href="limitations-and-new-frontiers.html" class="active"><strong aria-hidden="true">17.10.</strong> Limitations and new frontiers</a></li><li class="chapter-item expanded "><a href="backpropagation-softmax-and-categorical-cross.html"><strong aria-hidden="true">17.11.</strong> Backpropagation softmax and categorical cross</a></li><li class="chapter-item expanded "><a href="hyperparameter-search.html"><strong aria-hidden="true">17.12.</strong> hyperparameter-search</a></li><li class="chapter-item expanded "><a href="layers.html"><strong aria-hidden="true">17.13.</strong> layers</a></li><li class="chapter-item expanded "><a href="improving-speed-accuracy.html"><strong aria-hidden="true">17.14.</strong> improving-speed-accuracy</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> Machine learning</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">19.</strong> Reinforcement learning</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">20.</strong> Bayesian learning</div></li><li class="chapter-item expanded "><a href="deep-generative-models.html"><strong aria-hidden="true">21.</strong> Deep generative models</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Models / algorithms</li><li class="chapter-item expanded "><div><strong aria-hidden="true">22.</strong> Association rule mining</div></li><li class="chapter-item expanded "><a href="decision-tree.html"><strong aria-hidden="true">23.</strong> Decision tree</a></li><li class="chapter-item expanded "><a href="dbscan.html"><strong aria-hidden="true">24.</strong> DBSCAN</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">25.</strong> Diffusion model</div></li><li class="chapter-item expanded "><a href="evolutionary-algorithms.html"><strong aria-hidden="true">26.</strong> Evolutionary algorithms</a></li><li class="chapter-item expanded "><a href="gaussian-process.html"><strong aria-hidden="true">27.</strong> Gaussian process</a></li><li class="chapter-item expanded "><a href="gmm.html"><strong aria-hidden="true">28.</strong> GMM</a></li><li class="chapter-item expanded "><a href="hierarchical-clustering.html"><strong aria-hidden="true">29.</strong> Hierachical clustering</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">30.</strong> HMM</div></li><li class="chapter-item expanded "><a href="gradient-boosting.html"><strong aria-hidden="true">31.</strong> Gradient boosting</a></li><li class="chapter-item expanded "><a href="k-nn.html"><strong aria-hidden="true">32.</strong> k-NN</a></li><li class="chapter-item expanded "><a href="k-means.html"><strong aria-hidden="true">33.</strong> k-means</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">34.</strong> KDE</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">35.</strong> LDA</div></li><li class="chapter-item expanded "><a href="linear-models.html"><strong aria-hidden="true">36.</strong> Linear models</a></li><li class="chapter-item expanded "><a href="logistic-regression.html"><strong aria-hidden="true">37.</strong> Logistic regression</a></li><li class="chapter-item expanded "><a href="mean-shift.html"><strong aria-hidden="true">38.</strong> Mean shift</a></li><li class="chapter-item expanded "><a href="naive-bayes.html"><strong aria-hidden="true">39.</strong> Naive Bayes</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">40.</strong> Neural networks</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">40.1.</strong> CNN</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">40.2.</strong> RNN</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">40.3.</strong> LSTM</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">40.4.</strong> Transformer</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">40.5.</strong> GAN</div></li></ol></li><li class="chapter-item expanded "><a href="pca.html"><strong aria-hidden="true">41.</strong> PCA</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">42.</strong> PGM</div></li><li class="chapter-item expanded "><a href="svm.html"><strong aria-hidden="true">43.</strong> SVM</a></li><li class="chapter-item expanded "><a href="t-sne.html"><strong aria-hidden="true">44.</strong> t-SNE</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">45.</strong> Tree ensembles</div></li><li class="chapter-item expanded "><a href="umap.html"><strong aria-hidden="true">46.</strong> UMAP</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Representations</li><li class="chapter-item expanded "><div><strong aria-hidden="true">47.</strong> Distance metric</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">48.</strong> Similarity search</div></li><li class="chapter-item expanded "><a href="similarity-measures.html"><strong aria-hidden="true">49.</strong> Similarity measures</a></li><li class="chapter-item expanded "><a href="dimensionality-reduction.html"><strong aria-hidden="true">50.</strong> Dimensionality reduction</a></li><li class="chapter-item expanded "><a href="ann.html"><strong aria-hidden="true">51.</strong> ANN</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Tasks / problems</li><li class="chapter-item expanded "><a href="survival-analysis.html"><strong aria-hidden="true">52.</strong> Survival analysis</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">53.</strong> Market basket analysis</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">54.</strong> Recommender system</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">System design</li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Others</li><li class="chapter-item expanded "><a href="concept-drift.html"><strong aria-hidden="true">55.</strong> Concept drift</a></li><li class="chapter-item expanded "><a href="interpretable-ai.html"><strong aria-hidden="true">56.</strong> Interpretable AI</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ai-book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="limitations-and-new-frontiers"><a class="header" href="#limitations-and-new-frontiers">Limitations and new frontiers</a></h1>
+<p><img src="./Popularity.png" alt="Limitations%20and%20new%20frontiers%2082b68cc6c3af48c7bcee686b2f8c2e5c/Popularity.png" /></p>
+<h3 id="neural-networks-only-accept-certain-input-types"><a class="header" href="#neural-networks-only-accept-certain-input-types"><strong>Neural networks only accept certain input types</strong></a></h3>
+<p>Effect:</p>
+<ul>
+<li>Difficult to encode structure and prior knowledge</li>
+</ul>
+<p>Frontiers:</p>
+<ul>
+<li>2D spatial structure like images - CNN.</li>
+<li>Graph data like social networks, internet traffic, state machines, mobility &amp; transport, molecules, biological networks - graph convolutional networks.</li>
+<li>3D data (point clouds: unordered sets with spatial dependence between points) - CNN.</li>
+</ul>
+<h3 id="neural-networks-are-excellent-function-approximators"><a class="header" href="#neural-networks-are-excellent-function-approximators"><strong>Neural networks are excellent function approximators</strong></a></h3>
+<p>Effect:</p>
+<ul>
+<li>Poor generalisation, memorises data. Does not work on unseen data.</li>
+<li>Easily fooled by adversarial attacks (image + perturbation = ???).</li>
+</ul>
+<p>Frontiers:</p>
+<ul>
+<li>(See below on uncertainty)</li>
+</ul>
+<h3 id="neural-network-predictions-are-point-predictions"><a class="header" href="#neural-network-predictions-are-point-predictions"><strong>Neural network predictions are point predictions</strong></a></h3>
+<p>Effect:</p>
+<ul>
+<li>Cannot quantify uncertainty for unseen data.</li>
+</ul>
+<p>Frontiers:</p>
+<ul>
+<li>Bayesian deep learning for uncertainty. Rather then learning the weights directly, we learn a posterior over the weights i.e. P(W|X,Y). This posterior is intractable, however.</li>
+<li>Ensembling for uncertainty estimation.</li>
+<li>Evidential deep learning: directly learn the underlying uncertainty using evidential distributions.</li>
+<li>Multi-task learning using uncertainty</li>
+</ul>
+<h3 id="neural-networks-are-large"><a class="header" href="#neural-networks-are-large"><strong>Neural networks are large</strong></a></h3>
+<p>Effect:</p>
+<ul>
+<li>Data hungry</li>
+<li>Computationally intensive</li>
+</ul>
+<h3 id="neural-networks-are-complex"><a class="header" href="#neural-networks-are-complex"><strong>Neural networks are complex</strong></a></h3>
+<p>Effect:</p>
+<ul>
+<li>Requires expert knowledge to design and fine tune</li>
+<li>Finicky to optimise: non-convex, choice of architecture, learning parameters</li>
+<li>Uninterpretable</li>
+</ul>
+<p>Frontiers:</p>
+<ul>
+<li>Automated machine learning for NAS.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="improving-predictive-power.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="backpropagation-softmax-and-categorical-cross.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="improving-predictive-power.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="backpropagation-softmax-and-categorical-cross.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

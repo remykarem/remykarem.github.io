@@ -27,3 +27,5 @@
 |      | BLOOM          | Decoder         | LM          | 176B      | Code generation                                                    |
 |      | Minerva        | Decoder         | LM          | 540B      | Mathematical reasoning                                             |
 |      | SeeKer         | (Depends)       |             | (Depends) | Search, knowledge, response                                        |
+|      | Chinchilla     | Decoder         | LM          | 70B       | Dialog                                                             |
+| 2023 | LLaMA          | ?               | ?           | ?         | ?                                                                  |
