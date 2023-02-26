@@ -11,4 +11,6 @@
     - relative position embeddings
     - sinusoidal positional embedding
 
-![Positional encoding](./positional-encoding.jpg)
+    ![Positional encoding](./positional-encoding.jpg)
+
+* RoPE -- Rotary positional embedding

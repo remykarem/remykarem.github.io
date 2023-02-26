@@ -1,0 +1,3 @@
+# Learning rate scheduler
+
+* Cosine

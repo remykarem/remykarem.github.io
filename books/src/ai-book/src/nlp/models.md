@@ -6,6 +6,7 @@
 | ---- | -------------- | --------------- | ----------- | ---------- | ------------------------------------------------- |
 | 2023 | LLaMA          | ?               | ?           | 7B,13B,65B | ?                                                 |
 | 2022 | GPT-3.5        | Decoder         | LM          | 175B       | Code generation, dialog                           |
+|      | OPT            | ?               |             |            |                                                   |
 |      | LAMDA          | Decoder         | LM          | 137B       | General language modelling                        |
 |      | ChatGPT        | Decoder         | LM          | 175B       | Dialog                                            |
 |      | BLOOM          | Decoder         | LM          | 176B       | Code generation                                   |

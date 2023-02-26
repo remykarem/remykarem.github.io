@@ -6,7 +6,7 @@ Token: ‘smallest unit of language in the eyes of computer’. Tokenisation is 
 
 - Character
 - Subword
-    - BPE (Byte-Pair Encoding). By frequency. fastBPE.
+    - BPE (Byte-Pair Encoding). By frequency. Implementations: SentencePiece, fastBPE.
     - WordPiece. By likelihood
     - Unigram Language Model
     - Syllable tokenisation
