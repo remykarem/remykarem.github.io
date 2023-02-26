@@ -1,0 +1,17 @@
+[book]
+authors = ["remykarem"]
+language = "en"
+multilingual = false
+src = "src"
+title = "AI Planning"
+
+[output.html]
+site-url = "/books/ai-planning-book/"
+mathjax-support = true
+
+[build]
+build-dir = "../../ai-planning-book"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]

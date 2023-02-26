@@ -1,0 +1,1429 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AI Planning</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="simple-planning.html"><strong aria-hidden="true">1.</strong> Simple planning</a></li><li class="chapter-item expanded "><a href="classical-planning.html"><strong aria-hidden="true">2.</strong> Classical planning</a></li><li class="chapter-item expanded "><a href="planning-in-a-stochastic-environment.html"><strong aria-hidden="true">3.</strong> Planning in a stochastic environment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="value-iteration.html"><strong aria-hidden="true">3.1.</strong> Value iteration</a></li><li class="chapter-item expanded "><a href="policy-iteration.html"><strong aria-hidden="true">3.2.</strong> Policy iteration</a></li><li class="chapter-item expanded "><a href="gpi.html"><strong aria-hidden="true">3.3.</strong> GPI</a></li><li class="chapter-item expanded "><a href="mcts.html"><strong aria-hidden="true">3.4.</strong> Online search: MCTS</a></li></ol></li><li class="chapter-item expanded "><a href="learning-to-plan-in-a-stochastic-environment.html"><strong aria-hidden="true">4.</strong> Learning to plan in a stochastic environment</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> Learning the transition model (model-based RL)</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Learning the Q-function (model-free RL)</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.1.</strong> MC learning</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.1.1.</strong> Direct utility estimation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.1.2.</strong> MC control with GPI</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.1.3.</strong> GLIE epsilon-greedy MC control</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.2.</strong> TD learning</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="sarsa.html"><strong aria-hidden="true">4.2.2.1.</strong> SARSA</a></li><li class="chapter-item expanded "><a href="q-learning.html"><strong aria-hidden="true">4.2.2.2.</strong> Q-learning</a></li><li class="chapter-item expanded "><a href="deep-q-learning.html"><strong aria-hidden="true">4.2.2.3.</strong> Deep Q-learning</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="learning-the-policy.html"><strong aria-hidden="true">4.3.</strong> Learning the policy</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="reinforce.html"><strong aria-hidden="true">4.3.1.</strong> REINFORCE</a></li><li class="chapter-item expanded "><a href="reinforce-with-baseline.html"><strong aria-hidden="true">4.3.2.</strong> REINFORCE with baseline</a></li><li class="chapter-item expanded "><a href="actor-critic.html"><strong aria-hidden="true">4.3.3.</strong> Actor critic</a></li><li class="chapter-item expanded "><a href="trpo.html"><strong aria-hidden="true">4.3.4.</strong> TRPO</a></li><li class="chapter-item expanded "><a href="ppo.html"><strong aria-hidden="true">4.3.5.</strong> PPO</a></li><li class="chapter-item expanded "><a href="imitation-learning.html"><strong aria-hidden="true">4.3.6.</strong> Imitation learning</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="planning-in-a-stochastic-environment-with-partial-observability.html"><strong aria-hidden="true">5.</strong> Planning in a stochastic environment with partial observability</a></li><li class="chapter-item expanded "><a href="planning-in-a-multi-agent-environment.html"><strong aria-hidden="true">6.</strong> Planning in a multi-agent environment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="single-move-games.html"><strong aria-hidden="true">6.1.</strong> Single-move / simultaneous games</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2-player-non-zero-sum-games.html"><strong aria-hidden="true">6.1.1.</strong> 2-player non-zero-sum games</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.2.</strong> 2-player zero-sum games</div></li><li class="chapter-item expanded "><a href="other-games.html"><strong aria-hidden="true">6.1.3.</strong> Other games</a></li></ol></li><li class="chapter-item expanded "><a href="sequential-games.html"><strong aria-hidden="true">6.2.</strong> Sequential games</a></li><li class="chapter-item expanded "><a href="repeated-games.html"><strong aria-hidden="true">6.3.</strong> Repeated games</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">Reinforcement learning</li><li class="chapter-item expanded "><a href="on-vs-off-policy-learning.html"><strong aria-hidden="true">7.</strong> On-policy vs. off-policy learning</a></li><li class="chapter-item expanded "><a href="exploration-algorithms.html"><strong aria-hidden="true">8.</strong> Exploration algorithms</a></li><li class="chapter-item expanded "><a href="deadly-triad.html"><strong aria-hidden="true">9.</strong> Deadly triad</a></li><li class="chapter-item expanded "><a href="function-approximation.html"><strong aria-hidden="true">10.</strong> Function approximation</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="decision-theory.html"><strong aria-hidden="true">11.</strong> Decision theory</a></li><li class="chapter-item expanded "><a href="principal-of-optimality.html"><strong aria-hidden="true">12.</strong> Principal of optimality</a></li><li class="chapter-item expanded "><a href="counting.html"><strong aria-hidden="true">13.</strong> Counting</a></li><li class="chapter-item expanded "><a href="mdp.html"><strong aria-hidden="true">14.</strong> MDP</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AI Planning</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="simple-planning"><a class="header" href="#simple-planning">Simple planning</a></h1>
+<h1 id="1-simple-planning-using-search"><a class="header" href="#1-simple-planning-using-search">1. Simple planning (using search)</a></h1>
+<p>Simple planning solves problems with <strong>atomic representation</strong>. A problem is defined by:</p>
+<ul>
+<li>
+<p>Initial state</p>
+</li>
+<li>
+<p>Actions</p>
+</li>
+<li>
+<p>Transition model</p>
+<p>Returns the resulting state that results from performing an action from a state.</p>
+</li>
+<li>
+<p>Goal test</p>
+</li>
+<li>
+<p>Path cost</p>
+</li>
+</ul>
+<p>Problem-solving agents are goal-based agents that construct sequences of actions (&quot;planning&quot;) to achieve its goals. This process is called search. An agent must formulate a problem, then identify the goal. It then proceeds with a search algorithm to find the solution.</p>
+<p>AIAMA calls these agents as &quot;search-based problem-solving agents.&quot;</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Shortest path</li>
+<li>Travelling salesman problem</li>
+</ul>
+<h2 id="uninformed-search-algorithms"><a class="header" href="#uninformed-search-algorithms">Uninformed search algorithms</a></h2>
+<p>Strategies that do not care if a non-goal state is &quot;more promising&quot; than another.</p>
+<ul>
+<li>
+<p>Uniform-cost search (Dijkstra's algorithm)</p>
+<p>Use priority queues to keep track of frontiers</p>
+</li>
+<li>
+<p>Breadth-first search</p>
+<p>Use queue to keep track of frontiers</p>
+</li>
+<li>
+<p>Depth-first search</p>
+</li>
+</ul>
+<h2 id="informed-search-algorithms"><a class="header" href="#informed-search-algorithms">Informed search algorithms</a></h2>
+<p>Strategies that know whether a non-goal state is &quot;more promising&quot; than another.</p>
+<blockquote>
+<p>💡 <strong>Heuristic function</strong> is an approximation function. An <strong>admissible</strong> heuristic means it does not overestimate the actual</p>
+</blockquote>
+<blockquote>
+<p>🎒 <strong>Is something an admissible heuristic?</strong>
+1. Argue from the point of relaxed problem = does not overestimate = trajectory is a superset of the original problem
+2. Conclude that the optimal path is an optimistic estimate
+The optimal path to a superset ????</p>
+</blockquote>
+<ul>
+<li>
+<p>Best-first search. Eg. A* search</p>
+<p>At every node, find the path that minimises</p>
+<p>$$
+f(n) = g(n) + h(n)
+$$</p>
+<p>where $n$ is the next node,
+$g(n)$ is the cost of the path from the start to $n$ ,
+and $h(n)$ is the heuristic function from $n$ to goal.</p>
+<p>A* uses a priority queue.</p>
+</li>
+<li>
+<p>Greedy best-first search</p>
+</li>
+<li>
+<p>Memory-bounded heuristic search</p>
+<ul>
+<li>IDA* (iterative deepening A* search)</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="classical-planning-uaing-state-space-search"><a class="header" href="#classical-planning-uaing-state-space-search">Classical planning (uaing state-space search)</a></h1>
+<ul>
+<li><a href="classical-planning.html#languages">Languages</a></li>
+<li><a href="classical-planning.html#algorithms">Algorithms</a>
+<ul>
+<li><a href="classical-planning.html#forward-search">Forward search</a></li>
+<li><a href="classical-planning.html#backward-search">Backward search</a></li>
+<li><a href="classical-planning.html#boolean-satisfiability">Boolean satisfiability</a></li>
+<li><a href="classical-planning.html#graphplan">Graphplan</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>Classical planning agents represent states and their transitions using a factored representation. </p>
+<p>AIAMA calls these agents as &quot;planning agents.&quot;</p>
+<p>A <strong>state</strong> is represented using a set of <strong>state variables</strong> or <strong>fluents</strong>. eg. </p>
+<pre><code>{
+    At(plane1, time1) = True,
+    At(plane2, time2 = True,
+    At(plane1, time2 = True
+}
+</code></pre>
+<p>Planning becomes a state-space search. Note that states are transformed via operators (actions). </p>
+<h2 id="languages"><a class="header" href="#languages">Languages</a></h2>
+<p>Languages used in classical planning:</p>
+<ul>
+<li>
+<p>PDDL</p>
+<p>Domain</p>
+<blockquote>
+<p>💡 &quot;Plan once, run everywhere&quot;.  A domain is a greater problem, defining the 'world'. In this world, you define entities (&quot;types&quot;) like places, vehicles, general objects. You also define yes/no statements (&quot;predicates&quot;) in combination with the instances of the types. Lastly, you define the things that you can do (&quot;actions&quot;) that can be taken in this world.</p>
+</blockquote>
+<ul>
+<li>
+<p>Requirements</p>
+<pre><code>(:requirements :strips :typing)
+</code></pre>
+</li>
+<li>
+<p>Types</p>
+<pre><code>(:types city place physobj - object
+          package vehicle - physobj
+          truck airplane - vehicle
+          airport location - place
+)
+</code></pre>
+</li>
+<li>
+<p>Predicates</p>
+<pre><code>(:predicates (in-city ?loc - place ?city - city)
+	     (at ?obj - physobj ?loc - place)
+	     (in ?pkg - package ?veh - vehicle))
+</code></pre>
+</li>
+<li>
+<p>Actions</p>
+<pre><code>(:action load-airplane
+   :parameters (?pkg - package ?airplane - airplane ?loc - place)
+   :precondition (and (at ?pkg ?loc) (at ?airplane ?loc))
+   :effect (and (not (at ?pkg ?loc)) (in ?pkg ?airplane))
+)
+
+(:action unload-truck
+   :parameters (?pkg - package ?truck - truck ?loc - place)
+   :precondition (and (at ?truck ?loc) (in ?pkg ?truck))
+   :effect (and (not (in ?pkg ?truck)) (at ?pkg ?loc))
+)
+</code></pre>
+</li>
+</ul>
+<p>Problem</p>
+<blockquote>
+<p>💡 A problem is a real problem to solve. A real problem is defined by its goal (&quot;goal&quot;) and how things are looking currently (&quot;initial state&quot;). You also specify instances of the types (&quot;objects&quot;) like &quot;London&quot; if the type is <em>location</em>.</p>
+</blockquote>
+<ul>
+<li>
+<p>Goal</p>
+<pre><code>(:goal (and (at p1 north) 
+            (at p2 south))
+)
+</code></pre>
+</li>
+<li>
+<p>Initial state</p>
+<p>Ground predicates that are positive only</p>
+<pre><code>(:init (in-city cdg paris)
+       (in-city lhr london)
+       (in-city north paris)
+       (in-city south paris)
+       (at plane lhr)
+       (at truck cdg)
+       (at p1 lhr)
+       (at p2 lhr)
+  )
+</code></pre>
+</li>
+<li>
+<p>Objects</p>
+<pre><code>(:objects plane - airplane
+          truck - truck
+          cdg lhr - airport
+          south north - location
+          paris london - city
+          p1 p2 - package)
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>STRIPS</p>
+<ul>
+<li>
+<p>Actions in a state</p>
+<pre><code>Action(Load(c,p,a)
+	Precond: At(c,a) ∧ At(p,a)
+	Effect: ¬At(c,a) ∧ ... )
+</code></pre>
+</li>
+<li>
+<p>Initial state</p>
+<pre><code>Init(At(...) ∧ Heigh(...))
+</code></pre>
+</li>
+<li>
+<p>Goal</p>
+<pre><code>Goal(At(...) ∧ Heigh(...))
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>SATS</p>
+<ul>
+<li>
+<p>Propositionalise the actions</p>
+</li>
+<li>
+<p>Initial state</p>
+<p>Instead of</p>
+<p>$$
+At(P_1,SFO), At(P_2,JFK)
+$$</p>
+<p>assert <em>every</em> fluent.</p>
+<p>$$
+Assert: At(P_1,SFO)^0, At(P_2,JFK)^0, \neg At(P_1,JFK)^0, \neg At(P_2,SFO)^0
+$$</p>
+</li>
+<li>
+<p>Propositionalise the goal</p>
+</li>
+<li>
+<p>Add successor-state axioms</p>
+</li>
+<li>
+<p>Add precondition axioms</p>
+</li>
+<li>
+<p>Add action exclusion axioms</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Why is dropping negative effects (in preconditions) better?</strong>
+It becomes easier to achieve all goal literals because preconditions are easier to meet. It becomes a relaxes problem because a plan in the original problem is also a valid plan in the transformed problem.</p>
+</blockquote>
+<p>ADD list and DEL list</p>
+<p><img src="./classical-planning-1.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79f8d982-d1f8-4a74-b268-da2c7b9dcc93/Untitled.png" /></p>
+<p><strong>Heuristics</strong></p>
+<ul>
+<li>Ignore delete lists</li>
+<li>Ignore preconditions</li>
+<li>Decompose problem into subproblems</li>
+</ul>
+<p>How to reformulate problem</p>
+<ol>
+<li>Create the new type if needed. Eg. <code>time</code>.</li>
+<li>Add predicate to indicate where we are in wrt to the new type. Eg. <code>at_time(t1)</code>. Add predicate to move between the objects (that will always be true). Eg. <code>time_next(t1 t2)</code>.</li>
+<li>Update actions to include these. </li>
+<li>Create the objects if they don’t already exist. Eg. <code>t1 t2 t3 - time</code>.</li>
+<li>Update the initial state to include rules to guide the planner how to navigate in the search space. Eg. <code>time_next(t1 t2) time_next(t2 t3)</code></li>
+</ol>
+<h2 id="algorithms"><a class="header" href="#algorithms">Algorithms</a></h2>
+<h3 id="forward-search"><a class="header" href="#forward-search">Forward search</a></h3>
+<p>AKA forward state-space search</p>
+<p>Examples: <a href="http://www.fast-downward.org/">Fast Downward</a></p>
+<h3 id="backward-search"><a class="header" href="#backward-search">Backward search</a></h3>
+<p>AKA backward relevant-states search</p>
+<p>&quot;Regression&quot;</p>
+<p>Only consider actions that are relevant to the goal  or current state.</p>
+<p>To regress from goal $g$ to a description $g'$,</p>
+<p>$$
+g'=(g-ADD(a)) \cup Precond(a)
+$$</p>
+<h3 id="boolean-satisfiability"><a class="header" href="#boolean-satisfiability">Boolean satisfiability</a></h3>
+<p>NP-complete algorithm</p>
+<p>At time step 1, set a set of boolean variables. Through axioms (if the set of bools is like this then go this, else go there), you move to the next step. Repeat until you have all True. The plan is the different sets of bools for each time step. The solution is setting the right actions.</p>
+<h3 id="graphplan"><a class="header" href="#graphplan">Graphplan</a></h3>
+<p>This uses a planning graph data structure. It works only for <em>propositional planning problems</em> (no variables, only literals).</p>
+<p>Like the normal graph but include mutually exclusive actions and propositions. Then start searching from the goal. </p>
+<ul>
+<li>Heuristics that can be derived from planning graph:
+<ul>
+<li>1 goal
+<ul>
+<li>Cost of achieving any goal literal (can be estimated from the level in which it first appears)</li>
+</ul>
+</li>
+<li>Conjunction of goals
+<ul>
+<li>Max-level (take the max of the levels of the goals)</li>
+<li>Level sum (take the sum of the levels of the goals). Can be inadmissible.</li>
+<li>Set level</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="planning-in-a-stochastic-environment"><a class="header" href="#planning-in-a-stochastic-environment">Planning in a stochastic environment</a></h1>
+<p>To model decision making in situations where outcomes are partly random and partly under the control of a decision maker, we use a mathematical model called <strong>Markov decision process.</strong></p>
+<p>Markov Decision Process = &quot;if i see this state, i can forget about the history&quot;</p>
+<p>= (states, actions, rewards, transitions)</p>
+<p>Settings</p>
+<ul>
+<li>Horizon (finite or infinite)</li>
+<li>Discounted or not discounted</li>
+</ul>
+<p>Markov decision process: every decision point does not require you to know about the previous history</p>
+<p>How to plan in a stochastic environment? We want a policy that tells us what action to take given a state. To get this policy, we need to run value iteration or policy iteration. Sometimes we don't need to have the entire policy possibly because there are too many states. In this case, we perform online search (finding the best action at that state).</p>
+<p><strong>State</strong></p>
+<p>$$
+s
+$$</p>
+<p><strong>Actions</strong></p>
+<p>$$
+a
+$$</p>
+<p><strong>Transition matrix</strong></p>
+<blockquote>
+<p>💡 If I take action $a$ at state $s$, what is the probability that I end up at state $s'$?</p>
+</blockquote>
+<blockquote>
+<p>⚠️ Note that action has already been determined.</p>
+</blockquote>
+<p>$$
+T(s, a) \rightarrow s'
+$$</p>
+<p>$$
+P(s'|s,a) \rightarrow \mathbb{R}
+$$</p>
+<blockquote>
+<p>⚠️ Transitions must be Markovian</p>
+</blockquote>
+<p><strong>Reward</strong></p>
+<p>$$
+R(s) \rightarrow \mathbb{R}
+$$</p>
+<p><strong>Policy</strong> </p>
+<p>&quot;what action should I take at a particular state?&quot;</p>
+<p>$$
+\pi(s) \rightarrow a
+$$</p>
+<p>Utility of a sequence of states is the sum of (discounted) rewards</p>
+<p>$$
+U([s_0, s_1, ...]) \rightarrow \mathbb{R}
+$$</p>
+<p><strong>(Expected) utility of a state</strong> </p>
+<p>$$
+U(s) \rightarrow \mathbb{R}
+$$</p>
+<p>$$
+\begin{aligned}
+U(s) 
+&amp;= \mathbb{E} [\text{(discounted) sum of all rewards}] \\
+&amp;= \mathbb{E} [R(S_0) + \gamma R(S_1) + ... ] \\
+&amp;= \mathbb{E} \Big[ \sum_t \gamma^t R(S_t) \Big]
+\end{aligned}
+$$</p>
+<p>= utility of a sequence of states as taken by some policy \( \pi \)</p>
+<p>= rewards from current state + rewards from future states</p>
+<blockquote>
+<p>💡 A measure of how “useful” a state is. To be used later to compare between utilities of other states.</p>
+</blockquote>
+<p><strong>Value</strong> <strong>function</strong></p>
+<p>The value function is the utility of a state under an <em>optimal</em> policy. It is the Bellman equation itself.</p>
+<blockquote>
+<p>💡 The value function of a state is the sum of (1) the current reward and (2) the expected (or weighted) value from taking the ‘best’ action.</p>
+</blockquote>
+<p>$$
+\begin{aligned}
+V(s) 
+&amp;= R(s) + \gamma \max_{a \in A} \sum_{s'} P(s'|s,a)V(s') \
+\end{aligned}
+$$</p>
+<p>For MDPs where the reward function depends on both state and action,</p>
+<p>$$
+\begin{aligned}
+V(s) 
+&amp;= \max_{a\in A} \Big(R(s,a) + \gamma \mathbb{E}[U(s')] \Big) \\
+&amp;= \max_{a\in A} \Big(R(s,a) + \gamma \sum_{s'} P(s'|s,a)V(s') \Big)
+\end{aligned}
+$$</p>
+<p>From the value function \( V \), we can derive the optimal policy \( \pi^* \)</p>
+<p>$$
+\pi^*(s) = \argmax_a \sum_{s'} P(s'|s,a)  V(s')
+$$</p>
+<blockquote>
+<p>💡 Suppose you are in a state $s$. For every action in this state, compute its weighted value (based on the transition probabilities). Then find the action that returns the highest expected value.</p>
+</blockquote>
+<p><strong>Q-function</strong></p>
+<p>Like the value function, the Q function is the utility of taking an action at a given state under an <em>optimal</em> policy.</p>
+<blockquote>
+<p>💡 (what's the expected reward given that you start from a certain state $s$ and take a certain action $a$)</p>
+</blockquote>
+<p>$$
+Q(s,a) = R(s) + \gamma \sum_{s'} P(s'|s,a) \max_{a'} Q(s', a')
+$$</p>
+<p><strong>Sum of rewards</strong></p>
+<p>The sum of rewards for an episode that starts with state $s$.</p>
+<p>$$
+G(s)
+$$</p>
+<p>Two notations exist:</p>
+<ol>
+<li>\( G_k \) indicates the cumulative rewards for the $k$th episode.</li>
+<li>\( G_{t:t+n} = R_t + R_{t+1} + ... +  R_{t+n-1} + \hat{U}(S_{t+n}) \) (discounts are omitted for readability)</li>
+</ol>
+<p><strong>Trajectory</strong></p>
+<p>$$
+\tau
+$$</p>
+<p><strong>Advantage function</strong></p>
+<p>$$
+A(s,a) = Q(s,a) - V(s)
+$$</p>
+<blockquote>
+<p>💡 How much is a certain action good or bad given a certain state. how relatively happy you are taking the action a (given that you're in state s) = what's so good about taking action a = what's the advantage of taking action a. I used 'relatively' because Q(s,a) has a similar definition but without the relative.</p>
+</blockquote>
+<p>Calculating no. of states:</p>
+<ul>
+<li>
+<p>TSP</p>
+<p>\( N \) cities. A salesman must visit every city in a graph. Cannot visit any city twice. </p>
+<p>State: visited 0, at city 4</p>
+<p>State: visited 1, at city 2</p>
+<p>For every time he is at a city, there are \( n \le N \) cities visited.</p>
+<p>There are \( 2^N \) combinations where he can be.</p>
+<p>$$O(N2^N)$$</p>
+</li>
+<li>
+<p>Inventory control</p>
+<p>Company has space to store \( N \).</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="value-iteration"><a class="header" href="#value-iteration">Value iteration</a></h1>
+<p>$$
+O(|\mathbb{S} \times \mathbb{A}|)
+$$</p>
+<p>Solutions to MDP can be found using dynamic programming by looking at the value function. Bellman update (notice the additional thing is just the max):</p>
+<p>$$
+V(s) = R(s) + \gamma \max_{a \in A} \sum_{s'} P(s'|s,a) V(s')
+$$</p>
+<p>We iterate this for all the states.</p>
+<blockquote>
+<p>💡 Update a state based on its own utility <em>and</em> the highest expected utility of its neighbours (discounted).</p>
+</blockquote>
+<blockquote>
+<p>⚠️ Updating a set of values in value iteration is the same as updating a set of weights in gradient descent. You use the current iteration’s value, not the updated values from the current iteration.</p>
+</blockquote>
+<ul>
+<li>
+<p>Click here for example</p>
+<p><img src="./value-iteration.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/976e4e61-e8da-4be8-a5a4-54a1a5b10b23/Untitled.png" /></p>
+</li>
+</ul>
+<blockquote>
+<p>⚠️ Value iteration might not be ideal if there are too many states.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="policy-iteration"><a class="header" href="#policy-iteration">Policy iteration</a></h1>
+<p>Policy iteration is a variant of value iteration.</p>
+<ol>
+<li>
+<p>Initialise $U$ to 0. Initialise $\pi$ randomly.</p>
+</li>
+<li>
+<p><strong>Policy evaluation</strong> (similar to Bellman update). Run for all states.</p>
+<p>$$
+U(s) = R(s) + \gamma \sum_{s'} P(s'|s,a) U(s')
+$$</p>
+<blockquote>
+<p>💡 For every state, the utility is (i) its own reward and (ii) the (discounted) sum of the expected utility of its neighbours.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Policy improvement</strong>: For every state, get the best action from the value function using max.</p>
+<p>$$
+\pi(s) = \arg \max_a \sum_{s'} P(s'|s,a) U(s')
+$$</p>
+<blockquote>
+<p>💡 For every state, see which action transits me into a state giving me the highest utility.</p>
+</blockquote>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gpi"><a class="header" href="#gpi">GPI</a></h1>
+<p>Generalised policy iteration</p>
+<p>A variant of policy iteration.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="online-search-mcts"><a class="header" href="#online-search-mcts">Online search: MCTS</a></h1>
+<p>Sample a problem space randomly and repeatedly in order to obtain a more accurate understanding (&quot;<strong>statistics</strong>&quot;) and to decide which action to take next.</p>
+<p><a href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/78109082-b562-4648-b767-be5e484ddbce/video-output-19879316-4B55-4C39-99C9-7201375BE911.mov">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/78109082-b562-4648-b767-be5e484ddbce/video-output-19879316-4B55-4C39-99C9-7201375BE911.mov</a></p>
+<p>Q-function in MCTS is defined as</p>
+<p>$$
+Q(s,a) = \text{#returns}
+$$</p>
+<p>And the action to take at state <em>s</em> is</p>
+<p>$$
+\pi(n) = \arg \max_{a \in A} Q(n,a)
+$$</p>
+<ol>
+<li>
+<p><strong>Select a node</strong></p>
+<p>The policy to follow is \( \pi_{UCT} \). Calculate UCT (Upper Confidence Tree) for every child</p>
+<p>$$
+UCT =  \text{exploitation} + C \times \text{exploration}
+$$</p>
+<p>where</p>
+<p>$$
+\text{exploitation} = \frac{v_i}{n_i} \\
+\text{exploration} = \sqrt \frac{\log N}{n_i}
+$$</p>
+<p>and where</p>
+<ul>
+<li>\( v_i \) is the sum of the returns from the \( i \)th child</li>
+<li>\( n_i \) is the no. of visits of the \( i \)th child</li>
+<li>\( N \) is the no. of visits of the current node</li>
+</ul>
+</li>
+<li>
+<p><strong>Expand</strong></p>
+<p>At this node, we select an action that hasn't been taken. Selecting that action means we will enter the state.</p>
+</li>
+<li>
+<p><strong>Simulate</strong></p>
+<p>In this part, the policy to follow is usually a uniform random policy.</p>
+</li>
+<li>
+<p><strong>Backprop</strong></p>
+<p>Update rewards and n_visits.</p>
+</li>
+</ol>
+<pre><code class="language-python">from __future__ import annotations
+import numpy as np
+from operator import itemgetter
+import random
+
+ACTIONS = [3, 2, 1, 0]
+N_ACTIONS = len(ACTIONS)
+
+class MonteCarloTree:
+    def __init__(self, state, depth=0):
+        self.n_visits = 0
+        self.rewards = 0
+        self.children = []
+        self.actions_not_taken = ACTIONS.copy()
+        self.state = state.copy()
+        self.depth = depth
+        self.is_terminal = False
+
+        # to keep track of nodes needed for backprop
+        # root node's responsibility
+        self.stack = Stack()
+
+    @property
+    def deets(self):
+        print(f&quot;Fully expanded: {self.is_fully_expanded}&quot;)
+        print(f&quot;Depth: {self.depth}&quot;)
+        print(f&quot;Visits: {self.n_visits}&quot;)
+        print(f&quot;Rewards: {self.rewards}&quot;)
+
+    def find_best_action(self,
+                         max_depth=1,
+                         n_rollouts=20,
+                         **infos) -&gt; int:
+        &quot;&quot;&quot;Only the root node should be calling this&quot;&quot;&quot;
+
+        # 1. Perform rollouts
+        for rollout_number in range(n_rollouts):
+            print(rollout_number)
+            # Step 1
+            node = self.select(max_depth)
+            # Step 2
+            node = self.expand(node, **infos)
+            # Step 3
+            rewards = self.rollout(node, **infos)
+            # Step 4
+            self.backprop(rewards)
+
+        # 2. Return action that had many visits
+        visits = [child.n_visits for child in self.children]
+        action, _ = max(enumerate(visits), key=itemgetter(1))
+
+        return action
+
+    def select(self, max_depth) -&gt; MonteCarloTree:
+        &quot;&quot;&quot;
+        Traverse from root
+        If no. of children less than no. of actions, create new node.
+        Otherwise, do UCT
+        Only the root node should be calling this
+        &quot;&quot;&quot;
+        node = self
+        self.stack.push(node)
+
+        while node.is_fully_expanded and node.depth &lt; max_depth:
+            node = node.find_best_child_uct()
+            self.stack.push(node)
+
+        return node
+
+    def expand(self, node, **infos) -&gt; MonteCarloTree:
+        &quot;&quot;&quot;
+        Only the root node should be calling this
+        Return a child node
+        &quot;&quot;&quot;
+        action = node.actions_not_taken.pop()
+        state_new = self.get_next_state(state=node.state, action=action, **infos)
+
+        child = MonteCarloTree(state=state_new, depth=node.depth+1)
+        self.children.append(child)
+        self.stack.push(child)
+
+        return child
+
+    def rollout(self, node, **infos) -&gt; int:
+        &quot;&quot;&quot;
+        Only the root node should be calling this
+        Play the game and return the reward
+        &quot;&quot;&quot;
+        sim = Simulator.create(node.state, infos[&quot;max_speed&quot;])
+        reward = sim.step_through(node.state)
+        return reward
+
+    def backprop(self, rewards):
+        &quot;&quot;&quot;Only the root node should be calling this&quot;&quot;&quot;
+        while self.stack.is_not_empty:
+            node = self.stack.pop()
+            node.n_visits += 1
+            node.rewards += rewards
+
+    def find_best_child_uct(self) -&gt; MonteCarloTree:
+        return self.children[0]
+
+    @property
+    def is_fully_expanded(self):
+        return not self.actions_not_taken
+
+    def get_next_state(self, state, action, **infos):
+        sim = Simulator.create(state, infos[&quot;max_speed&quot;])
+        reward = sim.step(action)
+        return reward
+
+class Stack:
+    def __init__(self):
+        self.data = []
+
+    def push(self, val):
+        self.data.append(val)
+
+    def pop(self):
+        return self.data.pop()
+
+    @property
+    def is_not_empty(self):
+        return len(self.data) &gt; 0
+
+class Simulator:
+    def __init__(self, state, max_speeds):
+        self.state = state
+        self.max_speeds = max_speeds
+
+    @classmethod
+    def create(cls, state, max_speeds):
+        return cls(state, max_speeds)
+
+    def step(self, action) -&gt; int:
+        &quot;&quot;&quot;Environment and agent&quot;&quot;&quot;
+
+        # Environment
+        speeds = [random.randint(1, max_speed)
+                  for max_speed in self.max_speeds]
+        next_state = predict(self.state,
+                             speeds=speeds,
+                             agent_coord=(None, None),
+                             include_occupancy=True)
+        self.state = next_state
+
+        # Agent
+        x, y = np.where(self.state[1] == 1)
+        x, y = x[0], y[0]
+        if action == 0:
+            x = x-1
+            y = y-1
+        elif action == 1:
+            x = x+1
+        elif action == 2:
+            y = y-3
+        elif action == 3:
+            y = y-2
+        elif action == 4:
+            y = y-1
+        else:
+            raise ValueError
+        x = np.clip(x, 0, 9)
+        y = np.clip(y, 0, 49)
+
+        # State, reward, done
+        if (x, y) == (0, 0):
+            return 10, True
+        elif next_state[0, x, y] == 1:
+            return 0, True
+        else:
+            return 0, False
+
+    def step_through(self, action) -&gt; int:
+        done = False
+        while not done:
+            reward, done = self.step(action)
+        return reward
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="learning-to-plan-in-a-stochastic-environment"><a class="header" href="#learning-to-plan-in-a-stochastic-environment">Learning to plan in a stochastic environment</a></h1>
+<p>In the real world, we do not know the full model of the game (eg. transition rules). But one thing we have are observations. Observations are data.</p>
+<p>Moreover, often we don't get feedback (&quot;reward&quot;) until end of the game, hence making learning difficult. This becomes the <strong>temporal credit assignment problem</strong> where you need to know which move was the one that caused you to lose the game.</p>
+<blockquote>
+<p>💡 So far it's an optimisation problem i.e. find the optimal policy. 
+Now, we don't know the rules (&quot;transition model&quot;) but you get them from observations. To get observations, we need to <strong>explore</strong>. Then, we <strong>learn</strong> from these explorations.</p>
+</blockquote>
+<blockquote>
+<p>💡 Planners: (model → policy)
+Learners: (data → policy)
+where model = (states, transition rules / actions, rewards, etc.)</p>
+</blockquote>
+<blockquote>
+<p>👉🏻 Experience: data</p>
+</blockquote>
+<p><strong>Prediction</strong>: fix \( \pi \), learn \( V \)</p>
+<p><strong>Control</strong>: fix \( V \), learn \( \pi \)</p>
+<blockquote>
+<p>👉🏻 Episode: initial state to terminal state</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sarsa"><a class="header" href="#sarsa">SARSA</a></h1>
+<p>This is an</p>
+<ol>
+<li>on-policy </li>
+<li>1-step \( TD(0) \) learning</li>
+<li>\(\epsilon\)-greedy for action selection.</li>
+</ol>
+<p>Value of the state-action pair is updated as:</p>
+<p>$$
+\text{updatedvalue} \leftarrow \text{currentvalue + (target - currentvalue)}
+$$</p>
+<p>$$
+Q(s,a) \leftarrow Q(s,a) +  \alpha [R(s) + \gamma Q(s',a') -Q(s,a)]
+$$</p>
+<p>where \( a' \) is the action already taken at \( s' \) and</p>
+<p>$$
+\text{TDtarget} = R(s) + Q(s',a')
+$$</p>
+<p>Data needed: \( (s_1,a_1,r_1,s_2,a_2) \)</p>
+<p>Change: \( Q(s_1,a_1) \)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="q-learning"><a class="header" href="#q-learning">Q-learning</a></h1>
+<p>This is an</p>
+<ol>
+<li>off-policy </li>
+<li>1-step \( TD(0) \) learning</li>
+</ol>
+<p>$$
+\text{updatedvalue} \leftarrow \text{currentvalue + (target - currentvalue)}
+$$</p>
+<p>$$
+Q(s,a) \leftarrow Q(s,a) +  \alpha [R(s) + \gamma \max_{a'} Q(s',a') -Q(s,a)]
+$$</p>
+<p>where \( a' \) is the action taken at \( s' \) (need to find the max of all the different actions taken from \( s' \)!) and</p>
+<p>$$
+\text{TDtarget} = R(s) + \gamma \max_{a'} Q(s',a')
+$$</p>
+<p>Data needed: \((s_1,a_1,r_1,s_2,[a_{21}, a_{22}, ...]) \)</p>
+<p>Change: \( Q(s_1,a_1) \)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deep-q-learning"><a class="header" href="#deep-q-learning">Deep Q-learning</a></h1>
+<p>This is like Q-learning. It is</p>
+<ul>
+<li>off-policy</li>
+<li>1-step \( TD(0) \) learning</li>
+<li>Q-function is approximated using a deep neural network (&quot;function approximation&quot;)</li>
+</ul>
+<p>It is still ‘Q’ in a sense that the action still affects the rewards. However, instead of returning the utility in the normal setting,</p>
+<p>$$
+s,a \rightarrow utility
+$$</p>
+<p>we return a “distribution of the utility for each action”</p>
+<p>$$
+s \rightarrow [a_1: 0.3, a_2: 0.1, ..., a_n: 0.5]
+$$</p>
+<p>Parameter updates</p>
+<p>$$
+\text{parameter} \leftarrow \text{parameter + (target - currentvalue)} \times \text{gradient}
+$$</p>
+<p>$$
+w \leftarrow w + \alpha[R(s) + \gamma \max_{a'} Q(s',a') - Q(s,a)] \frac{\partial Q}{\partial w}
+$$</p>
+<p>Flow of events:</p>
+<p>$$
+s \rightarrow Q^{(curr)} \rightarrow a \rightarrow env \rightarrow r, s'
+$$</p>
+<p>Note that \( Q \) here generates a probability vector. Given</p>
+<p>$$
+\text{TDpred} = Q^{(curr)}(s)
+$$</p>
+<p>$$
+\text{TDtarget} = r + \gamma \max_{a'} Q^{(target)}(s')
+$$</p>
+<p>where these two are vectors of probabilities representing each action. We want to minimise the loss so that \( Q^{(current)} \) gets smarter:</p>
+<p>$$
+L = LossFunction(\text{TDpred}, \text{TDtarget})
+$$</p>
+<p>$$
+w^{(curr)} \leftarrow w^{(curr)} - \alpha \frac{\partial L}{\partial w^{(curr)}}
+$$</p>
+<p>Online Q-learning is tricky because of the <em>deadly triad</em>. It's common to use <em>experience replay</em>, a buffer of recent transitions that will be sampled randomly to train the network.</p>
+<blockquote>
+<p>💡 It is learning the temporal difference.</p>
+</blockquote>
+<ol>
+<li>
+<p>Have 2 models (the behaviour <code>Q_curr</code> and  the target <code>Q_target</code>)</p>
+<pre><code class="language-python">Q_curr = Q_target.copy()
+</code></pre>
+</li>
+<li>
+<p>Generate many experiences and save them</p>
+<pre><code class="language-python">    s = env.give_me_the_state()
+    a = Q_curr(s)
+r, s' = env.step(a)
+ExperienceBuffer.save((s, a, r, s'))
+</code></pre>
+</li>
+<li>
+<p>Prepare to train model</p>
+<pre><code class="language-python">s, a, r, s' = sample(ExperienceBuffer)
+</code></pre>
+</li>
+<li>
+<p>Calculate loss. Note that <code>Q_curr</code> should try to make it close</p>
+<pre><code class="language-python">td_pred = Q_curr(s)
+td_true = r + Q_target(s')
+   loss = MSE(td_pred, td_true)
+</code></pre>
+</li>
+<li>
+<p>Backprop. This will update <code>Q_curr</code>.</p>
+<pre><code class="language-python">loss.backward()
+</code></pre>
+</li>
+<li>
+<p>Update the target policy once in a while</p>
+<pre><code class="language-python">Q_target = Q_curr.copy()
+</code></pre>
+</li>
+</ol>
+<p>Data needed: \( (s,a,r,s') \)</p>
+<p>Change: \( Q \)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="learning-the-policy"><a class="header" href="#learning-the-policy">Learning the policy</a></h1>
+<p>AKA policy search</p>
+<p>In policy search, we try to find a policy. One example to represent a policy is by using Q-functions.</p>
+<p>The policy \( \pi \) is parametrised by \( \theta \). The goal is to adjust \( \theta \) to improve policy.</p>
+<p>Often use a stochastic policy \( \pi_\theta(s,a) \) and often we want it to be differentiable (because we want to use gradient descent). An unbiased estimate for gradient ascent is sufficient; no need for exact gradient.</p>
+<p>Recall that utility of a state \( s_0 \)</p>
+<p>$$
+U(s_0) = \sum_a \pi(s_0,a)R(a)
+$$</p>
+<p>Parametrise it with \( \theta \)</p>
+<p>$$
+U_\theta(s_0) = \sum_a \pi_\theta(s_0,a)R(a)
+$$</p>
+<p>Then differentiate wrt to \( \theta \):</p>
+<p>$$
+\begin{aligned}
+&amp; \nabla_\theta U_\theta(s_0) \\
+&amp;= \nabla_\theta \sum_a \pi_\theta(s_0,a)R(a) \\
+&amp;= \sum_a \nabla_\theta\pi_\theta(s_0,a)R(a)
+\end{aligned}
+$$</p>
+<p>but we can sample from the gradient using Monte Carlo methods using importance sampling (where \( \pi_\theta \) is a probability distribution)</p>
+<p>$$
+\begin{aligned}
+&amp;= \sum_a \nabla_\theta\pi_\theta(s_0,a)R(a) \\
+&amp;= \sum_a \pi_\theta(s_0,a) \frac{\nabla_\theta \pi_\theta(s_0,a)R(a)}{\pi_\theta(s_0,a)} \\
+&amp;= \mathbb{E}\Big[\frac{\nabla_\theta \pi_\theta(s_0,a)R(a)}{\pi_\theta(s_0,a)}\Big] \\
+&amp;\approx \frac{1}{N} \sum_{j=1}^N \frac{\nabla_\theta \pi_\theta(s_0,a_j)R(a_j)}{\pi_\theta(s_0,a_j)}
+\end{aligned}
+$$</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reinforce"><a class="header" href="#reinforce">REINFORCE</a></h1>
+<p>Extend \( U(s_0) \) to a <em>sequence</em> (&quot;trajectory&quot; or “episode” \( \tau \)) of states, actions and rewards (expectation).</p>
+<p>$$
+U(\theta) = \sum_\tau p_\theta(\tau)G(\tau)
+$$</p>
+<p>where \( p_\theta(\tau) \) is the probability of generating a sequence \( \tau \), and \( G(\tau) \) is the sum of rewards from trajectory \( \tau \).</p>
+<p>Then we use policy gradient theorem</p>
+<p>$$
+\propto \sum_s p(s) \sum_a \nabla \pi(s,a) Q(s,a)
+$$</p>
+<p>Then use Monte Carlo sampling to approximate the gradient summing over \( N \) trials and \( J \) steps.</p>
+<p>$$
+\approx \frac{1}{N} \sum_{trials}^N \sum_{steps}^J \frac{\nabla \pi(s,a) G(s)}{\pi(s, a)}
+$$</p>
+<p>From here, we use an online update then we get</p>
+<p>$$
+\theta_{j+1}=\theta_{j}+\alpha G_{j} \nabla_{\theta} \ln \pi_{\theta}\left(s, a_{j}\right)
+$$</p>
+<p>where \( G \) is the total reward received from \( j \).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reinforce-with-baseline"><a class="header" href="#reinforce-with-baseline">REINFORCE with baseline</a></h1>
+<p>Baseline function $B(s)$ is to help to reduce variance. This function is used to get the <em>advantage function</em>.</p>
+<blockquote>
+<p>💡 <strong>Advantage function</strong> is Q(s,a) - V(s). It tells about the extra reward that could be obtained by by taking that particular action. This number can be estimated using TD error.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="actor-critic"><a class="header" href="#actor-critic">Actor critic</a></h1>
+<p>Use a TD method instead of Monte Carlo estimate with advantage function.</p>
+<p>Actor = learn a policy</p>
+<p>Critic = learn Q function used for evaluation</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="trpo"><a class="header" href="#trpo">TRPO</a></h1>
+<p>Trust Region Policy Optimization</p>
+<p>Higher-level motivation: Sometimes a poor update (in policy gradient methods) can cause a bad decrease in performance. TRPO &amp; PPO avoids this by trying to get monotonic improvements of policy value.</p>
+<p>Motivation: Example trajectories (sampled from a policy in production) depend on the policy itself. But <strong>we are also changing the policy as we optimise it</strong>. This makes optimisation difficult.</p>
+<p>What do we do?</p>
+<ol>
+<li>
+<p>We discern the objective in terms of <strong>old and new</strong> policy ($U(\pi)$ is to be maximised)</p>
+<p>$$
+U(\pi) = U(\pi_{old}) + \frac{1}{N(s)}\sum_s \sum_a \pi(s|a) A^{\pi_{old}}(...)
+$$</p>
+</li>
+<li>
+<p>We <strong>weight</strong> the states (in a trajectory) according to whether they come from the old policy or the new policy.</p>
+<p>$$
+U(\pi) = U(\pi_{old}) + \sum_s \rho_\pi(s) \sum_a \pi(s|a) A^{\pi_{old}}(...)
+$$</p>
+</li>
+<li>
+<p>The resulting equation becomes hard to optimise, so we use a sampled approximation.</p>
+<p>$$
+L(\pi) = U(\pi_{old}) + \sum_s \rho_{\pi_{old}}(s) \sum_a \pi(s|a) A^{\pi_{old}}(...)
+$$</p>
+<p>It can be shown that the expression below (RHS) has a lower bound (hence resulting in monotonic improvements of the policy). &quot;Minorise-maximisation&quot; algorithm.</p>
+<p>$$
+U(\pi) \ge L(\pi) - C \max_s \text{KL}[\pi_{old}(\cdot|s)||\pi(\cdot|s)]
+$$</p>
+<p>If \( \pi = \pi_{old} \), \( U(\pi_{old}) = L(\pi_{old}) \). Otherwise, \( U(\pi_{old}) &gt; L(\pi_{old}) \).</p>
+</li>
+<li>
+<p>Apply trust region constraint (for faster convergence). Take larger steps in a robust manner.</p>
+</li>
+<li>
+<p>Further approximate the second term using importance sampling.</p>
+</li>
+<li>
+<p>Further approximate using expected KL divergence instead of maximum KL divergence.</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ppo"><a class="header" href="#ppo">PPO</a></h1>
+<p>Proximal Policy Optimisation</p>
+<p>Like TRPO but with</p>
+<ol>
+<li>One small adjustment</li>
+<li>Simplified the approximated objective function</li>
+<li>Clip the objective function. Discourages excessively large policy updates.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="imitation-learning"><a class="header" href="#imitation-learning">Imitation learning</a></h1>
+<p>Use supervised learning to learn a policy using labels provided by an expert (&quot;<strong>teacher</strong> <strong>policy</strong>&quot;). An example is ALVINN, a self-driving car that learns by imitating a human driver.</p>
+<p>Algorithms:</p>
+<ul>
+<li>
+<p>Naive (only the expert)</p>
+<blockquote>
+<p>⚠️ <strong>Limitation</strong>
+The distribution of the training set (from the expert policy) is usually a (smaller) subset of the true distribution. This is because expert might have never reached certain states (because of its expertise). If the function approximator encounters this, it wouldn't know what to do because it has never seen this during training.</p>
+</blockquote>
+<blockquote>
+<p>⚠️ <strong>Limitation</strong>
+Error propagation on structured prediction (for autoregressive problems)</p>
+</blockquote>
+</li>
+<li>
+<p>DAgger (Dataset aggregation)</p>
+<p>There are \( N \) lessons:</p>
+<ul>
+<li>For the first lesson, the teacher is the driver. For subsequent lessons, we are the driver.</li>
+<li>During the lesson, we collect training samples from the driver (just the state!).</li>
+<li>After the lesson (where we were the driver), we ask the teacher to tell us what we should have done correctly at every state we were in. We write these in a csv file.</li>
+<li>Then we learn these training examples.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="planning-in-a-stochastic-environment-with-partial-observability-using-pomdp"><a class="header" href="#planning-in-a-stochastic-environment-with-partial-observability-using-pomdp">Planning in a stochastic environment with partial observability (using POMDP)</a></h1>
+<p>We use a partially observable MDP as a mathematical framework to model an environment with partial observability.</p>
+<p>POMDPs have (among others):</p>
+<ol>
+<li>States</li>
+<li>Actions</li>
+<li>Transitions</li>
+<li>Rewards</li>
+<li><strong>Observation / sensor model</strong></li>
+</ol>
+<p>The <strong>probability</strong> of perceiving evidence in a state.</p>
+<p>$$
+P(e|s)
+$$</p>
+<p><strong>Belief state</strong> (current belief): probability of being in a state given the history. This is updateable as it uses the Markov property.</p>
+<p>$$
+b(s)
+$$</p>
+<p>If \( b(s_1)=0.9 \) and \( b(s_2)=0.1 \), it means that most likely we are in state 1.</p>
+<blockquote>
+<p>⚠️ Belief space is continuous!</p>
+</blockquote>
+<p><strong>Reward function</strong></p>
+<p>$$
+\rho(b) = \sum_s b(s) R(s)
+$$</p>
+<blockquote>
+<p>💡 Optimal policy can be described as a mapping from belief to action (in contrast to a mapping from a state to action).</p>
+</blockquote>
+<p>Updating belief:</p>
+<p>At \( s \), agent performs action (( a \) and to go into state \( s' \) and receives evidence \( e \).</p>
+<p>$$
+b'(s') = \frac{P(e|s') \sum_s P(s'|s,a)b(s)}{Z}<br />
+$$</p>
+<h2 id="value-iteration-1"><a class="header" href="#value-iteration-1">Value iteration</a></h2>
+<p>Compute all alpha vectors</p>
+<h2 id="online-search"><a class="header" href="#online-search">Online search</a></h2>
+<ul>
+<li>POMCP</li>
+<li>DESPOT</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="planning-in-a-multi-agent-environment"><a class="header" href="#planning-in-a-multi-agent-environment">Planning in a multi-agent environment</a></h1>
+<p>We use game theory to model an environment with agents who make rational decisions.</p>
+<p>Each player tries to maximise its own expected utility (&quot;<strong>rational agent</strong>&quot;)</p>
+<p>How do you maximise utility knowing that every other player is also maximising utility?</p>
+<p>Uncertainty comes from decisions of other players</p>
+<p>&quot;once you enter an equilibrium, you won't want to switch&quot;</p>
+<blockquote>
+<p>💡 Rational players will go for Nash equilibrium. If you're not at equilibrium, there will be one player who can outdo you.</p>
+</blockquote>
+<blockquote>
+<p>💡 A solution means to find strategies for each person so that an equilibrium is achieved</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="single-move--simultaneous-games"><a class="header" href="#single-move--simultaneous-games">Single-move / simultaneous games</a></h1>
+<p>Defined by</p>
+<ol>
+<li>
+<p>Players/agents</p>
+</li>
+<li>
+<p>Actions</p>
+</li>
+<li>
+<p>Utility (&quot;<strong>payoff</strong>&quot;) function (strategic form or normal form)</p>
+<p><img src="./single-move-games-1.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eef3c844-5389-4d87-b762-2a3771fd8909/Untitled.png" /></p>
+</li>
+</ol>
+<p>Each player adopts and executes a policy (&quot;<strong>strategy</strong>&quot;):</p>
+<ul>
+<li>Pure strategy: deterministic</li>
+<li>Mixed strategy: randomised based on a probability distribution</li>
+</ul>
+<p>Each player is then assigned a strategy (&quot;<strong>strategy profile</strong>&quot;).</p>
+<p>When each player adopts a rational strategy, then we call it a <strong>solution.</strong></p>
+<p>When each player has a dominant strategy, we call it a dominant strategy equilibrium.</p>
+<p>Prisoner's dilemma: it's a dilemma because they should’ve chosen (refuse, refuse) instead of (testify, testify) where they are both rational.</p>
+<p><strong>Nash equilibrium</strong> is when changing strategy doesn't make it better (?)</p>
+<p>To test if at equilibrium, fix all except one, see if changing strategy will improve</p>
+<p>There will always be an equilibrium is players adopt mixed strategy.</p>
+<blockquote>
+<p>💡 Strategy ≈ policy ≈ solution</p>
+</blockquote>
+<p>Players can play games that can be characterised by:</p>
+<ul>
+<li>No. of players</li>
+<li>If payoffs sum to 0</li>
+<li>If players adopt pure or mixed strategies</li>
+</ul>
+<p>Our goal is to find a Nash equilibrium because that's what rational agents should do otherwise they'll lose out. The following are ways to find the Nash equilibrium depending on the situation:</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="2-player-non-zero-sum-games"><a class="header" href="#2-player-non-zero-sum-games">2-player non-zero-sum games</a></h1>
+<h3 id="2-player-games-non-zero-sum"><a class="header" href="#2-player-games-non-zero-sum"><strong>2-player games (non-zero sum)</strong></a></h3>
+<ul>
+<li>
+<p>Pure strategy</p>
+<p>For each player, remove pure strategies that are strictly dominated by another pure strategy. Then see if there is a strategy profile left.</p>
+<blockquote>
+<p>💡 No Nash equilibrium can involve a strictly dominated strategy. So it should be removed.</p>
+</blockquote>
+<blockquote>
+<p>⚠️ Nash equilibrium may not exist.</p>
+</blockquote>
+</li>
+<li>
+<p>Mixed strategy</p>
+<p>Assign a probability of choosing an action for the 2 players with $p$ and $q$ respectively. Find the solution where utilities for selcting every action is the same.</p>
+<p><img src="./2-player-non-zero-sum-games-1.png" alt="" /></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="other-games"><a class="header" href="#other-games">Other games</a></h1>
+<p>(Computationally intractable)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sequential-games"><a class="header" href="#sequential-games">Sequential games</a></h1>
+<h3 id="algorithms-1"><a class="header" href="#algorithms-1">Algorithms</a></h3>
+<ul>
+<li>Find equation of subtree (subgame)</li>
+</ul>
+<h3 id="example-strategies"><a class="header" href="#example-strategies">Example strategies</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="repeated-games"><a class="header" href="#repeated-games">Repeated games</a></h1>
+<h3 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h3>
+<h3 id="example-strategies-1"><a class="header" href="#example-strategies-1">Example strategies</a></h3>
+<ul>
+<li>Perpetual punishment strategy</li>
+<li>Tit-for-tat strategy</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="on-policy-vs-off-policy-learning"><a class="header" href="#on-policy-vs-off-policy-learning">On-policy vs. off-policy learning</a></h1>
+<p>In off-policy learning, a problem we face is that the distributions from both policies are different. As a result, things we calculate from each distribution (eg. during calculating loss?) will produce different results. So what do we do?</p>
+<p>We need a method that can adjust the averages so that the estimates from the target policy are the same from the behaviour policy's distribution. One way to do this is <strong>importance sampling</strong>.</p>
+<p>How we do it is we calculate the importance sampling ratio $\rho$ of the sequences (trajectory) between both policies.</p>
+<p>Based on this value, we can update the Q values accordingly.</p>
+<blockquote>
+<p>💡 On-policy learning: agent follows the same policy which is iteratively improving</p>
+</blockquote>
+<blockquote>
+<p>💡 Off-policy learning: agent doesn't follow the same policy which it is learning. It instead follows a <strong>behaviour policy</strong> while learning a <strong>target policy</strong>.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exploration-algorithms"><a class="header" href="#exploration-algorithms">Exploration algorithms</a></h1>
+<h3 id="explore-then-exploit"><a class="header" href="#explore-then-exploit">Explore, then exploit</a></h3>
+<ol>
+<li>Try each arm $N$ times.</li>
+<li>Select arm with the highest reward.</li>
+<li>Stick with this arm for the rest of the game.</li>
+</ol>
+<h3 id="ε-greedy"><a class="header" href="#ε-greedy">ε-greedy</a></h3>
+<p>Select greedy action with probability $(1-\epsilon)$</p>
+<p>Select random action with probability $\epsilon$</p>
+<p>Can set $\epsilon=\frac{1}{t}$ to make it GLIE</p>
+<h3 id="ucb"><a class="header" href="#ucb">UCB</a></h3>
+<p>Choose Arm 3 (choose action 3)</p>
+<pre><code>Arm 1   [    ]
+Arm 2     [   ]
+Arm 3           [   ]
+Arm 4  [       ]
+</code></pre>
+<p>&quot;Optimism in the face of uncertainty heuristic&quot;</p>
+<ol>
+<li>Add the error bound to the Q value</li>
+<li>Select the action that maximises the new Q</li>
+</ol>
+<h3 id="thompson-sampling"><a class="header" href="#thompson-sampling">Thompson sampling</a></h3>
+<p>Using Bayes' rule to compute posterior. What's the distribution of the reward given past info and prior?</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deadly-triad"><a class="header" href="#deadly-triad">Deadly triad</a></h1>
+<p>Instability and divergence</p>
+<ol>
+<li>Function approximation (eg. DNN)</li>
+<li>Bootstrapping: using existing estimates as targets rather than complete returns eg. TD (as opposed to MC)</li>
+<li>Off-policy training: training on transition other than that produced by the target policy</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="function-approximation"><a class="header" href="#function-approximation">Function approximation</a></h1>
+<p>Often done by learning from data (hence in this appendix).</p>
+<p>State to action</p>
+<p>$$
+f(s) \rightarrow a
+$$</p>
+<p>State to value</p>
+<p>$$
+f(s) \rightarrow \mathbb{R}
+$$</p>
+<p>Function approximation <strong>approximates utility function</strong> as a function of state variables.</p>
+<p>$$
+U(s) \approx f(s) = \theta_0 + \theta_1 s_1 + ...
+$$</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="decision-theory"><a class="header" href="#decision-theory">Decision theory</a></h1>
+<p>Making rational decisions means making decisions that follow the 4 axioms of decision theory:</p>
+<ol>
+<li>Orderability (comparability)</li>
+<li>Transitivity</li>
+<li>Continuity</li>
+<li>Substitutability</li>
+</ol>
+<p>When deciding between 2 options which can either be a fixed outcome (&quot;<strong>state</strong>&quot;) or a  gamble (&quot;<strong>lottery</strong>&quot;), we compare the usefulness (&quot;<strong>utility</strong>&quot;) between them, i.e. assigning a function \( U \) to them.</p>
+<p>$$
+U(\text{have car}) \ U(\text{have car with prob 0.9}) 
+$$</p>
+<p>Every lottery has a number of possible outcomes or states and their probabilities attached to them. The utility of any lottery is the same as its expectation (&quot;<strong>expected utility</strong>&quot;).</p>
+<p>$$
+L = [0.1, S_1; 0.9; S_2] \
+U(L) = EU(L)=0.1U(S_1)+0.9U(S_2)
+$$</p>
+<p>where &quot;S&quot; is used to denote state.</p>
+<p>By the principle of maximum utility, an agent is said to act rationally (&quot;<strong>rational</strong>&quot;) if it chooses an action (&quot;<strong>action</strong>&quot;) that maximises the expected utiltity. So apparently you can also calculate the expected utility of an action: for every possible outcome, multiply its utility and its probability, then sum all these products.</p>
+<blockquote>
+<p>💡 <strong>von Neumann-Morgenstern utility theorem</strong> says that utility of a lottery is the expected value of the utilities of the outcomes</p>
+</blockquote>
+<p>$$
+U([p_1,S_1; ...; p_n,S_n]) = \sum_{i=1}^N p_i U(S_i)
+$$</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="principal-of-optimality"><a class="header" href="#principal-of-optimality">Principal of optimality</a></h1>
+<p>The principle of optimality states that if we consider an optimal policy, then the subproblem yielded by our first action will have an optimal policy composed of remaining optimal policy actions.</p>
+<p>This leads to the idea of recursion.</p>
+<p>$$
+\begin{aligned}
+U(s_0) &amp;= R(s_0) + \max_{s_0'}U(s_0') \\
+&amp;= R(s_0) + R(s_1) + \max_{s_1'} U(s_1')
+\end{aligned}
+$$</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="counting"><a class="header" href="#counting">Counting</a></h1>
+<p>If there are $n$ positions and $k$ cars, how many different possible combinations will there be if multiple cars can be at the same position?</p>
+<p><strong>Ans</strong>: This means that every car can take $n$ different positions.</p>
+<pre><code>car1 [1,2,...,n]
+car2 [1,2,...,n]
+...
+cark [1,2,...,n]
+</code></pre>
+<p>So there will be $n^k$ different combinations.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mdp"><a class="header" href="#mdp">MDP</a></h1>
+<p>An MDP is a sequence of \( (S, A, P, R) \).</p>
+<p>If probabilities or rewards are unknown, then it's a reinforcement learning</p>
+<h2 id="exploration-algorithms-1"><a class="header" href="#exploration-algorithms-1">Exploration algorithms</a></h2>
+<h3 id="ε-greedy-1"><a class="header" href="#ε-greedy-1">ε-greedy</a></h3>
+<h3 id="thompson-sampling-1"><a class="header" href="#thompson-sampling-1">Thompson sampling</a></h3>
+<p>Only if transition and reward functions can be maintained and well approximated</p>
+<h3 id="rmax"><a class="header" href="#rmax">RMAX</a></h3>
+<p>Optimism in the face of uncertainty heuristic.</p>
+<ul>
+<li>If you don't know (after seeing the state \( m \) times) the reward of (s,a) set it to \( R_{max} \) i.e. the largest possible reward.</li>
+<li>If you don't know (after seeing the state \( m \) times) the transition probabilities of an (s,a), assume it goes deterministically to some state s' where
+<ul>
+<li>R(s',a) = \( R_{max} \)</li>
+<li>P(s'|s',a) = 1</li>
+</ul>
+</li>
+</ul>
+<p>Eventually you get MDP, then you can solve.</p>
+<p>RMAX is a PAC-MDP (Probably Approximately Correct in MDP).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
