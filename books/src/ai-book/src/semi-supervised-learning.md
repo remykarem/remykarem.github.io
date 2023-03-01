@@ -1,23 +1,28 @@
 # Semi-supervised learning
 
-# **Semi-supervised learning**
+Specifically for deep learning:
 
-Small amount of data and large amount of unlabelled data.
+Given a labelled training dataset
 
-# **Weak supervision**
+$$
+(\boldsymbol{x}_1,y_1), (\boldsymbol{x}_2,y_2), ..., (\boldsymbol{x}_N,y_N),
+$$
 
-Labelled data are noisy and imprecise.
+and another unlabelled dataset
 
-Workflow
+$$
+\boldsymbol{z}_1, \boldsymbol{z}_2, ..., \boldsymbol{z}_m,
+$$
 
-1. Process unlabelled data to generate accuracies of label sources
-2. Generate training labels
-3. Train a powerful model
+minimise the objective function
 
-# **Frameworks**
+$$
+\arg \min_{\boldsymbol{\theta}} \frac{1}{N} \sum_{i=1}^N \mathcal{L}(f(\boldsymbol{x}_i; \boldsymbol{\theta}),y_i) + \sum_i^m \mathcal{L'}(\boldsymbol{z_i}, R') + \lambda \Omega (x_i)
+$$
 
-Snorkel: aggregate noisy labelling function outputs to automatically label training data
+where
 
-FlyingSquid
+* \\( \Omega \\) is the regularisation term 
+* \\( R' \\) defines the targets for unlabelled data
 
-FixMatch
+> Good for small amount of data and large amount of unlabelled data.

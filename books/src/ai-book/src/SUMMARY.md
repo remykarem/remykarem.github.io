@@ -22,6 +22,7 @@
     - [Hand pose estimation]()
     - [Reidentification]()
     - [UI](./ui.md)
+  - [Pretraining tasks](./computer-vision/pretraining-tasks.md)
   - [Models](./computer-vision/models.md)
   - [Prompt engineering](./prompt-engineering.md)
 
@@ -41,7 +42,11 @@
     - [Summarisation](./summarisation.md)
     - [Machine translation](./machine-translation.md)
   - [Pretraining tasks](./pretraining.md)
+  - [Language models](./language-models.md)
   - [Models](./nlp/models.md)
+
+- [Graph]()
+  - [Models](./graph/models.md)
 
 - [Multimodal]()
 
@@ -79,8 +84,11 @@
 
 # 'Learning' types
 
-- [Self-supervised learning](./self-supervised-learning.md)
-- [Semi-supervised learning](./semi-supervised-learning.md)
+- [Supervision]()
+  - [Supervised learning](./supervised-learning.md)
+  - [Semi-supervised learning](./semi-supervised-learning.md)
+  - [Weakly-supervised learning](./weakly-supervised-learning.md)
+  - [Self-supervised learning](./self-supervised-learning.md)
 - [Deep learning]()
   - [Intro to DL](./intro-to-dl.md)
   - [Tensor libraries](./tensor-libraries.md)
@@ -99,7 +107,7 @@
   - [improving-speed-accuracy](./improving-speed-accuracy.md)
   - [Activation functions](./activation-functions.md)
 - [Machine learning]()
-- [Reinforcement learning]()
+- [Reinforcement learning](./reinforcement-learning.md)
 - [Bayesian learning]()
 - [Deep generative models](./deep-generative-models.md)
 

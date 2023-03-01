@@ -1,6 +1,6 @@
 # Models
 
-"Foundation language models"
+"Foundation language models" / PFM (Pretrained Foundation Models)
 
 | Year | Model          | Arch            | Pretraining | Params     | Applications                                      |
 | ---- | -------------- | --------------- | ----------- | ---------- | ------------------------------------------------- |
@@ -33,3 +33,9 @@
 | 2018 | BERT           | Encoder         | MLM/NSP     | 110M       | Language understading, question answering         |
 |      | GPT            | Decoder         | LM          | 117M       | Text generation                                   |
 | 2017 | Transformer    | Encoder+Decoder |             |            |
+| ?    | ELMO           | RNN             | LM          |            |
+| ?    | seq2seq        | RNN             |             |            |
+| ?    | UniLM          | ?               |             |            |
+| ?    | ERNIE          | ?               |             |            |
+
+Encoder or Decoder refers to the Transformer encoder or decoder.
