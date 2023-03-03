@@ -5,6 +5,7 @@ Specifically for deep learning:
 * Masked language modelling
 * VAE and GAN are generative SSL methods
 * Contrastive learning
+    * SimCLRv2
 
 Training a model using labels that are inherent in the data, rather than requiring a separate set of labels.
 
