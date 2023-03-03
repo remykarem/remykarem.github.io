@@ -45,6 +45,9 @@
   - [Language models](./language-models.md)
   - [Models](./nlp/models.md)
 
+- [Speech]()
+  - [Models](./speech/models.md)
+
 - [Graph]()
   - [Models](./graph/models.md)
 
@@ -59,7 +62,6 @@
 
 - [Time series]()
 
-- [Audio]()
 
 ---
 
