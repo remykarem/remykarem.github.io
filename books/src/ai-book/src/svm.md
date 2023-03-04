@@ -2,7 +2,9 @@
 
 Support Vector Machine
 
-Find a separate hyperplane ("decision boundary") that has the highest margin. The datapoints which are at the margin are called support vectors.
+**What is SVM?**
+
+SVM is a supervised learning algorithm that maximises the margin between classes by finding the best decision boundary that separates the data into its classes. The datapoints which are at the margin are called **support vectors**.
 
 
 “Large-margin classifier”

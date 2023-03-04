@@ -447,15 +447,7 @@ Pointwise = 1x1 convolution</li>
 <li>Chain-of-Thought - (<a href="https://arxiv.org/abs/2201.11903">Wei et al 2022</a>)</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="language"><a class="header" href="#language">Language</a></h1>
-<ul>
-<li><a href="language.html#vocabulary">Vocabulary</a></li>
-<li><a href="language.html#concepts">Concepts</a></li>
-<li><a href="language.html#tasks--applications">Tasks / applications</a></li>
-<li><a href="language.html#data-types">Data types</a></li>
-<li><a href="language.html#frameworks">Frameworks</a></li>
-<li><a href="language.html#benchmarks">Benchmarks</a></li>
-<li><a href="language.html#multimodal">Multimodal</a></li>
-</ul>
+<!-- toc -->
 <hr />
 <p><a href="http://nlpprogress.com/">http://nlpprogress.com/</a></p>
 <p>The field of designing methods and algorithms that take as input or produce as output unstructured human language.</p>
@@ -918,33 +910,7 @@ Language-Agnostic SEntence Representations. Trained on 90+ languages. Model has 
 <p><a href="https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html#gpt-2">https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html</a></p>
 <p><a href="https://syncedreview.com/2017/09/10/language-model-a-survey-of-the-state-of-the-art-technology/">https://syncedreview.com/2017/09/10/language-model-a-survey-of-the-state-of-the-art-technology/</a></p>
 <hr />
-<ul>
-<li><a href="language-modelling.html#why-model-language">Why model language?</a></li>
-<li><a href="language-modelling.html#types-of-language-models">Types of language models</a></li>
-<li><a href="language-modelling.html#statistical-language-model">Statistical language model</a>
-<ul>
-<li><a href="language-modelling.html#model">Model</a></li>
-<li><a href="language-modelling.html#markov-assumption-as-approximation">Markov assumption as approximation</a></li>
-<li><a href="language-modelling.html#solution-to-optimisation-problem">Solution to optimisation problem</a></li>
-<li><a href="language-modelling.html#tweaks">Tweaks</a></li>
-<li><a href="language-modelling.html#problems">Problems</a></li>
-</ul>
-</li>
-<li><a href="language-modelling.html#neural-language-models">Neural language models</a>
-<ul>
-<li><a href="language-modelling.html#model-1">Model</a></li>
-<li><a href="language-modelling.html#architectures">Architectures</a></li>
-</ul>
-</li>
-<li><a href="language-modelling.html#how">How?</a>
-<ul>
-<li><a href="language-modelling.html#1-teach-the-model-the-world-pre-training">1. Teach the model the world (&quot;pre-training&quot;)</a></li>
-<li><a href="language-modelling.html#2-applying--fine-tune--datasets--downstream-tasks--see-how-well-you-trained-the-model">2. Applying / Fine-tune / datasets / downstream tasks / see how well you trained the model</a></li>
-</ul>
-</li>
-<li><a href="language-modelling.html#types-of-fine-tuning">Types of fine tuning</a></li>
-<li><a href="language-modelling.html#what-did-we-learn">What did we learn?</a></li>
-</ul>
+<!-- toc -->
 <hr />
 <h1 id="why-model-language"><a class="header" href="#why-model-language">Why model language?</a></h1>
 <p>Natural language is not deterministic unlike programming language. This randomness in the sequence of words can be modelled probabilistically. </p>
@@ -1337,13 +1303,7 @@ Score(“keyword”) = degree/frequency
 </div>
 <p>Lastly, rank.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sequence-modelling"><a class="header" href="#sequence-modelling">Sequence modelling</a></h1>
-<ul>
-<li><a href="sequence-modelling.html#motivation">Motivation</a></li>
-<li><a href="sequence-modelling.html#sequence-modelling-design-criteria">Sequence modelling design criteria</a></li>
-<li><a href="sequence-modelling.html#backpropagation-through-time">Backpropagation through time</a></li>
-<li><a href="sequence-modelling.html#lstms-and-grus">LSTMs and GRUs</a></li>
-<li><a href="sequence-modelling.html#attention">Attention</a></li>
-</ul>
+<!-- toc -->
 <h2 id="motivation"><a class="header" href="#motivation">Motivation</a></h2>
 <p>Bag-of-words has no order</p>
 <h2 id="sequence-modelling-design-criteria"><a class="header" href="#sequence-modelling-design-criteria">Sequence modelling design criteria</a></h2>
@@ -2400,14 +2360,7 @@ loss.backward()
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="activation-functions-1"><a class="header" href="#activation-functions-1">Activation functions</a></h1>
 <p>Non-linearity functions</p>
-<ul>
-<li><a href="activation-functions.html#sigmoid">Sigmoid</a></li>
-<li><a href="activation-functions.html#softmax">Softmax</a></li>
-<li><a href="activation-functions.html#relu">ReLU</a></li>
-<li><a href="activation-functions.html#leakyrelu">LeakyReLU</a></li>
-<li><a href="activation-functions.html#gelu">GeLU</a></li>
-<li><a href="activation-functions.html#swiglu">SwiGLU</a></li>
-</ul>
+<!-- toc -->
 <h2 id="sigmoid"><a class="header" href="#sigmoid">Sigmoid</a></h2>
 <p>$$
 \sigma(x) = \frac{1}{1+\exp(-x)}\\
@@ -2468,15 +2421,7 @@ $$</p>
 <h2 id="gelu"><a class="header" href="#gelu">GeLU</a></h2>
 <h2 id="swiglu"><a class="header" href="#swiglu">SwiGLU</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="loss-functions"><a class="header" href="#loss-functions">Loss functions</a></h1>
-<ul>
-<li><a href="loss-functions.html#mse-regression">MSE (regression)</a></li>
-<li><a href="loss-functions.html#cross-entropy-loss-classification">Cross entropy loss (classification)</a>
-<ul>
-<li><a href="loss-functions.html#binary-cross-entropy-2-class">Binary cross entropy (2-class)</a></li>
-</ul>
-</li>
-<li><a href="loss-functions.html#with-l2">With L2</a></li>
-</ul>
+<!-- toc -->
 <h2 id="mse-regression"><a class="header" href="#mse-regression">MSE (regression)</a></h2>
 <p>$$
 \boldsymbol{x} = 
@@ -2935,7 +2880,8 @@ print(pca.components_.T)
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="svm"><a class="header" href="#svm">SVM</a></h1>
 <p>Support Vector Machine</p>
-<p>Find a separate hyperplane (&quot;decision boundary&quot;) that has the highest margin. The datapoints which are at the margin are called support vectors.</p>
+<p><strong>What is SVM?</strong></p>
+<p>SVM is a supervised learning algorithm that maximises the margin between classes by finding the best decision boundary that separates the data into its classes. The datapoints which are at the margin are called <strong>support vectors</strong>.</p>
 <p>“Large-margin classifier”</p>
 <ul>
 <li>Linear separable</li>
