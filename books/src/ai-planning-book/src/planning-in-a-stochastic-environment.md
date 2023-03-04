@@ -15,21 +15,27 @@ Markov decision process: every decision point does not require you to know about
 
 How to plan in a stochastic environment? We want a policy that tells us what action to take given a state. To get this policy, we need to run value iteration or policy iteration. Sometimes we don't need to have the entire policy possibly because there are too many states. In this case, we perform online search (finding the best action at that state).
 
-**State**
+---
+
+<!-- toc -->
+
+---
+
+## State
 
 $$
 s
 $$
 
-**Actions**
+## Action
 
 $$
 a
 $$
 
-**Transition matrix**
+## Transition matrix
 
-> 💡 If I take action $a$ at state $s$, what is the probability that I end up at state $s'$?
+> 💡 If I take action \\( a \\) at state \\( s \\), what is the probability that I end up at state \\( s' \\)?
 
 > ⚠️ Note that action has already been determined.
 
@@ -43,15 +49,23 @@ $$
 
 > ⚠️ Transitions must be Markovian
 
-**Reward**
+## Reward and reward function
+
+A function ("**reward function**") that maps a state \\( s \\) to a value ("**reward**").
 
 $$
 R(s) \rightarrow \mathbb{R}
 $$
 
-**Policy** 
+Reward functions can also depend on both the state and the action:
 
-"what action should I take at a particular state?"
+$$
+R(s,a) \rightarrow \mathbb{R}
+$$
+
+## Policy
+
+A function ("**policy**") that maps a state to an action. It answers the question "what action should I take at a particular state?"
 
 $$
 \pi(s) \rightarrow a
@@ -63,7 +77,9 @@ $$
 U([s_0, s_1, ...]) \rightarrow \mathbb{R}
 $$
 
-**(Expected) utility of a state** 
+## Utility of a state
+
+The utility of a state is a measure of how “useful” a state is. To be used later to compare between utilities of other states.
 
 $$
 U(s) \rightarrow \mathbb{R}
@@ -82,9 +98,7 @@ $$
 
 = rewards from current state + rewards from future states
 
-> 💡 A measure of how “useful” a state is. To be used later to compare between utilities of other states.
-
-**Value** **function**
+## Value function
 
 The value function is the utility of a state under an *optimal* policy. It is the Bellman equation itself.
 
@@ -110,24 +124,24 @@ $$
 From the value function \\( V \\), we can derive the optimal policy \\( \pi^* \\)
 
 $$
-\pi^*(s) = \argmax_a \sum_{s'} P(s'|s,a)  V(s')
+\pi^*(s) = \arg \max_a \sum_{s'} P(s'|s,a)  V(s')
 $$
 
-> 💡 Suppose you are in a state $s$. For every action in this state, compute its weighted value (based on the transition probabilities). Then find the action that returns the highest expected value.
+> 💡 Suppose you are in a state \\( s \\). For every action in this state, compute its weighted value (based on the transition probabilities). Then find the action that returns the highest expected value.
 
-**Q-function**
+## Q-function
 
-Like the value function, the Q function is the utility of taking an action at a given state under an *optimal* policy.
+Like the value function, the Q-function is the utility of taking an action at a given state under an *optimal* policy.
 
-> 💡 (what's the expected reward given that you start from a certain state $s$ and take a certain action $a$)
+> 💡 (what's the expected reward given that you start from a certain state \\( s \\) and take a certain action \\( a \\))
 
 $$
 Q(s,a) = R(s) + \gamma \sum_{s'} P(s'|s,a) \max_{a'} Q(s', a')
 $$
 
-**Sum of rewards**
+## Sum of rewards
 
-The sum of rewards for an episode that starts with state $s$.
+The sum of rewards for an episode that starts with state \\( s \\).
 
 $$
 G(s)
@@ -135,16 +149,18 @@ $$
 
 Two notations exist:
 
-1. \\( G_k \\) indicates the cumulative rewards for the $k$th episode.
+1. \\( G_k \\) indicates the cumulative rewards for the \\( k \\)th episode.
 2. \\( G_{t:t+n} = R_t + R_{t+1} + ... +  R_{t+n-1} + \hat{U}(S_{t+n}) \\) (discounts are omitted for readability)
 
-**Trajectory**
+## Trajectory
+
+A sequence of states that have been undertaken is called a "**trajectory**" or an "**episode**".
 
 $$
 \tau
 $$
 
-**Advantage function**
+## Advantage function
 
 $$
 A(s,a) = Q(s,a) - V(s)

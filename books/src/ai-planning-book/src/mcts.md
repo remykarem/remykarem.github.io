@@ -2,7 +2,9 @@
 
 Sample a problem space randomly and repeatedly in order to obtain a more accurate understanding ("**statistics**") and to decide which action to take next.
 
-[https://s3-us-west-2.amazonaws.com/secure.notion-static.com/78109082-b562-4648-b767-be5e484ddbce/video-output-19879316-4B55-4C39-99C9-7201375BE911.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/78109082-b562-4648-b767-be5e484ddbce/video-output-19879316-4B55-4C39-99C9-7201375BE911.mov)
+<video src="./mcts.mov" width="400" controls>
+</video>
+
 
 Q-function in MCTS is defined as
 

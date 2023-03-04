@@ -2,7 +2,7 @@
 
 Policy iteration is a variant of value iteration.
 
-1. Initialise $U$ to 0. Initialise $\pi$ randomly.
+1. Initialise \\( U \\) to 0. Initialise \\( \pi \\) randomly.
 2. **Policy evaluation** (similar to Bellman update). Run for all states.
     
     $$
