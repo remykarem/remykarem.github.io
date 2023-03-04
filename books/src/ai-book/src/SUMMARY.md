@@ -7,6 +7,11 @@
 - [EDA](./general/eda.md)
 - [Tasks]()
   - [Anomaly detection](./anomaly-detection.md)
+  - [Recsys](./recsys.md)
+    - [YouTube](./recsys-youtube.md)
+  - [Survival analysis](./survival-analysis.md)
+  - [Market basket analysis]()
+  - [Time series analysis]()
 - [Processing]()
 - [Hyperparameter optimisation](./hyperparameter-optimisation.md)
 - [Feature transformation](./feature-transformation.md)
@@ -103,16 +108,6 @@
 # Domain: AI planning
 
 - [AI planning]()
-
----
-
-# Tasks / problems
-
-- [Recsys](./recsys.md)
-  - [YouTube](./recsys-youtube.md)
-- [Survival analysis](./survival-analysis.md)
-- [Market basket analysis]()
-- [Time series analysis]()
 
 ---
 
