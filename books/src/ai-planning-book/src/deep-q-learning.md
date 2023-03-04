@@ -1,10 +1,14 @@
 # Deep Q-learning
 
+Deep Q-network
+
 This is like Q-learning. It is
 
 - off-policy
 - 1-step \\( TD(0) \\) learning
 - Q-function is approximated using a deep neural network ("function approximation")
+
+![DQN](./dqn.png)
 
 It is still ‘Q’ in a sense that the action still affects the rewards. However, instead of returning the utility in the normal setting,
 

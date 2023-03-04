@@ -1,4 +1,6 @@
-# Learning the Q-function (model-free RL)
+# Learning the Q-function
+
+aka value learning, model-free RL
 
 Recall that if at every state, we know what is the best action to take,
 

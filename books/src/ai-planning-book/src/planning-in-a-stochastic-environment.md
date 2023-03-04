@@ -139,6 +139,14 @@ $$
 Q(s,a) = R(s) + \gamma \sum_{s'} P(s'|s,a) \max_{a'} Q(s', a')
 $$
 
+The higher the Q-value, the more desirable is the action at that state.
+
+From the Q-function, we can derive the optimal policy \\( \pi^* \\):
+
+$$
+\pi^*(s) = \arg \max_a Q(s,a)
+$$
+
 ## Sum of rewards
 
 The sum of rewards for an episode that starts with state \\( s \\).
