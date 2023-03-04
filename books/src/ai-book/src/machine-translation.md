@@ -130,10 +130,7 @@ BLEU - Bilingual Evaluation Understudy Score: metric for evaluating a generated 
 
 # **Datasets**
 
-WMT (Workshop on Statistical Machine Translation)
-
-OPUS [http://opus.nlpl.eu](http://opus.nlpl.eu/)
-
-CCMatrix
-
-CCAligned
+* WMT (Workshop on Statistical Machine Translation)
+* OPUS [http://opus.nlpl.eu](http://opus.nlpl.eu/)
+* CCMatrix
+* CCAligned

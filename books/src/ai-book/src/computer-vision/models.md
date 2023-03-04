@@ -6,6 +6,7 @@
 | 2021 | Latent Diffusion    |
 | 2020 | StyleGAN            | Image  | GAN              |
 |      | ViT                 | Image? | Transformer      |        |
+| ?    | DeiT                | Image? | Transformer      |        |
 | 2018 | EfficientNet        | Image  |
 |      | BigGAN              |        | GAN              |        |
 | 2017 | ResNeXt-50          | Image  |

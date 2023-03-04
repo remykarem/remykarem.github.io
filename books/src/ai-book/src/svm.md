@@ -19,3 +19,7 @@ SVM is a supervised learning algorithm that maximises the margin between classes
         - What Kernel Trick does is it utilises existing features, applies some transformations, and creates new features.
         - Think of the polynomial kernel as a transformer/processor to generate new features by applying the polynomial combination of all the existing features.
         - Think of the Radial Basis Function kernel as a transformer/processor to generate new features by measuring the distance between all other dots to a specific dot/dots — centres.
+
+## Visualisation
+
+[https://dash.gallery/dash-svm/](https://dash.gallery/dash-svm/)

@@ -1,6 +1,6 @@
 # Models
 
-"Foundation language models" / PFM (Pretrained Foundation Models)
+"Foundation language models" / PFM (Pretrained Foundation Models) / LLMs (Large Language Models)
 
 | Year | Model          | Arch            | Pretraining | Params     | Applications                                      |
 | ---- | -------------- | --------------- | ----------- | ---------- | ------------------------------------------------- |

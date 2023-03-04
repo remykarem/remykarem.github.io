@@ -1,87 +1,91 @@
 # Summary
 
-# Domains / data
+[Preface](./preface.md)
 
-- [General]()
+# General
 
-  - [EDA](./general/eda.md)
-  - [Processing]()
-  - [Tasks]()
-    - [Anomaly detection](./anomaly-detection.md)
-
-- [Vision]()
-
-  - [EDA]()
-  - [Processing]()
-  - [Techniques](./techniques.md)
-  - [Regularisation](./vision/regularisation.md)
-  - [Tasks]()
-    - [Image classification]()
-    - [Semantic segmentation]()
-    - [Object detection]()
-    - [Instance segmentation]()
-    - [Pose estimation]()
-    - [Hand pose estimation]()
-    - [Reidentification]()
-    - [UI](./ui.md)
-  - [Pretraining tasks](./computer-vision/pretraining-tasks.md)
-  - [Models](./computer-vision/models.md)
-  - [Prompt engineering](./prompt-engineering.md)
-
-- [Language](./language.md)
-
-  - [Processing](./processing.md)
-    - [Tokenisatin](./tokenisation.md)
-    - [Embeddings](./embeddings.md)
-    - [Encoding](./encoding.md)
-    - [Representation](./representation.md)
-  - [Tasks]()
-    - [Language modelling](./language-modelling.md)
-    - [Topic modelling](./topic-modelling.md)
-    - [Sequence modelling](./sequence-modelling.md)
-  - [Tasks]()
-    - [Common sense reasoning]()
-    - [Summarisation](./summarisation.md)
-    - [Machine translation](./machine-translation.md)
-  - [Pretraining tasks](./pretraining.md)
-  - [Language models](./language-models.md)
-  - [Models](./nlp/models.md)
-
-- [Speech]()
-  - [Models](./speech/models.md)
-
-- [Graph]()
-  - [Models](./graph/models.md)
-
-- [Multimodal]()
-
-  - [Pretraining tasks](./multimodal/pretraining.md)
-  - [Models](./multimodal/models.md)
-
-- [Planning]()
-
-- [Graph mining]()
-
+- [EDA](./general/eda.md)
+- [Tasks]()
+  - [Anomaly detection](./anomaly-detection.md)
+- [Processing]()
 - [Time series]()
 
+---
+
+# Domain: Vision
+
+- [EDA](./vision/eda.md)
+- [Image processing](./image-processing.md)
+- [Image frameworks](./image-frameworks.md)
+- [Techniques](./techniques.md)
+- [Regularisation](./vision/regularisation.md)
+- [Tasks]()
+  - [Image classification](./image-classification.md)
+  - [Object detection](./object-detection.md)
+  - [Semantic segmentation](./instance-segmentation.md)
+  - [Reidentification](./reidentification.md)
+  - [OCR](./ocr.md)
+  - [UI](./ui.md)
+  - [Others](./vision/others.md)
+- [Pretraining tasks](./computer-vision/pretraining-tasks.md)
+- [Models](./computer-vision/models.md)
+- [Prompt engineering](./prompt-engineering.md)
 
 ---
 
-# Concepts
+# Domain: Language
 
-- [Knowledge distillation]()
+- [Intro](./language.md)
+- [Processing](./processing.md)
+  - [Tokenisation](./tokenisation.md)
+  - [Embeddings](./embeddings.md)
+  - [Encoding](./encoding.md)
+  - [Representation](./representation.md)
+- [Tasks]()
+  - [Language modelling](./language-modelling.md)
+  - [Topic modelling](./topic-modelling.md)
+  - [Sequence modelling](./sequence-modelling.md)
+- [Tasks]()
+  - [NER](./ner.md)
+  - [Sentiment analysis](./sentiment-analysis.md)
+  - [QA](./qa.md)
+  - [Common sense reasoning]()
+  - [Summarisation](./summarisation.md)
+  - [Machine translation](./machine-translation.md)
+- [Pretraining tasks](./pretraining.md)
+- [Language models](./language-models.md)
+- [Models](./nlp/models.md)
 
 ---
 
-- [Classes of algorithms]()
-  - [Supervised learning]()
-  - [Unsupervised learning]()
-    - [Clustering algorithms](./clustering-algorithms.md)
-    - [Dimensionality reduction algorithms]()
-  - [n-shot learning]()
-- [AutoML]()
-- [Metrics]()
+# Domain: Speech
+
+- [Digital signal processing](./digital-signal-processing.md)
+- [Models](./speech/models.md)
+
+---
+
+# Domain: Graph
+
+- [Models](./graph/models.md)
+
+---
+
+# Domain: Multimodal
+
+- [Pretraining tasks](./multimodal/pretraining.md)
+- [Models](./multimodal/models.md)
+
+---
+
+# Domain: AI planning
+
+- [AI planning]()
+
+---
+
 - [Loss functions]()
+- [Metrics](./metrics.md)
 - [Hyperparameter optimisation]()
 
 ---
@@ -93,7 +97,12 @@
   - [Semi-supervised learning](./semi-supervised-learning.md)
   - [Weakly-supervised learning](./weakly-supervised-learning.md)
   - [Self-supervised learning](./self-supervised-learning.md)
+  - [Unsupervised learning]()
+    - [Clustering algorithms](./clustering-algorithms.md)
+    - [Dimensionality reduction algorithms]()
+- [n-shot learning]()
 - [Deep learning]()
+  - [Knowledge distillation]()
   - [Intro to DL](./intro-to-dl.md)
   - [Tensor libraries](./tensor-libraries.md)
   - [Sparse matrices](./sparse-matrices.md)
@@ -114,11 +123,13 @@
 - [Machine learning]()
 - [Reinforcement learning](./reinforcement-learning.md)
 - [Bayesian learning]()
+- [Metric learning](./metric-learning.md)
+- [Learning to rank](./learning-to-rank.md)
 - [Deep generative models](./deep-generative-models.md)
 
 ---
 
-# Models / algorithms
+# Models and algorithms
 
 - [Association rule mining]()
 - [Decision tree](./decision-tree.md)
@@ -133,7 +144,7 @@
 - [k-NN](./k-nn.md)
 - [k-means](./k-means.md)
 - [KDE]()
-- [LDA]()
+- [LDA](./lda.md)
 - [Linear models](./linear-models.md)
 - [Logistic regression](./logistic-regression.md)
 - [Mean shift](./mean-shift.md)
@@ -181,3 +192,4 @@
 - [Concept drift](./concept-drift.md)
 - [Interpretable AI](./interpretable-ai.md)
 - [Adversarial AI](./adversarial-ai.md)
+- [AutoML](./automl.md)
