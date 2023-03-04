@@ -28,3 +28,27 @@
 | ?    | CycleGAN            |        | GAN              |        |
 | ?    | GauGAN              |        | GAN              |        |
 | ?    | YOLO                |        | Object detection |        |
+
+Architectures
+
+- LeNet-5
+  - [Conv-Tanh-Pooling]
+- AlexNet
+  - [Conv-ReLU-Pooling]
+  - Dropout
+- VGG
+  - [Conv-ReLU-Pooling]; more uniform conv
+  - Stacking uniform convolutional layers
+- Inception-v1
+  - [Modular] (concat)
+  - 1x1
+  - Average-pooling
+- Inception-v2
+  - Batch norm
+- Inception-v3
+  - Kernel factorisation
+  - (label smoothing)
+- ResNet
+  - Skip connections (add)
+- Xception
+  - Depthwise separable
