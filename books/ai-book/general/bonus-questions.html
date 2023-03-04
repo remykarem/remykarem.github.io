@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Bonus questions - ai-book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">General</li><li class="chapter-item expanded "><a href="../general/eda.html"><strong aria-hidden="true">1.</strong> EDA</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../anomaly-detection.html"><strong aria-hidden="true">2.1.</strong> Anomaly detection</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Processing</div></li><li class="chapter-item expanded "><a href="../hyperparameter-optimisation.html"><strong aria-hidden="true">4.</strong> Hyperparameter optimisation</a></li><li class="chapter-item expanded "><a href="../feature-transformation.html"><strong aria-hidden="true">5.</strong> Feature transformation</a></li><li class="chapter-item expanded "><a href="../feature-selection.html"><strong aria-hidden="true">6.</strong> Feature selection</a></li><li class="chapter-item expanded "><a href="../feature-engineering.html"><strong aria-hidden="true">7.</strong> Feature engineering</a></li><li class="chapter-item expanded "><a href="../train-test-split.html"><strong aria-hidden="true">8.</strong> Train-test split</a></li><li class="chapter-item expanded "><a href="../cross-validation.html"><strong aria-hidden="true">9.</strong> Cross validation</a></li><li class="chapter-item expanded "><a href="../ensembling.html"><strong aria-hidden="true">10.</strong> Ensembling</a></li><li class="chapter-item expanded "><a href="../eda-plus-plus.html"><strong aria-hidden="true">11.</strong> EDA++</a></li><li class="chapter-item expanded "><a href="../tests.html"><strong aria-hidden="true">12.</strong> Tests</a></li><li class="chapter-item expanded "><a href="../ml-system-design.html"><strong aria-hidden="true">13.</strong> ML system design</a></li><li class="chapter-item expanded "><a href="../general-metrics.html"><strong aria-hidden="true">14.</strong> Metrics</a></li><li class="chapter-item expanded "><a href="../loss-and-regularisation.html"><strong aria-hidden="true">15.</strong> Loss and regularisation</a></li><li class="chapter-item expanded "><a href="../general/bonus-questions.html" class="active"><strong aria-hidden="true">16.</strong> Bonus questions</a></li><li class="chapter-item expanded "><a href="../bias-variance-decomposition.html"><strong aria-hidden="true">17.</strong> Bias-variance decomposition</a></li><li class="chapter-item expanded "><a href="../rare-event-classification.html"><strong aria-hidden="true">18.</strong> Rare event classification / anomaly detection</a></li><li class="chapter-item expanded "><a href="../blas.html"><strong aria-hidden="true">19.</strong> BLAS</a></li><li class="chapter-item expanded "><a href="../coursera.html"><strong aria-hidden="true">20.</strong> Coursera</a></li><li class="chapter-item expanded "><a href="../improve-generalisation.html"><strong aria-hidden="true">21.</strong> Improve generalisation</a></li><li class="chapter-item expanded "><a href="../general-course-history.html"><strong aria-hidden="true">22.</strong> Course history</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Domain: Vision</li><li class="chapter-item expanded "><a href="../vision/eda.html"><strong aria-hidden="true">23.</strong> EDA</a></li><li class="chapter-item expanded "><a href="../image-processing.html"><strong aria-hidden="true">24.</strong> Image processing</a></li><li class="chapter-item expanded "><a href="../image-frameworks.html"><strong aria-hidden="true">25.</strong> Image frameworks</a></li><li class="chapter-item expanded "><a href="../techniques.html"><strong aria-hidden="true">26.</strong> Techniques</a></li><li class="chapter-item expanded "><a href="../vision/regularisation.html"><strong aria-hidden="true">27.</strong> Regularisation</a></li><li class="chapter-item expanded "><a href="../basic-cnn-architectures.html"><strong aria-hidden="true">28.</strong> Basic CNN architectures</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">29.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../image-classification.html"><strong aria-hidden="true">29.1.</strong> Image classification</a></li><li class="chapter-item expanded "><a href="../object-detection.html"><strong aria-hidden="true">29.2.</strong> Object detection</a></li><li class="chapter-item expanded "><a href="../instance-segmentation.html"><strong aria-hidden="true">29.3.</strong> Semantic segmentation</a></li><li class="chapter-item expanded "><a href="../reidentification.html"><strong aria-hidden="true">29.4.</strong> Reidentification</a></li><li class="chapter-item expanded "><a href="../autoaugment.html"><strong aria-hidden="true">29.5.</strong> AutoAugment</a></li><li class="chapter-item expanded "><a href="../style-transfer.html"><strong aria-hidden="true">29.6.</strong> Style transfer</a></li><li class="chapter-item expanded "><a href="../obj-inst-seg.html"><strong aria-hidden="true">29.7.</strong> Obj det / instance seg</a></li><li class="chapter-item expanded "><a href="../ocr.html"><strong aria-hidden="true">29.8.</strong> OCR</a></li><li class="chapter-item expanded "><a href="../ui.html"><strong aria-hidden="true">29.9.</strong> UI</a></li><li class="chapter-item expanded "><a href="../vision/others.html"><strong aria-hidden="true">29.10.</strong> Others</a></li></ol></li><li class="chapter-item expanded "><a href="../computer-vision/pretraining-tasks.html"><strong aria-hidden="true">30.</strong> Pretraining tasks</a></li><li class="chapter-item expanded "><a href="../computer-vision/models.html"><strong aria-hidden="true">31.</strong> Models</a></li><li class="chapter-item expanded "><a href="../prompt-engineering.html"><strong aria-hidden="true">32.</strong> Prompt engineering</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Domain: Language</li><li class="chapter-item expanded "><a href="../language.html"><strong aria-hidden="true">33.</strong> Intro</a></li><li class="chapter-item expanded "><a href="../processing.html"><strong aria-hidden="true">34.</strong> Processing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tokenisation.html"><strong aria-hidden="true">34.1.</strong> Tokenisation</a></li><li class="chapter-item expanded "><a href="../embeddings.html"><strong aria-hidden="true">34.2.</strong> Embeddings</a></li><li class="chapter-item expanded "><a href="../encoding.html"><strong aria-hidden="true">34.3.</strong> Encoding</a></li><li class="chapter-item expanded "><a href="../representation.html"><strong aria-hidden="true">34.4.</strong> Representation</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">35.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../language-modelling.html"><strong aria-hidden="true">35.1.</strong> Language modelling</a></li><li class="chapter-item expanded "><a href="../topic-modelling.html"><strong aria-hidden="true">35.2.</strong> Topic modelling</a></li><li class="chapter-item expanded "><a href="../sequence-modelling.html"><strong aria-hidden="true">35.3.</strong> Sequence modelling</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">36.</strong> Tasks</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ner.html"><strong aria-hidden="true">36.1.</strong> NER</a></li><li class="chapter-item expanded "><a href="../sentiment-analysis.html"><strong aria-hidden="true">36.2.</strong> Sentiment analysis</a></li><li class="chapter-item expanded "><a href="../qa.html"><strong aria-hidden="true">36.3.</strong> QA</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">36.4.</strong> Common sense reasoning</div></li><li class="chapter-item expanded "><a href="../summarisation.html"><strong aria-hidden="true">36.5.</strong> Summarisation</a></li><li class="chapter-item expanded "><a href="../machine-translation.html"><strong aria-hidden="true">36.6.</strong> Machine translation</a></li></ol></li><li class="chapter-item expanded "><a href="../pretraining.html"><strong aria-hidden="true">37.</strong> Pretraining tasks</a></li><li class="chapter-item expanded "><a href="../language-models.html"><strong aria-hidden="true">38.</strong> Language models</a></li><li class="chapter-item expanded "><a href="../nlp/models.html"><strong aria-hidden="true">39.</strong> Models</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Domain: Speech</li><li class="chapter-item expanded "><a href="../digital-signal-processing.html"><strong aria-hidden="true">40.</strong> Digital signal processing</a></li><li class="chapter-item expanded "><a href="../speech/models.html"><strong aria-hidden="true">41.</strong> Models</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Domain: Graph</li><li class="chapter-item expanded "><a href="../graph/models.html"><strong aria-hidden="true">42.</strong> Models</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Domain: Multimodal</li><li class="chapter-item expanded "><a href="../multimodal/pretraining.html"><strong aria-hidden="true">43.</strong> Pretraining tasks</a></li><li class="chapter-item expanded "><a href="../multimodal/models.html"><strong aria-hidden="true">44.</strong> Models</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Domain: AI planning</li><li class="chapter-item expanded "><div><strong aria-hidden="true">45.</strong> AI planning</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Tasks / problems</li><li class="chapter-item expanded "><a href="../recsys.html"><strong aria-hidden="true">46.</strong> Recsys</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../recsys-youtube.html"><strong aria-hidden="true">46.1.</strong> YouTube</a></li></ol></li><li class="chapter-item expanded "><a href="../survival-analysis.html"><strong aria-hidden="true">47.</strong> Survival analysis</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">48.</strong> Market basket analysis</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">49.</strong> Time series analysis</div></li><li class="spacer"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">50.</strong> Loss functions</div></li><li class="chapter-item expanded "><a href="../metrics.html"><strong aria-hidden="true">51.</strong> Metrics</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">52.</strong> Hyperparameter optimisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">'Learning' types</li><li class="chapter-item expanded "><div><strong aria-hidden="true">53.</strong> Supervision</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../supervised-learning.html"><strong aria-hidden="true">53.1.</strong> Supervised learning</a></li><li class="chapter-item expanded "><a href="../semi-supervised-learning.html"><strong aria-hidden="true">53.2.</strong> Semi-supervised learning</a></li><li class="chapter-item expanded "><a href="../weakly-supervised-learning.html"><strong aria-hidden="true">53.3.</strong> Weakly-supervised learning</a></li><li class="chapter-item expanded "><a href="../self-supervised-learning.html"><strong aria-hidden="true">53.4.</strong> Self-supervised learning</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">53.5.</strong> Unsupervised learning</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../clustering-algorithms.html"><strong aria-hidden="true">53.5.1.</strong> Clustering algorithms</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">53.5.2.</strong> Dimensionality reduction algorithms</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">54.</strong> n-shot learning</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">55.</strong> Deep learning</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">55.1.</strong> Knowledge distillation</div></li><li class="chapter-item expanded "><a href="../intro-to-dl.html"><strong aria-hidden="true">55.2.</strong> Intro to DL</a></li><li class="chapter-item expanded "><a href="../tensor-libraries.html"><strong aria-hidden="true">55.3.</strong> Tensor libraries</a></li><li class="chapter-item expanded "><a href="../sparse-matrices.html"><strong aria-hidden="true">55.4.</strong> Sparse matrices</a></li><li class="chapter-item expanded "><a href="../transfer-learning.html"><strong aria-hidden="true">55.5.</strong> Transfer learning</a></li><li class="chapter-item expanded "><a href="../weight-initialisation.html"><strong aria-hidden="true">55.6.</strong> Weight initialisation</a></li><li class="chapter-item expanded "><a href="../bonus-questions.html"><strong aria-hidden="true">55.7.</strong> Bonus questions</a></li><li class="chapter-item expanded "><a href="../frameworks.html"><strong aria-hidden="true">55.8.</strong> Frameworks</a></li><li class="chapter-item expanded "><a href="../improving-predictive-power.html"><strong aria-hidden="true">55.9.</strong> Improving predictive power</a></li><li class="chapter-item expanded "><a href="../optimisers.html"><strong aria-hidden="true">55.10.</strong> SGD optimisers</a></li><li class="chapter-item expanded "><a href="../limitations-and-new-frontiers.html"><strong aria-hidden="true">55.11.</strong> Limitations and new frontiers</a></li><li class="chapter-item expanded "><a href="../learning-rate-scheduler.html"><strong aria-hidden="true">55.12.</strong> Learning rate scheduler</a></li><li class="chapter-item expanded "><a href="../backpropagation-softmax-and-categorical-cross.html"><strong aria-hidden="true">55.13.</strong> Backpropagation softmax and categorical cross</a></li><li class="chapter-item expanded "><a href="../hyperparameter-search.html"><strong aria-hidden="true">55.14.</strong> hyperparameter-search</a></li><li class="chapter-item expanded "><a href="../layers.html"><strong aria-hidden="true">55.15.</strong> layers</a></li><li class="chapter-item expanded "><a href="../improving-speed-accuracy.html"><strong aria-hidden="true">55.16.</strong> improving-speed-accuracy</a></li><li class="chapter-item expanded "><a href="../activation-functions.html"><strong aria-hidden="true">55.17.</strong> Activation functions</a></li><li class="chapter-item expanded "><a href="../loss-functions.html"><strong aria-hidden="true">55.18.</strong> Loss functions</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">56.</strong> Machine learning</div></li><li class="chapter-item expanded "><a href="../reinforcement-learning.html"><strong aria-hidden="true">57.</strong> Reinforcement learning</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">58.</strong> Bayesian learning</div></li><li class="chapter-item expanded "><a href="../metric-learning.html"><strong aria-hidden="true">59.</strong> Metric learning</a></li><li class="chapter-item expanded "><a href="../learning-to-rank.html"><strong aria-hidden="true">60.</strong> Learning to rank</a></li><li class="chapter-item expanded "><a href="../deep-generative-models.html"><strong aria-hidden="true">61.</strong> Deep generative models</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Models and algorithms</li><li class="chapter-item expanded "><div><strong aria-hidden="true">62.</strong> Association rule mining</div></li><li class="chapter-item expanded "><a href="../decision-tree.html"><strong aria-hidden="true">63.</strong> Decision tree</a></li><li class="chapter-item expanded "><a href="../dbscan.html"><strong aria-hidden="true">64.</strong> DBSCAN</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">65.</strong> Diffusion model</div></li><li class="chapter-item expanded "><a href="../evolutionary-algorithms.html"><strong aria-hidden="true">66.</strong> Evolutionary algorithms</a></li><li class="chapter-item expanded "><a href="../gaussian-process.html"><strong aria-hidden="true">67.</strong> Gaussian process</a></li><li class="chapter-item expanded "><a href="../gmm.html"><strong aria-hidden="true">68.</strong> GMM</a></li><li class="chapter-item expanded "><a href="../hierarchical-clustering.html"><strong aria-hidden="true">69.</strong> Hierachical clustering</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">70.</strong> HMM</div></li><li class="chapter-item expanded "><a href="../gradient-boosting.html"><strong aria-hidden="true">71.</strong> Gradient boosting</a></li><li class="chapter-item expanded "><a href="../k-nn.html"><strong aria-hidden="true">72.</strong> k-NN</a></li><li class="chapter-item expanded "><a href="../k-means.html"><strong aria-hidden="true">73.</strong> k-means</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">74.</strong> KDE</div></li><li class="chapter-item expanded "><a href="../lda.html"><strong aria-hidden="true">75.</strong> LDA</a></li><li class="chapter-item expanded "><a href="../linear-models.html"><strong aria-hidden="true">76.</strong> Linear models</a></li><li class="chapter-item expanded "><a href="../logistic-regression.html"><strong aria-hidden="true">77.</strong> Logistic regression</a></li><li class="chapter-item expanded "><a href="../mean-shift.html"><strong aria-hidden="true">78.</strong> Mean shift</a></li><li class="chapter-item expanded "><a href="../naive-bayes.html"><strong aria-hidden="true">79.</strong> Naive Bayes</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">80.</strong> Neural networks</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">80.1.</strong> MLP</div></li><li class="chapter-item expanded "><a href="../cnn.html"><strong aria-hidden="true">80.2.</strong> CNN</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">80.3.</strong> RNN</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">80.4.</strong> LSTM</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">80.5.</strong> Transformer</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">80.6.</strong> GAN</div></li></ol></li><li class="chapter-item expanded "><a href="../pca.html"><strong aria-hidden="true">81.</strong> PCA</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">82.</strong> PGM</div></li><li class="chapter-item expanded "><a href="../svm.html"><strong aria-hidden="true">83.</strong> SVM</a></li><li class="chapter-item expanded "><a href="../t-sne.html"><strong aria-hidden="true">84.</strong> t-SNE</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">85.</strong> Tree ensembles</div></li><li class="chapter-item expanded "><a href="../umap.html"><strong aria-hidden="true">86.</strong> UMAP</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Representations</li><li class="chapter-item expanded "><div><strong aria-hidden="true">87.</strong> Distance metric</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">88.</strong> Similarity search</div></li><li class="chapter-item expanded "><a href="../similarity-measures.html"><strong aria-hidden="true">89.</strong> Similarity measures</a></li><li class="chapter-item expanded "><a href="../dimensionality-reduction.html"><strong aria-hidden="true">90.</strong> Dimensionality reduction</a></li><li class="chapter-item expanded "><a href="../ann.html"><strong aria-hidden="true">91.</strong> ANN</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">System design</li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Others</li><li class="chapter-item expanded "><a href="../concept-drift.html"><strong aria-hidden="true">92.</strong> Concept drift</a></li><li class="chapter-item expanded "><a href="../interpretable-ai.html"><strong aria-hidden="true">93.</strong> Interpretable AI</a></li><li class="chapter-item expanded "><a href="../adversarial-ai.html"><strong aria-hidden="true">94.</strong> Adversarial AI</a></li><li class="chapter-item expanded "><a href="../automl.html"><strong aria-hidden="true">95.</strong> AutoML</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ai-book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="bonus-questions"><a class="header" href="#bonus-questions">Bonus questions</a></h1>
+<Inherits from ML systems design>
+<p><a href="https://medium.com/@ProfessorF/visualizing-the-solution-to-the-monty-hall-problem-bf4a08c8ed8f">https://medium.com/@ProfessorF/visualizing-the-solution-to-the-monty-hall-problem-bf4a08c8ed8f</a></p>
+<p>Even though there’s a science bit in data science theres still a gap between what is</p>
+<p>taught and what is practised.</p>
+<p>It is important for us to have practical knowledge to see the gaps in our theoretical understanding.</p>
+<p>Sparsity? Consumes more memory</p>
+<p><a href="https://www.linkedin.com/posts/activity-6675719025265381376-8lSN/">Hariz Liew posted on LinkedIn</a></p>
+<ul>
+<li>
+<p>I observed 20 cloudy days. I also observed 5 rainy days. What's the probability of rain given that it is cloudy?</p>
+<p>1/4. Can also use Bayes' rule.</p>
+</li>
+</ul>
+<h2 id="1-project-setup"><a class="header" href="#1-project-setup"><strong>1. Project setup</strong></a></h2>
+<h2 id="2-data-collection"><a class="header" href="#2-data-collection"><strong>2. Data collection</strong></a></h2>
+<p>If you had to prioritise improving one of the areas below in your machine learning project, which would have the most impact?</p>
+<p>Quality and size of data</p>
+<p>A deeper network</p>
+<p>Using the latest optimisation algorithm</p>
+<p>A more clever loss function</p>
+<h2 id="3-exploration"><a class="header" href="#3-exploration"><strong>3. Exploration</strong></a></h2>
+<p>Why must we continually visualise?</p>
+<h2 id="4-preprocessing"><a class="header" href="#4-preprocessing"><strong>4. Preprocessing</strong></a></h2>
+<p>Transforming time data</p>
+<p>What do you do with long-tailed</p>
+<p>How to split train and test? Stratify</p>
+<p>why do we do feature selection?</p>
+<p>Why must we transform?</p>
+<p>The pros and cons of one-hot encoding</p>
+<p>One-hot encoding: LightGBM</p>
+<p>It is common to represent categorical features with one-hot encoding, but this approach is suboptimal for tree learners. Particularly for high-cardinality categorical features, a tree built on one-hot features tends to be unbalanced and needs to grow very deep to achieve good accuracy.</p>
+<p>One-hot encoding: CatBoost</p>
+<p>Do not use one-hot encoding during preprocessing. This affects both the training speed and the resulting quality.</p>
+<p>What if I have high cardinality category?</p>
+<p>Look at the cardinality. If it’s 80% of the training examples, then this is probably not a feature but indexes the examples.</p>
+<p>Why do we bootstrap samples???</p>
+<h2 id="5-modelling"><a class="header" href="#5-modelling"><strong>5. Modelling</strong></a></h2>
+<ul>
+<li>
+<p>Why do a forest of weak learners learn well?</p>
+</li>
+<li>
+<p>Can loss decomposition be used to compare models?</p>
+</li>
+<li>
+<p>When to choose L1 and L2?</p>
+</li>
+<li>
+<p>Why is it called logistic regression?</p>
+<p>It's because its underlying technique is quite the same as linear regression. And the term logistic is taken from the logit function which is used as the method of classification. A logit function is</p>
+<p>$$
+\text{logit}(p) = \log(\text{odds})= \log \frac{p}{1-p}
+$$</p>
+<p>which maps values from $(0,1)$ to $(-\infty,\infty)$.</p>
+<p>A logistic function is inverse-logit:</p>
+<p>$$
+⁍
+$$</p>
+<p>which will map values from $(-\infty,\infty)$ to $(0,1)$, which will be convenient for binary classification tasks.</p>
+</li>
+<li>
+<p>Why not use linear regression in place of logistic regression?</p>
+<p>It is not robust to outliers in the data.</p>
+</li>
+<li>
+<p>What is the perceptron in MLP? What is an MLP?</p>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/26f3a50d-5027-429a-9845-fed35827d64b/Untitled.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/26f3a50d-5027-429a-9845-fed35827d64b/Untitled.png" /></p>
+<p>A perception is a simple binary classification algorithm. It takes in a few inputs, each of which has a weight, and generates an output decision of &quot;0&quot; or &quot;1&quot;.</p>
+<p>An MLP is a perceptron that teams up with additional perceptrons.</p>
+</li>
+<li>
+<p>What is decision boundary?</p>
+<p>Decision boundary helps to differentiate probabilities into positive and negative class.</p>
+</li>
+<li>
+<p>Why is cross validation not done on DL models?</p>
+<p>Expensive</p>
+</li>
+<li>
+<p>What is overfitting?</p>
+<p>Overfitting = The model approximates the data/observation, which is true model and noise</p>
+<p>Good fit = The model approximates true model</p>
+<p>Underfitting = The model does not approximate true model</p>
+</li>
+<li>
+<p>What happens if I have class imbalance for the test set? What should I use?</p>
+<p>Use a confusion matrix because it lets you see the overall performance.</p>
+</li>
+<li>
+<p>Accuracy for train set is higher than test set. Why?</p>
+<p>Overfitting. This is due to </p>
+<ol>
+<li>different distributions of data between the train and test. </li>
+<li>model is too powerful</li>
+</ol>
+</li>
+</ul>
+<h2 id="6-reporting"><a class="header" href="#6-reporting"><strong>6. Reporting</strong></a></h2>
+<h2 id="7-production"><a class="header" href="#7-production"><strong>7. Production</strong></a></h2>
+<ul>
+<li>What do you know about A/B testing in the context of streaming?</li>
+<li>What are the differences between L1 and L2 regularization, why don’t people use L0.5 regularization for instance?</li>
+<li>What is the difference between online and batch gradient descent?</li>
+<li>What is the best way to communicate ML results to stakeholders?</li>
+<li>Write the equation for building a classifier using Logistic Regression.</li>
+<li>Given a month’s worth of login data from Netflix such as account_id, device_id, and metadata concerning payments, how would you detect payment fraud?</li>
+<li>How would you design an experiment for a new content recommendation model we’re thinking of rolling out? What metrics would matter?</li>
+<li>Write SQL queries to find a time difference between two events.</li>
+<li>How would you build and test a metric to compare two users’s ranked lists of movie/tv show preferences?</li>
+<li>How would you select a representative sample of search queries from five million?</li>
+<li>Why is Rectified Linear Unit a good activation function?</li>
+<li>If Netflix is looking to expand its presence in Asia, what are some factors that you can use to evaluate the size of the Asia market, and what can Netflix do to capture this market?</li>
+<li>How would we approach to attribution modeling to measure marketing effectiveness?</li>
+<li>How would you determine if the price of a Netflix subscription is truly the deciding factor for a consumer?</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../loss-and-regularisation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../bias-variance-decomposition.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../loss-and-regularisation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../bias-variance-decomposition.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

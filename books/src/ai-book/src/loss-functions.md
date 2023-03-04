@@ -71,10 +71,7 @@ Gradient descent with
 - Logistic regression (= binary cross entropy)
 - Softmax regression ( = softmax cross entropy)
 
-<aside>
-💡 Note that softmax cross entropy is a generalisation of binary cross entropy.
-
-</aside>
+> 💡 Note that softmax cross entropy is a generalisation of binary cross entropy.
 
 $$
 \boldsymbol{p}_{k \times 1} = 

@@ -8,7 +8,25 @@
 - [Tasks]()
   - [Anomaly detection](./anomaly-detection.md)
 - [Processing]()
-- [Time series]()
+- [Hyperparameter optimisation](./hyperparameter-optimisation.md)
+- [Feature transformation](./feature-transformation.md)
+- [Feature selection](./feature-selection.md)
+- [Feature engineering](./feature-engineering.md)
+- [Train-test split](./train-test-split.md)
+- [Cross validation](./cross-validation.md)
+- [Ensembling](./ensembling.md)
+- [EDA++](./eda-plus-plus.md)
+- [Tests](./tests.md)
+- [ML system design](./ml-system-design.md)
+- [Metrics](./general-metrics.md)
+- [Loss and regularisation](./loss-and-regularisation.md)
+- [Bonus questions](./general/bonus-questions.md)
+- [Bias-variance decomposition](./bias-variance-decomposition.md)
+- [Rare event classification / anomaly detection](./rare-event-classification.md)
+- [BLAS](./blas.md)
+- [Coursera](./coursera.md)
+- [Improve generalisation](./improve-generalisation.md)
+- [Course history](./general-course-history.md)
 
 ---
 
@@ -19,11 +37,15 @@
 - [Image frameworks](./image-frameworks.md)
 - [Techniques](./techniques.md)
 - [Regularisation](./vision/regularisation.md)
+- [Basic CNN architectures](./basic-cnn-architectures.md)
 - [Tasks]()
   - [Image classification](./image-classification.md)
   - [Object detection](./object-detection.md)
   - [Semantic segmentation](./instance-segmentation.md)
   - [Reidentification](./reidentification.md)
+  - [AutoAugment](./autoaugment.md)
+  - [Style transfer](./style-transfer.md)
+  - [Obj det / instance seg](./obj-inst-seg.md)
   - [OCR](./ocr.md)
   - [UI](./ui.md)
   - [Others](./vision/others.md)
@@ -81,6 +103,16 @@
 # Domain: AI planning
 
 - [AI planning]()
+
+---
+
+# Tasks / problems
+
+- [Recsys](./recsys.md)
+  - [YouTube](./recsys-youtube.md)
+- [Survival analysis](./survival-analysis.md)
+- [Market basket analysis]()
+- [Time series analysis]()
 
 ---
 
@@ -172,14 +204,6 @@
 - [Similarity measures](./similarity-measures.md)
 - [Dimensionality reduction](./dimensionality-reduction.md)
 - [ANN](./ann.md)
-
----
-
-# Tasks / problems
-
-- [Survival analysis](./survival-analysis.md)
-- [Market basket analysis]()
-- [Recommender system]()
 
 ---
 

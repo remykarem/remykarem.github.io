@@ -77,10 +77,7 @@ $$
 
 But this is impossible
 
-<aside>
-💡 Why ah? Because if they don't exist in our data, doesn't mean they don't occur naturally.
-
-</aside>
+> 💡 Why ah? Because if they don't exist in our data, doesn't mean they don't occur naturally.
 
 ## Markov assumption as approximation
 

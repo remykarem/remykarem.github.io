@@ -152,10 +152,7 @@ Ideas
         - (**took**, she, the midnight train going anywhere)
         - (**going**, the might train, anywhere)
         
-        <aside>
-        💡 Why do we need this? The ability to glean facts and opinions from sentences.
-        
-        </aside>
+        > 💡 Why do we need this? The ability to glean facts and opinions from sentences.
         
     - Textual entailment
         
@@ -165,10 +162,7 @@ Ideas
         
         (SentenceA, SentenceB) → Entailment | Contradiction | Neutral
         
-        <aside>
-        💡 This problem is often considered an important test for the reasoning skills of ML systems
-        
-        </aside>
+        > 💡 This problem is often considered an important test for the reasoning skills of ML systems
         
     - QA
         

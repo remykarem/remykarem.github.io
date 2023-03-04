@@ -70,10 +70,7 @@ based on a small no. of initial queries to the model in production
 
 ![Untitled](Untitled%204.png)
 
-<aside>
-💡 Metric: “89.4% error rate on adversarial examples” — which is bad
-
-</aside>
+> 💡 Metric: “89.4% error rate on adversarial examples” — which is bad
 
 Note that adversarial training can have a negative impact (lower accuracy on clean samples, compared to models that don;’t go through adversarial training)
 

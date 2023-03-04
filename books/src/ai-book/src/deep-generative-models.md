@@ -27,11 +27,8 @@ Outlier detection
 - VAE
 - GAN
 
-<aside>
-💡 **Autoencoders**
+> 💡 **Autoencoders**
 Bottleneck hidden layer foreces network to learn a compressed latent representation. Reconstruction loss forces the latent representation to capture as much information about the data as possible.
-
-</aside>
 
 ## Autoencoder
 
@@ -69,10 +66,7 @@ Generative Adversarial Network
 
 Instead of explicitly modelling the density (distribution of data), we just sample to generate new instances. However, we can’t sample from complex distribution directly. Thus the solution is to sample from something simple (noise), **learn a transformation** to the training distribution.
 
-<aside>
-💡 We also cannot measure the difference of the generated samples with training samples because it's too expensive.
-
-</aside>
+> 💡 We also cannot measure the difference of the generated samples with training samples because it's too expensive.
 
 Adversaries (neural networks): 
 
