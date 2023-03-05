@@ -3,7 +3,15 @@
 - agglomerative (slowly accumulate)
 - divisive (slowly split)
 
-This is achieved by use of a metric and a linkage criterion.
+Naive implementation has time complexity $O(n^3)$ where $n$ is the no. of datapoints
+
+1. Find pairwise distance — $O(n^2)$
+2. Merge the 2 closest points.
+3. Repeat for the other $n-1$ points — $O(n)$
+
+Can use priority queue to get $O(n^2 \log n)$.
+
+Hierarchical clustering is achieved by use of a metric and a linkage criterion.
 
 Examples of linkage criteria:
 

@@ -4,6 +4,16 @@
 
 “How you choose helps you understand more about them”
 
+$n$ = size of data
+
+$k$ = no. of clusters
+
+$m$ = no. of iterations
+
+> 💡 **Centroid** an artificial point in a cluster
+
+> 💡 **Clustroid** is an existing datapoint closes to all other points in a cluster
+
 Uses:
 
 - Market segmentation
@@ -36,3 +46,4 @@ In clustering, you calculate the similarity between two examples by combining al
 - Davies-Bouldin index
 - Silhouette score
 - Gini coefficient: measure degree of heterogeneity
+

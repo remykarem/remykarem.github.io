@@ -8,11 +8,12 @@
 - [Tasks]()
   - [Anomaly detection](./anomaly-detection.md)
   - [Recsys](./recsys.md)
+    - [Recsys II](./recsys-ii.md)
     - [YouTube](./recsys-youtube.md)
   - [Survival analysis](./survival-analysis.md)
   - [Market basket analysis]()
   - [Time series analysis]()
-- [Processing]()
+- [Stream processing](./stream-processing.md)
 - [Hyperparameter optimisation](./hyperparameter-optimisation.md)
 - [Feature transformation](./feature-transformation.md)
 - [Feature selection](./feature-selection.md)
@@ -94,6 +95,7 @@
 
 # Domain: Graph
 
+- [Graph analysis](./graph-analysis.md)
 - [Models](./graph/models.md)
 
 ---
@@ -158,11 +160,12 @@
 
 # Models and algorithms
 
-- [Association rule mining]()
+- [Association rule mining](./association-rule-mining.md)
 - [Decision tree](./decision-tree.md)
 - [DBSCAN](./dbscan.md)
 - [Diffusion model]()
 - [Evolutionary algorithms](./evolutionary-algorithms.md)
+- [Frequent itemsets](./frequent-itemsets.md)
 - [Gaussian process](./gaussian-process.md)
 - [GMM](./gmm.md)
 - [Hierachical clustering](./hierarchical-clustering.md)
@@ -183,6 +186,7 @@
   - [LSTM]()
   - [Transformer]()
   - [GAN]()
+- [PageRank](./pagerank.md)
 - [PCA](./pca.md)
 - [PGM]()
 - [SVM](./svm.md)
@@ -194,8 +198,9 @@
 
 # Representations
 
-- [Distance metric]()
-- [Similarity search]()
+- [Distance measures](./distance-measures.md)
+- [Similarity search](./similarity-search.md)
+- [Similar items](./similar-items.md)
 - [Similarity measures](./similarity-measures.md)
 - [Dimensionality reduction](./dimensionality-reduction.md)
 - [ANN](./ann.md)
