@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>DBSCAN - ai-book</title>
+        <title>DBSCAN - AI/ML/DS book</title>
 
 
         <!-- Custom HTML head -->
@@ -113,7 +113,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">ai-book</h1>
+                    <h1 class="menu-title">AI/ML/DS book</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -151,6 +151,15 @@
                         <h1 id="dbscan"><a class="header" href="#dbscan">DBSCAN</a></h1>
 <p>Density-based spatial clustering of applications with noise</p>
 <p><strong>#nonparametric</strong> <strong>#nonprobabilistic</strong></p>
+<ul>
+<li><a href="#from-cs5228">From CS5228:</a>
+<ul>
+<li><a href="#quiz">Quiz</a></li>
+<li><a href="#review">Review</a></li>
+</ul>
+</li>
+</ul>
+<hr />
 <p>The DBSCAN algorithm views clusters as areas of high density separated by areas of low density.</p>
 <ol>
 <li>Choose 2 numbers: max_distance, min_points</li>
@@ -163,6 +172,74 @@
 </li>
 <li>Once run out of points, find another datapoint that has no cluster. This is Cluster B.</li>
 </ol>
+<h2 id="from-cs5228"><a class="header" href="#from-cs5228">From CS5228:</a></h2>
+<p>\( O(MinPts \times N) \)</p>
+<p>Clusters: <strong>density-based</strong></p>
+<p>Clustering: partitional, exclusive, <strong>partial</strong></p>
+<p>$$
+density = \frac{mass}{valume} \approx \frac{MinPts}{\epsilon}
+$$</p>
+<p>where \( \epsilon \) is the radius defining no. of points in the neighbourhood and $MinPts$ the min. no. of points for it to be a core point.</p>
+<p><img src="./dbscan-01.png" alt="Types of points" /></p>
+<p>There are 3 types of points:</p>
+<ul>
+<li>Core points: Any points with at least MinPts neighours in a radius \( \epsilon \).</li>
+<li>Border points: Any non-core points with at least one core point within the radius \( \epsilon \).</li>
+<li>Outliers</li>
+</ul>
+<p>Algorithm:</p>
+<ol>
+<li>
+<p>Repeat</p>
+<ol>
+<li>Pick a random unexplored point x.</li>
+<li>If x is not a core point, label as noise (might change later). </li>
+</ol>
+<p>Until x is a core point</p>
+</li>
+<li>
+<p>Then explore this new cluster starting from this core point. </p>
+<ul>
+<li>A neighbour of a cluster is never a noise.</li>
+<li>Do for all neighbours</li>
+<li>Exploration stops once there are no more core points.</li>
+</ul>
+<p><img src="./dbscan-02.png" alt="Exploration" /></p>
+</li>
+</ol>
+<p><img src="https://www.comp.nus.edu.sg/~chris/downloads/images/dbscan-visualized.gif" alt="https://www.comp.nus.edu.sg/~chris/downloads/images/dbscan-visualized.gif" /></p>
+<blockquote>
+<p>💡 Note that a noise point can become a border point.</p>
+</blockquote>
+<ul>
+<li>
+<p>Always converges</p>
+</li>
+<li>
+<p>Cannot handle different densities</p>
+<p><img src="./dbscan-03.png" alt="Different densities" /></p>
+</li>
+<li>
+<p>Very sensitive to parameters</p>
+<p><img src="./dbscan-04.png" alt="Sensitive to parameters" /></p>
+<p>Parameters can be chosen by</p>
+<ul>
+<li>
+<p>EDA: plot distribution of all pairwise distances. This can help us to decide suitable values for \( \epsilon \).</p>
+<p><img src="./dbscan-05.png" alt="Find epsilon" /></p>
+</li>
+<li>
+<p>Intuitive semantic meaning of $MinPts$.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="quiz"><a class="header" href="#quiz">Quiz</a></h3>
+<p><img src="./dbscan-06.png" alt="Quiz" /></p>
+<p><img src="./dbscan-07.png" alt="Quiz" /></p>
+<p><img src="./dbscan-08.png" alt="Quiz" /></p>
+<h3 id="review"><a class="header" href="#review">Review</a></h3>
+<p><img src="./dbscan-09.png" alt="Review" /></p>
 <footer id="last-change">Last change: 2023-02-19, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/083da13">083da13</a></footer>
                     </main>
 

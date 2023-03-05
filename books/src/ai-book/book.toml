@@ -3,7 +3,7 @@ authors = ["Raimi"]
 language = "en"
 multilingual = false
 src = "src"
-title = "ai-book"
+title = "AI/ML/DS book"
 
 [output.html]
 site-url = "/books/ai-book/"

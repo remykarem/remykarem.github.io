@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>ai-book</title>
+        <title>AI/ML/DS book</title>
         <meta name="robots" content="noindex" />
 
 
@@ -114,7 +114,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">ai-book</h1>
+                    <h1 class="menu-title">AI/ML/DS book</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -5532,6 +5532,15 @@ $$</p>
 <footer id="last-change">Last change: 2023-02-19, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/083da13">083da13</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="dbscan"><a class="header" href="#dbscan">DBSCAN</a></h1>
 <p>Density-based spatial clustering of applications with noise</p>
 <p><strong>#nonparametric</strong> <strong>#nonprobabilistic</strong></p>
+<ul>
+<li><a href="dbscan.html#from-cs5228">From CS5228:</a>
+<ul>
+<li><a href="dbscan.html#quiz">Quiz</a></li>
+<li><a href="dbscan.html#review">Review</a></li>
+</ul>
+</li>
+</ul>
+<hr />
 <p>The DBSCAN algorithm views clusters as areas of high density separated by areas of low density.</p>
 <ol>
 <li>Choose 2 numbers: max_distance, min_points</li>
@@ -5544,6 +5553,74 @@ $$</p>
 </li>
 <li>Once run out of points, find another datapoint that has no cluster. This is Cluster B.</li>
 </ol>
+<h2 id="from-cs5228"><a class="header" href="#from-cs5228">From CS5228:</a></h2>
+<p>\( O(MinPts \times N) \)</p>
+<p>Clusters: <strong>density-based</strong></p>
+<p>Clustering: partitional, exclusive, <strong>partial</strong></p>
+<p>$$
+density = \frac{mass}{valume} \approx \frac{MinPts}{\epsilon}
+$$</p>
+<p>where \( \epsilon \) is the radius defining no. of points in the neighbourhood and $MinPts$ the min. no. of points for it to be a core point.</p>
+<p><img src="./dbscan-01.png" alt="Types of points" /></p>
+<p>There are 3 types of points:</p>
+<ul>
+<li>Core points: Any points with at least MinPts neighours in a radius \( \epsilon \).</li>
+<li>Border points: Any non-core points with at least one core point within the radius \( \epsilon \).</li>
+<li>Outliers</li>
+</ul>
+<p>Algorithm:</p>
+<ol>
+<li>
+<p>Repeat</p>
+<ol>
+<li>Pick a random unexplored point x.</li>
+<li>If x is not a core point, label as noise (might change later). </li>
+</ol>
+<p>Until x is a core point</p>
+</li>
+<li>
+<p>Then explore this new cluster starting from this core point. </p>
+<ul>
+<li>A neighbour of a cluster is never a noise.</li>
+<li>Do for all neighbours</li>
+<li>Exploration stops once there are no more core points.</li>
+</ul>
+<p><img src="./dbscan-02.png" alt="Exploration" /></p>
+</li>
+</ol>
+<p><img src="https://www.comp.nus.edu.sg/~chris/downloads/images/dbscan-visualized.gif" alt="https://www.comp.nus.edu.sg/~chris/downloads/images/dbscan-visualized.gif" /></p>
+<blockquote>
+<p>💡 Note that a noise point can become a border point.</p>
+</blockquote>
+<ul>
+<li>
+<p>Always converges</p>
+</li>
+<li>
+<p>Cannot handle different densities</p>
+<p><img src="./dbscan-03.png" alt="Different densities" /></p>
+</li>
+<li>
+<p>Very sensitive to parameters</p>
+<p><img src="./dbscan-04.png" alt="Sensitive to parameters" /></p>
+<p>Parameters can be chosen by</p>
+<ul>
+<li>
+<p>EDA: plot distribution of all pairwise distances. This can help us to decide suitable values for \( \epsilon \).</p>
+<p><img src="./dbscan-05.png" alt="Find epsilon" /></p>
+</li>
+<li>
+<p>Intuitive semantic meaning of $MinPts$.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="quiz"><a class="header" href="#quiz">Quiz</a></h3>
+<p><img src="./dbscan-06.png" alt="Quiz" /></p>
+<p><img src="./dbscan-07.png" alt="Quiz" /></p>
+<p><img src="./dbscan-08.png" alt="Quiz" /></p>
+<h3 id="review"><a class="header" href="#review">Review</a></h3>
+<p><img src="./dbscan-09.png" alt="Review" /></p>
 <footer id="last-change">Last change: 2023-02-19, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/083da13">083da13</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="evolutionary-algorithms"><a class="header" href="#evolutionary-algorithms">Evolutionary algorithms</a></h1>
 <p>Subject a <strong>population</strong> to a heuristic survival-of-the-fittest competition. Individuals that score higher on the <strong>fitness function</strong> are granted more <strong>offspring</strong> in the next generation through <strong>crossover</strong> and <strong>mutation</strong> (slightly perturbed copes of themselves or combinations of themselves with other individuals). Individuals that score poorly are removed from the population.</p>
 <ul>
@@ -5696,24 +5773,119 @@ plt.show()
 <p><img src="./gradient-boosting.png" alt="Gradient boosting" /></p>
 <footer id="last-change">Last change: 2023-02-19, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/083da13">083da13</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="k-means"><a class="header" href="#k-means">k-means</a></h1>
 <p><strong>#nonparametric</strong></p>
-<p>Assign k centroids randomly</p>
-<p>Get each data point to see which centroid it’s closest to, and assign a class</p>
-<p>Calculate centre of points for each group</p>
-<p>Reassign the k centroids</p>
-<p>Use silhouette heuristic or the elbow method to determine a reasonable value for k</p>
+<ul>
+<li><a href="k-means.html#before-notes">Before notes</a></li>
+<li><a href="k-means.html#from-cs5228">From CS5228:</a>
+<ul>
+<li><a href="k-means.html#lloyds-algorithm">Lloyd's algorithm</a></li>
+<li><a href="k-means.html#k-means">k-means++</a></li>
+<li><a href="k-means.html#x-means">X-means</a></li>
+<li><a href="k-means.html#k-medoids">k-medoids</a></li>
+</ul>
+</li>
+<li><a href="k-means.html#quiz">Quiz</a></li>
+</ul>
+<hr />
+<h2 id="before-notes"><a class="header" href="#before-notes">Before notes</a></h2>
+<ol>
+<li>Assign <em>k</em> centroids randomly</li>
+<li>Get each data point to see which centroid it’s closest to, and assign a class</li>
+<li>Calculate centre of points for each group</li>
+<li>Reassign the <em>k</em> centroids</li>
+<li>Use silhouette heuristic or the elbow method to determine a reasonable value for <em>k</em></li>
+</ol>
 <p><img src="./k-means.png" alt="k-means" /></p>
 <blockquote>
 <p>💡 Assumes clusters are normally distributed in each dimension</p>
 </blockquote>
-<p>Time $O(m \cdot k \cdot n)$</p>
+<p>Time \( O(m \cdot k \cdot n) \)</p>
 <ol>
-<li>Assign $k$ centroids</li>
-<li>For every datapoint, calculate distance to all other centroids — $O(k)$</li>
-<li>Repeat for all datapoints — $O(n)$</li>
+<li>Assign <em>k</em> centroids</li>
+<li>For every datapoint, calculate distance to all other centroids — \( O(k) \)</li>
+<li>Repeat for all datapoints — \( O(n) \)</li>
 <li>Reassign each datapoint to the nearest cluster</li>
-<li>Repeat for $m$ iterations until convergence — $O(m)$</li>
+<li>Repeat for <em>m</em> iterations until convergence — \( O(m) \)</li>
 </ol>
-<p>Space $O(n)$</p>
+<p>Space \( O(n) \)</p>
+<hr />
+<h2 id="from-cs5228-1"><a class="header" href="#from-cs5228-1">From CS5228:</a></h2>
+<p>Clusters: centroid-based</p>
+<p>Clustering: partitional, exclusive, complete</p>
+<p>NP-hard; \( O(N^{Kd+1}) \).</p>
+<p>Define the objective function to minimise:</p>
+<p>$$
+SSE = \sum_{k=1}^K \sum_{x_{i,k} \in C_k} (x_{i,k} - c_k)^2 
+$$</p>
+<p>which is the total squared distance between every point and centroid across all the <em>K</em> clusters. For every cluster <em>k</em>, and for every point \( x_{i,k} \) in this cluster \( C_k \), find the squared distance between the point \( x_{i,k} \) and the cluster's centroid, \( c_k \).</p>
+<p>Taking derivative with respect to \( c_k \), the best centroid can be found as follows:</p>
+<p>$$
+\frac{\partial}{\partial c_k} SSE = 0 \\
+\implies c_k = \frac{1}{m_k} \sum_{x_{i,k} \in C_k} x_{i,k}
+$$</p>
+<blockquote>
+<p>💡 k-means works on relative distances.</p>
+</blockquote>
+<h3 id="lloyds-algorithm"><a class="header" href="#lloyds-algorithm">Lloyd's algorithm</a></h3>
+<ol>
+<li>Select $K$ points in the space (not datapoints) as initial centroids</li>
+<li>Repeat
+<ol>
+<li>Assign each point to the nearest cluster</li>
+<li>Reassign the centroid based on average</li>
+</ol>
+</li>
+</ol>
+<p>Note:</p>
+<ul>
+<li>
+<p>Always converges</p>
+</li>
+<li>
+<p>But returns a local optimum</p>
+</li>
+<li>
+<p>Susceptible to natural clusters (only looks for spherical shapes). Potential workaround is to choose a larger value of $K$.</p>
+<p><img src="./k-means-01.png" alt="" /></p>
+<p><img src="./k-means-02.png" alt="" /></p>
+</li>
+<li>
+<p>Different initialisations yield different clusterings. Some centroid can yield empty clusters.</p>
+<p><img src="./k-means-03.png" alt="All the points are closest to only 1 centroid." /></p>
+<p><em>All</em> the points are closest to only 1 centroid.</p>
+</li>
+</ul>
+<h3 id="k-means-1"><a class="header" href="#k-means-1">k-means++</a></h3>
+<p>Same like Lloyd's but different initialisation:</p>
+<ol>
+<li>
+<p>Initialisation</p>
+<ol>
+<li>Pick random datapoint as first centroid</li>
+<li>??????????  just ensures the centroids are distributed across the dataset</li>
+</ol>
+</li>
+<li>
+<p>Repeat</p>
+<p>...</p>
+</li>
+</ol>
+<blockquote>
+<p>💡 Only initial centroids must be datapoints.</p>
+</blockquote>
+<h3 id="x-means"><a class="header" href="#x-means">X-means</a></h3>
+<ol>
+<li>Start with $K=2$.</li>
+<li>For every cluster, see if it can be split by 2. This uses a scoring function like BIC, AIC, MDL.</li>
+</ol>
+<p><img src="./k-means-04.png" alt="X-means" /></p>
+<h3 id="k-medoids"><a class="header" href="#k-medoids">k-medoids</a></h3>
+<p>Use when you cannot compute averages.</p>
+<p>????????? use Jaccard similarity ????? (prof didn't explain properly)</p>
+<blockquote>
+<p>⚠️ Centroids must be datapoints</p>
+</blockquote>
+<h2 id="quiz-1"><a class="header" href="#quiz-1">Quiz</a></h2>
+<p><img src="./k-means-05.png" alt="QUiz" /></p>
 <footer id="last-change">Last change: 2023-03-05, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/4c61c9b">4c61c9b</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="k-nn"><a class="header" href="#k-nn">k-NN</a></h1>
 <p><strong>#nonparametric</strong> <strong>#nonprobabilistic</strong></p>
 <p>Use a distance metric to calculate the \( k \) closest neighbours. Then, take its mean (or median etc.).</p>
