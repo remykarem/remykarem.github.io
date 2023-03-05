@@ -73,10 +73,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -178,7 +180,7 @@ Allows one to learn a non-linearity within a linear model</li>
 <p><img src="./feature-engineering-02.png" alt="Extend imputation" /></p>
 </li>
 <li>
-<p>Use algorithms that support missing values eg. kNN</p>
+<p>Use algorithms that support missing values eg. k-NN</p>
 </li>
 </ol>
 <blockquote>

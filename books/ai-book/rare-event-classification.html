@@ -73,10 +73,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -192,7 +194,7 @@
 </ul>
 <h3 id="adaptive"><a class="header" href="#adaptive"><strong>Adaptive</strong></a></h3>
 <ul>
-<li><strong>ADASYN</strong> <strong>sampling</strong> (Adaptive Synthetic). Generate new samples by next to original samples which are wrongly classified using a kNN classifier.</li>
+<li><strong>ADASYN</strong> <strong>sampling</strong> (Adaptive Synthetic). Generate new samples by next to original samples which are wrongly classified using a k-NN classifier.</li>
 </ul>
 <h2 id="commonly-used-metrics"><a class="header" href="#commonly-used-metrics"><strong>Commonly used metrics</strong></a></h2>
 <ul>

@@ -73,10 +73,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -174,7 +176,7 @@
 <p>For scaling:</p>
 <ul>
 <li>The goal of applying feature scaling is to make sure features are on almost the same scale so that each feature is equally important and make it easier to process by most ML algorithms.</li>
-<li>Scaling used used for neural networks and distance-based algorithms (eg. kNN, SVM, NN). If an algorithm is not distance-based, feature scaling is unimportant (eg. Naive Bayes, LDA, tree-based models).</li>
+<li>Scaling used used for neural networks and distance-based algorithms (eg. k-NN, SVM, NN). If an algorithm is not distance-based, feature scaling is unimportant (eg. Naive Bayes, LDA, tree-based models).</li>
 </ul>
 <h2 id="type-transformation"><a class="header" href="#type-transformation"><strong>Type transformation</strong></a></h2>
 <h3 id="categorical-features"><a class="header" href="#categorical-features"><strong>Categorical features</strong></a></h3>

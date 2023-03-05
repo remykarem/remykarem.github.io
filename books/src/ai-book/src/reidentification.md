@@ -105,6 +105,6 @@ Every human hand is unique. Most of hand geometry systems/techniques is based an
     2. SVM
     3. GMM
     4. Neural network classifier [1]
-    5. kNN
+    5. k-NN
     6. ‘SurfaceCode’
     7. Template distances matching

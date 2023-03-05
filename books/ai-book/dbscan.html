@@ -73,10 +73,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -240,7 +242,7 @@ $$</p>
 <p><img src="./dbscan-08.png" alt="Quiz" /></p>
 <h3 id="review"><a class="header" href="#review">Review</a></h3>
 <p><img src="./dbscan-09.png" alt="Review" /></p>
-<footer id="last-change">Last change: 2023-02-19, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/083da13">083da13</a></footer>
+<footer id="last-change">Last change: 2023-03-05, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/5357c6c">5357c6c</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

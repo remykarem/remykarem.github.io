@@ -73,10 +73,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -281,7 +283,7 @@ Visualisation for machine learning, MIT 6.S191 (2019)</li>
 <p>Neural Networks</p>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
-Image classification: Data-driven approach, kNN, train-val-test</li>
+Image classification: Data-driven approach, k-NN, train-val-test</li>
 <li><input disabled="" type="checkbox"/>
 Linear classification: SVM, softmax</li>
 <li><input disabled="" type="checkbox" checked=""/>

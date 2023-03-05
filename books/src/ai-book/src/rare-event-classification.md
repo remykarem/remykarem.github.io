@@ -33,7 +33,7 @@ Severe class imbalance (1% positive)
 
 ### **Adaptive**
 
-- **ADASYN** **sampling** (Adaptive Synthetic). Generate new samples by next to original samples which are wrongly classified using a kNN classifier.
+- **ADASYN** **sampling** (Adaptive Synthetic). Generate new samples by next to original samples which are wrongly classified using a k-NN classifier.
 
 ## **Commonly used metrics**
 

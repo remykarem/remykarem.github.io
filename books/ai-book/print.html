@@ -74,10 +74,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -790,7 +792,7 @@ $$</p>
 <p>For scaling:</p>
 <ul>
 <li>The goal of applying feature scaling is to make sure features are on almost the same scale so that each feature is equally important and make it easier to process by most ML algorithms.</li>
-<li>Scaling used used for neural networks and distance-based algorithms (eg. kNN, SVM, NN). If an algorithm is not distance-based, feature scaling is unimportant (eg. Naive Bayes, LDA, tree-based models).</li>
+<li>Scaling used used for neural networks and distance-based algorithms (eg. k-NN, SVM, NN). If an algorithm is not distance-based, feature scaling is unimportant (eg. Naive Bayes, LDA, tree-based models).</li>
 </ul>
 <h2 id="type-transformation"><a class="header" href="#type-transformation"><strong>Type transformation</strong></a></h2>
 <h3 id="categorical-features"><a class="header" href="#categorical-features"><strong>Categorical features</strong></a></h3>
@@ -994,7 +996,7 @@ Allows one to learn a non-linearity within a linear model</li>
 <p><img src="./feature-engineering-02.png" alt="Extend imputation" /></p>
 </li>
 <li>
-<p>Use algorithms that support missing values eg. kNN</p>
+<p>Use algorithms that support missing values eg. k-NN</p>
 </li>
 </ol>
 <blockquote>
@@ -1927,7 +1929,7 @@ $$</p>
 </ul>
 <h3 id="adaptive"><a class="header" href="#adaptive"><strong>Adaptive</strong></a></h3>
 <ul>
-<li><strong>ADASYN</strong> <strong>sampling</strong> (Adaptive Synthetic). Generate new samples by next to original samples which are wrongly classified using a kNN classifier.</li>
+<li><strong>ADASYN</strong> <strong>sampling</strong> (Adaptive Synthetic). Generate new samples by next to original samples which are wrongly classified using a k-NN classifier.</li>
 </ul>
 <h2 id="commonly-used-metrics"><a class="header" href="#commonly-used-metrics"><strong>Commonly used metrics</strong></a></h2>
 <ul>
@@ -2300,7 +2302,7 @@ Visualisation for machine learning, MIT 6.S191 (2019)</li>
 <p>Neural Networks</p>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
-Image classification: Data-driven approach, kNN, train-val-test</li>
+Image classification: Data-driven approach, k-NN, train-val-test</li>
 <li><input disabled="" type="checkbox"/>
 Linear classification: SVM, softmax</li>
 <li><input disabled="" type="checkbox" checked=""/>
@@ -2699,7 +2701,7 @@ Pointwise = 1x1 convolution</li>
 <li>SVM</li>
 <li>GMM</li>
 <li>Neural network classifier [1]</li>
-<li>kNN</li>
+<li>k-NN</li>
 <li>‘SurfaceCode’</li>
 <li>Template distances matching</li>
 </ol>
@@ -5621,7 +5623,7 @@ $$</p>
 <p><img src="./dbscan-08.png" alt="Quiz" /></p>
 <h3 id="review"><a class="header" href="#review">Review</a></h3>
 <p><img src="./dbscan-09.png" alt="Review" /></p>
-<footer id="last-change">Last change: 2023-02-19, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/083da13">083da13</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="evolutionary-algorithms"><a class="header" href="#evolutionary-algorithms">Evolutionary algorithms</a></h1>
+<footer id="last-change">Last change: 2023-03-05, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/5357c6c">5357c6c</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="evolutionary-algorithms"><a class="header" href="#evolutionary-algorithms">Evolutionary algorithms</a></h1>
 <p>Subject a <strong>population</strong> to a heuristic survival-of-the-fittest competition. Individuals that score higher on the <strong>fitness function</strong> are granted more <strong>offspring</strong> in the next generation through <strong>crossover</strong> and <strong>mutation</strong> (slightly perturbed copes of themselves or combinations of themselves with other individuals). Individuals that score poorly are removed from the population.</p>
 <ul>
 <li>Genetic algorithm</li>
@@ -5886,7 +5888,7 @@ $$</p>
 </blockquote>
 <h2 id="quiz-1"><a class="header" href="#quiz-1">Quiz</a></h2>
 <p><img src="./k-means-05.png" alt="QUiz" /></p>
-<footer id="last-change">Last change: 2023-03-05, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/4c61c9b">4c61c9b</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="k-nn"><a class="header" href="#k-nn">k-NN</a></h1>
+<footer id="last-change">Last change: 2023-03-05, commit: <a href="https://github.com/remykarem/remkarem.github.io/commit/5357c6c">5357c6c</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="k-nn"><a class="header" href="#k-nn">k-NN</a></h1>
 <p><strong>#nonparametric</strong> <strong>#nonprobabilistic</strong></p>
 <p>Use a distance metric to calculate the \( k \) closest neighbours. Then, take its mean (or median etc.).</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/KnnClassification.svg/220px-KnnClassification.svg.png" alt="k-NN" /></p>

@@ -64,7 +64,7 @@
 
 - [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/)
     - [ ]  Neural Networks
-        - [x]  Image classification: Data-driven approach, kNN, train-val-test
+        - [x]  Image classification: Data-driven approach, k-NN, train-val-test
         - [ ]  Linear classification: SVM, softmax
         - [x]  Optimisation: Stochastic gradient descent
         - [x]  Backpropagation, intuitions
