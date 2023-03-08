@@ -113,7 +113,7 @@
 
 ---
 
-- [Loss functions]()
+- [Loss functions](./loss-functions.md)
 - [Metrics](./metrics.md)
 - [Hyperparameter optimisation]()
 
@@ -148,7 +148,6 @@
   - [layers](./layers.md)
   - [improving-speed-accuracy](./improving-speed-accuracy.md)
   - [Activation functions](./activation-functions.md)
-  - [Loss functions](./loss-functions.md)
 - [Machine learning]()
 - [Reinforcement learning](./reinforcement-learning.md)
 - [Bayesian learning]()
@@ -198,10 +197,9 @@
 
 # Representations
 
-- [Distance measures](./distance-measures.md)
+- [Similarity measures](./similarity-measures.md)
 - [Similarity search](./similarity-search.md)
 - [Similar items](./similar-items.md)
-- [Similarity measures](./similarity-measures.md)
 - [Dimensionality reduction](./dimensionality-reduction.md)
 - [ANN](./ann.md)
 

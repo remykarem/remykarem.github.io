@@ -1,6 +1,27 @@
 # Similarity measures
 
-Distance metrics
+Distance metrics, distance measures
+
+For \\( n \\) datapoints, computing pairwise distance is \\( O(n^2) \\) because 
+
+$$
+{n \choose {2}} = \frac{n(n-1)}{2}
+$$
+
+Axioms of distance measures:
+
+- Non-negativity — d(a,b) ≥ 0
+- Symmetry — dist(a,b) = dist(b,a)
+- Identity — d(a,b) = 0 iff a=b
+- Triangle equality — d(a,b) ≤ d(a,x) + d(x,b)
+    
+    ```python
+           a *
+     
+                           * x
+    
+               b *
+    ```
 
 ## Manhattan distance
 
@@ -42,7 +63,7 @@ $$
 \sum_i a_i b_i
 $$
 
-> 💡 Difference between dot product and inner product is that the dot product is a specific inner product that works on $\mathbb{R}^n$.
+> 💡 Difference between dot product and inner product is that the dot product is a specific inner product that works on \\( \mathcal{R}^n \\).
 
 ## Cosine similarity
 
@@ -84,3 +105,23 @@ $$
 - Levenshtein distance
 
 ![Euclidean distance](./Euclidean_Distance.png)
+
+## Jaccard distance
+
+## Mahalanobis distance
+    
+"how many standard deviations away"
+
+Euclidean distance, but normalised with standard deviation
+
+## Edit distance
+
+Min. no. of inserts and deletes of characters to convert one to another
+
+```python
+d("abcde", "acfdeg") = 3
+```
+
+1. Remove g
+2. Insert f
+3. Insert b
