@@ -187,13 +187,6 @@ Ideas
 
 ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dd6f8e6a-90e2-485e-9e90-d81e98967e29/Untitled.png](./nlp-task-spectrum.png)
 
-# **Data types**
-
-- Text
-- Parallel corpus
-- Documents
-- Text with labels
-
 # **Frameworks**
 
 - fairseq
@@ -231,9 +224,3 @@ ROUGE (recall-oriented understudy for gisting evaluation)
 SuperGLUE
 
 XGLUE
-
-# Multimodal
-
-- Text
-- Tabular
-- Vision
