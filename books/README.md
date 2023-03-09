@@ -14,7 +14,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed
 
 3. Run `mdbook init`.
 
-4. Update the `book.toml` file with:
+4. Update the `books/src/your-book/book.toml` file with:
 
     ```toml
     [book]
@@ -29,7 +29,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed
     mathjax-support = true
     # Required for preprocess.last-changed
     git-repository-url = "https://github.com/remykarem/remkarem.github.io"
-    additional-css = ["../last-changed.css"]
+    additional-css = ["last-changed.css"]
 
     [build]
     build-dir = "../../your-book"
@@ -43,7 +43,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed
     renderer = ["html"]
     ```
 
-5. Add `last-changed.css`:
+5. Add `books/src/your-book/last-changed.css`:
 
     ```css
     footer {
