@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 1 - Stats book</title>
+        <title>Statistical tests - Stats book</title>
 
 
         <!-- Custom HTML head -->
@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html" class="active"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="basic.html"><strong aria-hidden="true">1.</strong> Basic</a></li><li class="chapter-item expanded "><a href="probability-distributions.html"><strong aria-hidden="true">2.</strong> Probability distributions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="bernoulli.html"><strong aria-hidden="true">2.1.</strong> Bernoulli</a></li></ol></li><li class="chapter-item expanded "><a href="statistical-tests.html" class="active"><strong aria-hidden="true">3.</strong> Statistical tests</a></li><li class="chapter-item expanded "><a href="stochastic-process.html"><strong aria-hidden="true">4.</strong> Stochastic process</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> Markov chain</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Gaussian process</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.</strong> Poisson process</div></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,13 +150,100 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+                        <h1 id="statistical-tests"><a class="header" href="#statistical-tests">Statistical tests</a></h1>
+<ul>
+<li><a href="#chi-squared-test">Chi-squared test</a></li>
+<li><a href="#1-sample-2-sample">1-sample, 2-sample</a></li>
+<li><a href="#anova-analysis-of-variance">ANOVA (Analysis of Variance)</a></li>
+<li><a href="#p-value-hypothesis-testing">P-Value (Hypothesis testing)</a></li>
+</ul>
+<hr />
+<h2 id="chi-squared-test"><a class="header" href="#chi-squared-test">Chi-squared test</a></h2>
+<p>Aliases: Pearson's chi-squared test, goodness-of-fit statistic</p>
+<p>Test if 2 categorical variables are independent</p>
+<p><a href="https://towardsdatascience.com/chi-squared-test-for-feature-selection-with-implementation-in-python-65b4ae7696db">https://towardsdatascience.com/chi-squared-test-for-feature-selection-with-implementation-in-python-65b4ae7696db</a></p>
+<ol>
+<li>
+<p>$H_0$: Two variables are independent (do they have to follow any distribution???)</p>
+<p>$H_1$: Two variables are not independent</p>
+</li>
+<li>
+<p>Create contingency table</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th>Cricket</th><th>Football</th><th>Tennis</th><th>Row Total</th></tr></thead><tbody>
+<tr><td>Male</td><td>20</td><td>30</td><td>15</td><td>65</td></tr>
+<tr><td>Female</td><td>20</td><td>15</td><td>30</td><td>65</td></tr>
+<tr><td>Column total</td><td>40</td><td>45</td><td>45</td><td>130</td></tr>
+</tbody></table>
+</div></li>
+<li>
+<p>Calculate expected frequency count for each cell</p>
+<pre><code class="language-python">expected = (row_total * col_total) / grand_total
+</code></pre>
+<div class="table-wrapper"><table><thead><tr><th></th><th>Cricket</th><th>Football</th><th>Tennis</th><th>Row Total</th></tr></thead><tbody>
+<tr><td>Male</td><td>20 [20]</td><td>30 [22.5]</td><td>15 [22.5]</td><td>65</td></tr>
+<tr><td>Female</td><td>20 [20]</td><td>15 [22.5]</td><td>30 [22.5]</td><td>65</td></tr>
+<tr><td>Column total</td><td>40</td><td>45</td><td>45</td><td>130</td></tr>
+</tbody></table>
+</div></li>
+<li>
+<p>Calculate chi-square value</p>
+<p>$$
+\chi^2=\sum_{i=1}^{N} \frac{(O_i-E_i)^2}{E_i}
+$$</p>
+<p>$$
+\chi^2 = \frac{(20-20)^2}{20} + \frac{(30-22.5)^2}{22.5} + ...
+$$</p>
+<blockquote>
+<p>💡 Recall that the $\chi^2$ distribution is the sum of squared independent normal random variables.</p>
+</blockquote>
+</li>
+<li>
+<p>Calculate degrees of freedom</p>
+<p>df = (total_rows - 1) * (total_cols - 1)</p>
+</li>
+<li>
+<p>Finally, calculate the p-value</p>
+</li>
+</ol>
+<h2 id="1-sample-2-sample"><a class="header" href="#1-sample-2-sample">1-sample, 2-sample</a></h2>
+<p><img src="./statistical-tests-01.png" alt="statistical test" /></p>
+<h2 id="anova-analysis-of-variance"><a class="header" href="#anova-analysis-of-variance">ANOVA (Analysis of Variance)</a></h2>
+<p>to test whether groups of data have the same mean</p>
+<p>compares the sum of square error within and between groups.</p>
+<ul>
+<li>The populations from which the samples were obtained must be normally or approximately normally distributed.</li>
+<li>The samples must be independent.</li>
+<li>The variances of the populations must be equal.</li>
+</ul>
+<p>Null hypothesis: all population means are equal.</p>
+<p>F statistic = SST/(k-1) / SSE/(n-k)</p>
+<div class="table-wrapper"><table><thead><tr><th>Quantity</th><th></th><th>Degrees of Freedom</th><th>Distribution</th></tr></thead><tbody>
+<tr><td>SS (between groups)</td><td>ŷ - ȳ</td><td>k-1</td><td></td></tr>
+<tr><td>SS (within)</td><td>y - ŷ</td><td>n-k</td><td></td></tr>
+<tr><td>SST</td><td>y - ȳ</td><td>n-1</td><td></td></tr>
+</tbody></table>
+</div>
+<h2 id="p-value-hypothesis-testing"><a class="header" href="#p-value-hypothesis-testing">P-Value (Hypothesis testing)</a></h2>
+<p>quantifying a proof by contradiction argument, where we begin by assuming the null hypothesis is true</p>
+<p>the probability that you would observe something extreme or more than what you had actually observed</p>
+<p>It is the chance of observing your sample results or more extreme results assuming that the null hypothesis is true. If this chance is ‘small’, we may reject the null hypothesis.</p>
+<p>Samplemean = 0.7</p>
+<p>P(X_bar &gt; claim) = p</p>
+<p>has underlying assumption*</p>
+<p>monotonic = never increases OR never decreases</p>
+<p>A distribution is the arrangement of data by the values of one variable in order, from low to high. This arrangement, and its characteristics such as shape and spread, provide information about the underlying sample.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="bernoulli.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
+                            <a rel="next" href="stochastic-process.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -164,7 +251,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="bernoulli.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
+                    <a rel="next" href="stochastic-process.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
