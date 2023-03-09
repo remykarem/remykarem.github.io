@@ -2,6 +2,10 @@
 
 Non-linearity functions
 
+Decides if a neuron should be on or off, and if on, how useful is it. They also ensure that values are contained and don’t explode.
+
+The purpose of activation functions is to introduce non-linearities into the network. In real life, almost all of our data is non linear. Nonlinearities allow you to approximate arbitrarily complex functions by introducing nonlinearities into decision boundaries.
+
 <!-- toc -->
 
 ## Sigmoid
@@ -43,6 +47,8 @@ $$
 
 ## ReLU
 
+Rectified Linear Unit
+
 $$
 \text{ReLU}(x)
 = \begin{cases}
@@ -71,6 +77,14 @@ $$
 \end{cases} 
 $$
 
+## CeLU
+
+Continuously Differentiable Exponential Linear Unit
+
 ## GeLU
 
+Gaussian Error Linear Unit
+
 ## SwiGLU
+
+## Swish

@@ -152,13 +152,17 @@
                     <main>
                         <h1 id="activation-functions"><a class="header" href="#activation-functions">Activation functions</a></h1>
 <p>Non-linearity functions</p>
+<p>Decides if a neuron should be on or off, and if on, how useful is it. They also ensure that values are contained and don’t explode.</p>
+<p>The purpose of activation functions is to introduce non-linearities into the network. In real life, almost all of our data is non linear. Nonlinearities allow you to approximate arbitrarily complex functions by introducing nonlinearities into decision boundaries.</p>
 <ul>
 <li><a href="#sigmoid">Sigmoid</a></li>
 <li><a href="#softmax">Softmax</a></li>
 <li><a href="#relu">ReLU</a></li>
 <li><a href="#leakyrelu">LeakyReLU</a></li>
+<li><a href="#celu">CeLU</a></li>
 <li><a href="#gelu">GeLU</a></li>
 <li><a href="#swiglu">SwiGLU</a></li>
+<li><a href="#swish">Swish</a></li>
 </ul>
 <h2 id="sigmoid"><a class="header" href="#sigmoid">Sigmoid</a></h2>
 <p>$$
@@ -192,6 +196,7 @@ $$</p>
 \end{bmatrix}
 $$</p>
 <h2 id="relu"><a class="header" href="#relu">ReLU</a></h2>
+<p>Rectified Linear Unit</p>
 <p>$$
 \text{ReLU}(x)
 = \begin{cases}
@@ -217,8 +222,12 @@ x     &amp; \text {else}
 1    &amp; \text {else}
 \end{cases} 
 $$</p>
+<h2 id="celu"><a class="header" href="#celu">CeLU</a></h2>
+<p>Continuously Differentiable Exponential Linear Unit</p>
 <h2 id="gelu"><a class="header" href="#gelu">GeLU</a></h2>
+<p>Gaussian Error Linear Unit</p>
 <h2 id="swiglu"><a class="header" href="#swiglu">SwiGLU</a></h2>
+<h2 id="swish"><a class="header" href="#swish">Swish</a></h2>
 
                     </main>
 

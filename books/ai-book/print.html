@@ -4477,19 +4477,6 @@ $$</p>
 <li>Output</li>
 </ul>
 <p>Note that a combination of linear models is still linear ie b + wx + wx.</p>
-<h1 id="activation-functions"><a class="header" href="#activation-functions"><strong>Activation functions</strong></a></h1>
-<p>Decides if a neuron should be on or off, and if on, how useful is it. They also ensure that values are contained and don’t explode.</p>
-<ul>
-<li>Sigmoid</li>
-<li>Softmax</li>
-<li>ReLU (Rectified Linear Unit)</li>
-<li>Leaky ReLU</li>
-<li>CELU (Continuously Differentiable Exponential Linear Unit)</li>
-<li>GELU (Gaussian Error Linear Unit)</li>
-<li>Swish</li>
-</ul>
-<p>Importance of activation function and nonlinearity</p>
-<p>The purpose of activation functions is to introduce non-linearities into the network. In real life, almost all of our data is non linear. Nonlinearities allow you to approximate arbitrarily complex functions by introducing nonlinearities into decision boundaries.</p>
 <h1 id="optimisation"><a class="header" href="#optimisation"><strong>Optimisation</strong></a></h1>
 <p>Solving the weights of a network with loss function is a non-convex optimisation. Proper initialisation matters. If network is composed of differentiable functions, then we can probably learn from it using gradient descent.</p>
 <h1 id="gradient-descent"><a class="header" href="#gradient-descent"><strong>Gradient descent</strong></a></h1>
@@ -5084,15 +5071,19 @@ loss.backward()
 </ul>
 </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="activation-functions-1"><a class="header" href="#activation-functions-1">Activation functions</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="activation-functions"><a class="header" href="#activation-functions">Activation functions</a></h1>
 <p>Non-linearity functions</p>
+<p>Decides if a neuron should be on or off, and if on, how useful is it. They also ensure that values are contained and don’t explode.</p>
+<p>The purpose of activation functions is to introduce non-linearities into the network. In real life, almost all of our data is non linear. Nonlinearities allow you to approximate arbitrarily complex functions by introducing nonlinearities into decision boundaries.</p>
 <ul>
 <li><a href="activation-functions.html#sigmoid">Sigmoid</a></li>
 <li><a href="activation-functions.html#softmax">Softmax</a></li>
 <li><a href="activation-functions.html#relu">ReLU</a></li>
 <li><a href="activation-functions.html#leakyrelu">LeakyReLU</a></li>
+<li><a href="activation-functions.html#celu">CeLU</a></li>
 <li><a href="activation-functions.html#gelu">GeLU</a></li>
 <li><a href="activation-functions.html#swiglu">SwiGLU</a></li>
+<li><a href="activation-functions.html#swish">Swish</a></li>
 </ul>
 <h2 id="sigmoid"><a class="header" href="#sigmoid">Sigmoid</a></h2>
 <p>$$
@@ -5126,6 +5117,7 @@ $$</p>
 \end{bmatrix}
 $$</p>
 <h2 id="relu"><a class="header" href="#relu">ReLU</a></h2>
+<p>Rectified Linear Unit</p>
 <p>$$
 \text{ReLU}(x)
 = \begin{cases}
@@ -5151,8 +5143,12 @@ x     &amp; \text {else}
 1    &amp; \text {else}
 \end{cases} 
 $$</p>
+<h2 id="celu"><a class="header" href="#celu">CeLU</a></h2>
+<p>Continuously Differentiable Exponential Linear Unit</p>
 <h2 id="gelu"><a class="header" href="#gelu">GeLU</a></h2>
+<p>Gaussian Error Linear Unit</p>
 <h2 id="swiglu"><a class="header" href="#swiglu">SwiGLU</a></h2>
+<h2 id="swish"><a class="header" href="#swish">Swish</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reinforcement-learning"><a class="header" href="#reinforcement-learning">Reinforcement learning</a></h1>
 <p>Learn an optimal <em>policy</em> for sequential decision-making problems in a stochastic environment.</p>
 <p><a href="https://remykarem.github.io/books/ai-planning-book">AI Planning book</a></p>
