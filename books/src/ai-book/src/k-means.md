@@ -18,15 +18,15 @@
 
 > 💡 Assumes clusters are normally distributed in each dimension
 
-Time \\( O(m \cdot k \cdot n) \\)
+Time $O(m \cdot k \cdot n)$
 
 1. Assign *k* centroids
-2. For every datapoint, calculate distance to all other centroids — \\( O(k) \\)
-3. Repeat for all datapoints — \\( O(n) \\)
+2. For every datapoint, calculate distance to all other centroids — $O(k)$
+3. Repeat for all datapoints — $O(n)$
 4. Reassign each datapoint to the nearest cluster
-5. Repeat for *m* iterations until convergence — \\( O(m) \\)
+5. Repeat for *m* iterations until convergence — $O(m)$
 
-Space \\( O(n) \\)
+Space $O(n)$
 
 ---
 
@@ -36,7 +36,7 @@ Clusters: centroid-based
 
 Clustering: partitional, exclusive, complete
 
-NP-hard; \\( O(N^{Kd+1}) \\).
+NP-hard; $O(N^{Kd+1})$.
 
 Define the objective function to minimise:
 
@@ -44,9 +44,9 @@ $$
 SSE = \sum_{k=1}^K \sum_{x_{i,k} \in C_k} (x_{i,k} - c_k)^2 
 $$
 
-which is the total squared distance between every point and centroid across all the *K* clusters. For every cluster *k*, and for every point \\( x_{i,k} \\) in this cluster \\( C_k \\), find the squared distance between the point \\( x_{i,k} \\) and the cluster's centroid, \\( c_k \\).
+which is the total squared distance between every point and centroid across all the *K* clusters. For every cluster *k*, and for every point $x_{i,k}$ in this cluster $C_k$, find the squared distance between the point $x_{i,k}$ and the cluster's centroid, $c_k$.
 
-Taking derivative with respect to \\( c_k \\), the best centroid can be found as follows:
+Taking derivative with respect to $c_k$, the best centroid can be found as follows:
 
 $$
 \frac{\partial}{\partial c_k} SSE = 0 \\\\

@@ -16,7 +16,7 @@ where the TD target consists of reward from 1 time step.
 
 **Variants**
 
-- \\( n \\)-step TD learning
+- $n$-step TD learning
     
     Instead of using reward from 1 time step, use \\(n \\) steps.
     

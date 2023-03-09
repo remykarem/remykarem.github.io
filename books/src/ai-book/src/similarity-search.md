@@ -6,7 +6,7 @@
 
 ## Brute force
 
-Given $N$ documents, there are \\( {N \choose 2}  = \frac{N(N-1)}{2} \\) combinations.
+Given $N$ documents, there are ${N \choose 2}  = \frac{N(N-1)}{2}$ combinations.
 
 Complexity is $O(N^2)$ .
 

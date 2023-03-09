@@ -38,4 +38,4 @@ Because Q is all we need, what makes up Q then becomes an abstraction to us:
 - Don't need to know about the transition
 - Don't need to know about the reward functions (after all we only need to take argmax of Q)
 
-We can instead use what we've experienced to develop a more accurate representation of \\( Q \\), which in turn helps us to develop a more optimal policy to follow. This learning is incremental learning.
+We can instead use what we've experienced to develop a more accurate representation of $Q$, which in turn helps us to develop a more optimal policy to follow. This learning is incremental learning.

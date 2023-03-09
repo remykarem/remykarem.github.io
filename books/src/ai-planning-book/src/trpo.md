@@ -32,7 +32,7 @@ What do we do?
     U(\pi) \ge L(\pi) - C \max_s \text{KL}[\pi_{old}(\cdot|s)||\pi(\cdot|s)]
     $$
     
-    If \\( \pi = \pi_{old} \\), \\( U(\pi_{old}) = L(\pi_{old}) \\). Otherwise, \\( U(\pi_{old}) > L(\pi_{old}) \\).
+    If $\pi = \pi_{old}$, $U(\pi_{old}) = L(\pi_{old})$. Otherwise, $U(\pi_{old}) > L(\pi_{old})$.
     
 4. Apply trust region constraint (for faster convergence). Take larger steps in a robust manner.
 5. Further approximate the second term using importance sampling.

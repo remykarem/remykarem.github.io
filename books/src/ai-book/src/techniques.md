@@ -34,7 +34,7 @@
     - Regularisation; "ensembling"
     - Forward
         
-        Drop \\( p \\) of the neurons.
+        Drop $p$ of the neurons.
         
         $$
         z_i = \text{Dropout}(h_i) 
@@ -44,7 +44,7 @@
         \end{cases}
         $$
         
-        where \\( scale = \frac{1}{1-p} \\).
+        where $scale = \frac{1}{1-p}$.
         
     - Backward
         
@@ -58,7 +58,7 @@
         
     - Gradients flow back to the unit that didn't experience dropout
 - Stacking uniform convolutional layers
-    - Stacking consecutive \\( 3 \times 3 \\) convolutional layers is equivalent to a \\( 5 \times 5 \\) convolutional layer in *terms of receptive field size*. Computationally cheaper.
+    - Stacking consecutive $3 \times 3$ convolutional layers is equivalent to a $5 \times 5$ convolutional layer in *terms of receptive field size*. Computationally cheaper.
 - [Modular] (concat)
     - "Ensembling" of different kernels; different information can be captured at different levels
 - 1x1 convolution
@@ -84,11 +84,11 @@
     > 💡 For CNN batch norm, every channel will have a mean and std. (Replace "neuron1", "neuron2", etc. with "channel1", "channel2", ...
     
 - Kernel factorisation (spatially separable convolution)
-    - \\( 7 \times 7 \\) is equivalent to \\( 1 \times 7 \\) and \\( 7 \times 1 \\) in terms of receptive field (how?).Cos of computation is reduced.
+    - $7 \times 7$ is equivalent to $1 \times 7$ and $7 \times 1$ in terms of receptive field (how?).Cos of computation is reduced.
 - Skip connections
     - Gradient does not vanish → faster convergence; "ensembling"
 - Kernel factorisation (depthwise separable convolution)
-    - \\( c_{in} \times c_{out} \times 3 \times 3 \\) filter is equivalent to \\( c_{in} \times 3 \times 3 \\) followed by \\( c_{in} \times c_{out} \times 1 \times 1 \\). Cost of computation is reduced.
+    - $c_{in} \times c_{out} \times 3 \times 3$ filter is equivalent to $c_{in} \times 3 \times 3$ followed by $c_{in} \times c_{out} \times 1 \times 1$. Cost of computation is reduced.
     - Depthwise = no. of kernels determined by input channels 
     Pointwise = 1x1 convolution
 

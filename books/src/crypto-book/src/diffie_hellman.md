@@ -17,13 +17,13 @@ Modular exponentiation?
 
 ## How it works
 
-Define secret \\( s \\) and an agreed modulo \\( p \\) (which is prime):
+Define secret $s$ and an agreed modulo $p$ (which is prime):
 
 $$
 s = s \bmod p \\\\
 $$
 
-Letting \\( s = g^{ab} \\), where \\( g \\) is a primitive root modulo \\( p \\), we have
+Letting $s = g^{ab}$, where $g$ is a primitive root modulo $p$, we have
 
 $$
 \begin{aligned}
@@ -32,13 +32,13 @@ g^{ba} \bmod p &= g^{ab} \bmod p \\\\
 \end{aligned}
 $$
 
-Let \\( a \\) and \\( b \\) be secrets that are individually chosen by Alice and Bob respectively. LHS: Alice's computation, RHS: Bob's computation.
+Let $a$ and $b$ be secrets that are individually chosen by Alice and Bob respectively. LHS: Alice's computation, RHS: Bob's computation.
 
 $$
 (g^{b_{secret}} \bmod p)^{a_{secret}} \bmod p = (g^{a_{secret}} \bmod p)^{b_{secret}} \bmod p
 $$
 
-Looking at Alice's computation, she would need to compute \\( (g^{b_{secret}} \bmod p) \\). However, this can be provided by Bob because Bob owns \\( b_{secret} \\). So now we have:
+Looking at Alice's computation, she would need to compute $(g^{b_{secret}} \bmod p)$. However, this can be provided by Bob because Bob owns $b_{secret}$. So now we have:
 
 $$
 (b_{public})^{a_{secret}} \bmod p = (g^{a_{secret}} \bmod p)^{b_{secret}} \bmod p

@@ -23,7 +23,7 @@ $$
 b(s)
 $$
 
-If \\( b(s_1)=0.9 \\) and \\( b(s_2)=0.1 \\), it means that most likely we are in state 1.
+If $b(s_1)=0.9$ and $b(s_2)=0.1$, it means that most likely we are in state 1.
 
 > ⚠️ Belief space is continuous!
 
@@ -37,7 +37,7 @@ $$
 
 Updating belief:
 
-At \\( s \\), agent performs action \(( a \\) and to go into state \\( s' \\) and receives evidence \\( e \\).
+At $s$, agent performs action \(( a \\) and to go into state $s'$ and receives evidence $e$.
 
 $$
 b'(s') = \frac{P(e|s') \sum_s P(s'|s,a)b(s)}{Z}  

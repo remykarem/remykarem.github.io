@@ -90,7 +90,7 @@ p_k
 \end{bmatrix}
 $$
 
-\\( \boldsymbol{p} \\) is vector of logits with \\( k \\) classes.
+$\boldsymbol{p}$ is vector of logits with $k$ classes.
 
 General:
 
@@ -153,13 +153,13 @@ $$
 ## MLE & MAP
 
 - All the loss functions below use MLE (???)
-- L2 regularisation (not sure about L1) is actually finding the \\( \theta_{MAP} \\) of a distribution whose prior on \\( \theta \\) is a normal distribution! (MAP interpretation is we are maximising a combination of prior and likelihood functions).
+- L2 regularisation (not sure about L1) is actually finding the $\theta_{MAP}$ of a distribution whose prior on $\theta$ is a normal distribution! (MAP interpretation is we are maximising a combination of prior and likelihood functions).
 
 ## L1
 
 ## L2
 
-Given \\( \alpha = 0.5 \\), \\( \lambda=1 \\), \\( w=(1,2)^T \\), \\( \frac{\partial L}{\partial w}=(2,-2)^T \\), \\( L_2=L+\frac{\lambda}{2}||\text{w}||^2 \\), find the final \\( w \\) after one SGD update.
+Given $\alpha = 0.5$, $\lambda=1$, $w=(1,2)^T$, $\frac{\partial L}{\partial w}=(2,-2)^T$, $L_2=L+\frac{\lambda}{2}||\text{w}||^2$, find the final $w$ after one SGD update.
 
 $$
 \frac{\partial L_2}{\partial w} = \frac{\partial L}{\partial w} + ||w|| = (2,-2)^T+(1,2)^T
@@ -203,7 +203,7 @@ $$
 \text{loss}=-0.1 \times \log(0.3)  -0.1 \times \log(0.5) -0.8 \times \log(0.2)
 $$
 
-**with smoothing parameter \\( \epsilon=0.3 \\) such that**
+**with smoothing parameter $\epsilon=0.3$ such that**
 
 $$
 y_\text{true(smooth)} =\begin{bmatrix}

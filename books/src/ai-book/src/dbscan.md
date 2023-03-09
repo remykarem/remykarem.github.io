@@ -19,7 +19,7 @@ The DBSCAN algorithm views clusters as areas of high density separated by areas 
 
 ## From CS5228:
 
-\\( O(MinPts \times N) \\)
+$O(MinPts \times N)$
 
 Clusters: **density-based**
 
@@ -29,14 +29,14 @@ $$
 density = \frac{mass}{valume} \approx \frac{MinPts}{\epsilon}
 $$
 
-where \\( \epsilon \\) is the radius defining no. of points in the neighbourhood and $MinPts$ the min. no. of points for it to be a core point.
+where $\epsilon$ is the radius defining no. of points in the neighbourhood and $MinPts$ the min. no. of points for it to be a core point.
 
 ![Types of points](./dbscan-01.png)
 
 There are 3 types of points:
 
-- Core points: Any points with at least MinPts neighours in a radius \\( \epsilon \\).
-- Border points: Any non-core points with at least one core point within the radius \\( \epsilon \\).
+- Core points: Any points with at least MinPts neighours in a radius $\epsilon$.
+- Border points: Any non-core points with at least one core point within the radius $\epsilon$.
 - Outliers
 
 Algorithm:
@@ -70,7 +70,7 @@ Algorithm:
     
     Parameters can be chosen by
     
-    - EDA: plot distribution of all pairwise distances. This can help us to decide suitable values for \\( \epsilon \\).
+    - EDA: plot distribution of all pairwise distances. This can help us to decide suitable values for $\epsilon$.
         
         ![Find epsilon](./dbscan-05.png)
         

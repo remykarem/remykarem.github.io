@@ -20,7 +20,7 @@ $$
 
 1. **Select a node**
     
-    The policy to follow is \\( \pi_{UCT} \\). Calculate UCT (Upper Confidence Tree) for every child
+    The policy to follow is $\pi_{UCT}$. Calculate UCT (Upper Confidence Tree) for every child
     
     $$
     UCT =  \text{exploitation} + C \times \text{exploration}
@@ -35,9 +35,9 @@ $$
     
     and where
     
-    - \\( v_i \\) is the sum of the returns from the \\( i \\)th child
-    - \\( n_i \\) is the no. of visits of the \\( i \\)th child
-    - \\( N \\) is the no. of visits of the current node
+    - $v_i$ is the sum of the returns from the $i$th child
+    - $n_i$ is the no. of visits of the $i$th child
+    - $N$ is the no. of visits of the current node
 2. **Expand**
     
     At this node, we select an action that hasn't been taken. Selecting that action means we will enter the state.

@@ -22,7 +22,7 @@ $$
 
 where
 
-* \\( \Omega \\) is the regularisation term 
-* \\( R' \\) defines the targets for unlabelled data
+* $\Omega$ is the regularisation term 
+* $R'$ defines the targets for unlabelled data
 
 > Good for small amount of data and large amount of unlabelled data.

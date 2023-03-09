@@ -2,7 +2,7 @@
 
 Distance metrics, distance measures
 
-For \\( n \\) datapoints, computing pairwise distance is \\( O(n^2) \\) because 
+For $n$ datapoints, computing pairwise distance is $O(n^2)$ because 
 
 $$
 {n \choose {2}} = \frac{n(n-1)}{2}
@@ -63,7 +63,7 @@ $$
 \sum_i a_i b_i
 $$
 
-> 💡 Difference between dot product and inner product is that the dot product is a specific inner product that works on \\( \mathcal{R}^n \\).
+> 💡 Difference between dot product and inner product is that the dot product is a specific inner product that works on $\mathcal{R}^n$.
 
 ## Cosine similarity
 

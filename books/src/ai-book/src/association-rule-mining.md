@@ -28,7 +28,7 @@ Applications
     ![](./arm-04.png)
     
 
-\\( d \\) unique items result in $3^d - 2^{d+1} + 1$ possible rules[^allcombinations].
+$d$ unique items result in $3^d - 2^{d+1} + 1$ possible rules[^allcombinations].
     
 
 Definitions
@@ -103,7 +103,7 @@ Two-Part algorithm for mining association rules
 
 ---
 
-[^allcombinations]: Explanation why \\( d \\) unique items result in $3^d - 2^{d+1} + 1$ possible rules.
+[^allcombinations]: Explanation why $d$ unique items result in $3^d - 2^{d+1} + 1$ possible rules.
 
 An item can be either be on the LHS, RHS or neither ("None").
 

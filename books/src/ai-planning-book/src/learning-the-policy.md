@@ -4,23 +4,23 @@ AKA policy search
 
 In policy search, we try to find a policy. One example to represent a policy is by using Q-functions.
 
-The policy \\( \pi \\) is parametrised by \\( \theta \\). The goal is to adjust \\( \theta \\) to improve policy.
+The policy $\pi$ is parametrised by $\theta$. The goal is to adjust $\theta$ to improve policy.
 
-Often use a stochastic policy \\( \pi_\theta(s,a) \\) and often we want it to be differentiable (because we want to use gradient descent). An unbiased estimate for gradient ascent is sufficient; no need for exact gradient.
+Often use a stochastic policy $\pi_\theta(s,a)$ and often we want it to be differentiable (because we want to use gradient descent). An unbiased estimate for gradient ascent is sufficient; no need for exact gradient.
 
-Recall that utility of a state \\( s_0 \\)
+Recall that utility of a state $s_0$
 
 $$
 U(s_0) = \sum_a \pi(s_0,a)R(a)
 $$
 
-Parametrise it with \\( \theta \\)
+Parametrise it with $\theta$
 
 $$
 U_\theta(s_0) = \sum_a \pi_\theta(s_0,a)R(a)
 $$
 
-Then differentiate wrt to \\( \theta \\):
+Then differentiate wrt to $\theta$:
 
 $$
 \begin{aligned}
@@ -30,7 +30,7 @@ $$
 \end{aligned}
 $$
 
-but we can sample from the gradient using Monte Carlo methods using importance sampling (where \\( \pi_\theta \\) is a probability distribution)
+but we can sample from the gradient using Monte Carlo methods using importance sampling (where $\pi_\theta$ is a probability distribution)
 
 $$
 \begin{aligned}

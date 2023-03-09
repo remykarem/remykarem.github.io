@@ -7,7 +7,7 @@ Making rational decisions means making decisions that follow the 4 axioms of dec
 3. Continuity
 4. Substitutability
 
-When deciding between 2 options which can either be a fixed outcome ("**state**") or a  gamble ("**lottery**"), we compare the usefulness ("**utility**") between them, i.e. assigning a function \\( U \\) to them.
+When deciding between 2 options which can either be a fixed outcome ("**state**") or a  gamble ("**lottery**"), we compare the usefulness ("**utility**") between them, i.e. assigning a function $U$ to them.
 
 $$
 U(\text{have car}) \\ U(\text{have car with prob 0.9}) 

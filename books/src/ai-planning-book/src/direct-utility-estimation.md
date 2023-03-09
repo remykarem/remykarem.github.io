@@ -19,7 +19,7 @@ $$
     ![Direct utility estimation](./direct-utility-estimation.png)
     
 
-Updating when a new episodic return \\( G_k \\) comes in:
+Updating when a new episodic return $G_k$ comes in:
 
 $$
 U_k(s) = U_{k-1}(s) + \frac{1}{k}[G_k(s) - U_{k-1}(s)]
@@ -27,6 +27,6 @@ $$
 
 where:
 
-- \\( U_{k-1} \\) is the estimate after receiving \\( k-1 \\) returns
-- \\( G_k \\) is the new data (from initial to terminal state)
-- \\( G_k - U_{k-1} \\) can  be considered as the prediction error
+- $U_{k-1}$ is the estimate after receiving $k-1$ returns
+- $G_k$ is the new data (from initial to terminal state)
+- $G_k - U_{k-1}$ can  be considered as the prediction error

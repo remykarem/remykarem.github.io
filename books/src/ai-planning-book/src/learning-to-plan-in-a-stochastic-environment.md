@@ -19,8 +19,8 @@ where model = (states, transition rules / actions, rewards, etc.)
 
 > 👉🏻 Experience: data
 
-**Prediction**: fix \\( \pi \\), learn \\( V \\)
+**Prediction**: fix $\pi$, learn $V$
 
-**Control**: fix \\( V \\), learn \\( \pi \\)
+**Control**: fix $V$, learn $\pi$
 
 > 👉🏻 Episode: initial state to terminal state

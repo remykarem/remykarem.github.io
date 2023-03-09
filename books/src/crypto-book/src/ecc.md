@@ -19,7 +19,7 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
     * Point of infinity
     * Cofactor - Order of the curve / order of a group
 
-    Find \\( n \\) such that
+    Find $n$ such that
 
     $$
     2^n = 16
@@ -27,7 +27,7 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
 
 * Discrete logarithm problem
 
-    Find \\( n \\) such that
+    Find $n$ such that
 
     $$
     2^n mod 17 = 16
@@ -58,12 +58,12 @@ Finding the reverse of this is the discrete logarithm problem (which I have yet 
 
 |Curve name| Form | Prime field, p |
 |----|---| --- |
-|[Curve25519](https://en.wikipedia.org/wiki/Curve25519)| Montgomery | \\( 2^{255} - 19 \\) |
-|[Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519)| Twisted Edwards | \\( 2^{255} - 19 \\) |
-|NIST P-256|Weierstrass | \\( 2^{256} - 2^{224} + 2^{192} + 2^{96} - 1 \\) |
-|NIST P-384| Weierstrass | \\( 2^{384} - 2^{128} - 2^{96} + 2^{32} - 1 \\) |
-|secp256k1| Weierstrass | \\( 2^{256} - 2^{32} - 977 \\) |
-|Ed448-Goldilocks| Edwards | \\( 2^{448} - 2^{224} - 1 \\) |
+|[Curve25519](https://en.wikipedia.org/wiki/Curve25519)| Montgomery | $2^{255} - 19$ |
+|[Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519)| Twisted Edwards | $2^{255} - 19$ |
+|NIST P-256|Weierstrass | $2^{256} - 2^{224} + 2^{192} + 2^{96} - 1$ |
+|NIST P-384| Weierstrass | $2^{384} - 2^{128} - 2^{96} + 2^{32} - 1$ |
+|secp256k1| Weierstrass | $2^{256} - 2^{32} - 977$ |
+|Ed448-Goldilocks| Edwards | $2^{448} - 2^{224} - 1$ |
 
 ## Elliptic curve forms
 

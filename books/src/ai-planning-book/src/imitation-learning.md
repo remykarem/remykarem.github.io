@@ -14,7 +14,7 @@ Algorithms:
     
 - DAgger (Dataset aggregation)
     
-    There are \\( N \\) lessons:
+    There are $N$ lessons:
     
     - For the first lesson, the teacher is the driver. For subsequent lessons, we are the driver.
     - During the lesson, we collect training samples from the driver (just the state!).

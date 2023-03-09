@@ -35,7 +35,7 @@ $$
 
 ## Transition matrix
 
-> 💡 If I take action \\( a \\) at state \\( s \\), what is the probability that I end up at state \\( s' \\)?
+> 💡 If I take action $a$ at state $s$, what is the probability that I end up at state $s'$?
 
 > ⚠️ Note that action has already been determined.
 
@@ -51,7 +51,7 @@ $$
 
 ## Reward and reward function
 
-A function ("**reward function**") that maps a state \\( s \\) to a value ("**reward**").
+A function ("**reward function**") that maps a state $s$ to a value ("**reward**").
 
 $$
 R(s) \rightarrow \mathbb{R}
@@ -94,7 +94,7 @@ U(s)
 \end{aligned}
 $$
 
-= utility of a sequence of states as taken by some policy \\( \pi \\)
+= utility of a sequence of states as taken by some policy $\pi$
 
 = rewards from current state + rewards from future states
 
@@ -121,19 +121,19 @@ V(s)
 \end{aligned}
 $$
 
-From the value function \\( V \\), we can derive the optimal policy \\( \pi^* \\)
+From the value function $V$, we can derive the optimal policy $\pi^*$
 
 $$
 \pi^*(s) = \arg \max_a \sum_{s'} P(s'|s,a)  V(s')
 $$
 
-> 💡 Suppose you are in a state \\( s \\). For every action in this state, compute its weighted value (based on the transition probabilities). Then find the action that returns the highest expected value.
+> 💡 Suppose you are in a state $s$. For every action in this state, compute its weighted value (based on the transition probabilities). Then find the action that returns the highest expected value.
 
 ## Q-function
 
 Like the value function, the Q-function is the utility of taking an action at a given state under an *optimal* policy.
 
-> 💡 (what's the expected reward given that you start from a certain state \\( s \\) and take a certain action \\( a \\))
+> 💡 (what's the expected reward given that you start from a certain state $s$ and take a certain action $a$)
 
 $$
 Q(s,a) = R(s) + \gamma \sum_{s'} P(s'|s,a) \max_{a'} Q(s', a')
@@ -141,7 +141,7 @@ $$
 
 The higher the Q-value, the more desirable is the action at that state.
 
-From the Q-function, we can derive the optimal policy \\( \pi^* \\):
+From the Q-function, we can derive the optimal policy $\pi^*$:
 
 $$
 \pi^*(s) = \arg \max_a Q(s,a)
@@ -149,7 +149,7 @@ $$
 
 ## Sum of rewards
 
-The sum of rewards for an episode that starts with state \\( s \\).
+The sum of rewards for an episode that starts with state $s$.
 
 $$
 G(s)
@@ -157,8 +157,8 @@ $$
 
 Two notations exist:
 
-1. \\( G_k \\) indicates the cumulative rewards for the \\( k \\)th episode.
-2. \\( G_{t:t+n} = R_t + R_{t+1} + ... +  R_{t+n-1} + \hat{U}(S_{t+n}) \\) (discounts are omitted for readability)
+1. $G_k$ indicates the cumulative rewards for the $k$th episode.
+2. $G_{t:t+n} = R_t + R_{t+1} + ... +  R_{t+n-1} + \hat{U}(S_{t+n})$ (discounts are omitted for readability)
 
 ## Trajectory
 
@@ -180,18 +180,18 @@ Calculating no. of states:
 
 - TSP
     
-    \\( N \\) cities. A salesman must visit every city in a graph. Cannot visit any city twice. 
+    $N$ cities. A salesman must visit every city in a graph. Cannot visit any city twice. 
     
     State: visited 0, at city 4
     
     State: visited 1, at city 2
     
-    For every time he is at a city, there are \\( n \le N \\) cities visited.
+    For every time he is at a city, there are $n \le N$ cities visited.
     
-    There are \\( 2^N \\) combinations where he can be.
+    There are $2^N$ combinations where he can be.
     
     $$O(N2^N)$$
     
 - Inventory control
     
-    Company has space to store \\( N \\).
+    Company has space to store $N$.

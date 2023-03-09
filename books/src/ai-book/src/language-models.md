@@ -4,7 +4,7 @@
 
 In this language model, every possible word is dependent on the previous word.
 
-The joint probability of a sequence of words \\( w_1, w_2, ..., w_N \\) is given by:
+The joint probability of a sequence of words $w_1, w_2, ..., w_N$ is given by:
 
 $$
 \begin{aligned}

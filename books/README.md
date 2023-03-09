@@ -1,9 +1,13 @@
 # README for books
 
-Install mdbook, [mdbook-toc](https://github.com/badboy/mdbook-toc) [mdbook-last-changed](https://github.com/badboy/mdbook-last-changed).
+Install mdbook and the following:
+* [mdbook-toc](https://github.com/badboy/mdbook-toc) — table of contents
+* [mdbook-last-changed](https://github.com/badboy/mdbook-last-changed) — last updated
+* [mdbook-catppuccin](https://github.com/catppuccin/mdBook) — pastel themes
+* [mdbook-katex](https://github.com/lzanini/mdbook-katex) — render math using `$`
 
 ```
-cargo install mdbook mdbook-toc mdbook-last-changed
+cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-katex
 ```
 
 ## Creating a new book
@@ -41,6 +45,11 @@ cargo install mdbook mdbook-toc mdbook-last-changed
     [preprocessor.last-changed]
     command = "mdbook-last-changed"
     renderer = ["html"]
+
+    [output.katex]
+
+    [preprocessor.katex]
+    renderers = ["html"]
     ```
 
 5. Add `books/src/your-book/last-changed.css`:

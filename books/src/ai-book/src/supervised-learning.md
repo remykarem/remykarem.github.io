@@ -14,4 +14,4 @@ $$
 \arg \min_{\boldsymbol{\theta}} \frac{1}{N} \sum_{i=1}^N \mathcal{L}(f(\boldsymbol{x}_i; \boldsymbol{\theta}),y_i) + \lambda \Omega (x_i)
 $$
 
-where \\( \Omega \\) is the regularisation term.
+where $\Omega$ is the regularisation term.

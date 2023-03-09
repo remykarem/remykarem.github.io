@@ -70,7 +70,7 @@ Covariance is a measure of how much two random variables vary together.
 
 > 💡 A measure of spread by looking at how every pair of values is different from their "leaders" (means).
 
-Covariance matrix for \\( X \\) and $Y$:
+Covariance matrix for $X$ and $Y$:
 
 ```
 Cov(X,X)  Cov(X,Y)
@@ -171,7 +171,7 @@ $$
 
 ## Law of large numbers
 
-For a random variable \\( X \\) with mean $\mu$ and variance $\sigma^2$, and a sequence of independent and identically distributed random variables $X_1, X_2, ..., X_n$, the **sample average random variable**
+For a random variable $X$ with mean $\mu$ and variance $\sigma^2$, and a sequence of independent and identically distributed random variables $X_1, X_2, ..., X_n$, the **sample average random variable**
 
 $$
 \bar{X_n} =\frac{1}{n} \sum_{i=1}^n X_i \xrightarrow{n \rightarrow \infty} \mu

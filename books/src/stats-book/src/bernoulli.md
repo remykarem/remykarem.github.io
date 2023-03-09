@@ -1,10 +1,10 @@
 # Bernoulli
 
-Say in an experiment (eg. coin toss) you observe *two* outcomes \\( x=\{0,1\} \\).
+Say in an experiment (eg. coin toss) you observe *two* outcomes $x=\{0,1\}$.
 
-Set the probability of seeing "1" (usually the positive outcome) to \\( 0.8 \\).
+Set the probability of seeing "1" (usually the positive outcome) to $0.8$.
 
-Accordingly, this follows that probability of seeing "0" is \\( 1-0.8=0.2 \\). 
+Accordingly, this follows that probability of seeing "0" is $1-0.8=0.2$. 
 
 This means that
 

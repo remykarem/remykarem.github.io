@@ -5,7 +5,7 @@ Deep Q-network
 This is like Q-learning. It is
 
 - off-policy
-- 1-step \\( TD(0) \\) learning
+- 1-step $TD(0)$ learning
 - Q-function is approximated using a deep neural network ("function approximation")
 
 ![DQN](./dqn.png)
@@ -38,7 +38,7 @@ $$
 s \rightarrow Q^{(curr)} \rightarrow a \rightarrow env \rightarrow r, s'
 $$
 
-Note that \\( Q \\) here generates a probability vector. Given
+Note that $Q$ here generates a probability vector. Given
 
 $$
 \text{TDpred} = Q^{(curr)}(s)
@@ -48,7 +48,7 @@ $$
 \text{TDtarget} = r + \gamma \max_{a'} Q^{(target)}(s')
 $$
 
-where these two are vectors of probabilities representing each action. We want to minimise the loss so that \\( Q^{(current)} \\) gets smarter:
+where these two are vectors of probabilities representing each action. We want to minimise the loss so that $Q^{(current)}$ gets smarter:
 
 $$
 L = LossFunction(\text{TDpred}, \text{TDtarget})
@@ -104,6 +104,6 @@ Online Q-learning is tricky because of the *deadly triad*. It's common to use *e
     ```
     
 
-Data needed: \\( (s,a,r,s') \\)
+Data needed: $(s,a,r,s')$
 
-Change: \\( Q \\)
+Change: $Q$

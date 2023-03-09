@@ -38,7 +38,7 @@ The sum of the payoffs for any strategy profile is 0. As such, we only need to c
         
         > 💡 No Nash equilibrium can involve a strictly dominated strategy. So it should be removed.
         
-    2. Recall that we are trying to find the probability distribution for each of the players. Assign a probability of choosing an action for the 2 players with \\( p \\) and \\( q \\) respectively. Find the solution where utilities for selecting every action is the same.
+    2. Recall that we are trying to find the probability distribution for each of the players. Assign a probability of choosing an action for the 2 players with $p$ and $q$ respectively. Find the solution where utilities for selecting every action is the same.
         
         ```
            c1 c2
@@ -46,7 +46,7 @@ The sum of the payoffs for any strategy profile is 0. As such, we only need to c
         r3  3  2
         ```
         
-        Let \\( p \\) be the probability that \\( r_1,c_? \\) will be played under the mixed strategy \\( s_1,s_2 \\).
+        Let $p$ be the probability that $r_1,c_?$ will be played under the mixed strategy $s_1,s_2$.
         
         $$
         \begin{aligned}
@@ -55,9 +55,9 @@ The sum of the payoffs for any strategy profile is 0. As such, we only need to c
         \end{aligned}
         $$
         
-        The maxmin strategy is \\( (\frac{1}{6},0,\frac{5}{6}) \\).
+        The maxmin strategy is $(\frac{1}{6},0,\frac{5}{6})$.
         
-        Let \\( q \\) be the probability that \\( c_1,r_? \\) will be played under the mixed strategy \\( s_2,s_1 \\).
+        Let $q$ be the probability that $c_1,r_?$ will be played under the mixed strategy $s_2,s_1$.
         
         $$
         \begin{aligned}
@@ -66,9 +66,9 @@ The sum of the payoffs for any strategy profile is 0. As such, we only need to c
         \end{aligned}
         $$
         
-        The minmax strategy is \\( (\frac{2}{3},\frac{1}{3},0) \\).
+        The minmax strategy is $(\frac{2}{3},\frac{1}{3},0)$.
         
-        The **value** of this game, using the first row of the matrix and \\( q=\frac{2}{3} \\), is
+        The **value** of this game, using the first row of the matrix and $q=\frac{2}{3}$, is
         
         $$
         1 \times \frac{2}{3} + 6 \times (1-\frac{2}{3})
