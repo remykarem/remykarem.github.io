@@ -5,9 +5,10 @@ Install mdbook and the following:
 * [mdbook-last-changed](https://github.com/badboy/mdbook-last-changed) — last updated
 * [mdbook-catppuccin](https://github.com/catppuccin/mdBook) — pastel themes
 * [mdbook-katex](https://github.com/lzanini/mdbook-katex) — render math using `$`
+* [mdbook-admonish](https://github.com/tommilligan/mdbook-admonish) — Material Design admonishments
 
 ```
-cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-katex
+cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-katex mdbook-admonish
 ```
 
 ## Creating a new book
@@ -34,6 +35,8 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     # Required for preprocess.last-changed
     git-repository-url = "https://github.com/remykarem/remkarem.github.io"
     additional-css = ["last-changed.css"]
+    default-theme="frappé"
+    preferred-dark-theme="macchiato"
 
     [build]
     build-dir = "../../your-book"
@@ -62,4 +65,11 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
         border-top: 1px solid black;
         padding: 5px 0;
     }
+    ```
+
+6. Run other preprocessors
+
+    ```bash
+    mdbook-admonish install
+    mdbook-catppuccin install
     ```

@@ -53,7 +53,9 @@ $$
 \implies c_k = \frac{1}{m_k} \sum_{x_{i,k} \in C_k} x_{i,k}
 $$
 
-> 💡 k-means works on relative distances.
+```admonish note
+k-means works on relative distances.
+```
 
 ### Lloyd's algorithm
 
