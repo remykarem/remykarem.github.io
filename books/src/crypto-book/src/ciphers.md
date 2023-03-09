@@ -10,7 +10,9 @@ A *deterministic* symmetric encryption algorithm operating on blocks
 
 ---
 
-💡 A **block** is a fixed-length group of *bits*
+```admonish note
+A **block** is a fixed-length group of *bits*
+```
 
 Block ciphers can operate in a *mode of operation*. This involves *repeated* XOR-ing a block etc. to achieve confidentiality and authentication. Involves some initial randomness (IV). Here are some:
 

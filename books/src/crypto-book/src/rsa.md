@@ -46,19 +46,22 @@ $$
 m = (m^{ed}) \bmod n
 $$
 
-> 💡 Note that while the encryption-decryption symmetry exists between $e$ and $d$, this symmetry does not extend to most cryptosystems.
+```admonish note
+While the encryption-decryption symmetry exists between $e$ and $d$, this symmetry does not extend to most cryptosystems.
+```
 
 ## How it works
 
 ![How RSA works](rsa.png)
 
-💡 Fyi RSA is multiplicative homomorphic, i.e.
+```admonish tip title="Homomorphism"
+RSA is multiplicative homomorphic, i.e.
 
 $$
 E(m_1) \times E(m_2) = m_1^e \times m_2^e = (m_1 \times m_2)^e=E(m_1\times m_2)
 $$
+```
 
-    
 ## Resources
 
 * [RSA paper](https://people.csail.mit.edu/rivest/Rsapaper.pdf)

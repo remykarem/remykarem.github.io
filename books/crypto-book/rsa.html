@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js frappé">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -8,6 +8,7 @@
 
         <!-- Custom HTML head -->
         
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -29,20 +30,22 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="././mdbook-admonish.css">
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-highlight.css">
 
         <!-- MathJax -->
-        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
-    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script>
+        <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "frappé";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
+        <script type="text/javascript">
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -58,19 +61,19 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
+        <script type="text/javascript">
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('frappé')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
+        <script type="text/javascript">
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -106,6 +109,10 @@
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
                         </ul>
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
@@ -134,7 +141,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
+                <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -148,14 +155,14 @@
 <p><a href="https://datatracker.ietf.org/doc/html/rfc8017">RFC 8017</a></p>
 <p>Rivest-Shamir-Adleman; 1995; 1st-gen cryptosystem.</p>
 <p>Breaking RSA is an <em>integer factorisation</em> problem.</p>
-<p>RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus \( n \): one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf">here</a>.</p>
+<p>RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus $n$: one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf">here</a>.</p>
 <p>For PKCS1 v1.5, the message to encrypt should be <strong>no longer than the public modulus minus 11 bytes</strong>. <a href="http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15">http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15</a>.</p>
 <ul>
-<li>secret exponent: \(d \)</li>
-<li>key exponent: \(e \)</li>
-<li>modulus: \( n \)</li>
-<li>message: \(m \)</li>
-<li>cipher: \(c \)</li>
+<li>secret exponent: $d $</li>
+<li>key exponent: $e $</li>
+<li>modulus: $n$</li>
+<li>message: $m $</li>
+<li>cipher: $c $</li>
 </ul>
 <p>$$
 (n, e, d)
@@ -178,14 +185,14 @@ $$</p>
 n = pq
 $$</p>
 <ul>
-<li>Euler's totient function, \( \phi(n) \).</li>
+<li>Euler's totient function, $\phi(n)$.</li>
 </ul>
 <h2 id="main-idea"><a class="header" href="#main-idea">Main idea</a></h2>
 <p>$$
 m = (m^{ed}) \bmod n
 $$</p>
 <blockquote>
-<p>💡 Note that while the encryption-decryption symmetry exists between \( e \) and \( d \), this symmetry does not extend to most cryptosystems.</p>
+<p>💡 Note that while the encryption-decryption symmetry exists between $e$ and $d$, this symmetry does not extend to most cryptosystems.</p>
 </blockquote>
 <h2 id="how-it-works"><a class="header" href="#how-it-works">How it works</a></h2>
 <p><img src="rsa.png" alt="How RSA works" /></p>
@@ -230,7 +237,7 @@ $$</p>
         </div>
 
         <!-- Livereload script (if served using the cli tool) -->
-        <script>
+        <script type="text/javascript">
             const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
             const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
             const socket = new WebSocket(wsAddress);
@@ -248,22 +255,21 @@ $$</p>
 
 
 
-        <script>
+        <script type="text/javascript">
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
 
 
-    </div>
     </body>
 </html>
