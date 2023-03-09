@@ -18,8 +18,8 @@ where the TD target consists of reward from 1 time step.
 
 - $n$-step TD learning
     
-    Instead of using reward from 1 time step, use \\(n \\) steps.
+    Instead of using reward from 1 time step, use $n $ steps.
     
-- TD(\\(\lambda \\))
+- TD($\lambda $)
     
-    Instead of taking the sum across \\(n \\) steps, use a *weighted* sum. \\(\lambda=0 \\) means no weighted sum.
+    Instead of taking the sum across $n $ steps, use a *weighted* sum. $\lambda=0 $ means no weighted sum.

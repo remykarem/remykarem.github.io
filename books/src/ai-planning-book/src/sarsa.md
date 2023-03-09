@@ -4,7 +4,7 @@ This is an
 
 1. on-policy 
 2. 1-step $TD(0)$ learning
-3. \\(\epsilon\\)-greedy for action selection.
+3. $\epsilon$-greedy for action selection.
 
 Value of the state-action pair is updated as:
 

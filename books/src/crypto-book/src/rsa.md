@@ -10,11 +10,11 @@ RSA is an algorithm that generates public-private keys. You need to specify the 
 
 For PKCS1 v1.5, the message to encrypt should be **no longer than the public modulus minus 11 bytes**. [http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15](http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15).
 
-- secret exponent: \\(d \\)
-- key exponent: \\(e \\)
+- secret exponent: $d $
+- key exponent: $e $
 - modulus: $n$
-- message: \\(m \\)
-- cipher: \\(c \\)
+- message: $m $
+- cipher: $c $
 
 $$
 (n, e, d)

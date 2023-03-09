@@ -19,6 +19,6 @@ $$
 \text{TDtarget} = R(s) + \gamma \max_{a'} Q(s',a')
 $$
 
-Data needed: \\((s_1,a_1,r_1,s_2,[a_{21}, a_{22}, ...]) \\)
+Data needed: $(s_1,a_1,r_1,s_2,[a_{21}, a_{22}, ...]) $
 
 Change: $Q(s_1,a_1)$
