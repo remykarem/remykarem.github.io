@@ -80,20 +80,6 @@ Importance of activation function and nonlinearity
 
 The purpose of activation functions is to introduce non-linearities into the network. In real life, almost all of our data is non linear. Nonlinearities allow you to approximate arbitrarily complex functions by introducing nonlinearities into decision boundaries.
 
-# **Loss function**
-
-cost function
-
-objective function
-
-empirical loss
-
-empirical risk
-
-Binary cross entropy / negative log loss
-
-Formulated by Claude Shannon, this loss function compares how different two distributions (true and predicted) are.
-
 # **Optimisation**
 
 Solving the weights of a network with loss function is a non-convex optimisation. Proper initialisation matters. If network is composed of differentiable functions, then we can probably learn from it using gradient descent.

@@ -25,7 +25,6 @@
 - [Tests](./tests.md)
 - [ML system design](./ml-system-design.md)
 - [Metrics](./general-metrics.md)
-- [Loss and regularisation](./loss-and-regularisation.md)
 - [Bonus questions](./general/bonus-questions.md)
 - [Bias-variance decomposition](./bias-variance-decomposition.md)
 - [Rare event classification / anomaly detection](./rare-event-classification.md)
