@@ -1,4 +1,5 @@
 # Sentiment analysis
 
-* Stanford sentiment treebank (SST)
-* IMDB reviews
+* SST (Stanford sentiment treebank)
+* IMDB
+* Yelp

@@ -2,6 +2,8 @@
 
 ---
 
+[https://twitter.com/fchollet/status/1627818199311069184?s=20](https://twitter.com/fchollet/status/1627818199311069184?s=20)
+
 # **Dropout**
 
 allows training on smaller datasets without over-fitting.

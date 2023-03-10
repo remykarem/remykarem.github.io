@@ -56,7 +56,6 @@
   - [Others](./vision/others.md)
 - [Pretraining tasks](./computer-vision/pretraining-tasks.md)
 - [Models](./computer-vision/models.md)
-- [Prompt engineering](./prompt-engineering.md)
 
 ---
 
@@ -72,16 +71,22 @@
   - [Language modelling](./language-modelling.md)
   - [Topic modelling](./topic-modelling.md)
   - [Sequence modelling](./sequence-modelling.md)
-- [Tasks]()
   - [NER](./ner.md)
+- [Tasks]()
   - [Sentiment analysis](./sentiment-analysis.md)
   - [QA](./qa.md)
-  - [Common sense reasoning]()
   - [Summarisation](./summarisation.md)
   - [Machine translation](./machine-translation.md)
+  - [Coreference](./coreference.md)
+  - [Reading comprehension](./reading-comprehension.md)
+  - [Paraphrase](./paraphrase.md)
+  - [Commonsense](./commonsense.md)
+  - [NLI](./nli.md)
 - [Pretraining tasks](./pretraining.md)
+- [Fine-tuning](./language/fine-tuning.md)
 - [Language models](./language-models.md)
 - [Models](./nlp/models.md)
+  - [Prompting](./prompting.md)
 
 ---
 

@@ -49,7 +49,7 @@ Effect:
 
 Effect:
 
-- Requires expert knowledge to design and fine tune
+- Requires expert knowledge to design and fine-tune
 - Finicky to optimise: non-convex, choice of architecture, learning parameters
 - Uninterpretable
 

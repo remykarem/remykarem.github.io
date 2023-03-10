@@ -134,3 +134,4 @@ BLEU - Bilingual Evaluation Understudy Score: metric for evaluating a generated 
 * OPUS [http://opus.nlpl.eu](http://opus.nlpl.eu/)
 * CCMatrix
 * CCAligned
+* ParaCrawl

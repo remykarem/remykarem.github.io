@@ -79,13 +79,25 @@ Age
 
 Income
 
-### **Standard scaling**
+### Standardisation
 
-(or Z-score normalisation)
+aka Z-score normalisation, standard scaling
 
 $$
-x' = \frac{x-\text{mean}(x)}{\text{stddev}(x)}
+z = \frac{x-\bar{x}}{S}
 $$
+
+where $x$ is the mean of the sample, and $S$ is the standard deviation of the sample.
+    
+Standardization centers the features at mean 0 with a standard deviation 1.
+
+Which is preferred by many algorithms.
+
+Standardization keeps useful information from outliers.
+
+```admonish note
+Standardisation may be used when data follows Gaussian Distribution.
+```
 
 **When?**
 
@@ -122,10 +134,24 @@ Ratings per movie
 
 1. When there are extreme outliers
 
-### **Normalise**
+### **Normalisation**
+
+Normalization scales the features to a 0-1 range.
+
+This is a special case of Min-max scaling.
+
+It is useful when we need the data to be in a bounded interval.
 
 - If Gaussian
 - Domain knowledge (eg. Height)
+
+```admonish note
+Normalization is great with Non-Gaussian Distribution
+```
+
+```admonish warning
+Impact of Outliers is very high in Normalization
+```
 
 ### **Regular binning**
 
@@ -142,3 +168,6 @@ Each bin has same number of samples
 Bimodal / multimodal / uneven distribution
 
 ![Quantile binning](./feature-transformation-02.png)
+
+## Notes
+

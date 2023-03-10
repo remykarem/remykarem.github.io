@@ -279,7 +279,7 @@ Reformer
 
 This categorisation is based on the question "how do you train/teach these models?" Note that it does not mean that they do not share the same architecture.
 
-# Types of fine tuning
+# Types of fine-tuning
 
 [https://ruder.io/recent-advances-lm-fine-tuning/](https://ruder.io/recent-advances-lm-fine-tuning/)
 
@@ -296,6 +296,6 @@ This categorisation is based on the question "how do you train/teach these model
 
 # What did we learn?
 
-- Pretraining, then fine tuning
+- Pretraining, then fine-tuning
 - MLM
 - More data is good
