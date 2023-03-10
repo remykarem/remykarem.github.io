@@ -11,6 +11,8 @@ editable = true
 [output.html]
 site-url = "/books/spring-boot-book/"
 additional-css = ["././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
+default-theme="frappé"
+preferred-dark-theme="frappé"
 
 [build]
 build-dir = "../../spring-boot-book"
