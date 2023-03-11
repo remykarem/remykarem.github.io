@@ -140,8 +140,8 @@ Maximum Likelihood Estimation
 $$
 \begin{aligned}
 \theta^*
-&= \arg \max_\theta P(data|\theta) \\\\
-&= \arg \max_\theta \prod_{i=1}^N P(data_i|\theta) \\\\
+&= \arg \max_\theta P(data|\theta) \\
+&= \arg \max_\theta \prod_{i=1}^N P(data_i|\theta) \\
 &= \arg \max_\theta \sum_{i=1}^N \log P(data_i|\theta)
 \end{aligned}
 $$
@@ -163,8 +163,8 @@ MAP is
 $$
 \begin{aligned}
 \theta^*
-&= \arg \max_\theta P(data|\theta) P(\theta) \\\\
-&= \arg \max_\theta \sum_{i=1}^N \Big[ \log P(data_i|\theta) + \log P(\theta) \Big] \\\\
+&= \arg \max_\theta P(data|\theta) P(\theta) \\
+&= \arg \max_\theta \sum_{i=1}^N \Big[ \log P(data_i|\theta) + \log P(\theta) \Big] \\
 &= \arg \max_\theta \sum_{i=1}^N \log P(data_i|\theta)
 \end{aligned}
 $$
@@ -174,7 +174,7 @@ $$
 For a random variable $X$ with mean $\mu$ and variance $\sigma^2$, and a sequence of independent and identically distributed random variables $X_1, X_2, ..., X_n$, the **sample average random variable**
 
 $$
-\bar{X_n} =\frac{1}{n} \sum_{i=1}^n X_i \xrightarrow{n \rightarrow \infty} \mu
+\bar{X}_n =\frac{1}{n} \sum_{i=1}^n X_i \xrightarrow{n \rightarrow \infty} \mu
 $$
 
 So how is this useful? To estimate the mean of a distribution, we simply sample where $n$ is sufficiently large.

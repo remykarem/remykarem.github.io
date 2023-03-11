@@ -19,7 +19,7 @@ can be rewritten as
 $$ 
 P(X=x) = 
 \begin{cases}
-{0.8} & {x=1} \\\\ 
+{0.8} & {x=1} \\ 
 {0.2} & {x=0} 
 \end{cases}
 $$
