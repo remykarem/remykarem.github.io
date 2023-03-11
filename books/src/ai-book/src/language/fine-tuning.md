@@ -2,9 +2,11 @@
 
 * Task-specific
 
-* Instruction tuning / instruction fine-tuning [^instructgpt]
+* Instruction-tuning / instruction fine-tuning [^instructgpt]
 
     Creating a dataset of instructions from scratch to fine-tune the model would take a considerable amount of resources. Therefore, we instead make use of templates to transform existing datasets into an instructional format.[^flan]
+
+    Instruction-tuned language models demonstrate a remarkable ability to generalise zero-shot to new tasks.
 
     Example: FLAN — Fine-tuned LAnguage Net
 

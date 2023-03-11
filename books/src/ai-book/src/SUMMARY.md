@@ -4,6 +4,7 @@
 
 # Trending applications
 
+- [Technologies / libraries](./technolgoies-libraries.md)
 - [Query a knowledge base](./query-a-knowledge-base.md)
 
 # General

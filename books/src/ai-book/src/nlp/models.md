@@ -12,10 +12,10 @@
 |      | BLOOM          | Decoder         | LM          | 176B       | Code generation                                   |
 |      | Minerva        | Decoder         | LM          | 540B       | Mathematical reasoning                            |
 |      | Chinchilla     | Decoder         | LM          | 70B        | Dialog                                            |
-|      | PaLM           | Decoder         | LM          | 62B,540B   | (general language tasks)                          |
+|      | PaLM [^palm]           | Decoder         | LM          | 62B,540B   | (general language tasks)                          |
 | 2021 | HTML           | Encoder/Decoder | DAE         | 400M       | HTML prompting                                    |
 |      | Gopher         | Decoder         | LM          | 280B       | General language modelling                        |
-| 2020 | GPT-3          | Decoder         | LM          | 175B       | Code generation, audio generation                 |
+| 2020 | GPT-3[^gpt3]         | Decoder         | LM          | 175B       | Code generation, audio generation                 |
 |      | Big Bird       | Encoder         | MLM         | -          | Longer sequence                                   |
 |      | ELECTRA        | Encoder         | RTD         | 110M-330M  | Longer sequence                                   |
 |      | mBART          | Encoder/Decoder | DAE         | 110M       | Translation                                       |
@@ -39,3 +39,7 @@
 | ?    | ERNIE          | ?               |             |            |
 
 Encoder or Decoder refers to the Transformer encoder or decoder.
+
+[^palm]: [PaLM: Scaling Language Modeling with Pathways](https://arxiv.org/abs/2204.02311)
+
+[^gpt3]: [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
