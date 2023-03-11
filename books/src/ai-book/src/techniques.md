@@ -91,6 +91,8 @@
     - $c_{in} \times c_{out} \times 3 \times 3$ filter is equivalent to $c_{in} \times 3 \times 3$ followed by $c_{in} \times c_{out} \times 1 \times 1$. Cost of computation is reduced.
     - Depthwise = no. of kernels determined by input channels 
     Pointwise = 1x1 convolution
+- Zero convolution
+
 
 | d       | sample1 sample2 | mean* std* | sample1 sample2                 |
 | ------- | --------------- | ---------- | ------------------------------- |

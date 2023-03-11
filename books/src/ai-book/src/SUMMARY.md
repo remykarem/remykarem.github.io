@@ -2,6 +2,10 @@
 
 [Preface](./preface.md)
 
+# Trending applications
+
+- [Query a knowledge base](./query-a-knowledge-base.md)
+
 # General
 
 - [EDA](./general/eda.md)
@@ -56,6 +60,7 @@
   - [Others](./vision/others.md)
 - [Pretraining tasks](./computer-vision/pretraining-tasks.md)
 - [Models](./computer-vision/models.md)
+- [Trending](./vision/trending.md)
 
 ---
 
