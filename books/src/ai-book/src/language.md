@@ -16,6 +16,10 @@ Some characteristics of natural language are
 
 # Vocabulary
 
+**Zero-shot** — follow instructions
+
+**Few-shot** — learn in-context; in-context learning
+
 Context = neighbouring words
 
 Semantic = what this set of letters mean
