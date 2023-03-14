@@ -88,9 +88,9 @@
   - [Paraphrase](./paraphrase.md)
   - [Commonsense](./commonsense.md)
   - [NLI](./nli.md)
+- [Language models](./language-models.md)
 - [Pretraining tasks](./pretraining.md)
 - [Fine-tuning](./language/fine-tuning.md)
-- [Language models](./language-models.md)
 - [Models](./nlp/models.md)
   - [Prompting](./prompting.md)
 

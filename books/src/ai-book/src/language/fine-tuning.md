@@ -10,7 +10,7 @@
 
     Example: FLAN — Fine-tuned LAnguage Net
 
-* CoT (Chain-of-Thought) fine-tuning [^cot]
+* Though process fine-tuning [^thoughtprocess]
 
     Decompose the problem into steps
 
@@ -24,10 +24,8 @@
 
 [^instructgpt]: [Training language models to follow instructions with human feedback](https://arxiv.org/pdf/2203.02155.pdf)
 
-[^flan]: https://ai.googleblog.com/2021/10/introducing-flan-more-generalizable.html
+[^flan]: [Flan](https://ai.googleblog.com/2021/10/introducing-flan-more-generalizable.html)
 
-[^cot]: [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
-](https://arxiv.org/abs/2201.11903)
+[^thoughtprocess]: [Leap-Of-Thought: Teaching Pre-Trained Models to Systematically Reason Over Implicit Knowledge](https://arxiv.org/abs/2006.06609)
 
-[^pal]: [PAL: Program-aided Language Models
-](https://arxiv.org/abs/2211.10435)
+[^pal]: [PAL: Program-aided Language Models](https://arxiv.org/abs/2211.10435)
