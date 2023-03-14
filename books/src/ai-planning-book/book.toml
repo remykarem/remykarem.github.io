@@ -9,6 +9,8 @@ title = "AI Planning"
 site-url = "/books/ai-planning-book/"
 mathjax-support = true
 additional-css = ["././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
+default-theme="frappé"
+preferred-dark-theme="macchiato"
 
 [build]
 build-dir = "../../ai-planning-book"
@@ -16,6 +18,11 @@ build-dir = "../../ai-planning-book"
 [preprocessor.toc]
 command = "mdbook-toc"
 renderer = ["html"]
+
+[output.katex]
+
+[preprocessor.katex]
+renderers = ["html"]
 
 [preprocessor.admonish]
 command = "mdbook-admonish"

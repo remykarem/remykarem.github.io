@@ -35,6 +35,7 @@
             - [Imitation learning](./imitation-learning.md)
     - [Learning the transition model](./learning-the-transition-model.md)
         - [ADP](./adp.md)
+    - [Learning from feedback](./learning-from-feedback.md)
 - [Planning in a stochastic environment with partial observability](./planning-in-a-stochastic-environment-with-partial-observability.md)
 - [Planning in a multi-agent environment](./planning-in-a-multi-agent-environment.md)
     - [Single-move / simultaneous games](./single-move-games.md)
