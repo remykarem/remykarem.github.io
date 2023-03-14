@@ -8,6 +8,7 @@
 
         <!-- Custom HTML head -->
         
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -29,20 +30,22 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="././mdbook-admonish.css">
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-highlight.css">
 
         <!-- MathJax -->
-        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
-    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script>
+        <script type="text/javascript">
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
+        <script type="text/javascript">
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -58,7 +61,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
+        <script type="text/javascript">
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -70,7 +73,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
+        <script type="text/javascript">
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -101,11 +104,15 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
                         </ul>
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
@@ -134,7 +141,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
+                <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -180,7 +187,7 @@ a
 $$</p>
 <h2 id="transition-matrix"><a class="header" href="#transition-matrix">Transition matrix</a></h2>
 <blockquote>
-<p>💡 If I take action \( a \) at state \( s \), what is the probability that I end up at state \( s' \)?</p>
+<p>💡 If I take action $a$ at state $s$, what is the probability that I end up at state $s'$?</p>
 </blockquote>
 <blockquote>
 <p>⚠️ Note that action has already been determined.</p>
@@ -195,7 +202,7 @@ $$</p>
 <p>⚠️ Transitions must be Markovian</p>
 </blockquote>
 <h2 id="reward-and-reward-function"><a class="header" href="#reward-and-reward-function">Reward and reward function</a></h2>
-<p>A function (&quot;<strong>reward function</strong>&quot;) that maps a state \( s \) to a value (&quot;<strong>reward</strong>&quot;).</p>
+<p>A function (&quot;<strong>reward function</strong>&quot;) that maps a state $s$ to a value (&quot;<strong>reward</strong>&quot;).</p>
 <p>$$
 R(s) \rightarrow \mathbb{R}
 $$</p>
@@ -225,7 +232,7 @@ U(s)
 &amp;= \mathbb{E} \Big[ \sum_t \gamma^t R(S_t) \Big]
 \end{aligned}
 $$</p>
-<p>= utility of a sequence of states as taken by some policy \( \pi \)</p>
+<p>= utility of a sequence of states as taken by some policy $\pi$</p>
 <p>= rewards from current state + rewards from future states</p>
 <h2 id="value-function"><a class="header" href="#value-function">Value function</a></h2>
 <p>The value function is the utility of a state under an <em>optimal</em> policy. It is the Bellman equation itself.</p>
@@ -246,35 +253,35 @@ V(s)
 &amp;= \max_{a\in A} \Big(R(s,a) + \gamma \sum_{s'} P(s'|s,a)V(s') \Big)
 \end{aligned}
 $$</p>
-<p>From the value function \( V \), we can derive the optimal policy \( \pi^* \)</p>
+<p>From the value function $V$, we can derive the optimal policy $\pi^*$</p>
 <p>$$
 \pi^*(s) = \arg \max_a \sum_{s'} P(s'|s,a)  V(s')
 $$</p>
 <blockquote>
-<p>💡 Suppose you are in a state \( s \). For every action in this state, compute its weighted value (based on the transition probabilities). Then find the action that returns the highest expected value.</p>
+<p>💡 Suppose you are in a state $s$. For every action in this state, compute its weighted value (based on the transition probabilities). Then find the action that returns the highest expected value.</p>
 </blockquote>
 <h2 id="q-function"><a class="header" href="#q-function">Q-function</a></h2>
 <p>Like the value function, the Q-function is the utility of taking an action at a given state under an <em>optimal</em> policy.</p>
 <blockquote>
-<p>💡 (what's the expected reward given that you start from a certain state \( s \) and take a certain action \( a \))</p>
+<p>💡 (what's the expected reward given that you start from a certain state $s$ and take a certain action $a$)</p>
 </blockquote>
 <p>$$
 Q(s,a) = R(s) + \gamma \sum_{s'} P(s'|s,a) \max_{a'} Q(s', a')
 $$</p>
 <p>The higher the Q-value, the more desirable is the action at that state.</p>
-<p>From the Q-function, we can derive the optimal policy \( \pi^* \):</p>
+<p>From the Q-function, we can derive the optimal policy $\pi^*$:</p>
 <p>$$
 \pi^*(s) = \arg \max_a Q(s,a)
 $$</p>
 <h2 id="sum-of-rewards"><a class="header" href="#sum-of-rewards">Sum of rewards</a></h2>
-<p>The sum of rewards for an episode that starts with state \( s \).</p>
+<p>The sum of rewards for an episode that starts with state $s$.</p>
 <p>$$
 G(s)
 $$</p>
 <p>Two notations exist:</p>
 <ol>
-<li>\( G_k \) indicates the cumulative rewards for the \( k \)th episode.</li>
-<li>\( G_{t:t+n} = R_t + R_{t+1} + ... +  R_{t+n-1} + \hat{U}(S_{t+n}) \) (discounts are omitted for readability)</li>
+<li>$G_k$ indicates the cumulative rewards for the $k$th episode.</li>
+<li>$G_{t:t+n} = R_t + R_{t+1} + ... +  R_{t+n-1} + \hat{U}(S_{t+n})$ (discounts are omitted for readability)</li>
 </ol>
 <h2 id="trajectory"><a class="header" href="#trajectory">Trajectory</a></h2>
 <p>A sequence of states that have been undertaken is called a &quot;<strong>trajectory</strong>&quot; or an &quot;<strong>episode</strong>&quot;.</p>
@@ -292,16 +299,16 @@ $$</p>
 <ul>
 <li>
 <p>TSP</p>
-<p>\( N \) cities. A salesman must visit every city in a graph. Cannot visit any city twice. </p>
+<p>$N$ cities. A salesman must visit every city in a graph. Cannot visit any city twice. </p>
 <p>State: visited 0, at city 4</p>
 <p>State: visited 1, at city 2</p>
-<p>For every time he is at a city, there are \( n \le N \) cities visited.</p>
-<p>There are \( 2^N \) combinations where he can be.</p>
+<p>For every time he is at a city, there are $n \le N$ cities visited.</p>
+<p>There are $2^N$ combinations where he can be.</p>
 <p>$$O(N2^N)$$</p>
 </li>
 <li>
 <p>Inventory control</p>
-<p>Company has space to store \( N \).</p>
+<p>Company has space to store $N$.</p>
 </li>
 </ul>
 
@@ -335,7 +342,7 @@ $$</p>
         </div>
 
         <!-- Livereload script (if served using the cli tool) -->
-        <script>
+        <script type="text/javascript">
             const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
             const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
             const socket = new WebSocket(wsAddress);
@@ -353,22 +360,21 @@ $$</p>
 
 
 
-        <script>
+        <script type="text/javascript">
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
 
 
-    </div>
     </body>
 </html>

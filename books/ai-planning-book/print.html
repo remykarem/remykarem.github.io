@@ -9,6 +9,7 @@
 
         <!-- Custom HTML head -->
         
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -30,20 +31,22 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="././mdbook-admonish.css">
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-highlight.css">
 
         <!-- MathJax -->
-        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
-    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script>
+        <script type="text/javascript">
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
+        <script type="text/javascript">
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -59,7 +62,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
+        <script type="text/javascript">
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -71,7 +74,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
+        <script type="text/javascript">
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -102,11 +105,15 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
                         </ul>
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
@@ -135,7 +142,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
+                <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -652,7 +659,7 @@ a
 $$</p>
 <h2 id="transition-matrix"><a class="header" href="#transition-matrix">Transition matrix</a></h2>
 <blockquote>
-<p>💡 If I take action \( a \) at state \( s \), what is the probability that I end up at state \( s' \)?</p>
+<p>💡 If I take action $a$ at state $s$, what is the probability that I end up at state $s'$?</p>
 </blockquote>
 <blockquote>
 <p>⚠️ Note that action has already been determined.</p>
@@ -667,7 +674,7 @@ $$</p>
 <p>⚠️ Transitions must be Markovian</p>
 </blockquote>
 <h2 id="reward-and-reward-function"><a class="header" href="#reward-and-reward-function">Reward and reward function</a></h2>
-<p>A function (&quot;<strong>reward function</strong>&quot;) that maps a state \( s \) to a value (&quot;<strong>reward</strong>&quot;).</p>
+<p>A function (&quot;<strong>reward function</strong>&quot;) that maps a state $s$ to a value (&quot;<strong>reward</strong>&quot;).</p>
 <p>$$
 R(s) \rightarrow \mathbb{R}
 $$</p>
@@ -697,7 +704,7 @@ U(s)
 &amp;= \mathbb{E} \Big[ \sum_t \gamma^t R(S_t) \Big]
 \end{aligned}
 $$</p>
-<p>= utility of a sequence of states as taken by some policy \( \pi \)</p>
+<p>= utility of a sequence of states as taken by some policy $\pi$</p>
 <p>= rewards from current state + rewards from future states</p>
 <h2 id="value-function"><a class="header" href="#value-function">Value function</a></h2>
 <p>The value function is the utility of a state under an <em>optimal</em> policy. It is the Bellman equation itself.</p>
@@ -718,35 +725,35 @@ V(s)
 &amp;= \max_{a\in A} \Big(R(s,a) + \gamma \sum_{s'} P(s'|s,a)V(s') \Big)
 \end{aligned}
 $$</p>
-<p>From the value function \( V \), we can derive the optimal policy \( \pi^* \)</p>
+<p>From the value function $V$, we can derive the optimal policy $\pi^*$</p>
 <p>$$
 \pi^*(s) = \arg \max_a \sum_{s'} P(s'|s,a)  V(s')
 $$</p>
 <blockquote>
-<p>💡 Suppose you are in a state \( s \). For every action in this state, compute its weighted value (based on the transition probabilities). Then find the action that returns the highest expected value.</p>
+<p>💡 Suppose you are in a state $s$. For every action in this state, compute its weighted value (based on the transition probabilities). Then find the action that returns the highest expected value.</p>
 </blockquote>
 <h2 id="q-function"><a class="header" href="#q-function">Q-function</a></h2>
 <p>Like the value function, the Q-function is the utility of taking an action at a given state under an <em>optimal</em> policy.</p>
 <blockquote>
-<p>💡 (what's the expected reward given that you start from a certain state \( s \) and take a certain action \( a \))</p>
+<p>💡 (what's the expected reward given that you start from a certain state $s$ and take a certain action $a$)</p>
 </blockquote>
 <p>$$
 Q(s,a) = R(s) + \gamma \sum_{s'} P(s'|s,a) \max_{a'} Q(s', a')
 $$</p>
 <p>The higher the Q-value, the more desirable is the action at that state.</p>
-<p>From the Q-function, we can derive the optimal policy \( \pi^* \):</p>
+<p>From the Q-function, we can derive the optimal policy $\pi^*$:</p>
 <p>$$
 \pi^*(s) = \arg \max_a Q(s,a)
 $$</p>
 <h2 id="sum-of-rewards"><a class="header" href="#sum-of-rewards">Sum of rewards</a></h2>
-<p>The sum of rewards for an episode that starts with state \( s \).</p>
+<p>The sum of rewards for an episode that starts with state $s$.</p>
 <p>$$
 G(s)
 $$</p>
 <p>Two notations exist:</p>
 <ol>
-<li>\( G_k \) indicates the cumulative rewards for the \( k \)th episode.</li>
-<li>\( G_{t:t+n} = R_t + R_{t+1} + ... +  R_{t+n-1} + \hat{U}(S_{t+n}) \) (discounts are omitted for readability)</li>
+<li>$G_k$ indicates the cumulative rewards for the $k$th episode.</li>
+<li>$G_{t:t+n} = R_t + R_{t+1} + ... +  R_{t+n-1} + \hat{U}(S_{t+n})$ (discounts are omitted for readability)</li>
 </ol>
 <h2 id="trajectory"><a class="header" href="#trajectory">Trajectory</a></h2>
 <p>A sequence of states that have been undertaken is called a &quot;<strong>trajectory</strong>&quot; or an &quot;<strong>episode</strong>&quot;.</p>
@@ -764,16 +771,16 @@ $$</p>
 <ul>
 <li>
 <p>TSP</p>
-<p>\( N \) cities. A salesman must visit every city in a graph. Cannot visit any city twice. </p>
+<p>$N$ cities. A salesman must visit every city in a graph. Cannot visit any city twice. </p>
 <p>State: visited 0, at city 4</p>
 <p>State: visited 1, at city 2</p>
-<p>For every time he is at a city, there are \( n \le N \) cities visited.</p>
-<p>There are \( 2^N \) combinations where he can be.</p>
+<p>For every time he is at a city, there are $n \le N$ cities visited.</p>
+<p>There are $2^N$ combinations where he can be.</p>
 <p>$$O(N2^N)$$</p>
 </li>
 <li>
 <p>Inventory control</p>
-<p>Company has space to store \( N \).</p>
+<p>Company has space to store $N$.</p>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="value-iteration"><a class="header" href="#value-iteration">Value iteration</a></h1>
@@ -804,7 +811,7 @@ $$</p>
 <p>Policy iteration is a variant of value iteration.</p>
 <ol>
 <li>
-<p>Initialise \( U \) to 0. Initialise \( \pi \) randomly.</p>
+<p>Initialise $U$ to 0. Initialise $\pi$ randomly.</p>
 </li>
 <li>
 <p><strong>Policy evaluation</strong> (similar to Bellman update). Run for all states.</p>
@@ -843,7 +850,7 @@ $$</p>
 <ol>
 <li>
 <p><strong>Select a node</strong></p>
-<p>The policy to follow is \( \pi_{UCT} \). Calculate UCT (Upper Confidence Tree) for every child</p>
+<p>The policy to follow is $\pi_{UCT}$. Calculate UCT (Upper Confidence Tree) for every child</p>
 <p>$$
 UCT =  \text{exploitation} + C \times \text{exploration}
 $$</p>
@@ -854,9 +861,9 @@ $$</p>
 $$</p>
 <p>and where</p>
 <ul>
-<li>\( v_i \) is the sum of the returns from the \( i \)th child</li>
-<li>\( n_i \) is the no. of visits of the \( i \)th child</li>
-<li>\( N \) is the no. of visits of the current node</li>
+<li>$v_i$ is the sum of the returns from the $i$th child</li>
+<li>$n_i$ is the no. of visits of the $i$th child</li>
+<li>$N$ is the no. of visits of the current node</li>
 </ul>
 </li>
 <li>
@@ -1069,8 +1076,8 @@ where model = (states, transition rules / actions, rewards, etc.)</p>
 <blockquote>
 <p>👉🏻 Experience: data</p>
 </blockquote>
-<p><strong>Prediction</strong>: fix \( \pi \), learn \( V \)</p>
-<p><strong>Control</strong>: fix \( V \), learn \( \pi \)</p>
+<p><strong>Prediction</strong>: fix $\pi$, learn $V$</p>
+<p><strong>Control</strong>: fix $V$, learn $\pi$</p>
 <blockquote>
 <p>👉🏻 Episode: initial state to terminal state</p>
 </blockquote>
@@ -1103,7 +1110,7 @@ $$</p>
 <li>Don't need to know about the transition</li>
 <li>Don't need to know about the reward functions (after all we only need to take argmax of Q)</li>
 </ul>
-<p>We can instead use what we've experienced to develop a more accurate representation of \( Q \), which in turn helps us to develop a more optimal policy to follow. This learning is incremental learning.</p>
+<p>We can instead use what we've experienced to develop a more accurate representation of $Q$, which in turn helps us to develop a more optimal policy to follow. This learning is incremental learning.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="direct-utility-estimation"><a class="header" href="#direct-utility-estimation">Direct utility estimation</a></h1>
 <p>The Q-value is the mean of rewards across $k$ episodes starting from that state. </p>
 <blockquote>
@@ -1125,15 +1132,15 @@ $$</p>
 <p><img src="./direct-utility-estimation.png" alt="Direct utility estimation" /></p>
 </li>
 </ul>
-<p>Updating when a new episodic return \( G_k \) comes in:</p>
+<p>Updating when a new episodic return $G_k$ comes in:</p>
 <p>$$
 U_k(s) = U_{k-1}(s) + \frac{1}{k}[G_k(s) - U_{k-1}(s)]
 $$</p>
 <p>where:</p>
 <ul>
-<li>\( U_{k-1} \) is the estimate after receiving \( k-1 \) returns</li>
-<li>\( G_k \) is the new data (from initial to terminal state)</li>
-<li>\( G_k - U_{k-1} \) can  be considered as the prediction error</li>
+<li>$U_{k-1}$ is the estimate after receiving $k-1$ returns</li>
+<li>$G_k$ is the new data (from initial to terminal state)</li>
+<li>$G_k - U_{k-1}$ can  be considered as the prediction error</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mc-control-with-gpi"><a class="header" href="#mc-control-with-gpi">MC control with GPI</a></h1>
 <ol>
@@ -1158,20 +1165,20 @@ $$</p>
 <p><strong>Variants</strong></p>
 <ul>
 <li>
-<p>\( n \)-step TD learning</p>
-<p>Instead of using reward from 1 time step, use \(n \) steps.</p>
+<p>$n$-step TD learning</p>
+<p>Instead of using reward from 1 time step, use $n $ steps.</p>
 </li>
 <li>
-<p>TD(\(\lambda \))</p>
-<p>Instead of taking the sum across \(n \) steps, use a <em>weighted</em> sum. \(\lambda=0 \) means no weighted sum.</p>
+<p>TD($\lambda $)</p>
+<p>Instead of taking the sum across $n $ steps, use a <em>weighted</em> sum. $\lambda=0 $ means no weighted sum.</p>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sarsa"><a class="header" href="#sarsa">SARSA</a></h1>
 <p>This is an</p>
 <ol>
 <li>on-policy </li>
-<li>1-step \( TD(0) \) learning</li>
-<li>\(\epsilon\)-greedy for action selection.</li>
+<li>1-step $TD(0)$ learning</li>
+<li>$\epsilon$-greedy for action selection.</li>
 </ol>
 <p>Value of the state-action pair is updated as:</p>
 <p>$$
@@ -1180,17 +1187,17 @@ $$</p>
 <p>$$
 Q(s,a) \leftarrow Q(s,a) +  \alpha [R(s) + \gamma Q(s',a') -Q(s,a)]
 $$</p>
-<p>where \( a' \) is the action already taken at \( s' \) and</p>
+<p>where $a'$ is the action already taken at $s'$ and</p>
 <p>$$
 \text{TDtarget} = R(s) + Q(s',a')
 $$</p>
-<p>Data needed: \( (s_1,a_1,r_1,s_2,a_2) \)</p>
-<p>Change: \( Q(s_1,a_1) \)</p>
+<p>Data needed: $(s_1,a_1,r_1,s_2,a_2)$</p>
+<p>Change: $Q(s_1,a_1)$</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="q-learning"><a class="header" href="#q-learning">Q-learning</a></h1>
 <p>This is an</p>
 <ol>
 <li>off-policy </li>
-<li>1-step \( TD(0) \) learning</li>
+<li>1-step $TD(0)$ learning</li>
 </ol>
 <p>$$
 \text{updatedvalue} \leftarrow \text{currentvalue + (target - currentvalue)}
@@ -1198,18 +1205,18 @@ $$</p>
 <p>$$
 Q(s,a) \leftarrow Q(s,a) +  \alpha [R(s) + \gamma \max_{a'} Q(s',a') -Q(s,a)]
 $$</p>
-<p>where \( a' \) is the action taken at \( s' \) (need to find the max of all the different actions taken from \( s' \)!) and</p>
+<p>where $a'$ is the action taken at $s'$ (need to find the max of all the different actions taken from $s'$!) and</p>
 <p>$$
 \text{TDtarget} = R(s) + \gamma \max_{a'} Q(s',a')
 $$</p>
-<p>Data needed: \((s_1,a_1,r_1,s_2,[a_{21}, a_{22}, ...]) \)</p>
-<p>Change: \( Q(s_1,a_1) \)</p>
+<p>Data needed: $(s_1,a_1,r_1,s_2,[a_{21}, a_{22}, ...]) $</p>
+<p>Change: $Q(s_1,a_1)$</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deep-q-learning"><a class="header" href="#deep-q-learning">Deep Q-learning</a></h1>
 <p>Deep Q-network</p>
 <p>This is like Q-learning. It is</p>
 <ul>
 <li>off-policy</li>
-<li>1-step \( TD(0) \) learning</li>
+<li>1-step $TD(0)$ learning</li>
 <li>Q-function is approximated using a deep neural network (&quot;function approximation&quot;)</li>
 </ul>
 <p><img src="./dqn.png" alt="DQN" /></p>
@@ -1232,14 +1239,14 @@ $$</p>
 <p>$$
 s \rightarrow Q^{(curr)} \rightarrow a \rightarrow env \rightarrow r, s'
 $$</p>
-<p>Note that \( Q \) here generates a probability vector. Given</p>
+<p>Note that $Q$ here generates a probability vector. Given</p>
 <p>$$
 \text{TDpred} = Q^{(curr)}(s)
 $$</p>
 <p>$$
 \text{TDtarget} = r + \gamma \max_{a'} Q^{(target)}(s')
 $$</p>
-<p>where these two are vectors of probabilities representing each action. We want to minimise the loss so that \( Q^{(current)} \) gets smarter:</p>
+<p>where these two are vectors of probabilities representing each action. We want to minimise the loss so that $Q^{(current)}$ gets smarter:</p>
 <p>$$
 L = LossFunction(\text{TDpred}, \text{TDtarget})
 $$</p>
@@ -1287,22 +1294,22 @@ td_true = r + Q_target(s')
 </code></pre>
 </li>
 </ol>
-<p>Data needed: \( (s,a,r,s') \)</p>
-<p>Change: \( Q \)</p>
+<p>Data needed: $(s,a,r,s')$</p>
+<p>Change: $Q$</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="learning-the-policy"><a class="header" href="#learning-the-policy">Learning the policy</a></h1>
 <p>AKA policy search</p>
 <p>In policy search, we try to find a policy. One example to represent a policy is by using Q-functions.</p>
-<p>The policy \( \pi \) is parametrised by \( \theta \). The goal is to adjust \( \theta \) to improve policy.</p>
-<p>Often use a stochastic policy \( \pi_\theta(s,a) \) and often we want it to be differentiable (because we want to use gradient descent). An unbiased estimate for gradient ascent is sufficient; no need for exact gradient.</p>
-<p>Recall that utility of a state \( s_0 \)</p>
+<p>The policy $\pi$ is parametrised by $\theta$. The goal is to adjust $\theta$ to improve policy.</p>
+<p>Often use a stochastic policy $\pi_\theta(s,a)$ and often we want it to be differentiable (because we want to use gradient descent). An unbiased estimate for gradient ascent is sufficient; no need for exact gradient.</p>
+<p>Recall that utility of a state $s_0$</p>
 <p>$$
 U(s_0) = \sum_a \pi(s_0,a)R(a)
 $$</p>
-<p>Parametrise it with \( \theta \)</p>
+<p>Parametrise it with $\theta$</p>
 <p>$$
 U_\theta(s_0) = \sum_a \pi_\theta(s_0,a)R(a)
 $$</p>
-<p>Then differentiate wrt to \( \theta \):</p>
+<p>Then differentiate wrt to $\theta$:</p>
 <p>$$
 \begin{aligned}
 &amp; \nabla_\theta U_\theta(s_0) \\
@@ -1310,7 +1317,7 @@ $$</p>
 &amp;= \sum_a \nabla_\theta\pi_\theta(s_0,a)R(a)
 \end{aligned}
 $$</p>
-<p>but we can sample from the gradient using Monte Carlo methods using importance sampling (where \( \pi_\theta \) is a probability distribution)</p>
+<p>but we can sample from the gradient using Monte Carlo methods using importance sampling (where $\pi_\theta$ is a probability distribution)</p>
 <p>$$
 \begin{aligned}
 &amp;= \sum_a \nabla_\theta\pi_\theta(s_0,a)R(a) \\
@@ -1333,16 +1340,16 @@ $$</p>
 <img src="./policy-gradient-5.png" alt="Policy gradient" />
 <img src="./policy-gradient-6.png" alt="Policy gradient" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reinforce"><a class="header" href="#reinforce">REINFORCE</a></h1>
-<p>Extend \( U(s_0) \) to a <em>sequence</em> (&quot;trajectory&quot; or “episode” \( \tau \)) of states, actions and rewards (expectation).</p>
+<p>Extend $U(s_0)$ to a <em>sequence</em> (&quot;trajectory&quot; or “episode” $\tau$) of states, actions and rewards (expectation).</p>
 <p>$$
 U(\theta) = \sum_\tau p_\theta(\tau)G(\tau)
 $$</p>
-<p>where \( p_\theta(\tau) \) is the probability of generating a sequence \( \tau \), and \( G(\tau) \) is the sum of rewards from trajectory \( \tau \).</p>
+<p>where $p_\theta(\tau)$ is the probability of generating a sequence $\tau$, and $G(\tau)$ is the sum of rewards from trajectory $\tau$.</p>
 <p>Then we use policy gradient theorem</p>
 <p>$$
 \propto \sum_s p(s) \sum_a \nabla \pi(s,a) Q(s,a)
 $$</p>
-<p>Then use Monte Carlo sampling to approximate the gradient summing over \( N \) trials and \( J \) steps.</p>
+<p>Then use Monte Carlo sampling to approximate the gradient summing over $N$ trials and $J$ steps.</p>
 <p>$$
 \approx \frac{1}{N} \sum_{trials}^N \sum_{steps}^J \frac{\nabla \pi(s,a) G(s)}{\pi(s, a)}
 $$</p>
@@ -1350,7 +1357,7 @@ $$</p>
 <p>$$
 \theta_{j+1}=\theta_{j}+\alpha G_{j} \nabla_{\theta} \ln \pi_{\theta}\left(s, a_{j}\right)
 $$</p>
-<p>where \( G \) is the total reward received from \( j \).</p>
+<p>where $G$ is the total reward received from $j$.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reinforce-with-baseline"><a class="header" href="#reinforce-with-baseline">REINFORCE with baseline</a></h1>
 <p>Baseline function $B(s)$ is to help to reduce variance. This function is used to get the <em>advantage function</em>.</p>
 <blockquote>
@@ -1387,7 +1394,7 @@ $$</p>
 <p>$$
 U(\pi) \ge L(\pi) - C \max_s \text{KL}[\pi_{old}(\cdot|s)||\pi(\cdot|s)]
 $$</p>
-<p>If \( \pi = \pi_{old} \), \( U(\pi_{old}) = L(\pi_{old}) \). Otherwise, \( U(\pi_{old}) &gt; L(\pi_{old}) \).</p>
+<p>If $\pi = \pi_{old}$, $U(\pi_{old}) = L(\pi_{old})$. Otherwise, $U(\pi_{old}) &gt; L(\pi_{old})$.</p>
 </li>
 <li>
 <p>Apply trust region constraint (for faster convergence). Take larger steps in a robust manner.</p>
@@ -1424,7 +1431,7 @@ Error propagation on structured prediction (for autoregressive problems)</p>
 </li>
 <li>
 <p>DAgger (Dataset aggregation)</p>
-<p>There are \( N \) lessons:</p>
+<p>There are $N$ lessons:</p>
 <ul>
 <li>For the first lesson, the teacher is the driver. For subsequent lessons, we are the driver.</li>
 <li>During the lesson, we collect training samples from the driver (just the state!).</li>
@@ -1458,7 +1465,7 @@ $$</p>
 <p>$$
 b(s)
 $$</p>
-<p>If \( b(s_1)=0.9 \) and \( b(s_2)=0.1 \), it means that most likely we are in state 1.</p>
+<p>If $b(s_1)=0.9$ and $b(s_2)=0.1$, it means that most likely we are in state 1.</p>
 <blockquote>
 <p>⚠️ Belief space is continuous!</p>
 </blockquote>
@@ -1470,7 +1477,7 @@ $$</p>
 <p>💡 Optimal policy can be described as a mapping from belief to action (in contrast to a mapping from a state to action).</p>
 </blockquote>
 <p>Updating belief:</p>
-<p>At \( s \), agent performs action (( a \) and to go into state \( s' \) and receives evidence \( e \).</p>
+<p>At $s$, agent performs action (( a \) and to go into state $s'$ and receives evidence $e$.</p>
 <p>$$
 b'(s') = \frac{P(e|s') \sum_s P(s'|s,a)b(s)}{Z}<br />
 $$</p>
@@ -1599,28 +1606,28 @@ s3  3  2  4
 </blockquote>
 </li>
 <li>
-<p>Recall that we are trying to find the probability distribution for each of the players. Assign a probability of choosing an action for the 2 players with \( p \) and \( q \) respectively. Find the solution where utilities for selecting every action is the same.</p>
+<p>Recall that we are trying to find the probability distribution for each of the players. Assign a probability of choosing an action for the 2 players with $p$ and $q$ respectively. Find the solution where utilities for selecting every action is the same.</p>
 <pre><code>   c1 c2
 r1  1  6
 r3  3  2
 </code></pre>
-<p>Let \( p \) be the probability that \( r_1,c_? \) will be played under the mixed strategy \( s_1,s_2 \).</p>
+<p>Let $p$ be the probability that $r_1,c_?$ will be played under the mixed strategy $s_1,s_2$.</p>
 <p>$$
 \begin{aligned}
 1p +3(1-p) &amp;= 6p + 2(1-p)\\
 p &amp;= \frac{1}{6}\
 \end{aligned}
 $$</p>
-<p>The maxmin strategy is \( (\frac{1}{6},0,\frac{5}{6}) \).</p>
-<p>Let \( q \) be the probability that \( c_1,r_? \) will be played under the mixed strategy \( s_2,s_1 \).</p>
+<p>The maxmin strategy is $(\frac{1}{6},0,\frac{5}{6})$.</p>
+<p>Let $q$ be the probability that $c_1,r_?$ will be played under the mixed strategy $s_2,s_1$.</p>
 <p>$$
 \begin{aligned}
 1q + 6(1-q) &amp;= 3q + 2(1-q)\\
 q &amp;= \frac{2}{3}\
 \end{aligned}
 $$</p>
-<p>The minmax strategy is \( (\frac{2}{3},\frac{1}{3},0) \).</p>
-<p>The <strong>value</strong> of this game, using the first row of the matrix and \( q=\frac{2}{3} \), is</p>
+<p>The minmax strategy is $(\frac{2}{3},\frac{1}{3},0)$.</p>
+<p>The <strong>value</strong> of this game, using the first row of the matrix and $q=\frac{2}{3}$, is</p>
 <p>$$
 1 \times \frac{2}{3} + 6 \times (1-\frac{2}{3})
 $$</p>
@@ -1644,7 +1651,7 @@ $$</p>
 <li>Tit-for-tat strategy</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="multi-armed-bandit-problem"><a class="header" href="#multi-armed-bandit-problem">Multi-armed bandit problem</a></h1>
-<p>We have \( K \) different arms to pull (denoting \( K \) possible actions). Each arm has an unknown reward distribution. We want to pull the arms several times, say 1000, and maximise the rewards we get. What do we do?</p>
+<p>We have $K$ different arms to pull (denoting $K$ possible actions). Each arm has an unknown reward distribution. We want to pull the arms several times, say 1000, and maximise the rewards we get. What do we do?</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="characteristics-of-learning"><a class="header" href="#characteristics-of-learning">Characteristics of learning</a></h1>
 <ul>
 <li>Greedy</li>
@@ -1659,8 +1666,8 @@ $$</p>
 <li>On-policy: data used for learning generated by the policy being learned</li>
 <li>Off-policy: maybe we don't want to disrupt the policy being learned with new data, so we use another policy
 <ul>
-<li>Behaviour policy \( b \): currently in operation</li>
-<li>Target policy \( \pi \): policy to learn</li>
+<li>Behaviour policy $b$: currently in operation</li>
+<li>Target policy $\pi$: policy to learn</li>
 </ul>
 </li>
 </ul>
@@ -1736,7 +1743,7 @@ $$</p>
 <li>Continuity</li>
 <li>Substitutability</li>
 </ol>
-<p>When deciding between 2 options which can either be a fixed outcome (&quot;<strong>state</strong>&quot;) or a  gamble (&quot;<strong>lottery</strong>&quot;), we compare the usefulness (&quot;<strong>utility</strong>&quot;) between them, i.e. assigning a function \( U \) to them.</p>
+<p>When deciding between 2 options which can either be a fixed outcome (&quot;<strong>state</strong>&quot;) or a  gamble (&quot;<strong>lottery</strong>&quot;), we compare the usefulness (&quot;<strong>utility</strong>&quot;) between them, i.e. assigning a function $U$ to them.</p>
 <p>$$
 U(\text{have car}) \ U(\text{have car with prob 0.9}) 
 $$</p>
@@ -1772,7 +1779,7 @@ cark [1,2,...,n]
 </code></pre>
 <p>So there will be $n^k$ different combinations.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mdp"><a class="header" href="#mdp">MDP</a></h1>
-<p>An MDP is a sequence of \( (S, A, P, R) \).</p>
+<p>An MDP is a sequence of $(S, A, P, R)$.</p>
 <p>If probabilities or rewards are unknown, then it's a reinforcement learning</p>
 <h2 id="exploration-algorithms-1"><a class="header" href="#exploration-algorithms-1">Exploration algorithms</a></h2>
 <h3 id="ε-greedy-1"><a class="header" href="#ε-greedy-1">ε-greedy</a></h3>
@@ -1781,10 +1788,10 @@ cark [1,2,...,n]
 <h3 id="rmax"><a class="header" href="#rmax">RMAX</a></h3>
 <p>Optimism in the face of uncertainty heuristic.</p>
 <ul>
-<li>If you don't know (after seeing the state \( m \) times) the reward of (s,a) set it to \( R_{max} \) i.e. the largest possible reward.</li>
-<li>If you don't know (after seeing the state \( m \) times) the transition probabilities of an (s,a), assume it goes deterministically to some state s' where
+<li>If you don't know (after seeing the state $m$ times) the reward of (s,a) set it to $R_{max}$ i.e. the largest possible reward.</li>
+<li>If you don't know (after seeing the state $m$ times) the transition probabilities of an (s,a), assume it goes deterministically to some state s' where
 <ul>
-<li>R(s',a) = \( R_{max} \)</li>
+<li>R(s',a) = $R_{max}$</li>
 <li>P(s'|s',a) = 1</li>
 </ul>
 </li>
@@ -1810,7 +1817,7 @@ cark [1,2,...,n]
         </div>
 
         <!-- Livereload script (if served using the cli tool) -->
-        <script>
+        <script type="text/javascript">
             const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
             const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
             const socket = new WebSocket(wsAddress);
@@ -1828,22 +1835,22 @@ cark [1,2,...,n]
 
 
 
-        <script>
+        <script type="text/javascript">
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
 
-        <script>
+        <script type="text/javascript">
         window.addEventListener('load', function() {
             MathJax.Hub.Register.StartupHook('End', function() {
                 window.setTimeout(window.print, 100);
@@ -1851,6 +1858,5 @@ cark [1,2,...,n]
         });
         </script>
 
-    </div>
     </body>
 </html>
