@@ -6,7 +6,7 @@ Keywords: MLLM (Multimodal Large Language Model)
 | ---- | ------------------ | ------------------------------------- | ------------ | ------ |
 | 2023 | PaLM-E [^palme]    | Vison + language + planning (robotic) |              | 562B   |
 |      | USM [^usm]         | Audio                                    |              |        |
-|      | Kosmos-1[^kosmos1] | Vision + language                                       |              |        |
+|      | Kosmos-1 [^kosmos1] | Vision + language                                       |              |        |
 |      | Flamingo           |                                       |              |        |
 |      | PaLI               |                                       |              |        |
 | 2022 | DALL•E 2           | Vision + text                         | Transformer  |        |
