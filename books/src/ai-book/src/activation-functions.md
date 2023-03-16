@@ -17,7 +17,9 @@ $$
 
 ## Softmax
 
-> 💡 Softmax operations deal with vectors.
+```admonish note
+Softmax operations deal with vectors.
+```
 
 Given
 
@@ -44,6 +46,80 @@ $$
         \exp(x_n)
     \end{bmatrix}
 $$
+
+## Softwax with temperature
+
+**Temperature**, $\theta \in (0,100]$, is a parameter used in NLP to increase or decrease a model's confidence. 
+
+$$
+\text{softmax}(\boldsymbol{x})
+= \frac{\exp(\boldsymbol{x})}{\sum_i\exp(\frac{x_i}{\theta})}
+= \frac{1}{\sum_i \exp(\frac{x_i}{\theta})}
+    \begin{bmatrix}
+        \exp(\frac{x_1}{\theta}) \\\\
+        \exp(\frac{x_2}{\theta}) \\\\
+        \vdots \\\\
+        \exp(\frac{x_n}{\theta})
+    \end{bmatrix}
+$$
+
+**Intuition**
+
+A low confidence means that the distribution of the classes is roughly uniform:
+
+$$
+\frac{1}{Z}
+\begin{bmatrix}
+    1 \\
+    1 \\
+    \vdots \\
+    1
+\end{bmatrix}
+$$
+
+where $Z$ is the normalisation constant.
+
+We can achieve this with the exponential function (for non-linearity purposes):
+
+$$
+\frac{1}{Z}
+\begin{bmatrix}
+    1 \\
+    1 \\
+    \vdots \\
+    1
+\end{bmatrix}
+=
+\frac{1}{Z}
+\begin{bmatrix}
+    \exp(0) \\
+    \exp(0) \\
+    \vdots \\
+    \exp(0)
+\end{bmatrix}
+\approx
+\frac{1}{Z}
+\begin{bmatrix}
+    \exp(x'_1) \\
+    \exp(x'_2) \\
+    \vdots \\
+    \exp(x'_n)
+\end{bmatrix}
+=
+\frac{1}{Z}
+\begin{bmatrix}
+    \exp(\frac{x_1}{\theta}) \\
+    \exp(\frac{x_2}{\theta}) \\
+    \vdots \\
+    \exp(\frac{x_n}{\theta})
+\end{bmatrix}
+$$
+
+where each of the $x'_i$ is very small (close to 0).
+
+Softmax with temperature is easy to compute (via vectorised operations) (?).
+
+See the blog post from [Luke Salamon](https://lukesalamone.github.io/posts/what-is-temperature/) to visualise varying the temperature.
 
 ## ReLU
 

@@ -70,23 +70,6 @@ Why do we bootstrap samples???
 - Why do a forest of weak learners learn well?
 - Can loss decomposition be used to compare models?
 - When to choose L1 and L2?
-- Why is it called logistic regression?
-    
-    It's because its underlying technique is quite the same as linear regression. And the term logistic is taken from the logit function which is used as the method of classification. A logit function is
-    
-    $$
-    \text{logit}(p) = \log(\text{odds})= \log \frac{p}{1-p}
-    $$
-    
-    which maps values from $(0,1)$ to $(-\infty,\infty)$.
-    
-    A logistic function is inverse-logit:
-    
-    $$
-    ⁍
-    $$
-    
-    which will map values from $(-\infty,\infty)$ to $(0,1)$, which will be convenient for binary classification tasks.
     
 - Why not use linear regression in place of logistic regression?
     
