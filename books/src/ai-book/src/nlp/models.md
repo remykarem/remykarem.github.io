@@ -4,7 +4,9 @@
 
 | Year | Model            | Arch            | Pretraining | Params     | Applications                              |
 | ---- | ---------------- | --------------- | ----------- | ---------- | ----------------------------------------- |
-| 2023 | LLaMA            | ?               | ?           | 7B,13B,65B | ?                                         |
+| 2023 | GPT-4            | ?               | ?           |            |                                           |
+|      | Alpaca           | ?               | ?           |            | Instruction-following                     |
+|      | LLaMA            | ?               | ?           | 7B,13B,65B | ?                                         |
 | 2022 | GPT-3.5          | Decoder         | LM          | 175B       | Code generation, dialog                   |
 |      | OPT              | ?               |             |            |                                           |
 |      | LAMDA            | Decoder         | LM          | 137B       | General language modelling                |
@@ -43,7 +45,5 @@ Encoder or Decoder refers to the Transformer encoder or decoder.
 ---
 
 [^palm]: [PaLM: Scaling Language Modeling with Pathways](https://arxiv.org/abs/2204.02311)
-
 [^gopher]: [Scaling Language Models: Methods, Analysis & Insights from Training Gopher](https://arxiv.org/abs/2112.11446)
-
 [^gpt3]: [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
