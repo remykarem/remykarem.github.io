@@ -15,7 +15,7 @@ default-theme="frappé"
 preferred-dark-theme="macchiato"
 
 [build]
-build-dir = "./html"
+build-dir = "."
 
 [preprocessor.toc]
 command = "mdbook-toc"

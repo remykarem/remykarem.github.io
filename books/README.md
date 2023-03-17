@@ -1,5 +1,7 @@
 # README for books
 
+! Do not run `mdbook clean`.
+
 Install mdbook and the following:
 * [mdbook-toc](https://github.com/badboy/mdbook-toc) — table of contents
 * [mdbook-last-changed](https://github.com/badboy/mdbook-last-changed) — last updated
@@ -39,7 +41,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     preferred-dark-theme="macchiato"
 
     [build]
-    build-dir = "./html"  # because KaTeX builds go here
+    build-dir = "."  # because KaTeX builds go here -.-
 
     [preprocessor.toc]
     command = "mdbook-toc"
