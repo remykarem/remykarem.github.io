@@ -157,6 +157,55 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="models"><a class="header" href="#models">Models</a></h1>
+<p>&quot;Foundation language models&quot; / PFM (Pretrained Foundation Models) / LLMs (Large Language Models)</p>
+<div class="table-wrapper"><table><thead><tr><th>Year</th><th>Model</th><th>Arch</th><th>Pretraining</th><th>Params</th><th>Applications</th></tr></thead><tbody>
+<tr><td>2023</td><td>GPT-4</td><td>?</td><td>?</td><td></td><td></td></tr>
+<tr><td></td><td>Alpaca</td><td>?</td><td>?</td><td></td><td>Instruction-following</td></tr>
+<tr><td></td><td>LLaMA</td><td>?</td><td>?</td><td>7B,13B,65B</td><td>?</td></tr>
+<tr><td></td><td>OpenChatKit</td><td>?</td><td>?</td><td>?</td><td>?</td></tr>
+<tr><td>2022</td><td>GPT-3.5</td><td>Decoder</td><td>LM</td><td>175B</td><td>Code generation, dialog</td></tr>
+<tr><td></td><td>GPT-NeoX-20B <sup class="footnote-reference"><a href="#gptneox">1</a></sup></td><td>?</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>OPT</td><td>?</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>LAMDA</td><td>Decoder</td><td>LM</td><td>137B</td><td>General language modelling</td></tr>
+<tr><td></td><td>ChatGPT</td><td>Decoder</td><td>LM</td><td>175B</td><td>Dialog</td></tr>
+<tr><td></td><td>BLOOM</td><td>Decoder</td><td>LM</td><td>176B</td><td>Code generation</td></tr>
+<tr><td></td><td>Minerva</td><td>Decoder</td><td>LM</td><td>540B</td><td>Mathematical reasoning</td></tr>
+<tr><td></td><td>Chinchilla</td><td>Decoder</td><td>LM</td><td>70B</td><td>Dialog</td></tr>
+<tr><td></td><td>PaLM <sup class="footnote-reference"><a href="#palm">2</a></sup></td><td>Decoder</td><td>LM</td><td>62B,540B</td><td>(general language tasks)</td></tr>
+<tr><td>2021</td><td>HTML</td><td>Encoder/Decoder</td><td>DAE</td><td>400M</td><td>HTML prompting</td></tr>
+<tr><td></td><td>Gopher <sup class="footnote-reference"><a href="#gopher">3</a></sup></td><td>Decoder</td><td>LM</td><td>280B</td><td>General language modelling</td></tr>
+<tr><td>2020</td><td>GPT-3<sup class="footnote-reference"><a href="#gpt3">4</a></sup></td><td>Decoder</td><td>LM</td><td>175B</td><td>Code generation, audio generation</td></tr>
+<tr><td></td><td>Big Bird</td><td>Encoder</td><td>MLM</td><td>-</td><td>Longer sequence</td></tr>
+<tr><td></td><td>ELECTRA</td><td>Encoder</td><td>RTD</td><td>110M-330M</td><td>Longer sequence</td></tr>
+<tr><td></td><td>mBART</td><td>Encoder/Decoder</td><td>DAE</td><td>110M</td><td>Translation</td></tr>
+<tr><td>2019</td><td>XLM-RoBERTa</td><td>Encoder</td><td>MLM</td><td>270M-550M</td><td>Translation, cross-lingual tasks</td></tr>
+<tr><td></td><td>BART</td><td>Encoder/Decoder</td><td>DAE</td><td>110M</td><td>Text generation</td></tr>
+<tr><td></td><td>ERNIE</td><td>Encoder</td><td>MLM</td><td>114M</td><td>Entity recognition</td></tr>
+<tr><td></td><td>GPT-2</td><td>Decoder</td><td>LM</td><td>1.5B</td><td>Text generation, (general language tasks)</td></tr>
+<tr><td></td><td>Transformer XL</td><td>Decoder</td><td>LM</td><td>151M</td><td>(general language tasks)</td></tr>
+<tr><td></td><td>RoBERTA</td><td>Encoder</td><td>MLM</td><td>356M</td><td>Language understading, QA</td></tr>
+<tr><td></td><td>T5</td><td>Encoder/Decoder</td><td>DAE</td><td>11B</td><td>MT, QA, abstractive summarisation</td></tr>
+<tr><td></td><td>Pegasus</td><td>Encoder/Decoder</td><td>DAE,MLM</td><td>223M-568M</td><td>Summarisation</td></tr>
+<tr><td></td><td>ALBERT</td><td>Encoder</td><td>MLM/NSP</td><td>12M-60M</td><td>Language understading, QA</td></tr>
+<tr><td></td><td>DistilBERT</td><td>Encoder</td><td>MLM/NSP</td><td>66M</td><td>Language understading, QA</td></tr>
+<tr><td></td><td>XLNet</td><td>Decoder</td><td>PLM</td><td>117-360M</td><td>(general language tasks)</td></tr>
+<tr><td>2018</td><td>BERT</td><td>Encoder</td><td>MLM/NSP</td><td>110M</td><td>Language understading, QA</td></tr>
+<tr><td></td><td>GPT</td><td>Decoder</td><td>LM</td><td>117M</td><td>Text generation</td></tr>
+<tr><td>2017</td><td>Transformer</td><td>Encoder+Decoder</td><td></td><td></td><td></td></tr>
+<tr><td>?</td><td>ELMO</td><td>RNN</td><td>LM</td><td></td><td></td></tr>
+<tr><td>?</td><td>seq2seq</td><td>RNN</td><td></td><td></td><td></td></tr>
+<tr><td>?</td><td>UniLM</td><td>?</td><td></td><td></td><td></td></tr>
+<tr><td>?</td><td>ERNIE</td><td>?</td><td></td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<p>Encoder or Decoder refers to the Transformer encoder or decoder.</p>
+<hr />
+<div class="footnote-definition" id="gptneox"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://arxiv.org/abs/2204.06745">GPT-NeoX-20B: An Open-Source Autoregressive Language Model</a>
+<sup class="footnote-reference"><a href="#palm">2</a></sup>: <a href="https://arxiv.org/abs/2204.02311">PaLM: Scaling Language Modeling with Pathways</a>
+<sup class="footnote-reference"><a href="#gopher">3</a></sup>: <a href="https://arxiv.org/abs/2112.11446">Scaling Language Models: Methods, Analysis &amp; Insights from Training Gopher</a>
+<sup class="footnote-reference"><a href="#gpt3">4</a></sup>: <a href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a></p>
+</div>
 
                     </main>
 
@@ -187,6 +236,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

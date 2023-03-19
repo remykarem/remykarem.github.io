@@ -2,4 +2,4 @@
 
 | Year | Model   | Arch        | Pretraining | Params | Applications |
 | ---- | ------- | ----------- | ----------- | ------ | ------------ |
-| ?    | Whisper | Transformer | ?           | ?      | ?            |
+| 2022 | Whisper | Transformer | ?           | ?      | ?            |
