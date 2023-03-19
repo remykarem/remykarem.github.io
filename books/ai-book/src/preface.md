@@ -1,3 +1,16 @@
 # Preface
 
-Hi, if you chanced upon this, just know that this book is meant for personal use. Proceed with caution.
+Hi, these are my personal notes!
+
+**LLM frameworks**
+
+LlamaIndex
+
+**Low-level frameworks**
+
+[MPS (Metal Performance Shaders)](https://developer.apple.com/metal/pytorch/)
+
+**Hardware**
+
+Apple Silicon
+GPU
