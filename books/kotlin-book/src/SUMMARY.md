@@ -36,7 +36,7 @@
     - [Data object](./classes-and-objects/data-object.md)
     - [Enum class](./classes-and-objects/enum-class.md)
     - [Sealed class](./classes-and-objects/sealed-class.md)
-    - [Value class](./classes-and-objects/value-class.md)
+    - [Inline class](./classes-and-objects/inline-class.md)
     - [Compile-time constants](./classes-and-objects/compile-time-constants.md)
 - [Exception handling](./exception-handling.md)
 - [Extensions](./extensions.md)
