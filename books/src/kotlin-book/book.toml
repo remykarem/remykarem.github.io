@@ -10,6 +10,12 @@ editable = true
 
 [output.html]
 site-url = "/books/kotlin-book/"
+additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
 
 [build]
 build-dir = "../../kotlin-book"
+
+[preprocessor]
+
+[preprocessor.catppuccin]
+assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
