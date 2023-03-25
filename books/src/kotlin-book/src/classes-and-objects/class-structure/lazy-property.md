@@ -54,4 +54,6 @@ fun main() {
 
 The example above should have been a getter property instead since we expect `bmi` to change.
 
-> 💡 Lazy properties are thread-safe: one thread computes, but all threads will see the same value.
+```admonish note
+Lazy properties are thread-safe: one thread computes, but all threads will see the same value.
+```

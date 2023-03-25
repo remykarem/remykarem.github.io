@@ -32,6 +32,7 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../.././theme/catppuccin.css">
         <link rel="stylesheet" href="../.././theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href="../../././mdbook-admonish.css">
 
     </head>
     <body>
@@ -163,20 +164,27 @@ fun main() {
 	rectangle.height = 100
 	println(rectangle.area)
 }</code></pre></pre>
-<blockquote>
-<p>💡 Another pattern to compute <code>area</code> on the fly is to have a <code>getArea</code> method:</p>
-<pre><pre class="playground"><code class="language-kotlin">class Rectangle(var height: Int, var width: Int) {
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>Another pattern to compute <code>area</code> on the fly is to have a <code>getArea</code> method:</p>
+<pre><code>class Rectangle(var height: Int, var width: Int) {
 	fun getArea() = this.height * this.width
 }
 
 fun main() {
-   val rectangle = Rectangle(10, 2)
-   println(rectangle.getArea())
-   rectangle.height = 100
-   println(rectangle.getArea())
-}</code></pre></pre>
+	val rectangle = Rectangle(10, 2)
+	println(rectangle.getArea())
+	rectangle.height = 100
+	println(rectangle.getArea())
+}
+</code></pre>
 <p>For me... I prefer the getter properties pattern.</p>
-</blockquote>
+</div>
+</div>
 <p>We can also use the single-line function expression:</p>
 <pre><pre class="playground"><code class="language-kotlin">class Rectangle(var height: Int, var width: Int) {
 	val area: Int

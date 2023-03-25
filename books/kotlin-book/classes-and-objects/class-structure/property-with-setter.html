@@ -32,6 +32,7 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../.././theme/catppuccin.css">
         <link rel="stylesheet" href="../.././theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href="../../././mdbook-admonish.css">
 
     </head>
     <body>
@@ -162,12 +163,24 @@ fun main() {
 	person.age = 20
 	println(person.age)
 }</code></pre></pre>
-<blockquote>
-<p>💡 <code>set(value)</code> is actually <code>set(value: Int)</code>. The type of <code>value</code> is the same as the type of the property, hence you don't need to type it. The name <code>value</code> is a convention, but you can rename it just like you would any other function.</p>
-</blockquote>
-<blockquote>
-<p>💡 <code>field</code> (&quot;backing field&quot;) is like the &quot;internal value&quot; of the property, if you may.</p>
-</blockquote>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p><code>set(value)</code> is actually <code>set(value: Int)</code>. The type of <code>value</code> is the same as the type of the property, hence you don't need to type it. The name <code>value</code> is a convention, but you can rename it just like you would any other function.</p>
+</div>
+</div>
+<div id="admonition-note-1" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note-1"></a></p>
+</div>
+<div>
+<p><code>field</code> (&quot;backing field&quot;) is like the &quot;internal value&quot; of the property, if you may.</p>
+</div>
+</div>
 <p>You cannot make <code>age</code> read-only because you are writing value to it (&quot;setter&quot;). So this will fail:</p>
 <pre><pre class="playground"><code class="language-kotlin">class Person {
     val age: Int = 30

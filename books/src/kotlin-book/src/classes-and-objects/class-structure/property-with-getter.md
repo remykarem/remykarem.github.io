@@ -18,22 +18,22 @@ fun main() {
 }
 ```
 
-> 💡 Another pattern to compute `area` on the fly is to have a `getArea` method:
->
-> ```kotlin
-> class Rectangle(var height: Int, var width: Int) {
-> 	fun getArea() = this.height * this.width
-> }
->
-> fun main() {
->    val rectangle = Rectangle(10, 2)
->    println(rectangle.getArea())
->    rectangle.height = 100
->    println(rectangle.getArea())
-> }
-> ```
-> 
-> For me... I prefer the getter properties pattern.
+```admonish note
+Another pattern to compute `area` on the fly is to have a `getArea` method:
+
+	class Rectangle(var height: Int, var width: Int) {
+		fun getArea() = this.height * this.width
+	}
+
+	fun main() {
+		val rectangle = Rectangle(10, 2)
+		println(rectangle.getArea())
+		rectangle.height = 100
+		println(rectangle.getArea())
+	}
+
+For me... I prefer the getter properties pattern.
+```
 
 We can also use the single-line function expression:
 

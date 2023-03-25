@@ -1,18 +1,42 @@
 # Mutability
 
-> ⚠️ `List` is not immutable. You can cast it to mutable list. Its mutability can also change if you pass to a fnction that accepts mutablelist.
+## Immutable
 
-Immutable: state cannot be modified after it is created. String.
+State cannot be modified after it is created. 
 
-> 💡 For Immutable support, use Google's Guava or JetBrain's Kotlinx Immutable Collections Library
+* `String`
 
-Mutable
+```admonish warning
+`List` is not actually immutable. Rather, it is compile-time read-only.
+
+You can cast a `List` into a `MutableList` and change the underlying data 😱.
+```
+
+Example how we can change the data in a `List`:
+
+```kotlin
+val list = listOf(1,2,3)
+
+println(list)
+
+(list as MutableList<Int>)[2] = 999
+
+println(list)
+```
+
+For more immutable support, use Google's Guava or JetBrain's Kotlinx Immutable Collections Library.
+
+## Mutable
 
 Read-only: val, List. Compile-time
 
-> 💡 `val` means cannot reassign
+```admonish note
+`val` means cannot reassign
+```
 
-> 💡 `ReadOnlyDataStructure` means cannot write
+```admonish note
+`ReadOnlyDataStructure` means cannot write
+```
 
 Grammar
 

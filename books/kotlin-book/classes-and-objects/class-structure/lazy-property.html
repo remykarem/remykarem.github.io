@@ -32,6 +32,7 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../.././theme/catppuccin.css">
         <link rel="stylesheet" href="../.././theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href="../../././mdbook-admonish.css">
 
     </head>
     <body>
@@ -189,9 +190,15 @@ fun main() {
     println(person.bmi)
 }</code></pre></pre>
 <p>The example above should have been a getter property instead since we expect <code>bmi</code> to change.</p>
-<blockquote>
-<p>💡 Lazy properties are thread-safe: one thread computes, but all threads will see the same value.</p>
-</blockquote>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>Lazy properties are thread-safe: one thread computes, but all threads will see the same value.</p>
+</div>
+</div>
 
                     </main>
 

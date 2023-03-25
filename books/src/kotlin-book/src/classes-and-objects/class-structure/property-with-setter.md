@@ -17,9 +17,13 @@ fun main() {
 }
 ```
 
-> 💡 `set(value)` is actually `set(value: Int)`. The type of `value` is the same as the type of the property, hence you don't need to type it. The name `value` is a convention, but you can rename it just like you would any other function.
+```admonish note
+`set(value)` is actually `set(value: Int)`. The type of `value` is the same as the type of the property, hence you don't need to type it. The name `value` is a convention, but you can rename it just like you would any other function.
+```
 
-> 💡 `field` ("backing field") is like the "internal value" of the property, if you may.
+```admonish note
+`field` ("backing field") is like the "internal value" of the property, if you may.
+```
 
 You cannot make `age` read-only because you are writing value to it ("setter"). So this will fail:
 

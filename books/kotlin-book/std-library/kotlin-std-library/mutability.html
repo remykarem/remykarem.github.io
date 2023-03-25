@@ -32,6 +32,7 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../.././theme/catppuccin.css">
         <link rel="stylesheet" href="../.././theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href="../../././mdbook-admonish.css">
 
     </head>
     <body>
@@ -149,21 +150,52 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="mutability"><a class="header" href="#mutability">Mutability</a></h1>
-<blockquote>
-<p>⚠️ <code>List</code> is not immutable. You can cast it to mutable list. Its mutability can also change if you pass to a fnction that accepts mutablelist.</p>
-</blockquote>
-<p>Immutable: state cannot be modified after it is created. String.</p>
-<blockquote>
-<p>💡 For Immutable support, use Google's Guava or JetBrain's Kotlinx Immutable Collections Library</p>
-</blockquote>
-<p>Mutable</p>
+<h2 id="immutable"><a class="header" href="#immutable">Immutable</a></h2>
+<p>State cannot be modified after it is created. </p>
+<ul>
+<li><code>String</code></li>
+</ul>
+<div id="admonition-warning" class="admonition warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
+</div>
+<div>
+<p><code>List</code> is not actually immutable. Rather, it is compile-time read-only.</p>
+<p>You can cast a <code>List</code> into a <code>MutableList</code> and change the underlying data 😱.</p>
+</div>
+</div>
+<p>Example how we can change the data in a <code>List</code>:</p>
+<pre><pre class="playground"><code class="language-kotlin"><span class="boring">fun main() {
+</span>val list = listOf(1,2,3)
+
+println(list)
+
+(list as MutableList&lt;Int&gt;)[2] = 999
+
+println(list)
+<span class="boring">}</span></code></pre></pre>
+<p>For more immutable support, use Google's Guava or JetBrain's Kotlinx Immutable Collections Library.</p>
+<h2 id="mutable"><a class="header" href="#mutable">Mutable</a></h2>
 <p>Read-only: val, List. Compile-time</p>
-<blockquote>
-<p>💡 <code>val</code> means cannot reassign</p>
-</blockquote>
-<blockquote>
-<p>💡 <code>ReadOnlyDataStructure</code> means cannot write</p>
-</blockquote>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p><code>val</code> means cannot reassign</p>
+</div>
+</div>
+<div id="admonition-note-1" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note-1"></a></p>
+</div>
+<div>
+<p><code>ReadOnlyDataStructure</code> means cannot write</p>
+</div>
+</div>
 <p>Grammar</p>
 <ol>
 <li><code>val</code> + <code>ReadOnlyDataStructure</code>
