@@ -4,7 +4,7 @@ Sealed classes are a powerful feature in Kotlin. They are akin to the types in R
 
 A sealed class is idiomatically used as an enum with arbitrary data structures.
 
-```kotlin
+```kotlin,editable
 sealed class Employee {
 	data class Manager(val name: String, val age: Int): Employee()
 	data class SeniorDev(val name: String): Employee()

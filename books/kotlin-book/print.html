@@ -1008,7 +1008,7 @@ fun main() {
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sealed-class"><a class="header" href="#sealed-class">Sealed class</a></h1>
 <p>Sealed classes are a powerful feature in Kotlin. They are akin to the types in Rust and Haskell ecosystem.</p>
 <p>A sealed class is idiomatically used as an enum with arbitrary data structures.</p>
-<pre><pre class="playground"><code class="language-kotlin">sealed class Employee {
+<pre><pre class="playground"><code class="language-kotlin editable">sealed class Employee {
 	data class Manager(val name: String, val age: Int): Employee()
 	data class SeniorDev(val name: String): Employee()
 }
