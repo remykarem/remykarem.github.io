@@ -180,6 +180,23 @@ fun main() {
     val box = Box(10, &quot;100&quot;)
     println(box)
 }</code></pre></pre>
+<p>Example 4</p>
+<pre><pre class="playground"><code class="language-kotlin">class Box&lt;S, T&gt;(
+    private val item1: S,
+    private val item2: T,
+) {
+    fun getItem1(): S {
+        return item1
+    }
+    fun getItem2(): T {
+        return item2
+    }
+}
+
+fun main() {
+    val box = Box(10, &quot;item2&quot;)
+    println(box)
+}</code></pre></pre>
 
                     </main>
 

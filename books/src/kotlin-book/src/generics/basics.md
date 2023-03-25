@@ -41,3 +41,24 @@ fun main() {
     println(box)
 }
 ```
+
+Example 4
+
+```kotlin
+class Box<S, T>(
+    private val item1: S,
+    private val item2: T,
+) {
+    fun getItem1(): S {
+        return item1
+    }
+    fun getItem2(): T {
+        return item2
+    }
+}
+
+fun main() {
+    val box = Box(10, "item2")
+    println(box)
+}
+```
