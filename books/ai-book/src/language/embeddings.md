@@ -6,17 +6,10 @@ Represent how something functions syntactically (position) and semantically (mea
 
 How to generate a numerical representation of the tokens? Need to train with some data so that model understands the world
 
-## Character
-
-- CNN
-
 ## Subword
 
-- WordPiece
 - Unigram Language Model
-- MOE (Misspelling Oblivious Embeddings)
-- BPEmb ([https://github.com/VKCOM/YouTokenToMe](https://github.com/VKCOM/YouTokenToMe))
-- sentencepiece ([google / sentencepiece](https://github.com/google/sentencepiece))
+- ~~MOE (Misspelling Oblivious Embeddings)~~ (deprecated)
 
 ## Word
 
@@ -41,8 +34,7 @@ How to generate a numerical representation of the tokens? Need to train with som
 - USE (multilingual)
 - InferSent
 - SentenceBERT
-- [LASER](https://github.com/facebookresearch/LASER)
-  Language-Agnostic SEntence Representations. Trained on 90+ languages. Model has the ability to accept code-switching!
+- [LASER](https://github.com/facebookresearch/LASER) (Language-Agnostic SEntence Representations) — Trained on 90+ languages. Model has the ability to accept code-switching!
 - LaBSE
 
 ## Document
@@ -51,7 +43,7 @@ How to generate a numerical representation of the tokens? Need to train with som
 - Bag-of-words
 - TF-IDF
 
-# Summary
+## Summary
 
 | Model       | Encoding                                    | Characteristics                            | Optimiser        | Word-to-embedding | Available modules trained on    | Getting embeddings             |
 | ----------- | ------------------------------------------- | ------------------------------------------ | ---------------- | ----------------- | ------------------------------- | ------------------------------ |
@@ -62,3 +54,4 @@ How to generate a numerical representation of the tokens? Need to train with som
 | ELMo        | Character-level CNN (subword)               | Bi-directional, LM                         | Gradient descent | 1-to-many         | 5.5B tokens from Wikipedia 1.9B | Aggregate output layers        |
 | Transformer |                                             | Self-attention, seq2seq                    |                  |                   |                                 | ?                              |
 | BERT        |                                             | LM, transformer                            |                  |                   |                                 | Aggregate encoder stack layers |
+

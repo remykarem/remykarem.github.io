@@ -156,19 +156,25 @@
                 <div id="content" class="content">
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-<h1 id="tokenisatin"><a class="header" href="#tokenisatin">Tokenisatin</a></h1>
-<p>Token: ‘smallest unit of language in the eyes of computer’. Tokenisation is especially useful in agglutinative languages like Turkish.</p>
+<h1 id="tokenisation"><a class="header" href="#tokenisation">Tokenisation</a></h1>
+<p>Tokenisation is the <em>splitting</em> of text into smaller units.</p>
 <h3 id="algorithms"><a class="header" href="#algorithms">Algorithms</a></h3>
 <ul>
 <li>Character</li>
 <li>Subword
 <ul>
-<li>BPE (Byte-Pair Encoding). By frequency. Implementations: SentencePiece, fastBPE.</li>
+<li>BPE (Byte-Pair Encoding). By frequency. Implementations:
+<ul>
+<li><a href="https://github.com/google/sentencepiece">SentencePiece</a></li>
+<li><a href="https://github.com/glample/fastBPE">fastBPE</a></li>
+<li><a href="https://github.com/VKCOM/YouTokenToMe">YouTokenToMe</a></li>
+<li><a href="https://github.com/rsennrich/subword-nmt">rsennrich / subword-nmt</a></li>
+</ul>
+</li>
 <li>WordPiece. By likelihood</li>
 <li>Unigram Language Model</li>
 <li>Syllable tokenisation</li>
 <li>Character n-grams (by fasttext)</li>
-<li><a href="https://github.com/rsennrich/subword-nmt">rsennrich / subword-nmt</a></li>
 </ul>
 </li>
 <li>Word
@@ -178,7 +184,7 @@
 </ul>
 </li>
 </ul>
-<p>Libraries</p>
+<h3 id="libraries"><a class="header" href="#libraries">Libraries</a></h3>
 <ul>
 <li>Moses</li>
 <li>Whitespace</li>

@@ -160,17 +160,10 @@
 <p>“Representation Learning”</p>
 <p>Represent how something functions syntactically (position) and semantically (meaning) + relationships</p>
 <p>How to generate a numerical representation of the tokens? Need to train with some data so that model understands the world</p>
-<h2 id="character"><a class="header" href="#character">Character</a></h2>
-<ul>
-<li>CNN</li>
-</ul>
 <h2 id="subword"><a class="header" href="#subword">Subword</a></h2>
 <ul>
-<li>WordPiece</li>
 <li>Unigram Language Model</li>
-<li>MOE (Misspelling Oblivious Embeddings)</li>
-<li>BPEmb (<a href="https://github.com/VKCOM/YouTokenToMe">https://github.com/VKCOM/YouTokenToMe</a>)</li>
-<li>sentencepiece (<a href="https://github.com/google/sentencepiece">google / sentencepiece</a>)</li>
+<li><del>MOE (Misspelling Oblivious Embeddings)</del> (deprecated)</li>
 </ul>
 <h2 id="word"><a class="header" href="#word">Word</a></h2>
 <ul>
@@ -201,8 +194,7 @@
 <li>USE (multilingual)</li>
 <li>InferSent</li>
 <li>SentenceBERT</li>
-<li><a href="https://github.com/facebookresearch/LASER">LASER</a>
-Language-Agnostic SEntence Representations. Trained on 90+ languages. Model has the ability to accept code-switching!</li>
+<li><a href="https://github.com/facebookresearch/LASER">LASER</a> (Language-Agnostic SEntence Representations) — Trained on 90+ languages. Model has the ability to accept code-switching!</li>
 <li>LaBSE</li>
 </ul>
 <h2 id="document"><a class="header" href="#document">Document</a></h2>
@@ -211,7 +203,7 @@ Language-Agnostic SEntence Representations. Trained on 90+ languages. Model has 
 <li>Bag-of-words</li>
 <li>TF-IDF</li>
 </ul>
-<h1 id="summary"><a class="header" href="#summary">Summary</a></h1>
+<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Model</th><th>Encoding</th><th>Characteristics</th><th>Optimiser</th><th>Word-to-embedding</th><th>Available modules trained on</th><th>Getting embeddings</th></tr></thead><tbody>
 <tr><td>NNLM</td><td></td><td>MLP with projection layer and hidden layer</td><td></td><td></td><td></td><td></td></tr>
 <tr><td>Skip-gram</td><td>One-hot encoding of words</td><td>MLP with projection layer</td><td>Gradient descent</td><td>1-to-1</td><td>Wikipedia English</td><td>Output</td></tr>

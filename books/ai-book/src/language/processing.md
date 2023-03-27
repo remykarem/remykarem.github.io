@@ -2,6 +2,7 @@
 
 # **Preprocessing I**
 
+- n-gram
 - Remove stop words
 - Lowercase the text
 - Strip punctuations

@@ -157,28 +157,35 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="representation"><a class="header" href="#representation">Representation</a></h1>
-<h2 id="sparse-representations"><a class="header" href="#sparse-representations"><strong>Sparse Representations</strong></a></h2>
+<p>(Numerical representation)</p>
+<ul>
+<li><a href="#sparse-representations">Sparse representations</a></li>
+<li><a href="#dense-representations-embeddings">Dense representations: Embeddings</a>
+<ul>
+<li><a href="#frequency-based">Frequency-based</a></li>
+<li><a href="#prediction-based">Prediction-based</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="sparse-representations"><a class="header" href="#sparse-representations">Sparse representations</a></h2>
 <p>sparsity problem</p>
 <p>no similarity</p>
 <ul>
 <li>One-hot encoding (1-of-V coding)</li>
 <li>Multi-hot encoding</li>
+<li>Bag-of-words</li>
 </ul>
-<h2 id="traditional"><a class="header" href="#traditional"><strong>Traditional</strong></a></h2>
-<ul>
-<li>n-gram</li>
-<li>Bag of words</li>
-</ul>
-<h2 id="denser-representations-embedding--embedding-vector--vector-representation--word-representations-in-vector-space"><a class="header" href="#denser-representations-embedding--embedding-vector--vector-representation--word-representations-in-vector-space"><strong>Denser Representations: Embedding / embedding vector / vector representation / word representations in vector space</strong></a></h2>
+<h2 id="dense-representations-embeddings"><a class="header" href="#dense-representations-embeddings">Dense representations: Embeddings</a></h2>
 <p>learned lookup table</p>
 <p>idea: every word is represented by a vector</p>
-<h2 id="embeddings-frequency-based"><a class="header" href="#embeddings-frequency-based">Embeddings: <strong>Frequency-based</strong></a></h2>
+<h3 id="frequency-based"><a class="header" href="#frequency-based">Frequency-based</a></h3>
 <ul>
 <li><strong>Count Vectors</strong></li>
 <li><strong>TF-IDF</strong> (term frequency - inverse document frequency)</li>
 <li><strong>Co-occurence matrix</strong></li>
 </ul>
-<h2 id="embeddings-prediction-based"><a class="header" href="#embeddings-prediction-based">E<strong>mbeddings: Prediction-based</strong></a></h2>
+<h3 id="prediction-based"><a class="header" href="#prediction-based">Prediction-based</a></h3>
 <ul>
 <li><strong>Skip-gram</strong>: learning embeddings by predicting word contexts</li>
 <li><strong>CBOW</strong></li>

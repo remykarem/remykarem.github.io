@@ -7,10 +7,10 @@
     - Bag-of-x
     - Aggregate of x (concat, sum)
 - Position
-    - absolute positional embedding
-    - relative position embeddings
-    - sinusoidal positional embedding
+    - absolute positional encoding
+    - relative position encoding
+    - RoPE -- Rotary positional encoding
+    - sinusoidal positional encoding
 
     ![Positional encoding](./positional-encoding.jpg)
 
-* RoPE -- Rotary positional embedding

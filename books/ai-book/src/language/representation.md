@@ -1,6 +1,12 @@
 # Representation
 
-## **Sparse Representations**
+(Numerical representation)
+
+<!-- toc -->
+
+---
+
+## Sparse representations
 
 sparsity problem
 
@@ -8,25 +14,21 @@ no similarity
 
 - One-hot encoding (1-of-V coding)
 - Multi-hot encoding
+- Bag-of-words
 
-## **Traditional**
-
-- n-gram
-- Bag of words
-
-## **Denser Representations: Embedding / embedding vector / vector representation / word representations in vector space**
+## Dense representations: Embeddings
 
 learned lookup table
 
 idea: every word is represented by a vector
 
-## Embeddings: **Frequency-based**
+### Frequency-based
 
 - **Count Vectors**
 - **TF-IDF** (term frequency - inverse document frequency)
 - **Co-occurence matrix**
 
-## E**mbeddings: Prediction-based**
+### Prediction-based
 
 - **Skip-gram**: learning embeddings by predicting word contexts
 - **CBOW**
