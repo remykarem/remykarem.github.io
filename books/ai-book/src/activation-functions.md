@@ -121,6 +121,10 @@ Softmax with temperature is easy to compute (via vectorised operations) (?).
 
 See the blog post from [Luke Salamon](https://lukesalamone.github.io/posts/what-is-temperature/) to visualise varying the temperature.
 
+## Masked softmax
+
+?
+
 ## ReLU
 
 Rectified Linear Unit

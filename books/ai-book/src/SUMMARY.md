@@ -159,6 +159,7 @@
   - [layers](./layers.md)
   - [improving-speed-accuracy](./improving-speed-accuracy.md)
   - [Activation functions](./activation-functions.md)
+    - [Approximating softmax](./approximating-softmax.md)
 - [Machine learning]()
 - [Reinforcement learning](./reinforcement-learning.md)
 - [Bayesian learning]()
