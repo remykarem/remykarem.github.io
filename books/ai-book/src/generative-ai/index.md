@@ -27,3 +27,6 @@ Outlier detection
 2. Estimate distribution. (How?)
 3. Adaptively resample data.
 4. Learn from fair data distribution.
+
+See below for timeline:
+[David Foster](https://www.linkedin.com/posts/davidtfoster_datascience-machinelearning-ai-activity-7044233450295316480-nd31/)
