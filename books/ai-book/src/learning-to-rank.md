@@ -60,6 +60,7 @@ Optimiser: Gradient descent
 
 ## Rank-aware evaluation metrics
 
+- MMR (maximal margin relevance)
 - CG (cumulative gain)
 - DCG (discounted CG)
 - IDCG (ideal DCG)
@@ -68,17 +69,17 @@ Optimiser: Gradient descent
     Measure of ranking quality.
     
 - MAP (only relevant documents!)
-If my mAP@10 = 0.8, it means that on average (across users), if I predict k items for you (where k can be 1≤k≤10), 0.8k will be relevant.
-[https://web.stanford.edu/class/cs276/handouts/EvaluationNew-handout-1-per.pdf](https://web.stanford.edu/class/cs276/handouts/EvaluationNew-handout-1-per.pdf)
+    If my mAP@10 = 0.8, it means that on average (across users), if I predict k items for you (where k can be 1≤k≤10), 0.8k will be relevant.
+    [https://web.stanford.edu/class/cs276/handouts/EvaluationNew-handout-1-per.pdf](https://web.stanford.edu/class/cs276/handouts/EvaluationNew-handout-1-per.pdf)
 
 
-![Metrics](./learning-to-rank-2.png)
-![Metrics](./learning-to-rank-3.png)
-![Metrics](./learning-to-rank-4.png)
+    ![Metrics](./learning-to-rank-2.png)
+    ![Metrics](./learning-to-rank-3.png)
+    ![Metrics](./learning-to-rank-4.png)
 
-AP@5 is per user
+    AP@5 is per user
 
-mAP@5 is averaged across all users
+    mAP@5 is averaged across all users
 
 ## **Variants**
 

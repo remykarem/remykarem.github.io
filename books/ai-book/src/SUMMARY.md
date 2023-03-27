@@ -5,7 +5,7 @@
 # Trending applications
 
 - [Technologies / libraries](./technolgoies-libraries.md)
-- [Query a knowledge base](./query-a-knowledge-base.md)
+- [Retrieval augmented generation](./retrieval-augmented-generation.md)
 
 # General
 

@@ -1,4 +1,6 @@
-# Query a knowledge base
+# Retrieval augmented generation
+
+Aka querying a knowledge base then answering in natural language
 
 "In-Context Learning", few-shot
 
