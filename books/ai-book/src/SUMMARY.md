@@ -165,7 +165,11 @@
 - [Bayesian learning]()
 - [Metric learning](./metric-learning.md)
 - [Learning to rank](./learning-to-rank.md)
-- [Generative AI](./generative-ai.md)
+- [Generative AI](./generative-ai/index.md)
+  - [Autoencoder](./generative-ai/autoencoder.md)
+  - [VAE](./generative-ai/vae.md)
+  - [GAN](./generative-ai/gan.md)
+  - [Diffusion model]()
 
 ---
 
