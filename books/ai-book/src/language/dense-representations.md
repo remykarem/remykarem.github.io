@@ -55,3 +55,7 @@ Categorisations of embeddings:
 
 * [SentenceTransformers](https://www.sbert.net/#)
 * Gensim
+
+## References
+
+[The Ultimate Guide to Word Embeddings](https://neptune.ai/blog/word-embeddings-guide)
