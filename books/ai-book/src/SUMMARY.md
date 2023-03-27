@@ -165,7 +165,7 @@
 - [Bayesian learning]()
 - [Metric learning](./metric-learning.md)
 - [Learning to rank](./learning-to-rank.md)
-- [Deep generative models](./deep-generative-models.md)
+- [Generative AI](./generative-ai.md)
 
 ---
 
