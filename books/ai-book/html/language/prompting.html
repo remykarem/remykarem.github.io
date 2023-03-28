@@ -159,14 +159,17 @@
 <h1 id="prompting"><a class="header" href="#prompting">Prompting</a></h1>
 <p>Pre-trained language models can solve tasks using zero-shot or few-shot prompting as in the paper <a href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a>.</p>
 <p>This technique requires <em>prompt engineering</em> — designing tasks that look like the data the model has seen during training.</p>
-<ul>
-<li>Chain-of-Thought <sup class="footnote-reference"><a href="#cot">1</a></sup></li>
-<li>Retrieval-Augemented QA</li>
-<li>Self-Ask - (<a href="https://ofir.io/self-ask.pdf">Press et al 2022</a>)</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Prompting method</th><th>Reasoning</th><th>Acting</th></tr></thead><tbody>
+<tr><td>ReAct <sup class="footnote-reference"><a href="#react">1</a></sup></td><td>✅</td><td>✅</td></tr>
+<tr><td>Chain-of-Thought <sup class="footnote-reference"><a href="#cot">2</a></sup></td><td>✅</td><td></td></tr>
+<tr><td>Self-Ask <sup class="footnote-reference"><a href="#selfask">3</a></sup></td><td>✅</td><td></td></tr>
+</tbody></table>
+</div>
 <hr />
-<div class="footnote-definition" id="cot"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://arxiv.org/abs/2201.11903">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></p>
+<div class="footnote-definition" id="cot"><sup class="footnote-definition-label">2</sup>
+<p><a href="https://arxiv.org/abs/2201.11903">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a>
+<sup class="footnote-reference"><a href="#react">1</a></sup>: <a href="https://arxiv.org/abs/2210.03629">ReAct: Synergizing Reasoning and Acting in Language Models</a>
+<sup class="footnote-reference"><a href="#selfask">3</a></sup>: <a href="https://ofir.io/self-ask.pdf">Press et al 2022</a></p>
 </div>
 
                     </main>

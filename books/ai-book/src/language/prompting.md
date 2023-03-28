@@ -4,10 +4,14 @@ Pre-trained language models can solve tasks using zero-shot or few-shot promptin
 
 This technique requires _prompt engineering_ — designing tasks that look like the data the model has seen during training.
 
-- Chain-of-Thought [^cot]
-- Retrieval-Augemented QA
-- Self-Ask - ([Press et al 2022](https://ofir.io/self-ask.pdf))
+| Prompting method        | Reasoning | Acting |
+| ----------------------- | --------- | ------ |
+| ReAct [^react]          | ✅        | ✅     |
+| Chain-of-Thought [^cot] | ✅        |        |
+| Self-Ask [^selfask]     | ✅        |        |
 
 ---
 
 [^cot]: [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
+[^react]: [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)
+[^selfask]: [Press et al 2022](https://ofir.io/self-ask.pdf)
