@@ -23,3 +23,7 @@ Tokenisation is the *splitting* of text into smaller units.
 
 - Moses
 - Whitespace
+
+### Visualisation
+
+[Byte Pair Encoding Tokenization by HuggingFace](https://www.youtube.com/watch?v=HEikzVL-lZU)
