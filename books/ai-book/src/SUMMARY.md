@@ -132,6 +132,7 @@
 
 # 'Learning' types
 
+- [Classes of learning problems](classes-of-learning-problems.md)
 - [Supervision]()
   - [Supervised learning](./supervised-learning.md)
   - [Semi-supervised learning](./semi-supervised-learning.md)
