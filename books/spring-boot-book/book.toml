@@ -9,13 +9,14 @@ title = "Spring Boot book"
 editable = true
 
 [output.html]
-site-url = "/books/spring-boot-book/"
+site-url = "/books/spring-boot-book/html"
+git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
 additional-css = ["././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
 default-theme="frappé"
 preferred-dark-theme="frappé"
 
 [build]
-build-dir = "../../spring-boot-book"
+build-dir = "."
 
 [preprocessor]
 
