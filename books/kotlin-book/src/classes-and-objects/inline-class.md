@@ -1,6 +1,6 @@
 # Inline class
 
-Inline classes are used to wrap a type.
+[Inline classes](https://kotlinlang.org/docs/inline-classes.html) are used to wrap a type.
 
 One possible use case is to provide encapsulation (of the underlying type) as well as a guarantee that the right type of value is supplied at compile time. This use case is similar to Rust's [newtype pattern](https://doc.rust-lang.org/book/ch19-04-advanced-types.html).
 
@@ -41,6 +41,23 @@ fun main() {
 }
 ```
 
+Another use case of inline classes is to override the `toString` method for sensitive data:
+
+```kotlin
+@JvmInline
+value class Password(val str: String) {
+    override fun toString(): String {
+        return "***"
+    }
+}
+
+fun main() {
+    val password = Password("secret")
+    println("This is my password: $password")
+}
+```
+
+~~~admonish bug title="Multiple properties"
 Note that inline classes only work for a single property (initialised in the primary constructor). The following won't compile because it has two properties:
 
 ```kotlin
@@ -52,7 +69,9 @@ fun main() {
     println(password)
 }
 ```
+~~~
 
+~~~admonish bug title="With sealed classes"
 Inline classes don't play well with sealed classes:
 
 ```kotlin
@@ -66,3 +85,4 @@ fun main() {
     println(user)
 }
 ```
+~~~
