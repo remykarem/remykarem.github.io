@@ -1,8 +1,9 @@
 # Enum class
 
 Useful Kotlin built-in extensions:
-* [`enumValueOf`](#enumvalueof)
-* [`enumValues`](#enumvaluew)
+- [Enum class](#enum-class)
+  - [`enumValueOf`](#enumvalueof)
+  - [`enumValues`](#enumvalues)
 
 ---
 
@@ -38,7 +39,7 @@ fun main() {
 [Reference](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/enum-value-of.html)
 
 
-## `enumValueOf`
+## `enumValues`
 
 ```kotlin
 enum class Status {
