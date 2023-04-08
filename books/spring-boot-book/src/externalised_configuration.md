@@ -36,9 +36,23 @@ and don’t forget
 class MyApplication
 ```
 
-## `@Value` annotation
+You can also model the container directly (?):
 
-There's one thing that `@ConfigurationProperties` can't do — directly defining the property without a container.
+`application.yml`
+
+```yml
+my-hobbies:
+    - swimming
+    - netflix
+```
+
+```kotlin
+@ConstructorBinding
+@ConfigurationProperties("some-profile")
+data class MyHobbyProperties(val myHobbies: List<String>)
+```
+
+## `@Value` annotation
 
 `application.yml`
 

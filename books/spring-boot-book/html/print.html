@@ -242,8 +242,17 @@ data class ProfileProperties(
 <pre><code class="language-kotlin">@ConfigurationPropertiesScan
 class MyApplication
 </code></pre>
+<p>You can also model the container directly (?):</p>
+<p><code>application.yml</code></p>
+<pre><code class="language-yml">my-hobbies:
+    - swimming
+    - netflix
+</code></pre>
+<pre><code class="language-kotlin">@ConstructorBinding
+@ConfigurationProperties(&quot;some-profile&quot;)
+data class MyHobbyProperties(val myHobbies: List&lt;String&gt;)
+</code></pre>
 <h2 id="value-annotation"><a class="header" href="#value-annotation"><code>@Value</code> annotation</a></h2>
-<p>There's one thing that <code>@ConfigurationProperties</code> can't do — directly defining the property without a container.</p>
 <p><code>application.yml</code></p>
 <pre><code class="language-yml">my-hobbies:
     - swimming
