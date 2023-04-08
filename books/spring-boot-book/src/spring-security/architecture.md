@@ -12,4 +12,5 @@ What happens when you make an authenticated request (basic authentication)?
 
 5. **SecurityContextHolder**: If successful, the token will be placed in the SecurityContextHolder.
 
-https://reflectoring.io/spring-security/
+[Spring Security without WebSecurityConfigurerAdapter](https://reflectoring.io/spring-security/)
+[How Spring Security Filter Chain works](https://stackoverflow.com/questions/41480102/how-spring-security-filter-chain-works)
