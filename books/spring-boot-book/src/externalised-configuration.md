@@ -2,6 +2,8 @@
 
 [Spring Boot's Reference on Externalized Configuration](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#features.external-config)
 
+Other refs: https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/
+
 There are 2 ways to do this:
 
 <!-- toc -->
