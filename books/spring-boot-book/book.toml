@@ -16,7 +16,7 @@ default-theme="frappé"
 preferred-dark-theme="frappé"
 
 [build]
-build-dir = "."
+build-dir = "./html"
 
 [preprocessor]
 
