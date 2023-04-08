@@ -2,13 +2,13 @@
 
 [Preface](./preface.md)
 
-- [Bean management](./bean_management.md)
-- [Externalised configuration](./externalised_configuration.md)
+- [Bean management](./bean-management.md)
+- [Externalised configuration](./externalised-configuration.md)
 - [Converters](./converters.md)
 - [Interceptors](./interceptors.md)
 - [Filters](./filters.md)
-- [HTTP client](./http_client.md)
-- [Cron job](./cron_job.md)
+- [HTTP client](./http-client.md)
+- [Cron job](./cron-job.md)
 - [Validation](./validation.md)
 - [Serialisation](./serialisation.md)
 - [Persistence](./persistence.md)
@@ -18,10 +18,10 @@
 - [Annotation processing]()
 - [Swagger]()
 - [Concepts](./concepts.md)
-    - [Application context](./concepts/application_context.md)
-    - [Web servlet](./concepts/web_servlet.md)
+    - [Application context](./concepts/application-context.md)
+    - [Web servlet](./concepts/web-servlet.md)
     - [Filter](./concepts/filter.md)
-- [Common starters](./common_starters.md)
+- [Common starters](./common-starters.md)
 - [Gotchas](./gotchas.md)
 ---
 
