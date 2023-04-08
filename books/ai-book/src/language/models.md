@@ -4,7 +4,8 @@
 
 | Year | Model                   | Arch            | Pretraining | Params     | Applications                              |
 | ---- | ----------------------- | --------------- | ----------- | ---------- | ----------------------------------------- |
-| 2023 | Cerebras-GPT                   | ?               | ?           | 13B           |                                           | 
+| 2023 | GPT4All                 | ?               | ?           |           |                                           |  
+|      | Cerebras-GPT                   | ?               | ?           | 13B           |                                           | 
 |      | GPT-4                   | ?               | ?           |            |                                           |
 |      | Alpaca                  | ?               | ?           |            | Instruction-following                     |
 |      | LLaMA                   | ?               | ?           | 7B,13B,65B | ?                                         |
