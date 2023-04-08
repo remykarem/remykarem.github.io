@@ -24,4 +24,8 @@
 - [Common starters](./common_starters.md)
 - [Gotchas](./gotchas.md)
 ---
-- [Spring Security](./spring_security.md)
+
+# Spring Security
+
+- [Security configuration](./spring-security/security-configuration.md)
+- [Architecture](./spring-security/architecture.md)
