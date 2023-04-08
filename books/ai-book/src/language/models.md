@@ -4,7 +4,8 @@
 
 | Year | Model                   | Arch            | Pretraining | Params     | Applications                              |
 | ---- | ----------------------- | --------------- | ----------- | ---------- | ----------------------------------------- |
-| 2023 | GPT-4                   | ?               | ?           |            |                                           |
+| 2023 | Cerebras-GPT                   | ?               | ?           | 13B           |                                           | 
+|      | GPT-4                   | ?               | ?           |            |                                           |
 |      | Alpaca                  | ?               | ?           |            | Instruction-following                     |
 |      | LLaMA                   | ?               | ?           | 7B,13B,65B | ?                                         |
 |      | OpenChatKit             | ?               | ?           | ?          | ?                                         |
@@ -19,6 +20,7 @@
 |      | PaLM [^palm]            | Decoder         | LM          | 62B,540B   | (general language tasks)                  |
 | 2021 | HTML                    | Encoder/Decoder | DAE         | 400M       | HTML prompting                            |
 |      | Gopher [^gopher]        | Decoder         | LM          | 280B       | General language modelling                |
+|      | GPT-J        | Decoder         | LM          | 6B       | General language modelling                | 
 | 2020 | GPT-3[^gpt3]            | Decoder         | LM          | 175B       | Code generation, audio generation         |
 |      | Big Bird                | Encoder         | MLM         | -          | Longer sequence                           |
 |      | ELECTRA                 | Encoder         | RTD         | 110M-330M  | Longer sequence                           |
@@ -44,6 +46,7 @@
 
 Encoder or Decoder refers to the Transformer encoder or decoder.
 
+Benchmarks: https://www.lunasec.io/docs/blog/cerebras-gpt-vs-llama-ai-model-comparison/
 ---
 
 [^gptneox]: [GPT-NeoX-20B: An Open-Source Autoregressive Language Model](https://arxiv.org/abs/2204.06745)
