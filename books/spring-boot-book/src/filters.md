@@ -2,6 +2,10 @@
 
 [https://stackoverflow.com/questions/19825946/how-can-i-add-a-filter-class-in-spring-boot](https://stackoverflow.com/questions/19825946/how-can-i-add-a-filter-class-in-spring-boot)
 
+```admonish note
+If the filter has something to do with authorisation and authentication, you might want to use **Spring Security** instead. Citation needed.
+```
+
 1. For any request (`@Component`)
     
     ```kotlin
