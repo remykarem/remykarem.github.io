@@ -109,7 +109,12 @@ Use when you cannot compute averages.
 
 ????????? use Jaccard similarity ????? (prof didn't explain properly)
 
-> ⚠️ Centroids must be datapoints
+Implementations:
+* [BanditPAM](https://github.com/motiwari/BanditPAM)
+
+```admonish warning
+Centroids must be datapoints
+```
 
 ## Quiz
 

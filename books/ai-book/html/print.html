@@ -3196,6 +3196,8 @@ Pointwise = 1x1 convolution</li>
 <li>Moses</li>
 <li>Whitespace</li>
 </ul>
+<h3 id="visualisation"><a class="header" href="#visualisation">Visualisation</a></h3>
+<p><a href="https://www.youtube.com/watch?v=HEikzVL-lZU">Byte Pair Encoding Tokenization by HuggingFace</a></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="representation"><a class="header" href="#representation">Representation</a></h1>
 <p>(Numerical representation)</p>
@@ -3970,22 +3972,26 @@ Score(“keyword”) = degree/frequency
 <h1 id="models-2"><a class="header" href="#models-2">Models</a></h1>
 <p>&quot;Foundation language models&quot; / PFM (Pretrained Foundation Models) / LLMs (Large Language Models)</p>
 <div class="table-wrapper"><table><thead><tr><th>Year</th><th>Model</th><th>Arch</th><th>Pretraining</th><th>Params</th><th>Applications</th></tr></thead><tbody>
-<tr><td>2023</td><td>GPT-4</td><td>?</td><td>?</td><td></td><td></td></tr>
-<tr><td></td><td>Alpaca</td><td>?</td><td>?</td><td></td><td>Instruction-following</td></tr>
-<tr><td></td><td>LLaMA</td><td>?</td><td>?</td><td>7B,13B,65B</td><td>?</td></tr>
+<tr><td>2023</td><td>Vicuna <sup class="footnote-reference"><a href="#vicuna">1</a></sup></td><td>?</td><td></td><td>7B,13B</td><td>Instruction-following</td></tr>
+<tr><td></td><td>GPT4All</td><td>?</td><td>?</td><td></td><td></td></tr>
+<tr><td></td><td>Cerebras-GPT</td><td>?</td><td>?</td><td>13B</td><td></td></tr>
+<tr><td></td><td>GPT-4</td><td>?</td><td>?</td><td></td><td></td></tr>
+<tr><td></td><td>Alpaca</td><td>?</td><td>?</td><td>7B,13B</td><td>Instruction-following</td></tr>
+<tr><td></td><td>LLaMA</td><td>?</td><td>?</td><td>7B,13B,65B</td><td>Instruction-following</td></tr>
 <tr><td></td><td>OpenChatKit</td><td>?</td><td>?</td><td>?</td><td>?</td></tr>
 <tr><td>2022</td><td>GPT-3.5</td><td>Decoder</td><td>LM</td><td>175B</td><td>Code generation, dialog</td></tr>
-<tr><td></td><td>GPT-NeoX-20B <sup class="footnote-reference"><a href="#gptneox">1</a></sup></td><td>?</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>GPT-NeoX-20B <sup class="footnote-reference"><a href="#gptneox">2</a></sup></td><td>?</td><td></td><td></td><td></td></tr>
 <tr><td></td><td>OPT</td><td>?</td><td></td><td></td><td></td></tr>
 <tr><td></td><td>LAMDA</td><td>Decoder</td><td>LM</td><td>137B</td><td>General language modelling</td></tr>
 <tr><td></td><td>ChatGPT</td><td>Decoder</td><td>LM</td><td>175B</td><td>Dialog</td></tr>
 <tr><td></td><td>BLOOM</td><td>Decoder</td><td>LM</td><td>176B</td><td>Code generation</td></tr>
 <tr><td></td><td>Minerva</td><td>Decoder</td><td>LM</td><td>540B</td><td>Mathematical reasoning</td></tr>
 <tr><td></td><td>Chinchilla</td><td>Decoder</td><td>LM</td><td>70B</td><td>Dialog</td></tr>
-<tr><td></td><td>PaLM <sup class="footnote-reference"><a href="#palm">2</a></sup></td><td>Decoder</td><td>LM</td><td>62B,540B</td><td>(general language tasks)</td></tr>
+<tr><td></td><td>PaLM <sup class="footnote-reference"><a href="#palm">3</a></sup></td><td>Decoder</td><td>LM</td><td>62B,540B</td><td>(general language tasks)</td></tr>
 <tr><td>2021</td><td>HTML</td><td>Encoder/Decoder</td><td>DAE</td><td>400M</td><td>HTML prompting</td></tr>
-<tr><td></td><td>Gopher <sup class="footnote-reference"><a href="#gopher">3</a></sup></td><td>Decoder</td><td>LM</td><td>280B</td><td>General language modelling</td></tr>
-<tr><td>2020</td><td>GPT-3<sup class="footnote-reference"><a href="#gpt3">4</a></sup></td><td>Decoder</td><td>LM</td><td>175B</td><td>Code generation, audio generation</td></tr>
+<tr><td></td><td>Gopher <sup class="footnote-reference"><a href="#gopher">4</a></sup></td><td>Decoder</td><td>LM</td><td>280B</td><td>General language modelling</td></tr>
+<tr><td></td><td>GPT-J</td><td>Decoder</td><td>LM</td><td>6B</td><td>General language modelling</td></tr>
+<tr><td>2020</td><td>GPT-3<sup class="footnote-reference"><a href="#gpt3">5</a></sup></td><td>Decoder</td><td>LM</td><td>175B</td><td>Code generation, audio generation</td></tr>
 <tr><td></td><td>Big Bird</td><td>Encoder</td><td>MLM</td><td>-</td><td>Longer sequence</td></tr>
 <tr><td></td><td>ELECTRA</td><td>Encoder</td><td>RTD</td><td>110M-330M</td><td>Longer sequence</td></tr>
 <tr><td></td><td>mBART</td><td>Encoder/Decoder</td><td>DAE</td><td>110M</td><td>Translation</td></tr>
@@ -4010,12 +4016,21 @@ Score(“keyword”) = degree/frequency
 </tbody></table>
 </div>
 <p>Encoder or Decoder refers to the Transformer encoder or decoder.</p>
-<hr />
-<div class="footnote-definition" id="gptneox"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://arxiv.org/abs/2204.06745">GPT-NeoX-20B: An Open-Source Autoregressive Language Model</a>
-<sup class="footnote-reference"><a href="#palm">2</a></sup>: <a href="https://arxiv.org/abs/2204.02311">PaLM: Scaling Language Modeling with Pathways</a>
-<sup class="footnote-reference"><a href="#gopher">3</a></sup>: <a href="https://arxiv.org/abs/2112.11446">Scaling Language Models: Methods, Analysis &amp; Insights from Training Gopher</a>
-<sup class="footnote-reference"><a href="#gpt3">4</a></sup>: <a href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a></p>
+<h2 id="benchmarks-httpswwwlunaseciodocsblogcerebras-gpt-vs-llama-ai-model-comparison"><a class="header" href="#benchmarks-httpswwwlunaseciodocsblogcerebras-gpt-vs-llama-ai-model-comparison">Benchmarks: https://www.lunasec.io/docs/blog/cerebras-gpt-vs-llama-ai-model-comparison/</a></h2>
+<div class="footnote-definition" id="vicuna"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://vicuna.lmsys.org/">Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90%* ChatGPT Quality</a></p>
+</div>
+<div class="footnote-definition" id="gptneox"><sup class="footnote-definition-label">2</sup>
+<p><a href="https://arxiv.org/abs/2204.06745">GPT-NeoX-20B: An Open-Source Autoregressive Language Model</a></p>
+</div>
+<div class="footnote-definition" id="palm"><sup class="footnote-definition-label">3</sup>
+<p><a href="https://arxiv.org/abs/2204.02311">PaLM: Scaling Language Modeling with Pathways</a></p>
+</div>
+<div class="footnote-definition" id="gopher"><sup class="footnote-definition-label">4</sup>
+<p><a href="https://arxiv.org/abs/2112.11446">Scaling Language Models: Methods, Analysis &amp; Insights from Training Gopher</a></p>
+</div>
+<div class="footnote-definition" id="gpt3"><sup class="footnote-definition-label">5</sup>
+<p><a href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a></p>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="prompting"><a class="header" href="#prompting">Prompting</a></h1>
@@ -4033,6 +4048,16 @@ Score(“keyword”) = degree/frequency
 <sup class="footnote-reference"><a href="#react">1</a></sup>: <a href="https://arxiv.org/abs/2210.03629">ReAct: Synergizing Reasoning and Acting in Language Models</a>
 <sup class="footnote-reference"><a href="#selfask">3</a></sup>: <a href="https://ofir.io/self-ask.pdf">Press et al 2022</a></p>
 </div>
+<h2 id="cot-strategies"><a class="header" href="#cot-strategies">CoT strategies</a></h2>
+<p>CoT strategies break down a problem into a series of intermediate reasoning steps.</p>
+<ul>
+<li>Few-shot CoT — generate a completion from a question-answer example</li>
+<li>Zero-shot CoT — generate a completion from the prompt &quot;Let's think step by step&quot;</li>
+<li>Self-consistency CoT — generate a completion after multiple completions</li>
+<li>Least-to-most — ?</li>
+<li>ReAct — generate a completion from a query, thought, action and observation.</li>
+</ul>
+<p>Ref: https://twitter.com/itakgol/status/1642586824487976961?s=12&amp;t=fQqGwE4MDdlVWz-E1KNjmw</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="digital-signal-processing"><a class="header" href="#digital-signal-processing">Digital signal processing</a></h1>
 <p>Terminologies</p>
@@ -4170,15 +4195,16 @@ Score(“keyword”) = degree/frequency
 <h1 id="models-6"><a class="header" href="#models-6">Models</a></h1>
 <p>Keywords: MLLM (Multimodal Large Language Model)</p>
 <div class="table-wrapper"><table><thead><tr><th>Year</th><th>Model</th><th>Modes</th><th>Architecture</th><th>Params</th></tr></thead><tbody>
-<tr><td>2023</td><td>PaLM-E <sup class="footnote-reference"><a href="#palme">1</a></sup></td><td>Vison + language + planning (robotic)</td><td></td><td>562B</td></tr>
-<tr><td></td><td>USM <sup class="footnote-reference"><a href="#usm">2</a></sup></td><td>Audio</td><td></td><td></td></tr>
-<tr><td></td><td>Kosmos-1 <sup class="footnote-reference"><a href="#kosmos1">3</a></sup></td><td>Vision + language</td><td></td><td></td></tr>
+<tr><td>2023</td><td>SAM <sup class="footnote-reference"><a href="#sam">1</a></sup></td><td>Vison + language</td><td></td><td>562B</td></tr>
+<tr><td></td><td>PaLM-E <sup class="footnote-reference"><a href="#palme">2</a></sup></td><td>Vison + language + planning (robotic)</td><td></td><td>562B</td></tr>
+<tr><td></td><td>USM <sup class="footnote-reference"><a href="#usm">3</a></sup></td><td>Audio</td><td></td><td></td></tr>
+<tr><td></td><td>Kosmos-1 <sup class="footnote-reference"><a href="#kosmos1">4</a></sup></td><td>Vision + language</td><td></td><td></td></tr>
 <tr><td></td><td>Flamingo</td><td></td><td></td><td></td></tr>
 <tr><td></td><td>PaLI</td><td></td><td></td><td></td></tr>
 <tr><td>2022</td><td>DALL•E 2</td><td>Vision + text</td><td>Transformer</td><td></td></tr>
 <tr><td>2022</td><td>Stable Diffusion</td><td>Vision + text</td><td></td><td></td></tr>
 <tr><td>2021</td><td>DALL•E</td><td>Vision + language</td><td>Transformer</td><td></td></tr>
-<tr><td></td><td>CLIP <sup class="footnote-reference"><a href="#clip">4</a></sup></td><td>Vision + language</td><td>Transformer</td><td></td></tr>
+<tr><td></td><td>CLIP <sup class="footnote-reference"><a href="#clip">5</a></sup></td><td>Vision + language</td><td>Transformer</td><td></td></tr>
 <tr><td></td><td>Stable Diffusion</td><td>Vision + language</td><td></td><td></td></tr>
 <tr><td></td><td>DALL•E</td><td>Vision + text</td><td>Transformer</td><td></td></tr>
 <tr><td>?</td><td>GPT-3</td><td>Vision + language</td><td>Transformer</td><td></td></tr>
@@ -4186,16 +4212,19 @@ Score(“keyword”) = degree/frequency
 <tr><td>2016</td><td>Show and Tell</td><td>Vision + text</td><td></td><td></td></tr>
 </tbody></table>
 </div>
-<div class="footnote-definition" id="palme"><sup class="footnote-definition-label">1</sup>
+<div class="footnote-definition" id="sam"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://segment-anything.com/">Segment Anything Model</a></p>
+</div>
+<div class="footnote-definition" id="palme"><sup class="footnote-definition-label">2</sup>
 <p><a href="https://palm-e.github.io/">PaLM-E: An Embodied Multimodal Language Model</a></p>
 </div>
-<div class="footnote-definition" id="usm"><sup class="footnote-definition-label">2</sup>
+<div class="footnote-definition" id="usm"><sup class="footnote-definition-label">3</sup>
 <p><a href="https://arxiv.org/abs/2303.01037">Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages</a></p>
 </div>
-<div class="footnote-definition" id="kosmos1"><sup class="footnote-definition-label">3</sup>
+<div class="footnote-definition" id="kosmos1"><sup class="footnote-definition-label">4</sup>
 <p><a href="https://arxiv.org/abs/230214045">Language Is Not All You Need: Aligning Perception with Language Models</a></p>
 </div>
-<div class="footnote-definition" id="clip"><sup class="footnote-definition-label">4</sup>
+<div class="footnote-definition" id="clip"><sup class="footnote-definition-label">5</sup>
 <p><a href="https://openai.com/blog/clip/">CLIP</a></p>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
@@ -5841,9 +5870,19 @@ plt.show()
 <h3 id="k-medoids"><a class="header" href="#k-medoids">k-medoids</a></h3>
 <p>Use when you cannot compute averages.</p>
 <p>????????? use Jaccard similarity ????? (prof didn't explain properly)</p>
-<blockquote>
-<p>⚠️ Centroids must be datapoints</p>
-</blockquote>
+<p>Implementations:</p>
+<ul>
+<li><a href="https://github.com/motiwari/BanditPAM">BanditPAM</a></li>
+</ul>
+<div id="admonition-warning" class="admonition warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="k-means.html#admonition-warning"></a></p>
+</div>
+<div>
+<p>Centroids must be datapoints</p>
+</div>
+</div>
 <h2 id="quiz-1"><a class="header" href="#quiz-1">Quiz</a></h2>
 <p><img src="./k-means-05.png" alt="QUiz" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
@@ -6075,7 +6114,7 @@ Two types of misclassifications are tolerated by SVM under soft margin:
 </ul>
 </li>
 </ul>
-<h2 id="visualisation"><a class="header" href="#visualisation">Visualisation</a></h2>
+<h2 id="visualisation-1"><a class="header" href="#visualisation-1">Visualisation</a></h2>
 <p><a href="https://dash.gallery/dash-svm/">https://dash.gallery/dash-svm/</a></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="t-sne"><a class="header" href="#t-sne">t-SNE</a></h1>

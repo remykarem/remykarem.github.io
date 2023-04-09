@@ -4,7 +4,8 @@ Keywords: MLLM (Multimodal Large Language Model)
 
 | Year | Model              | Modes                                 | Architecture | Params |
 | ---- | ------------------ | ------------------------------------- | ------------ | ------ |
-| 2023 | PaLM-E [^palme]    | Vison + language + planning (robotic) |              | 562B   |
+| 2023 | SAM [^sam]    | Vison + language |              | 562B   |
+|  | PaLM-E [^palme]    | Vison + language + planning (robotic) |              | 562B   |
 |      | USM [^usm]         | Audio                                    |              |        |
 |      | Kosmos-1 [^kosmos1] | Vision + language                                       |              |        |
 |      | Flamingo           |                                       |              |        |
@@ -18,6 +19,8 @@ Keywords: MLLM (Multimodal Large Language Model)
 | ?    | GPT-3              | Vision + language                     | Transformer  |        |
 | ?    | GPT                | Vision + language                     | Transformer  |        |
 | 2016 | Show and Tell      | Vision + text                         |
+
+[^sam]: [Segment Anything Model](https://segment-anything.com/)
 
 [^palme]: [PaLM-E: An Embodied Multimodal Language Model](https://palm-e.github.io/)
 
