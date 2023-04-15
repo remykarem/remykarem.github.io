@@ -1,0 +1,37 @@
+[book]
+authors = ["Raimi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "AGI Book"
+
+[output.html]
+site-url = "/books/agi-book/html"  # because KaTeX builds go here
+mathjax-support = true
+git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
+additional-css = ["././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
+default-theme = "frappé"
+preferred-dark-theme = "macchiato"
+
+[build]
+build-dir = "./html"  # because KaTeX builds go here -.-
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+# [preprocessor.last-changed]
+# command = "mdbook-last-changed"
+# renderer = ["html"]
+
+[output.katex]
+
+[preprocessor.katex]
+renderers = ["html"]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "2.0.0" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.catppuccin]
+assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`

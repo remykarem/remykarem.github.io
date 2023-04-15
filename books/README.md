@@ -15,13 +15,13 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
 
 ## Creating a new book
 
-1. Go into `books/src`.
+1. Go into `books`.
 
-2. Create a folder `your-book` and `cd` into it.
+2. Create a folder `books/your-book` and `cd` into it.
 
 3. Run `mdbook init`.
 
-4. Update the `books/src/your-book/book.toml` file with:
+4. Update the `books/your-book/book.toml` file with:
 
     ```toml
     [book]
@@ -40,7 +40,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     preferred-dark-theme = "macchiato"
 
     [build]
-    build-dir = "."  # because KaTeX builds go here -.-
+    build-dir = "./html"  # for nonmath books, use "."
 
     [preprocessor.toc]
     command = "mdbook-toc"
@@ -74,3 +74,5 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     mdbook-admonish install
     mdbook-catppuccin install
     ```
+
+7. Update `books/index.html`.
