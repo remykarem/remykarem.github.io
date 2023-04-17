@@ -11,6 +11,12 @@
 
 ---
 
+[nanoGPT](https://www.youtube.com/watch?v=kCc8FmEb1nY&t=3s)
+
+[Top AI reads](https://github.com/sw-yx/ai-notes/tree/main#top-ai-reads)
+
+[LLM Introduction](https://gist.github.com/rain-1/eebd5e5eb2784feecf450324e3341c8d)
+
 [http://nlpprogress.com/](http://nlpprogress.com/)
 
 The field of designing methods and algorithms that take as input or produce as output unstructured human language.
