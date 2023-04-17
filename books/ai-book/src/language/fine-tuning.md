@@ -20,6 +20,8 @@
 
 * RLHF (Reinforcement Learning from Human Feedback)
 
+* RLAIF (RL from AI Feedback) [Paper](https://arxiv.org/abs/2212.08073)
+
 ---
 
 [^instructgpt]: [Training language models to follow instructions with human feedback](https://arxiv.org/pdf/2203.02155.pdf)
