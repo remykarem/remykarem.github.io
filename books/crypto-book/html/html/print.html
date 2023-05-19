@@ -1,0 +1,1230 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js macchiato">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>crypto-book</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="last-changed.css">
+        <link rel="stylesheet" href="././mdbook-admonish.css">
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-highlight.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "macchiato";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('macchiato')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="hash_functions.html"><strong aria-hidden="true">2.</strong> Hash functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="md5.html"><strong aria-hidden="true">2.1.</strong> MD5</a></li><li class="chapter-item expanded "><a href="sha.html"><strong aria-hidden="true">2.2.</strong> SHA</a></li></ol></li><li class="chapter-item expanded "><a href="keyed_hash_functions.html"><strong aria-hidden="true">3.</strong> MAC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="mac/hmac.html"><strong aria-hidden="true">3.1.</strong> HMAC</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> SipHash</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Poly1305</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Random number generator functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Traditional ciphers</div></li><li class="chapter-item expanded "><a href="ciphers.html"><strong aria-hidden="true">6.</strong> Block ciphers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="aes.html"><strong aria-hidden="true">6.1.</strong> AES</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> AEAD</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> ChaCha20-Poly1305</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> Threefish</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> DES</div></li></ol></li><li class="chapter-item expanded "><a href="digital_signature.html"><strong aria-hidden="true">7.</strong> Digital signature algorithms</a></li><li class="chapter-item expanded "><a href="public_key_cryptosystem.html"><strong aria-hidden="true">8.</strong> Public-key cryptosystem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="dsa.html"><strong aria-hidden="true">8.1.</strong> DSA</a></li><li class="chapter-item expanded "><a href="rsa.html"><strong aria-hidden="true">8.2.</strong> RSA</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rsa_encryption_schemes.html"><strong aria-hidden="true">8.2.1.</strong> Encryption algorithms</a></li><li class="chapter-item expanded "><a href="rsa_digital_signature_schemes.html"><strong aria-hidden="true">8.2.2.</strong> Digital signature algorithms</a></li><li class="chapter-item expanded "><a href="rsa_key_exchange.html"><strong aria-hidden="true">8.2.3.</strong> Key exchange algorithms</a></li></ol></li><li class="chapter-item expanded "><a href="ecc.html"><strong aria-hidden="true">8.3.</strong> ECC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ecc_encryption_algorithms.html"><strong aria-hidden="true">8.3.1.</strong> Encryption algorithms</a></li><li class="chapter-item expanded "><a href="ecc_digital_signature_schemes.html"><strong aria-hidden="true">8.3.2.</strong> Digital signature algorithms</a></li><li class="chapter-item expanded "><a href="ecc_key_exchange.html"><strong aria-hidden="true">8.3.3.</strong> Key exchange algorithms</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.4.</strong> ElGamal</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Hybrid cryptosystem</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> PGP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> GPG</div></li></ol></li><li class="chapter-item expanded "><a href="kdf.html"><strong aria-hidden="true">10.</strong> KDF</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">10.1.</strong> Bcrypt</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.2.</strong> Scrypt</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.3.</strong> Argon</div></li></ol></li><li class="chapter-item expanded "><a href="key_exchange.html"><strong aria-hidden="true">11.</strong> Key exchange</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="diffie_hellman.html"><strong aria-hidden="true">11.1.</strong> DH</a></li></ol></li><li class="chapter-item expanded "><a href="padding.html"><strong aria-hidden="true">12.</strong> Padding</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> Encodings</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">13.1.</strong> Text-based</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="pem.html"><strong aria-hidden="true">13.1.1.</strong> PEM</a></li><li class="chapter-item expanded "><a href="jwt.html"><strong aria-hidden="true">13.1.2.</strong> JWT</a></li><li class="chapter-item expanded "><a href="jwk.html"><strong aria-hidden="true">13.1.3.</strong> JWKS</a></li><li class="chapter-item expanded "><a href="ssh2.html"><strong aria-hidden="true">13.1.4.</strong> SSH2</a></li><li class="chapter-item expanded "><a href="openssh.html"><strong aria-hidden="true">13.1.5.</strong> OpenSSH</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.1.6.</strong> P7B/PKCS #7</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.2.</strong> Binary-based</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="der.html"><strong aria-hidden="true">13.2.1.</strong> DER</a></li><li class="chapter-item expanded "><a href="p12-pfx.html"><strong aria-hidden="true">13.2.2.</strong> .p12/PFX/PKCS #12</a></li><li class="chapter-item expanded "><a href="jks.html"><strong aria-hidden="true">13.2.3.</strong> JKS</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="structured_container_formats.html"><strong aria-hidden="true">14.</strong> Formats</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ecprivatekey.html"><strong aria-hidden="true">14.1.</strong> ECPrivateKey</a></li><li class="chapter-item expanded "><a href="pkcs1.html"><strong aria-hidden="true">14.2.</strong> PKCS #1 (RSA)</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.3.</strong> PKCS #7</div></li><li class="chapter-item expanded "><a href="pkcs8.html"><strong aria-hidden="true">14.4.</strong> PKCS #8</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.5.</strong> PKCS #11</div></li><li class="chapter-item expanded "><a href="pkcs12.html"><strong aria-hidden="true">14.6.</strong> PKCS #12</a></li><li class="chapter-item expanded "><a href="x509.html"><strong aria-hidden="true">14.7.</strong> X.509</a></li></ol></li><li class="chapter-item expanded "><a href="standards.html"><strong aria-hidden="true">15.</strong> Other standards</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="rand.html"><strong aria-hidden="true">16.</strong> Secure random bytes</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.</strong> Keys</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">17.1.</strong> RSA</a></li><li class="chapter-item expanded "><a href="keys/ecc.html"><strong aria-hidden="true">17.2.</strong> ECC</a></li><li class="chapter-item expanded "><a href="keys/ssh.html"><strong aria-hidden="true">17.3.</strong> SSH</a></li></ol></li><li class="chapter-item expanded "><a href="ciphertext.html"><strong aria-hidden="true">18.</strong> Encryption algorithms</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">19.</strong> Digital signature algorithms</div></li><li class="chapter-item expanded "><a href="checksum.html"><strong aria-hidden="true">20.</strong> Checksum</a></li><li class="chapter-item expanded "><a href="fingerprint.html"><strong aria-hidden="true">21.</strong> Fingerprint</a></li><li class="chapter-item expanded "><a href="hmac.html"><strong aria-hidden="true">22.</strong> HMAC</a></li><li class="chapter-item expanded "><a href="digital_certificate.html"><strong aria-hidden="true">23.</strong> Digital certificate</a></li><li class="chapter-item expanded "><a href="utils.html"><strong aria-hidden="true">24.</strong> Utils</a></li><li class="chapter-item expanded "><a href="pkcs12-stuff.html"><strong aria-hidden="true">25.</strong> PKCS #12</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Attacks</li><li class="chapter-item expanded "><div><strong aria-hidden="true">26.</strong> Brute-force attack</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">27.</strong> Length extension attack</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">crypto-book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/remykarem/remykarem.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="preface"><a class="header" href="#preface">Preface</a></h1>
+<p><a href="https://cryptobook.nakov.com/">https://cryptobook.nakov.com</a></p>
+<p><a href="https://connect2id.com/products/nimbus-jose-jwt/examples">https://connect2id.com/products/nimbus-jose-jwt/examples</a></p>
+<p>https://developers.google.com/tink/deterministic-encryption</p>
+<h1 id="implementations"><a class="header" href="#implementations">Implementations</a></h1>
+<ul>
+<li>OpenSSL 1.x</li>
+<li>OpenSSL 3.x</li>
+<li>LibreSSL (macOS) - <code>/usr/bin/openssl</code></li>
+</ul>
+<h1 id="scenarios"><a class="header" href="#scenarios">Scenarios</a></h1>
+<ul>
+<li>
+<p>Only encrypting the HTTP payload (&quot;confidentiality&quot;)</p>
+<p>An attacker might not be able to read the data in transit. But they may be able to flip bits without detection. A GET can be changed to PUT by flipping bits, without interfering with the ciphertext.</p>
+</li>
+<li>
+<p>Only appending a checksum (&quot;data integrity&quot;)</p>
+<p>An attacker can generate a correct sum.</p>
+</li>
+</ul>
+<h1 id="goals"><a class="header" href="#goals">Goals</a></h1>
+<p>Typically, you want to make sure that the <em>data</em> you receive:</p>
+<ol>
+<li>came from a known source (<strong>authenticity</strong>)</li>
+<li>was not altered during transmission (<strong>integrity</strong>)</li>
+<li>(optional) not understood by anyone during the transmission (<strong>confidential</strong>)</li>
+</ol>
+<p>You also want to make sure that <em>attackers</em>:</p>
+<ol>
+<li>cannot reuse any submitted proofs (<strong>resistance to replay attack</strong>)</li>
+<li>cannot find any pattern from the encryption (<strong>high entropy</strong>, dependent on the encryption algorithm)</li>
+</ol>
+<p>You also want to make sure that the <em>sender</em>:</p>
+<ol>
+<li>cannot deny sending the information or deny the authenticity of the signature (<strong>non-repudiation</strong>). This can be achieved by the concept of a unique key not meant to be shared (<strong>private key</strong>).</li>
+</ol>
+<p>Based on these requirements, here is an example infrastructure:</p>
+<ul>
+<li>There are 2 sets of keys:
+<ul>
+<li>For encryption - sender has the public key X, receiver has a private key Y.</li>
+<li>For signing - sender has the private key A, receiver has a public key B.</li>
+</ul>
+</li>
+<li>Sender encrypts payload (confidentiality, authenticity) with the public key X.</li>
+<li>Sender signs payload together with current timestamp (resistance to replay attack) with private key A.</li>
+</ul>
+<p>Definitions:</p>
+<ul>
+<li>
+<p><strong>Integrity</strong> — proof that the item is not altered</p>
+</li>
+<li>
+<p><strong>Confidentiality/privacy/secrecy</strong> — no one can read (and understand) the message in the item</p>
+</li>
+<li>
+<p><strong>Authenticity/authentication</strong> — proof that the item comes from a known source</p>
+</li>
+<li>
+<p><strong>Non-repudiation</strong> — the signer cannot deny that they signed. Stronger property that not only provides authenticity but also prevents the sender from denying they sent the message.</p>
+</li>
+<li>
+<p>Randomisation - if there is content encryption, will the same plaintext yield different ciphertexts?</p>
+</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Confusion_and_diffusion">https://en.wikipedia.org/wiki/Confusion_and_diffusion</a></p>
+<p>Authenticity proofs</p>
+<div class="table-wrapper"><table><thead><tr><th>Ting</th><th>Authenticity</th></tr></thead><tbody>
+<tr><td>Digital certificate</td><td>✅</td></tr>
+</tbody></table>
+</div>
+<p>Proofs / signatures / proof of integrity</p>
+<div class="table-wrapper"><table><thead><tr><th>Ting</th><th>Integrity</th><th>Authenticity</th><th>Nonrepudiation</th><th>Output randomness</th></tr></thead><tbody>
+<tr><td>Checksum</td><td>✅</td><td>❌</td><td>❌</td><td>Deterministic</td></tr>
+<tr><td>MAC</td><td>✅</td><td>✅</td><td>❌</td><td>Deterministic</td></tr>
+<tr><td>HMAC</td><td>✅</td><td>✅</td><td>❌</td><td>Deterministic</td></tr>
+<tr><td>Digital signature</td><td>✅</td><td>✅</td><td>✅</td><td>Random</td></tr>
+</tbody></table>
+</div>
+<p>Encryption</p>
+<div class="table-wrapper"><table><thead><tr><th>Ting</th><th>Confidentiality</th><th>Authenticity</th><th>Integrity</th><th>Nonrepudiation</th><th>Output randomness</th></tr></thead><tbody>
+<tr><td>Deterministic AEAD</td><td>✅</td><td>✅</td><td>-</td><td>?</td><td>Deterministic</td></tr>
+<tr><td>AEAD ciphertext</td><td>✅</td><td>✅</td><td>-</td><td>?</td><td>Random</td></tr>
+<tr><td>Basic AES ciphertext</td><td>✅</td><td>?</td><td>-</td><td>?</td><td>Random</td></tr>
+<tr><td>Public-key ciphertext</td><td>✅</td><td>✅</td><td>-</td><td>?</td><td>Random</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="hash-functions"><a class="header" href="#hash-functions">Hash functions</a></h1>
+<p>aka &quot;hash function&quot;, &quot;hashing algorithm&quot;, &quot;message digest algorithm&quot;</p>
+<pre><code>message -&gt; digest
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="md5"><a class="header" href="#md5">MD5</a></h1>
+<p>Digest size: 128 bits (16 bytes)</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="sha"><a class="header" href="#sha">SHA</a></h1>
+<div class="table-wrapper"><table><thead><tr><th>Hash function</th><th>Digest size</th><th>Names</th><th>Remarks</th></tr></thead><tbody>
+<tr><td>SHA-1</td><td>160 bits</td><td>SHA-1</td><td>⚠️ broken</td></tr>
+<tr><td>SHA-2 family</td><td>224/256/384/512 bits</td><td>SHA-224, SHA-256, SHA-384, SHA-512</td><td></td></tr>
+<tr><td>SHA-3 family (&quot;Keccak&quot;)</td><td>224/256/384/512 bits</td><td>SHA3-224, SHA3-256, SHA3-384, SHA3-512</td><td></td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="mac"><a class="header" href="#mac">MAC</a></h1>
+<p>A <strong>keyed hash function</strong> (aka MAC algorithm) is a hash function that takes in a key and a message to produce a digest called <strong>message authentication code</strong> (MAC). </p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.03588em;">ey</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">ess</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">e</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ma</span><span class="mord mathnormal">c</span></span></span></span></span></p>
+<p>There are different types of MAC algorithms:</p>
+<ul>
+<li>HMAC - hash-based MAC eg. HMAC-SHA256</li>
+<li>CMAC- cipher-based MAC</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="hmac"><a class="header" href="#hmac">HMAC</a></h1>
+<p>Deterministic!</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.03588em;">ey</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">ess</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ha</span><span class="mord mathnormal">s</span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">u</span><span class="mord mathnormal">n</span><span class="mord mathnormal">c</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ma</span><span class="mord mathnormal">c</span></span></span></span></span></p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="block-ciphers"><a class="header" href="#block-ciphers">Block ciphers</a></h1>
+<p>A <em>deterministic</em> symmetric encryption algorithm operating on blocks</p>
+<pre><code>(plaintext, key) -&gt; ciphertext
+
+(ciphertext, key) -&gt; plaintext
+</code></pre>
+<hr />
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="ciphers.html#admonition-note"></a></p>
+</div>
+<div>
+<p>A <strong>block</strong> is a fixed-length group of <em>bits</em></p>
+</div>
+</div>
+<p>Block ciphers can operate in a <em>mode of operation</em>. This involves <em>repeated</em> XOR-ing a block etc. to achieve confidentiality and authentication. Involves some initial randomness (IV). Here are some:</p>
+<ul>
+<li>Confidentiality + Authentication
+<ul>
+<li>GCM</li>
+<li>EAX</li>
+</ul>
+</li>
+<li>Confidentiality
+<ul>
+<li>CBC — each block depends on the proper encryption block before it</li>
+<li>ECB</li>
+<li>CFB</li>
+<li>CTR</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="aes"><a class="header" href="#aes">AES</a></h1>
+<p>AES is a block cipher that operates on <strong>blocks of 128 bits (16 bytes)</strong>. It breaks the plaintext into similar size blocks.</p>
+<p>The shared keys can be of length 128, 192 or 256 bits.</p>
+<p>An <strong>initialisation vector</strong> (IV) is used to ensure that the same plaintext will not always get encrypted to the same ciphertext. The IV is needed when decrypting the ciphertext.</p>
+<p>A <strong>mode</strong> or <strong>encyrption mode</strong> is the algorithm used to encrypt data which has more than 1 block. It defines how you encrypt or re-encrypt every small block, etc.</p>
+<ul>
+<li>ECB</li>
+<li>CBC</li>
+<li>CFB</li>
+<li>OFB</li>
+<li>CTR</li>
+</ul>
+<pre><code class="language-txt">AES-128-CBC 
+ ^   ^   ^
+ |   |   |
+alg key mode
+  length
+</code></pre>
+<p>Finally, the ciphertext will include the initialisation vector and ciphertext.</p>
+<p>Note that some modes allow partial decryption, like the CTR.</p>
+<p>Resources:</p>
+<ul>
+<li><a href="https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97">https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97</a></li>
+<li><a href="https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/">https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="digital-signature"><a class="header" href="#digital-signature">Digital signature</a></h1>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="digital_signature.html#admonition-note"></a></p>
+</div>
+<div>
+<p>Typically we say <em>sign</em> with the private key and <em>verify</em> with the public key instead of &quot;encrypt&quot; and &quot;decrypt&quot; respectively.</p>
+</div>
+</div>
+<p>Signing usually involves a hash function and padding.</p>
+<ul>
+<li>RSA
+<ul>
+<li>PKCS1-v1.5</li>
+<li>PSS</li>
+</ul>
+</li>
+<li>ECDSA</li>
+<li>Ed25519</li>
+<li>JWS</li>
+<li>AWS Sigv4</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="public-key-cryptosystem"><a class="header" href="#public-key-cryptosystem">Public-key cryptosystem</a></h1>
+<ul>
+<li>Has an encyrption algorithm</li>
+<li>Has a digital signature algorithm</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="dsa"><a class="header" href="#dsa">DSA</a></h1>
+<p>1st-gen.</p>
+<p>An old US govt algorithm.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="rsa"><a class="header" href="#rsa">RSA</a></h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc8017">RFC 8017</a></p>
+<p>Rivest-Shamir-Adleman; 1995; 1st-gen cryptosystem.</p>
+<p>Breaking RSA is an <em>integer factorisation</em> problem.</p>
+<p>RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>: one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf">here</a>.</p>
+<p>For PKCS1 v1.5, the message to encrypt should be <strong>no longer than the public modulus minus 11 bytes</strong>. <a href="http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15">http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15</a>.</p>
+<ul>
+<li>secret exponent: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span></li>
+<li>key exponent: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span></li>
+<li>modulus: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></li>
+<li>message: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span></li>
+<li>cipher: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mclose">)</span></span></span></span></span></p>
+<h2 id="important-concepts"><a class="header" href="#important-concepts">Important concepts</a></h2>
+<ul>
+<li>Modular arithmetic</li>
+<li><a href="https://en.wikipedia.org/wiki/Euler%27s_theorem">Euler's theorem</a></li>
+<li>Prime numbers and co-primes</li>
+<li>Prime factorisation</li>
+<li>Euler's totient function</li>
+<li>Multiplicative modulo inverse</li>
+<li>Chinese remainder theorem</li>
+</ul>
+<h2 id="trapdoor-functions"><a class="header" href="#trapdoor-functions">Trapdoor function(s)</a></h2>
+<ul>
+<li>Product of two large prime numbers</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">pq</span></span></span></span></span></p>
+<ul>
+<li>Euler's totient function, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>.</li>
+</ul>
+<h2 id="main-idea"><a class="header" href="#main-idea">Main idea</a></h2>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1491em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">d</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span></p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="rsa.html#admonition-note"></a></p>
+</div>
+<div>
+<p>While the encryption-decryption symmetry exists between <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span>, this symmetry does not extend to most cryptosystems.</p>
+</div>
+</div>
+<h2 id="how-it-works"><a class="header" href="#how-it-works">How it works</a></h2>
+<p><img src="rsa.png" alt="How RSA works" /></p>
+<div id="admonition-homomorphism" class="admonition tip">
+<div class="admonition-title">
+<p>Homomorphism</p>
+<p><a class="admonition-anchor-link" href="rsa.html#admonition-homomorphism"></a></p>
+</div>
+<div>
+<p>RSA is multiplicative homomorphic, i.e.</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9614em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9614em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+</div>
+</div>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<ul>
+<li><a href="https://people.csail.mit.edu/rivest/Rsapaper.pdf">RSA paper</a></li>
+<li><a href="https://leimao.github.io/article/RSA-Algorithm/">RSA Algorithm</a></li>
+<li><a href="https://exploringnumbertheory.wordpress.com/2015/11/16/speeding-up-modular-exponentiation-using-crt/">Speeding up modular exponentiation using CRT</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="encryption-schemes"><a class="header" href="#encryption-schemes">Encryption schemes</a></h1>
+<p>There are 2 main encryption schemes (as seen <a href="https://en.wikipedia.org/wiki/PKCS_1#Schemes">here</a>):</p>
+<ul>
+<li>RSAES-OAEP</li>
+<li>RSAES-PKCS1-v1_5 (old)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="digital-signature-schemes"><a class="header" href="#digital-signature-schemes">Digital signature schemes</a></h1>
+<p>There are 2 main encryption schemes (as seen <a href="https://en.wikipedia.org/wiki/PKCS_1#Schemes">here</a>):</p>
+<ul>
+<li>RSASSA-PSS</li>
+<li>RSASSA-PKCS1-v1_5 (old)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="key-exchange"><a class="header" href="#key-exchange">Key exchange</a></h1>
+<p>Can be used for key exchange. Client creates a secrets key and encrypts it with piblic key using one of the encryption algorithms. Server decrypts. </p>
+<p>Example of such key exchange is in SSH RSA.</p>
+<h2 id="rsa-key-exchange-for-ssh"><a class="header" href="#rsa-key-exchange-for-ssh">RSA key exchange for SSH</a></h2>
+<p>m = random bytes
+c = (m^e mod n) (from client) rsaes-oaep
+m = (c^d mod n) (what server gets)
+m is the secret key</p>
+<ul>
+<li>client and server each computes h:
+h = hash(m, pubkey, …) (nneded for future ssh session)
+encrypteddata = m(plaintext)</li>
+</ul>
+<h2 id="rsa--diffie-hellman"><a class="header" href="#rsa--diffie-hellman">RSA + Diffie-Hellman</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="ecc"><a class="header" href="#ecc">ECC</a></h1>
+<p>2nd-gen cryptosystem.</p>
+<p>Breaking ECC is an <em>elliptic curve discrete logarithm</em> problem.</p>
+<p>Note that unlike RSA, ECC does not inherently have an encryption algorithm. Instead, it is mainly used to establish a shared secret key that can be used for symmetric encryption.</p>
+<h2 id="important-concepts-1"><a class="header" href="#important-concepts-1">Important concepts</a></h2>
+<ul>
+<li>
+<p>Elliptic curve over an infinite field vs. Galois field and its properties</p>
+<ul>
+<li>Order of the curve - an EC finite field has a finite set of (valid) <em>n</em> points</li>
+<li>Galois field/Finite field (defined by modulo) - an EC finite field has a finite set of (valid) <em>n</em> points (&quot;order of the curve&quot;). The field is usually a prime number.</li>
+<li>Elliptic curve point multiplication / scalar multiplication</li>
+<li>Subgroup - a point P in a finite field can have a fixed number of valid points when multiplied with any integer.</li>
+<li>Point addition</li>
+<li>Point multiplication / scalar multiplication</li>
+<li>Group - a point P in a finite field can have a fixed number of valid points (&quot;<strong>order of the group</strong>&quot;) when multiplied with any integer. these points make up a group</li>
+<li>Point of infinity</li>
+<li>Cofactor - Order of the curve / order of a group</li>
+</ul>
+<p>Find <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> such that</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7144em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">16</span></span></span></span></span></p>
+</li>
+<li>
+<p>Discrete logarithm problem</p>
+<p>Find <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> such that</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7144em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal">d</span><span class="mord">17</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">16</span></span></span></span></span></p>
+</li>
+<li>
+<p>Characteristic of a ring</p>
+</li>
+<li>
+<p>Modular arithmetic: square root modulo (of prime number)</p>
+</li>
+<li>
+<p>Prime numbers</p>
+</li>
+<li>
+<p>Discrete logarithm</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Group_(mathematics)">Group theory</a>, group law for elliptic curves</p>
+</li>
+</ul>
+<h2 id="main-idea-1"><a class="header" href="#main-idea-1">Main idea</a></h2>
+<ul>
+<li>G - generator point / base point defined by the creator of the curve</li>
+<li>d - <strong>private key</strong>; scalar value</li>
+<li>(x,y) = dG - <strong>public key</strong>; a point on the curve</li>
+</ul>
+<p>(No inherent encryption)</p>
+<ul>
+<li>To encrypt a message using ECC, the sender chooses a random scalar k and uses the recipient's public key P to derive a point Q on the curve: Q = kP. The sender then uses the x-coordinate of Q as a shared secret to encrypt the message. The encryption process is typically performed using a symmetric encryption algorithm such as AES.</li>
+<li>Decryption: To decrypt a message using ECC, the recipient uses their private key d to derive the point Q on the curve that was used to generate the shared secret: Q = dP. The recipient can then use the x-coordinate of Q to decrypt the message.</li>
+</ul>
+<h2 id="trapdoor-function"><a class="header" href="#trapdoor-function">Trapdoor function</a></h2>
+<p>Scalar multiplication of a point on an EC over a prime field.</p>
+<p>Finding the reverse of this is the discrete logarithm problem (which I have yet to figure out how to arrive at that).</p>
+<h2 id="common-curves"><a class="header" href="#common-curves">Common curves</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Curve name</th><th>Form</th><th>Prime field, p</th></tr></thead><tbody>
+<tr><td><a href="https://en.wikipedia.org/wiki/Curve25519">Curve25519</a></td><td>Montgomery</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">255</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">19</span></span></span></span></td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/EdDSA#Ed25519">Ed25519</a></td><td>Twisted Edwards</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">255</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">19</span></span></span></span></td></tr>
+<tr><td>NIST P-256</td><td>Weierstrass</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">256</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">224</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">192</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">96</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></td></tr>
+<tr><td>NIST P-384</td><td>Weierstrass</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">384</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">128</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">96</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">32</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></td></tr>
+<tr><td>secp256k1</td><td>Weierstrass</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">256</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">32</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">977</span></span></span></span></td></tr>
+<tr><td>Ed448-Goldilocks</td><td>Edwards</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">448</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">224</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></td></tr>
+</tbody></table>
+</div>
+<h2 id="elliptic-curve-forms"><a class="header" href="#elliptic-curve-forms">Elliptic curve forms</a></h2>
+<ul>
+<li>
+<p>Weierstrass form</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0585em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9474em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span></p>
+</li>
+<li>
+<p>Montgomery form</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0585em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">b</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9474em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9474em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span></span></p>
+</li>
+<li>
+<p>Edwards form</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9474em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0585em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0585em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
+</li>
+<li>
+<p>Twisted Edwards form</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9474em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0585em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0585em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
+</li>
+</ul>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li><a href="https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/">Elliptic Curve Cryptography: a gentle introduction</a></li>
+<li>https://trustica.cz/category/ecc/page/3/</li>
+<li><a href="https://safecurves.cr.yp.to/">SafeCurves</a></li>
+<li><a href="https://andrea.corbellini.name/ecc/interactive/reals-add.html">Elliptic Curve tool</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="encryption-algorithms"><a class="header" href="#encryption-algorithms">Encryption algorithms</a></h1>
+<p><a href="https://andrea.corbellini.name/2023/01/02/ec-encryption/">Can we encrypt data using Elliptic Curves?</a></p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="digital-signature-algorithms"><a class="header" href="#digital-signature-algorithms">Digital signature algorithms</a></h1>
+<p>nP is the signature, where n is a nonce and P is a curve point.</p>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc6979">RFC 6979</a> - Deterministic Usage of the Digital Signature Algorithm (DSA) and Elliptic Curve Digital Signature Algorithm (ECDSA)</p>
+<ul>
+<li>ECDSA</li>
+<li>EdDSA
+<ul>
+<li>Ed25519 - EdDSA signature scheme using SHA-2 (SHA-512) and Curve25519.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="key-exchange-algorithms"><a class="header" href="#key-exchange-algorithms">Key exchange algorithms</a></h1>
+<p>DH: n is Alice's secret key, P is Bob's public key, some hash of nP is the secret key shared between Alice and Bob.</p>
+<ul>
+<li>ECDH</li>
+<li>X25519</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="kdf"><a class="header" href="#kdf">KDF</a></h1>
+<p>Key-derivation functions</p>
+<pre><code>secret_value -&gt; key
+</code></pre>
+<p><a href="https://blog.boot.dev/cryptography/key-derivation-functions/">https://blog.boot.dev/cryptography/key-derivation-functions/</a></p>
+<p>The algorithms use <em>key stretching</em> techniques that include:</p>
+<ul>
+<li>salt</li>
+<li>many iterations</li>
+</ul>
+<pre><code class="language-tsx">derivationFunction(password, salt, difficulty) -&gt; key
+</code></pre>
+<p>Properties</p>
+<ul>
+<li>Key stretching</li>
+<li>Key separation — create child keys from a master key</li>
+<li>Key strengthening</li>
+<li>(Properties of hash)</li>
+</ul>
+<p>Types of KDF</p>
+<ul>
+<li>
+<p>Hash-based (most common)</p>
+<ul>
+<li>
+<p>Bcrypt</p>
+<pre><code>$2a$07$wHirdrK4OLB0vk9r3fiseeYjQaCZ0bIeKY9qLsNep/I2nZAXbOb7m
+</code></pre>
+</li>
+<li>
+<p>Scrypt</p>
+<pre><code>16384$8$1$kytG1MHY1KU=$afc338d494dc89be40e317788e3cd9166d066709db0e6481f0801bd918710f46
+</code></pre>
+</li>
+<li>
+<p>Argon</p>
+<pre><code>$argon2d$v=19$m=1024,t=16,p=4$c2FsdDEyM3NhbHQxMjM$2dVtFVPCezhvjtyu2PaeXOeBR+RUZ6SqhtD/+QF4F1o
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Block cipher-based</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="key-exchange-1"><a class="header" href="#key-exchange-1">Key exchange</a></h1>
+<p>Both parties contribute to the negotiation of the shared secret</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="dh"><a class="header" href="#dh">DH</a></h1>
+<p>The Diffie–Hellman key exchange (<strong>DH</strong> or <strong>DHKE</strong>) method allows two parties that have no prior knowledge of each other to jointly establish a shared secret key over an insecure channel.</p>
+<p>Breaking DH is a discrete logarithm problem.</p>
+<h2 id="important-concepts-2"><a class="header" href="#important-concepts-2">Important concepts</a></h2>
+<ul>
+<li>Primitive root modulo</li>
+<li>Multiplicative group of integers modulo</li>
+<li>Modular exponentation</li>
+<li>Modular arithmetic</li>
+</ul>
+<h2 id="trapdoor-function-1"><a class="header" href="#trapdoor-function-1">Trapdoor function</a></h2>
+<p>Modular exponentiation?</p>
+<h2 id="how-it-works-1"><a class="header" href="#how-it-works-1">How it works</a></h2>
+<p>Define secret <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span> and an agreed modulo <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span> (which is prime):</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span><span class="mspace newline"></span><span class="mspace newline"></span></span></span></span></p>
+<p>Letting <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0435em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ab</span></span></span></span></span></span></span></span></span></span></span></span>, where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span></span></span></span> is a primitive root modulo <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span>, we have</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:6.1182em;vertical-align:-2.8091em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.3091em;"><span style="top:-5.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ba</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">p</span></span></span><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"></span></span><span style="top:-2.3509em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">p</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">p</span></span></span><span style="top:-0.8509em;"><span class="pstrut" style="height:3em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.8091em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.3091em;"><span style="top:-5.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ab</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">p</span></span></span><span style="top:-2.3509em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">p</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3091em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>Let <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span> be secrets that are individually chosen by Alice and Bob respectively. LHS: Alice's computation, RHS: Bob's computation.</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1491em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1491em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span></span></p>
+<p>Looking at Alice's computation, she would need to compute <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0991em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mclose">)</span></span></span></span>. However, this can be provided by Bob because Bob owns <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. So now we have:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1491em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span></span></p>
+<p>Repeating the same for the other:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1852em;vertical-align:-0.2861em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">secre</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span></span></p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="padding"><a class="header" href="#padding">Padding</a></h1>
+<p>Symmetric</p>
+<p>Public key</p>
+<ul>
+<li>PKCS#1 v1.5</li>
+<li>OAEP</li>
+<li>PSS</li>
+</ul>
+<h2 id="padding-schemes"><a class="header" href="#padding-schemes">Padding schemes</a></h2>
+<p>Add data in the beginning, middle or end of a message prior to encryption. This is to obscure the face that many messages end in predictable ways.</p>
+<ul>
+<li>OAEP</li>
+<li>PKCS #5, #7, #8, ...</li>
+<li>ANSI X9.23</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="pem"><a class="header" href="#pem">PEM</a></h1>
+<p>PEM (Privacy-Enhanced Mail) format is text-file base64.</p>
+<p>Common filenames: <code>.pem</code></p>
+<p>PEM is just a Base64-encoded DER with header and footer and wrapped to 64 characters per line.</p>
+<p>Examples:</p>
+<pre><code>----BEGIN PRIVATE KEY----
+MIIJRAIBADANBgkqhkiG9w0BAQEFAASCCS4wggkqAgEAAoICAQD2GlhF9HuoPwiF
+S8lh0lHCwVGlVq0Jqtmp7ieyVOZ0mbU6T2KCDwkL3mWWSiVZc+cjh3EOsXtyzuiq
+-----END PRIVATE KEY-----
+</code></pre>
+<p>or</p>
+<pre><code>----BEGIN RSA PRIVATE KEY----
+MIIJRAIBADANBgkqhkiG9w0BAQEFAASCCS4wggkqAgEAAoICAQD2GlhF9HuoPwiF
+S8lh0lHCwVGlVq0Jqtmp7ieyVOZ0mbU6T2KCDwkL3mWWSiVZc+cjh3EOsXtyzuiq
+-----END RSA PRIVATE KEY-----
+</code></pre>
+<p>or </p>
+<pre><code>-----BEGIN EC PRIVATE KEY-----
+...
+</code></pre>
+<p>Example: <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/">Cloudflare Certificate</a></p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="jwt"><a class="header" href="#jwt">JWT</a></h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7519">RFC 7519</a></p>
+<p>Text-based (Base64) URL-safe JSON representation of claims, signature and ciphertext.</p>
+<p>JWTs can either have the following structures:</p>
+<ul>
+<li>JWS (JSON Web Signature)</li>
+<li>JWE (JSON Web Encryption)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="jwk--jwks"><a class="header" href="#jwk--jwks">JWK / JWKS</a></h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7517">RFC 7517</a></p>
+<p>A representation of cryptographic keys that can be used either for signing or encryption.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="ssh2"><a class="header" href="#ssh2">SSH2</a></h1>
+<p><code>RFC4716</code> (aka SSH2) Private Key</p>
+<pre><code class="language-txt">-----BEGIN OPENSSH PRIVATE KEY-----
+b3Bl...
+-----END OPENSSH PRIVATE KEY-----
+</code></pre>
+<p><code>RFC4716</code> (aka SSH2) Public Key</p>
+<pre><code class="language-txt">---- BEGIN SSH2 PUBLIC KEY ----
+Comment: &quot;2048-bit RSA, converted by ...&quot;
+AAAAB...
+---- END SSH2 PUBLIC KEY ----
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="openssh"><a class="header" href="#openssh">OpenSSH</a></h1>
+<p>OpenSSH Public Key</p>
+<pre><code class="language-txt">ssh-rsa AAAAB...
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="der"><a class="header" href="#der">DER</a></h1>
+<p>DER (Distinguished Encoding Rules) is a binary encoding for the ASN.1 syntax. This is based on the X.690 standard.</p>
+<p>Common filenames: <code>.der</code>, <code>.cer</code></p>
+<p>Example: <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/">Cloudflare Certificate</a></p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="p12pfx"><a class="header" href="#p12pfx">P12/PFX</a></h1>
+<p>PFX - Personal Information Exchange</p>
+<p>Common filenames: <code>.pfx</code>, <code>.p12</code></p>
+<p>This format is based on PKCS #12.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="jks"><a class="header" href="#jks">JKS</a></h1>
+<p>Java KeyStore</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="structured-container-formats"><a class="header" href="#structured-container-formats">Structured container formats</a></h1>
+<p>Java calls these &quot;key specs.&quot;</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="ecprivatekey"><a class="header" href="#ecprivatekey">ECPrivateKey</a></h1>
+<p>aka SEC1 format</p>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc5915">RFC 5915</a></p>
+<p>The corresponding PEM encoding looks like this:</p>
+<pre><code>-----BEGIN EC PRIVATE KEY-----
+MHcC...
+-----END EC PRIVATE KEY-----
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="pkcs-1"><a class="header" href="#pkcs-1">PKCS #1</a></h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc8017">RFC 8017</a></p>
+<p>PKCS #1 is a specification for RSA keys only. The encoding is specified by the ASN.1 syntax.</p>
+<p>PEM-encoded PKCS #1 RSA private key:</p>
+<pre><code>-----BEGIN RSA PRIVATE KEY-----
+MIIEpAI....
+....
+-----END RSA PRIVATE KEY-----
+</code></pre>
+<p>Running </p>
+<pre><code>openssl asn1parse -in secret.pem -i
+</code></pre>
+<p>returns</p>
+<pre><code>    0:d=0  hl=4 l= 604 cons: SEQUENCE          
+    4:d=1  hl=2 l=   1 prim:  INTEGER           :00
+    7:d=1  hl=3 l= 129 prim:  INTEGER           :BE084...
+  139:d=1  hl=2 l=   3 prim:  INTEGER           :010001
+  144:d=1  hl=3 l= 128 prim:  INTEGER           :13B8660...
+  275:d=1  hl=2 l=  65 prim:  INTEGER           :E94FFF...
+  342:d=1  hl=2 l=  65 prim:  INTEGER           :D082DEBBDD...
+  409:d=1  hl=2 l=  64 prim:  INTEGER           :2894A097FFF...
+  475:d=1  hl=2 l=  65 prim:  INTEGER           :C68A4691B...
+  542:d=1  hl=2 l=  64 prim:  INTEGER           :7D7A73E5A...
+</code></pre>
+<p>Note that OpenSSL 3.x refers to PKCS #1 keys as <code>traditional</code>. See <code>man openssl-genrsa</code>.</p>
+<p>References</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/48958304/pkcs1-and-pkcs8-format-for-rsa-private-key">PKCS1 vs PKCS8 for RSA</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="pkcs-8"><a class="header" href="#pkcs-8">PKCS #8</a></h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc5208">RFC 5208</a></p>
+<p>PKCS #8 applies to all PKI keys. It provides an option to encrypt the private key.</p>
+<p>PKCS #8 can be PEM-encoded as the following:</p>
+<p><strong>Private key</strong></p>
+<pre><code>----BEGIN PRIVATE KEY----
+MIIJRAIBADANBgkqhkiG9w0BAQEFAASCCS4wggkqAgEAAoICAQD2GlhF9HuoPwiF
+...
+-----END PRIVATE KEY-----
+</code></pre>
+<p><strong>Encrypted private key</strong></p>
+<pre><code>----BEGIN PRIVATE KEY----
+MIIJRAIBADANBgkqhkiG9w0BAQEFAASCCS4wggkqAgEAAoICAQD2GlhF9HuoPwiF
+...
+-----END PRIVATE KEY-----
+</code></pre>
+<p><strong>Public key</strong></p>
+<pre><code>----BEGIN PUBLIC KEY----
+MIIJRAIBADANBgkqhkiG9w0BAQEFAASCCS4wggkqAgEAAoICAQD2GlhF9HuoPwiF
+...
+-----END PUBLIC KEY-----
+</code></pre>
+<p>The ASN.1 syntax returns</p>
+<pre><code>    0:d=0  hl=4 l=1212 cons: SEQUENCE          
+    4:d=1  hl=2 l=   1 prim:  INTEGER           :00
+    7:d=1  hl=2 l=  13 cons:  SEQUENCE          
+    9:d=2  hl=2 l=   9 prim:   OBJECT            :rsaEncryption
+   20:d=2  hl=2 l=   0 prim:   NULL              
+   22:d=1  hl=4 l=1190 prim:  OCTET STRING      [HEX DUMP]:308204A2...
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="pkcs-12"><a class="header" href="#pkcs-12">PKCS #12</a></h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7292">RFC 7292</a></p>
+<p>From Wikipedia:</p>
+<p>This standard defines an archive file format for storing multiple cryptographic objects in a single file. Additionally, like PKCS #8, it can be encrypted.</p>
+<p>It is commonly used to <em>bundle</em> a private key with its X.509 certificate or to bundle all the members of a chain trust.</p>
+<p>Java's <a href="./jks.html">keystore</a> format is PKCS #12.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="x509"><a class="header" href="#x509">X.509</a></h1>
+<p><a href="https://www.itu.int/rec/T-REC-X.509/en">International Telecommunication Union X.509 standards</a></p>
+<p>Standard format for public key certificates</p>
+<p>X.509</p>
+<ul>
+<li>public key</li>
+<li>Signature</li>
+<li>Other info
+<ul>
+<li>Country name</li>
+<li>Website</li>
+</ul>
+</li>
+</ul>
+<p>An X.509 certificate looks like this:</p>
+<pre><code>    0:d=0  hl=4 l= 628 cons: SEQUENCE          
+    4:d=1  hl=4 l= 477 cons: SEQUENCE          
+    8:d=2  hl=2 l=  20 prim: INTEGER           :6EA0802B7CA6DFEB2C5211AAB87E3A2960BD4B5C
+   30:d=2  hl=2 l=  13 cons: SEQUENCE          
+   32:d=3  hl=2 l=   9 prim: OBJECT            :sha256WithRSAEncryption
+   43:d=3  hl=2 l=   0 prim: NULL              
+   45:d=2  hl=2 l= 121 cons: SEQUENCE          
+   47:d=3  hl=2 l=  11 cons: SET               
+   49:d=4  hl=2 l=   9 cons: SEQUENCE          
+   51:d=5  hl=2 l=   3 prim: OBJECT            :countryName
+   56:d=5  hl=2 l=   2 prim: PRINTABLESTRING   :SG
+   60:d=3  hl=2 l=  18 cons: SET               
+   62:d=4  hl=2 l=  16 cons: SEQUENCE          
+   64:d=5  hl=2 l=   3 prim: OBJECT            :stateOrProvinceName
+   69:d=5  hl=2 l=   9 prim: UTF8STRING        :Singapore
+   80:d=3  hl=2 l=  18 cons: SET               
+   82:d=4  hl=2 l=  16 cons: SEQUENCE          
+   84:d=5  hl=2 l=   3 prim: OBJECT            :localityName
+   89:d=5  hl=2 l=   9 prim: UTF8STRING        :Singapore
+  100:d=3  hl=2 l=  14 cons: SET               
+  102:d=4  hl=2 l=  12 cons: SEQUENCE          
+  104:d=5  hl=2 l=   3 prim: OBJECT            :organizationName
+  109:d=5  hl=2 l=   5 prim: UTF8STRING        :Raimi
+  116:d=3  hl=2 l=  14 cons: SET               
+  118:d=4  hl=2 l=  12 cons: SEQUENCE          
+  120:d=5  hl=2 l=   3 prim: OBJECT            :organizationalUnitName
+  125:d=5  hl=2 l=   5 prim: UTF8STRING        :Raimi
+  132:d=3  hl=2 l=  14 cons: SET               
+  134:d=4  hl=2 l=  12 cons: SEQUENCE          
+  136:d=5  hl=2 l=   3 prim: OBJECT            :commonName
+  141:d=5  hl=2 l=   5 prim: UTF8STRING        :Raimi
+  148:d=3  hl=2 l=  18 cons: SET               
+  150:d=4  hl=2 l=  16 cons: SEQUENCE          
+  152:d=5  hl=2 l=   9 prim: OBJECT            :emailAddress
+  163:d=5  hl=2 l=   3 prim: IA5STRING         :brushed-pascal.09@icloud.com
+  168:d=2  hl=2 l=  30 cons: SEQUENCE          
+  170:d=3  hl=2 l=  13 prim: UTCTIME           :230216135245Z
+  185:d=3  hl=2 l=  13 prim: UTCTIME           :240216135245Z
+  200:d=2  hl=2 l= 121 cons: SEQUENCE          
+  202:d=3  hl=2 l=  11 cons: SET               
+  204:d=4  hl=2 l=   9 cons: SEQUENCE          
+  206:d=5  hl=2 l=   3 prim: OBJECT            :countryName
+  211:d=5  hl=2 l=   2 prim: PRINTABLESTRING   :SG
+  215:d=3  hl=2 l=  18 cons: SET               
+  217:d=4  hl=2 l=  16 cons: SEQUENCE          
+  219:d=5  hl=2 l=   3 prim: OBJECT            :stateOrProvinceName
+  224:d=5  hl=2 l=   9 prim: UTF8STRING        :Singapore
+  235:d=3  hl=2 l=  18 cons: SET               
+  237:d=4  hl=2 l=  16 cons: SEQUENCE          
+  239:d=5  hl=2 l=   3 prim: OBJECT            :localityName
+  244:d=5  hl=2 l=   9 prim: UTF8STRING        :Singapore
+  255:d=3  hl=2 l=  14 cons: SET               
+  257:d=4  hl=2 l=  12 cons: SEQUENCE          
+  259:d=5  hl=2 l=   3 prim: OBJECT            :organizationName
+  264:d=5  hl=2 l=   5 prim: UTF8STRING        :Raimi
+  271:d=3  hl=2 l=  14 cons: SET               
+  273:d=4  hl=2 l=  12 cons: SEQUENCE          
+  275:d=5  hl=2 l=   3 prim: OBJECT            :organizationalUnitName
+  280:d=5  hl=2 l=   5 prim: UTF8STRING        :Raimi
+  287:d=3  hl=2 l=  14 cons: SET               
+  289:d=4  hl=2 l=  12 cons: SEQUENCE          
+  291:d=5  hl=2 l=   3 prim: OBJECT            :commonName
+  296:d=5  hl=2 l=   5 prim: UTF8STRING        :Raimi
+  303:d=3  hl=2 l=  18 cons: SET               
+  305:d=4  hl=2 l=  16 cons: SEQUENCE          
+  307:d=5  hl=2 l=   9 prim: OBJECT            :emailAddress
+  318:d=5  hl=2 l=   3 prim: IA5STRING         :brushed-pascal.09@icloud.com
+  323:d=2  hl=3 l= 159 cons: SEQUENCE          
+  326:d=3  hl=2 l=  13 cons: SEQUENCE          
+  328:d=4  hl=2 l=   9 prim: OBJECT            :rsaEncryption
+  339:d=4  hl=2 l=   0 prim: NULL              
+  341:d=3  hl=3 l= 141 prim: BIT STRING        
+  485:d=1  hl=2 l=  13 cons: SEQUENCE          
+  487:d=2  hl=2 l=   9 prim: OBJECT            :sha256WithRSAEncryption
+  498:d=2  hl=2 l=   0 prim: NULL              
+  500:d=1  hl=3 l= 129 prim: BIT STRING 
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="other-standards"><a class="header" href="#other-standards">Other standards</a></h1>
+<ul>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc7518">RFC 7518</a> - JSON Web Algorithms (JWA)</li>
+<li><a href="https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards">FIPS</a> - Federal Information Processing Standards (FIPS)</li>
+<li>ASN.1</li>
+<li>PKCS #5 describes some password-based encryption algorithm to encrypt the private key information.</li>
+</ul>
+<p>Organisations</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology">NIST</a> - National Institute of Standards and Technology</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="cryptographically-secure-random-bytes"><a class="header" href="#cryptographically-secure-random-bytes">Cryptographically secure random bytes</a></h1>
+<h2 id="unix-like-os"><a class="header" href="#unix-like-os">Unix-like OS</a></h2>
+<p>Use <code>/dev/urandom</code>.</p>
+<pre><code class="language-bash">LC_ALL=C tr -dc a-zA-Z0-9 &lt; /dev/urandom | head -c10
+</code></pre>
+<p>Based on <a href="https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string">this</a> StackOverflow post.</p>
+<p>Use <code>openssl rand</code>.</p>
+<pre><code class="language-bash">LC_ALL=C tr -dc a-zA-Z0-9 &lt; &lt;(openssl rand 1000) | head -c10
+</code></pre>
+<pre><code class="language-bash">openssl rand -hex 16
+</code></pre>
+<h2 id="java"><a class="header" href="#java">Java</a></h2>
+<p><code>java.security.SecureRandom</code> - might pull from <code>/dev/random</code></p>
+<h2 id="javascript-browser"><a class="header" href="#javascript-browser">JavaScript (browser)</a></h2>
+<pre><code class="language-javascript">const array = new Uint32Array(10);
+window.crypto.getRandomValues(array);
+</code></pre>
+<p><a href="https://stackoverflow.com/questions/58600148/how-can-i-generate-a-cryptographically-secure-pseudo-random-number-in-javascript">How can I generate a cryptographically secure pseudo-random number in Javascript?</a></p>
+<h2 id="python"><a class="header" href="#python">Python</a></h2>
+<pre><code class="language-python">&gt;&gt;&gt; import secrets
+&gt;&gt;&gt; secrets.token_bytes(16)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="rsa-1"><a class="header" href="#rsa-1">RSA</a></h1>
+<ul>
+<li><a href="code.html#openssl">OpenSSL</a></li>
+<li><a href="code.html#javakotlin-standard-library">Java/Kotlin standard library</a></li>
+</ul>
+<h2 id="openssl"><a class="header" href="#openssl">OpenSSL</a></h2>
+<p>Generate private key in PKCS #8 format. <code>genpkey</code> is obsolete. Use <code>gen*</code>.</p>
+<pre><code class="language-bash">openssl genrsa -out secret.pem 2048
+</code></pre>
+<p>Output DER format and base64-encode it.</p>
+<pre><code class="language-bash">openssl rsa -in secret.pem -outform der -out secret.der
+base64 -i secret.der
+</code></pre>
+<p>Output public key from a private key.</p>
+<pre><code class="language-bash">openssl rsa -in secret.pem -pubout -out secret.pem.pub
+</code></pre>
+<p>Convert format</p>
+<pre><code class="language-bash">openssl pkcs12 -export -inkey secret.pem -in cert.pem -out cert.pfx
+</code></pre>
+<p>🙄 Convert from PKCS #1 to PKCS #8 private key:</p>
+<pre><code class="language-bash">openssl pkcs8 -topk8 -inform pem -in secret_pkcs1.pem -outform pem -nocrypt -out secret_pkcs8.pem
+</code></pre>
+<p>🙄 Convert from PKCS #8 to PKCS #1 private key:</p>
+<pre><code class="language-bash">openssl rsa -in private_pkcs8.pem -out private_pkcs1.pem
+</code></pre>
+<p>🙄 Convert from PKCS #1 opento PKCS #8 public key:</p>
+<pre><code class="language-bash">openssl rsa -RSAPublicKey_in -in public_pkcs1.pem -pubout -out public_pkcs8.pem
+</code></pre>
+<p>🙄 Convert from PKCS #8 to PKCS #1 public key:</p>
+<pre><code class="language-bash">openssl rsa -pubin -in public_pkcs8.pem -RSAPublicKey_out -out public_pkcs1.pem
+</code></pre>
+<p>🙄 Convert from PEM to DER for PKCS #1 private key:</p>
+<pre><code class="language-bash">openssl rsa -in secret.pem -outform der -out secret.der -traditional
+base64 -i secret.der
+</code></pre>
+<p>Other tools include <code>openssl-pkcs8</code> and <code>openssl pkey</code>.</p>
+<p><a href="https://stackoverflow.com/questions/2957742/how-to-convert-pkcs8-formatted-pem-private-key-to-the-traditional-format">How to convert PKCS#8-formatted PEM private key to the traditional format?</a></p>
+<p>For more info, run <code>man openssl-rsa</code> or <code>man openssl-genrsa</code> etc.</p>
+<hr />
+<h2 id="javakotlin-standard-library"><a class="header" href="#javakotlin-standard-library">Java/Kotlin standard library</a></h2>
+<p>Concepts:</p>
+<ul>
+<li>
+<p><code>java.security.spec.KeySpec</code> </p>
+<p>A public or private key in the corresponding structured container format aka key spec. Keys can be specified by its components e.g. <code>RSAPrivateKeySpec</code> or its binary (DER encoding) e.g. <code>PKCS8EncodedKeySpec</code> and <code>X509EncodedKeySpec</code>. Other KeySpecs like <code>OpenSSHPrivateKeySpec</code> can be obtained from third-party libraries like Bouncy Castle.</p>
+</li>
+<li>
+<p><code>java.security.KeyFactory</code></p>
+<p>A factory method to generate private and public from <code>KeySpec</code>.</p>
+</li>
+</ul>
+<p>Code:</p>
+<pre><code class="language-kotlin">val keySpec = PKCS8EncodedKeySpec(Base64.getDecoder().decode(&quot;MIIEwAIBADANB...&quot;))
+val privateKey = KeyFactory.getInstance(&quot;RSA&quot;).generatePrivate(keySpec)
+</code></pre>
+<p><code>Signature</code></p>
+<p>Given <code>privateKey: PrivateKey</code>,</p>
+<pre><code class="language-kotlin">val privateSignature = Signature.getInstance(&quot;SHA256withRSA&quot;)
+
+privateSignature.initSign(privateKey)
+
+privateSignature.update(&quot;payload to encrypt&quot;.encodeToByteArray())
+
+val signature = privateSignature.sign()
+</code></pre>
+<pre><code class="language-java">byte[] publicBytes = Base64.decodeBase64(publicK);
+X509EncodedKeySpec keySpec = new X509EncodedKeySpec(publicBytes);
+KeyFactory keyFactory = KeyFactory.getInstance(&quot;RSA&quot;);
+PublicKey pubKey = keyFactory.generatePublic(keySpec);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="ecc-1"><a class="header" href="#ecc-1">ECC</a></h1>
+<p>Generates PKCS #8 private key:</p>
+<pre><code class="language-bash">openssl genpkey -algorithm Ed25519 -out secret.pem
+</code></pre>
+<p>Generates SEC 1 format private key</p>
+<pre><code>openssl ecparam -name prime256v1 -genkey -noout -out secret.pem
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="ssh"><a class="header" href="#ssh">SSH</a></h1>
+<p>Generate a new key pair.</p>
+<pre><code>ssh-keygen -t &lt;alg&gt; -b 2048
+</code></pre>
+<p>Convert OpenSSH public key into SSH2 public key: </p>
+<pre><code>ssh-keygen -e -f &lt;public-key-filename&gt; &gt; &lt;new-public-key-filename&gt;
+</code></pre>
+<p>Run <code>man ssh-keygen</code> for more info.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="encryption-schemes-1"><a class="header" href="#encryption-schemes-1">Encryption schemes</a></h1>
+<p>Ciphertext offers confidentiality and authenticity.</p>
+<ul>
+<li>
+<p>RSAES-OAEP</p>
+<pre><code class="language-bash">openssl pkeyutl -encrypt -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256 -inkey secret.pem -in plaintext.txt | base64 &gt; encrypted2.txt
+</code></pre>
+</li>
+<li>
+<p>RSAES-PKCS #1 v1.5</p>
+<pre><code class="language-bash">openssl pkeyutl -encrypt -inkey secret.pem -in plaintext.txt | base64 &gt; encrypted2.txt
+</code></pre>
+</li>
+</ul>
+<p>See the <code>openssl-pkeyutl</code> docs (OpenSSL 3.0) <a href="https://www.openssl.org/docs/man3.0/man1/openssl-pkeyutl.html">here</a>. Note that <code>rsautl</code> is deprecated.</p>
+<h2 id="block-ciphers-1"><a class="header" href="#block-ciphers-1">Block ciphers</a></h2>
+<pre><code class="language-bash">openssl enc -aes-256-cbc -in hello.txt &gt; hello.txt.enc
+</code></pre>
+<pre><code class="language-bash">openssl enc -aes-256-cbc -d -in hello.txt.enc &gt; hello.txt
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="checksum"><a class="header" href="#checksum">Checksum</a></h1>
+<p>The goal of checksum is to verify integrity.</p>
+<ul>
+<li>
+<p><code>shasum</code></p>
+</li>
+<li>
+<p><code>md5</code></p>
+</li>
+<li>
+<p><code>openssl md5</code></p>
+<pre><code>echo -n &quot;hello&quot; | openssl md5
+</code></pre>
+</li>
+</ul>
+<p>It's common to check checksums when downloading files from websites. Anaconda uses <a href="md5.html">MD5</a> to compare checksums. <a href="https://anaconda.org/conda-forge/boto3/files">Here</a> is an example of the usage of checksum for boto3 package which is an AWS client (click on the (i) icon).</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="checksum.html#admonition-note"></a></p>
+</div>
+<div>
+<p>Take note of the newlines at the end of files</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="fingerprint"><a class="header" href="#fingerprint">Fingerprint</a></h1>
+<h2 id="rsa-key-pair"><a class="header" href="#rsa-key-pair">RSA key pair</a></h2>
+<p>To compare between a private and public key, compare the modulus:</p>
+<pre><code class="language-bash">openssl rsa -in private.pem -modulus -noout
+</code></pre>
+<pre><code class="language-bash">openssl rsa -pubin -in public.pem -modulus -noout
+</code></pre>
+<h2 id="ssh-key-pair"><a class="header" href="#ssh-key-pair">SSH key pair</a></h2>
+<p>You can use SSH fingerprints to compare between any two keys. A key pair should have the same fingerprint.</p>
+<p>? Not sure what values these fingerprints are based on.</p>
+<pre><code class="language-bash">ssh-keygen -l -E &lt;hash&gt; -f &lt;key&gt;
+</code></pre>
+<p>SSH has a cute way to represent keys visually:</p>
+<pre><code class="language-bash">ssh-keygen -l -v -f &lt;key&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="hmac-1"><a class="header" href="#hmac-1">HMAC</a></h1>
+<pre><code>echo -n &quot;someplaintext&quot; | openssl dgst -sha384 -hmac &quot;secretkey&quot;
+</code></pre>
+<p>See <code>man openssl-dgst</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="digital-certificate"><a class="header" href="#digital-certificate">Digital certificate</a></h1>
+<p><a href="http://www.cs.toronto.edu/~arnold/427/19s/427_19S/tool/ssl/notes.pdf">http://www.cs.toronto.edu/~arnold/427/19s/427_19S/tool/ssl/notes.pdf</a></p>
+<p><img src="csr.png" alt="Untitled" /></p>
+<p><a href="https://superuser.com/questions/620121/what-is-the-difference-between-a-certificate-and-a-key-with-respect-to-ssl">https://superuser.com/questions/620121/what-is-the-difference-between-a-certificate-and-a-key-with-respect-to-ssl</a></p>
+<p>A certificate contains</p>
+<ul>
+<li>public key</li>
+<li>name of the issuer etc.</li>
+</ul>
+<p>A certificate is signed by a certificate authority (<strong>CA</strong>) using the CA's private key (other people like browsers usually already have their public keys).</p>
+<p>The CA is a trusted 3rd party that:</p>
+<ul>
+<li>Issues certificates</li>
+<li>Confirms identity of the certificate owners</li>
+<li>Provides proof that the certificate is valid</li>
+</ul>
+<p>Examples of CAs include Let's Encrypt, Comodo and Symantec. Some large cloud computing companies (eg. AWS, Cloudflare, GCP) are also publicly trusted CAs that issue certificates for services hosted on their infrastructure.</p>
+<p><img src="req.png" alt="req" /></p>
+<p>Signed certificates can be used for different security protocols:</p>
+<ul>
+<li>HTTPS</li>
+<li>SSH</li>
+</ul>
+<h2 id="cert"><a class="header" href="#cert">Cert</a></h2>
+<ol>
+<li>
+<p>Generate a private key:</p>
+<pre><code>openssl genpkey -algorithm RSA -out private_key.key -aes256
+</code></pre>
+</li>
+<li>
+<p>Generate a certificate signing request (CSR):</p>
+<pre><code>openssl req -new -key private_key.key -out certificate.csr
+</code></pre>
+</li>
+<li>
+<p>Generate a self-signed certificate:</p>
+<pre><code>openssl x509 -req -days 365 -in certificate.csr -signkey private_key.key -out certificate.crt
+</code></pre>
+</li>
+</ol>
+<h2 id="https-and-the-browser"><a class="header" href="#https-and-the-browser">HTTPS and the browser</a></h2>
+<p>Nearly every modern browser checks that a server certificate is issued by a trust certificate authority. If the browser detects that the server certificate is self-signed or not signed by an approved trusted certificate authority then visitors will receive a. Warning that the server certificate cannot be trusted.</p>
+<p>To get the certificate from a server,</p>
+<pre><code>openssl s_client -showcerts -servername stackoverflow.com -connect stackoverflow.com:443 &lt;/dev/null
+</code></pre>
+<p>Based on <a href="https://stackoverflow.com/questions/7885785/using-openssl-to-get-the-certificate-from-a-server">this</a> StackOverflow post.</p>
+<p>new cert (new private key etc.)</p>
+<pre><code class="language-bash">openssl req -newkey rsa:2048 -nodes -keyout domain.key -x509 -days 365 -out domain.crt
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="utils"><a class="header" href="#utils">Utils</a></h1>
+<p>Check if two are the same</p>
+<p>cert:</p>
+<pre><code>openssl x509 -modulus -noout -in cert.cer | openssl md5
+</code></pre>
+<ul>
+<li>
+<p>Encrypt or decrypt</p>
+<pre><code class="language-bash">openssl pkeyutl -encrypt -in &lt;input_file&gt; -inkey &lt;key.pem&gt; -out &lt;output_file&gt;
+</code></pre>
+<pre><code class="language-bash">openssl pkeyutl -decrypt -in &lt;input_file&gt; -inkey &lt;key.pem&gt; -out &lt;output_file&gt;
+</code></pre>
+</li>
+</ul>
+<p>Other useful tools:</p>
+<ul>
+<li><code>base64</code></li>
+<li><code>basenc</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="pkcs-12-1"><a class="header" href="#pkcs-12-1">PKCS #12</a></h1>
+<p>openssl pkcs12 -export -inkey private_key.pem -in certificate.pem -out output.p12</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+    </body>
+</html>
