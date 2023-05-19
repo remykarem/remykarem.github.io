@@ -4,7 +4,7 @@ aka SEC1 format
 
 [RFC 5915](https://datatracker.ietf.org/doc/html/rfc5915)
 
-The corresponding PEM encoding looks like this:
+An ECPrivateKey encoded in PEM looks like this:
 
 ```
 -----BEGIN EC PRIVATE KEY-----

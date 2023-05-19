@@ -158,13 +158,20 @@
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="jwt"><a class="header" href="#jwt">JWT</a></h1>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc7519">RFC 7519</a></p>
-<p>Text-based (Base64) URL-safe JSON representation of claims, signature and ciphertext.</p>
+<p>A JWT (JSON Web Token) is a text-based dot-separated Base64 URL-safe representation of <em>signature</em>, claims, metadata, and ciphertext.</p>
+<p>Example (newline spaces added for readability):</p>
+<pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.
+SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+</code></pre>
+<p>This token is normally used in HTTP requests under the Authorization header.</p>
 <p>JWTs can either have the following structures:</p>
 <ul>
 <li>JWS (JSON Web Signature)</li>
 <li>JWE (JSON Web Encryption)</li>
 </ul>
-<footer id="last-change">Last change: 2023-05-19, commit: <a href="https://github.com/remykarem/remykarem.github.io/commit/5ea98fc">5ea98fc</a></footer>
+<p>See <a href="https://jwt.io">jwt.io</a> for more info.</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

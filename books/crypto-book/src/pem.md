@@ -1,10 +1,16 @@
 # PEM
 
-PEM (Privacy-Enhanced Mail) format is text-file base64.
+Common filenames: `.pem`, `.key`
 
-Common filenames: `.pem`
+The PEM (Privacy-Enhanced Mail) encoding is a text with
+1. Base64-encoded DER wrapped to 64 characters per line,
+2. a header, and
+3. a footer.
 
-PEM is just a Base64-encoded DER with header and footer and wrapped to 64 characters per line.
+Some formats it can hold:
+* PKCS #1
+* PKCS #8
+* ECPrivateKey
     
 Examples:
 

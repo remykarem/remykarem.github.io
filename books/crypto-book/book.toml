@@ -31,6 +31,6 @@ assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
 [preprocessor.katex]
 renderers = ["html"]
 
-[preprocessor.last-changed]
-command = "mdbook-last-changed"
-renderer = ["html"]
+# [preprocessor.last-changed]
+# command = "mdbook-last-changed"
+# renderer = ["html"]

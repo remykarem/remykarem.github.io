@@ -158,8 +158,53 @@
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="jwk--jwks"><a class="header" href="#jwk--jwks">JWK / JWKS</a></h1>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc7517">RFC 7517</a></p>
-<p>A representation of cryptographic keys that can be used either for signing or encryption.</p>
-<footer id="last-change">Last change: 2023-05-19, commit: <a href="https://github.com/remykarem/remykarem.github.io/commit/5ea98fc">5ea98fc</a></footer>
+<p>A JWK (JSON Web Key) is a JSON representation of cryptographic keys — PKI (private or public) and symmetric keys. The values are all Base64 URL-safe.</p>
+<p>A JWK set can hold multiple keys.</p>
+<h2 id="rsa-key"><a class="header" href="#rsa-key">RSA key</a></h2>
+<p>A JWK representing a <em>public</em> RSA key looks like this (taken from <a href="https://datatracker.ietf.org/doc/html/rfc7517#appendix-A.1">here</a>).</p>
+<pre><code class="language-json">{
+    &quot;kty&quot;:&quot;RSA&quot;,
+    &quot;n&quot;: &quot;0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx
+     4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMs
+     tn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2
+     QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbI
+     SD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqb
+     w0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw&quot;,
+    &quot;e&quot;:&quot;AQAB&quot;,
+    &quot;alg&quot;:&quot;RS256&quot;,
+    &quot;kid&quot;:&quot;2011-04-29&quot;
+}
+</code></pre>
+<h2 id="ec-key"><a class="header" href="#ec-key">EC key</a></h2>
+<p>For example, a JWK representing a <em>private</em> EC key looks like this (taken from <a href="https://datatracker.ietf.org/doc/html/rfc7517#appendix-A.2">here</a>).</p>
+<pre><code class="language-json">{
+    &quot;kty&quot;: &quot;EC&quot;,
+    &quot;crv&quot;: &quot;P-256&quot;,
+    &quot;x&quot;: &quot;MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4&quot;,
+    &quot;y&quot;: &quot;4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM&quot;,
+    &quot;d&quot;: &quot;870MB6gfuTJ4HtUnUvYMyJpr5eUZNP4Bk43bVdj3eAE&quot;,
+    &quot;use&quot;: &quot;enc&quot;,
+    &quot;kid&quot;: &quot;1&quot;
+}
+</code></pre>
+<div id="admonition-warning" class="admonition warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
+</div>
+<div>
+<p>The <code>&quot;d&quot;</code> key means that this JWK is an EC <em>private</em> key, where <code>d</code> is a convention in ECC to refer to the private key.</p>
+</div>
+</div>
+<h2 id="symmetric-key"><a class="header" href="#symmetric-key">Symmetric key</a></h2>
+<p>An example JWK representing a symmetric key looks like this (taken from <a href="https://datatracker.ietf.org/doc/html/rfc7517#appendix-A.3">here</a>):</p>
+<pre><code class="language-json">{
+    &quot;kty&quot;:&quot;oct&quot;,
+    &quot;alg&quot;:&quot;A128KW&quot;,
+    &quot;k&quot;:&quot;GawgguFyGrWKav7AX4VKUg&quot;
+}
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

@@ -157,9 +157,19 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="pem"><a class="header" href="#pem">PEM</a></h1>
-<p>PEM (Privacy-Enhanced Mail) format is text-file base64.</p>
-<p>Common filenames: <code>.pem</code></p>
-<p>PEM is just a Base64-encoded DER with header and footer and wrapped to 64 characters per line.</p>
+<p>Common filenames: <code>.pem</code>, <code>.key</code></p>
+<p>The PEM (Privacy-Enhanced Mail) encoding is a text with</p>
+<ol>
+<li>Base64-encoded DER wrapped to 64 characters per line,</li>
+<li>a header, and</li>
+<li>a footer.</li>
+</ol>
+<p>Some formats it can hold:</p>
+<ul>
+<li>PKCS #1</li>
+<li>PKCS #8</li>
+<li>ECPrivateKey</li>
+</ul>
 <p>Examples:</p>
 <pre><code>----BEGIN PRIVATE KEY----
 MIIJRAIBADANBgkqhkiG9w0BAQEFAASCCS4wggkqAgEAAoICAQD2GlhF9HuoPwiF
@@ -177,7 +187,7 @@ S8lh0lHCwVGlVq0Jqtmp7ieyVOZ0mbU6T2KCDwkL3mWWSiVZc+cjh3EOsXtyzuiq
 ...
 </code></pre>
 <p>Example: <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/">Cloudflare Certificate</a></p>
-<footer id="last-change">Last change: 2023-05-19, commit: <a href="https://github.com/remykarem/remykarem.github.io/commit/5ea98fc">5ea98fc</a></footer>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
