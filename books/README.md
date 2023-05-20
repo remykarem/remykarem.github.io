@@ -32,7 +32,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     title = "your-book"
 
     [output.html]
-    site-url = "/books/your-book/html"  # because KaTeX builds go here
+    site-url = "/books/your-book/html"  # this is for mathy books. for non-mathy, use "/books/your-book"
     mathjax-support = true
     git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
     additional-css = ["last-changed.css"]
@@ -40,7 +40,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     preferred-dark-theme = "macchiato"
 
     [build]
-    build-dir = "./html"  # for nonmath books, use "."
+    build-dir = "."  # this is for mathy books. for non-mathy, use "./html"
 
     [preprocessor.toc]
     command = "mdbook-toc"

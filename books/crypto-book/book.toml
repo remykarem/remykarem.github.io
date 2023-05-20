@@ -15,7 +15,7 @@ default-theme="macchiato"
 preferred-dark-theme="macchiato"
 
 [build]
-build-dir = "./html"
+build-dir = "."
 
 [preprocessor]
 
