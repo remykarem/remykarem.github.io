@@ -25,14 +25,20 @@
     - [ChaCha20-Poly1305]()
     - [Threefish]()
     - [DES]()
-- [Digital signature algorithms](./digital_signature.md)
 - [KDF](./kdf.md)
     - [PBKDF2]()
     - [Bcrypt]()
     - [Scrypt]()
     - [Argon]()
-- [Key exchange](./key_exchange.md)
+- [Encryption algorithms]()
+- [Digital signature algorithms](./digital_signature.md)
+- [Key exchange algorithms](./key_exchange.md)
     - [DHKE](./diffie_hellman.md)
+
+---
+
+# Cryptosystems
+
 - [Public-key cryptosystem](./public_key_cryptosystem.md)
     - [DSA](./dsa.md)
     - [RSA](./rsa/index.md)
