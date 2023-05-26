@@ -4,6 +4,10 @@ An MGF (mask generation function) is a cryptographic primitive similar to the ha
 
 The difference is that while the outputs of hash functions have a fixed size, MGFs output a variable length.
 
+```admonish note
+Like hash functions, MGFs are also deterministic.
+```
+
 $$
 \text{(hashfunction, input, length)} \rightarrow \text{digest}
 $$
