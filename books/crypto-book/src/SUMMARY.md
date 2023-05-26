@@ -7,6 +7,7 @@
 - [Hash functions](./hash_functions.md)
     - [MD5](./md5.md)
     - [SHA](./sha.md)
+- [MGFs](./mask-generation-functions.md)
 - [MAC](./keyed_hash_functions.md)
     - [HMAC](./mac/hmac.md)
     - [SipHash]()

@@ -1,17 +1,15 @@
 # Padding
 
-Symmetric
+Padding is an algorithm that ensures data aligns with the specific block size requirements.
 
-Public key
+Padding schemes might also provide a security measure against certain types of cryptanalysis e.g. by adding randomness.
 
-- PKCS#1 v1.5
-- OAEP
-- PSS
+Here are some common padding schemes:
 
-## Padding schemes
+- **OAEP** — Optimal Asymmetric Encryption Padding
 
-Add data in the beginning, middle or end of a message prior to encryption. This is to obscure the face that many messages end in predictable ways.
+    This is commonly used with RSA.
 
-- OAEP
-- PKCS #5, #7, #8, ...
-- ANSI X9.23
+- **PKCS#7** 
+
+    Commonly used by algorithms like AES.
