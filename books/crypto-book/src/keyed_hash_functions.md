@@ -3,7 +3,7 @@
 A **keyed hash function** (aka MAC algorithm) is a hash function that takes in a key and a message to produce a digest called **message authentication code** (MAC). 
 
 $$
-(key, message) \rightarrow mac
+\text{(message, \textbf{key})} \rightarrow \text{mac}
 $$
 
 There are different types of MAC algorithms:

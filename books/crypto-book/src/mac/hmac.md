@@ -3,5 +3,5 @@
 Deterministic!
 
 $$
-(key, message, hash function) \rightarrow mac
+\text{(message, key, \textbf{hashfunction})} \rightarrow \text{mac}
 $$

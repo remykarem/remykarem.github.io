@@ -2,6 +2,6 @@
 
 aka "hash function", "hashing algorithm", "message digest algorithm"
 
-```
-message -> digest
-```
+$$
+\text{(message)} \rightarrow \text{digest}
+$$

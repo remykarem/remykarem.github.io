@@ -9,7 +9,7 @@ Like hash functions, MGFs are also deterministic.
 ```
 
 $$
-\text{(hashfunction, input, length)} \rightarrow \text{digest}
+\text{(message, hashfunction, \textbf{length})} \rightarrow \text{digest}
 $$
 
 The input is also known as a "seed" from which the mask is generated.
