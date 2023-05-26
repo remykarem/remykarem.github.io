@@ -2,27 +2,13 @@
 
 Key-derivation functions
 
-```
-secret_value -> key
-```
+$$
+\text{(key, \textbf{salt}, length, ...)} \rightarrow \text{derivedkey}
+$$
 
-[https://blog.boot.dev/cryptography/key-derivation-functions/](https://blog.boot.dev/cryptography/key-derivation-functions/)
-
-The algorithms use *key stretching* techniques that include:
-
-- salt
-- many iterations
-
-```tsx
-derivationFunction(password, salt, difficulty) -> key
-```
-
-Properties
-
-- Key stretching
-- Key separation — create child keys from a master key
-- Key strengthening
-- (Properties of hash)
+* **Key** — password, etc.
+* **Salt** — a pseudorandom nonsecret value
+* ... — other params include iteration count
 
 Types of KDF
 

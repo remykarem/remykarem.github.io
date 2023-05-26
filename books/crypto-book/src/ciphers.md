@@ -1,12 +1,16 @@
 # Block ciphers
 
-A *deterministic* symmetric encryption algorithm operating on blocks
+A *deterministic* symmetric encryption algorithm operating on blocks.
 
-```
-(plaintext, key) -> ciphertext
+The algorithm should be able to perform both operations:
 
-(ciphertext, key) -> plaintext
-```
+$$
+\text{(message, \textbf{key})} \rightarrow \text{ciphertext}
+$$
+
+$$
+\text{(ciphertext, \textbf{key})} \rightarrow \text{message}
+$$
 
 ---
 
