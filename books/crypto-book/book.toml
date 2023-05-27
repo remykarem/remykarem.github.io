@@ -6,7 +6,7 @@ src = "src"
 title = "crypto-book"
 
 [output.html]
-site-url = "/books/crypto-book/html"
+site-url = "/books/crypto-book"
 mathjax-support = true
 # Required for preprocess.last-changed
 git-repository-url = "https://github.com/remykarem/remykarem.github.io"
@@ -15,7 +15,7 @@ default-theme="macchiato"
 preferred-dark-theme="macchiato"
 
 [build]
-build-dir = "."
+build-dir = "./html"
 
 [preprocessor]
 
@@ -25,8 +25,6 @@ assets_version = "2.0.0" # do not edit: managed by `mdbook-admonish install`
 
 [preprocessor.catppuccin]
 assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
-
-[output.katex]
 
 [preprocessor.katex]
 renderers = ["html"]
