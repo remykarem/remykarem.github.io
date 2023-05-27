@@ -10,7 +10,7 @@ site-url = "/books/shell-book/"
 additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-highlight.css", "././mdbook-admonish.css"]
 
 [build]
-build-dir = "../../shell-book"
+build-dir = "./html"
 
 [preprocessor]
 
