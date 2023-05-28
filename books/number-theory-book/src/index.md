@@ -2,16 +2,30 @@
 
 ## Notations
 
-Congruence
+### Prime numbers
+
+Prefer using $p$ to represent a prime number.
+
+### Modulus
+
+Prefer using $n$ to represent a modulus.
+
+### Positive integer
+
+Prefer using $a$ for positive integers.
+
+### Congruence
+
+The equivalence relation
 
 $$
-a \equiv b (\bmod m)
+a \equiv b (\bmod n)
 $$
 
 is written as
 
 $$
-a \equiv_m b
+a \equiv_n b
 $$
 
 ## Resources

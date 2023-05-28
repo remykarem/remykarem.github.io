@@ -1,12 +1,9 @@
 # Euler's theorem
 
-```admonish note title="Euler's theorem"
-
-If $a$ and $m$ are coprime, then
+If $a$ and $n$ are coprime, then
 
 $$
-a^{\phi(m)} \equiv_m 1
+a^{\phi(n)} \equiv_n 1
 $$
-```
 
 Euler's theorem generalises Fermat's little theorem.

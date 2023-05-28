@@ -17,12 +17,15 @@
     - [Euclidean algorithm]()
     - [Extended Euclidean algorithm]()
     - [Bézout's identity](./bézouts-identity.md)
-- [Prime numbers](./prime-number/index.md)
+- [Prime numbers](./prime-numbers/index.md)
+    - [Coprimes](./prime-numbers/coprimes.md)
+      - [Carmichael's totient function](./carmichael-function.md)
+      - [Euler's totient function](./eulers-totient-function.md)
     - [Algorithms](./prime-numbers/algorithms.md)
       - [Sieve of Eratosthenes]()
       - [Safe prime]()
       - [Sofie Germain prime]()
-      - [Fermat primes](./prime-numbers/fermat-primes.md)
+      - [Fermat numbers](./prime-numbers/fermat-numbers.md)
     - [Tests]()
       - [Miller-Rabin test]()
     - [Theorems]()
@@ -31,9 +34,8 @@
       - [Fermat's little theorem](./prime-numbers/fermats-little-theorem.md)
       - [Euler's theorem](./prime-numbers/eulers-theorem.md)
       - [CRT](./prime-numbers/crt.md)
-    - [Coprimes]()
-      - [Euler's totient function](./eulers-totient-function.md)
-
+- [Nonprime numbers]()
+  - [Fermat's Last Theorem](./fermats-last-theorem.md)
 ---
 
 # Applications

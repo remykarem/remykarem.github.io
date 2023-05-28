@@ -21,7 +21,7 @@ a = b + km
 $$
 
 ```admonish note title="Example"
-For
+For a congruence
 
 $$
 x \equiv_{12} 4
@@ -32,7 +32,7 @@ Possible values of $x$:
 $$
 4 \equiv_{12} 4 \\
 16 \equiv_{12} 4 \\
-38 \equiv_{12} 4 \\
+28 \equiv_{12} 4 \\
 ...
 $$
 ```
@@ -45,6 +45,21 @@ $$
 $$
 
 ## Modular exponentiation
+
+To find $49^{19}$ modulo 25, instead of evaluating $49^{19}$, we do:
+
+$$
+\begin{align}
+49^{19} &\equiv_{25} (49-25-25)^{19} \\
+        &\equiv_{25} (-1)^{19} \\
+        &\equiv_{25} -1 \\
+        &\equiv_{25} 24
+\end{align}
+$$
+
+```admonish question
+Why though...
+```
 
 ## Modular multiplicative inverse
 
