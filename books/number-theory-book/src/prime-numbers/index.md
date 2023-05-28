@@ -1,8 +1,8 @@
 # Prime numbers
 
-## Co-prime
+## Coprime
 
-Two numbers are co-prime if
+Two numbers are coprime if
 
 $$
 \gcd(a,n)=1

@@ -26,7 +26,7 @@ $$
   * Modular arithmetic
   * [Euler's theorem](https://en.wikipedia.org/wiki/Euler%27s_theorem)
   * Fermat prime
-  * Prime numbers, co-primes, semiprimes
+  * Prime numbers, coprimes, semiprimes
   * Prime factorisation
   * Euler's totient function
   * Multiplicative modulo inverse
