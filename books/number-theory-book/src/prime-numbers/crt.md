@@ -19,14 +19,16 @@ $$
 
 where $N = \prod_i n_i$.
 
-```admonish example
+```admonish example title="Example 1"
 
 For a system of congruences
 
 $$
-x \equiv_{5} 2 \\
-x \equiv_{7} 3 \\
-x \equiv_{12} 10 \\
+\begin{align}
+x &\equiv_{5} 2 \\
+x &\equiv_{7} 3 \\
+x &\equiv_{11} 10 \\
+\end{align}
 $$
 
 where the moduli are pairwise coprime,
@@ -42,6 +44,16 @@ then
 
 $$
 x \equiv_{385} 3552 \equiv_{385} 87
+$$
+
+If we take $87+385=472$ to be a possible solution, then we can verify that
+
+$$
+\begin{align}
+472 &\equiv_{5} 2 \\
+472 &\equiv_{7} 3 \\
+472 &\equiv_{11} 10 \\
+\end{align}
 $$
 ```
 
