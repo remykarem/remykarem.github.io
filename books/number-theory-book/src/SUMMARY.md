@@ -46,3 +46,7 @@
 - [Linear one-way functions]()
   - [Multiplicative groups]()
   - [Elliptic curves]()
+- [Discrete-logarithm problem]()
+  - [Exhaustive search]()
+  - [Pollard's rho]()
+  - [Pohlig-Hellman]()
