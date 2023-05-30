@@ -11,6 +11,7 @@ mathjax-support = true
 git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
 additional-css = ["././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
 default-theme = "frappé"
+no-section-label = true
 preferred-dark-theme = "macchiato"
 
 [build]
