@@ -15,7 +15,7 @@ Breaking DH is a discrete logarithm problem.
 
 Modular exponentiation?
 
-## How it works (WIP)
+## How it works
 
 Define a secret $s$ and an agreed prime modulo $p$.
 
@@ -27,58 +27,33 @@ $$
 
 for every $a$ coprime to $p$.
 
-Letting $s = g^{ab}$, where $g$ is a primitive root modulo $p$, we have
+Let $a_{private}$ be Alice's private key and $b_{private}$ be Bob's private key.
 
-$$
-\begin{aligned}
-g^{ba} &\equiv_p g^{ab} \\
-(g^b \bmod p)^a &\equiv_p (g^a \bmod p)^b
-\end{aligned}
-$$
+Their respective public keys are $a_{public} = g^{a_{private}}$ and $b_{public} = g^{b_{private}}$.
 
-Let $a$ be Alice's secret key and $b$ be Bob's secret key.
-
-Their respective public keys are $a_{public} = g^a$ and $b_{public} = g^b$.
-
-Here's the setup where LHS is Alice and RHS is Bob. Both sides need to calculate $s$.
+Here's the setup where LHS is Alice and RHS is Bob. Both sides need to calculate $s = a_{private}b_{private}$.
 
 $$
 \begin{aligned}
 g^{s} &\equiv_p g^{s} \\
-g^{ba} &\equiv_p g^{ab} \\
+g^{b_{private}a_{private}} &\equiv_p g^{a_{private}b_{private}} \\
 \end{aligned}
 $$
 
-Let Alice initiate the exchange. Because Alice owns $a$, Alice computes $a_{public} = g^a$. Then sends Bob:
+Let Alice initiate the exchange. Alice computes $a_{public} = g^{a_{private}}$. Then sends to Bob:
 
 $$
 \begin{aligned}
-g^{ba} &\equiv_p a_{public}^b \\
+g^{b_{private}a_{private}} &\equiv_p (g^{a_{private}})^{b_{private}} \\
+g^{b_{private}a_{private}} &\equiv_p (a_{public})^{b_{private}} \\
 \end{aligned}
 $$
 
-On the LHS, since Alice owns $a$, Alice computes $g^a = a_{public}$.
+Bob computes $b_{public} = g^{b_{private}}$. Then sends to Alice:
 
 $$
 \begin{aligned}
-(a_{public})^b &\equiv_p (g^b)^a \\
+(g^{b_{private}})^{a_{private}} &\equiv_p (a_{public})^{b_{private}} \\
+(b_{public})^{a_{private}} &\equiv_p (a_{public})^{b_{private}} \\
 \end{aligned}
-$$
-
-Let $a$ and $b$ be secrets that are individually chosen by Alice and Bob respectively. LHS: Alice's computation, RHS: Bob's computation.
-
-$$
-(g^{b_{secret}})^{a_{secret}} \equiv_p (g^{a_{secret}})^{b_{secret}}
-$$
-
-Looking at Alice's computation, she would need to compute $(g^{b_{secret}} \bmod p)$. However, this can be provided by Bob because Bob owns $b_{secret}$. So now we have:
-
-$$
-(b_{public})^{a_{secret}} \equiv_p (g^{a_{secret}} \bmod p)^{b_{secret}}
-$$
-
-Repeating the same for the other:
-
-$$
-(b_{public})^{a_{secret}} \equiv_p (a_{public})^{b_{secret}}
 $$
