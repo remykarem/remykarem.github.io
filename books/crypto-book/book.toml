@@ -13,6 +13,7 @@ git-repository-url = "https://github.com/remykarem/remykarem.github.io"
 additional-css = ["last-changed.css", "././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
 default-theme="macchiato"
 preferred-dark-theme="macchiato"
+no-section-label = true
 
 [build]
 build-dir = "./html"
