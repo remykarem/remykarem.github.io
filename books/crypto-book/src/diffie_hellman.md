@@ -36,17 +36,26 @@ g^{ba} &\equiv_p g^{ab} \\
 \end{aligned}
 $$
 
-Let $s = ab$.
+Let $a$ be Alice's secret key and $b$ be Bob's secret key.
 
-LHS: Alice; RHS: Bob
+Their respective public keys are $a_{public} = g^a$ and $b_{public} = g^b$.
+
+Here's the setup where LHS is Alice and RHS is Bob. Both sides need to calculate $s$.
 
 $$
 \begin{aligned}
-g^{ab} &\equiv_p g^{ba} \\
+g^{s} &\equiv_p g^{s} \\
+g^{ba} &\equiv_p g^{ab} \\
 \end{aligned}
 $$
 
-Let Alice initiate the exchange.
+Let Alice initiate the exchange. Because Alice owns $a$, Alice computes $a_{public} = g^a$. Then sends Bob:
+
+$$
+\begin{aligned}
+g^{ba} &\equiv_p a_{public}^b \\
+\end{aligned}
+$$
 
 On the LHS, since Alice owns $a$, Alice computes $g^a = a_{public}$.
 
