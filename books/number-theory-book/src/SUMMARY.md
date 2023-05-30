@@ -45,7 +45,7 @@
 
 - [Linear one-way functions]()
   - [Multiplicative groups]()
-  - [Elliptic curves]()
+  - [Elliptic curves](./elliptic-curves/index.md)
 - [Discrete-logarithm problem]()
   - [Exhaustive search]()
   - [Pollard's rho]()
