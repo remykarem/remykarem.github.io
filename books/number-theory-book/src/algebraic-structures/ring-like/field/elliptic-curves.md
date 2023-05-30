@@ -1,5 +1,17 @@
 # Elliptic curves
 
+The points of an elliptic curve form a *group* under *point addition*.
+
+```admonish info title="Point addition"
+Point addition in elliptic curves isn't the usual arithmetic addition that we know. See [Andrea Corbellini's Interactive Tool for Elliptic Curve](https://andrea.corbellini.name/ecc/interactive/modk-add.html).
+```
+
+```admonish important title="Elliptic curve cryptography"
+In elliptic curve cryptography, the difficulty of ECDLP relies on the properties of the group under point addition.
+
+One example is to count the points on the elliptic curve.
+```
+
 ## Elliptic curve forms
 
 * Weierstrass form
@@ -26,8 +38,7 @@
     ax^2 + y^2 = 1 + dx^2y^2
     $$
 
-## Simple example
-
+```admonish example title="Example 1"
 Simple example of an elliptic curve over a finite field $\mathbb{F}_7$, i.e. the field of integers modulo 7.
 
 This means the field consists of elements $\{0, 1, 2, 3, 4, 5, 6\}$.
@@ -60,3 +71,4 @@ What are the values of $y \in \mathbb{F}_7$ that satisfy this congruence? Let's 
 * When $y = 6$, $6^2 \equiv 36 \not \equiv_7 4 $
 
 Therefore, when $x=1$, $y = 2,5$.
+```

@@ -4,18 +4,32 @@
 
 ---
 
-- [Algebraic structures]()
-  - [Sets]()
-  - [Groups](./groups/index.md)
-    - [Additive groups]()
-    - [Multiplicative groups](./groups/multiplicative.md)
-    - [Lagrange's theorem](./groups/langranges-theorem.md)
-  - [Rings](./rings.md)
-  - [Fields](./fields.md)
+# Algebraic structures
+
+- [Group-like]()
+  - [Group](./algebraic-structures/group-like/group/index.md)
+    - [Multiplicative group of integers modulo n](./algebraic-structures/group-like/group/multiplicative.md)
+    - [Lagrange's theorem](./algebraic-structures/group-like/group/lagranges-theorem.md)
+  - [Abelian group](./algebraic-structures/group-like/abelian-group.md)
+  - [Monoid](./algebraic-structures/group-like/monoid.md)
+- [Ring-like]()
+  - [Ring](./algebraic-structures/ring-like/ring.md)
+  - [Commutative ring](./algebraic-structures/ring-like/commutative-ring.md)
+  - [Field](./algebraic-structures/ring-like/field/index.md)
+    - [Elliptic curves](./algebraic-structures/ring-like/field/elliptic-curves.md)
+- [Functions]()
+  - [Homomorphism]()
+  - [Isomorphism]()
+
+---
+
+# Number theory
+
 - [Modular arithmetic](./modular-arithmetic/index.md)
   - [Modular exponentiation](./modular-arithmetic/modular-exponentiation.md)
   - [Modular multiplicative inverse](./modular-arithmetic/modular-multiplicative-inverse.md)
   - [Primitive root modulo n](./modular-arithmetic/primitive-root-modulo-n.md)
+  - [Quadratic residue modulo n](./modular-arithmetic/quadratic-reside-modulo-n.md)
 - [GCD](./gcd.md)
     - [Euclidean algorithm]()
     - [Extended Euclidean algorithm]()
@@ -43,9 +57,6 @@
 
 # Applications
 
-- [Linear one-way functions]()
-  - [Multiplicative groups]()
-  - [Elliptic curves](./elliptic-curves/index.md)
 - [Discrete-logarithm problem]()
   - [Exhaustive search]()
   - [Pollard's rho]()

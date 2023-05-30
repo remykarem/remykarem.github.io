@@ -28,6 +28,11 @@ $$
 a \equiv_n b
 $$
 
+### Integers modulo $n$
+
+* $\mathbb{Z}_n$ — integers modulo $n$
+* $\mathbb{Z}_p$ — integers modulo prime $p$
+
 ## Resources
 
 https://www.math.cmu.edu/~mradclif/teaching/127S19/Notes/ChineseRemainderTheorem.pdf
