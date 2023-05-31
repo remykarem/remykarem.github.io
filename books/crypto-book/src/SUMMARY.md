@@ -39,20 +39,18 @@
 
 # Cryptosystems
 
-- [Public-key cryptosystem](./public_key_cryptosystem.md)
-    - [DSA](./dsa.md)
-    - [RSA](./rsa/index.md)
-        - [Encryption algorithms](./rsa/encryption-schemes.md)
-        - [Digital signature algorithms](./rsa/digital-signature-algorithms.md)
-        - [Key exchange algorithms](./rsa/key-exchange.md)
-    - [ECC](./ecc/index.md)
-        - [Encryption algorithms](./ecc/encryption-algorithms.md)
-        - [Digital signature algorithms](./ecc/digital-signature-algorithms.md)
-        - [Key exchange algorithms](./ecc/key-exchange.md)
-    - [ElGamal]()
-- [Hybrid cryptosystem]()
-    - [PGP]()
-    - [GPG]()
+- [RSA](./rsa/index.md)
+    - [Encryption algorithms](./rsa/encryption-schemes.md)
+    - [Digital signature algorithms](./rsa/digital-signature-algorithms.md)
+    - [Key exchange algorithms](./rsa/key-exchange.md)
+- [ECC](./ecc/index.md)
+    - [Encryption algorithms](./ecc/encryption-algorithms.md)
+    - [Digital signature algorithms](./ecc/digital-signature-algorithms.md)
+    - [Key exchange algorithms](./ecc/key-exchange.md)
+- [DSA](./dsa.md)
+- [ElGamal]()
+- [PGP]()
+- [GPG]()
 
 ---
 

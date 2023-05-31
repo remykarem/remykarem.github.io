@@ -9,16 +9,6 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
 ## Important concepts
 
 * **Elliptic curve** and its properties
-    * Order of the curve — an EC finite field has a finite set of (valid) *n* points (an EC can be defined over an infinite field).
-    * Galois field / Finite field (defined by modulo) — For a finite field $F_7$, the elements of the field is $\{ 0, 1, 2, 3, 4, 5, 6 \}$. This means that the $x$ and $y$ values in the curve e.g. $ y^2 = x^3 + ax + b $ can take only one of these values. An EC finite field has a finite set of (valid) *n* points ("order of the curve"). The field is usually (or always?) a prime number in ECC. As such, it is also referred to as the **prime field**. Prime fields have special properties.
-    * Elliptic curve point multiplication / scalar multiplication
-    * Subgroup — a point P in a finite field can have a fixed number of valid points when multiplied with any integer.
-    * Point addition
-    * Point multiplication / scalar multiplication
-    * Group — a point P in a finite field can have a fixed number of valid points ("**order of the group**") when multiplied with any integer. these points make up a group
-    * Point of infinity
-    * Cofactor — Order of the curve / order of a group
-
 * **[Group theory](https://en.wikipedia.org/wiki/Group_(mathematics))**, group law for elliptic curves
 
 * **Discrete logarithm problem**
@@ -42,9 +32,10 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
 
 ## Main idea
 
-* `G` — **generator point** (or base point) defined by the creator of the curve
-* `d` — **private key**; scalar value
-* (`x`,`y`) — **public key**; the point on the curve when performing the scalar multiplication $dG$.
+* $G$ — **generator point** (or base point) defined by the creator of the curve
+* $n$ — the order of the generator $G$
+* $d$ — **private key**; scalar value
+* $(x,y)$ — **public key**; the point on the curve when performing the scalar multiplication $dG$.
 
 (No inherent encryption)
 * To encrypt a message using ECC, the sender chooses a random scalar k and uses the recipient's public key P to derive a point Q on the curve: Q = kP. The sender then uses the x-coordinate of Q as a shared secret to encrypt the message. The encryption process is typically performed using a symmetric encryption algorithm such as AES.
