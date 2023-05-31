@@ -12,14 +12,29 @@
     - [Weak consistency]()
     - [Eventual consistency]()
 - [Scalability]()
-- [Security]()
-- [Authentication & authorisation]()
-    - [Basic auth](./basic-auth.md)
-    - [OAuth 2.0](./oauth2-0.md)
-      - [Authorization Code Flow](./oauth2-0/authorization-code-flow.md)
-    - [OIDC](./oidc.md)
-      - [Authorization Code Flow]()
 - [Monitoring]()
+
+---
+
+# Authentication & authorisation
+
+- [Basic auth](./basic-auth.md)
+- [Digest auth]()
+- [Form-based auth]()
+- [Token-in-header]()
+- [OAuth 2.0](./oauth2-0.md)
+  - [Authorization Code Flow](./oauth2-0/authorization-code-flow.md)
+  - [Client Credentials Flow]()
+  - [Hybrid Flow]()
+- [OIDC](./oidc.md)
+- [SAML]()
+- [LDAP]()
+
+---
+
+# Security
+
+- [Stub]()
 
 ---
 

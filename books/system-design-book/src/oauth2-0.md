@@ -1,4 +1,4 @@
-# OAuth 2.0
+# OAuth 2.0 / OIDC
 
 OAuth 2.0 is primarily an _authorisation_ protocol.
 
@@ -19,3 +19,12 @@ Finally, the server that authenticates the user is called an **authorization ser
 OAuth 2.0 uses *tokens* to represent several states:
 * **access token** — a credential used by an application to *access* an API
 * **refresh token**
+* **ID token** — a credential used to authenticate a user (OIDC)
+
+## OIDC
+
+Similar to OAuth 2.0.
+
+```admonish tip title="Real world application: Singpass"
+Singpass uses OIDC.
+```

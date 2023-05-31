@@ -2,16 +2,27 @@
 
 ```mermaid
 sequenceDiagram
-   fe ->> fe: click
-   fe ->> auth_server_be: redirect
-   auth_server_be ->> auth_server_fe: redirect
-   auth_server_fe ->> auth_server_fe: enter 
-   auth_server_fe ->> auth_server_be: login, permission
-   auth_server_be ->> auth_server_be: verify
-   auth_server_be ->> fe: code
-   fe ->> be: 
-   be ->> auth_server_be: request token
-   auth_server_be ->> fe: access token
-   fe ->> be: access token
-   be ->> fe: response
+   client ->> auth server: redirect
+   Note over client,auth server: client ID, redirect URL, scope
+
+   auth server ->> auth server: login
+
+   auth server ->> client: redirect
+   Note over client,auth server: auth code
+
+   client ->> auth server: POST /token
+   Note over client,auth server: client ID, secret, auth code, redirect URL
+
+   auth server ->> client: -
+   Note over client,auth server: access token, ID token, (refresh token)
+
+   client ->> resource server: POST /some-api
+   Note over client,resource server: access token, ID token
+
+   Note right of resource server: validate access token
+
+   resource server ->> auth server: /validate
+   Note over auth server,resource server: ID token
+
+   auth server ->> resource server: OK
 ```
