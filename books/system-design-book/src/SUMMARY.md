@@ -14,7 +14,11 @@
 - [Scalability]()
 - [Security]()
 - [Authentication & authorisation]()
+    - [Basic auth](./basic-auth.md)
     - [OAuth 2.0](./oauth2-0.md)
+      - [Authorization Code Flow](./oauth2-0/authorization-code-flow.md)
+    - [OIDC](./oidc.md)
+      - [Authorization Code Flow]()
 - [Monitoring]()
 
 ---

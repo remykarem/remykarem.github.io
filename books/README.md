@@ -8,9 +8,10 @@ Install mdbook and the following:
 * [mdbook-catppuccin](https://github.com/catppuccin/mdBook) — pastel themes
 * [mdbook-katex](https://github.com/lzanini/mdbook-katex) — render math using `$`
 * [mdbook-admonish](https://github.com/tommilligan/mdbook-admonish) — Material Design admonishments
+* [mdbook-mermaid](https://github.com/badboy/mdbook-mermaid) — Mermaid
 
 ```
-cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-katex mdbook-admonish
+cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-katex mdbook-admonish mdbook-mermaid
 ```
 
 ## Creating a new book
@@ -73,6 +74,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     ```bash
     mdbook-admonish install
     mdbook-catppuccin install
+    mdbook-mermaid install
     ```
 
 7. Update `books/index.html`.
