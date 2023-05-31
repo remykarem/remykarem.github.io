@@ -2,3 +2,4 @@
 
 * `hexdump`
 * `xxd`
+* `tr`
