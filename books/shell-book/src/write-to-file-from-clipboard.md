@@ -15,7 +15,7 @@ Some ways you can do it
 * Use macOS's `pbpaste` and process substitution.
 
     ```sh
-    cat <(pbpaste) > output.txt
+    pbpaste > output.txt
     ```
 
 * Open an editor and paste in the file
