@@ -4,11 +4,15 @@
 
 Rivest-Shamir-Adleman; 1995; 1st-gen cryptosystem.
 
+```admonish warning
+There are many problems that plague RSA.
+
+https://www.youtube.com/watch?v=lElHzac8DDI
+```
+
 Breaking RSA is an _integer factorisation_ problem.
 
 RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus $n$: one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf).
-
-For PKCS1 v1.5, the message to encrypt should be **no longer than the public modulus minus 11 bytes**. [http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15](http://golang.org/pkg/crypto/rsa/#EncryptPKCS1v15).
 
 - secret exponent: $d $
 - key exponent: $e $
@@ -182,6 +186,15 @@ $$
 E(m_1) \times E(m_2) = m_1^e \times m_2^e = (m_1 \times m_2)^e=E(m_1\times m_2)
 $$
 ```
+
+## Gotchas
+
+* If $p$ is reused for another $n = pq'$, attacker can factor using GCD.
+* If $p$ and $q$ share approximately half of their upper bits, then $pq$ can be factored using Fermat's method (?).
+* If $p-1$ or $q-1$ has small prime factors, then we can use Pollard's $p-1$ to factor $pq$.
+* If either $p$ or $q$ contains too many contiguous zero bits, then $pq$ can be factored using Coppersmith's method.
+
+Source: https://www.youtube.com/watch?v=lElHzac8DDI
 
 ## Resources
 

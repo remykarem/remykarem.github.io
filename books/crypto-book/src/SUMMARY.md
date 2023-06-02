@@ -30,7 +30,7 @@
     - [Bcrypt]()
     - [Scrypt]()
     - [Argon]()
-- [Encryption algorithms]()
+- [Encryption algorithms](./encryption-algorithms.md)
 - [Digital signature algorithms](./digital-signature.md)
 - [Key exchange algorithms](./key-exchange.md)
     - [DHKE](./diffie-hellman.md)
@@ -49,7 +49,7 @@
     - [Key exchange algorithms](./cryptosystems/ecc/key-exchange.md)
 - [DSA](./cryptosystems/dsa.md)
 - [ElGamal]()
-- [PGP]()
+- [PGP](./pgp.md)
 - [GPG]()
 
 ---
