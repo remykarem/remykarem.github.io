@@ -37,9 +37,13 @@
 
 - [Write to file from clipboard](./write-to-file-from-clipboard.md)
 - [Text processing](./text-processing.md)
+  - [Identity](./identity.md)
+  - [Count](./count.md)
   - [Get and remove lines](./file.md)
   - [Append and prepend](./line-manipulation.md)
   - [Search and replace](./search-and-replace.md)
   - [Split](./split.md)
+  - [Compare](./compare.md)
+  - [Trim](./trim.md)
 - [Encoding]()
 - [Image processing](./image-processing.md)
