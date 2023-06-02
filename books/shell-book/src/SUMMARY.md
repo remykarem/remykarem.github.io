@@ -37,7 +37,9 @@
 
 - [Write to file from clipboard](./write-to-file-from-clipboard.md)
 - [Text processing](./text-processing.md)
+  - [Get and remove lines](./file.md)
+  - [Append and prepend](./line-manipulation.md)
   - [Search and replace](./search-and-replace.md)
-  - [Line manipulation](./line-manipulation.md)
-  - [File](./file.md)
+  - [Split](./split.md)
+- [Encoding]()
 - [Image processing](./image-processing.md)
