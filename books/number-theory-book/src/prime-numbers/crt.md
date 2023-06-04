@@ -9,7 +9,7 @@ x \equiv_{n_3} a_3 \\
 ...
 $$
 
-if $n_i$ are **pairwise coprime**, 
+if $n_i$ are **pairwise coprime**,
 
 then there exists a solution
 
@@ -18,6 +18,40 @@ x \equiv_N s
 $$
 
 where $N = \prod_i n_i$.
+
+## Intution
+
+This is like finding the 'common denominator' when we perform arithmetic with fractions.
+
+In fraction arithmetic, we first need to find the 'common denominator'.
+
+When finding the common denominator, we update the values of both the numerator and denominator. We also need to know what to multiply to the respective denominators.
+
+| numerator | denominator   | diff       | new numerator        | new denominator      |
+| --------- | ------------- | ---------- | -------------------- | -------------------- |
+| $n_1$     | $d_1$         | $d_2, d_3$ | $n_1 \times d_2 d_3$ | $d_1 \times d_2 d_3$ |
+| $n_2$     | $d_2$         | $d_1, d_3$ | $n_2 \times d_1 d_3$ | $d_2 \times d_1 d_3$ |
+| $n_3$     | $d_3$         | $d_1, d_2$ | $n_3 \times d_1 d_2$ | $d_3 \times d_1 d_2$ |
+|           | $d_1 d_2 d_3$ |            | (sum)                | $d_1 d_2 d_3$        |
+
+so the new denominator is $n_1 n_2 n_3$ and the new numberator is the (sum).
+
+Similarly in modular arithmetic, we want to find the 'common modulus'.
+
+When finding the common modulus, we update the remainder and the modulus. We also need to know what to multiply to the respective moduli.
+
+| r     | mod           | diff       | new r                | new mod              |
+| ----- | ------------- | ---------- | -------------------- | -------------------- |
+| $r_1$ | $n_1$         | $n_2, n_3$ | $r_1 \times n_2 n_3$ | $n_1 \times n_2 n_3$ |
+| $r_2$ | $n_2$         | $n_1, n_3$ | $r_2 \times n_1 n_3$ | $n_2 \times n_1 n_3$ |
+| $r_3$ | $n_3$         | $n_1, n_2$ | $r_3 \times n_1 n_2$ | $n_3 \times n_1 n_2$ |
+|       | $n_1 n_2 n_3$ |            | (sum)                | $n_1 n_2 n_3$        |
+
+so the new modulo is $n_1 n_2 n_3$ and the new remainder is the (sum).
+
+The only difference is that **multiplication is under a modulo**. This means the way we find the inverses for mod is using **modular multiplicative inverse**.
+
+This 'diff' for moduli is known as the *CRT coefficient*.
 
 ```admonish example title="Example 1"
 
@@ -101,12 +135,18 @@ $$
 
 which has a solution since $p$ and $q$ are pairwise coprime (because they are prime).
 
-We can simplify this system of congruences using Euler's theorem. Because $p$ and $q$ are prime, then
+We can simplify this system of congruences using Euler's theorem:
 
 $$
 m \equiv_p c^d \equiv_p c^{d \bmod (p-1)} \\
 m \equiv_q c^d \equiv_q c^{d \bmod (q-1)} \\
 $$
+
+Therefore, the values
+* $d \bmod (p-1)$ and
+* $d \bmod (q-1)$
+
+can be computed once.
 
 Working:
 

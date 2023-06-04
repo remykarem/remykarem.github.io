@@ -51,7 +51,10 @@
       - [Fermat's little theorem](./prime-numbers/fermats-little-theorem.md)
       - [Euler's theorem](./prime-numbers/eulers-theorem.md)
       - [CRT](./prime-numbers/crt.md)
+      - [Sum of two squares theorem](./prime-numbers/sum-of-two-squares-theorem.md)
+      - [My own theorem](./prime-numbers/my-own-theorem.md)
 - [Nonprime numbers]()
+  - [Pythagorean Theorem](./pythagorean-theorem.md)
   - [Fermat's Last Theorem](./fermats-last-theorem.md)
 ---
 
