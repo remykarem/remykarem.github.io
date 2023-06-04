@@ -1,14 +1,13 @@
 # Append and prepend
 
-## Append a string before
+## Prepend to a string
 
 ```sh
-awk '{printf "ooo"}1'
+awk '{printf $0"ooo"}'
 ```
 
-or
+## Append to a string
 
 ```sh
-echo "$(cat filename)_suffix"
+awk '{printf "ooo"$0}'
 ```
-
