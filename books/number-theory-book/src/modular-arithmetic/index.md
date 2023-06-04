@@ -5,19 +5,25 @@
 $a$ is said to be **congruent** to $b$ modulo $m$.
 
 $$
-a \equiv_m b
+a \equiv_n b
 $$
 
 or
 
 $$
-a \equiv b (\bmod m)
+a \equiv b (\bmod n)
 $$
 
 or 
 
 $$
-a = b + km
+a = b + kn
+$$
+
+This means that
+
+$$
+b = a \bmod n
 $$
 
 ```admonish note title="Example"

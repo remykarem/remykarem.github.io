@@ -101,6 +101,13 @@ $$
 
 which has a solution since $p$ and $q$ are pairwise coprime (because they are prime).
 
+We can simplify this system of congruences using Euler's theorem. Because $p$ and $q$ are prime, then
+
+$$
+m \equiv_p c^d \equiv_p c^{d \bmod (p-1)} \\
+m \equiv_q c^d \equiv_q c^{d \bmod (q-1)} \\
+$$
+
 Working:
 
          a       n          n m    y              a*m*y
