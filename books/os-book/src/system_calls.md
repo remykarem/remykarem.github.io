@@ -24,15 +24,21 @@ exit(1);
   }
 ```
 
-# Files
+## Files
 - `open`
 - `read`
 - `write`
 - `execve`
 
-# Networking
+## Networking
 - `connect`
 - `send`
 - `recv`
 - `sendto`
 - `recvfrom`
+
+# ABI: System calls reference
+
+- macOS: https://opensource.apple.com/source/xnu/xnu-1504.3.12/bsd/kern/syscalls.master
+- `man 2 syscall`
+- 

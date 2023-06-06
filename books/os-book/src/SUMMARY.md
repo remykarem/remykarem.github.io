@@ -1,5 +1,7 @@
 # Summary
 
+[Preface](./preface.md)
+
 # Virtualisation
 
 - [I/O](./io.md)

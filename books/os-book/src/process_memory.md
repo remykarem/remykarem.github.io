@@ -48,67 +48,103 @@ address data
 
 ## Process memory layout
 
+```
++----------------------------------+
+| text                             |  <- low address
++----------------------------------+
+| Initialised data segment         |
++----------------------------------+
+| Uninitialised data segment (BSS) |
++----------------------------------+
+|                                  |
+| Heap                             |
+|                                  |
++----------------------------------+
+|                                  |
+| (Unused memory)                  |
+|                                  |
++----------------------------------+
+|                                  |
+| Stack                            | 
+|                                  | <- high address
++----------------------------------+
+```
+
+```admonish note
+When people say stack grows "downwards", it means that the stack grows towards _lower_ memory address. It does not correspond to a physical direction.
+
+In Intel systems, stacks grow downwards.
+
+Note that these are conventions; actual layout varies depending on the OS.
+```
+
+Stack:
+
+```
++----------------------+
+| Current stack frame  | <- low address
++----------------------+
+| Stack frame          |
++----------------------+
+| Stack frame          | <- high address
++----------------------+
+```
+
+Stack frame:
+
+```
++-------------------+
+| Local variable n  | <- low address
++-------------------+
+| ...               |
++-------------------+
+| Local variable 2  |
++-------------------+
+| Local variable 1  |
++-------------------+
+| Old ebp           |
++-------------------+
+| Return address    |
++-------------------+
+| Argument 1        |
++-------------------+
+| Argument 2        |
++-------------------+
+| Argument 3        |
++-------------------+
+| ...               |
++-------------------+
+| Argument n        | <- high address
++-------------------+
+```
+
 - text
 - initialised data
 - uninitialised data
 - stack
     - a stack frame is added whenever a function is called
-
-    - in intel systems, stack grows *downwards* (high address to low address)
-
-    - a stack frame (notice it goes upwards)
 - heap
 
 
 [von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture).
 
 ```
-Address 
+1. caller (in caller)
+	 a. save registers
+	 b. push parameters on stack
+	 c. push return address on stack
 
-                                         0xdec3
-                                         0xdec2
-                                         0xdec1
-                                         0xdec0 <- rbp (0?) 
-            3c) ret;                     0xdebf         
-         move up thru                    0xdebe         
-                                         ..            function parameters
-                                         0xdeb2
-                                         0xdeb1
-                                         0xdeb0 <- rsp (1?) (initial rsp); where the stack pointer points at initially
-                                         0xdeaf // return address
-                                         0xdeae // return address
-                                         0xdead // return address
-                  (3c) ret;              0xdeac // return address
-       return to this address            0xdeab // return address
-                                         0xdeaa // return address
-                                         0xdea0 // return address
-                                         0xdea9 // return address
-$rsp moved up 8 bytes because value
-  of the previous base pointer is 
-  goes back into the RBP register
-                    pop rbp; (3b) rsp -> 0xdea8 <- rsp (1c) (call); $rsp moved down 8 bytes because a return address (8 bytes) is pushed
-                                         0xdea7 // prev. base pointer aka prev frame
-                                         0xdea6 // prev. base pointer aka prev frame
-                                         0xdea5 // prev. base pointer aka prev frame
-                                         0xdea4 // prev. base pointer aka prev frame
-                                         0xdea3 // prev. base pointer aka prev frame
-                                         0xdea2 // prev. base pointer aka prev frame
-                                         0xdea1 // prev. base pointer aka prev frame
-**$rsp moved up through 
-            local variables; (3a) rsp** -> 0xdea0 <- rsp (2a) push rbp; $rsp moved down 8 bytes because value of RBP is pushed.
-                                                <- rbp (2b) mov rbp,rsp; set $rbp's value to the value of $rsp
-                                                ******** new base pointer ********
-                                         0xde99 // local variables
-                                         0xde98 // local variables
-                                         0xde97 // local variables
-                                         0xde96 // local variables
-                                         0xde95 // local variables
-                                         0xde94 // local variables
-                                         0xde93 // local variables
-                                         0xde92 // local variables
-                                         0xde91 // local variables
-                                         0xde90 <- rsp (2c) sub rsp,0x10; $rsp moved down to make space for local variables
-                                                ******** new stack pointer ********
+2. callee (in function prolog) 
+	 a. push rbp
+	 b. mov rbp;rsp
+	 c. sub rsp,0x10
+
+3. callee (in function epilog)
+   a. add rsp,0x10
+   b. pop rbp
+   c. ret
+
+4. caller (after return)
 ```
 
 EAX used in multiplication and division

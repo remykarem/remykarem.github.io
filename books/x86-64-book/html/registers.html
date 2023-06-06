@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Preface - x86-64 Assembly Book</title>
+        <title>Registers - x86-64 Book</title>
 
 
         <!-- Custom HTML head -->
@@ -87,7 +87,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html" class="active">Preface</a></li><li class="chapter-item expanded "><a href="hello-world.html"><strong aria-hidden="true">1.</strong> Hello world</a></li><li class="chapter-item expanded "><a href="syscall.html"><strong aria-hidden="true">2.</strong> syscall</a></li><li class="chapter-item expanded "><a href="equ.html"><strong aria-hidden="true">3.</strong> equ</a></li><li class="chapter-item expanded "><a href="inc-and-labels.html"><strong aria-hidden="true">4.</strong> inc and labels</a></li><li class="chapter-item expanded "><a href="jmp-and-cmp.html"><strong aria-hidden="true">5.</strong> jmp and cmp</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="instructions.html"><strong aria-hidden="true">1.</strong> Instructions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="simd-instructions.html"><strong aria-hidden="true">1.1.</strong> SIMD instructions</a></li></ol></li><li class="chapter-item expanded "><a href="registers.html" class="active"><strong aria-hidden="true">2.</strong> Registers</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Assembly</li><li class="chapter-item expanded "><a href="syntax.html"><strong aria-hidden="true">3.</strong> Syntax</a></li><li class="chapter-item expanded "><a href="anatomy.html"><strong aria-hidden="true">4.</strong> Anatomy</a></li><li class="chapter-item expanded "><a href="hello-world.html"><strong aria-hidden="true">5.</strong> Hello world</a></li><li class="chapter-item expanded "><a href="syscall.html"><strong aria-hidden="true">6.</strong> syscall</a></li><li class="chapter-item expanded "><a href="equ.html"><strong aria-hidden="true">7.</strong> equ</a></li><li class="chapter-item expanded "><a href="inc-and-labels.html"><strong aria-hidden="true">8.</strong> inc and labels</a></li><li class="chapter-item expanded "><a href="jmp-and-cmp.html"><strong aria-hidden="true">9.</strong> jmp and cmp</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -120,7 +120,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">x86-64 Assembly Book</h1>
+                    <h1 class="menu-title">x86-64 Book</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -155,31 +155,70 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="preface"><a class="header" href="#preface">Preface</a></h1>
-<p><code>run.sh</code>:</p>
-<pre><code class="language-bash">nasm -f macho64 $1.asm &amp;&amp; \
-
-ld -L /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib \
-  -lSystem \
-  -macosx_version_min 10.12 \
-  -no_pie \
-  $1.o &amp;&amp; \
-
-./a.out
+                        <h1 id="registers"><a class="header" href="#registers">Registers</a></h1>
+<p>Internal memory storage location. Nearly all computer load data from main memory into registers in order to perform computations</p>
+<ul>
+<li>General register
+<ul>
+<li>Data register</li>
+<li>Pointer register</li>
+<li>Index register</li>
+</ul>
+</li>
+<li>Control register</li>
+<li>Segment register</li>
+</ul>
+<p>Operands can be</p>
+<ul>
+<li>Immediate values eg. `` <code>$0x5</code></li>
+<li>Registers eg. <code>%eax</code></li>
+<li>Memory address eg.  <code>%rbp</code></li>
+<li>Labels (?)</li>
+</ul>
+<pre><code>	 8   4    2   1
+%rax %eax %ax %al  accumulator
+%rbx %ebx %bx %bl  base
+%rcx %ecx %cx %cl  counter
+%rdx %edx %dx %dl  data
 </code></pre>
-<p>Run with</p>
-<pre><code class="language-bash">./run.sh 02-syscall
+<pre><code class="language-python">%rsi %esi %si %sil   source idx. function param
+%rdi %edi %di %dil   dest idx. function param
 </code></pre>
-<p>Others:</p>
-<p>Registers for syscall arguments: rdi, rsi, rdx, rcx, r8, r9
-https://en.wikipedia.org/wiki/X86_calling_conventions#x86-64_Calling_Conventions</p>
+<pre><code class="language-python">%rbp %eax %ax %al base pointer
+%rsp %eax %ax %al stack pointer
+</code></pre>
+<pre><code class="language-wasm">%r8 %eax %ax %al function param
+%r9 %eax %ax %al function param
+</code></pre>
+<pre><code class="language-wasm">%r10 %eax %ax %al
+%r11 %eax %ax %al
+</code></pre>
+<pre><code class="language-wasm">%r12 %eax %ax %al
+%r13 %eax %ax %al
+%r14 %eax %ax %al
+%r15 %eax %ax %al
+</code></pre>
+<p>Other registers</p>
+<pre><code>%rip instruction pointer
+</code></pre>
+<p>Note: %rbp always has a higher value than %rsp because the stack starts at a high memory address and grows downwards.</p>
+<pre><code class="language-wasm">Suffixes for instructions
+b = byte = 8 bits
+w = word = 16 bits = 1 byte
+l = long = 32 bits = 4 bytes
+q = quadword = 64 bits = 8 bytes
+t = ten bytes = 80 bits = 80 bytes
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="simd-instructions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
-                            <a rel="next" href="hello-world.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="syntax.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -189,8 +228,11 @@ https://en.wikipedia.org/wiki/X86_calling_conventions#x86-64_Calling_Conventions
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="simd-instructions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
-                    <a rel="next" href="hello-world.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="syntax.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

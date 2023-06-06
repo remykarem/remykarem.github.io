@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>I/O - os-book</title>
+        <title>Preface - os-book</title>
 
 
         <!-- Custom HTML head -->
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="io.html" class="active"><strong aria-hidden="true">1.</strong> I/O</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Process abstraction</div></li><li class="chapter-item expanded "><a href="process_memory.html"><strong aria-hidden="true">3.</strong> Process memory</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Process scheduling</div></li><li class="chapter-item expanded "><a href="threads.html"><strong aria-hidden="true">5.</strong> Threads</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Inter-process communication</div></li><li class="chapter-item expanded "><a href="memory_management.html"><strong aria-hidden="true">7.</strong> Memory management</a></li><li class="chapter-item expanded "><a href="system_calls.html"><strong aria-hidden="true">8.</strong> System calls</a></li><li class="chapter-item expanded "><a href="vectorisation.html"><strong aria-hidden="true">9.</strong> Vectorisation</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="file_system_management.html"><strong aria-hidden="true">11.</strong> File system management</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Disk scheduling</div></li><li class="chapter-item expanded "><a href="shell.html"><strong aria-hidden="true">13.</strong> Shell</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html" class="active">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="io.html"><strong aria-hidden="true">1.</strong> I/O</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Process abstraction</div></li><li class="chapter-item expanded "><a href="process_memory.html"><strong aria-hidden="true">3.</strong> Process memory</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Process scheduling</div></li><li class="chapter-item expanded "><a href="threads.html"><strong aria-hidden="true">5.</strong> Threads</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Inter-process communication</div></li><li class="chapter-item expanded "><a href="memory_management.html"><strong aria-hidden="true">7.</strong> Memory management</a></li><li class="chapter-item expanded "><a href="system_calls.html"><strong aria-hidden="true">8.</strong> System calls</a></li><li class="chapter-item expanded "><a href="vectorisation.html"><strong aria-hidden="true">9.</strong> Vectorisation</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="file_system_management.html"><strong aria-hidden="true">11.</strong> File system management</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Disk scheduling</div></li><li class="chapter-item expanded "><a href="shell.html"><strong aria-hidden="true">13.</strong> Shell</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,22 +149,63 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="io"><a class="header" href="#io">I/O</a></h1>
-<p>There is a buffer for output so the actual writing of file may not happen untill we close the file</p>
-<h1 id="file-io"><a class="header" href="#file-io">File I/O</a></h1>
-<p>What happens when you <code>read()</code> a file?</p>
-<ol>
-<li>Transfer control to the kernel using system call</li>
-<li>Interact with the physical disk where the file resides</li>
-<li>Copy the data into different buffers between user space and kernel space</li>
-</ol>
+                        <h1 id="preface"><a class="header" href="#preface">Preface</a></h1>
+<p>An operating system is a system software that manages computer hardware, software resources, and provides common services</p>
+<p>Everything is either a file or a process.</p>
+<p>Programs can run simultaneously.</p>
+<p>But since each program is going to need some memory, and we can’t lose that data when we switch to another program, what the OS does is to allocate a bunch of memory addresses to each program.</p>
+<p>If a program asks for more memory, the new blocks of memory allocated may not be sequential. This can be confusing for programmers to keep track of, so OS virtualises memory locations, using <strong>virtual memory</strong>.</p>
+<p>With virtual memory, programs can assume their memory always starts at address 0x00. Virtual memory also helps in <strong>memory protection</strong>, where a program will not have memory access to another program.</p>
+<p><strong>OSes</strong></p>
+<ul>
+<li>Unix-like
+<ul>
+<li>Linux distributions
+<ul>
+<li>Red Hat Enterprise Linux</li>
+<li>Fedora</li>
+<li>Debian
+<ul>
+<li>Buster, aka Debian 10, 50MB</li>
+<li>Stretch, aka Debian 9, 40MB</li>
+<li>Jessie, aka Debian 8</li>
+</ul>
+</li>
+<li>Alpine Linux, 5MB</li>
+<li>Ubuntu (based on Debian), 25MB
+<ul>
+<li>16.04 LTS (Xenial Xerus)</li>
+<li>18.04 LTS (Bionic Beaver)</li>
+<li>19.10 (Eoan Ermine)wik</li>
+<li>20.04 LTS (Focal Fossa)</li>
+<li>20.10 (Groovy Gorilla)</li>
+</ul>
+</li>
+<li>Arch Linux</li>
+</ul>
+</li>
+<li>macOS (previously Darwin)</li>
+<li>BSD
+<ul>
+<li>NetBSD</li>
+<li>FreeBSD</li>
+<li>OpenBSD</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>MS-DOS</li>
+</ul>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<p>https://jiayushe.github.io/teaching/2021-spring-cs2106
+https://bernardteo.me/nus/CS2106%20Reference.pdf</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
-                            <a rel="next" href="process_memory.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="io.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -175,7 +216,7 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
-                    <a rel="next" href="process_memory.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="io.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
