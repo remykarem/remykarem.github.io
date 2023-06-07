@@ -21,6 +21,7 @@
     - [Application context](./concepts/application-context.md)
     - [Web servlet](./concepts/web-servlet.md)
     - [Filter](./concepts/filter.md)
+    - [Proxying](./concepts/proxying.md)
 - [Common starters](./common-starters.md)
 - [Gotchas](./gotchas.md)
 ---
