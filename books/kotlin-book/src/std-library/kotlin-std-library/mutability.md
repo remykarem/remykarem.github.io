@@ -9,7 +9,7 @@ State cannot be modified after it is created.
 ```admonish warning
 `List` is not actually immutable. Rather, it is compile-time read-only.
 
-You can cast a `List` into a `MutableList` and change the underlying data 😱.
+You can cast a `List` into a `MutableList` and change the underlying data at runtime 😱.
 ```
 
 Example how we can change the data in a `List`:

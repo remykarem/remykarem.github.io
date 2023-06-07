@@ -17,6 +17,7 @@
     - [use](./std-library/kotlin-std-library/use.md)
     - [Preconditions]()
     - [Result]()
+- [Modifiers](./modifiers.md)
 - [Classes and objects](./classes-and-objects/classes-and-objects.md)
     - [Class structure](./classes-and-objects/class-structure/class.md)
         - [Methods](./classes-and-objects/class-structure/methods.md)
@@ -65,6 +66,7 @@
 
 # Toolchain
 
+- [Compiler plugin](./compiler-plugin.md)
 - [JSR](./jsr.md)
 - [Compile and build](./compile-and-build/compile-and-build.md)
     - [Compile](./compile-and-build/compile.md)
