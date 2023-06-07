@@ -57,16 +57,16 @@
 
 ---
 
-# Security
+# Web security
 
 - [Links](./links.md)
 
 - [Attacks]()
+    - [CSRF](./csrf.md)
     - [XSS]()
     - [DOS]()
     - [SQL injection]()
     - [Command injection]()
-    - [CSRF]()
     - [Logs]()
     - [Clickjacking]()
     - [Directory traversal]()
@@ -74,5 +74,7 @@
     - [ARP cache poisoning](./arp-cache-poisoning.md)
     - [IP address spoofing](./ip-address-spoofing.md)
 - [Mitigation](./mitigation.md)
+    - [Anti-CSRF token](./mitigation/anti-csrf-token.md)
+    - [Same-Site cookie attribute](./mitigation/same-site-cookie-attribute.md)
     - [Rate-limiting]()
     - [Sanitise]()
