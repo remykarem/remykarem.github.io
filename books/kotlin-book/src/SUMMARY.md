@@ -4,17 +4,19 @@
 
 - [Java distributions](./java-distributions.md)
 - [Java setup](./java-setup.md)
-- [Std library](./std-library/std-library.md)
-    - [Kotlin std library](./std-library/kotlin-std-library/kotlin-std-library.md)
-        - [Types](./std-library/kotlin-std-library/types.md)
-        - [Collections](./std-library/kotlin-std-library/collections.md)
-        - [Mutability](./std-library/kotlin-std-library/mutability.md)
-        - [Scope functions](./std-library/kotlin-std-library/scope-functions.md)
-        - [use](./std-library/kotlin-std-library/use.md)
-        - [Preconditions]()
-        - [Result]()
-    - [Java std library](./std-library/java-std-library/index.md)
-        -  [Types](./std-library/java-std-library/types.md)
+
+---
+
+# Kotlin
+
+- [Standard library](./std-library/kotlin-std-library/kotlin-std-library.md)
+    - [Types](./std-library/kotlin-std-library/types.md)
+    - [Collections](./std-library/kotlin-std-library/collections.md)
+    - [Mutability](./std-library/kotlin-std-library/mutability.md)
+    - [Scope functions](./std-library/kotlin-std-library/scope-functions.md)
+    - [use](./std-library/kotlin-std-library/use.md)
+    - [Preconditions]()
+    - [Result]()
 - [Classes and objects](./classes-and-objects/classes-and-objects.md)
     - [Class structure](./classes-and-objects/class-structure/class.md)
         - [Methods](./classes-and-objects/class-structure/methods.md)
@@ -42,9 +44,7 @@
     - [With upper bounds](./generics/upper-bounds.md)
     - [With erased type](./generics/type-erasure.md)
     - [Variance]()
-- [Reflection](./reflection/reflection.md)
-    - [Kotlin](./reflection/kotlin.md)
-    - [Java](./reflection/java.md)
+- [Reflection](./reflection/kotlin.md)
 - [Control flow](./control-flow/control-flow.md)
     - [Local and non-local return](./control-flow/local-and-non-local-return.md)
 - [Annotation]()
@@ -52,6 +52,19 @@
 - [Java interoperability](./java-interoperability.md)
 - [Gotchas](./gotchas.md)
 - [Common design patterns](./common-design-patterns.md)
+
+---
+
+# Java
+
+- [Standard library](./std-library/java-std-library/index.md)
+    -  [Types](./std-library/java-std-library/types.md)
+- [Reflection](./reflection/java.md)
+
+---
+
+# Toolchain
+
 - [JSR](./jsr.md)
 - [Compile and build](./compile-and-build/compile-and-build.md)
     - [Compile](./compile-and-build/compile.md)
