@@ -12,3 +12,13 @@
 - [Alignment](./alignment.md)
 - [Arrays](./arrays.md)
 - [Multithreading](./multithreading.md)
+
+---
+
+# System calls
+
+- [File]()
+  - [Open](./system-calls/open.md)
+  - [Write](./system-calls/write.md)
+- [Socket]()
+  - [Create](./system-calls/socket/create.md)

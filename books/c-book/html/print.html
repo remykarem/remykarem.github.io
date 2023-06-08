@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Standard library</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.1.</strong> File</div></li></ol></li><li class="chapter-item expanded "><a href="memory-management.html"><strong aria-hidden="true">2.</strong> Memory management</a></li><li class="chapter-item expanded "><a href="data-structures.html"><strong aria-hidden="true">3.</strong> Data structures</a></li><li class="chapter-item expanded "><a href="simd-sse.html"><strong aria-hidden="true">4.</strong> SIMD SSE</a></li><li class="chapter-item expanded "><a href="strings.html"><strong aria-hidden="true">5.</strong> Strings</a></li><li class="chapter-item expanded "><a href="macros.html"><strong aria-hidden="true">6.</strong> Macros</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Preprocessor</div></li><li class="chapter-item expanded "><a href="function-pointer.html"><strong aria-hidden="true">8.</strong> Function pointer</a></li><li class="chapter-item expanded "><a href="alignment.html"><strong aria-hidden="true">9.</strong> Alignment</a></li><li class="chapter-item expanded "><a href="arrays.html"><strong aria-hidden="true">10.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="multithreading.html"><strong aria-hidden="true">11.</strong> Multithreading</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Standard library</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.1.</strong> File</div></li></ol></li><li class="chapter-item expanded "><a href="memory-management.html"><strong aria-hidden="true">2.</strong> Memory management</a></li><li class="chapter-item expanded "><a href="data-structures.html"><strong aria-hidden="true">3.</strong> Data structures</a></li><li class="chapter-item expanded "><a href="simd-sse.html"><strong aria-hidden="true">4.</strong> SIMD SSE</a></li><li class="chapter-item expanded "><a href="strings.html"><strong aria-hidden="true">5.</strong> Strings</a></li><li class="chapter-item expanded "><a href="macros.html"><strong aria-hidden="true">6.</strong> Macros</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Preprocessor</div></li><li class="chapter-item expanded "><a href="function-pointer.html"><strong aria-hidden="true">8.</strong> Function pointer</a></li><li class="chapter-item expanded "><a href="alignment.html"><strong aria-hidden="true">9.</strong> Alignment</a></li><li class="chapter-item expanded "><a href="arrays.html"><strong aria-hidden="true">10.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="multithreading.html"><strong aria-hidden="true">11.</strong> Multithreading</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">System calls</li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> File</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="system-calls/open.html"><strong aria-hidden="true">12.1.</strong> Open</a></li><li class="chapter-item expanded "><a href="system-calls/write.html"><strong aria-hidden="true">12.2.</strong> Write</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> Socket</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="system-calls/socket/create.html"><strong aria-hidden="true">13.1.</strong> Create</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -691,6 +691,51 @@ Thread 6: sum=72
 
 </code></pre>
 <p>Some kind of interleaving there naize. This is an example of <strong>embarrassingly parallel</strong>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="open"><a class="header" href="#open">Open</a></h1>
+<p>From <code>man 2 open</code>:</p>
+<pre><code class="language-c">int open(const char *path, int oflag, ...);
+</code></pre>
+<pre><code class="language-c">#include &lt;fcntl.h&gt;      // Needed for open()
+#include &lt;stdio.h&gt;      // Needed for perror()
+
+int main() {
+    int fd = open(&quot;example.txt&quot;, O_RDONLY);  // Open the file as read-only
+
+    if (fd == -1) {
+        perror(&quot;Error opening file&quot;);
+        return 1;
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="write"><a class="header" href="#write">Write</a></h1>
+<p>From <code>man 2 write</code>:</p>
+<pre><code class="language-c">ssize_t write(int fildes, const void *buf, size_t nbyte);
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-c">#include &lt;unistd.h&gt;
+
+int main() {
+    const char *message = &quot;Hello, World!\n&quot;;
+    write(1, message, 14);
+    return 0;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="create"><a class="header" href="#create">Create</a></h1>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+
+int main() {
+    // Address family is AF_INET = IPv4
+    // Type of socket is SOCK_STREAM = TCP
+    int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+    if (sockfd == -1) {
+        perror(&quot;Error creating socket&quot;);
+        return 1;
+    }
+}
+</code></pre>
 
                     </main>
 
