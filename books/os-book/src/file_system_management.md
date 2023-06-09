@@ -4,46 +4,63 @@ iNodes data structure
 
 Linux FHS (Filesystem Hierarchy Standard)
 
+`/`:
+
+| Folder  |                           |              | Examples            |
+| ------- | ------------------------- | ------------ | ------------------- |
+| `bin`  | Basic shell commands      | User         | `ls`                |
+| `sbin` | System binaries           | Admin        | `ifconfig`, `md5`   |
+| `lib`  | Source code for binaries  | User         | (not in macOS)      |
+| `etc`  | Configs                   | Admin        | `passwd`, `hosts`   |
+| `dev`  | Device files              |              | `stdout`, `ttys002` |
+| `home` | User data                 | User         | (not in macOS)      |
+| `opt`  | Optional software         | User         | `gradle`            |
+| `tmp`  | Temp files                | Applications |
+| `var`  | Runtime info like logging | Applications |                     |
+| `proc` | Process and kernel files  | ?            | `lscpu`             |
+
+`/usr`:
+
+| Folder   |                  |       | Examples |
+| -------- | ---------------- | ----- | -------- |
+| `bin`   | Binaries         | User  | `gcc`    |
+| `sbin`  | Binaries         | Admin |
+| `lib`   | System libraries | ?     |
+| `share` | Docs             | User  |
+
+`/usr/local`:
+
+| Folder        |                 |       | Examples               |
+| ------------- | --------------- | ----- | ---------------------- |
+| `bin`        | Binaries        | User  | `node`, `python3`      |
+| `opt`        | Binaries        | User  | `nasm`, `openssl`      |
+| `lib`        | Libraries       | User  | `libopencv_text.dylib` |
+| `include`    | Header files    | User  |
+| `sbin`       | System binaries | Admin |
+| `Frameworks` | ?               |       |
+
+macOS:
+
+| Hi              |
+| --------------- |
+| `Applications` |
+| `Library`      |
+| `System`       |
+| `Users`        |
+| `Volume`       |
+
+Home directory:
+
+| Folder          |     |     | Examples |
+| --------------- | --- | --- | -------- |
+| `Applications` |
+| `Desktop`      |
+| `.config`      |
+
+```admonish note
+* `etc` probably stands for "everything to configure"
+* Files in `tmp` are emptied when restarted
 ```
-├── bin  command binaries eg. ls, mv
-├── sbin bin for superuser eg. shutdown, reboot
-├── dev  device files (interface to devices)
-├── etc  "everything to configure"; system-wide config files
-├── home users’ home directories
-├── opt  optional application software packages eg. gradle
-├── tmp  temporary files
-├── lib  common libraries for system programs
-├── var  variable files (system and application logs) 
-    └── lib         State information. Persistent data modified by programs as they run (eg. databases)
-└── usr read-only user data
-    ├── bin         system-installed binaries eg. gcc
-    ├── lib         system-installed libraries (static & dynamic)
-    ├── libexec
-    ├── sbin
-    ├── share
-    ├── standalone
-    └── local
-        ├── Caskroom
-        ├── Cellar
-        ├── Frameworks
-        ├── Homebrew
-        ├── bin           user-installed binaries eg. rustc
-        ├── etc
-        ├── include       user-installed headers
-        ├── lib           user-installed libraries (static & dynamic)
-        ├── man
-        ├── opt
-        ├── remotedesktop
-        ├── share
-        ├── texlive
-        └── var
-```
-
-`/etc/hosts`
-
-map hostname to IP address
-
----
 
 a file is a stream of data
 

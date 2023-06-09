@@ -152,42 +152,65 @@
                         <h1 id="file-system-management"><a class="header" href="#file-system-management">File system management</a></h1>
 <p>iNodes data structure</p>
 <p>Linux FHS (Filesystem Hierarchy Standard)</p>
-<pre><code>├── bin  command binaries eg. ls, mv
-├── sbin bin for superuser eg. shutdown, reboot
-├── dev  device files (interface to devices)
-├── etc  &quot;everything to configure&quot;; system-wide config files
-├── home users’ home directories
-├── opt  optional application software packages eg. gradle
-├── tmp  temporary files
-├── lib  common libraries for system programs
-├── var  variable files (system and application logs) 
-    └── lib         State information. Persistent data modified by programs as they run (eg. databases)
-└── usr read-only user data
-    ├── bin         system-installed binaries eg. gcc
-    ├── lib         system-installed libraries (static &amp; dynamic)
-    ├── libexec
-    ├── sbin
-    ├── share
-    ├── standalone
-    └── local
-        ├── Caskroom
-        ├── Cellar
-        ├── Frameworks
-        ├── Homebrew
-        ├── bin           user-installed binaries eg. rustc
-        ├── etc
-        ├── include       user-installed headers
-        ├── lib           user-installed libraries (static &amp; dynamic)
-        ├── man
-        ├── opt
-        ├── remotedesktop
-        ├── share
-        ├── texlive
-        └── var
-</code></pre>
-<p><code>/etc/hosts</code></p>
-<p>map hostname to IP address</p>
-<hr />
+<p><code>/</code>:</p>
+<div class="table-wrapper"><table><thead><tr><th>Folder</th><th></th><th></th><th>Examples</th></tr></thead><tbody>
+<tr><td><code>bin</code></td><td>Basic shell commands</td><td>User</td><td><code>ls</code></td></tr>
+<tr><td><code>sbin</code></td><td>System binaries</td><td>Admin</td><td><code>ifconfig</code>, <code>md5</code></td></tr>
+<tr><td><code>lib</code></td><td>Source code for binaries</td><td>User</td><td>(not in macOS)</td></tr>
+<tr><td><code>etc</code></td><td>Configs</td><td>Admin</td><td><code>passwd</code>, <code>hosts</code></td></tr>
+<tr><td><code>dev</code></td><td>Device files</td><td></td><td><code>stdout</code>, <code>ttys002</code></td></tr>
+<tr><td><code>home</code></td><td>User data</td><td>User</td><td>(not in macOS)</td></tr>
+<tr><td><code>opt</code></td><td>Optional software</td><td>User</td><td><code>gradle</code></td></tr>
+<tr><td><code>tmp</code></td><td>Temp files</td><td>Applications</td><td></td></tr>
+<tr><td><code>var</code></td><td>Runtime info like logging</td><td>Applications</td><td></td></tr>
+<tr><td><code>proc</code></td><td>Process and kernel files</td><td>?</td><td><code>lscpu</code></td></tr>
+</tbody></table>
+</div>
+<p><code>/usr</code>:</p>
+<div class="table-wrapper"><table><thead><tr><th>Folder</th><th></th><th></th><th>Examples</th></tr></thead><tbody>
+<tr><td><code>bin</code></td><td>Binaries</td><td>User</td><td><code>gcc</code></td></tr>
+<tr><td><code>sbin</code></td><td>Binaries</td><td>Admin</td><td></td></tr>
+<tr><td><code>lib</code></td><td>System libraries</td><td>?</td><td></td></tr>
+<tr><td><code>share</code></td><td>Docs</td><td>User</td><td></td></tr>
+</tbody></table>
+</div>
+<p><code>/usr/local</code>:</p>
+<div class="table-wrapper"><table><thead><tr><th>Folder</th><th></th><th></th><th>Examples</th></tr></thead><tbody>
+<tr><td><code>bin</code></td><td>Binaries</td><td>User</td><td><code>node</code>, <code>python3</code></td></tr>
+<tr><td><code>opt</code></td><td>Binaries</td><td>User</td><td><code>nasm</code>, <code>openssl</code></td></tr>
+<tr><td><code>lib</code></td><td>Libraries</td><td>User</td><td><code>libopencv_text.dylib</code></td></tr>
+<tr><td><code>include</code></td><td>Header files</td><td>User</td><td></td></tr>
+<tr><td><code>sbin</code></td><td>System binaries</td><td>Admin</td><td></td></tr>
+<tr><td><code>Frameworks</code></td><td>?</td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<p>macOS:</p>
+<div class="table-wrapper"><table><thead><tr><th>Hi</th></tr></thead><tbody>
+<tr><td><code>Applications</code></td></tr>
+<tr><td><code>Library</code></td></tr>
+<tr><td><code>System</code></td></tr>
+<tr><td><code>Users</code></td></tr>
+<tr><td><code>Volume</code></td></tr>
+</tbody></table>
+</div>
+<p>Home directory:</p>
+<div class="table-wrapper"><table><thead><tr><th>Folder</th><th></th><th></th><th>Examples</th></tr></thead><tbody>
+<tr><td><code>Applications</code></td><td></td><td></td><td></td></tr>
+<tr><td><code>Desktop</code></td><td></td><td></td><td></td></tr>
+<tr><td><code>.config</code></td><td></td><td></td><td></td></tr>
+</tbody></table>
+</div><div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<ul>
+<li><code>etc</code> probably stands for &quot;everything to configure&quot;</li>
+<li>Files in <code>tmp</code> are emptied when restarted</li>
+</ul>
+</div>
+</div>
 <p>a file is a stream of data</p>
 <p>The OS provides 3 files that are always open to every running process:</p>
 <ul>
