@@ -18,18 +18,18 @@
     - [Preconditions]()
     - [Result]()
 - [Modifiers](./modifiers.md)
+- [Class structure](./classes-and-objects/class-structure/class.md)
+    - [Methods](./classes-and-objects/class-structure/methods.md)
+    - [Companion object](./classes-and-objects/class-structure/companion-object.md)
+    - [Property](./classes-and-objects/class-structure/property.md)
+        - [With getter](./classes-and-objects/class-structure/property-with-getter.md)
+        - [With setter](./classes-and-objects/class-structure/property-with-setter.md)
+        - [With getter and setter](./classes-and-objects/class-structure/property-with-getter-and-setter.md)
+        - [Lazy property](./classes-and-objects/class-structure/lazy-property.md)
+        - [Late-init property](./classes-and-objects/class-structure/late-init-property.md)
+    - [Constructor](./classes-and-objects/class-structure/constructor.md)
+    - [Initializer block](./classes-and-objects/class-structure/initializer-block.md)
 - [Classes and objects](./classes-and-objects/classes-and-objects.md)
-    - [Class structure](./classes-and-objects/class-structure/class.md)
-        - [Methods](./classes-and-objects/class-structure/methods.md)
-        - [Companion object](./classes-and-objects/class-structure/companion-object.md)
-        - [Property](./classes-and-objects/class-structure/property.md)
-            - [With getter](./classes-and-objects/class-structure/property-with-getter.md)
-            - [With setter](./classes-and-objects/class-structure/property-with-setter.md)
-            - [With getter and setter](./classes-and-objects/class-structure/property-with-getter-and-setter.md)
-            - [Lazy property](./classes-and-objects/class-structure/lazy-property.md)
-            - [Late-init property](./classes-and-objects/class-structure/late-init-property.md)
-        - [Constructor](./classes-and-objects/class-structure/constructor.md)
-        - [Initializer block](./classes-and-objects/class-structure/initializer-block.md)
     - [Interface](./classes-and-objects/interface.md)
     - [Data class](./classes-and-objects/data-class.md)
     - [Object](./classes-and-objects/object.md)
@@ -60,14 +60,26 @@
 
 - [Standard library](./std-library/java-std-library/index.md)
     -  [Types](./std-library/java-std-library/types.md)
+- [Record]()
 - [Reflection](./reflection/java.md)
+
+---
+
+# JSRs
+
+- [What is JSR?](./jsr/what-is-jsr.md)
+- [Database]()
+  - [ORM: JPA](./jsr/jpa.md)
+  - [Database access: JDBC](./jsr/jdbc.md)
+- [Dependency injection](./jsr/dependency-injection.md)
+- [Validation](./jsr/validation.md)
+- [Others](./jsr/others.md)
 
 ---
 
 # Toolchain
 
 - [Compiler plugin](./compiler-plugin.md)
-- [JSR](./jsr.md)
 - [Compile and build](./compile-and-build/compile-and-build.md)
     - [Compile](./compile-and-build/compile.md)
     - [Decompile](./compile-and-build/decompile.md)

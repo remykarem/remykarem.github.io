@@ -59,7 +59,8 @@ fun main() {
 }
 ```
 
-⚠️ Be careful of recursion which will lead to stack overflow - the compiler doesn't warn. The following example set `age` to 20, which calls `alterAge`, which in turn sets `this.age`, which calls `alterAge`,  which in turn sets `this.age`, ...
+~~~admonish bug title="Unintended recursion"
+Be careful of recursion which will lead to stack overflow — the compiler doesn't warn. The following example set `age` to 20, which calls `alterAge`, which in turn sets `this.age`, which calls `alterAge`,  which in turn sets `this.age`, ...
 
 ```kotlin
 class Person {
@@ -79,6 +80,7 @@ fun main() {
 	println(person.age)
 }
 ```
+~~~
 
 Like a getter, you can set the setter to be private:
 

@@ -22,7 +22,8 @@ fun main() {
 }
 ```
 
-⚠️ Gotcha: You have to remember to catch the exception yourself if the parse fails (yucks) (instead of the API returning a nullable). Below will throw an `IllegalArgumentException`:
+~~~admonish warning title="Gotcha"
+You have to remember to catch the exception yourself if the parse fails (yucks) (instead of the API returning a nullable). Below will throw an `IllegalArgumentException`:
 
 ```kotlin
 enum class Status {
@@ -35,6 +36,7 @@ fun main() {
     println(status)
 }
 ```
+~~~
 
 [Reference](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/enum-value-of.html)
 
