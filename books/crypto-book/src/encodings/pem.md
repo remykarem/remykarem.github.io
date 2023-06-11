@@ -3,7 +3,7 @@
 Common filenames: `.pem`, `.key`
 
 The PEM (Privacy-Enhanced Mail) encoding is a text with
-1. Base64-encoded DER wrapped to 64 characters per line,
+1. Base64-encoded binary encoding (like DER) wrapped to 64 characters per line,
 2. a header, and
 3. a footer.
 
@@ -11,6 +11,7 @@ Some formats it can hold:
 * PKCS #1
 * PKCS #8
 * ECPrivateKey
+* SSH2
     
 Examples:
 
