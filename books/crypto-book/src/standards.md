@@ -1,9 +1,12 @@
 # Other standards
 
-* [RFC 7518](https://datatracker.ietf.org/doc/html/rfc7518) - JSON Web Algorithms (JWA)
 * [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards) - Federal Information Processing Standards (FIPS)
-* ASN.1
 * PKCS #5 describes some password-based encryption algorithm to encrypt the private key information.
+* JSON Object Signing and Encryption (JOSE)
+  * [RFC 7518](https://datatracker.ietf.org/doc/html/rfc7518) - JSON Web Algorithms (JWA)
+  * [RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) - JSON Web Signatures (JWS)
+  * [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519) - JSON Web Token (JWT)
+  * [RFC 7516](https://datatracker.ietf.org/doc/html/rfc7516) - JSON Web Encryption (JWE)
 
 Organisations
 * [NIST](https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology) - National Institute of Standards and Technology
