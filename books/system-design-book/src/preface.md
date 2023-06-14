@@ -17,3 +17,5 @@ Load balancing: The process of distributing the load across multiple instances o
 Monitoring and logging: The process of collecting and analyzing data about the performance and behavior of a system, in order to identify and address problems and to improve the overall performance and reliability of the system.
 
 Security: The process of protecting a system and its data from unauthorized access, modification, or theft.
+
+https://github.com/donnemartin/system-design-primer

@@ -59,6 +59,7 @@
     - [Communication models](./communication-models.md)
     - [Network architectures](./network-architectures.md)
 - [Software architecture](./software-architecture.md)
+- [Web architecture & software architecture](./web-architecture-and-software-architecture.md)
 - [Availability and fault tolerance]()
     - [Deployment strategies](./deployment-strategies.md)
 - [Performance optimization]()
