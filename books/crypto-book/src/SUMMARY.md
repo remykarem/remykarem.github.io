@@ -56,17 +56,6 @@
 
 # Encodings, formats, structures, standards
 
-- [Interface description language]()
-    - [Binary]()
-        - [ASN.1]()
-        - [Protocol Buffers]()
-    - [Text]()
-        - [?]()
-- [Format]()
-    - [Binary]()
-    - [Text]()
-      - [JSON]()
-      - [XML]()
 - [Encodings / formats](./encodings/index.md)
     - [Text]()
         - [PEM](./encodings/pem.md)
