@@ -46,3 +46,11 @@
 - [Resource allocation and prioritization.]()
 
 - [Unique numbers](./unique-numbers.md)
+
+---
+
+# Interface description language
+
+- [ASN.1](./asn1.md)
+- [Protobuf](./protobuf.md)
+- [OpenAPI]()

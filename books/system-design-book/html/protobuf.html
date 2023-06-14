@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>CDN - system-design-book</title>
+        <title>Protobuf - system-design-book</title>
 
 
         <!-- Custom HTML head -->
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Core concepts</li><li class="chapter-item expanded "><div>Availability</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Database</div></li><li class="chapter-item expanded "><div>Services</div></li></ol></li><li class="chapter-item expanded "><div>Consistency</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Strong consistency</div></li><li class="chapter-item expanded "><div>Weak consistency</div></li><li class="chapter-item expanded "><div>Eventual consistency</div></li></ol></li><li class="chapter-item expanded "><div>Scalability</div></li><li class="chapter-item expanded "><div>Monitoring</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Tings</li><li class="chapter-item expanded "><div>Load balancer</div></li><li class="chapter-item expanded "><div>Reverse proxy</div></li><li class="chapter-item expanded "><div>Cache</div></li><li class="chapter-item expanded "><div>Database</div></li><li class="chapter-item expanded "><div>Queue</div></li><li class="chapter-item expanded "><div>API gateway</div></li><li class="spacer"></li><li class="chapter-item expanded "><a href="cdn.html" class="active">CDN</a></li><li class="chapter-item expanded "><div>Data storage and retrieval</div></li><li class="chapter-item expanded "><div>Network architecture and communication protocols</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="api-design.html">API design</a></li><li class="chapter-item expanded "><a href="connections.html">Connections</a></li><li class="chapter-item expanded "><a href="communication-models.html">Communication models</a></li><li class="chapter-item expanded "><a href="network-architectures.html">Network architectures</a></li></ol></li><li class="chapter-item expanded "><a href="software-architecture.html">Software architecture</a></li><li class="chapter-item expanded "><a href="web-architecture-and-software-architecture.html">Web architecture & software architecture</a></li><li class="chapter-item expanded "><div>Availability and fault tolerance</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="deployment-strategies.html">Deployment strategies</a></li></ol></li><li class="chapter-item expanded "><div>Performance optimization</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="load-testing.html">Load testing</a></li></ol></li><li class="chapter-item expanded "><div>Content delivery</div></li><li class="chapter-item expanded "><div>Resource allocation and prioritization.</div></li><li class="chapter-item expanded "><a href="unique-numbers.html">Unique numbers</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Interface description language</li><li class="chapter-item expanded "><a href="asn1.html">ASN.1</a></li><li class="chapter-item expanded "><a href="protobuf.html">Protobuf</a></li><li class="chapter-item expanded "><div>OpenAPI</div></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Core concepts</li><li class="chapter-item expanded "><div>Availability</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Database</div></li><li class="chapter-item expanded "><div>Services</div></li></ol></li><li class="chapter-item expanded "><div>Consistency</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Strong consistency</div></li><li class="chapter-item expanded "><div>Weak consistency</div></li><li class="chapter-item expanded "><div>Eventual consistency</div></li></ol></li><li class="chapter-item expanded "><div>Scalability</div></li><li class="chapter-item expanded "><div>Monitoring</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Tings</li><li class="chapter-item expanded "><div>Load balancer</div></li><li class="chapter-item expanded "><div>Reverse proxy</div></li><li class="chapter-item expanded "><div>Cache</div></li><li class="chapter-item expanded "><div>Database</div></li><li class="chapter-item expanded "><div>Queue</div></li><li class="chapter-item expanded "><div>API gateway</div></li><li class="spacer"></li><li class="chapter-item expanded "><a href="cdn.html">CDN</a></li><li class="chapter-item expanded "><div>Data storage and retrieval</div></li><li class="chapter-item expanded "><div>Network architecture and communication protocols</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="api-design.html">API design</a></li><li class="chapter-item expanded "><a href="connections.html">Connections</a></li><li class="chapter-item expanded "><a href="communication-models.html">Communication models</a></li><li class="chapter-item expanded "><a href="network-architectures.html">Network architectures</a></li></ol></li><li class="chapter-item expanded "><a href="software-architecture.html">Software architecture</a></li><li class="chapter-item expanded "><a href="web-architecture-and-software-architecture.html">Web architecture & software architecture</a></li><li class="chapter-item expanded "><div>Availability and fault tolerance</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="deployment-strategies.html">Deployment strategies</a></li></ol></li><li class="chapter-item expanded "><div>Performance optimization</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="load-testing.html">Load testing</a></li></ol></li><li class="chapter-item expanded "><div>Content delivery</div></li><li class="chapter-item expanded "><div>Resource allocation and prioritization.</div></li><li class="chapter-item expanded "><a href="unique-numbers.html">Unique numbers</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Interface description language</li><li class="chapter-item expanded "><a href="asn1.html">ASN.1</a></li><li class="chapter-item expanded "><a href="protobuf.html" class="active">Protobuf</a></li><li class="chapter-item expanded "><div>OpenAPI</div></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,21 +149,36 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="cdn"><a class="header" href="#cdn">CDN</a></h1>
-<p>Content Delivery Network</p>
-<p>A set of distributed servers work together to efficiently deliver Internet content, improving loading speed and reliability.</p>
+                        <h1 id="protobuf"><a class="header" href="#protobuf">Protobuf</a></h1>
+<p>With a <strong>proto definition</strong>,</p>
+<pre><code class="language-go">message Person {
+  optional string name = 1;
+  optional int32 id = 2;
+  optional string email = 3;
+}
+</code></pre>
+<p>you can generate classes (in various programming languages) and use them to serialise/deserialise (&quot;encode&quot;/&quot;decode&quot;) data (eg. John Doe with email address jdoe@example.com):</p>
+<pre><code class="language-java">Person john = Person.newBuilder()
+    .setId(1234)
+    .setName(&quot;John Doe&quot;)
+    .setEmail(&quot;jdoe@example.com&quot;)
+    .build();
+output = new FileOutputStream(args[0]);
+john.writeTo(output);
+</code></pre>
+<p>into binary (not real):</p>
+<pre><code>08 96 01 7f
+</code></pre>
+<p>Examples adapted from https://protobuf.dev.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="preface.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="asn1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="api-design.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -171,13 +186,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="preface.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="asn1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="api-design.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
