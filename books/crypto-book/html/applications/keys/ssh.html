@@ -157,6 +157,16 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="ssh"><a class="header" href="#ssh">SSH</a></h1>
+<p>Generate a new key pair.</p>
+<pre><code>ssh-keygen -t &lt;alg&gt; -b 2048
+</code></pre>
+<p>Convert OpenSSH public key into SSH2 public key: </p>
+<pre><code>ssh-keygen -e -f &lt;public-key-filename&gt; &gt; &lt;new-public-key-filename&gt;
+</code></pre>
+<p>Convert from OpenSSH private key to PKCS #1 private key</p>
+<pre><code>ssh-keygen -p -m PEM -f filename
+</code></pre>
+<p>Run <code>man ssh-keygen</code> for more info.</p>
 
                     </main>
 
