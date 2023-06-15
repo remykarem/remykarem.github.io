@@ -3,7 +3,7 @@ authors = ["Raimi"]
 language = "en"
 multilingual = false
 src = "src"
-title = "crypto-book"
+title = "Book of Cryptography"
 
 [output.html]
 site-url = "/books/crypto-book"
