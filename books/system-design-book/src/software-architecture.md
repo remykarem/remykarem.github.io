@@ -1,4 +1,0 @@
-# Software architecture
-
-* Monolith
-* Microservice
