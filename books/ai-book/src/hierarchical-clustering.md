@@ -20,3 +20,9 @@ Examples of linkage criteria:
 - Average linkage (average between pairs)
 - Ward
 - Centroid
+
+![Hierarchical clustering](hierarchical-clustering-1.png)
+![Hierarchical clustering](hierarchical-clustering-2.png)
+![Hierarchical clustering](hierarchical-clustering-3.png)
+![Hierarchical clustering](hierarchical-clustering-4.png)
+![Hierarchical clustering](hierarchical-clustering-5.png)
