@@ -45,6 +45,12 @@
 
 ---
 
+# Connections
+
+- [Connections & connection pooling]()
+
+---
+
 # Concurrency control
 
 - [Concurrency in DBMS](./concurrency/concurrency.md)
@@ -62,8 +68,6 @@
 - [Failures]()
 - [Loggin schemes]()
 - [ARIES algorithm]()
-
----
 
 # Appendix
 
