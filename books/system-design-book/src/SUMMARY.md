@@ -2,73 +2,74 @@
 
 [Preface](./preface.md)
 
-# Core concepts
+---
 
-- [Availability]()
-    - [Database]()
-    - [Services]()
-- [Consistency]()
-    - [Strong consistency]()
-    - [Weak consistency]()
-    - [Eventual consistency]()
-- [Scalability]()
-- [Monitoring]()
+# Interface description languages
+
+- [Protobuf](./protobuf.md)
+- [ASN.1](./asn1.md)
+- [Apache Thrift]()
 
 ---
 
-# High level architectural patterns
+# Messaging patterns
 
-- [Event-driven architecture](./patterns/event-driven-architecture.md)
-- [Service-oriented architecture]()
-- [Broker pattern]()
-
----
-
-# API architectural styles / API design
-
-- [What is?](./api-architectural-styles/what-is.md)
-- [REST](./api-architectural-styles/rest.md)
-- [GraphQL](./api-architectural-styles/graphql.md)
-- [gRPC](./api-architectural-styles/grpc.md)
-- [SOAP](./api-architectural-styles/soap.md)
-- [Web socket?](./api-architectural-styles/web-socket.md)
-- [Webhook?]()
+- [Overview](./messaging-patterns/overview.md)
+- [Type I]()
+  - [Request/Response](./messaging-patterns/request-response.md)
+  - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
+- [Type II: M-to-N messaging]()
+  - [Producer/Consumer](./messaging-patterns/producer-consumer.md)
+    - [Point-to-point]()
+    - [Task queues]()
+  - [Pub/Sub](./messaging-patterns/pub-sub.md)
 
 ---
 
-# Communication models / patterns (not mutually exclusive)
+# API design
 
-- [Overview](./communication-models/overview.md)
-- [Request/Response](./communication-models/request-response.md)
-- [Fire and Forget](./communication-models/fire-and-forget.md)
-- [Pub/Sub]()
-- [Streaming](./communication-models/streaming.md)
-- [Event sourcing]()
-- [CQRS](./communication-models/cqrs.md)
-- [Point-to-Point]()
+- [API architectural styles](./api-design/api-architectural-styles/index.md)
+  - [REST](./api-design/api-architectural-styles/rest.md)
+  - [GraphQL](./api-design/api-architectural-styles/graphql.md)
+  - [gRPC](./api-design/api-architectural-styles/grpc.md)
+  - [SOAP](./api-design/api-architectural-styles/soap.md)
+- [API performance](./api-design/api-peformance.md)
 
 ---
 
-# Technologies
-
-- [SSE]()
-
----
-# Tings
+# Services
 
 - [Load balancer]()
 - [Reverse proxy]()
 - [Cache]()
 - [Database]()
-- [Queue]()
+- [Message broker](./services/message-broker.md)
+  - [Message queue]()
 - [API gateway]()
 
 ---
 
+# High-level architectural patterns
 
+- [Monolithic]()
+- [MVC]()
+- [Service-oriented architecture]()
+- [Event-driven architecture](./patterns/event-driven-architecture.md)
+- [CQRS](./cqrs.md)
+- [Event sourcing]()
+- [Serverless]()
+- [DDD]()
+- [Layered architecture]()
+- [Microservices]()
+- [Hexagonal]()
+
+---
+
+# Unclassified
+
+- [Streaming](./streaming.md)
+- [Webhook?]()
 - [CDN](./cdn.md)
-
-- [Data storage and retrieval]()
 - [Network architecture and communication protocols]()
     - [Connections](./connections.md)
     - [Network architectures](./network-architectures.md)
@@ -77,15 +78,4 @@
     - [Deployment strategies](./deployment-strategies.md)
 - [Performance optimization]()
     - [Load testing](./load-testing.md)
-- [Content delivery]()
-- [Resource allocation and prioritization.]()
-
 - [Unique numbers](./unique-numbers.md)
-
----
-
-# Interface description language
-
-- [ASN.1](./asn1.md)
-- [Protobuf](./protobuf.md)
-- [OpenAPI]()

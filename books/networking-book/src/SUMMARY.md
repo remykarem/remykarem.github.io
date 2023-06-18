@@ -10,6 +10,7 @@
         - [SSL/TLS](./ssl.md)
         - [DNS](./dns.md)
         - [Telnet](./telnet.md)
+        - [WebSocket](./websocket.md)
     - [Layer 4 - Transport]()
         - [TCP]()
         - [UDP](./udp.md)
