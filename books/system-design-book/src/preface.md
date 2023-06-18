@@ -19,3 +19,5 @@ Monitoring and logging: The process of collecting and analyzing data about the p
 Security: The process of protecting a system and its data from unauthorized access, modification, or theft.
 
 https://github.com/donnemartin/system-design-primer
+[https://cloudbite.attejuvonen.fi](https://cloudbite.attejuvonen.fi/)
+https://www.youtube.com/watch?v=Z3SYDTMP3ME
