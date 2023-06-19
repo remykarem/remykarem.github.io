@@ -39,7 +39,7 @@
     - [Parallel execution](./query/query_processing/parallel_execution.md)
 - [Query planning & optimisation](./query/query_planning.md)
 - [SQL]()
-    - [Basic]()
+    - [Basic](./query/sql/basic.md)
     - [Intermediate]()
     - [Advanced](./query/sql/advanced.md)
 
@@ -48,6 +48,7 @@
 # Connections
 
 - [Connections & connection pooling]()
+- [Database driver, client, adapter]()
 
 ---
 
