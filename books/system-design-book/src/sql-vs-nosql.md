@@ -14,7 +14,7 @@ When to pick NoSQL?
 
 When choosing a database, you would consider the underlying data structure — in particular, whether you need to store a lot of **relational data**. With relational data, there is a _need_ to maintain relationships and the integrity rules among tables. Such guarantees are given by **ACID**.
 
-ACID guarantees are easily achieved with **single-server systems**.
+ACID guarantees are easily achieved with **single-server systems**. Ensuring these properties in a distributed environment can come with a performance cost.
 
 If we don't need relational data (and therefore ACID and therefore the single-server system), then we can opt for a **distributed system**. Why?
 * Can **handle concurrent requests**. Why? To handle a lot of requests.

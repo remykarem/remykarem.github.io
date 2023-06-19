@@ -472,7 +472,7 @@ e46746ec4f0221009e7d4326c924afc1dea40b45650134966d6f9dfa3a7f
 </ul>
 <hr />
 <p>When choosing a database, you would consider the underlying data structure — in particular, whether you need to store a lot of <strong>relational data</strong>. With relational data, there is a <em>need</em> to maintain relationships and the integrity rules among tables. Such guarantees are given by <strong>ACID</strong>.</p>
-<p>ACID guarantees are easily achieved with <strong>single-server systems</strong>.</p>
+<p>ACID guarantees are easily achieved with <strong>single-server systems</strong>. Ensuring these properties in a distributed environment can come with a performance cost.</p>
 <p>If we don't need relational data (and therefore ACID and therefore the single-server system), then we can opt for a <strong>distributed system</strong>. Why?</p>
 <ul>
 <li>Can <strong>handle concurrent requests</strong>. Why? To handle a lot of requests.</li>
