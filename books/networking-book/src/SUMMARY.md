@@ -2,26 +2,39 @@
 
 [Preface](./preface.md)
 
+---
+
+# OSI model
+
 - [OSI model](./osi-model.md)
-    - [Layer 7 - Application](./layer-7.md)
-        - [HTTP](./http.md) 
-        - [SSH](./ssh.md)
-        - [SFTP]()
-        - [SSL/TLS](./ssl.md)
-        - [DNS](./dns.md)
-        - [Telnet](./telnet.md)
-        - [WebSocket](./websocket.md)
-    - [Layer 4 - Transport]()
-        - [TCP]()
-        - [UDP](./udp.md)
-    - [Layer 3 - Network (Internet)]()
-        - [IP]()
-        - [ICMP](./icmp.md)
-        - [IPSec](./ipsec.md)
-    - [Layer 1/2 - Physical/Datalink](./layer-1.md)
-        - [802.11 WiFi]()
-        - [802.3 Ethernet]()
-        - [ARP](./arp.md)
+- [Layer 7 - Application](./layer-7.md)
+    - [HTTP](./http.md) 
+    - [HTTP](./http-another.md) 
+    - [HTTPS](./https.md) 
+    - [SSH](./ssh.md)
+    - [SFTP]()
+    - [SSL/TLS](./ssl.md)
+    - [DNS](./dns.md)
+    - [Telnet](./telnet.md)
+    - [WebSocket](./websocket.md)
+    - [BGP](./bgp.md)
+    - [DHCP](./dhcp.md)
+    - [BitTorrent]()
+    - [POP, IMAP](./pop-imap.md)
+    - [SMTP](./smtp.md)
+- [Layer 4 - Transport](./transport-layer.md)
+    - [TCP](./tcp.md)
+    - [UDP](./udp.md)
+- [Layer 3 - Network (Internet)](./network-layer.md)
+    - [IP](./ipv4.md)
+    - [ICMP](./icmp.md)
+    - [IPSec](./ipsec.md)
+- [Layer 1/2 - Physical/Datalink](./layer-1.md)
+    - [802.11 WiFi]()
+    - [802.3 Ethernet]()
+    - [ARP](./arp.md)
+
+---
 
 - [Standards](./standards.md)
 
@@ -35,6 +48,19 @@
 
 ---
 
+# Network architectures
+
+- [Client-server]()
+- [P2P]()
+- [Hybrid]()
+- [Data centres]()
+
+---
+
 # What happens when you
 
 - [Type a URL on the browser](./what-happens.md)
+
+---
+
+- [Troubleshooting](./troubleshooting.md)
