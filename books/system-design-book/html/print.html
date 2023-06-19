@@ -471,52 +471,28 @@ e46746ec4f0221009e7d4326c924afc1dea40b45650134966d6f9dfa3a7f
 <li>When you are not sure with data modelling</li>
 </ul>
 <hr />
-<p>When choosing a database, you would consider the underlying data structure — in particular, whether you need to store a lot of <strong>relational data</strong>. With relational data, there is a <em>need</em> to maintain relationships and the integrity rules among tables. Such guarantees are given by <strong>ACID</strong>.</p>
-<p>ACID guarantees are easily achieved with <strong>single-server systems</strong>. Ensuring these properties in a distributed environment can come with a performance cost.</p>
-<p>If we don't need relational data (and therefore ACID and therefore the single-server system), then we can opt for a <strong>distributed system</strong>. Why?</p>
+<p>My summary:</p>
+<p>When choosing a database, one important consideration is the underlying data structure — particularly if there's a need to store a lot of <strong>relational data</strong>. Relational data requires maintaining relationships and integrity rules among tables, often necessitating <strong>ACID</strong> guarantees.</p>
+<p>ACID guarantees are <em>more easily achievable</em> with a <strong>single-server system</strong> due to lack of <strong>network latency</strong>, and no requirement to ensure <strong>data consistency across multiple nodes</strong>.</p>
+<p><strong>SQL databases</strong> are <em>designed</em> with relational data in mind, offering robust support for complex joins and otherr relational operations, thereby ensuring data integrity.</p>
+<p>However, not all applications demand strict relational data structures or full ACID compliance. </p>
+<p>Furthermore, there are applications that need to handle a large volume of data or high traffic.</p>
+<p>For these applications, a distributed system (&quot;<strong>NoSQL database</strong>&quot;) might be more suitable. Why?</p>
+<p>Distributed systems can:</p>
 <ul>
-<li>Can <strong>handle concurrent requests</strong>. Why? To handle a lot of requests.</li>
-<li>Can <strong>maintain high availability</strong> — some services (&quot;business requirement&quot;) require <em>continuous operation</em>; downtime can lead to significant losses</li>
-<li>Can <strong>handle large amounts of data</strong> — single machines often can't store all the data</li>
+<li><strong>handle concurrent requests</strong>. Why? To handle a lot of requests.</li>
+<li><strong>maintain high availability</strong> — some services (&quot;business requirement&quot;) require <em>continuous operation</em>; downtime can lead to significant losses</li>
+<li><strong>handle large amounts of data</strong> beyond the capacity of a single server</li>
 </ul>
-<p>However, one should also note that by the CAP theorem, and the constraint that distributed systems must be partitian-tolerant (the P in CAP), distributed systems must <strong>forgo either consistency or availability</strong>.</p>
-<p>Note that some distributed systems can also guarantee ACID (to different extents): MongoDB, Couchbase, and Amazon DynamoDB.</p>
-<hr />
-<h3 id="data-structure-and-data-integrity"><a class="header" href="#data-structure-and-data-integrity">Data structure and data integrity</a></h3>
-<p>SQL databases are relational.</p>
-<p>NoSQL databases are non-relational and can handle a variety of data models.</p>
-<p>Because of how data is organised, stored and retrieved, it impacts the design and behaviour of:</p>
-<ul>
-<li>Transaction handling</li>
-<li>Distributed-ness</li>
-</ul>
-<h3 id="transaction-handling"><a class="header" href="#transaction-handling">Transaction handling</a></h3>
-<p>Because SQL databases need to <strong>maintain the relationships and integrity rules among tables</strong>, they are typically ACID-compliant (properties that affect transactions).</p>
-<p>NoSQL databases do not need to maintain such relationships and strict integrity rules. MongoDB provides atomicity only at document level.</p>
-<p>Properties related to transaction:</p>
-<ul>
-<li>atomicity (ACID)</li>
-<li>consistency (ACID)</li>
-<li>isolation (ACID)</li>
-<li>durability (ACID)</li>
-</ul>
-<h3 id="distributed-ness"><a class="header" href="#distributed-ness">Distributed-ness</a></h3>
-<p>SQL databases usually runs on a single server.</p>
-<p>NoSQL databases are <em>designed</em> to run across many servers.</p>
-<p>Distributed data store affects the following:</p>
-<ul>
-<li>scalability</li>
-<li>consistency (CAP)</li>
-<li>availability (CAP)</li>
-<li>partitioning (CAP)</li>
-</ul>
+<p>According to the <strong>CAP theorem</strong>, in the event of a network partition in a distributed system — a situation that distributed systems must be prepared for — the system must trade-off between <strong>consistency</strong> or <strong>availability</strong>. However, the extent of this trade-off varies among different systems. Many modern databases offer a tuneable balance.</p>
+<p>Note that some distributed databases offer relational data support and therefore ACID (to different extents): MongoDB, Couchbase, and Amazon DynamoDB.</p>
 <hr />
 <h3 id="scalability"><a class="header" href="#scalability">Scalability</a></h3>
 <p>SQL databases are typically sccaled vertically by increasing the horsepower of the machine (CPU, RAM, SSD).</p>
 <p>NoSQL are <em>designed</em> to scale horizontally.</p>
 <h3 id="atomicity-in-acid"><a class="header" href="#atomicity-in-acid">Atomicity (in ACID)</a></h3>
 <p>SQL databases are <em>designed</em> to provide atomicity across multiple tables.</p>
-<p>NoSQL databases can provide atomicity at the document level (eg. MongoDB), but not at multi-document or table level.</p>
+<p>Some NoSQL databases can provide atomicity too.</p>
 <h3 id="consistency-in-acid"><a class="header" href="#consistency-in-acid">Consistency (in ACID)</a></h3>
 <div id="admonition-note" class="admonition note">
 <div class="admonition-title">
