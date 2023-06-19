@@ -65,6 +65,13 @@
 
 ---
 
+# Database
+
+- [SQL vs. NoSQL](./sql-vs-nosql.md)
+- [Consistency models](./consistency-models.md)
+
+---
+
 # Unclassified
 
 - [Streaming](./streaming.md)
