@@ -4,25 +4,30 @@
 
 ---
 
-# Interface description languages
+# System architectural patterns
 
-- [Protobuf](./protobuf.md)
-- [ASN.1](./asn1.md)
-- [Apache Thrift]()
+- [Single unit]()
+  - [Monolithic]()
+- [Collection of functionalities]()
+  - [Service-oriented architecture]()
+  - [Microservices]()
+  - [Layered]()
+- [Collection of functions]()
+  - [Serverless]()
+- [Collection of events]()
+  - [Event-driven architecture](./patterns/event-driven-architecture.md)
+- [?]()
+  - [MVC]()
+  - [MVVM]()
+  - [MVP]()
+  - [PM]()
 
 ---
 
-# Messaging patterns
+# Application design
 
-- [Overview](./messaging-patterns/overview.md)
-- [Type I]()
-  - [Request/Response](./messaging-patterns/request-response.md)
-  - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
-- [Type II: M-to-N messaging]()
-  - [Producer/Consumer](./messaging-patterns/producer-consumer.md)
-    - [Point-to-point]()
-    - [Task queues]()
-  - [Pub/Sub](./messaging-patterns/pub-sub.md)
+- [Hexagonal]()
+- [DDD](./ddd.md)
 
 ---
 
@@ -41,35 +46,44 @@
 # Data management patterns
 
 - [Overview](./data-management-patterns/overview.md)
-- [Shared database](./data-management-patterns/shared-database.md)
-- [Database-per-Service](./data-management-patterns/database-per-service.md)
-- [API composition](./data-management-patterns/api-composition.md)
-- [Saga](./data-management-patterns/saga.md)
-- [Event sourcing](./data-management-patterns/event-sourcing.md)
-- [CQRS](./data-management-patterns/cqrs.md)
-- [Event-driven architecture]()
-- [Event-driven architecture](./patterns/event-driven-architecture.md)
-- [Data lake]()
+- [Structural: Organising]()
+  - [Shared database](./data-management-patterns/shared-database.md)
+  - [Database-per-Service](./data-management-patterns/database-per-service.md)
+- [Behavioural: Querying]()
+  - [API composition](./data-management-patterns/api-composition.md)
+  - [Saga](./data-management-patterns/saga.md)
+  - [CQRS](./data-management-patterns/cqrs.md)
+- [Creational: Storing data]()
+  - [Event sourcing](./data-management-patterns/event-sourcing.md)
+
+---
+
+# Messaging patterns
+
+- [Overview](./messaging-patterns/overview.md)
+- [Type I]()
+  - [Request/Response](./messaging-patterns/request-response.md)
+  - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
+- [Type II: M-to-N messaging]()
+  - [Producer/Consumer](./messaging-patterns/producer-consumer.md)
+    - [Point-to-point]()
+    - [Task queues]()
+  - [Pub/Sub](./messaging-patterns/pub-sub.md)
+- [Type III: Push/pull]()
 
 ---
 
 # Components
 
-- [Load balancer]()
-- [Reverse proxy]()
-- [Cache]()
-- [Database]()
-- [Message broker](./services/message-broker.md)
-  - [Message queue]()
-- [API gateway]()
-
----
-
-# Structural architectural patterns
-
-- [Monolithic]()
-- [Service-oriented architecture]()
-- [Microservices]()
+- [Structural]()
+  - [Reverse proxy]()
+  - [Database]()
+  - [Cache]()
+  - [Message broker](./services/message-broker.md)
+    - [Message queue]()
+- [Behavioural]()
+  - [Load balancer](./components/load-balancer.md)
+  - [API gateway]()
 
 ---
 
@@ -94,3 +108,11 @@
 - [Performance optimization]()
     - [Load testing](./load-testing.md)
 - [Unique numbers](./unique-numbers.md)
+
+---
+
+# Interface description languages
+
+- [Protobuf](./protobuf.md)
+- [ASN.1](./asn1.md)
+- [Apache Thrift]()
