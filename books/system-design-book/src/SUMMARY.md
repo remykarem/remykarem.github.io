@@ -33,11 +33,27 @@
   - [GraphQL](./api-design/api-architectural-styles/graphql.md)
   - [gRPC](./api-design/api-architectural-styles/grpc.md)
   - [SOAP](./api-design/api-architectural-styles/soap.md)
+- [Batch processing](./api-design/batch-processing.md)
 - [API performance](./api-design/api-peformance.md)
 
 ---
 
-# Services
+# Data management patterns
+
+- [Overview](./data-management-patterns/overview.md)
+- [Shared database](./data-management-patterns/shared-database.md)
+- [Database-per-Service](./data-management-patterns/database-per-service.md)
+- [API composition](./data-management-patterns/api-composition.md)
+- [Saga](./data-management-patterns/saga.md)
+- [Event sourcing](./data-management-patterns/event-sourcing.md)
+- [CQRS](./data-management-patterns/cqrs.md)
+- [Event-driven architecture]()
+- [Event-driven architecture](./patterns/event-driven-architecture.md)
+- [Data lake]()
+
+---
+
+# Components
 
 - [Load balancer]()
 - [Reverse proxy]()
@@ -49,19 +65,11 @@
 
 ---
 
-# High-level architectural patterns
+# Structural architectural patterns
 
 - [Monolithic]()
-- [MVC]()
 - [Service-oriented architecture]()
-- [Event-driven architecture](./patterns/event-driven-architecture.md)
-- [CQRS](./cqrs.md)
-- [Event sourcing]()
-- [Serverless]()
-- [DDD]()
-- [Layered architecture]()
 - [Microservices]()
-- [Hexagonal]()
 
 ---
 
