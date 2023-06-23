@@ -1,30 +1,39 @@
 # AES
 
-AES is a block cipher that operates on **blocks of 128 bits (16 bytes)**. It breaks the plaintext into similar size blocks.
+AES is a block cipher that operates on **blocks of 128 bits**. It breaks the plaintext into similar size blocks.
 
-The shared keys can be of length 128, 192 or 256 bits.
+The key length can be **128**, **192** or **256** bits.
 
-An **initialisation vector** (IV) is used to ensure that the same plaintext will not always get encrypted to the same ciphertext. The IV is needed when decrypting the ciphertext.
+The ciphertext typically includes the initialisation vector and ciphertext itself.
 
-A **mode** or **encyrption mode** is the algorithm used to encrypt data which has more than 1 block. It defines how you encrypt or re-encrypt every small block, etc.
-
-* ECB
-* CBC
-* CFB
-* OFB
-* CTR
+~~~admonish note title="AES algorithm names"
+AES algorithms are typically named as such:
 
 ```txt
-AES-128-CBC 
- ^   ^   ^
- |   |   |
-alg key mode
-  length
+AES-<key-length>-<mode-of-operation>
 ```
 
-Finally, the ciphertext will include the initialisation vector and ciphertext.
+like
 
-Note that some modes allow partial decryption, like the CTR.
+```
+AES-128-CBC
+```
+~~~
+
+~~~admonish example title="Ciphertext"
+
+In OpenSSL (not sure if this is a standard), ciphertexts are prepended with
+
+```
+53 61 6c 74 65 64 5f 5f
+```
+
+which is UTF-8 for
+
+```
+Salted__
+```
+~~~
 
 Resources:
 * [https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97](https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97)

@@ -7,9 +7,9 @@
 # Primitives
 
 - [PRNGs]()
-- [Hash functions](./primitives/hash-functions/index.md)
-    - [MD5](./primitives/hash-functions/md5.md)
-    - [SHA](./primitives/hash-functions/sha.md)
+- [Cryptographic hash functions](./primitives/cryptographic-hash-functions/index.md)
+    - [MD5](./primitives/cryptographic-hash-functions/md5.md)
+    - [SHA](./primitives/cryptographic-hash-functions/sha.md)
 - [MGFs](./primitives/mask-generation-functions/index.md)
   - [MGF1](./primitives/mask-generation-functions/mgf1.md)
 - [MAC](./primitives/mac/index.md)
@@ -76,15 +76,15 @@
 # Applications
 
 - [Secure random bytes](./applications/rand.md)
+- [Checksum](./applications/checksum.md)
 - [HMAC](./applications/hmac.md)
+- [Block ciphers](./applications/block-ciphers.md)
 - [Keys]()
     - [RSA](./applications/code.md)
     - [ECC](./applications/keys/ecc.md)
     - [SSH](./applications/keys/ssh.md)
 - [Encryption algorithms](./applications/ciphertext.md)
-- [Block ciphers](./applications/block-ciphers.md)
 - [Digital signature algorithms]()
-- [Checksum](./applications/checksum.md)
 - [Fingerprint](./applications/fingerprint.md)
 - [Digital certificate](./applications/digital-certificate.md)
 - [PKCS #12](./applications/pkcs12-stuff.md)

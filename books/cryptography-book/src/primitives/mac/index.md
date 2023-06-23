@@ -1,6 +1,8 @@
 # MAC
 
-A **keyed hash function** (aka MAC algorithm) is a hash function that takes in a key and a message to produce a digest called **message authentication code** (MAC). 
+A **MAC algorithm** or a keyed hash function is a function that takes in a key and a message to produce a digest called **message authentication code** (MAC). 
+
+This is a **deterministic** operation.
 
 $$
 \text{(message, \textbf{key})} \rightarrow \text{mac}

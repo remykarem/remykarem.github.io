@@ -1,6 +1,10 @@
 # Block ciphers
 
-A *deterministic* symmetric encryption algorithm operating on blocks.
+A **deterministic** encryption algorithm operating on blocks.
+
+```admonish note
+A **block** is a fixed-length group of bits.
+```
 
 The algorithm should be able to perform both operations:
 
@@ -12,19 +16,27 @@ $$
 \text{(ciphertext, \textbf{key})} \rightarrow \text{message}
 $$
 
----
+Additionally, block ciphers can operate in a **mode of operation**. This involves *repeated* transformations of a block, in order to achieve confidentiality and authentication. 
 
-```admonish note
-A **block** is a fixed-length group of *bits*
+$$
+\text{(message, \textbf{key}, \textbf{modeofoperation})} \rightarrow \text{ciphertext}
+$$
+
+$$
+\text{(ciphertext, \textbf{key}, \textbf{modeofoperation})} \rightarrow \text{message}
+$$
+
+Here are some of the different modes of operation:
+
+- GCM
+- EAX
+- CBC — each block depends on the proper encryption block before it
+- ECB
+- CFB
+- CTR
+
+```admonish note title="Initialisation vector"
+Some modes of operation use an **IV** to ensure that the same plaintext will not always get encrypted to the same ciphertext. 
+
+The same IV is needed when decrypting the ciphertext.
 ```
-
-Block ciphers can operate in a *mode of operation*. This involves *repeated* XOR-ing a block etc. to achieve confidentiality and authentication. Involves some initial randomness (IV). Here are some:
-
-- Confidentiality + Authentication
-    - GCM
-    - EAX
-- Confidentiality
-    - CBC — each block depends on the proper encryption block before it
-    - ECB
-    - CFB
-    - CTR
