@@ -39,6 +39,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     additional-css = ["last-changed.css"]
     default-theme = "frappé"
     preferred-dark-theme = "macchiato"
+    no-section-label = true
 
     [build]
     build-dir = "."  # this is for mathy books. for non-mathy, use "./html"
