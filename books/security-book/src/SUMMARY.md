@@ -15,6 +15,7 @@
 - [OIDC](./oidc.md)
 - [SAML]()
 - [LDAP]()
+- [TOTP](./totp.md)
 
 ---
 
