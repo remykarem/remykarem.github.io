@@ -13,6 +13,7 @@ additional-css = ["last-changed.css", "././mdbook-admonish.css", "./theme/catppu
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
+no-section-label = true
 
 [build]
 build-dir = "./html"  # this is for mathy books. for non-mathy, use "./html"
