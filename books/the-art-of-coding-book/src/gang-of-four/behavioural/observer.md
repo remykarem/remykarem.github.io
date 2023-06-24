@@ -1,15 +1,10 @@
 # Observer
 
-```admonish note
-💡 TLDR: One-to-many
-```
+One-to-many
 
-```admonish note
-💡 Usage: event handling, async programming
-```
+Usages: event handling, async programming
 
-Used in Angular.js.
-
+~~~admonish example title="Angular.js"
 - Subject
     - observers: List<Observer>
     - notify()
@@ -17,10 +12,6 @@ Used in Angular.js.
 - Observer
     - subject: Subject
     - update()
-
----
-
-(Angular.js)
 
 - **Observable** / subject / service / publisher
     - subscribe((Observer)→...) → Subscription
@@ -33,16 +24,15 @@ Used in Angular.js.
     - error()
     - complete()
 
-```admonish note
-💡 Every time somebody subscribes to something, there will be a subscription.
-```
+
+Every time somebody subscribes to something, there will be a subscription.
 
 - Subscription
     - unsubscribe()
 
 Define some service ("observable") that returns values 1,2,3
 
-```tsx
+```js
 const observable = function(observer) {
 	observer.next(1);
 	observer.next(2);
@@ -58,7 +48,7 @@ const observable = of(1,2,3);
 
 Usage
 
-```tsx
+```js
 // I want to get notifications from this service so that I get these values
 // and console log them.
 const observer = {
@@ -73,3 +63,4 @@ const subscription = observable.subscribe(observer);
 // I've had enough of these notifications, I wanna unsub
 subscription.unsubscribe();
 ```
+~~~

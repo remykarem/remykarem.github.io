@@ -1,26 +1,29 @@
 # Decorator
 
-Wrap functionality with other functionality in order to affect outputs.
+Wrap an **inner functionality** with an **outer functionality** (the decorator).
+
+~~~admonish example title="Text, BoldFace text"
+Given an **inner functionality** `Text`:
+
+```kotlin
+class Text(text: String) {
+	fun render() -> String {
+		return text
+	}
+}
+```
+
+we wrap it with an **outer functionality** `BoldFace`:
+
+```kotlin
+class BoldFace(wrapped: Text) {
+	fun render() -> String {
+		return "<b>{wrapped.render()}</b>"
+	}
+}
+```
+~~~
 
 ```admonish note
-⛔ Decorator pattern ≠ Python decorator
-```
-
-```python
-greeting = Text("hello")
-better_greeeting = BoldFace(greeting)
-```
-
-```python
-class Text:
-	def __init__(self, text: str):
-		self.text = text
-	def render(self):
-		return self.text
-
-class BoldFace:
-	def __init__(self, wrapped: Text):
-		self.wrapped = wrapped
-	def render(self):
-		return f"<b>{self.wrapped.render()}</b>"
+Decorator pattern ≠ Python decorator
 ```

@@ -1,22 +1,30 @@
 # Facade
 
-Hides low-level details.
+Hide **lower-level structures** with a **higher level structure**.
 
-Here, the low-level detail is Tyre.
+~~~admonish example title="(Tyre, Tank) vs. Car"
+Given **low-level structures** `Tyre` and `Tank`:
 
-```python
-class Car(object):
+```kotlin
+class Tyre(val pressure: Int)
 
-    def __init__(self):
-        self._tank = Tank(70)
-        self._tyres = [Tyre('fl'),
-                       Tyre('front_right'),
-                       Tyre('rear_left'),
-                       Tyre('rear_right')]
-
-    def tyres_pressure(self):
-        return [tyre.pressure for tyre in self._tyres]
-
-    def fuel_level(self):
-        return self._tank.level
+class Tank(val fuel_level: Int)
 ```
+
+we define a **higher-level structure** called `Car`:
+
+```kotlin
+class Car(
+    private val tank: Tank,
+    private val tyres: List<Tyre>,
+) {
+    fun tyre_pressures() -> List<Int> {
+        return tyres.map { it.pressure }
+    }
+
+    fun fuel_level() -> Int {
+        return tank.fuel_level
+    }
+}
+```
+~~~

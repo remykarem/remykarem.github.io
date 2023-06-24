@@ -1,6 +1,21 @@
 # Builder
 
+~~~admonish example title="Rust"
+Very common in Rust's standard library.
+
+```rust
+use std::process::Command;
+
+let output = Command::new("sh")
+    .arg("-c")
+    .arg("echo hello")
+    .output()
+    .expect("Failed to execute command");
+```
+~~~
+
 ~~~admonish example title="Java"
+Very common in Java.
 
 ```java
 BankAccount newAccount = new BankAccount

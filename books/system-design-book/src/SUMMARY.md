@@ -16,18 +16,6 @@
   - [Serverless]()
 - [Collection of events]()
   - [Event-driven architecture](./patterns/event-driven-architecture.md)
-- [?]()
-  - [MVC]()
-  - [MVVM]()
-  - [MVP]()
-  - [PM]()
-
----
-
-# Application design
-
-- [Hexagonal]()
-- [DDD](./ddd.md)
 
 ---
 
