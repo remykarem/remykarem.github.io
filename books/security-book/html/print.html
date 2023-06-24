@@ -242,8 +242,16 @@
 <p>$$
 (\text{time}, \text{key}) \rightarrow \text{otp}
 $$</p>
+<p>The underlying cryptographic primitive used here is the <strong>HMAC</strong>. (Notice that this function is similar to HMAC anyways.)</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="totp.html#admonition-note"></a></p>
+</div>
+<div>
 <p>Because OTP relies on time, the client's device and the server should be roughly synchronised.</p>
-<p>The cryptographic primitive used here is the <strong>HMAC</strong>.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="links"><a class="header" href="#links">Links</a></h1>
 <p>https://infosec.mozilla.org/guidelines/web_security</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="csrf"><a class="header" href="#csrf">CSRF</a></h1>

@@ -6,6 +6,8 @@ $$
 (\text{time}, \text{key}) \rightarrow \text{otp}
 $$
 
-Because OTP relies on time, the client's device and the server should be roughly synchronised.
+The underlying cryptographic primitive used here is the **HMAC**. (Notice that this function is similar to HMAC anyways.)
 
-The cryptographic primitive used here is the **HMAC**.
+```admonish note
+Because OTP relies on time, the client's device and the server should be roughly synchronised.
+```
