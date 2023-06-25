@@ -8,6 +8,8 @@ title = "db-book"
 [output.html]
 site-url = "/books/db-book/"
 additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
+no-section-label = true
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/db-book/{path}"
 
 [build]
 build-dir = "./html"
