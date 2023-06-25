@@ -82,6 +82,8 @@
 - [Type III: Direction](./messaging-patterns/direction.md)
   - [Polling (Pull)](./messaging-patterns/polling.md)
   - [Webhook (Push)](./messaging-patterns/webhook.md)
+- [Type IV: Streamingness]()
+  - [Streaming](./streaming.md)
 
 ---
 
@@ -92,16 +94,9 @@
 
 ---
 
-# Unclassified
+# Deployment strategies
 
-- [Streaming](./streaming.md)
-- [Network architecture and communication protocols]()
-    - [Connections](./connections.md)
-    - [Network architectures](./network-architectures.md)
-- [Web architecture & software architecture](./web-architecture-and-software-architecture.md)
-- [Availability and fault tolerance]()
-    - [Deployment strategies](./deployment-strategies.md)
-- [Unique numbers](./unique-numbers.md)
+- [Deployment strategies](./deployment-strategies.md)
 
 ---
 
@@ -110,3 +105,12 @@
 - [Protobuf](./protobuf.md)
 - [ASN.1](./asn1.md)
 - [Apache Thrift]()
+
+---
+
+# Unclassified
+
+- [Connections](./connections.md)
+- [Network architecture and communication protocols]()
+    - [Network architectures](./network-architectures.md)
+- [Web architecture & software architecture](./web-architecture-and-software-architecture.md)
