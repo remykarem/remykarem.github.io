@@ -6,8 +6,8 @@ With a single entrypoint for requests, it becomes easier to maintain a _consiste
 
 Here are the responsibilities:
 * [**Routing**](./routing.md)
-* [**Caching**](./caching.md)
 * [**Authentication & authorisation**](./authentication-and-authorisation.md) — It's easier to manage this aspect via a single entry point, rather than spread requests across many different points.
+* [Caching](./caching.md)
 * [Rate limiting](./rate-limiting.md)
 * [Logging & monitoring](./logging-and-monitoring.md)
   

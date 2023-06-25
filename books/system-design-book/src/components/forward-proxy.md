@@ -3,8 +3,8 @@
 aka proxy server
 
 A **forward proxy** is commonly used for:
-* [Control outgoing requests](./control-outgoing-requests.md)
-* [Identity hiding](./identity-hiding.md) of clients
+* [**Control outgoing requests**](./control-outgoing-requests.md)
+* [**Identity hiding**](./identity-hiding.md) of clients
 * Avoid browsing restrictions
 * [Caching](./caching.md) of client requests
 

@@ -79,9 +79,9 @@
     - [Point-to-point]()
     - [Task queues]()
   - [Pub/Sub](./messaging-patterns/pub-sub.md)
-- [Type III: Direction]()
-  - [Polling (Pull)]()
-  - [Webhook (Push)]()
+- [Type III: Direction](./messaging-patterns/direction.md)
+  - [Polling (Pull)](./messaging-patterns/polling.md)
+  - [Webhook (Push)](./messaging-patterns/webhook.md)
 
 ---
 
