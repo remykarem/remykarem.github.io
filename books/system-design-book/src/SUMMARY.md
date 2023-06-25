@@ -64,14 +64,16 @@
 # Components
 
 - [Structural]()
-  - [Reverse proxy]()
+  - [Proxy](./components/proxy.md)
+    - [Load balancer]()
   - [Database]()
-  - [Cache]()
   - [Message broker](./services/message-broker.md)
     - [Message queue]()
-- [Behavioural]()
-  - [Load balancer](./components/load-balancer.md)
+  - [CDN](./cdn.md)
   - [API gateway]()
+- [Behavioural]()
+  - [Load balancing](./components/load-balancer.md)
+  - [Caching](./components/caching.md)
 
 ---
 
@@ -86,7 +88,6 @@
 
 - [Streaming](./streaming.md)
 - [Webhook?]()
-- [CDN](./cdn.md)
 - [Network architecture and communication protocols]()
     - [Connections](./connections.md)
     - [Network architectures](./network-architectures.md)

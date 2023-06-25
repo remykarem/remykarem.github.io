@@ -7,6 +7,7 @@ title = "system-design-book"
 
 [output.html]
 site-url = "/books/system-design-book/"
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/system-design-book/{path}"
 additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
 no-section-label = true
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
