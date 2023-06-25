@@ -19,15 +19,25 @@
 
 ---
 
-# API design
+# Components
 
-- [API architectural styles](./api-design/api-architectural-styles/index.md)
-  - [REST](./api-design/api-architectural-styles/rest.md)
-  - [GraphQL](./api-design/api-architectural-styles/graphql.md)
-  - [gRPC](./api-design/api-architectural-styles/grpc.md)
-  - [SOAP](./api-design/api-architectural-styles/soap.md)
-- [Batch processing](./api-design/batch-processing.md)
-- [API performance](./api-design/api-peformance.md)
+- [Structural]()
+  - [CDN](./components/cdn.md)
+  - [Firewall]()
+  - [API gateway](./components/api-gateway.md)
+  - [Forward proxy](./components/forward-proxy.md)
+  - [Message broker](./components/message-broker.md)
+  - [Reverse proxy ("load balancer")](./components/reverse-proxy.md)
+- [Traits]()
+  - [Caching](./components/caching.md)
+  - [Routing](./components/routing.md)
+  - [Rate limiting](./components/rate-limiting.md)
+  - [Identity hiding](./components/identity-hiding.md)
+  - [Load balancing](./components/load-balancing.md)
+  - [Logging & monitoring](./components/logging-and-monitoring.md)
+  - [Control outgoing requests](./components/control-outgoing-requests.md)
+  - [SSL encryption & decryption](./components/ssl-encryption-and-decryption.md)
+  - [Authentication & authorisation](./components/authentication-and-authorisation.md)
 
 ---
 
@@ -46,10 +56,22 @@
 
 ---
 
+# API design
+
+- [API architectural styles](./api-design/api-architectural-styles/index.md)
+  - [REST](./api-design/api-architectural-styles/rest.md)
+  - [GraphQL](./api-design/api-architectural-styles/graphql.md)
+  - [gRPC](./api-design/api-architectural-styles/grpc.md)
+  - [SOAP](./api-design/api-architectural-styles/soap.md)
+- [Batch processing](./api-design/batch-processing.md)
+- [API performance](./api-design/api-peformance.md)
+
+---
+
 # Messaging patterns
 
 - [Overview](./messaging-patterns/overview.md)
-- [Type I]()
+- [Type I: Responsiveness]()
   - [Request/Response](./messaging-patterns/request-response.md)
   - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
 - [Type II: M-to-N messaging]()
@@ -57,23 +79,9 @@
     - [Point-to-point]()
     - [Task queues]()
   - [Pub/Sub](./messaging-patterns/pub-sub.md)
-- [Type III: Push/pull]()
-
----
-
-# Components
-
-- [Structural]()
-  - [Proxy](./components/proxy.md)
-    - [Load balancer]()
-  - [Database]()
-  - [Message broker](./services/message-broker.md)
-    - [Message queue]()
-  - [CDN](./cdn.md)
-  - [API gateway]()
-- [Behavioural]()
-  - [Load balancing](./components/load-balancer.md)
-  - [Caching](./components/caching.md)
+- [Type III: Direction]()
+  - [Polling (Pull)]()
+  - [Webhook (Push)]()
 
 ---
 
@@ -87,15 +95,12 @@
 # Unclassified
 
 - [Streaming](./streaming.md)
-- [Webhook?]()
 - [Network architecture and communication protocols]()
     - [Connections](./connections.md)
     - [Network architectures](./network-architectures.md)
 - [Web architecture & software architecture](./web-architecture-and-software-architecture.md)
 - [Availability and fault tolerance]()
     - [Deployment strategies](./deployment-strategies.md)
-- [Performance optimization]()
-    - [Load testing](./load-testing.md)
 - [Unique numbers](./unique-numbers.md)
 
 ---
