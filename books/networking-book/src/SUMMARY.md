@@ -1,12 +1,13 @@
 # Summary
 
 [Preface](./preface.md)
+[OSI model](./osi-model.md)
 
 ---
 
-# OSI model
+# Topology
 
-- [OSI model](./osi-model.md)
+- [Cloud](./cloud-topology.md)
 
 ---
 
