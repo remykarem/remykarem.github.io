@@ -9,6 +9,7 @@ title = "Security Book"
 site-url = "/books/security-book"  # this is for mathy books. for non-mathy, use "/books/your-book"
 mathjax-support = true
 git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/security-book/{path}"  # change your-book
 additional-css = ["last-changed.css", "././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
