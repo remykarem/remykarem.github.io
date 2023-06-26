@@ -58,6 +58,7 @@
 
 - [ASN.1 definitions](./asn1-definitions/index.md)
     - [PKCS #1 (RSA)](./asn1-definitions/pkcs1.md)
+    - [PKCS #7 / P7B](./asn1-definitions/pkcs7.md)
     - [PKCS #8](./asn1-definitions/pkcs8.md)
     - [PKCS #12 / PFX](./asn1-definitions/pkcs12.md)
     - [RFC 5915 (ECC)](./asn1-definitions/ecprivatekey.md)
@@ -83,11 +84,10 @@
     - [RSA](./applications/code.md)
     - [ECC](./applications/keys/ecc.md)
     - [SSH](./applications/keys/ssh.md)
-- [Encryption algorithms](./applications/ciphertext.md)
-- [Digital signature algorithms]()
 - [Fingerprint](./applications/fingerprint.md)
+- [Encryption](./applications/ciphertext.md)
+- [Digital signatures]()
 - [Digital certificate](./applications/digital-certificate.md)
-- [PKCS #12](./applications/pkcs12-stuff.md)
 - [Utils](./applications/utils.md)
 
 ---
