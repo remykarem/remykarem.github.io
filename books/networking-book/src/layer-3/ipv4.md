@@ -1,6 +1,6 @@
 # IP
 
-**Internet Protocol**
+Internet Protocol
 
 To be able to use the underlying data link technologies
 

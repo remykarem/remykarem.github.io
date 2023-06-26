@@ -1,6 +1,6 @@
 # ICMP
 
-**Internet Control Message Protocol**
+Internet Control Message Protocol
 
 For diagnostics
 

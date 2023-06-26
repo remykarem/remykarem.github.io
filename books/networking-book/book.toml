@@ -8,6 +8,7 @@ title = "networking-book"
 [output.html]
 site-url = "/books/networking-book/"
 additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/networking-book/{path}"  # change your-book
 no-section-label = true
 
 [build]
