@@ -56,20 +56,20 @@
 
 # Definitions, formats, standards
 
-- [ASN.1 definitions](./asn1-definitions/index.md)
-    - [PKCS #1 (RSA)](./asn1-definitions/pkcs1.md)
-    - [PKCS #7 / P7B](./asn1-definitions/pkcs7.md)
-    - [PKCS #8](./asn1-definitions/pkcs8.md)
-    - [PKCS #12 / PFX](./asn1-definitions/pkcs12.md)
-    - [RFC 5915 (ECC)](./asn1-definitions/ecprivatekey.md)
-    - [X.509](./asn1-definitions/x509.md)
+- [ASN.1 schemas](./asn1-schemas/index.md)
+    - [PKCS #1 (RSA)](./asn1-schemas/pkcs1.md)
+    - [PKCS #7 / P7B](./asn1-schemas/pkcs7.md)
+    - [PKCS #8](./asn1-schemas/pkcs8.md)
+    - [PKCS #12 / PFX](./asn1-schemas/pkcs12.md)
+    - [RFC 5915 (ECC)](./asn1-schemas/ecprivatekey.md)
+    - [X.509](./asn1-schemas/x509.md)
 - [Common formats](./common-formats/index.md)
     - [PEM](./common-formats/pem.md)
-    - [DER](./common-formats/der.md)
+    - [ASN.1 DER](./common-formats/der.md)
+    - [JKS](./common-formats/jks.md)
     - [JWK / JWKS](./common-formats/jwk.md)
     - [OpenSSH](./common-formats/openssh.md)
     - [JWT](./common-formats/jwt.md)
-    - [JKS](./common-formats/jks.md)
 - [Other standards](./standards.md)
 
 ---
