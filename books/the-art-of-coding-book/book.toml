@@ -12,6 +12,7 @@ additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/ca
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
 no-section-label = true
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/the-art-of-coding-book/{path}"  # change your-book
 
 [build]
 build-dir = "./html"  # this is for mathy books. for non-mathy, use "./html"

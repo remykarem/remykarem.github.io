@@ -79,3 +79,6 @@
 - [DAO pattern]()
 - [Lazy initialisation pattern]()
 - [Design by Contract]()
+- [Leaky abstraction]()
+- [Typestate pattern]()
+- [Enum pattern]()
