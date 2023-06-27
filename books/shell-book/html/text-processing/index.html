@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Sourcing - shell-book</title>
+        <title>Text processing - shell-book</title>
 
 
         <!-- Custom HTML head -->
@@ -13,32 +13,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="./theme/catppuccin.css">
-        <link rel="stylesheet" href="./theme/catppuccin-highlight.css">
-        <link rel="stylesheet" href="././mdbook-admonish.css">
+        <link rel="stylesheet" href=".././theme/catppuccin.css">
+        <link rel="stylesheet" href=".././theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href="../././mdbook-admonish.css">
 
     </head>
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html">Preface</a></li><li class="chapter-item expanded "><div>Shell</div></li><li class="spacer"></li><li class="chapter-item expanded "><a href="path.html">PATH</a></li><li class="chapter-item expanded "><a href="architecture.html">Architecture</a></li><li class="chapter-item expanded "><a href="os.html">OS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="storage.html">Storage</a></li><li class="chapter-item expanded "><a href="process.html">Process</a></li><li class="chapter-item expanded "><a href="memory.html">Memory</a></li><li class="chapter-item expanded "><a href="user-management.html">User management</a></li><li class="chapter-item expanded "><a href="files.html">Files</a></li><li class="chapter-item expanded "><a href="signals-and-traps.html">Signals and traps</a></li></ol></li><li class="chapter-item expanded "><a href="job-control.html">Job control</a></li><li class="chapter-item expanded "><a href="redirects.html">Redirect operators</a></li><li class="chapter-item expanded "><a href="control-operators.html">Control operators</a></li><li class="chapter-item expanded "><a href="command-substitution.html">Command substitution</a></li><li class="chapter-item expanded "><a href="process-substitution.html">Process substitution</a></li><li class="chapter-item expanded "><a href="gnu-readline.html">GNU readline</a></li><li class="chapter-item expanded "><a href="history.html">History</a></li><li class="chapter-item expanded "><a href="variables.html">Variables</a></li><li class="chapter-item expanded "><a href="alias.html">Alias</a></li><li class="chapter-item expanded "><a href="functions.html">Functions</a></li><li class="chapter-item expanded "><a href="debugging.html">Debugging and help</a></li><li class="chapter-item expanded "><a href="prompt.html">Prompt</a></li><li class="chapter-item expanded "><a href="control-flow.html">Control flow</a></li><li class="chapter-item expanded "><a href="tests.html">Tests</a></li><li class="chapter-item expanded "><a href="heredocs.html">Heredocs</a></li><li class="chapter-item expanded "><a href="gotchas.html">Gotchas</a></li><li class="chapter-item expanded "><a href="sourcing.html" class="active">Sourcing</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="write-to-file-from-clipboard.html">Write to file from clipboard</a></li><li class="chapter-item expanded "><a href="text-processing/index.html">Text processing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="text-processing/file.html">Get and remove lines</a></li><li class="chapter-item expanded "><a href="text-processing/count.html">Count</a></li><li class="chapter-item expanded "><a href="text-processing/line-manipulation.html">Append and prepend</a></li><li class="chapter-item expanded "><a href="text-processing/search-and-replace.html">Search and replace</a></li><li class="chapter-item expanded "><a href="text-processing/split.html">Split</a></li><li class="chapter-item expanded "><a href="text-processing/chunk.html">Chunk</a></li><li class="chapter-item expanded "><a href="text-processing/compare.html">Compare</a></li><li class="chapter-item expanded "><a href="text-processing/trim.html">Trim</a></li></ol></li><li class="chapter-item expanded "><div>Binary processing</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="binary-processing/write.html">Create / write to binary</a></li><li class="chapter-item expanded "><a href="binary-processing/skip.html">Skip</a></li></ol></li><li class="chapter-item expanded "><a href="image-processing.html">Image processing</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><div>Shell</div></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../path.html">PATH</a></li><li class="chapter-item expanded "><a href="../architecture.html">Architecture</a></li><li class="chapter-item expanded "><a href="../os.html">OS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../storage.html">Storage</a></li><li class="chapter-item expanded "><a href="../process.html">Process</a></li><li class="chapter-item expanded "><a href="../memory.html">Memory</a></li><li class="chapter-item expanded "><a href="../user-management.html">User management</a></li><li class="chapter-item expanded "><a href="../files.html">Files</a></li><li class="chapter-item expanded "><a href="../signals-and-traps.html">Signals and traps</a></li></ol></li><li class="chapter-item expanded "><a href="../job-control.html">Job control</a></li><li class="chapter-item expanded "><a href="../redirects.html">Redirect operators</a></li><li class="chapter-item expanded "><a href="../control-operators.html">Control operators</a></li><li class="chapter-item expanded "><a href="../command-substitution.html">Command substitution</a></li><li class="chapter-item expanded "><a href="../process-substitution.html">Process substitution</a></li><li class="chapter-item expanded "><a href="../gnu-readline.html">GNU readline</a></li><li class="chapter-item expanded "><a href="../history.html">History</a></li><li class="chapter-item expanded "><a href="../variables.html">Variables</a></li><li class="chapter-item expanded "><a href="../alias.html">Alias</a></li><li class="chapter-item expanded "><a href="../functions.html">Functions</a></li><li class="chapter-item expanded "><a href="../debugging.html">Debugging and help</a></li><li class="chapter-item expanded "><a href="../prompt.html">Prompt</a></li><li class="chapter-item expanded "><a href="../control-flow.html">Control flow</a></li><li class="chapter-item expanded "><a href="../tests.html">Tests</a></li><li class="chapter-item expanded "><a href="../heredocs.html">Heredocs</a></li><li class="chapter-item expanded "><a href="../gotchas.html">Gotchas</a></li><li class="chapter-item expanded "><a href="../sourcing.html">Sourcing</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Applications</li><li class="chapter-item expanded "><a href="../write-to-file-from-clipboard.html">Write to file from clipboard</a></li><li class="chapter-item expanded "><a href="../text-processing/index.html" class="active">Text processing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../text-processing/file.html">Get and remove lines</a></li><li class="chapter-item expanded "><a href="../text-processing/count.html">Count</a></li><li class="chapter-item expanded "><a href="../text-processing/line-manipulation.html">Append and prepend</a></li><li class="chapter-item expanded "><a href="../text-processing/search-and-replace.html">Search and replace</a></li><li class="chapter-item expanded "><a href="../text-processing/split.html">Split</a></li><li class="chapter-item expanded "><a href="../text-processing/chunk.html">Chunk</a></li><li class="chapter-item expanded "><a href="../text-processing/compare.html">Compare</a></li><li class="chapter-item expanded "><a href="../text-processing/trim.html">Trim</a></li></ol></li><li class="chapter-item expanded "><div>Binary processing</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../binary-processing/write.html">Create / write to binary</a></li><li class="chapter-item expanded "><a href="../binary-processing/skip.html">Skip</a></li></ol></li><li class="chapter-item expanded "><a href="../image-processing.html">Image processing</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -120,10 +120,10 @@
                     <h1 class="menu-title">shell-book</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/remykarem/remykarem.github.io/edit/main/books/shell-book/src/sourcing.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/remykarem/remykarem.github.io/edit/main/books/shell-book/src/text-processing/index.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -152,18 +152,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="sourcing"><a class="header" href="#sourcing">Sourcing</a></h1>
-<p>Run <code>source ~/.zshrc</code> or <code>exec $SHELL -l</code></p>
+                        <h1 id="text-processing"><a class="header" href="#text-processing">Text processing</a></h1>
+<p>Text processing in shell can follow the functional programming pattern if we see input to a function (command) as the <em>standard input</em>, and the output as the <em>standard output</em>.</p>
+<div id="admonition-reminder" class="admonition note">
+<div class="admonition-title">
+<p>Reminder</p>
+<p><a class="admonition-anchor-link" href="#admonition-reminder"></a></p>
+</div>
+<div>
+<p>Recall that <em>standard input</em>, <em>standard output</em> and <em>standard error</em> are also files.</p>
+</div>
+</div>
+<p>This means we're gonna be using a lot of the pipe operator, which channels the current output to the next command's input.</p>
+<p>A common convention in Unix-like systems is that a command should read from the standard input by default if no file is specified. If the command doesn't follow the convention, we can specify the <code>/dev/stdin</code> explicitly.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="gotchas.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../write-to-file-from-clipboard.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="write-to-file-from-clipboard.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../text-processing/file.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -173,11 +184,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="gotchas.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../write-to-file-from-clipboard.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="write-to-file-from-clipboard.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../text-processing/file.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -208,13 +219,13 @@
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
 

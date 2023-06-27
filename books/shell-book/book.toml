@@ -8,6 +8,8 @@ title = "shell-book"
 [output.html]
 site-url = "/books/shell-book/"
 additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-highlight.css", "././mdbook-admonish.css"]
+no-section-label = true
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/shell-book/{path}"  # change your-book
 
 [build]
 build-dir = "./html"
