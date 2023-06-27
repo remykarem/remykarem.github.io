@@ -54,7 +54,7 @@
 
 ---
 
-# Definitions, formats, standards
+# Schemas, formats, standards
 
 - [ASN.1 schemas](./asn1-schemas/index.md)
     - [PKCS #1 (RSA)](./asn1-schemas/pkcs1.md)
