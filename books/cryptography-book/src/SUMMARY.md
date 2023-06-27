@@ -57,11 +57,12 @@
 # Schemas, formats, standards
 
 - [ASN.1 schemas](./asn1-schemas/index.md)
-    - [PKCS #1 (RSA)](./asn1-schemas/pkcs1.md)
+    - [PKCS #1](./asn1-schemas/pkcs1.md)
     - [PKCS #7 / P7B](./asn1-schemas/pkcs7.md)
     - [PKCS #8](./asn1-schemas/pkcs8.md)
     - [PKCS #12 / PFX](./asn1-schemas/pkcs12.md)
-    - [RFC 5915 (ECC)](./asn1-schemas/ecprivatekey.md)
+    - [RFC 5915](./asn1-schemas/ecprivatekey.md)
+    - [PKIPath](./asn1-schemas/pkipath.md)
     - [X.509](./asn1-schemas/x509.md)
 - [Common formats](./common-formats/index.md)
     - [PEM](./common-formats/pem.md)
