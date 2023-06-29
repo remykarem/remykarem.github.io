@@ -4,6 +4,8 @@
 
 ## Goals
 
+### Abstraction of complexities
+
 ### Idempotence
 
 To build resilient systems you need to write software that is idempotent. [Idempotence](https://en.wikipedia.org/wiki/Idempotence)
@@ -11,5 +13,12 @@ To build resilient systems you need to write software that is idempotent. [Idemp
 
 https://ericlathrop.com/2021/04/idempotence-now-prevents-pain-later/
 
+### Maintenance
+
+### Organisation
 
 ### Encapsulation
+
+### Separation of concerns
+
+### Modularise

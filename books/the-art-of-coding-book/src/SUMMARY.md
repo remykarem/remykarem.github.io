@@ -6,13 +6,19 @@
 
 # Application code patterns
 
-- [DDD](./ddd.md)
-- [Hexagonal]()
-- [?]()
-  - [MVC]()
-  - [MVVM]()
-  - [MVP]()
-  - [PM]()
+- [Overview](./application-code-patterns/index.md)
+- [Patterns]()
+  - [MVC](./application-code-patterns/patterns/mvc.md)
+  - [MVP](./application-code-patterns/patterns/mvp.md)
+  - [MVT](./application-code-patterns/patterns/mvt.md)
+  - [DDD](./application-code-patterns/patterns/ddd.md)
+  - [3-tier](./application-code-patterns/patterns/3-tier.md)
+  - [Hexagonal]()
+- [Concerns]()
+  - [UI rendering](./application-code-patterns/concerns/ui-rendering.md)
+  - [Request handling](./application-code-patterns/concerns/request-handling.md)
+  - [Business logic](./application-code-patterns/concerns/business-logic.md)
+  - [Persistence](./application-code-patterns/concerns/persistence.md)
 
 ---
 
