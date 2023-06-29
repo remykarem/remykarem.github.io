@@ -15,11 +15,10 @@
 
 - [Overview](./layer-7/index.md)
 - [HTTP](./layer-7/http.md) 
-  - [Browser]()
-- [HTTP](./layer-7/http-another.md) 
+  - [Browser](./layer-7/http/browser.md)
 - [HTTPS](./layer-7/https.md) 
-- [SSH](./layer-7/ssh.md)
 - [SSL/TLS](./layer-7/ssl.md)
+- [SSH](./layer-7/ssh.md)
 - [DNS](./layer-7/dns.md)
 - [Telnet](./layer-7/telnet.md)
 - [WebSocket](./layer-7/websocket.md)

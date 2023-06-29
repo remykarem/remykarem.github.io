@@ -2,6 +2,13 @@
 
 Secure Sockets Layer / Transport Layer Security
 
+```mermaid
+sequenceDiagram
+    client ->> server: SYN
+    server ->> client: SYN ACK
+    client ->> server: ACK
+```
+
 https://tls13.xargs.org/
 
 Used for:
