@@ -365,6 +365,7 @@ https://www.youtube.com/watch?v=Z3SYDTMP3ME</p>
 <li>communication protocol</li>
 <li>patterns of interaction</li>
 </ul>
+<p><strong>All these styles are commonly built on top of HTTP.</strong></p>
 <div class="table-wrapper"><table><thead><tr><th></th><th>REST</th><th>GraphQL</th><th>gRPC</th><th>SOAP</th></tr></thead><tbody>
 <tr><td>Data format</td><td>JSON, HTML, etc.</td><td>JSON</td><td>Protobuf, JSON, XML</td><td>XML</td></tr>
 <tr><td>Schema</td><td>(Verb, resource, JSON schema)</td><td>GraphQL</td><td>Function signature</td><td>?</td></tr>
@@ -414,6 +415,12 @@ https://www.youtube.com/watch?v=Z3SYDTMP3ME</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="soap"><a class="header" href="#soap">SOAP</a></h1>
 <p>Simple Object Access Protocol</p>
 <p>XML payload</p>
+<p><strong>WS-Security</strong> (Web Services Security) is a messaging protocol that secures SOAP <em>envelopes</em> and messages by providing security features:</p>
+<ul>
+<li>Integrity — XML signature</li>
+<li>Confidentiality — XML Encryption</li>
+<li>Authentication</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="batch-processing"><a class="header" href="#batch-processing">Batch processing</a></h1>
 <p>Batch processing can be useful for:</p>
 <ul>
@@ -684,7 +691,12 @@ END
 <li>JER (to JSON)</li>
 </ul>
 <h2 id="encoding-der"><a class="header" href="#encoding-der">Encoding: DER</a></h2>
-<p>The DER encoding method follows a tag-length-value syntax.</p>
+<p>The DER encoding method follows a <strong>type</strong>-<strong>length</strong>-<strong>value</strong> syntax.</p>
+<ul>
+<li><strong>type</strong>: can be primitive or constructed</li>
+<li><strong>length</strong> (at least 1 byte): the number of octets depends on the size of the <strong>value</strong></li>
+<li><strong>value</strong></li>
+</ul>
 <p>Example using OpenSSL.</p>
 <p>Given an ASN.1 definition</p>
 <pre><code>RSAPrivateKey ::= SEQUENCE {

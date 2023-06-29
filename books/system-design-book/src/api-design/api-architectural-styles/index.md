@@ -11,6 +11,8 @@ How do services communicate each other in terms of
 - communication protocol
 - patterns of interaction
 
+**All these styles are commonly built on top of HTTP.**
+
 |                   | REST                          | GraphQL                   | gRPC                        | SOAP |
 | ----------------- | ----------------------------- | ------------------------- | --------------------------- | ---- |
 | Data format       | JSON, HTML, etc.              | JSON                      | Protobuf, JSON, XML         | XML  |

@@ -181,7 +181,12 @@ END
 <li>JER (to JSON)</li>
 </ul>
 <h2 id="encoding-der"><a class="header" href="#encoding-der">Encoding: DER</a></h2>
-<p>The DER encoding method follows a tag-length-value syntax.</p>
+<p>The DER encoding method follows a <strong>type</strong>-<strong>length</strong>-<strong>value</strong> syntax.</p>
+<ul>
+<li><strong>type</strong>: can be primitive or constructed</li>
+<li><strong>length</strong> (at least 1 byte): the number of octets depends on the size of the <strong>value</strong></li>
+<li><strong>value</strong></li>
+</ul>
 <p>Example using OpenSSL.</p>
 <p>Given an ASN.1 definition</p>
 <pre><code>RSAPrivateKey ::= SEQUENCE {

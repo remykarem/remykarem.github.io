@@ -35,7 +35,11 @@ Here are some encoding methods:
 
 ## Encoding: DER
 
-The DER encoding method follows a tag-length-value syntax.
+The DER encoding method follows a **type**-**length**-**value** syntax.
+
+* **type**: can be primitive or constructed
+* **length** (at least 1 byte): the number of octets depends on the size of the **value**
+* **value**
 
 Example using OpenSSL.
 
