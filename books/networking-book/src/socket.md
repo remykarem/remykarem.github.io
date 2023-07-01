@@ -10,3 +10,9 @@ Unix domain socket
 
 - Data sent to unix socket never gets lost
 - Use them to communicate between processes on the same computer
+
+## Sockets
+
+Sockets are gateways between applications and the network. Data is sent from application to socket. Sockets have an associated port number with them.
+
+OS can take care of explicitly specifying a port. THis is called ephemeral ports, i.e.e OS will bind a socket to a port dynamically

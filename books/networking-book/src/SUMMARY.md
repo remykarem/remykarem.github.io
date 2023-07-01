@@ -11,6 +11,24 @@
 
 ---
 
+# Network architectures
+
+- [Client-server]()
+- [P2P]()
+- [Hybrid]()
+- [Data centres]()
+
+---
+
+# Devices, interfaces
+
+- [Router](./layer-3/router.md)
+- [Interfaces](./layer-3/interfaces.md)
+- [Socket](./socket.md)
+- [Access networks](./access-networks.md)
+
+---
+
 # Layer 7: Application
 
 - [Overview](./layer-7/index.md)
@@ -43,6 +61,10 @@
 
 - [Overview](./layer-3/network-layer.md)
 - [IP](./layer-3/ipv4.md)
+  - [Message format](./layer-3/ip/ip-packet.md)
+  - [Host addressing](./layer-3/ip/ip-addresses.md)
+  - [Message routing](./layer-3/ip/routing.md)
+  - [Fragmentation and reassembly](./layer-3/ip/fragmentation-and-reassembly.md)
 - [ICMP](./layer-3/icmp.md)
 - [IPSec](./layer-3/ipsec.md)
 
@@ -57,31 +79,8 @@
 
 ---
 
+# Unclassified
+
 - [Standards](./standards.md)
-
-- [Tings]()
-    - [Gateway]()
-    - [Router]()
-    - [Access networks](./access-networks.md)
-    - [NAT]()
-    - [NIC]()
-    - [Socket](./socket.md)
-
----
-
-# Network architectures
-
-- [Client-server]()
-- [P2P]()
-- [Hybrid]()
-- [Data centres]()
-
----
-
-# What happens when you
-
 - [Type a URL on the browser](./what-happens.md)
-
----
-
 - [Troubleshooting](./troubleshooting.md)

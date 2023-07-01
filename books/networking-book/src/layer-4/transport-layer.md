@@ -19,12 +19,6 @@ What problems are we trying to solve?
 
 Connection-oriented protocol
 
-## Sockets
-
-Sockets are gateways between applications and the network. Data is sent from application to socket. Sockets have an associated port number with them.
-
-OS can take care of explicitly specifying a port. THis is called ephemeral ports, i.e.e OS will bind a socket to a port dynamically
-
 ## Multiplexing and demultiplexing
 
 Transport layer labels packets with the port number of the application a message is from and the one it is addressed to. This allows the layer to multiplex and demultiplex the data. TCP and UDP implement these differently.
