@@ -23,8 +23,10 @@
 # Software/hardware layers
 
 - [Application]()
-- [TCP/UDP socket]()
-- [Socket (raw)](./socket.md)
+- [Socket](./socket.md)
+  - [SOCK_STREAM](./socket/sock-stream.md)
+  - [SOCK_DGRAM](./socket/sock-dgram.md)
+  - [SOCK_RAW](./socket/sock-raw.md)
 - [Network interface](./layer-3/interfaces.md)
 - [Network Interface Controller](./network-interface-card.md)
 
@@ -45,9 +47,10 @@
 - [HTTPS](./layer-7/https.md) 
 - [SSL/TLS](./layer-7/ssl.md)
 - [SSH](./layer-7/ssh.md)
+- [SFTP]()
+- [WebSocket](./layer-7/websocket.md)
 - [DNS](./layer-7/dns.md)
 - [Telnet](./layer-7/telnet.md)
-- [WebSocket](./layer-7/websocket.md)
 - [BGP](./layer-7/bgp.md)
 - [DHCP](./layer-7/dhcp.md)
 - [POP, IMAP](./layer-7/pop-imap.md)
@@ -59,6 +62,9 @@
 
 - [Overview](./layer-4/transport-layer.md)
 - [TCP](./layer-4/tcp.md)
+  - [Establishing a connection](./layer-4/tcp/3-way-handshake.md)
+  - [Tearing down a connection](./layer-4/tcp/4-way-handshake.md)
+  - [Inspect](./layer-4/tcp/inspect.md)
 - [UDP](./layer-4/udp.md)
 
 ---

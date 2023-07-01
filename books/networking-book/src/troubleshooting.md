@@ -14,27 +14,11 @@ sudo lsof     list files and processes
     -P        show port
 ```
 
-View UDP packets
-
-```
-tcpdump [udp]
-    -c 10            capture 10 packets
-    -w output.pcap   write to a file
-    -r output.pcap   read a file
-    -X               print hex and ASCII
-```
-
 ![](./troubleshooting1.png)
 
 ![](./troubleshooting2.png)
 
 ![](./troubleshooting3.png)
-
-Capture packets on en0 interface
-
-```
-sudo tcpdump -i [en0|lo0]
-```
 
 Capture packets that are to or from my computer
 

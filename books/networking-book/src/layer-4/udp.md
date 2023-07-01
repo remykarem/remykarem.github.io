@@ -24,9 +24,8 @@ Consists of:
 - Checksum
 - Data
 
-**Applications using UDP**
-
-- DNS
+```admonish faq title="Who uses UDP?"
 - Xbox Live
 - Network management
 - Live audio/video streaming
+```

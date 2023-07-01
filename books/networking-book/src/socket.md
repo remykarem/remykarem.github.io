@@ -1,23 +1,32 @@
 # Socket
 
-aka port
+A socket is a software object _provided by the OS_ to allow applications to send and receive data across the network.
 
-A socket is the software interface between a process (the “port” that an application reserved) and the computer network (which is defined by the machine’s “IP address” in the network).
-
-So, technically, processes communicate with each other using sockets.
-
-```admonish note title="Disambiguation"
-
-**Unix domain socket**
-
-- Data sent to unix socket never gets lost
-- Use them to communicate between processes on the same computer
+```
+man 2 socket
 ```
 
-~~~admonish question
-How is a socket related to the software network interface?
-~~~
+Sockets are an abstraction of the network interface, encompassing Layer 3 (`SOCK_RAW`) and Layer 4 (`SOCK_STREAM` and `SOCK_DGRAM`; TCP and UDP respectively). The system call allows you to:
 
-Sockets are gateways between applications and the network. Data is sent from application to socket. Sockets have an associated port number with them.
+* Create socket
+* Bind socket to an IP address
+* Connect socket to an IP address
+* Write data to socket — using the routing table
+* Read data from socket — using the destination IP address and port number from the data
 
-OS can take care of explicitly specifying a port. This is called ephemeral ports, i.e.e OS will bind a socket to a port dynamically
+```admonish note title="Socket vs. Unix domain socket"
+A socket is not the same as the Unix domain socket.
+```
+
+```admonish note title="Socket vs. port"
+A socket is not a port.
+
+A port is another software construct defined by the OS to differentiate between different programs or processes running on the same machine.
+```
+
+```admonish note title="Socket vs. file"
+A socket is not a file.
+
+However, it uses file-like semantics like file descriptors.
+```
+
