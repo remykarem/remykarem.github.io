@@ -22,6 +22,12 @@ ifconfig / ip
 ifconfig
 ```
 
+whereas in Linux it's
+
+```
+ipconfig
+```
+
 The usual suspects are:
 
 | Interface      | Use                      |
@@ -36,3 +42,7 @@ The usual suspects are:
 | `utunXXX`      | Interfaces for VPN       |
 
 ````
+
+~~~admonish note
+You don't typically interact directly with network interfaces. The OS abstracts this away using sockets.
+~~~

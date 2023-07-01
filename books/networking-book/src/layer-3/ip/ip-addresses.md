@@ -6,6 +6,14 @@ Hosts (computers) don’t have IP addresses. Interfaces on hosts have IP address
 
 To identify each device in the world-wide web, Internet Assigned Numbers Authority (IANA) assigns IPV4 address as a unique identifier for each device on the Internet. Length of the IP address is 32 bits. Hence there are
 
+~~~admonish tip
+In Linux, you can get your IP address with
+
+```
+ipconfig getifaddr en0
+```
+~~~
+
 ## Address classes
 
 | Class | Length of subnet ID | Range | Default subnet mask | Remarks |

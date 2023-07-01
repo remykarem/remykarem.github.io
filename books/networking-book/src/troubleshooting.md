@@ -85,26 +85,6 @@ nc
 
 ## Network layer
 
-IP
-
-```
-curl ifconfig.me
-```
-
-My IP address
-
-```
-ipconfig getifaddr en0
-```
-
-Find default gateway
-
-```
-ip route show default
-netstat -nr
-route -n get default
-```
-
 ICMP: echo request & reply
 
 ```

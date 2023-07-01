@@ -22,8 +22,9 @@
 
 # Software/hardware layers
 
-- [Process]()
-- [Socket](./socket.md)
+- [Application]()
+- [TCP/UDP socket]()
+- [Socket (raw)](./socket.md)
 - [Network interface](./layer-3/interfaces.md)
 - [Network Interface Controller](./network-interface-card.md)
 
