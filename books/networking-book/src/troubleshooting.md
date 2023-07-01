@@ -1,10 +1,10 @@
 # Troubleshooting
 
-# Quicks
+## Quicks
 
 `netstat` see open ports
 
-# Transport layer
+## Transport layer
 
 ```
 sudo lsof     list files and processes
@@ -83,7 +83,7 @@ nc
     -v verbose
 ```
 
-# Network layer
+## Network layer
 
 IP
 
@@ -123,12 +123,6 @@ traceroute [address]   list hops between host and other host
 	-m max TTL
 ```
 
-List devices connected
-
-```
-arp -na list all devices connected to subnet
-```
-
 ```
 nmap -sP 192.168.1.0/24
 ```
@@ -149,44 +143,4 @@ See what steps your packet takes to get somewhere
 
 ```
 traceroute google.com
-```
-
-# Data link layer
-
-List of interfaces
-
-```
-ifconfig / ip
-ifconfig en0
-```
-
-"Block" websites
-
-```
-127.0.0.1 www.facebook.com
-127.0.0.1 facebook.com
-127.0.0.1 login.facebook.com
-127.0.0.1 www.login.facebook.com
-127.0.0.1 fbcdn.net
-127.0.0.1 www.fbcdn.net
-127.0.0.1 fbcdn.com
-127.0.0.1 www.fbcdn.com
-127.0.0.1 static.ak.fbcdn.net
-127.0.0.1 static.ak.connect.facebook.com
-127.0.0.1 connect.facebook.net
-127.0.0.1 www.connect.facebook.net
-127.0.0.1 apps.facebook.com
-::1 www.facebook.com
-::1 facebook.com
-::1 login.facebook.com
-::1 www.login.facebook.com
-::1 fbcdn.net
-::1 www.fbcdn.net
-::1 fbcdn.com
-::1 www.fbcdn.com
-::1 static.ak.fbcdn.net
-::1 static.ak.connect.facebook.com
-::1 connect.facebook.net
-::1 www.connect.facebook.net
-::1 apps.facebook.com
 ```

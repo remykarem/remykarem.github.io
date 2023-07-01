@@ -20,16 +20,23 @@
 
 ---
 
-# Devices, interfaces
+# Software/hardware layers
 
-- [Router](./layer-3/router.md)
-- [Interfaces](./layer-3/interfaces.md)
+- [Process]()
 - [Socket](./socket.md)
-- [Access networks](./access-networks.md)
+- [Network interface](./layer-3/interfaces.md)
+- [Network Interface Controller](./network-interface-card.md)
 
 ---
 
-# Layer 7: Application
+# ?
+
+- [Access networks](./access-networks.md)
+- [Router](./layer-3/router.md)
+
+---
+
+# Protocols: Layer 7 — Application
 
 - [Overview](./layer-7/index.md)
 - [HTTP](./layer-7/http.md) 
@@ -44,12 +51,10 @@
 - [DHCP](./layer-7/dhcp.md)
 - [POP, IMAP](./layer-7/pop-imap.md)
 - [SMTP](./layer-7/smtp.md)
-- [SFTP]()
-- [BitTorrent]()
 
 ---
 
-# Layer 4: Transport
+# Protocols: Layer 4 — Transport
 
 - [Overview](./layer-4/transport-layer.md)
 - [TCP](./layer-4/tcp.md)
@@ -57,7 +62,7 @@
 
 ---
 
-# Layer 3: Network (Internet)
+# Protocols: Layer 3 — Network (Internet)
 
 - [Overview](./layer-3/network-layer.md)
 - [IP](./layer-3/ipv4.md)
@@ -70,11 +75,11 @@
 
 ---
 
-# Layer 1: Physical/Datalink
+# Protocols: Layer 1 — Physical/Datalink
 
 - [Overview](./layer-1/index.md)
 - [ARP](./layer-1/arp.md)
-- [802.11 WiFi]()
+- [802.11 Wi-Fi]()
 - [802.3 Ethernet]()
 
 ---

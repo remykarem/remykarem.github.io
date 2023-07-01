@@ -1,15 +1,38 @@
-# Interfaces
+# Network interfaces
 
-- Ethernet interface
-- Wifi interface
-- Loopback interface
-- Tunnel interface
-- Virtual machine interface
+This is a _software_ abstraction of (but not limited to) physical network interfaces.
 
+These interfaces are _logical_ interfaces: they can be linked to either physical hardware interfaces (eg. Wi-Fi, Ethernet card) or software-based interfaces (eg. VPN tunnels, loop interface).
 
-~~~admonish note title="Multihoming"
+Common types of network interfaces:
 
-A router has as many IPv4 addresses as the number of interfaces it has in the data link later. These hosts are said to be multihomed.
+- Hardware-based
+  - **Wi-Fi interface**
+  - Ethernet interface
+- Software-based
+  - **Loopback interface** — special network interface used by a device to send _packets_ to itself
+  - Virtual Network Interface — used in containerisation software
+  - Tunnel interface — used in VPNs, to convert IPv4 to IPv6 and vice versa, etc.
 
-![IP](../ip1.png)
-~~~
+````admonish tip
+In macOS, you can list the network interfaces:
+
+```
+ifconfig / ip
+ifconfig
+```
+
+The usual suspects are:
+
+| Interface      | Use                      |
+| -------------- | ------------------------ |
+| `en0`          | Usually Wi-Fi            |
+| `enXXX`        | Ethernet                 |
+| `lo0`          | Loopback                 |
+| `p2p0`         | Apple's AirDrop          |
+| `awdl0`        | Apple's AirDrop, SideCar |
+| `llw0`         | Apple's Low Data Mode    |
+| `gif0`, `stf0` | Tunnel interfaces        |
+| `utunXXX`      | Interfaces for VPN       |
+
+````
