@@ -1,16 +1,24 @@
 # SSH
 
-SSH implementations:
-* OpenSSH (macOS)
-* PuTTY (Windows, Linux)
+Secure Shell
 
-https://robotmoon.com/ssh-tunnels/
+SSH is built on top of TCP.
 
-2 asymmetric keys used — key pair 1 (ephemeral; server: private key) & key pair 2 (client: private key)
+This protocol provides a secure way to access a remote computer via shell.
+
+~~~admonish hint title="SSH as an authentication mechanism"
+In some applications like GitHub and databases, the authentication parts of the SSH workflow (everything before the accessing of the remote shell) is used to authenticate the client with the server.
+~~~
+
+## Workflow
+
+2 asymmetric keys used:
+1. key pair 1 (ephemeral; server: private key)
+2. key pair 2 (client: private key)
+
+bla
 
 1. **Client begins TCP handshake** 
-    
-    (SSH is built on top of TCP)
     
 2. **Set up session key (shared key)**
     
@@ -34,9 +42,6 @@ https://robotmoon.com/ssh-tunnels/
     Not for Git, this part is not used. git clone command using SSH only involves establishing a secure connection between the client and server.
     
 
-Secure shell
-
-Cryptographic protocol to allow a secure connection to a remote host over an unsecured network.
 
 Authenticate using one of the following:
 
@@ -44,17 +49,10 @@ Authenticate using one of the following:
 - Private key
 - SSH certificates
 
-**SSH (Secure Shell)**
-
-Cryptographic network protocol that provides administrators with a secure way to access a remote computer. SSH also refers to the suite of utilities that implement the protocol. Secure Shell provides strong authentication and secure encrypted data communications between two computers connecting over an insecure network such as the Internet. SSH is widely used by network administrators for managing systems and applications remotely, allowing them to log in to another computer over a network, execute commands and move files from one computer to another.
-
-# Workflow
-
 ![SSH](./ssh1.png)
 
-# SSH port forwarding / SSH tunnel
 
-- Local
-- Remote
-
-![SSH](./ssh2.png)
+~~~admonish note title="SSH implementations"
+* OpenSSH (macOS)
+* PuTTY (Windows, Linux)
+~~~

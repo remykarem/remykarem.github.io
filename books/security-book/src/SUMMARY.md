@@ -16,6 +16,7 @@
 - [SAML]()
 - [LDAP]()
 - [TOTP](./totp.md)
+- [SSH]()
 
 ---
 

@@ -2,47 +2,36 @@
 
 Secure Sockets Layer / Transport Layer Security
 
-```mermaid
-sequenceDiagram
-    client ->> server: SYN
-    server ->> client: SYN ACK
-    client ->> server: ACK
-```
+TLS _typically_ operates on top of TCP.
 
-https://tls13.xargs.org/
+This protocol provides
 
-Used for:
+- **Privacy** — data is encrypted
+- **Data integrity** — verifying data is not tampered with before reaching its intended recipient
+- **(Server) authentication** — make sure when the client connects to the server, the server is indeed who it is
 
-1. Privacy: SSL encrypts data transmitted across the web
-2. Authentication: make sure when you connect to google it’s actually Google
-3. Data integrity: verifying data is not tampered with before reaching its intended recipient
+~~~admonish note title="Client _and_ server authentication"
+While server authentication is the most common, the client can also be additionally requested for authentication. This is known as **mTLS** or mutual TLS.
+~~~
 
-IN other words, HTTPS = HTTP + TLS.
+For this protocol to work, the server must first have an **SSL certificate** that contains:
 
-**SSL certificate**
-
-A SSL certificate contains:
-
-- the hostname(s) it’s valid for
-- a public key
+- the server hostname(s)
+- a public key 
 - an expiration date
-- signature(s) from a CA
+- signature(s) from a Certificate Authority (signed with their private key)
 
-**How SSL is issued**
+This certificate is issued _out-of-band_ by a **Certificate Authority** (CA).
 
-CA (Certificate Authority), server, web browser
+To request for an SSL certificate from a CA, the owner of the server needs to submit a **Certificate Signing Request** (CSR) to the CA. The workflow is as such:
 
-1. CA signs the certificate with its own private key.
-2. Server installs certificate.
+1. The server generates a key pair.
+2. Generate a CSR using the private key. A CSR requests information like:
+      * the server hostname
+      * public key (gotten from private key)
+      * company details
+      * country
+3. Submit the CSR to the CA.
+4. The CA validates the domain ownership (via DCV etc.).
 
-Free certificates are just as secure
-
-WHo can sign? Certificate authority or you.
-
-![SSL](./ssl.png)
-
-See a server's SSL cert
-
-```
-openssl s_client -connect jvns.ca:443 -servername jvns.ca
-```
+Once validated, the CA will issue the SSL certificate to the owner of the server (via email etc.).

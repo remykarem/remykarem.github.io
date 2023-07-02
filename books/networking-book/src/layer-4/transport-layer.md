@@ -25,6 +25,15 @@ Therefore, the goals of Layer 4 (not guaranteed by all protocols) are:
 
 ## Overview
 
-|                     | TCP                 | UDP            |
-| ------------------- | ------------------- | -------------- |
-| Stateful connection | Connection-oriented | Connectionless |
+|                          | QUIC              | TCP                | UDP            |
+| ------------------------ | ----------------- | ------------------ | -------------- |
+| Stateful connection      | Connection ID     | (IP address, port) | Connectionless |
+| RTT                      | 0                 | 1                  | 0              |
+| With TLS?                | ✅                | ❌                 | ❌             |
+| Loss recovery mechanism  | ✅                | ✅                 | ❌             |
+| Corrupted data mechanism | ✅; No retransmit | ✅; Retransmit     | ❌             |
+| Data integrity check     | ✅                | ✅                 | ✅             |
+
+```admonish info title="Definition: RTT"
+Round-trip time
+```
