@@ -4,7 +4,7 @@ Hypertext Transfer Protocol
 
 HTTP is a client-server application layer protocol.
 
-HTTP uses TCP as its underlying transport protocol so that messages are guaranteed to get delivered in order. A connection must first be made.
+HTTP/2 and earlier use TCP as its underlying transport protocol so that messages are guaranteed to get delivered in order. A connection must first be made.
 
 ---
 

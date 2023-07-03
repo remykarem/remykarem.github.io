@@ -39,6 +39,13 @@
 
 ---
 
+# Protocols: Tunneling
+
+- [IPSec](./layer-3/ipsec.md)
+- [OpenVPN]()
+
+---
+
 # Protocols: Layer 7 — Application
 
 - [Overview](./layer-7/index.md)
@@ -47,16 +54,13 @@
   - [Message format](./layer-7/http/message-format.md)
   - [Features](./layer-7/http/features.md)
   - [Browser](./layer-7/http/browser.md)
-  - [HTTPS](./layer-7/https.md) 
-- [SSL/TLS](./layer-7/ssl.md)
-  - [Workflow]()
-  - [DTLS]()
-  - [TLS ciphers]()
+- [HTTPS](./layer-7/https.md) 
 - [SSH](./layer-7/ssh.md)
   - [Workflow]()
   - [SSH tunnel](./layer-7/ssh/ssh-tunnel.md)
 - [DNS](./layer-7/dns.md)
-- [SFTP]()
+- [SFTP](./layer-7/sftp.md)
+- [SCP]()
 - [WebSocket](./layer-7/websocket.md)
 - [Telnet](./layer-7/telnet.md)
 - [BGP](./layer-7/bgp.md)
@@ -66,12 +70,22 @@
 
 ---
 
+# Protocols: Layer 6 — Presentation
+
+- [SSL/TLS](./layer-6/ssl.md)
+  - [Workflow]()
+  - [DTLS]()
+  - [TLS ciphers]()
+- [(SSH)]()
+
+---
+
 # Protocols: Layer 4 — Transport
 
 - [Overview](./layer-4/transport-layer.md)
 - [TCP](./layer-4/tcp.md)
   - [Workflow](./layer-4/tcp/3-way-handshake.md)
-  - [Message format](./layer-3/ip/ip-packet.md)
+  - [Message format](./layer-4/tcp/message-format.md)
   - [Tools](./layer-4/tcp/inspect.md)
 - [UDP](./layer-4/udp.md)
 - [QUIC](./layer-4/quic.md)
@@ -87,7 +101,6 @@
   - [Host addressing](./layer-3/ip/ip-addresses.md)
   - [Fragmentation and reassembly](./layer-3/ip/fragmentation-and-reassembly.md)
 - [ICMP](./layer-3/icmp.md)
-- [IPSec](./layer-3/ipsec.md)
 
 ---
 

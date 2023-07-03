@@ -4,6 +4,8 @@ Post Office Protocol v3, Internet Message Access Protocol
 
 POP/IMAP protocols are pull protocols used for getting email from an email server.
 
+These protocols use TLS for security.
+
 # **POP**
 
 POP phases
