@@ -72,11 +72,14 @@
 
 # Protocols: Layer 6 — Presentation
 
-- [SSL/TLS](./layer-6/ssl.md)
+- [TLS](./layer-6/ssl/index.md)
+  - [Setup](./layer-6/ssl/setup.md)
   - [Workflow]()
   - [DTLS]()
   - [TLS ciphers]()
-- [(SSH)]()
+- [SSH](./layer-6/ssh/index.md)
+  - [Setup](./layer-6/ssh/setup.md)
+  - [Workflow](./layer-6/ssh/workflow.md)
 
 ---
 
