@@ -29,6 +29,7 @@ jobs:
     - name: Build networking book
       run: |
         mdbook build books-src/networking-book
+        mdbook build books-src/cryptography-book
 
     # Add more build steps as needed for each book
 
