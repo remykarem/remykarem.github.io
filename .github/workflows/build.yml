@@ -22,7 +22,7 @@ jobs:
         mdbook-version: '0.4.30'
 
     - name: Install Catpuccino
-      run: cargo install catpuccino
+      run: cargo install mdbook-catppuccin
 
     - name: Build networking book
       run: |
