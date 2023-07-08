@@ -1,0 +1,36 @@
+[book]
+authors = ["Raimi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Book of Cryptography"
+
+[output.html]
+site-url = "/books/cryptography-book"
+mathjax-support = true
+# Required for preprocess.last-changed
+git-repository-url = "https://github.com/remykarem/remykarem.github.io"
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/cryptography-book/{path}"  # change your-book
+additional-css = ["last-changed.css", "././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
+default-theme="macchiato"
+preferred-dark-theme="macchiato"
+no-section-label = true
+
+[build]
+build-dir = "./html"
+
+[preprocessor]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "2.0.0" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.catppuccin]
+assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
+
+[preprocessor.katex]
+renderers = ["html"]
+
+# [preprocessor.last-changed]
+# command = "mdbook-last-changed"
+# renderer = ["html"]
