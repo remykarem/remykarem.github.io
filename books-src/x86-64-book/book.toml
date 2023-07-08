@@ -9,24 +9,14 @@ title = "x86-64 Book"
 site-url = "/books/x86-64-book"  # this is for mathy books. for non-mathy, use "/books/your-book"
 mathjax-support = true
 git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
-additional-css = ["last-changed.css", "././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
+additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
+no-section-label = true
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
 
 [build]
-build-dir = "./html"  # this is for mathy books. for non-mathy, use "./html"
-
-[preprocessor.toc]
-command = "mdbook-toc"
-renderer = ["html"]
-
-[preprocessor.last-changed]
-command = "mdbook-last-changed"
-renderer = ["html"]
+build-dir = "../../books/x86-64-book"  # this is for mathy books. for non-mathy, use "./html"
 
 [preprocessor.admonish]
 command = "mdbook-admonish"
 assets_version = "2.0.0" # do not edit: managed by `mdbook-admonish install`
-
-[preprocessor.catppuccin]
-assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
