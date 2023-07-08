@@ -21,10 +21,13 @@ jobs:
       with:
         mdbook-version: '0.4.30'
 
-    - name: Build networking book
+    - name: Download mdbook preprocessors
       run: |
         curl -O -L https://github.com/tommilligan/mdbook-admonish/releases/download/v1.9.0/mdbook-admonish-v1.9.0-x86_64-unknown-linux-musl.tar.gz
         tar xvzf mdbook-admonish-v1.9.0-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
+
+    - name: Build networking book
+      run: |
         mdbook build books/networking-book
 
     # Add more build steps as needed for each book
