@@ -8,12 +8,12 @@ title = "networking-book"
 [output.html]
 site-url = "/books/networking-book/"
 additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
-edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/networking-book/{path}"  # change your-book
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/networking-book/{path}"  # change your-book
 no-section-label = true
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [build]
-build-dir = "./html"
+build-dir = "../../books/networking-book"
 
 [preprocessor]
 
