@@ -7,18 +7,15 @@ title = "db-book"
 
 [output.html]
 site-url = "/books/db-book/"
-additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
+additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
 no-section-label = true
-edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/db-book/{path}"
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/db-book/{path}"
 
 [build]
-build-dir = "./html"
+build-dir = "../../books/db-book/"
 
 [preprocessor]
 
 [preprocessor.admonish]
 command = "mdbook-admonish"
 assets_version = "2.0.1" # do not edit: managed by `mdbook-admonish install`
-
-[preprocessor.catppuccin]
-assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
