@@ -7,17 +7,14 @@ title = "shell-book"
 
 [output.html]
 site-url = "/books/shell-book/"
-additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-highlight.css", "././mdbook-admonish.css"]
+additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
 no-section-label = true
-edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/shell-book/{path}"  # change your-book
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/shell-book/{path}"  # change your-book
 
 [build]
-build-dir = "./html"
+build-dir = "../../books/shell-book/"
 
 [preprocessor]
-
-[preprocessor.catppuccin]
-assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
 
 [preprocessor.admonish]
 command = "mdbook-admonish"

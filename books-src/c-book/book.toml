@@ -10,10 +10,11 @@ site-url = "/books/c-book"  # this is for mathy books. for non-mathy, use "/book
 git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
-additional-css = ["././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/c-book/{path}"  # change your-book
+additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
 
 [build]
-build-dir = "./html"  # this is for mathy books. for non-mathy, use "./html"
+build-dir = "../../books/c-book"  # this is for mathy books. for non-mathy, use "./html"
 
 [preprocessor]
 

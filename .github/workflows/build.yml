@@ -30,10 +30,18 @@ jobs:
 
     - name: Build networking book
       run: |
+        mdbook build books-src/system-design-book
+        mdbook build books-src/spring-boot-book
+        mdbook build books-src/db-book
+        mdbook build books-src/security-book
+        mdbook build books-src/the-art-of-coding-book
+        mdbook build books-src/rust-tings
+        mdbook build books-src/c-book
+        mdbook build books-src/shell-book
         mdbook build books-src/networking-book
         mdbook build books-src/cryptography-book
-        mdbook build books-src/x86-64-book
         mdbook build books-src/os-book
+        mdbook build books-src/x86-64-book
 
     # Add more build steps as needed for each book
 
