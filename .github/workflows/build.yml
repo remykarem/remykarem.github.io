@@ -35,7 +35,7 @@ jobs:
         mdbook build books-src/db-book
         mdbook build books-src/security-book
         mdbook build books-src/the-art-of-coding-book
-        mdbook build books-src/rust-tings
+        mdbook build books-src/rust-book
         mdbook build books-src/c-book
         mdbook build books-src/shell-book
         mdbook build books-src/networking-book

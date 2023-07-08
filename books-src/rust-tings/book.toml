@@ -3,15 +3,15 @@ authors = ["remykarem"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Rust tings"
+title = "Rust book"
 
 [output.html]
-site-url = "/books/rust-tings/"
+site-url = "/books/rust-book/"
 additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
-edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/rust-tings/{path}"  # change your-book
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/rust-book/{path}"  # change your-book
 
 [build]
-build-dir = "../../books/rust-tings/"
+build-dir = "../../books/rust-book/"
 
 [preprocessor]
 
