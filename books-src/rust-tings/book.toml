@@ -7,7 +7,7 @@ title = "Rust tings"
 
 [output.html]
 site-url = "/books/rust-tings/"
-additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-highlight.css", "./mdbook-admonish.css"]
+additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/rust-tings/{path}"  # change your-book
 
 [build]
