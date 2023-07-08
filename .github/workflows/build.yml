@@ -24,7 +24,7 @@ jobs:
     - name: Build networking book
       run: |
         curl -O -L https://github.com/tommilligan/mdbook-admonish/releases/download/v1.9.0/mdbook-admonish-v1.9.0-x86_64-unknown-linux-gnu.tar.gz
-        tar xvzf mdbook-admonish-v1.9.0-x86_64-unknown-linux-gnu.tar.gz
+        tar xvzf mdbook-admonish-v1.9.0-x86_64-unknown-linux-gnu.tar.gz -C ~/.cargo/bin
         mdbook build books/networking-book
 
     # Add more build steps as needed for each book
