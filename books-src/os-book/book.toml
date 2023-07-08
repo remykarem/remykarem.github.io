@@ -7,15 +7,14 @@ title = "os-book"
 
 [output.html]
 site-url = "/books/os-book/"
-additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-highlight.css", "./mdbook-admonish.css"]
+additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/os-book/{path}"  # change your-book
+no-section-label = true
 
 [build]
-build-dir = "./html"
+build-dir = "../../books/os-book"
 
 [preprocessor]
-
-[preprocessor.catppuccin]
-assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
 
 [preprocessor.admonish]
 command = "mdbook-admonish"
