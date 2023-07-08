@@ -1,0 +1,20 @@
+[book]
+authors = ["remykarem"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Rust book"
+
+[output.html]
+site-url = "/books/rust-book/"
+additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/rust-book/{path}"  # change your-book
+
+[build]
+build-dir = "../../books/rust-book/"
+
+[preprocessor]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "2.0.1" # do not edit: managed by `mdbook-admonish install`
