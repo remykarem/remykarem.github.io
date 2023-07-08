@@ -169,35 +169,41 @@
 </ul>
 </li>
 </ul>
-<pre><code class="language-admonish tip">In macOS, you can list the network interfaces:
-
-```
-ifconfig / ip
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="#admonition-tip"></a></p>
+</div>
+<div>
+<p>In macOS, you can list the network interfaces:</p>
+<pre><code>ifconfig / ip
 ifconfig
-```
-
-whereas in Linux it's
-
-```
-ipconfig
-```
-
-The usual suspects are:
-
-| Interface      | Use                      |
-| -------------- | ------------------------ |
-| `en0`          | Usually Wi-Fi            |
-| `enXXX`        | Ethernet                 |
-| `lo0`          | Loopback                 |
-| `p2p0`         | Apple's AirDrop          |
-| `awdl0`        | Apple's AirDrop, SideCar |
-| `llw0`         | Apple's Low Data Mode    |
-| `gif0`, `stf0` | Tunnel interfaces        |
-| `utunXXX`      | Interfaces for VPN       |
-
 </code></pre>
-<pre><code class="language-admonish note">You don't typically interact directly with network interfaces. The OS abstracts this away using sockets.
+<p>whereas in Linux it's</p>
+<pre><code>ipconfig
 </code></pre>
+<p>The usual suspects are:</p>
+<div class="table-wrapper"><table><thead><tr><th>Interface</th><th>Use</th></tr></thead><tbody>
+<tr><td><code>en0</code></td><td>Usually Wi-Fi</td></tr>
+<tr><td><code>enXXX</code></td><td>Ethernet</td></tr>
+<tr><td><code>lo0</code></td><td>Loopback</td></tr>
+<tr><td><code>p2p0</code></td><td>Apple's AirDrop</td></tr>
+<tr><td><code>awdl0</code></td><td>Apple's AirDrop, SideCar</td></tr>
+<tr><td><code>llw0</code></td><td>Apple's Low Data Mode</td></tr>
+<tr><td><code>gif0</code>, <code>stf0</code></td><td>Tunnel interfaces</td></tr>
+<tr><td><code>utunXXX</code></td><td>Interfaces for VPN</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>You don't typically interact directly with network interfaces. The OS abstracts this away using sockets.</p>
+</div>
+</div>
 
                     </main>
 

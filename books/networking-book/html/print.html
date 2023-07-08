@@ -179,16 +179,35 @@
 <li>Write data to socket — using the routing table</li>
 <li>Read data from socket — using the destination IP address and port number from the data</li>
 </ul>
-<pre><code class="language-admonish note title=&quot;Socket vs. Unix domain socket&quot;">A socket is not the same as the Unix domain socket.
-</code></pre>
-<pre><code class="language-admonish note title=&quot;Socket vs. port&quot;">A socket is not a port.
-
-A port is another software construct defined by the OS to differentiate between different programs or processes running on the same machine.
-</code></pre>
-<pre><code class="language-admonish note title=&quot;Socket vs. file&quot;">A socket is not a file.
-
-However, it uses file-like semantics like file descriptors.
-</code></pre>
+<div id="admonition-socket-vs-unix-domain-socket" class="admonition note">
+<div class="admonition-title">
+<p>Socket vs. Unix domain socket</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-socket-vs-unix-domain-socket"></a></p>
+</div>
+<div>
+<p>A socket is not the same as the Unix domain socket.</p>
+</div>
+</div>
+<div id="admonition-socket-vs-port" class="admonition note">
+<div class="admonition-title">
+<p>Socket vs. port</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-socket-vs-port"></a></p>
+</div>
+<div>
+<p>A socket is not a port.</p>
+<p>A port is another software construct defined by the OS to differentiate between different programs or processes running on the same machine.</p>
+</div>
+</div>
+<div id="admonition-socket-vs-file" class="admonition note">
+<div class="admonition-title">
+<p>Socket vs. file</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-socket-vs-file"></a></p>
+</div>
+<div>
+<p>A socket is not a file.</p>
+<p>However, it uses file-like semantics like file descriptors.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sock_stream"><a class="header" href="#sock_stream">SOCK_STREAM</a></h1>
 <p>A socket of type <code>SOCK_STREAM</code> provides sequenced, reliable, full-duplex byte streams. </p>
 <p>This correlated with TCP.</p>
@@ -220,42 +239,55 @@ However, it uses file-like semantics like file descriptors.
 </ul>
 </li>
 </ul>
-<pre><code class="language-admonish tip">In macOS, you can list the network interfaces:
-
-```
-ifconfig / ip
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="layer-3/interfaces.html#admonition-tip"></a></p>
+</div>
+<div>
+<p>In macOS, you can list the network interfaces:</p>
+<pre><code>ifconfig / ip
 ifconfig
-```
-
-whereas in Linux it's
-
-```
-ipconfig
-```
-
-The usual suspects are:
-
-| Interface      | Use                      |
-| -------------- | ------------------------ |
-| `en0`          | Usually Wi-Fi            |
-| `enXXX`        | Ethernet                 |
-| `lo0`          | Loopback                 |
-| `p2p0`         | Apple's AirDrop          |
-| `awdl0`        | Apple's AirDrop, SideCar |
-| `llw0`         | Apple's Low Data Mode    |
-| `gif0`, `stf0` | Tunnel interfaces        |
-| `utunXXX`      | Interfaces for VPN       |
-
 </code></pre>
-<pre><code class="language-admonish note">You don't typically interact directly with network interfaces. The OS abstracts this away using sockets.
+<p>whereas in Linux it's</p>
+<pre><code>ipconfig
 </code></pre>
+<p>The usual suspects are:</p>
+<div class="table-wrapper"><table><thead><tr><th>Interface</th><th>Use</th></tr></thead><tbody>
+<tr><td><code>en0</code></td><td>Usually Wi-Fi</td></tr>
+<tr><td><code>enXXX</code></td><td>Ethernet</td></tr>
+<tr><td><code>lo0</code></td><td>Loopback</td></tr>
+<tr><td><code>p2p0</code></td><td>Apple's AirDrop</td></tr>
+<tr><td><code>awdl0</code></td><td>Apple's AirDrop, SideCar</td></tr>
+<tr><td><code>llw0</code></td><td>Apple's Low Data Mode</td></tr>
+<tr><td><code>gif0</code>, <code>stf0</code></td><td>Tunnel interfaces</td></tr>
+<tr><td><code>utunXXX</code></td><td>Interfaces for VPN</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="layer-3/interfaces.html#admonition-note"></a></p>
+</div>
+<div>
+<p>You don't typically interact directly with network interfaces. The OS abstracts this away using sockets.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="network-interface-controller"><a class="header" href="#network-interface-controller">Network Interface Controller</a></h1>
 <p>aka Network Interface Card, Network Adapter, hardware port, hardware interface</p>
 <p>This is a hardware component that allows a device to connect to a network. An NIC controls the interaction between hardware and wired/optical/wireless medium.</p>
 <p>A host can have multiple NICs.</p>
 <p>Every NIC has a physical address called <strong>MAC address</strong> (Media Access Control) which is a unique serial number. </p>
-<pre><code class="language-admonish note">A typical MAC address is 6 octets long, eg. 00:0a:95:9d:68:16.
-</code></pre>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="network-interface-card.html#admonition-note"></a></p>
+</div>
+<div>
+<p>A typical MAC address is 6 octets long, eg. 00:0a:95:9d:68:16.</p>
+</div>
+</div>
 <p>Here are some common NICs:</p>
 <ul>
 <li>Ethernet card</li>
@@ -264,12 +296,17 @@ The usual suspects are:
 <li>USB network adapter</li>
 <li>Fiber Optic NIC</li>
 </ul>
-<pre><code class="language-admonish tip">In macOS, you can list all NICs and their MAC addresses:
-
-```
-networksetup -listallhardwareports
-```
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="network-interface-card.html#admonition-tip"></a></p>
+</div>
+<div>
+<p>In macOS, you can list all NICs and their MAC addresses:</p>
+<pre><code>networksetup -listallhardwareports
 </code></pre>
+</div>
+</div>
 <hr />
 <ul>
 <li>Guided
@@ -406,23 +443,25 @@ Because an HTTP session typically involves multiple non-persistent HTTP connecti
 <tr><td>X-Content-Type-Options</td><td>MIME-sniff resource?</td><td><code>nosniff</code></td></tr>
 <tr><td>Referrer-Policy</td><td>??</td><td><code>no-referrer</code></td></tr>
 </tbody></table>
+</div><div id="admonition-cookie" class="admonition note">
+<div class="admonition-title">
+<p>Cookie</p>
+<p><a class="admonition-anchor-link" href="layer-7/http/message-format.html#admonition-cookie"></a></p>
 </div>
-<pre><code class="language-admonish note title=&quot;Cookie&quot;">Cookies are unique string identifiers that can be stored on the client’s browser to keep track of client’s state (for the purpose of logging in, serving customised content). They are set by the server through HTTP headers. After the cookie is set, it’s sent along with subsequent HTTP requests to the same server to allow the server to know who is contacting it.
-
-Things involved in the process of setting and using cookies: HTTP request, HTTP response, cookie file on the client’s browser and the database of cookie-user values on the server
-
-Cookie file contains:
-
-- Website’s domain
-- String value of cookie
-- Date that cookie expires
-
-```
-Set cookie: session=44ecb091; path=/servlets
-```
-
-Note: 3rd party cookies are cookies set for domains that are not being visited. Blocking them is not enough due to several workarounds like respawning cookies etc.
+<div>
+<p>Cookies are unique string identifiers that can be stored on the client’s browser to keep track of client’s state (for the purpose of logging in, serving customised content). They are set by the server through HTTP headers. After the cookie is set, it’s sent along with subsequent HTTP requests to the same server to allow the server to know who is contacting it.</p>
+<p>Things involved in the process of setting and using cookies: HTTP request, HTTP response, cookie file on the client’s browser and the database of cookie-user values on the server</p>
+<p>Cookie file contains:</p>
+<ul>
+<li>Website’s domain</li>
+<li>String value of cookie</li>
+<li>Date that cookie expires</li>
+</ul>
+<pre><code>Set cookie: session=44ecb091; path=/servlets
 </code></pre>
+<p>Note: 3rd party cookies are cookies set for domains that are not being visited. Blocking them is not enough due to several workarounds like respawning cookies etc.</p>
+</div>
+</div>
 <ul>
 <li>Content-Security-Policy: XSS, data injection</li>
 <li>X-Frame-Options: Clickjacking</li>
@@ -445,23 +484,40 @@ Note: 3rd party cookies are cookies set for domains that are not being visited. 
 <tr><td>Header compression</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
 <tr><td>Single TCP connection^</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
 </tbody></table>
+</div><div id="admonition-binary-format" class="admonition question">
+<div class="admonition-title">
+<p>Binary format</p>
+<p><a class="admonition-anchor-link" href="layer-7/http/features.html#admonition-binary-format"></a></p>
 </div>
-<pre><code class="language-admonish faq title=&quot;Binary format&quot;">A binary protocol means that the data becomes more compact (and closer to how the data is represented in memory), hence more efficient parsing.
-</code></pre>
-<pre><code class="language-admonish faq title=&quot;Single TCP connection&quot;">All communication between a client and a server takes place over a _single_ TCP connection, lasting for the duration of the client's session.
-
-This reduces the overhead of setting up and tearing down connections for each interaction.
-* System call overhead
-* TCP handshake
-* TCP congestion control
-* TLS overhead (HTTPS)
-</code></pre>
-<pre><code class="language-admonish faq title=&quot;Concurrency&quot;">Suppose a client has made 2 requests (&quot;streams&quot;) to the server over the same TCP connection.
-
-Instead of the server responding to stream 1 fully (all frames), then stream 2 (all frames),
-
-```mermaid
-sequenceDiagram
+<div>
+<p>A binary protocol means that the data becomes more compact (and closer to how the data is represented in memory), hence more efficient parsing.</p>
+</div>
+</div>
+<div id="admonition-single-tcp-connection" class="admonition question">
+<div class="admonition-title">
+<p>Single TCP connection</p>
+<p><a class="admonition-anchor-link" href="layer-7/http/features.html#admonition-single-tcp-connection"></a></p>
+</div>
+<div>
+<p>All communication between a client and a server takes place over a <em>single</em> TCP connection, lasting for the duration of the client's session.</p>
+<p>This reduces the overhead of setting up and tearing down connections for each interaction.</p>
+<ul>
+<li>System call overhead</li>
+<li>TCP handshake</li>
+<li>TCP congestion control</li>
+<li>TLS overhead (HTTPS)</li>
+</ul>
+</div>
+</div>
+<div id="admonition-concurrency" class="admonition question">
+<div class="admonition-title">
+<p>Concurrency</p>
+<p><a class="admonition-anchor-link" href="layer-7/http/features.html#admonition-concurrency"></a></p>
+</div>
+<div>
+<p>Suppose a client has made 2 requests (&quot;streams&quot;) to the server over the same TCP connection.</p>
+<p>Instead of the server responding to stream 1 fully (all frames), then stream 2 (all frames),</p>
+<pre><code class="language-mermaid">sequenceDiagram
     client -&gt;&gt; server: stream 1
     client -&gt;&gt; server: stream 2
     server -&gt;&gt; client: stream 1 frame 1
@@ -469,12 +525,9 @@ sequenceDiagram
     server -&gt;&gt; client: stream 2 frame 1
     server -&gt;&gt; client: stream 2 frame 2
     server -&gt;&gt; client: stream 2 frame 3
-```
-
-the server can _interleave_ (&quot;multiplex&quot;) the frames between different streams.
-
-```mermaid
-sequenceDiagram
+</code></pre>
+<p>the server can <em>interleave</em> (&quot;multiplex&quot;) the frames between different streams.</p>
+<pre><code class="language-mermaid">sequenceDiagram
     client -&gt;&gt; server: stream 1
     client -&gt;&gt; server: stream 2
     server -&gt;&gt; client: stream 1 frame 1
@@ -482,16 +535,38 @@ sequenceDiagram
     server -&gt;&gt; client: stream 1 frame 2
     server -&gt;&gt; client: stream 2 frame 2
     server -&gt;&gt; client: stream 2 frame 3
-```
 </code></pre>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="browser"><a class="header" href="#browser">Browser</a></h1>
 <p>The browser is an HTTP client.</p>
-<pre><code class="language-admonish note title=&quot;Assets&quot;">(eg. documents, CSS, JavaScript)
-</code></pre>
-<pre><code class="language-admonish note title=&quot;Frame&quot;">???
-</code></pre>
-<pre><code class="language-admonish note title=&quot;MIME-sniffing&quot;">MIME-sniffing happens (for some web browsers) to determine the content of an asset. Specific to IE and Chrome. With clever naming, a resource can be determined to be an HTML document which has malicious script.
-</code></pre>
+<div id="admonition-assets" class="admonition note">
+<div class="admonition-title">
+<p>Assets</p>
+<p><a class="admonition-anchor-link" href="layer-7/http/browser.html#admonition-assets"></a></p>
+</div>
+<div>
+<p>(eg. documents, CSS, JavaScript)</p>
+</div>
+</div>
+<div id="admonition-frame" class="admonition note">
+<div class="admonition-title">
+<p>Frame</p>
+<p><a class="admonition-anchor-link" href="layer-7/http/browser.html#admonition-frame"></a></p>
+</div>
+<div>
+<p>???</p>
+</div>
+</div>
+<div id="admonition-mime-sniffing" class="admonition note">
+<div class="admonition-title">
+<p>MIME-sniffing</p>
+<p><a class="admonition-anchor-link" href="layer-7/http/browser.html#admonition-mime-sniffing"></a></p>
+</div>
+<div>
+<p>MIME-sniffing happens (for some web browsers) to determine the content of an asset. Specific to IE and Chrome. With clever naming, a resource can be determined to be an HTML document which has malicious script.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="https"><a class="header" href="#https">HTTPS</a></h1>
 <p>HTTP + TLS</p>
 <p><img src="layer-7/./ssl.png" alt="SSL" /></p>
@@ -530,10 +605,16 @@ sequenceDiagram
 </li>
 <li>Browser and server created a <strong>symmetric key</strong> (&quot;session key&quot;) that can be used for encrypting future data.</li>
 </ol>
-<pre><code class="language-admonish tip title=&quot;See a server's SSL cert&quot;">```
-openssl s_client -connect jvns.ca:443 -servername jvns.ca
-```
+<div id="admonition-see-a-servers-ssl-cert" class="admonition tip">
+<div class="admonition-title">
+<p>See a server's SSL cert</p>
+<p><a class="admonition-anchor-link" href="layer-7/https.html#admonition-see-a-servers-ssl-cert"></a></p>
+</div>
+<div>
+<pre><code>openssl s_client -connect jvns.ca:443 -servername jvns.ca
 </code></pre>
+</div>
+</div>
 <h2 id="resources"><a class="header" href="#resources">Resources:</a></h2>
 <ul>
 <li>
@@ -565,11 +646,27 @@ openssl s_client -connect jvns.ca:443 -servername jvns.ca
 <p>Secure Shell</p>
 <p>SSH is built on top of TCP.</p>
 <p>This protocol provides a secure way to access a remote computer via shell. The establishment of a secure communication is part of SSH (Layer 6).</p>
-<pre><code class="language-admonish hint title=&quot;SSH across multiple OSI layers&quot;">SSH spans across layers 5, 6 and 7.
-</code></pre>
-<pre><code class="language-admonish note title=&quot;SSH implementations&quot;">* OpenSSH (macOS)
-* PuTTY (Windows, Linux)
-</code></pre>
+<div id="admonition-ssh-across-multiple-osi-layers" class="admonition tip">
+<div class="admonition-title">
+<p>SSH across multiple OSI layers</p>
+<p><a class="admonition-anchor-link" href="layer-7/ssh.html#admonition-ssh-across-multiple-osi-layers"></a></p>
+</div>
+<div>
+<p>SSH spans across layers 5, 6 and 7.</p>
+</div>
+</div>
+<div id="admonition-ssh-implementations" class="admonition note">
+<div class="admonition-title">
+<p>SSH implementations</p>
+<p><a class="admonition-anchor-link" href="layer-7/ssh.html#admonition-ssh-implementations"></a></p>
+</div>
+<div>
+<ul>
+<li>OpenSSH (macOS)</li>
+<li>PuTTY (Windows, Linux)</li>
+</ul>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ssh-tunnel"><a class="header" href="#ssh-tunnel">SSH tunnel</a></h1>
 <p>aka SSH port forwarding</p>
 <ul>
@@ -676,8 +773,15 @@ ttl=
 <p>SSH File Transfer Protocol</p>
 <p>This protocol provides file transfer, file access and file management functionalities over any reliable data stream.</p>
 <p>SFTP typically uses SSH (Layer 6) to secure the data stream.</p>
-<pre><code class="language-admonish note title=&quot;On using SSH&quot;">Note that SFTP uses the part on secure communication provided by SSH (Layer 6). It doesn't use the remote shell access capabilities of SSH.
-</code></pre>
+<div id="admonition-on-using-ssh" class="admonition note">
+<div class="admonition-title">
+<p>On using SSH</p>
+<p><a class="admonition-anchor-link" href="layer-7/sftp.html#admonition-on-using-ssh"></a></p>
+</div>
+<div>
+<p>Note that SFTP uses the part on secure communication provided by SSH (Layer 6). It doesn't use the remote shell access capabilities of SSH.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="websocket"><a class="header" href="#websocket">WebSocket</a></h1>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</a></p>
 <p>A WebSocket connection is preferred when we need a persistent bi-directional (&quot;<strong>full duplex</strong>&quot;) low latency data flow from the client to the server and back. The connection is open for as long as we want. Eg. chat apps, real-time social streams, browser-based multiplayer games.</p>
@@ -768,8 +872,15 @@ Raimi
 <li><strong>Data integrity</strong> — verifying data is not tampered with before reaching its intended recipient</li>
 <li><strong>(Server) authentication</strong> — make sure when the client connects to the server, the server is indeed who it is</li>
 </ul>
-<pre><code class="language-admonish note title=&quot;Client _and_ server authentication&quot;">While server authentication is the most common, the client can also be additionally requested for authentication. This is known as **mTLS** or mutual TLS.
-</code></pre>
+<div id="admonition-client-_and_-server-authentication" class="admonition note">
+<div class="admonition-title">
+<p>Client <em>and</em> server authentication</p>
+<p><a class="admonition-anchor-link" href="layer-6/ssl/index.html#admonition-client-_and_-server-authentication"></a></p>
+</div>
+<div>
+<p>While server authentication is the most common, the client can also be additionally requested for authentication. This is known as <strong>mTLS</strong> or mutual TLS.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setup"><a class="header" href="#setup">Setup</a></h1>
 <p>For this protocol to work, the server must first have an <strong>SSL certificate</strong> that contains:</p>
 <ul>
@@ -826,10 +937,19 @@ Raimi
 </ol>
 </li>
 </ol>
-<pre><code class="language-admonish note title=&quot;Other authentication methods&quot;">Apart from asymmetric key pair, other authentication methods include:
-- Password — the password is encrypted using the shared secret key
-- SSH certificates
-</code></pre>
+<div id="admonition-other-authentication-methods" class="admonition note">
+<div class="admonition-title">
+<p>Other authentication methods</p>
+<p><a class="admonition-anchor-link" href="layer-6/ssh/workflow.html#admonition-other-authentication-methods"></a></p>
+</div>
+<div>
+<p>Apart from asymmetric key pair, other authentication methods include:</p>
+<ul>
+<li>Password — the password is encrypted using the shared secret key</li>
+<li>SSH certificates</li>
+</ul>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="layer-4---transport"><a class="header" href="#layer-4---transport">Layer 4 - Transport</a></h1>
 <p>What problems are we trying to solve?</p>
 <ul>
@@ -837,8 +957,15 @@ Raimi
 <li>Not all packets go through the same route. Some packets might arrive earlier (&quot;out-of-order&quot;).</li>
 <li>Packets might get altered along the way (&quot;<strong>corrupted data</strong>&quot;)</li>
 </ul>
-<pre><code class="language-admonish info title=&quot;Definition: Bandwidth&quot;">Rate at which the network can transport bits
-</code></pre>
+<div id="admonition-definition-bandwidth" class="admonition info">
+<div class="admonition-title">
+<p>Definition: Bandwidth</p>
+<p><a class="admonition-anchor-link" href="layer-4/transport-layer.html#admonition-definition-bandwidth"></a></p>
+</div>
+<div>
+<p>Rate at which the network can transport bits</p>
+</div>
+</div>
 <p>Therefore, the goals of Layer 4 (not guaranteed by all protocols) are:</p>
 <ul>
 <li>
@@ -867,9 +994,15 @@ Raimi
 <tr><td>Corrupted data mechanism</td><td>✅; No retransmit</td><td>✅; Retransmit</td><td>❌</td></tr>
 <tr><td>Data integrity check</td><td>✅</td><td>✅</td><td>✅</td></tr>
 </tbody></table>
+</div><div id="admonition-definition-rtt" class="admonition info">
+<div class="admonition-title">
+<p>Definition: RTT</p>
+<p><a class="admonition-anchor-link" href="layer-4/transport-layer.html#admonition-definition-rtt"></a></p>
 </div>
-<pre><code class="language-admonish info title=&quot;Definition: RTT&quot;">Round-trip time
-</code></pre>
+<div>
+<p>Round-trip time</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tcp"><a class="header" href="#tcp">TCP</a></h1>
 <p>Transport Control Protocol</p>
 <p>TCP is a connection-oriented protocol. It is full-duplex (both hosts on a TCP connection can send messages to each other simultaneously).</p>
@@ -952,10 +1085,19 @@ Congestion fixes:</li>
 <li>Checksum</li>
 <li>Data</li>
 </ul>
-<pre><code class="language-admonish faq title=&quot;Who uses UDP?&quot;">- Xbox Live
-- Network management
-- Live audio/video streaming
-</code></pre>
+<div id="admonition-who-uses-udp" class="admonition question">
+<div class="admonition-title">
+<p>Who uses UDP?</p>
+<p><a class="admonition-anchor-link" href="layer-4/udp.html#admonition-who-uses-udp"></a></p>
+</div>
+<div>
+<ul>
+<li>Xbox Live</li>
+<li>Network management</li>
+<li>Live audio/video streaming</li>
+</ul>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="quic"><a class="header" href="#quic">QUIC</a></h1>
 <p>Quick UDP Internet Connections</p>
 <p>QUIC includes TLS encryption by default.</p>
@@ -976,46 +1118,49 @@ Congestion fixes:</li>
 <tr><td>127.0.0.1</td><td>127.0.0.1</td></tr>
 <tr><td>(others)</td><td>192.168.1.254 (home router)</td></tr>
 </tbody></table>
+</div><div id="admonition-view-routing-table" class="admonition tip">
+<div class="admonition-title">
+<p>View routing table</p>
+<p><a class="admonition-anchor-link" href="layer-3/ip/routing.html#admonition-view-routing-table"></a></p>
 </div>
-<pre><code class="language-admonish tip title=&quot;View routing table&quot;">You can see the routing table using
-
-```
-netstat -rn
-```
-
-Output:
-
-```
-Internet:
+<div>
+<p>You can see the routing table using</p>
+<pre><code>netstat -rn
+</code></pre>
+<p>Output:</p>
+<pre><code>Internet:
 Destination        Gateway            Flags           Netif Expire
 default            192.168.1.254      UGScg             en0
 127                127.0.0.1          UCS               lo0
 127.0.0.1          127.0.0.1          UH                lo0
 169.254            link#5             UCS               en0      !
-```
-
-The headers have the following meaning:
-* `Destination`: The destination IP address or network. `Default` is the one that is used when no other route matches the destination IP address.
-* `Gateway`: The next hop IP address that will be used to reach the destination. `link#X` refers to the index `X` of an interface when you run `ifconfig` on macOS.
-* `Flags`: A set of flags that give more information about the route. For example, `U` means the route is up, `G` means to use this route as a gateway, `H` means the destination is a host, etc.
-* `Refs`: The reference count (how many routes refer to this route).
-* `Use`: The count of the number of packets sent using this route.
-* `Netif`: The network interface used for this route.
-* `Expire`: The time in seconds until the route expires (only used for some types of routes).
-
 </code></pre>
-<pre><code class="language-admonish hint title=&quot;Find default gateway&quot;">In macOS, use `route`:
-
-```
-route -n get default
-```
-
-In Linux:
-
-```
-ip route show default
-```
+<p>The headers have the following meaning:</p>
+<ul>
+<li><code>Destination</code>: The destination IP address or network. <code>Default</code> is the one that is used when no other route matches the destination IP address.</li>
+<li><code>Gateway</code>: The next hop IP address that will be used to reach the destination. <code>link#X</code> refers to the index <code>X</code> of an interface when you run <code>ifconfig</code> on macOS.</li>
+<li><code>Flags</code>: A set of flags that give more information about the route. For example, <code>U</code> means the route is up, <code>G</code> means to use this route as a gateway, <code>H</code> means the destination is a host, etc.</li>
+<li><code>Refs</code>: The reference count (how many routes refer to this route).</li>
+<li><code>Use</code>: The count of the number of packets sent using this route.</li>
+<li><code>Netif</code>: The network interface used for this route.</li>
+<li><code>Expire</code>: The time in seconds until the route expires (only used for some types of routes).</li>
+</ul>
+</div>
+</div>
+<div id="admonition-find-default-gateway" class="admonition tip">
+<div class="admonition-title">
+<p>Find default gateway</p>
+<p><a class="admonition-anchor-link" href="layer-3/ip/routing.html#admonition-find-default-gateway"></a></p>
+</div>
+<div>
+<p>In macOS, use <code>route</code>:</p>
+<pre><code>route -n get default
 </code></pre>
+<p>In Linux:</p>
+<pre><code>ip route show default
+</code></pre>
+</div>
+</div>
 <p>Routing protocols</p>
 <ul>
 <li>Static: manually compute routes</li>
@@ -1052,12 +1197,17 @@ ip route show default
 <p>Hosts (computers) don’t have IP addresses. Interfaces on hosts have IP addresses.</p>
 <p>32-bit numbers written as 4 octets (decimals), separated by <code>.</code> Eg. 1.2.3.4.</p>
 <p>To identify each device in the world-wide web, Internet Assigned Numbers Authority (IANA) assigns IPV4 address as a unique identifier for each device on the Internet. Length of the IP address is 32 bits. Hence there are</p>
-<pre><code class="language-admonish tip">In Linux, you can get your IP address with
-
-```
-ipconfig getifaddr en0
-```
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="layer-3/ip/ip-addresses.html#admonition-tip"></a></p>
+</div>
+<div>
+<p>In Linux, you can get your IP address with</p>
+<pre><code>ipconfig getifaddr en0
 </code></pre>
+</div>
+</div>
 <h2 id="address-classes"><a class="header" href="#address-classes">Address classes</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Class</th><th>Length of subnet ID</th><th>Range</th><th>Default subnet mask</th><th>Remarks</th></tr></thead><tbody>
 <tr><td>Class A</td><td>1 octet</td><td>0.0.0.0 to 127.255.255.255</td><td>255.0.0.0</td><td></td></tr>
@@ -1146,12 +1296,17 @@ Responsible for controlling how devices in a network gain access to a medium and
 </tbody></table>
 </div>
 <p>If the host doesn't know a MAC address for a certain IP address, it sends out an <strong>ARP request packet</strong>, asking other machines for the matching MAC address. The result is then updated in the host's ARP cache.</p>
-<pre><code class="language-admonish tip">To see the ARP cache:
-
-```
-arp -na
-```
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="layer-1/arp.html#admonition-tip"></a></p>
+</div>
+<div>
+<p>To see the ARP cache:</p>
+<pre><code>arp -na
 </code></pre>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="standards"><a class="header" href="#standards">Standards</a></h1>
 <ul>
 <li>MIME type</li>

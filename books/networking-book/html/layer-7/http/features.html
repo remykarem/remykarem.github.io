@@ -161,23 +161,40 @@
 <tr><td>Header compression</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
 <tr><td>Single TCP connection^</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
 </tbody></table>
+</div><div id="admonition-binary-format" class="admonition question">
+<div class="admonition-title">
+<p>Binary format</p>
+<p><a class="admonition-anchor-link" href="#admonition-binary-format"></a></p>
 </div>
-<pre><code class="language-admonish faq title=&quot;Binary format&quot;">A binary protocol means that the data becomes more compact (and closer to how the data is represented in memory), hence more efficient parsing.
-</code></pre>
-<pre><code class="language-admonish faq title=&quot;Single TCP connection&quot;">All communication between a client and a server takes place over a _single_ TCP connection, lasting for the duration of the client's session.
-
-This reduces the overhead of setting up and tearing down connections for each interaction.
-* System call overhead
-* TCP handshake
-* TCP congestion control
-* TLS overhead (HTTPS)
-</code></pre>
-<pre><code class="language-admonish faq title=&quot;Concurrency&quot;">Suppose a client has made 2 requests (&quot;streams&quot;) to the server over the same TCP connection.
-
-Instead of the server responding to stream 1 fully (all frames), then stream 2 (all frames),
-
-```mermaid
-sequenceDiagram
+<div>
+<p>A binary protocol means that the data becomes more compact (and closer to how the data is represented in memory), hence more efficient parsing.</p>
+</div>
+</div>
+<div id="admonition-single-tcp-connection" class="admonition question">
+<div class="admonition-title">
+<p>Single TCP connection</p>
+<p><a class="admonition-anchor-link" href="#admonition-single-tcp-connection"></a></p>
+</div>
+<div>
+<p>All communication between a client and a server takes place over a <em>single</em> TCP connection, lasting for the duration of the client's session.</p>
+<p>This reduces the overhead of setting up and tearing down connections for each interaction.</p>
+<ul>
+<li>System call overhead</li>
+<li>TCP handshake</li>
+<li>TCP congestion control</li>
+<li>TLS overhead (HTTPS)</li>
+</ul>
+</div>
+</div>
+<div id="admonition-concurrency" class="admonition question">
+<div class="admonition-title">
+<p>Concurrency</p>
+<p><a class="admonition-anchor-link" href="#admonition-concurrency"></a></p>
+</div>
+<div>
+<p>Suppose a client has made 2 requests (&quot;streams&quot;) to the server over the same TCP connection.</p>
+<p>Instead of the server responding to stream 1 fully (all frames), then stream 2 (all frames),</p>
+<pre><code class="language-mermaid">sequenceDiagram
     client -&gt;&gt; server: stream 1
     client -&gt;&gt; server: stream 2
     server -&gt;&gt; client: stream 1 frame 1
@@ -185,12 +202,9 @@ sequenceDiagram
     server -&gt;&gt; client: stream 2 frame 1
     server -&gt;&gt; client: stream 2 frame 2
     server -&gt;&gt; client: stream 2 frame 3
-```
-
-the server can _interleave_ (&quot;multiplex&quot;) the frames between different streams.
-
-```mermaid
-sequenceDiagram
+</code></pre>
+<p>the server can <em>interleave</em> (&quot;multiplex&quot;) the frames between different streams.</p>
+<pre><code class="language-mermaid">sequenceDiagram
     client -&gt;&gt; server: stream 1
     client -&gt;&gt; server: stream 2
     server -&gt;&gt; client: stream 1 frame 1
@@ -198,8 +212,9 @@ sequenceDiagram
     server -&gt;&gt; client: stream 1 frame 2
     server -&gt;&gt; client: stream 2 frame 2
     server -&gt;&gt; client: stream 2 frame 3
-```
 </code></pre>
+</div>
+</div>
 
                     </main>
 

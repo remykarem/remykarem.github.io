@@ -157,46 +157,49 @@
 <tr><td>127.0.0.1</td><td>127.0.0.1</td></tr>
 <tr><td>(others)</td><td>192.168.1.254 (home router)</td></tr>
 </tbody></table>
+</div><div id="admonition-view-routing-table" class="admonition tip">
+<div class="admonition-title">
+<p>View routing table</p>
+<p><a class="admonition-anchor-link" href="#admonition-view-routing-table"></a></p>
 </div>
-<pre><code class="language-admonish tip title=&quot;View routing table&quot;">You can see the routing table using
-
-```
-netstat -rn
-```
-
-Output:
-
-```
-Internet:
+<div>
+<p>You can see the routing table using</p>
+<pre><code>netstat -rn
+</code></pre>
+<p>Output:</p>
+<pre><code>Internet:
 Destination        Gateway            Flags           Netif Expire
 default            192.168.1.254      UGScg             en0
 127                127.0.0.1          UCS               lo0
 127.0.0.1          127.0.0.1          UH                lo0
 169.254            link#5             UCS               en0      !
-```
-
-The headers have the following meaning:
-* `Destination`: The destination IP address or network. `Default` is the one that is used when no other route matches the destination IP address.
-* `Gateway`: The next hop IP address that will be used to reach the destination. `link#X` refers to the index `X` of an interface when you run `ifconfig` on macOS.
-* `Flags`: A set of flags that give more information about the route. For example, `U` means the route is up, `G` means to use this route as a gateway, `H` means the destination is a host, etc.
-* `Refs`: The reference count (how many routes refer to this route).
-* `Use`: The count of the number of packets sent using this route.
-* `Netif`: The network interface used for this route.
-* `Expire`: The time in seconds until the route expires (only used for some types of routes).
-
 </code></pre>
-<pre><code class="language-admonish hint title=&quot;Find default gateway&quot;">In macOS, use `route`:
-
-```
-route -n get default
-```
-
-In Linux:
-
-```
-ip route show default
-```
+<p>The headers have the following meaning:</p>
+<ul>
+<li><code>Destination</code>: The destination IP address or network. <code>Default</code> is the one that is used when no other route matches the destination IP address.</li>
+<li><code>Gateway</code>: The next hop IP address that will be used to reach the destination. <code>link#X</code> refers to the index <code>X</code> of an interface when you run <code>ifconfig</code> on macOS.</li>
+<li><code>Flags</code>: A set of flags that give more information about the route. For example, <code>U</code> means the route is up, <code>G</code> means to use this route as a gateway, <code>H</code> means the destination is a host, etc.</li>
+<li><code>Refs</code>: The reference count (how many routes refer to this route).</li>
+<li><code>Use</code>: The count of the number of packets sent using this route.</li>
+<li><code>Netif</code>: The network interface used for this route.</li>
+<li><code>Expire</code>: The time in seconds until the route expires (only used for some types of routes).</li>
+</ul>
+</div>
+</div>
+<div id="admonition-find-default-gateway" class="admonition tip">
+<div class="admonition-title">
+<p>Find default gateway</p>
+<p><a class="admonition-anchor-link" href="#admonition-find-default-gateway"></a></p>
+</div>
+<div>
+<p>In macOS, use <code>route</code>:</p>
+<pre><code>route -n get default
 </code></pre>
+<p>In Linux:</p>
+<pre><code>ip route show default
+</code></pre>
+</div>
+</div>
 <p>Routing protocols</p>
 <ul>
 <li>Static: manually compute routes</li>

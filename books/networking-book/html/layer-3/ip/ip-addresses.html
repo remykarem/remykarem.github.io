@@ -154,12 +154,17 @@
 <p>Hosts (computers) don’t have IP addresses. Interfaces on hosts have IP addresses.</p>
 <p>32-bit numbers written as 4 octets (decimals), separated by <code>.</code> Eg. 1.2.3.4.</p>
 <p>To identify each device in the world-wide web, Internet Assigned Numbers Authority (IANA) assigns IPV4 address as a unique identifier for each device on the Internet. Length of the IP address is 32 bits. Hence there are</p>
-<pre><code class="language-admonish tip">In Linux, you can get your IP address with
-
-```
-ipconfig getifaddr en0
-```
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="#admonition-tip"></a></p>
+</div>
+<div>
+<p>In Linux, you can get your IP address with</p>
+<pre><code>ipconfig getifaddr en0
 </code></pre>
+</div>
+</div>
 <h2 id="address-classes"><a class="header" href="#address-classes">Address classes</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Class</th><th>Length of subnet ID</th><th>Range</th><th>Default subnet mask</th><th>Remarks</th></tr></thead><tbody>
 <tr><td>Class A</td><td>1 octet</td><td>0.0.0.0 to 127.255.255.255</td><td>255.0.0.0</td><td></td></tr>
