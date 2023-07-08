@@ -23,7 +23,6 @@ jobs:
 
     - name: Build networking book
       run: |
-        mdbook-catppuccin install
         mdbook build books/networking-book
 
     # Add more build steps as needed for each book
