@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" description="Notes on GMM" content="width=device-width, initial-scale=1">
+    <title>[WIP] Gaussian Process Regression</title>
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        .dropdown {
+            background-color: rgb(247, 247, 247);
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <d-front-matter>
+        <script type="text/json">{
+            "title": "EM algorithm (WIP)",
+            "description": "",
+            "authors": [
+                {
+                "author": "Raimi bin Karim",
+                "authorURL": "https://raibosome.github.io",
+
+                "affiliationURL": "https://aisingapore.org"
+                }
+            ],
+            "katex": {
+                "delimiters": [
+                {"left": "$", "right": "$", "display": false},
+                {"left": "$$", "right": "$$", "display": true}
+                ]
+            }
+            }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>[WIP] Gaussian Process Regression</h1>
+        <p>Notes on Gaussian Process Regression</p>
+    </d-title>
+
+    <!-- <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#">?</a></li>
+                <li><a href="#geometric">?</a></li>
+            </ul>
+        </nav>
+    </div> -->
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#what-is-gp">What is Gaussian process?</a></li>
+                <li><a href="#why-gp">Why Gaussian process?</a></li>
+                <li><a href="#kernels">Kernels</a></li>
+            </ul>
+
+            <div>
+                <p>It is recommended that the reader have a basic understanding of the following:</p>
+                <ul>
+                    <li>Multivariate Gaussian distribution</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <d-article>
+
+        <h2 id="what-is-gp">What is Gaussian process?</h2>
+        <p>A Gaussian process is a collection of <em>indexed</em> random variables, such that
+            any collection of which forms a <b>multivariate normal distribution</b>. Here is an example
+            of a Gaussian process:
+            $$ \{ Y_{1}, Y_{2}, Y_{3}, Y_{4}, Y_{5}, ... \} $$
+            where the random variables are indexed (by subscript) by a time step $t \in \mathbb{Z}$.
+            Indexing by time like this is common, where we know that there is a sequential order,
+            controlled by the time index. Another example is this:
+            $$ \{ Y_{-1.5}, Y_{-1}, Y_{-0.75}, Y_{-0}, Y_{0.4}, ... \} $$
+            where the random variables are indexed by a non-temporal variable $x \in \mathbb{R}$.
+            This is really nothing but:
+        </p>
+        <table>
+            <tr>
+                <th>x</th>
+                <th>y</th>
+            </tr>
+            <tr>
+                <td>-1.5</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>-1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>-0.75</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>0.4</td>
+                <td></td>
+            </tr>
+        </table>
+        <p>
+            Note: a collection of random variables indexed by time or space is called a
+            <b>stochastic process</b>.
+        </p>
+
+        <h2 id="why-gp">Why Gaussian process?</h2>
+        <p>There are two main reasons for using Gaussian process.</p>
+        <p>
+            The fact that random variables from this Gaussian process can form a multivariate normal
+            distribution is an important property. For example, we can gather $Y_{-1}$ and $Y_{0.4}$
+            and define their distribution:
+            $$
+            \left(\begin{array}{l}
+            Y_{-1} \\
+            Y_{0.4}
+            \end{array}\right) \sim N( \mu, \Sigma )
+            $$
+            Why is this even useful? Notice that a multivariate Gaussian distribution is governed by
+            two parameters: $\mu$, the mean and, more importantly, $\Sigma$, the <b>covariance</b>.
+            Being able to specify the covariance allows us to define every two points
+            by their correlations!
+        </p>
+        <p>
+            From the perspective of a person who collects the data, each observation can be thought
+            of as a sample from some multivariate Gaussian distribution.
+        </p>
+        <p>
+            The second wonderful thing about Gaussian processes is that the derivative distributions
+            like the prior and the posterior distributions are also Gaussian. And so what about Gaussian?
+            Gaussian distributions have <b>closed-form algebraic expressions</b> 🤗!
+        </p>
+
+        <h2 id="kernels">Kernels</h2>
+        <p>What's left to be done is to now define the covariance for any set of random variables.
+            To define the covariance, we need what we call the <b>covariance function</b>,
+            more commonly known as the <b>kernel</b>. This function takes in a pair of numbers
+            $x_1$ and $x_2$ and returns a number, representing the covariance between the two.
+            The shorthand to represent kernels are usually written as
+            $$ k(x_1, x_2) $$
+            or
+            $$ k(x, x') $$
+            or using $t$ instead of $x$ (because processes can also be indexed by time $t$).
+        </p>
+        <p> to be correlated to
+            one another. Defining this enables us to define one of the two parameters of a
+            multivariate distribution: the mean and the covariance.
+        </p>
+        <p>A kernel</p>
+        <ul>
+            <li>Radial basis function</li>
+            <li>Periodic</li>
+            <li>Linear</li>
+        </ul>
+
+
+
+        <h2 id="other-features">Other features</h2>
+        <ul>
+            <li>Can sample from this distribution</li>
+        </ul>
+
+        <d-appendix>
+            <h3>Resources</h3>
+            <p><a href="https://distill.pub/2019/visual-exploration-gaussian-processes/">
+                    A Visual Exploration of Gaussian Processes</a>
+            </p>
+            <d-footnote-list></d-footnote-list>
+            <d-bibliography src="references.bib"></d-bibliography>
+            <d-citation-list></d-citation-list>
+        </d-appendix>
+</body>
+
+</html>

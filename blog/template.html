@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" description="Notes on naive Bayes for categorical and continuous data"
+        content="width=device-width, initial-scale=1">
+    <title>Template</title>
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        .dropdown {
+            background-color: rgb(247, 247, 247);
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <d-front-matter>
+        <script type="text/json">{
+            "title": "Naive Bayes classifier",
+            "description": "",
+            "authors": [
+                {
+                "author": "Raimi bin Karim",
+                "authorURL": "https://raibosome.github.io",
+
+                "affiliationURL": "https://aisingapore.org"
+                }
+            ],
+            "katex": {
+                "delimiters": [
+                {"left": "$", "right": "$", "display": false},
+                {"left": "$$", "right": "$$", "display": true}
+                ]
+            }
+            }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>Template</h1>
+        <p>Based on distill.pub</p>
+        <p>Last updated: ???</p>
+    </d-title>
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#categorical">Naive Bayes for categorical data</a>
+                </li>
+                <li><a href="#continuous">Naive Bayes for continuous data</a></li>
+                <li><a href="#questions">Questions</a></li>
+            </ul>
+
+            <div>
+                <p>It is recommended that the reader have a basic understanding of the following:</p>
+                <ul>
+                    <li><a href="probability-distributions.html#categorical">Categorical</a> and
+                        <a href="probability-distributions.html#normal">Gaussian</a> distributions</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Conditional_probability_distribution">Conditional
+                            distribution</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes' theorem</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <d-article>
+
+        <h2 id="introduction">Introduction</h2>
+        <p>bla bla</p>
+
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>y</th>
+                <th>x1</th>
+                <th>x2</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>KFC</td>
+                <td>macOS</td>
+                <td>TensorFlow</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>KFC</td>
+                <td>Linux</td>
+                <td>Keras</td>
+            </tr>
+            <caption>Example table</caption>
+        </table>
+        
+        <p>Take it for granted that these estimates are based on <a
+                href="https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation">
+                Maximum A Posteriori (MAP) estimation</a>.</p>
+
+
+       
+        <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <div class="dropdown">
+                        <p>We know <strong>all</strong> these values based on the pre-calculations!
+                            Let's substitute them into this! Here, let me help you:</p>
+                        <p>$$ p(x_1=\text{macOS}|y=\text{KFC}) = \frac{3}{7} $$</p>
+                        <p>$$ p(x_2=\text{PyTorch}|y=\text{KFC}) = \frac{1}{7} $$</p>
+                        <p>$$ p(y=\text{KFC}) = \frac{7}{10} $$</p>
+                        <p>$$ p(x_1=\text{macOS}|y=\text{McD}) = \frac{1}{3} $$</p>
+                        <p>$$ p(x_2=\text{PyTorch}|y=\text{McD}) = \frac{2}{3} $$</p>
+                        <p>$$ p(y=\text{McD}) = \frac{3}{10} $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ \frac{(\frac{3}{7})(\frac{1}{7})(\frac{7}{10})}
+            {(\frac{3}{7})(\frac{1}{7})(\frac{7}{10}) + (\frac{1}{3})(\frac{2}{3})(\frac{3}{10})} $$</p>
+        <p>Example footnote<d-footnote>That's 
+            contrary to what you might have thought, right?
+        </d-footnote></p>
+
+
+        <h3>Code</h3>
+        <d-code block language="python">
+            # Example code
+            import numpy as np
+            from sklearn.naive_bayes import GaussianNB
+        </d-code>
+
+
+        <d-appendix>
+            <h3>Conditional probability</h3>
+            <p>$$ P(A | B)=\frac{P(A \cap B)}{P(B)} $$</p>
+
+            <h3>References</h3>
+            <p><a
+                    href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier">https://en.wikipedia.org/wiki/Naive_Bayes_classifier</a>
+            </p>
+            <p><a
+                    href="https://scikit-learn.org/stable/modules/naive_bayes.html">https://scikit-learn.org/stable/modules/naive_bayes.html</a>
+            </p>
+
+            <d-footnote-list></d-footnote-list>
+
+        </d-appendix>
+</body>
+
+</html>

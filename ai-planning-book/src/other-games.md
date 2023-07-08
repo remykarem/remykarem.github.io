@@ -1,3 +1,0 @@
-# Other games
-
-(Computationally intractable)

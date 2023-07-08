@@ -1,0 +1,5 @@
+
+```
+mdbook serve --open
+```
+

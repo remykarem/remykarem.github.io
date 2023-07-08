@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <d-front-matter>
+        <script type="text/json">{
+            "title": "EM algorithm (WIP)",
+            "description": "",
+            "authors": [
+                {
+                "author": "Raimi bin Karim",
+                "authorURL": "https://raibosome.github.io",
+
+                "affiliationURL": "https://aisingapore.org"
+                }
+            ],
+            "katex": {
+                "delimiters": [
+                {"left": "$", "right": "$", "display": false},
+                {"left": "$$", "right": "$$", "display": true}
+                ]
+            }
+            }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>Expectation-maximization algorithm (WIP)</h1>
+        <p>Notes on EM algorithm</p>
+    </d-title>
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#">?</a></li>
+                <li><a href="#geometric">?</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <d-article>
+
+        <h3>Pre-requisites</h3>
+        <p>It is recommended that the reader have a basic understanding of the following:</p>
+        <ul>
+            <li>Binomial distribution</li>
+            <li>Expectation of random variables</li>
+            <li>Maximum likelihood estimation</li>
+        </ul>
+
+        <h2>Motivation</h2>
+
+        <table>
+            <tr>
+                <th rowspan="2">Coin</th>
+                <th rowspan="2">Configuration</th>
+                <th colspan="2" style="text-align: center;">Coin A</th>
+                <th colspan="2" style="text-align: center;">Coin B</th>
+                <th colspan="2" style="text-align: center;">Coin C</th>
+                <th colspan="2" style="text-align: center;">Total</th>
+            </tr>
+            <tr>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+            </tr>
+            <tbody>
+                <tr><td>A</td><td>$HHHTH$</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                <tr><td>C</td><td>$TTHTT$</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                <tr><td>C</td><td>$THTTT$</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                <tr><td>B</td><td>$HHHTT$</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                <tr><td>A</td><td>$HTTTH$</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+            <caption>fff</caption>
+        </table>
+
+        <p>We think it's 3 coins. And Binomial. So</p>
+        <p>$$ P(X_A = k) = {5 \choose k} p_A^k (1-p_A)^{5-k} $$</p>
+        <p>$$ P(X_B = k) = {5 \choose k} p_B^k (1-p_B)^{5-k} $$</p>
+        <p>$$ P(X_C = k) = {5 \choose k} p_C^k (1-p_C)^{5-k} $$</p>
+
+        <table>
+            <tr>
+                <th rowspan="2">Coin</th>
+                <th rowspan="2">Configuration</th>
+                <th colspan="2" style="text-align: center;">Coin A</th>
+                <th colspan="2" style="text-align: center;">Coin B</th>
+                <th colspan="2" style="text-align: center;">Coin C</th>
+                <th colspan="2" style="text-align: center;">Total</th>
+            </tr>
+            <tr>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+            </tr>
+            <tbody>
+                <tr><td>?</td><td>$HHHTH$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>4</td><td>1</td></tr>
+                <tr><td>?</td><td>$TTHTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>1</td><td>4</td></tr>
+                <tr><td>?</td><td>$THTTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>1</td><td>4</td></tr>
+                <tr><td>?</td><td>$HHHTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>3</td><td>2</td></tr>
+                <tr><td>?</td><td>$HTTTH$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>2</td><td>3</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Step 0: Initialization</h2>
+        <p>We initialize $\hat{p}_A^{(0)} = 0.5$, $\hat{p}_B^{(0)} = 0.3$ and $p_C^{(0)} = 0.6$.</p>
+
+        <h2>Step 1: Expectation</h2>
+        <p>In the first row, we expect the total number of heads to be 4, no matter what
+            coin was used to generate the $HHHTH$ configuration.</p>
+        <p>$$ E[heads] = 4 $$</p>
+
+        <p>Expectation is a weighted sum of all possible values. These weights should be 
+            probabilities and must add up to 1.
+        </p>
+        <p>$$ probability \times value + ... + probability \times value = 4 $$</p>
+        
+        <p>In our case there's only one possible value which is 4. The data says so.</p>
+        <p>$$ probability \times 4 + ... + probability \times 4 = 4 $$</p>
+        
+        <p>Because there are 3 distributions (which come from the fact that
+            we think there are 3 coins), these $probability$'s are the probabilities from the 3
+            distributions. So the LHS must be a sum of 3 terms.
+        </p>
+        <p>$$ probability \times 4 + probability \times 4 + probability \times 4 = 4 $$</p>
+        
+        <p>We ask each distribution to give us the probability of observing 4 heads.</p>
+        <p>$$ P(X_A=4) \times 4 + P(X_B=4) \times 4 + P(X_C=4) \times 4 $$</p>
+        
+        <p>Notice that I removed the equality. That is because the probabilities 
+            do not add up to 1. Let's fix this with a normalization constant.
+        </p>
+        <p>$$ \frac{P(X_A=4)}{K} \times 4 + \frac{P(X_B=4)}{K} \times 4 + \frac{P(X_C=4)}{K} \times 4 = 4$$</p>
+        <p>where $K$ is the normalization constant $P(X_A=4)+P(X_B=4)+P(X_C=4)$.</p>
+        
+        <p>Now we can evaluate the respective probabilities. Based on our initialized 
+            parameters in Step 0, this gives us</p>
+        <p>$$\begin{aligned} \frac{0.16}{K} \times 4 + \frac{0.03}{K} \times 4 + \frac{0.25}{K} \times 4 &= 4 \\
+             0.36 \times 4 + 0.07 \times 4 + 0.57 \times 4 &= 4  \\
+             1.44 + 0.28 + 2.28 &= 4 
+             \end{aligned}$$</p>
+        
+        <p>Notice that the weights in the second line add up to 1. They represent the 'beliefs'
+            for the respective coins for being able to generate 4 heads.
+            Let's update the table accordingly:
+        </p>
+        <table>
+            <tr>
+                <th rowspan="2">Coin</th>
+                <th rowspan="2">Configuration</th>
+                <th colspan="2" style="text-align: center;">Coin A</th>
+                <th colspan="2" style="text-align: center;">Coin B</th>
+                <th colspan="2" style="text-align: center;">Coin C</th>
+                <th colspan="2" style="text-align: center;">Total</th>
+            </tr>
+            <tr>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+            </tr>
+            <tbody>
+                <tr><td>?</td><td>$HHHTH$</td><td><strong>1.44</strong></td><td>?</td><td><strong>0.28</strong></td><td>?</td><td><strong>2.28</strong></td><td>?</td><td>4</td><td>1</td></tr>
+                <tr><td>?</td><td>$TTHTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>1</td><td>4</td></tr>
+                <tr><td>?</td><td>$THTTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>1</td><td>4</td></tr>
+                <tr><td>?</td><td>$HHHTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>3</td><td>2</td></tr>
+                <tr><td>?</td><td>$HTTTH$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>2</td><td>3</td></tr>
+            </tbody>
+        </table>
+
+        <p>We can update the number of tails too in the same manner as the above sub-steps:</p>
+        <table>
+            <tr>
+                <th rowspan="2">Coin</th>
+                <th rowspan="2">Configuration</th>
+                <th colspan="2" style="text-align: center;">Coin A</th>
+                <th colspan="2" style="text-align: center;">Coin B</th>
+                <th colspan="2" style="text-align: center;">Coin C</th>
+                <th colspan="2" style="text-align: center;">Total</th>
+            </tr>
+            <tr>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+                <th>H</th>
+                <th>T</th>
+            </tr>
+            <tbody>
+                <tr><td>?</td><td>$HHHTH$</td><td>1.44</td><td>3.56</td><td>0.28</td><td>4.72</td><td>2.28</td><td>2.72</td><td>4</td><td>1</td></tr>
+                <tr><td>?</td><td>$TTHTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>1</td><td>4</td></tr>
+                <tr><td>?</td><td>$THTTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>1</td><td>4</td></tr>
+                <tr><td>?</td><td>$HHHTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>3</td><td>2</td></tr>
+                <tr><td>?</td><td>$HTTTH$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>2</td><td>3</td></tr>
+            </tbody>
+        </table>
+
+        <p>Finally, you repeat for all the other rows:</p>
+        <table>
+                <tr>
+                    <th rowspan="2">Coin</th>
+                    <th rowspan="2">Configuration</th>
+                    <th colspan="2" style="text-align: center;">Coin A</th>
+                    <th colspan="2" style="text-align: center;">Coin B</th>
+                    <th colspan="2" style="text-align: center;">Coin C</th>
+                    <th colspan="2" style="text-align: center;">Total</th>
+                </tr>
+                <tr>
+                    <th>H</th>
+                    <th>T</th>
+                    <th>H</th>
+                    <th>T</th>
+                    <th>H</th>
+                    <th>T</th>
+                    <th>H</th>
+                    <th>T</th>
+                </tr>
+                <tbody>
+                    <tr><td>?</td><td>$HHHTH$</td><td>1.44</td><td>3.56</td><td>0.28</td><td>4.72</td><td>2.28</td><td>2.72</td><td>4</td><td>1</td></tr>
+                    <tr><td>?</td><td>$TTHTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>1</td><td>4</td></tr>
+                    <tr><td>?</td><td>$THTTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>1</td><td>4</td></tr>
+                    <tr><td>?</td><td>$HHHTT$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>3</td><td>2</td></tr>
+                    <tr><td>?</td><td>$HTTTH$</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>2</td><td>3</td></tr>
+                </tbody>
+            </table>
+
+        
+        <h2>Step 2: Maximization</h2>
+        <p>This is the easiest part. We're finding the maximum likelihood parameter estimates 
+            for each of the parameters $p_A$, $p_B$ and $p_C$.
+        </p>
+        <p>$$ \begin{aligned}
+            \hat{p}_A^{(1)} = \frac{21.3}{21.3 + 8.6} = \\
+            \hat{p}_B^{(1)} = \frac{21.3}{21.3 + 8.6} = \\
+            \hat{p}_C^{(1)} = \frac{21.3}{21.3 + 8.6} = \\
+            \end{aligned}$$
+        </p>
+
+        <h2>Iterate</h2>
+        Iterate!
+
+
+        <d-appendix>
+            <h3>American English</h3>
+            <p>I have used American English for this post.</p>
+        
+            
+            <h3>Resources</h3>
+            <p><a href="http://ai.stanford.edu/~chuongdo/papers/em_tutorial.pdf">http://ai.stanford.edu/~chuongdo/papers/em_tutorial.pdf</a></p>
+            <p><a href="https://stats.stackexchange.com/questions/72774/numerical-example-to-understand-expectation-maximization">https://stats.stackexchange.com/questions/72774/numerical-example-to-understand-expectation-maximization</a></p>
+            <d-footnote-list></d-footnote-list>
+            <d-bibliography src="references.bib"></d-bibliography>
+            <d-citation-list></d-citation-list>
+        </d-appendix>
+</body>
+
+</html>

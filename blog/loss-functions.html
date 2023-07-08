@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" description="A cheat sheet of common loss functions"
+        content="width=device-width, initial-scale=1">
+    <title>Cheat Sheet: Loss Functions</title>
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <d-title>
+        <h1>Loss functions</h1>
+        <p>A cheat sheet of common loss functions</p>
+        <p>Last updated: 19 Mar 2020</p>
+    </d-title>
+
+
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#mse">MSE</a></li>
+                <li><a href="#mae">MAE</a></li>
+                <li><a href="#mape">MAPE</a></li>
+                <li><a href="#bce">Binary cross entropy</a></li>
+                <li><a href="#cce">Categorical cross entropy</a></li>
+                <li><a href="#huber">Huber loss</a></li>
+                <li><a href="#contrastive">Contrastive loss</a></li>
+                <li><a href="#triplet">Triplet loss</a></li>
+                <li><a href="#kl">KL divergence</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <d-article>
+
+        <h4>Notation</h4>
+        <ul>
+            <li>$y$ &#8212; ground truth</li>
+            <li>$\hat{y}$ &#8212; prediction</li>
+        </ul>
+
+        <h4>View options</h4>
+        <div>
+            <button id="many-samples">Many samples</button>
+            <button id="one-sample">One sample</button>
+        </div>
+
+        <h3 id="mse">MSE (Mean Squared Error)</h3>
+        <p id="batch">$$ \frac{1}{N} \sum_{i=1}^N (\hat{y_i}-y_i)^2 $$</p>
+        <p id="single">$$ (\hat{y}-y)^2 $$</p>
+        <p>Layman: "Our predictions are off by ___ on average (for RMSE)."</p>
+
+        <h3 id="mae">MAE (Mean Absolute Error)</h3>
+        <p id="batch">$$ \frac{1}{N} \sum_{i=1}^N |\hat{y_i}-y_i| $$</p>
+        <p id="single">$$ |\hat{y}-y| $$</p>
+        <p>Layman: "Our predictions are off by ___ on average."</p>
+
+        <h3 id="mape">MAPE (Mean Absolute Percentage Error)</h3>
+        <p id="batch">$$ \frac{1}{N} \sum_{i=1}^N \frac{|\hat{y_i}-y_i|}{y_i} \times 100\% $$</p>
+        <p id="single">$$ \frac{|\hat{y}-y|}{y} \times 100\% $$</p>
+        <p>Layman: "Our predictions are off by ___% on average."</p>
+
+        <h3 id="bce">Binary cross entropy</h3>
+        <p id="batch">$$ - \sum_{i=1}^N y_i \log \hat{y}_i + (1-y_i) \log(1- \hat{y}_i) $$</p>
+        <p id="single">$$ -y \log \hat{y} -(1-y) \log(1- \hat{y}) $$</p>
+        <p id="single"> $$\text{or} $$</p>
+        <p id="single"> $$ \left\{\begin{array}{ll}{-\log \hat{y}} & {\text { if } y=1} \\ {-\log (1-\hat{y})} & {\text
+            {
+            if }
+            y=0}\end{array}\right. $$</p>
+        <p>Note that $\hat{y} \in [0,1]$.</p>
+
+        <h3 id="cce">Categorical cross entropy</h3>
+        <p id="single">$$ - \log \hat{y}^{(c)} $$</p>
+        <p id="single">where $c$ is the class such that $y^{(c)}=1$.</p>
+        <p id="batch">$$ - \sum_{i=1}^N \log \hat{y}_i^{(c)} $$</p>
+        <p id="batch">where $c$ is the class such that, for sample $i$, $y_i^{(c)}=1$.</p>
+        <p>Example for one sample:</p>
+        <p>$$
+            \text {cat\_cross\_entropy}\left(\left[\begin{array}{l}{0} \\ {0} \\ {1} \\ {0}\end{array}\right],
+            \left[\begin{array}{l}{0.05} \\ {0.05} \\ {0.80} \\ {0.10}\end{array}\right]\right)=-\log (0.80)
+            $$</p>
+        <p>For this section, $y$ and $\hat{y}$ are vectors where $y$ is one-hot and
+            $\hat{y}$ is a vector of probabilities adding up to 1. The superscript with parentheses represent
+            the element or class i.e. $y^{(i)}$ refers to the $i$th element (class)
+            in vector $y$, defined similarly for $\hat{y}$.</p>
+
+        <h3 id="huber">Huber loss</h3>
+        <p id="batch"> $$ \left
+            \{\begin{array}{ll}
+            {\frac{1}{2}\sum_{i=1}^{N}(y_i-\hat{y_i})^2} & {\text { if } |y-\hat{y}|\le \alpha} \\
+            {\alpha \sum_{i=1}^{N} |y_i-\hat{y_i}| - \frac{1}{2} \alpha^2} & {\text { otherwise }}\end{array}\right. $$</p>
+        <p id="single"> $$ \left
+            \{\begin{array}{ll}
+            {\frac{1}{2}(y-\hat{y})^2} & {\text { if } |y-\hat{y}|\le \alpha} \\
+            {\alpha |y-\hat{y}| - \frac{1}{2} \alpha^2} & {\text { otherwise }}\end{array}\right. $$</p>
+        <p>Huber loss is less sensitive to outliers in data than the squared error loss.
+            It approaches MAE when $\alpha$ is near 0 and MSE when large.
+            The choice of $\alpha$ is important as it determines how much you
+            consider as an outlier. A simpler way to look at this loss function is:
+            $$ \left
+            \{\begin{array}{ll}
+            {\text{MSE}} & {\text { if not outlier }} \\
+            {\text{MAE}} & {\text { if outlier }}\end{array}\right. $$
+
+        <h3 id="contrastive">Contrastive loss<d-footnote>Siamese network etc.</d-footnote>
+        </h3>
+        <p id="batch">$$ \frac{1}{N} \sum_{i=1}^N y_i \hat{d}_i^{2}+(1-y_i)(\max (m-\hat{d}_i), 0)^{2} $$</p>
+        <p id="single">$$ y \hat{d}^{2}+(1-y)(\max (m-\hat{d}), 0)^{2} $$</p>
+        <p>which can be written as</p>
+        <p id="batch">$$ \left\{\begin{array}{ll}
+            {\frac{1}{N} \sum_{i=1}^N \hat{d}_i^{2}} & {\text { if similar }} \\
+            {\frac{1}{N} \sum_{i=1}^N (\max (m-\hat{d}_i), 0)^{2}} & {\text { if dissimilar }}
+            \end{array}\right.$$</p>
+        <p id="single">$$ \left\{\begin{array}{ll}
+            {\hat{d}^{2}} & {\text { if similar }} \\
+            {(\max (m-\hat{d}), 0)^{2}} & {\text { if dissimilar }}
+            \end{array}\right.$$</p>
+        <p>which can also be written (for readability purposes) as</p>
+        <p id="batch">$$ \left\{\begin{array}{ll}
+            {\frac{1}{N} \sum_{i=1}^N \hat{d}_i^{2}} & {\text { if similar }} \\
+            {\frac{1}{N} \sum_{i=1}^N (m-\hat{d}_i)^{2}} & {\text { if dissimilar \& smaller than margin}} \\
+            {0} & {\text { if dissimilar \& bigger than margin}} \end{array}\right. $$</p>
+        <p id="single">$$ \left\{\begin{array}{ll}
+            {\hat{d}^{2}} & {\text { if similar }} \\
+            {(m-\hat{d})^{2}} & {\text { if dissimilar \& smaller than margin}} \\
+            {0} & {\text { if dissimilar \& bigger than margin}}
+            \end{array}\right. $$</p>
+        <p>where $y$ is a binary value (ground truth) indicating '1' if two
+                feature vectors are similar and '0' if they aren't,
+                $\hat{d}$ is the distance between these vectors,
+                and $m$ is the margin of tolerance.</p>
+
+        <h3 id="triplet">Triplet loss</h3>
+        <p id="single">$$
+            \max (\left\|f^{(anchor)}-f^{(positive)}\right\|_2^{2}-\left\|f^{(anchor)}-f^{(negative)}\right\|_2^{2}+m,
+            0)
+            $$</p>
+        <p id="batch">$$
+            \frac{1}{N} \sum_{i=1}^N \max
+            (\left\|f_i^{(anchor)}-f_i^{(positive)}\right\|_2^{2}-\left\|f_i^{(anchor)}-f_i^{(negative)}\right\|_2^{2}+m,
+            0)
+            $$</p>
+        <p>where $f$ is a feature vector and $m$ is the margin of tolerance.</p>
+
+        <h3 id="kl">KL Divergence (Kullback-Leibler)</h3>
+        <p>$$
+            \sum_{c \in C} p\left(x_{c}\right) \cdot \log
+            \frac{p\left(x_{c}\right)}{q\left(x_{c}\right)}
+            $$</p>
+        <p>where $p$ is the true distribution and $q$ is an approximation.</p>
+        <p>The KL divergence between two probability distributions measures how much they diverge from each other.
+            Minimising this means optimising the probability distribution parameters to closely resemble that of
+            the true distribution.
+        </p>
+
+    </d-article>
+
+    <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <h3>References</h3>
+        <p><a href="https://keras.io/losses/">https://keras.io/losses/</a></p>
+        <p><a
+                href="https://en.wikipedia.org/wiki/Mean_absolute_percentage_error">https://en.wikipedia.org/wiki/Mean_absolute_percentage_error</a>
+        </p>
+        <p><a
+                href="https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html">https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html</a>
+        </p>
+    </d-appendix>
+
+    <script>
+        $(document).ready(function () {
+            $("[id=batch]").hide();
+            $("#one-sample").on("click", function () {
+                $("[id=single]").show();
+                $("[id=batch]").hide();
+            })
+            $("#many-samples").on("click", function () {
+                $("[id=single]").hide();
+                $("[id=batch]").show();
+            })
+        });
+    </script>
+
+    <d-front-matter>
+        <script type="text/json">{
+            "title": "EM algorithm (WIP)",
+            "description": "",
+            "authors": [
+                {
+                "author": "Raimi bin Karim",
+                "authorURL": "https://raibosome.github.io",
+
+                "affiliationURL": "https://aisingapore.org"
+                }
+            ],
+            "katex": {
+                "delimiters": [
+                {"left": "$", "right": "$", "display": false},
+                {"left": "$$", "right": "$$", "display": true}
+                ]
+            }
+            }</script>
+    </d-front-matter>
+
+</body>
+
+</html>

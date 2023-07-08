@@ -1,1 +1,0 @@
-# Same-Site cookie attribute

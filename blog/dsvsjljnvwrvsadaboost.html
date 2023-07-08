@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" description="Notes on GMM" content="width=device-width, initial-scale=1">
+    <title>[WIP] AdaBoost</title>
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        .dropdown {
+            background-color: rgb(247, 247, 247);
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <d-front-matter>
+        <script type="text/json">{
+            "title": "EM algorithm (WIP)",
+            "description": "",
+            "authors": [
+                {
+                "author": "Raimi bin Karim",
+                "authorURL": "https://raibosome.github.io",
+
+                "affiliationURL": "https://aisingapore.org"
+                }
+            ],
+            "katex": {
+                "delimiters": [
+                {"left": "$", "right": "$", "display": false},
+                {"left": "$$", "right": "$$", "display": true}
+                ]
+            }
+            }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>[WIP] AdaBoost</h1>
+        <p>Notes on AdaBoost and how gradient descent is applied</p>
+    </d-title>
+
+    <!-- <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#">?</a></li>
+                <li><a href="#geometric">?</a></li>
+            </ul>
+        </nav>
+    </div> -->
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#setup">Setup</a></li>
+                <li><a href="#training">Training</a></li>
+                <li><a href="#inference">Inference</a></li>
+                <li><a href="#gradient-descent">How is it gradient descent?</a></li>
+            </ul>
+
+            <div>
+                <p>It is recommended that the reader have a basic understanding of the following:</p>
+                <ul>
+                    <li>Decision trees</li>
+                    <li>Gradient descent</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <d-article>
+
+        <h2 id="setup">Setup</h2>
+        <p>AdaBoost ("Adaptive Boosting") is a type of <b>ensemble learning</b> of (usually)
+            decision trees that uses <b>boosting</b> to improve the performance of new decision trees 
+            based on previous trees.
+        </p>
+        <p>
+            AdaBoost adds a weight parameter to each datapoint, which represents the importance of every
+            datapoint for the next decision tree to 'pay more attention to' when it tries to fit the data. 
+            The use of weights parametrises the decision tree, which enables the use of gradient descent
+            to update the weights of each datapoint iteratively.
+        </p>
+
+        <h2 id="training">Training</h2>
+        <h3>Step 0: Prepare</h3>
+        <p>
+            At time step $t$, we have $X$ and $y$ as the data, and $w^{(t)}$ are the
+            corresponding weights to each datapoint in $X$
+        </p>
+        <h3>Step 1: Fit tree</h3>
+        <p>
+            Fit a tree with $X$, $y$ and $w^{(t)}$. The fitted tree is
+            $$ \hat{f}(w^{(t)}) $$
+            which is parametrised by $w^{(t)}$.
+        </p>
+        <h3>Step 2: Get current tree weight</h3>
+        <p>
+            When $X$ is passed back into the tree, we get a prediction
+            $$ \hat{y}^{(t)} = \hat{f}(X;w^{(t)}) $$
+            We then compare $ \hat{y}^{(t)} $ with $ y $ element-wise. The current tree weight
+            is
+            $$ \log (\frac{1-e}{e}) $$
+            where $e$ is the proportion of wrong predictions.
+        </p>
+        <h3>Step 3: Update weights via gradient descent</h3>
+        <p>
+            $$
+            w^{(t+1)}=\left\{\begin{array}{ll}
+            w^{(t)} \cdot \exp (\alpha \cdot 0 ) & \text { if correct } \\
+            w^{(t)} \cdot \exp (\alpha \cdot \log \frac{1-e}{e}) & \text { if wrong }
+            \end{array}\right.
+            $$
+        </p>
+        <p>where $e$ is the proportion of correct predictions,
+            "correct" means the prediction is the same as the true value, and "wrong"
+            means otherwise.
+        </p>
+        <h3>Step 4: Repeat & keep track</h3>
+        <p>Do the above steps for say 1000 times. For each step, store the
+            <ul>
+                <li>tree, and the</li>
+                <li>corresponding tree weight.</li>
+            </ul>
+        </p>
+        <d-code block language="python">
+            trees = []
+            tree_weights = []
+        </d-code>
+
+        <h2 id="inference">Inference</h2>
+        <p>Given X, </p>
+        <d-code block language="python">
+            for idx, tree in enumerate(trees):
+                pred = tree(X) * tree_weight[idx]
+            return sum(pred)
+        </d-code>
+
+        <h2 id="gradient-descent">How is it gradient descent?</h2>
+        <p>The weight update for each datapoint is given by</p>
+        <p>
+            $$
+            w^{(t+1)}=\left\{\begin{array}{ll}
+            w^{(t)} \cdot \exp (\alpha \cdot 0 ) & \text { if correct } \\
+            w^{(t)} \cdot \exp (\alpha \cdot \log \frac{1-e}{e}) & \text { if wrong }
+            \end{array}\right.
+            $$
+        </p>
+        <p>Taking log on both sides:</p>
+        <p>
+            $$
+            \log w^{(t+1)}=\left\{\begin{array}{ll}
+            \log w^{(t)}+\alpha \cdot 0 & \text { if correct }\\
+            \log w^{(t)}+\alpha \cdot \log \frac{1-e}{e} & \text { if wrong }
+            \end{array}\right.
+            $$
+        </p>
+        <p>Reparametrise $ v^{(t)}=\log w^{(t)} $:</p>
+        <p>
+            $$
+            v^{(t+1)}=\left\{\begin{array}{ll}
+            v^{(t)}+\alpha \cdot 0 & \text { if correct } \\
+            v^{(t)}+\alpha \cdot \log \frac{1-e}{e} & \text { if wrong }
+            \end{array}\right.
+            $$
+        </p>
+        <p>Flip the signs to make it look like gradient descent:</p>
+        <p>
+            $$
+            v^{(t+1)}=\left\{\begin{array}{ll}
+            v^{(t)}-\alpha \cdot 0 & \text { if correct } \\
+            v^{(t)}-\alpha \cdot \log \frac{e}{1-e} & \text { if wrong }
+            \end{array}\right.
+            $$
+        </p>
+        <p>
+            If $e$, the proportion of incorrect predictions, is high,
+            the update magnitude will be greater.
+        </p>
+
+        <d-appendix>
+            <h3>Resources</h3>
+            <p><a href="https://stephens999.github.io/fiveMinuteStats/intro_to_mixture_models.html">Introduction to
+                    Mixture Models</a>
+            </p>
+            <d-footnote-list></d-footnote-list>
+            <d-bibliography src="references.bib"></d-bibliography>
+            <d-citation-list></d-citation-list>
+        </d-appendix>
+</body>
+
+</html>

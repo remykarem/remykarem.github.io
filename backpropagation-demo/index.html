@@ -1,0 +1,1080 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Backpropagation Demo</title>
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      }
+    });
+  </script>
+
+    <script src="line_chart.js" async></script>
+    <script src="gd_algorithms.js" async></script>
+    <script src="initialisers.js" async></script>
+    <script src="basic_functions.js" async></script>
+
+    <style id="css">
+        .code {
+            font-family: monospace;
+            font-size: 14px;
+            color: #333
+        }
+
+        html {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg stroke='%23CCC' stroke-width='0' %3E%3Crect fill='%23F5F5F5' x='-60' y='-60' width='110' height='240'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        #state,
+        #data {
+            font-family: monospace;
+            font-size: 14px;
+            white-space: pre-line;
+        }
+
+        .collapsible {
+            background-color: #8d8058;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f4eee5;
+        }
+
+        /* This sets the color for "TK" nodes to a light blue green. */
+        g.type-TK>rect {
+            fill: #00ffd0;
+        }
+
+        .clusters rect {
+            fill: #ede3d4;
+            stroke: #999;
+            stroke-width: 1.5px;
+        }
+
+        text {
+            font-weight: 350;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .node rect {
+            stroke: #333;
+            /* fill: #dcc7aa; */
+            fill: #cceae0;
+            stroke-width: 1.5px;
+        }
+
+        .placeholder rect {
+            stroke: #333;
+            fill: #f4976c;
+            stroke-width: 1.5px;
+        }
+
+        .placeholderFocus rect {
+            stroke: #333;
+            fill: #f4976c;
+            stroke-width: 4px;
+        }
+
+        .variable rect {
+            stroke: #333;
+            fill: #57ba98;
+            stroke-width: 1.5px;
+        }
+
+        .variableFocus rect {
+            stroke: #333;
+            fill: #57ba98;
+            stroke-width: 4px;
+        }
+
+        .lossFn rect {
+            stroke: #333;
+            fill: #ffe400;
+            stroke-width: 1.5px;
+        }
+
+        .lossFnFocus rect {
+            stroke: #333;
+            fill: #ffe400;
+            stroke-width: 4px;
+        }
+
+        .nodeFocus rect {
+            stroke: #333;
+            stroke-width: 4px;
+        }
+
+        .dummyNode rect {
+            stroke: #fff;
+            fill: #fff;
+            stroke-width: 4px;
+        }
+
+        .edgePath path {
+            stroke: #333;
+            stroke-width: 1px;
+        }
+
+        .edgePathFocus path {
+            stroke: #333;
+            fill: #333;
+            stroke-width: 2px;
+        }
+
+        .dummyEdge path {
+            fill: #fff;
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+
+        /* This styles the title of the tooltip */
+        .tipsy .name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #60b1fc;
+            margin: 0;
+        }
+
+        /* This styles the body of the tooltip */
+        .tipsy .description {
+            font-size: 1.2em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Linear Regression with Gradient Descent</h2>
+    <button class="collapsible">Quickstart</button>
+    <div class="content">
+        <ol id="howto">
+            <li><button>Initialise variables</button></li>
+            <li>Start training by clicking <button>Next</button> or <button>Fast forward</button>.</li>
+            <li>During training, you may expand the <b>Remarks</b> panel to see comments.</li>
+        </ol>
+    </div>
+    <br>
+    <br>
+    <p>
+        Variable initialiser:
+        <select id="initialiser">
+            <option>Uniform</option>
+            <option>Normal</option>
+            <option>Zeros</option>
+            <option>Ones</option>
+            <option>Glorot uniform</option>
+            <option>Glorot normal</option>
+        </select>
+        Loss:
+        <select id="lossFunction">
+            <option>MSE</option>`
+            <option>MAE</option>
+        </select>
+        Optimiser:
+        <select id="optimiser">
+            <option value="SGD">SGD</option>
+            <option value="SGD+Momentum">SGD+Momentum</option>
+            <option>SGD+Nesterov</option>
+            <option>RMSProp</option>
+            <option>Adam</option>
+        </select>
+        Learning rate:
+        <select id="lr">
+            <option>0.05</option>
+            <option selected='selected' value="0.01">0.01</option>
+            <option>0.005</option>
+            <option>0.001</option>
+            <option>0.0005</option>
+            <option>0.0001</option>
+        </select>
+        <br>
+        Batch size:
+        <select id="batchSize">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>6</option>
+        </select>
+        Epochs:
+        <select id="epochs">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>10</option>
+            <option>50</option>
+            <option>100</option>
+        </select>
+    </p>
+
+    <p id="currentProgress" class="code"><b>Epoch: - Batch: -</b><br>-</p>
+    <!-- <svg id="svg-canvas" width=800 height=600></svg> -->
+
+    <!-- <svg id="svg1" width=800 height=200></svg> -->
+    <svg id="svg2" width=800 height=200></svg>
+    <br>
+    <button id="init">Initialise variables</button>
+    <button id="next" disabled>Next</button>
+    <button id="ff" disabled>Fast forward</button>
+    <button id="showdydx" val='0'>Show partial differentials</button>
+    <br><br>
+
+    <button class="collapsible">Remarks</button>
+    <div class="content">
+        <p id="remarks">To start, initialise variables <span style='background-color:#57ba98; '>$w_1$</span>, <span
+                style='background-color:#57ba98; '>$w_2$</span> and <span style='background-color:#57ba98; '>$b$</span>
+            by clicking <button>Initialise variables</button>.</p>
+    </div>
+    <br><br>
+    <button class="collapsible">Data</button>
+    <div class="content">
+        <p id="data">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+    </div>
+    <br><br>
+    <button class="collapsible">Training progress</button>
+    <div class="content">
+        <p id="state"></p>
+    </div>
+    <br><br>
+    <button class="collapsible">Learning Rate</button>
+    <div class="content">
+    </div>
+    <br><br>
+    <button class="collapsible">Final model</button>
+    <div class="content">
+        <p id="finalModel">$$ \hat{y} = ? + ?x_1 + ?x_2 $$</p>
+    </div>
+    <br><br>
+    <button class="collapsible">Legend</button>
+    <div class="content">
+        <p><span style='background-color:#f4976c; '>Placeholder</span></p>
+        <p><span style='background-color:#57ba98; '>Variable</span></p>
+        <p><span style='background-color:#ffe400; '>Loss function</span></p>
+    </div>
+    <br><br>
+    <button class="collapsible">About</button>
+    <div class="content">
+        <p>Libraries used for this demo:</p>
+        <ul>
+            <li>Dagre-D3 (GraphViz + d3) for rendering the graphs</li>
+            <li>MathJax for rendering mathematical notations</li>
+            <li>ApexCharts for plotting line charts</li>
+            <li>jQuery</li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    Graph to Plot:
+    <select id="graphToPlot">
+        <option>losses</option>
+        <option>w1</option>
+        <option>w2</option>
+        <option>b</option>
+    </select>
+    <div id="chart"></div>
+
+
+    <script id="js">
+
+        function p(str) {
+            str = String(str);
+            // if (str.split("_")[0] === "b") {
+            //     mathstr = "&#946" + "<sub>" + str.split("_")[1] + "</sub>";
+            // } else {
+            var mathstr = str.split("_")[0] + "<sub>" + str.split("_")[1] + "</sub>";
+            // }
+            return mathstr;
+        }
+
+        function fraction(num, den) {
+            return "<sup>" + num + "</sup>&frasl;<sub>" + den + "</sub>";
+        }
+
+        function f(num, den) {
+            return fraction("&#8706" + num, "&#8706" + den);
+        }
+
+        function predict(x1, x2, y, b) {
+
+            var y_pred = Array(batchSize).fill(b[0][global_step]);
+
+            for (var i = 0; i < batchSize; i++) {
+                y_pred[i] += b[1][global_step] * x1[i] + b[2][global_step] * x2[i];
+            }
+
+            var loss = 0;
+            var mae = 0;
+            for (var i = 0; i < batchSize; i++) {
+                mae = Math.abs(y[i] - y_pred[i]);
+                loss += (lossFunction === "MAE") ? mae : mae ** 2;
+            }
+            loss /= batchSize;
+
+            return {
+                prediction: y_pred,
+                loss: loss.toFixed(2)
+            };
+
+        }
+
+        function dyUpdate(batch1, batch2) {
+            // Update dy_pred/db
+            window.db[1] = batch1.reduce((a, b) => a + b, 0) / batch1.length;
+            window.db[2] = batch2.reduce((a, b) => a + b, 0) / batch2.length;
+        }
+
+        function gradientUpdate(y_preds, batch_x1, batch_x2, batch_y) {
+
+            var friction = (optimiser === "SGD") ? 0 : 0.9;
+
+            // Update dL/dy
+            window.dy = 2 * (y_preds.reduce((a, b) => a + b, 0) - batch_y.reduce((a, b) => a + b, 0)) / batchSize;
+            // TODO: case when using MAE
+
+            // Update dy_pred/db
+            window.db[1] = batch_x1.reduce((a, b) => a + b, 0) / batchSize;
+            window.db[2] = batch_x2.reduce((a, b) => a + b, 0) / batchSize;
+
+            // Prepare the update
+            if (optimiser === "SGD+Momentum") {
+                momentum();
+                gradientDescent = "\\eta V^\\prime $$\n" +
+                    "where $\\eta$ is the learning rate and " +
+                    "$$ V^\\prime = \\beta V + (1-\\beta) \\frac{\\partial L}{\\partial b} $$"
+            } else if (optimiser === "SGD+Nesterov") {
+                nesterov();
+                gradientDescent = " \\eta \\frac{\\partial L}{\\partial b^{\\prime\\prime}} $$" +
+                    "where $\\eta$ is the learning rate and $\\frac{\\partial L}{\\partial b^{\\prime\\prime}}$ is derived from a proposed future value, $b^{\\prime\\prime}$" +
+                    "$$ b^{\\prime\\prime} = b - \\eta V^{\\prime}$$" +
+                    "and where" +
+                    "$$ V^\\prime = \\beta V + (1-\\beta) \\frac{\\partial L}{\\partial b} $$"
+            } else if (optimiser === "RMSProp") {
+                rmsprop();
+                gradientDescent = " \\eta \\frac{\\frac{\\partial L}{\\partial b}}{\\sqrt{S^\\prime}} $$" +
+                    "where $\\eta$ is the learning rate and " +
+                    "$$ S^\\prime = \\beta S + (1-\\beta) [\\frac{\\partial L}{\\partial b}]^2 $$ "
+            } else if (optimiser === "Adam") {
+                adam();
+                gradientDescent = " \\eta \\frac{V_{corrected}^\\prime}{\\sqrt{S_{corrected}^\\prime + \\epsilon}} $$" +
+                    "where $\\eta$ is the learning rate, $\\epsilon = 10^{-8} $, \n " +
+                    "$$ V_{corrected}^\\prime = \\frac{V^\\prime}{1-\\beta_1^t} $$" +
+                    "$$ S_{corrected}^\\prime = \\frac{S^\\prime}{1-\\beta_2^t} $$" +
+                    "and where \n " +
+                    "$$ V^\\prime = \\beta_1 V + (1-\\beta_1)  \\frac{\\partial L}{\\partial b} $$" +
+                    "$$ S^\\prime = \\beta_2 S + (1-\\beta_2) [\\frac{\\partial L}{\\partial b}]^2 $$ "
+            } else {
+                gradientDescent = " \\eta \\frac{\\partial L}{\\partial b} $$" +
+                    "where $\\eta$ is the learning rate. "
+            }
+
+            // Update b
+            for (var i = 0; i < window.b.length; i++) {
+                var newVal = window.b[i][global_step];
+
+                if (optimiser === "SGD") {
+                    newVal -= lr * dy * db[i];
+                } else if (optimiser === "SGD+Momentum") {
+                    newVal -= lr * velocity[i][global_step + 1];
+                } else if (optimiser === "SGD+Nesterov") {
+                    newVal -= lr * velocity[i][global_step + 1];
+                } else if (optimiser === "RMSProp") {
+                    newVal -= lr * dy * db[i] / Math.sqrt(velocity[i][global_step + 1]);
+                } else if (optimiser === "Adam") {
+                    newVal -= lr * velocity[i][global_step + 1] / Math.sqrt(selocity[i][global_step + 1] + 1e-8);;
+                }
+
+                window.b[i].push(newVal);
+            }
+            global_step += 1;
+        }
+
+
+        collapsible = document.getElementsByClassName("collapsible");
+        var i;
+        for (var i = 0; i < collapsible.length; i++) {
+            collapsible[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+        function gradientUpdateStep1(betaNum) {
+            return "Let's update the current value of $" + betaNum + "$ to a new value, $" + betaNum + "^\\prime$ \n" +
+                "$$ " + betaNum + "^\\prime = " + betaNum + "- " + gradientDescent +
+                "To compute the gradient $\\frac{\\partial L}{\\partial " + betaNum + "}$, we need to multiply the <b>paths</b> from $L$ leading to $" + betaNum + "$. " +
+                "This is called <i>backpropagation</i>." +
+                "$$ \\frac{\\partial L}{\\partial " + betaNum + "} = \\frac{\\partial L}{\\partial \\hat{y}} \\times \\frac{\\partial \\hat{y}}{\\partial " + betaNum + "} \\\\ $$" +
+                "Click <button>Show partial differentials</button> to assist you in calculation.";
+        }
+
+        function gradientUpdateStep2(betaNum) {
+            return "";
+            // return "Let's update the value of $w_" + betaNum + "$. The new value, $w_" + betaNum + "^\\prime$, is given by \n" +
+            //     "$$ w_" + betaNum + "^\\prime = w_" + betaNum + " - \\eta \\frac{\\partial L}{\\partial w_" + betaNum + "} = " + window.b[betaNum][global_step - 1].toFixed(3) + " - " + window.lr + "( " + window.dy.toFixed(2) + "\\times $$" +
+            //     "To compute $\\frac{\\partial L}{\\partial w_" + betaNum + "}$, we need to multiply the <b>paths</b> from $L$ leading to $w_" + betaNum + "$." +
+            //     "$$ \\frac{\\partial L}{\\partial w_" + betaNum + "} = \\frac{\\partial L}{\\partial \\hat{y}} \\times \\frac{\\partial \\hat{y}}{\\partial w_" + betaNum + "} " +
+            //     "= " + window.dy.toFixed(2) + " \\times $$";
+        }
+
+        function gradientUpdateStep3(betaNum) {
+            return "";
+            // return "Let's update the value of $w_" + betaNum + "$. The new value, $w_" + betaNum + "^\\prime$, is given by \n" +
+            //     "$$ w_" + betaNum + "^\\prime = w_" + betaNum + " - \\eta \\frac{\\partial L}{\\partial w_" + betaNum + "} = " + window.b[betaNum][global_step - 1].toFixed(3) + " - " + window.lr + "( " + window.dy.toFixed(2) + "\\times 1) $$" +
+            //     "To compute $\\frac{\\partial L}{\\partial w_" + betaNum + "}$, we need to multiply the <b>paths</b> from $L$ leading to $w_" + betaNum + "$." +
+            //     "$$ \\frac{\\partial L}{\\partial w_" + betaNum + "} = \\frac{\\partial L}{\\partial \\hat{y}} \\times \\frac{\\partial \\hat{y}}{\\partial w_" + betaNum + "} " +
+            //     "= " + window.dy.toFixed(2) + " \\times 1 $$";
+        }
+
+        function gradientUpdateStep4(betaNum) {
+            return "";
+            // return "Let's update the value of $w_" + betaNum + "$. The new value, $w_" + betaNum + "^\\prime$, is given by \n" +
+            //     "$$ w_" + betaNum + "^\\prime = w_" + betaNum + " - \\eta \\frac{\\partial L}{\\partial w_" + betaNum + "} = " + window.b[betaNum][global_step - 1].toFixed(3) + " - " + window.lr + "( " + window.dy.toFixed(2) + "\\times 1) = " + window.b[betaNum][global_step].toFixed(3) + "$$" +
+            //     "To compute $\\frac{\\partial L}{\\partial w_" + betaNum + "}$, we need to multiply the <b>paths</b> from $L$ leading to $w_" + betaNum + "$." +
+            //     "$$ \\frac{\\partial L}{\\partial w_" + betaNum + "} = \\frac{\\partial L}{\\partial \\hat{y}} \\times \\frac{\\partial \\hat{y}}{\\partial w_" + betaNum + "} " +
+            //     "= " + window.dy.toFixed(2) + " \\times 1 $$";
+        }
+
+        ////////////
+
+        window.experiments = [];
+        experiments.losses = [];
+        experiments.w1 = [];
+        experiments.w2 = [];
+        experiments.b = [];
+        // Define data
+        window.data = [
+            [4, 1, 2],
+            [2, 8, -14],
+            [1, 0, 1],
+            [3, 2, -1],
+            [1, 4, -7],
+            [6, 7, -8],
+            // [45, 20, 2],
+            // [38, 30, 1],
+            // [50, 30, 3],
+            // [48, 28, 2],
+            // [55, 30, 3],
+            // [53, 34, 3],
+            // [55, 36, 4],
+            // [58, 32, 4],
+            // [40, 34, 3],
+            // [55, 38, 5],
+            // [48, 28, 3],
+            // [45, 30, 3],
+        ];
+        window.x1 = data.map(i => i[0]);
+        window.x2 = data.map(i => i[1]);
+        window.y = data.map(i => i[2]);
+        // Display data
+        var dataString = "x1,x2,y\n";
+
+        for (var i = 0; i < data.length; i++) {
+            dataString += data[i] + "\n";
+        }
+        $("#data").html(dataString);
+
+        // Define model
+        window.num_b = 3
+
+        function newRun() {
+            window.b = [[], [], []];
+            window.dy = 1 // initialise
+            window.db = Array(num_b).fill(1);
+
+            window.y_preds = [];
+
+            window.global_step = 0;
+            // Define loss
+            window.losses = [];
+        }
+        window.eqnMSE = "L = (y&#770-y)<sup>2</sup>";
+        window.eqnMAE = "L = |y&#770-y|";
+        window.eqnLoss = eqnMSE;
+        window.lossFunction = "MSE";
+        $("#lossFunction").change(function () {
+            lossFunction = $(this).find(":selected").text();
+            eqnLoss = (lossFunction === "MSE") ? eqnMSE : eqnMAE;
+            g.setNode("loss", { label: eqnLoss, class: "lossFn" });
+            renderGraph();
+        });
+        newRun();
+
+        // Define hyperparameters
+        window.gradientDescent = "";
+        window.optimiser = 'SGD';
+        window.lr = 0.01;
+        $("#optimiser").change(function () { optimiser = $(this).find(":selected").text() });
+        $("#lr").change(function () { lr = Number($(this).find(":selected").text()) });
+        window.velocity = [[], [], []]; // velocity for momentum-related optimisations
+        window.selocity = [[], [], []]; // s for adam
+        velocity[0].push(0);
+        velocity[1].push(0);
+        velocity[2].push(0);
+        selocity[0].push(0);
+        selocity[1].push(0);
+        selocity[2].push(0);
+
+        // Other training parameters
+        window.slide = 2;
+        window.batchSize = 1;
+        window.epochs = 1;
+        window.batch = 1;
+        window.epoch = 1;
+        $("#batchSize").change(function () { batchSize = Number($(this).find(":selected").text()) });
+        $("#epochs").change(function () { epochs = Number($(this).find(":selected").text()) });
+
+
+        $("#graphToPlot").change(function () {
+            var toPlot = $(this).find(":selected").text();
+            var color = ''
+            linechart.updateOptions({
+                yaxis: {
+                    title: {
+                        text: toPlot,
+                    },
+                },
+                series: experiments[toPlot],
+            });
+        });
+
+
+        importants = [
+            { v: 'b', w: 'y_pred' },
+            { v: 'w_1', w: 'y_pred' },
+            { v: 'w_2', w: 'y_pred' },
+            { v: 'y_pred', w: 'loss' },
+        ]
+
+        // Show or hide partial differentials
+        $("#showdydx").on('click', function () {
+            if ($(this).text() === "Show partial differentials") {
+                g.edge(importants[0]).label = f('y&#770', 'b') + " = 1";
+                if (window.batchSize > 1) {
+                    g.edge(importants[1]).label = f('y&#770', p('w_1')) + " = mean(" + p('x_1') + ")";
+                    g.edge(importants[2]).label = f('y&#770', p('w_2')) + " = mean(" + p('x_2') + ")";
+                    g.edge(importants[3]).label = f('L', 'y&#770') + " = mean(y&#770)";
+                } else {
+                    g.edge(importants[1]).label = f('y&#770', p('w_1')) + " = " + p('x_1');
+                    g.edge(importants[2]).label = f('y&#770', p('w_2')) + " = " + p('x_2');
+                    g.edge(importants[3]).label = f('L', 'y&#770') + " = 2(y&#770-y)";
+                }
+                $(this).text("Hide partial differentials");
+            } else {
+                g.edges().forEach(function (vw) { g.edge(vw).label = ""; });
+                $(this).text("Show partial differentials");
+            }
+            renderGraph();
+        });
+
+        // Create the input graph
+        window.g = new dagreD3.graphlib.Graph({ compound: true })
+            .setGraph({})
+            .setDefaultEdgeLabel(function () { return {}; });
+
+        function graphSetup(numInputs = 2) {
+
+            var index = [...Array(numInputs).keys()].map(i => i + 1);
+            var placeholdersInput = index.map(i => 'x_' + i);
+            var weights = index.map(i => 'w_' + i);
+            var eqn = "y&#770 = ";
+            index.forEach(i => eqn += p("w_" + i) + p("x_" + i) + " + ");
+            eqn += "b";
+
+            // Set up parents
+            g.setNode('model', { label: 'Model', clusterLabelPos: 'top', });
+
+            // Set nodes for model
+            placeholdersInput.forEach(node => g.setNode(node, { label: p(node), class: "placeholder" }));
+            weights.forEach(node => g.setNode(node, { label: p(node), class: "variable" }));
+            g.setNode("b", { label: 'b', class: "variable" });
+            g.setNode("y", { label: "y", class: "placeholder" });
+            g.setNode("y_pred", { label: eqn, });
+            g.setNode("loss", { label: eqnLoss, class: "lossFn" });
+
+            // Set parents
+            g.setParent("b", "model");
+            weights.forEach(node => g.setParent(node, "model"));
+            g.setParent("y_pred", "model");
+
+            // Set edges
+            // Connect inputs to weights
+            index.forEach(idx => g.setEdge("x_" + idx, "w_" + idx, { arrowhead: "undirected", class: "edgePath" }));
+            // Connect variables to function
+            g.setEdge("b", "y_pred");
+            weights.forEach(node => g.setEdge(node, "y_pred"));
+            // Connection y's to loss
+            g.setEdge("y_pred", "loss");
+            g.setEdge("y", "loss");
+
+            // Final formatting
+            g.nodes().forEach(function (v) {
+                var node = g.node(v);
+                node.rx = node.ry = 5; // Round the corners of the nodes
+                node.labelType = "html";
+            });
+            g.edges().forEach(function (v) {
+                g.edge(v).label = ".";
+                g.edge(v).labelType = "html";
+            });
+        }
+        graphSetup();
+
+        // Set up an SVG group so that we can translate the final graph.
+        var svg = d3.select("#svg2"),
+            svgGroup = svg.append("g");
+
+        // Set up zoom support
+        // var zoom = d3.zoom()
+        //     .on("zoom", function () {
+        //         svgGroup.attr("transform", d3.event.transform);
+        //     });
+        // svg.call(zoom);
+
+        // Create the renderer
+        window.renderer = new dagreD3.render();
+
+        function renderGraph() {
+            g.nodes().forEach(function (v) {
+                var node = g.node(v);
+                node.rx = node.ry = 5; // Round the corners of the nodes
+                node.labelType = "html";
+                node.label = "<i>" + node.label + "</i>"
+            });
+
+            g.edges().forEach(function (v) {
+                var edge = g.edge(v);
+                if (edge.label == null) {
+                    edge.label = "";
+                }
+                edge.dir = "both";
+                // edge.dirType = "back";
+                // edge.arrowhead = "normal";
+                // edge.arrowtail = "normal";
+                edge.labelStyle = "font-size: 12px;";
+                edge.label = "<i>" + edge.label + " </i>";
+            });
+
+            // Run the renderer. This is what draws the final graph.
+            renderer(svgGroup, g);
+
+            // Center the graph
+            var xCenterOffset = (svg.attr("width") - g.graph().width) / 2;
+            svgGroup.attr("transform", "translate(" + xCenterOffset + ", 20)");
+            svg.attr("height", g.graph().height + 40);
+            // Center the graph
+            // var initialScale = 0.75;
+            // svg.call(zoom.transform, d3.zoomIdentity.translate((svg.attr("width") - g.graph().width * initialScale) / 2, 20).scale(initialScale));
+            // svg.attr('height', g.graph().height * initialScale + 40);
+        }
+        renderGraph();
+
+
+
+        /////////////////////////////////////////////////////////////////////////////////
+
+        $("#init").on('click', function () {
+            window.b = [[], [], []];
+            var initialiser = $('#initialiser').find(":selected").text();
+            var initialValue;
+            // Initialise weights and bias
+            for (var i = 0; i < window.b.length; i++) {
+                // Weights
+                if (i === 0 || initialiser === "Zeros") {
+                    // Set bias to zero
+                    initialValue = 0;
+                } else if (initialiser === "Ones") {
+                    initialValue = 1;
+                } else if (initialiser === "Normal") {
+                    initialValue = normal();
+                } else if (initialiser === "Glorot normal") {
+                    initialValue = glorotNormal();
+                } else if (initialiser === "Glorot uniform") {
+                    initialValue = glorotUniform();
+                } else {
+                    initialValue = uniform();
+                }
+                window.b[i].push(initialValue);
+                if (i > 0) {
+                    g.node("w_" + i).label = p("w_" + i) + " = <b>" + window.b[i][0].toFixed(3) + "</b>";
+                } else {
+                    g.node("b").label = "b = <b>" + window.b[i][0].toFixed(3) + "</b>";
+                }
+            }
+
+            // Disable this button
+            // if ($(this).val() != '') {
+            // $(this).prop('disabled', false);
+            // } else {
+            $(this).prop('disabled', true);
+            // }
+
+            // Disable initialiser
+            $("#initialiser").prop('disabled', true);
+
+            // Enable training
+            // if ($("#next").val() != '') {
+            // $('#next').prop('disabled', true);
+            // } else {
+            $('#next').prop('disabled', false);
+            // }
+            // if ($("#ff").val() != '') {
+            // $('#ff').prop('disabled', true);
+            // } else {
+            $('#ff').prop('disabled', false);
+            // }
+            $("#remarks").html("Variables initialised. Proceed by clicking <button>Next</button> to load a batch from our dataset.<br><br>" +
+                "Our data can be divided into smaller groups of equal size. Each group is called a <i>batch</i> and consists of a user-specified number of training examples, " +
+                "called <i>batch size</i>. If we multiply these two numbers, we should get back the number of observations in our data.");
+
+            renderGraph();
+        });
+
+        $("#ff").click(function () {
+            collapsible[1].nextElementSibling.style.display = "none";
+            window.fastForward = setInterval(function () {
+                $("#next").click();
+            }, 10);
+        });
+
+        $("#next").on('click', function () {
+
+            window.batches = data.length / window.batchSize;
+            slide += 1;
+
+            if (slide === 3) {
+                var prevState = $("#state").text();
+                var currentState = (new Date).toLocaleTimeString() + " Training with " + optimiser + " optimiser, learning rate = " + lr + "\n";
+                $("#state").text(prevState + currentState);
+            }
+
+            var epoch = window.epoch;
+            var batch = window.batch;
+
+            if (epoch <= window.epochs) {
+
+                if (batch <= window.batches) {
+
+                    window.batch_x1 = window.x1.slice(0 + window.batchSize * (batch - 1), window.batchSize * batch);
+                    window.batch_x2 = window.x2.slice(0 + window.batchSize * (batch - 1), window.batchSize * batch);
+                    window.batch_y = window.y.slice(0 + window.batchSize * (batch - 1), window.batchSize * batch);
+
+                    // Highlight data currently fed in the model
+                    var dataString = "x1,x2,y\n";
+                    for (var i = 0; i < data.length; i++) {
+                        if (i >= window.batchSize * (batch - 1) && i < window.batchSize * batch) {
+                            dataString += "<b><span style='background-color: #f4976c'>" + data[i] + "</span></b>\n";
+                        } else {
+                            dataString += "<span style='color:#808080; '>" + data[i] + "</span>\n";
+                        }
+                    }
+                    $("#data").html(dataString);
+
+                    if (slide === 2 + batch) {
+                        $("#currentProgress").html("<b>Epoch: " + window.epoch + "/" + window.epochs + " Batch: " + batch + "/" + window.batches + "<br>Forward propagation</b>");
+                        $("select").prop('disabled', true);
+
+                        g.node("x_1").label = p('x_1') + ' = <b>[' + batch_x1.map(i => i.toFixed(0)) + ']</b>';
+                        g.node("x_2").label = p('x_2') + ' = <b>[' + batch_x2.map(i => i.toFixed(0)) + ']</b>';
+                        g.node("y").label = 'y = <b>[' + batch_y.map(i => i.toFixed(0)) + ']</b>';
+
+                        g.node("x_1").class = "placeholderFocus";
+                        g.node("x_2").class = "placeholderFocus";
+                        g.node("y").class = "placeholderFocus";
+
+                        g.edges().forEach(function (v) {
+                            edge = g.edge(v);
+                            edge.arrowhead = "normal";
+                        });
+
+                        $("#remarks").html("Data loaded. To see the batch of data that is currently being fed to the model, click on the <b>Data</b> panel below.<br><br>" +
+                            "With the data (<span style='background-color: #f4976c'>$x_1$</span> and <span style='background-color: #f4976c'>$x_2$</span>) loaded " +
+                            "and variables (<span style='background-color: #57ba98'>$w_1$</span>, <span style='background-color: #57ba98'>$w_2$</span> and <span style='background-color: #57ba98'>$b$</span>) initialised, " +
+                            "we can now compute $\\hat{y}$. This is what we call <i>forward propagation</i>, getting the output of your model based on whatever values of data and variables we have at this state.");
+
+                    } else if (slide === 3 + batch) {
+                        window.y_preds = predict(batch_x1, batch_x2, batch_y, window.b)["prediction"];
+                        g.node("b").class = "variableFocus";
+                        g.node("w_1").class = "variableFocus";
+                        g.node("w_2").class = "variableFocus";
+                        g.node("y").class = "placeholder";
+                        g.node("y_pred").label = "y&#770 = <b>[" + y_preds.map(i => i.toFixed(1)) + "]</b>";
+                        g.node("y_pred").class = "nodeFocus ";
+
+                        g.edge("x_1", "w_1").class = "edgePathFocus";
+                        g.edge("x_2", "w_2").class = "edgePathFocus";
+                        g.edge("b", "y_pred").class = "edgePathFocus";
+                        g.edge("w_1", "y_pred").class = "edgePathFocus";
+                        g.edge("w_2", "y_pred").class = "edgePathFocus";
+
+                        $("#remarks").html("$\\hat{y}$ computed.");
+
+                    } else if (slide === 4 + batch) {
+                        ["x_1", "x_2"].forEach(function (node) {
+                            g.node(node).class = "placeholder";
+                        });
+                        ["b", "w_1", "w_2"].forEach(function (node) {
+                            g.node(node).class = "variable";
+                        });
+                        g.node("y_pred").class = "node";
+
+                        g.edges().forEach(function (vw) { g.edge(vw).class = 'edgePath'; });
+
+                        $("#remarks").html("How far is our model's $\\hat{y}$ from the given <span style='background-color: #f4976c'>$y$</span> data? We need to check on this every now and then.<br><br>" +
+                            "Turns out that we can compare every pair of $\\hat{y}$ and <span style='background-color: #f4976c'>$y$</span> using <span style='background-color: #ffe400'>$L$</span>, a <i>loss function</i>.<br><br>" +
+                            "One commonly used loss function is the mean squared error (MSE): take the difference between every pair (error), square this difference (squared), and if there are more than one pair, take the average of the values (mean).<br><br>" +
+                            "Another commonly used loss function is the mean absolute error (MAE): take the difference between every pair (error), disregard the negative sign (absolute), and if there are more than one pair, take the average of the values (mean)."
+                        );
+
+                    } else if (slide === 5 + batch) {
+                        g.node("y_pred").class = "nodeFocus";
+                        g.node("y").class = "placeholderFocus";
+
+                        $("#remarks").text("Computing loss...");
+
+                    } else if (slide === 6 + batch) {
+                        var loss = predict(batch_x1, batch_x2, batch_y, window.b)["loss"];
+                        window.losses.push(Number(loss));
+                        g.edge("y", "loss").class = "edgePathFocus";
+                        g.edge("y_pred", "loss").class = "edgePathFocus";
+                        // g.node("loss").label += " = " + loss;
+                        g.node("loss").label += " = " + loss;
+                        g.node("loss").class = "lossFnFocus";
+
+                        $("#remarks").html("Loss computed. Logged this information in the <b>Training progress</b> panel.");
+
+                        var prevState = $("#state").text();
+                        var currentState = (new Date).toLocaleTimeString() + " Epoch: " + window.epoch + "/" + window.epochs + " Batch: " + window.batch + "/" + window.batches + " Loss: " + loss + "\n";
+                        $("#state").text(prevState + currentState);
+
+                    } else if (slide === 7 + batch) {
+                        $("#currentProgress").html("<b>Epoch: " + window.epoch + "/" + window.epochs + " Batch: " + batch + "/" + window.batches + "<br>Backpropagation</b>");
+                        g.node("loss").class = "lossFn";
+                        g.node("loss").label = eqnLoss;
+                        g.node("y_pred").class = "node";
+                        g.node("y").class = "placeholder";
+                        g.edge("y_pred", "loss").class = "edgePath";
+                        g.edge("y", "loss").class = "edgePath";
+                        $("#remarks").html("We shall now start adjusting the values of the variables <span style='background-color: #57ba98'>$w_1$</span>, <span style='background-color: #57ba98'>$w_2$</span> and <span style='background-color: #57ba98'>$b$</span>. " +
+                            "This is what gradient descent optimisation does - regularly changing the values of the variables until our loss value reaches a satisfactory low.<br><br>" +
+                            "Gradient descent seeks to move the value of a variable to a region in the graph where the loss function is minimised. " +
+                            "This is generally done by taking $w - \\eta\\frac{\\partial L}{\\partial w}$. $\\eta$ is just some multiplier to ensure that our updates are not too huge.<br><br>" +
+                            "Algorithms which dictate how the values of variables should be updated (like the one above) are called <i>gradient descent optimisers</i>. The one shown above is the most basic of them, called the <i>stochastic gradient descent</i> (SGD).");
+
+                    } else if (slide === 8 + batch) {
+                        // Start of gradient update
+                        gradientUpdate(y_preds, batch_x1, batch_x2, batch_y);
+
+                        g.edges().forEach(function (vw) {
+                            g.edge(vw).arrowhead = "undirected";
+                        });
+
+                        $("#remarks").html("Compute the partial differentials. \n" +
+                            "Namely, we compute <b>all possible paths</b> leading to every <span style='background-color: #57ba98'>$w$</span> and <span style='background-color: #57ba98'>$b$</span>, because those are the only variables which we're interested in updating.<br><br>" +
+                            "Click <button>Show partial differentials</button> to assist you in calculation.")
+
+                    } else if (slide === 9 + batch) {
+                        g.node("loss").class = "lossFnFocus";
+
+                    } else if (slide === 10 + batch) {
+                        g.node("b").class = "variableFocus";
+                        $("#remarks").html(gradientUpdateStep1("b"));
+
+                    } else if (slide === 11 + batch) {
+                        g.node("y_pred").class = "nodeFocus";
+                        g.edge("y_pred", "loss").class = "edgePathFocus";
+                        // $("#remarks").html(gradientUpdateStep2(0));
+
+                    } else if (slide === 12 + batch) {
+                        g.edge("b", "y_pred").class = "edgePathFocus";
+                        // $("#remarks").html(gradientUpdateStep3(0));
+
+                    } else if (slide === 13 + batch) {
+                        g.node("b").class = "variableFocus";
+                        g.node("b").label = "b = <b>" + window.b[0][global_step].toFixed(3) + "</b>";
+                        g.node("y_pred").class = "node";
+                        g.edge("y_pred", "loss").class = "edgePath";
+                        g.edge("b", "y_pred").class = "edgePath";
+                        // $("#remarks").html(gradientUpdateStep4(0));
+
+                    } else if (slide === 14 + batch) {
+                        // w_1
+                        g.node("b").class = "variable";
+                        g.node("w_1").class = "variableFocus";
+                        $("#remarks").html(gradientUpdateStep1("w_1"));
+
+                    } else if (slide === 15 + batch) {
+                        g.node("y_pred").class = "nodeFocus";
+                        g.edge("y_pred", "loss").class = "edgePathFocus";
+                        // $("#remarks").html(gradientUpdateStep2(1));
+
+                    } else if (slide === 16 + batch) {
+                        g.edge("w_1", "y_pred").class = "edgePathFocus";
+                        // $("#remarks").html(gradientUpdateStep3(1));
+
+                    } else if (slide === 17 + batch) {
+                        g.node("w_1").class = "variableFocus";
+                        g.node("w_1").label = p("w_1") + " = <b>" + window.b[1][global_step].toFixed(3) + "</b>";
+                        g.node("y_pred").class = "node";
+                        g.edge("y_pred", "loss").class = "edgePath";
+                        g.edge("w_1", "y_pred").class = "edgePath";
+                        // $("#remarks").html(gradientUpdateStep3(1));
+
+                    } else if (slide === 18 + batch) {
+                        // w_2
+                        g.node("w_1").class = "variable";
+                        g.node("w_2").class = "variableFocus";
+                        $("#remarks").html(gradientUpdateStep1("w_2"));
+
+                    } else if (slide === 19 + batch) {
+                        g.edge("y_pred", "loss").class = "edgePathFocus";
+                        g.node("y_pred").class = "nodeFocus";
+                        // $("#remarks").html(gradientUpdateStep2(2));
+
+                    } else if (slide === 20 + batch) {
+                        g.edge("w_2", "y_pred").class = "edgePathFocus";
+                        // $("#remarks").html(gradientUpdateStep3(2));
+
+                    } else if (slide === 21 + batch) {
+                        g.node("w_2").class = "variableFocus";
+                        g.node("w_2").label = p("w_2") + " = <b>" + + window.b[2][global_step].toFixed(3) + "</b>";
+                        g.node("y_pred").class = "node";
+                        g.edge("y_pred", "loss").class = "edgePath";
+                        g.edge("w_2", "y_pred").class = "edgePath";
+                        // $("#remarks").html(gradientUpdateStep4(2));
+
+                    } else if (slide === 22 + batch) {
+                        g.node("w_2").class = "variable";
+                        g.node("loss").class = "lossFn";
+
+                        // Go back
+                        if (window.batch < window.batches) {
+                            // Next batch
+                            window.batch += 1;
+                            slide = 2 + batch; // minus 1 to counter the autoincrement every time this button is pressed
+                        } else if (window.batch === window.batches && window.epoch < window.epochs) {
+                            // All batches done. Iterate with next epoch
+                            window.epoch += 1;
+                            slide = 2 + batch - 2; // minus 1 to counter the autoincrement every time this button is pressed
+                            window.batch = 1;
+
+                            // Shuffle data
+                            d3.shuffle(data);
+                            window.x1 = data.map(i => i[0])
+                            window.x2 = data.map(i => i[1])
+                            window.y = data.map(i => i[1])
+
+                            // Print data
+                            var dataString = "x1,x2,y\n";
+                            for (var i = 0; i < data.length; i++) {
+                                dataString += data[i] + "\n";
+                            }
+                            $("#data").html(dataString);
+
+                            // Remarks
+                            $("#remarks").text("Entering the next epoch. Shuffled the dataset to avoid bias");
+                        } else {
+                            alert("Training ended. See graph and final model for results.");
+
+                            // Remarks
+                            $("#remarks").html("Training ended. Have a look at the <b>Final model</b> panel.\n\n" +
+                                "You may also retrain your model using other optimisers and compare the results in the graph below.");
+
+                            $("#finalModel").html(
+                                "$$ \\hat{y} = " + window.b[0][global_step].toFixed(3) + "+ (" + window.b[1][global_step].toFixed(3) + ")x_1 + (" + window.b[2][global_step].toFixed(3) + ")x_2 $$"
+                            );
+                            experiments.losses.push({
+                                name: optimiser + ", " + epochs + " epochs & batch size " + batchSize,
+                                data: losses
+                            });
+                            experiments.w1.push({
+                                name: optimiser + ", " + epochs + " epochs & batch size " + batchSize,
+                                data: b[1]
+                            });
+                            experiments.w2.push({
+                                name: optimiser + ", " + epochs + " epochs & batch size " + batchSize,
+                                data: b[2]
+                            });
+                            experiments.b.push({
+                                name: optimiser + ", " + epochs + " epochs & batch size " + batchSize,
+                                data: b[0]
+                            });
+
+                            window.b = [[], [], []];
+                            graphSetup();
+                            renderGraph();
+                            window.epoch = 1;
+                            window.batch = 1;
+                            slide = 2 + window.batch - 2;
+                            if (typeof fastForward !== 'undefined') {
+                                clearInterval(fastForward);
+                            }
+                            newRun();
+                            linechart.updateOptions({
+                                series: experiments.losses
+                            });
+
+                            // Disable this button
+                            $(this).prop('disabled', true);
+                            $('#ff').prop('disabled', true);
+
+                            // Enable training
+                            $('#init').prop('disabled', false);
+                            $("select").prop('disabled', false);
+
+                            $("#currentProgress").html("<b>Epoch: - Batch: -</b><br>-");
+                        }
+                    }
+                }
+            }
+
+            // Typesetting math equations
+            if (typeof fastForward === 'undefined') {
+                MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'remarks']);
+                MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'finalModel']); // TODO not effective
+            }
+
+            renderGraph();
+        });
+
+
+    </script>
+
+</body>

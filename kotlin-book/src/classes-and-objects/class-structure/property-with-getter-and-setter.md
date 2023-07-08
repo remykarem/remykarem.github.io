@@ -1,1 +1,0 @@
-# With getter and setter

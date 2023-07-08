@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" description="Notes on GMM" content="width=device-width, initial-scale=1">
+    <title>Mixture models</title>
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        .dropdown {
+            background-color: rgb(247, 247, 247);
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <d-front-matter>
+        <script type="text/json">{
+            "title": "EM algorithm (WIP)",
+            "description": "",
+            "authors": [
+                {
+                "author": "Raimi bin Karim",
+                "authorURL": "https://raibosome.github.io",
+
+                "affiliationURL": "https://aisingapore.org"
+                }
+            ],
+            "katex": {
+                "delimiters": [
+                {"left": "$", "right": "$", "display": false},
+                {"left": "$$", "right": "$$", "display": true}
+                ]
+            }
+            }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>Mixture models</h1>
+        <p>Notes on mixture models</p>
+    </d-title>
+
+    <!-- <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#">?</a></li>
+                <li><a href="#geometric">?</a></li>
+            </ul>
+        </nav>
+    </div> -->
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#mixture-model">Mixture model</a></li>
+                <ul>
+                    <li>Component</li>
+                    <li>Latent variable</li>
+                    <li>Mixture proportions</li>
+                    <li>Probability distribution of an observation</li>
+                    <li>Marginal distribution</li>
+                </ul>
+                <li><a href="#example">Example</a></li>
+                <li><a href="#shorthands">Shorthands</a></li>
+                <li><a href="#final-notes">Final notes</a></li>
+            </ul>
+
+            <div>
+                <p>It is recommended that the reader have a basic understanding of the following:</p>
+                <ul>
+                    <li><a href="probability-distributions.html#categorical">
+                        Categorical</a> and
+                        <a href="probability-distributions.html#categorical">
+                            multinomial</a> distributions</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Conditional_probability_distribution">Conditional distribution</a>
+                        and marginalisation</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <d-article>
+
+        <h2 id="mixture-model">Mixture model</h2>
+        <p>Language use: "We model the price of a book as a mixture model."</p>
+        <p>A mixture model is a model which assumes that each observation $X_i$ comes from 
+            one of the $K$ mixture components, i.e., each random variable $X_i$ is 
+            associated with a label $Z_i \in \{1,2,...,K\}$.
+        </p>
+        <p>It helps to look at it from the perspective of generating the observations from
+            the mixture model. TLDR:
+        </p>
+        <ol>
+            <li>Sample (or "choose") a component from the $K$ components.</li>
+            <li>Based on this component, sample a value.</li>
+        </ol>
+        <p>Here are the concepts.</p>
+
+        <h4>Component / Mixture component</h4>
+        <p>A cluster entity, labelled as one of $\{1,2,...,K\}$. <b>Each component has its own
+            probability distribution.</b>
+        </p>
+
+        <h4>Latent variable</h4>
+        <p>The random variable (or "label" as mentioned previously) $Z_i \in \{1,2,...,K\}$, 
+            where each of the $\{1,2,..,K\}$ represents a component. Often we don't observe 
+            this variable (hence "latent").
+        </p>
+
+        <h4>Mixture proportions / mixture weights</h4>
+        <p>The random variable $Z$ follows a probability distribution:
+            $$ P(Z_i=z)=\left\{\begin{array}{ll}
+            {\pi_{1}} & {\text { if } z=1} \\
+            {\pi_{2}} & {\text { if } z=2} \\
+            ... \\
+            {\pi_{K}} & {\text { if } z=K}
+            \end{array}\right.
+            $$
+            where the probabilities are the mixture proportions or mixture weights
+            adding up to 1. This distribution is a categorical distribution.
+        </p>
+
+        <h4>Probability distribution of an observation</h4>
+        <p><b>Given a component $k$</b>, the probability distribution within this component
+            is</p>
+        <p>$$ P(X_i=x|Z_i=k) $$</p>
+        <p>which is a <em>conditional distribution</em>.
+        </p>
+
+        <h4>Marginal distribution of mixture model</h4>
+        <p>The probability of observing $x$ is</p>
+        <p>$\begin{aligned}
+            P(\text{observing } x) &= P(\text{observing } x \text{ if } x \text{ came from component } 1) \\
+                                &+ P(\text{observing } x \text{ if } x \text{ came from component } 2) \\
+                                &+ ... \\
+                                &+ P(\text{observing } x \text{ if } x \text{ came from component } K)
+            \end{aligned}$
+        </p>
+        <p>More formally (the index $i$ has been omitted for readability),</p>
+        <p>$\begin{aligned}
+            P(X = x) =& P(X = x, Z = 1) + \\
+                        & P(X = x, Z = 2) + \\
+                        & ... +\\
+                        & P(X = x, Z = K) \\
+                    =& P(X = x | Z = 1) P(Z = 1) + \\
+                     & P(X = x | Z = 2) P(Z = 2) + \\
+                     & ... + \\
+                     & P(X = x | Z = K) P(Z = K) \\
+                    =& P(X = x | Z = 1) \pi_1 + \\
+                     & P(X = x | Z = 2) \pi_2 + \\
+                     & ... +  \\
+                     & P(X = x | Z = K) \pi_K
+            \end{aligned}$
+        </p>
+        <p>which can be re-written as</p>
+        <p>$$ P(X = x) = \sum_{k=1}^{K} \pi_k P(X=x|Z=k) $$</p>
+        <p>where</p>
+        <ul>
+            <li>$\pi_k$ is the probability of picking component $k$, and</li>
+            <li>$P(X=x|Z=k)$ is the probability of observing a sample $x$ in this
+                component $k$.</li>
+        </ul>
+
+
+
+        <h2 id="example">Example</h2>
+        <p>We're in the business of generating zombies.
+            We model the height of a zombie as a <b>mixture of 6 components</b>,
+            where each component is modeled as a <b>Gaussian distribution</b>.
+        </p>
+        <p>Here are the predetermined mixture components from throwing a die:
+            $$ P(Z_i=z)=\left\{\begin{array}{ll}
+            {0.20} & {\text { if } z=1} \\
+            {0.10} & {\text { if } z=2} \\
+            {0.10} & {\text { if } z=3} \\
+            {0.15} & {\text { if } z=4} \\
+            {0.25} & {\text { if } z=5} \\
+            {0.20} & {\text { if } z=6}
+            \end{array}\right.
+            $$
+        </p>
+        <p>And here is the distribution associated with each component:
+            $$ P(X_i=x|Z_i=k) = f(\mu_i, \sigma_i) $$
+            where $f$ is the probability density for a Gaussian distribution.
+        </p>
+        <p>To generate a datapoint:</p>
+            <ol>
+                <li>Throw the die above. The face shows $2$.</li>
+                <li>Based on this number 2, we generate a sample from a predefined
+                    density $f(\mu_2=171,\sigma_2=4)$, giving us $174$.
+                    So we will produce a $174$ cm-tall zombie.</li>
+            </ol>
+        </p>
+        <p>Let's generate another datapoint:</p>
+            <ol>
+                <li>Throw the die above. The face shows $5$.</li>
+                <li>Based on this number 5, we generate a sample from a predefined
+                    density $f(\mu_5=176,\sigma_5=2)$, giving us $175$.
+                    So we will produce a $175$ cm-tall zombie.</li>
+            </ol>
+        </p>
+        <p>From an outsider's point of view, the only data (zombies' heights) they
+            <em>observe</em> are $\{174, 175\}$. What they don't observe are the
+            components $\{2,5\}$ from the die throws.
+        </p>
+        <p>This idea of having latent variables brings us to a clustering method
+            called <a href="gaussian-mixture-model.html">Gaussian mixture models</a>.
+            The notion is that each datapoint is generated from a distribution
+            corresponding to a cluster which had been randomly chosen (latently).
+            Read more in the post.
+        </p>
+
+
+
+        <h2 id="shorthands">Shorthands</h2>
+        <p>In the first section, we saw that the <strong>categorical distribution</strong>
+            is used to describe the latent distribution, i.e. $Z_i$ takes values
+            $\{1,2,..K\}$.
+        </p>
+        <p>
+            $$ P(Z_i=z)=\left\{\begin{array}{ll}
+            {\pi_{1}} & {\text { if } z=1} \\
+            {\pi_{2}} & {\text { if } z=2} \\
+            ... \\
+            {\pi_{K}} & {\text { if } z=K}
+            \end{array}\right.
+            $$
+        </p>
+        <p>While it's more readable that way, the convention is to use <em>indicator
+            variables</em> instead to show whether an observation belongs to a component. This is effectively a <strong>multinomial distribution with
+            $n=1$ trials</strong>.
+        </p>
+        <p>$$ P(Z_i = z_k) $$</p>
+        <p>which means probability of $Z_i$ coming from cluster $k$. Also note that
+            $z_k$ is a realised value where
+        </p>
+        <p>
+            $$ z_k=\left\{\begin{array}{ll}
+            {1} & {\text { if cluster $k$}} \\
+            {0} & {\text { otherwise }} \\
+            \end{array}\right.
+            $$
+        </p>
+        <p>So the following expression</p>
+        <p>$$ P(X_i=x|Z_i = z_k) $$</p>
+        <p>means "the probability of observing $X_i$ given that it came from
+            cluster $k$."
+        </p>
+
+
+
+        <h2 id="final-notes">Final notes</h2>
+        <p>Note that mixture models can have a <b>multimodal</b> or even <b>unimodal</b>
+            probability density.</p>
+        <p>If a distribution is multimodal, then it is a mixture model.</p>
+        <p>If a distribution is unimodal, it is not conclusive whether it is a mixture model.</p>
+
+        <d-appendix>
+            <h3>Related</h3>
+            <p><a
+                    href="gaussian-mixture-model.html">Gaussian Mixture Model</a>
+            </p>
+            <h3>Resources</h3>
+            <p><a
+                    href="https://stephens999.github.io/fiveMinuteStats/intro_to_mixture_models.html">Introduction to Mixture Models</a>
+            </p>
+            <d-footnote-list></d-footnote-list>
+            <d-bibliography src="references.bib"></d-bibliography>
+            <d-citation-list></d-citation-list>
+        </d-appendix>
+</body>
+
+</html>

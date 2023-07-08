@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" description="Notes on GMM" content="width=device-width, initial-scale=1">
+    <title>Gaussian mixture model</title>
+
+    <!-- Load KaTeX CSS first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+        integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- Load Distill Pub template -->
+    <script src="js/distill_template_modified.v2.js"></script>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        .dropdown {
+            background-color: rgb(247, 247, 247);
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <d-front-matter>
+        <script type="text/json">{
+            "title": "EM algorithm (WIP)",
+            "description": "",
+            "authors": [
+                {
+                "author": "Raimi bin Karim",
+                "authorURL": "https://raibosome.github.io",
+
+                "affiliationURL": "https://aisingapore.org"
+                }
+            ],
+            "katex": {
+                "delimiters": [
+                {"left": "$", "right": "$", "display": false},
+                {"left": "$$", "right": "$$", "display": true}
+                ]
+            }
+            }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>[WIP] Gaussian mixture model and the EM algorithm</h1>
+        <p>Notes on GMM and EM</p>
+    </d-title>
+
+    <!-- <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#">?</a></li>
+                <li><a href="#geometric">?</a></li>
+            </ul>
+        </nav>
+    </div> -->
+
+    <div id="contents" class="base-grid" style="border-top: 1px solid #eee; padding: 1.5rem 0;">
+        <nav class="l-text toc figcaption">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#motivation">Motivation: clustering</a></li>
+                <li><a href="#gmm">Gaussian mixture models</a></li>
+                <li><a href="#mle-em">MLE & EM</a></li>
+                <li><a href="#questions">Questions</a></li>
+            </ul>
+
+            <div>
+                <p>It is recommended that the reader have a basic understanding of the following:</p>
+                <ul>
+                    <li><a href="probability-distributions.html#categorical">Categorical</a> and
+                        <a href="probability-distributions.html#normal">Gaussian</a> distributions</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Conditional_probability_distribution">Conditional distribution</a>
+                        and marginalisation</li>
+                    <li><a href="mixture-models.html">Mixture models</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes' theorem</a></li>
+                    <li>Expectation of random variables</li>
+                    <li>Maximum likelihood estimation</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <d-article>
+
+        <h2 id="motivation">Motivation: clustering</h2>
+
+
+
+
+        <h2 id="gmm">Defining Gaussian mixture model</h2>
+
+        <h4>Probability distribution of each observation</h4>
+        <p>The probability density function of a normal distribution shall be defined as</p>
+        <p>$$ f(x|\mu,\sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}
+            \exp(-\frac{(x-\mu)^2}{2\sigma^2}) $$</p>
+
+        <h4>Marginal distribution</h4>
+        <p>In the univariate setting, the probability density function of a GMM is</p>
+        <p>$$ \begin{aligned}
+            p(x) &= \sum_{k=1}^{K} \pi_k \cdot \frac{1}{\sqrt{2\pi\sigma_k^2}}
+            \exp(-\frac{(x-\mu_k)^2}{2\sigma_k^2}) \\
+            &= \sum_{k=1}^{K} \pi_k \cdot f(x|\mu_k,\sigma_k)
+            \end{aligned} $$</p>
+        <p>where $k$ is the number of 'clusters' or <em>components</em>, $\pi_k$ is the
+            <em>mixing coefficient</em> with $ \sum_{k=1}^{K} \pi_k = 1 $ and
+            $\pi$ is the mathematical constant. Read on to learn how to derive this.</p>
+
+        <h4>Posterior distribution</h4>
+        <p>Let's find $ p(\mathbf{z}|x) $ by using Bayes' theorem. This result will be useful
+            for the expectation-maximisation (EM) algorithm in the next section.
+        </p>
+        <p>$$ \begin{aligned}
+            p(\mathbf{z}|x)
+            &= \frac{p(x|\mathbf{z})p(\mathbf{z})}{p(x)} \\
+            &= \frac{\pi_k f(x|\mu_k, \sigma_k)}{\sum_{i=1}^K \pi_k f(x|\mu_k, \sigma_k)} \\
+            \end{aligned} $$</p>
+
+
+
+        <h2>MLE & EM</h2>
+        <p>The EM algorithm aims to maximise the <em>likelihood function</em>, which is the
+            maximum likelihood estimation (MLE).
+        </p>
+        <!-- <p>$$ \text{argmax}_\theta \prod_{i=1}^N p(x_i) $$</p> -->
+        <!-- <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <div class="dropdown">
+                        <p>The first trick is</p>
+                        <p>$$ p(x) = \sum_z p(x|z)p(z) $$</p>
+                    </div>
+                </details>
+            </nav>
+        </div> -->
+        <!-- <p>$$ = \text{argmax}_\theta \prod_{i=1}^N \sum_{j=1}^K p(x_i,z_j=1) $$</p> -->
+        <!-- <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <div class="dropdown">
+                        <p>Log is a convex function???</p>
+                    </div>
+                </details>
+            </nav>
+        </div> -->
+        <p>$$ \begin{aligned}
+            & \text{argmax}_\theta \prod_{i=1}^N p(x_i) \\
+            &= \text{argmax}_\theta \log \prod_{i=1}^N p(x_i) \\
+            &= \text{argmax}_\theta \sum_{i=1}^N \log p(x_i) \\
+            &= \text{argmax}_\theta \sum_{i=1}^N \log \sum_{j=1}^K \pi_j f(x|\mu_j, \sigma_j) \\
+            \end{aligned}
+            $$
+        </p>
+
+        <p>We then try to equate to solve for $\mu_k$, $\sigma_k$ and $\pi_k$:</p>
+        <p>$$ \begin{aligned}
+            \frac{\partial }{\partial \mu_{k}}    \sum_{i=1}^N \log \sum_{j=1}^{K} \pi_{j} f\left(x_{i} | \mu_{j}, \sigma_{j}\right) &= 0 \\
+            \frac{\partial }{\partial \sigma_{k}} \sum_{i=1}^N \log \sum_{j=1}^{K} \pi_{j} f\left(x_{i} | \mu_{j}, \sigma_{j}\right) &= 0 \\
+            \frac{\partial }{\partial \pi_{k}}    \sum_{i=1}^N \log \sum_{j=1}^{K} \pi_{j} f\left(x_{i} | \mu_{j}, \sigma_{j}\right) &= 0
+            \end{aligned}
+            $$
+            Let's start with solving $\mu_k$ first.
+        </p>
+
+        <!-- <div id="contents" class="base-grid" style="margin-bottom: 16px;">
+            <nav class="l-text toc figcaption">
+                <details>
+                    <summary>What next?</summary>
+                    <div class="dropdown">
+                        <p>The second trick:</p>
+                        <p>Based on EM algorithm, maximising $\sum \log \frac{p(x,z)}{q(z)} q(z) $
+                            is the same as maximising $\sum \log p(x,z) q(z)$
+                        </p>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <p>$$ = \text{argmax}_\theta \sum_{i=1}^N \log \sum_{j=1}^K \log p(x_i,z_j=1) p(z_j=1|x_i) $$</p> -->
+
+        <p>For readability, let's expand $\text{argmax}_\theta \sum_{i} \log \sum_{k} \pi_k f(x|\mu_k, \sigma_k)$:
+            $$ \begin{aligned}
+            \text{argmax}_\theta ( \\
+            & \log \sum_{j=1}^{K} \pi_{j} f\left(x_{1} | \mu_{j}, \sigma_{j}\right) \\
+            &+ \log \sum_{j=1}^{K} \pi_{j} f\left(x_{2} | \mu_{j}, \sigma_{j}\right) \\
+            &+ ... \\
+            &+ \log \sum_{j=1}^{K} \pi_{j} f\left(x_{N} | \mu_{j}, \sigma_{j}\right) \\
+            )
+            \end{aligned}
+            $$
+        </p>
+
+        <p>For a particular $x_i$, say $x_2$:</p>
+        <p>$$ \begin{aligned}
+            & \frac{\partial }{\partial \mu_{k}}\log \sum_{j=1}^{K} \pi_{j} f\left(x_{2} | \mu_{j}, \sigma_{j}\right) \\
+            &= \frac{1}{\sum_{j=1}^{k} \pi_{j} f\left(x_{2} | \mu_{j}, \sigma_{j}\right)} \cdot \frac{\partial}{\partial \mu_{k}} \pi_{k} f\left(x_{2} | \mu_{k}, \sigma_{k}\right) \\
+            &= \frac{1}{\sum_{j=1}^{k} \pi_{j} f\left(x_{2} | \mu_{j}, \sigma_{j}\right)} \cdot \frac{\partial}{\partial \mu_k} \pi_{k} \frac{1}{\sqrt{2 \pi \sigma_{k}^{2}}} \exp \left(-\frac{\left(x_{2}-\mu_{k}\right)^{2}}{2 \sigma_{k}^{2}}\right) \\
+            &= \frac{1}{\sum_{j=1}^{k} \pi_{j} f\left(x_{2} | \mu_{j}, \sigma_{j}\right)} \cdot \frac{\left(x_{2}-\mu_{k}\right)}{\sigma_{k}^{2}} \cdot \pi_{k} \frac{1}{\sqrt{2 \pi \sigma_{k}^{2}}} \exp \left(-\frac{\left(x_{2}-\mu_{k}\right)^{2}}{2 \sigma_{k}^{2}}\right) \\
+            &= \frac{1}{\sum_{j=1}^{k} \pi_{j} f\left(x_{2} | \mu_{j}, \sigma_{j}\right)} \cdot \frac{\left(x_{2}-\mu_{k}\right)}{\sigma_{k}^{2}} \cdot f\left(x_{2} | \mu_{j}, \sigma_{j}\right) \\
+            &= \frac{f\left(x_{2} | \mu_{j}, \sigma_{j}\right)}{\sum_{j=1}^{k} \pi_{j} f\left(x_{2} | \mu_{j}, \sigma_{j}\right)} \cdot \frac{\left(x_{2}-\mu_{k}\right)}{\sigma_{k}^{2}} \\
+            \end{aligned}$$
+        </p>
+
+        <p>The derivative of the sum of $x_i$'s is thus</p>
+        <p>$$ \begin{aligned}
+            & \frac{\partial }{\partial \mu_{k}}\sum_{i=1}^{N} \log \sum_{j=1}^{K} \pi_{j} f\left(x_{i} | \mu_{j}, \sigma_{j}\right) \\
+            &= \sum_{i=1}^{N} \frac{\left(x_{i}-\mu_{k}\right)}{\sigma_{k}^{2}} \cdot \frac{f\left(x_{i} | \mu_{k}, \sigma_{k}\right)}{\sum_{j=1}^{k} \pi_{j} f\left(x_{i} | \mu_{j}, \sigma_{j}\right)} \\
+            \end{aligned}$$
+        </p>
+        <p>So, back to trying to solve for $\mu_k$,
+            $$\begin{aligned} \frac{\partial }{\partial \mu_{k}} \sum_{i=1}^N \log \sum_{j=1}^{K} \pi_{j} f\left(x_{i} | \mu_{j}, \sigma_{j}\right) &= 0 \\
+            \sum_{i=1}^{N} \frac{\left(x_{i}-\mu_{k}\right)}{\sigma_{k}^{2}} \cdot \frac{f\left(x_{i} | \mu_{k}, \sigma_{k}\right)}{\sum_{j=1}^{k} \pi_{j} f\left(x_{i} | \mu_{j}, \sigma_{j}\right)} &= 0
+            \end{aligned}$$
+            And we realise that there's no analytical solution for this 😱!
+        </p>
+        <p><b>Enter EM algorithm.</b></p>
+
+        <h3>Step 1: Expectation</h3>
+
+        <p>In this step, we'll be replacing ? to ?. Why does this work?</p>
+        <ol>
+            <li>Gaussian's posterior distribution is tractable</li>
+            <li>Has meaning. Empirical</li>
+            <li>It's the expectation of the latent variable. It gives you the
+                probability of a datapoint $x$ being at cluster $k$.</li>
+        </ol>
+
+        <p>This tractability comes at the expense of having to do this iteratively to convergence.</p>
+
+        <p>This step is called the 'expectation' step because the expectation of
+            an indicator variable (which is the case for our latent variable) is
+            the posterior distribution of the latent variable itself.
+        </p>
+        <p>$$ \begin{aligned}
+            E[Z|X] &= 0 \cdot p(z_{\text{not }k}|X=x) + 1 \cdot p(z_k|X=x) \\
+            &= p(z_k|x) \\
+            &= \frac{p(x|z_k)p(z_k)}{p(x)} \\
+            &= \frac{\pi_k f(x|\mu_k, \sigma_k)}{\sum_{j=1}^K \pi_j f(x|\mu_k, \sigma_k)} \\
+            &= \gamma_k(x)
+            \end{aligned} $$</p>
+
+        <h4>Calculating the responsibility</h4>
+        <p>At every iteration, the expectation is calculated based on the existing
+            values of $\mu$ and $\sigma$. $\pi_k$ is calculated as:
+        </p>
+        <p>$$ \pi_k = \frac{N_k}{N} $$</p>
+
+        <p>If we're only starting with this optimisation, there won't be any
+            existing values so it's our responsibility to initialise these values.
+        </p>
+
+        <p>$$ \begin{aligned}
+            & \frac{\partial }{\partial \mu_{k}}\sum_{i=1}^{N} \log \sum_{j=1}^{K} \pi_{j} f\left(x_{i} | \mu_{j}, \sigma_{j}\right) \\
+            &= \sum_{i=1}^{N} \frac{\left(x_{2}-\mu_{k}\right)}{\sigma_{k}^{2}} \cdot \frac{f\left(x_{2} | \mu_{j}, \sigma_{j}\right)}{\sum_{j=1}^{k} \pi_{j} f\left(x_{2} | \mu_{j}, \sigma_{j}\right)} \\
+            &= \sum_{i=1}^{N} \frac{\left(x_{i}-\mu_{k}\right)}{\sigma_{k}^{2}} \gamma_k(x_i)
+            \end{aligned}$$
+        </p>
+        <p>Note that the $\gamma_k(x_i)$ is to be treated as a constant.</p>
+
+        <h3>Step 2: Maximisation</h3>
+
+        <p>Like how we do it for an MLE, we equate to 0.</p>
+        <p>Equate to 0 to find MLE of $\mu_k$:</p>
+        <p>$$ \begin{aligned}
+            \frac{\partial }{\partial \mu_{k}}\sum_{i=1}^{N} \log \sum_{j=1}^{K} \pi_{j} f\left(x_{i} | \mu_{j}, \sigma_{j}\right) &= 0 \\
+            \sum_{i=1}^{N} \frac{\left(x_{i}-\mu_{k}\right)}{\sigma_{k}^{2}} \gamma_k(x_i) &= 0 \\
+            \mu_k \sum_{i=1}^{N} \gamma_k(x_i) &= \sum_{i=1}^{N} x_i\gamma_k(x_i) \\
+            \mu_k &= \frac{\sum_{i=1}^{N} x_i\gamma_k(x_i)}{\sum_{i=1}^{N} \gamma_k(x_i)}
+            \end{aligned} $$
+        </p>
+
+        <p>Do the same for MLE of $\sigma_k$:</p>
+        <p>$$ \sigma_k = \frac{\sum_{i=1}^{N} x_i\gamma_k(x_i)}{\sum_{i=1}^{N} \gamma_k(x_i)} $$</p>
+
+        <p>MLE of $\pi_k$ is estimated empirically (because it's a categorical distribution):</p>
+        <p>$$ \pi_k = \frac{1}{N} \sum_{i=1}^{N} \gamma_k(x_i) $$</p>
+
+
+
+
+
+
+        <d-appendix>
+            <h3>Resources</h3>
+            <p><a href="https://stephens999.github.io/fiveMinuteStats/intro_to_em.html">https://stephens999.github.io/fiveMinuteStats/intro_to_em.html</a></p>
+            <p><a
+                    href="https://towardsdatascience.com/gaussian-mixture-models-explained-6986aaf5a95">https://towardsdatascience.com/gaussian-mixture-models-explained-6986aaf5a95</a>
+            </p>
+            <p><a
+                    href="http://ai.stanford.edu/~chuongdo/papers/em_tutorial.pdf">http://ai.stanford.edu/~chuongdo/papers/em_tutorial.pdf</a>
+            </p>
+            <p><a
+                    href="https://stats.stackexchange.com/questions/72774/numerical-example-to-understand-expectation-maximization">https://stats.stackexchange.com/questions/72774/numerical-example-to-understand-expectation-maximization</a>
+            </p>
+            <p><a
+                    href="http://www.cse.iitm.ac.in/~vplab/courses/DVP/PDF/gmm.pdf">http://www.cse.iitm.ac.in/~vplab/courses/DVP/PDF/gmm.pdf</a>
+            </p>
+            <p><a href="http://people.csail.mit.edu/dsontag/courses/ml12/slides/lecture21.pdf">http://people.csail.mit.edu/dsontag/courses/ml12/slides/lecture21.pdf</a></p>
+            <d-footnote-list></d-footnote-list>
+            <d-bibliography src="references.bib"></d-bibliography>
+            <d-citation-list></d-citation-list>
+        </d-appendix>
+</body>
+
+</html>

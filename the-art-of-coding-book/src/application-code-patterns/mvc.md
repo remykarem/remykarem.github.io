@@ -1,4 +1,0 @@
-# MVC
-
-Model-View-Controller
-

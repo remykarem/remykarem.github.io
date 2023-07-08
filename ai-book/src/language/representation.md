@@ -1,3 +1,0 @@
-# Representation
-
-(Numerical representation)

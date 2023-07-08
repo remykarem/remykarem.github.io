@@ -1,3 +1,0 @@
-# Standards
-
-* MIME type

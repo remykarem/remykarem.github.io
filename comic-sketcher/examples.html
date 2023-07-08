@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Comic Sketcher</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+		integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<style type="text/css">
+		/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: rgba(255, 255, 255, .8) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+		}
+
+		/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+		body.loading {
+			overflow: hidden;
+		}
+
+		/* Anytime the body has the loading class, our
+   modal element will be visible */
+		body.loading .modal {
+			display: block;
+		}
+
+        .row {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Comic Sketcher</h1>
+            <p>Example sketches of people, places, and objects.</p>
+            <p>Note: Images are shown in full resolution so expect a slight delay in page loading.</p>
+        </div>
+        
+		<div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="anne-hath-orig.jpg"/>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Anne Hathaway (<a href="https://aroundmovies.com/celebs/anne-hathaway-roles-in-movies-to-2001">source</a>)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="anne-hath-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Anne Hathaway
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="shawn-mendes-orig.jpg"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Shawn Mendes (<a href="https://www.instyle.com/news/shawn-mendes-scores-wilhelmina-modeling-contract">source</a>)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="shawn-mendes-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Shawn Mendes
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="camila-cabello-orig.jpg"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Camila Cabello (<a href="http://www.fanpop.com/clubs/camila-cabello/images/40714533/title/camila-photo">source</a>)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="camila-cabello-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Camila Cabello
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="selfie-orig.jpg"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Bathroom selfie is a must
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="selfie-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Selfie
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="myself-orig.jpg"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Myself
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="myself-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Myself
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="069-orig.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Person 069 (AR dataset, <a href="http://mmlab.ie.cuhk.edu.hk/archive/facesketch.html">source</a>)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="069-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Person 069 (AR dataset)
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="115-orig.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Person 115 (AR dataset, <a href="http://mmlab.ie.cuhk.edu.hk/archive/facesketch.html">source</a>)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="115-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Person 115 (AR dataset)
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="064-orig.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Person 064 (AR dataset, <a href="http://mmlab.ie.cuhk.edu.hk/archive/facesketch.html">source</a>)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="064-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Person 064 (AR dataset)
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="audi-orig.jpg"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Audi R8 (<a href="https://www.autoblog.com/buy/2018-Audi-R8-5.2_V10_plus__2dr_All_wheel_Drive_quattro_Coupe/specs/">source</a>)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="audi-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Audi R8
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="fusionopolis-orig.jpg"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Fusionopolis, Singapore (taken by me)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="fusionopolis-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Fusionopolis, Singapore
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="12-apostles-orig.jpg"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						The Twelve Apostles, Australia (taken by me)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="12-apostles-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						The Twelve Apostles, Australia
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="colosseum-orig.jpg"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Colosseum, Italy (<a href="https://www.pinterest.com/pin/317855686193643594/?lp=true">source</a>)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="colosseum-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						Colosseum, Italy
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="farm-rogi.jpg"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						A farm (<a href="https://edu.glogster.com/glog/turk-and-runt/2php3r6np57">source</a>)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="farm-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						A farm
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" class="card-img-top" src="suburbs-orig.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						A suburban landscape (<a href="http://3dstereophoto.blogspot.com/2018/07/non-photorealistic-rendering-software_9.html">source</a>)
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<img id="imageOriginal" class="card-img-top" src="suburbs-sketch.png"/>
+                    </div>
+                    <div class="card-footer text-muted">
+						A suburban landscape
+					</div>
+				</div>
+			</div>
+        </div>
+        
+	</div>
+    <div class="modal"></div>
+    
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Comic Sketcher</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+		integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<style type="text/css">
+		/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: rgba(255, 255, 255, .8) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+		}
+
+		/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+		body.loading {
+			overflow: hidden;
+		}
+
+		/* Anytime the body has the loading class, our
+   modal element will be visible */
+		body.loading .modal {
+			display: block;
+		}
+
+		.row {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Comic Sketcher</h1>
+			<p>This tool uses the open-source computer vision library OpenCV. A sketch is rendered using a combination
+				of computer vision algorithms
+				like difference of Gaussian, (iterative) bilateral filtering and thresholding.</p>
+			<p>See examples of rendered sketches <a href="examples.html">here</a>.</p>
+			<p>Best viewed on a desktop browser.</p>
+		</div>
+		<div class="row">
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Original Image</b>
+					</div>
+					<div class="card-block text-center">
+						<img id="imageOriginal" alt="Upload" class="card-img-top" />
+					</div>
+					<div class="card-footer text-muted">
+						<input type="file" id="imageInput" name="file" />
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- <div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						Hatch Image
+					</div>
+					<div class="card-block text-center">
+						<img id="hatchOriginal" alt="Upload" class="card-img-top" />
+					</div>
+					<div class="card-footer text-muted">
+						<input type="file" id="hatchInput" name="file" />
+					</div>
+				</div>
+			</div> -->
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<b>Comic Sketch</b>
+					</div>
+					<div class="card-block">
+						<canvas id="imageCanvas"></canvas>
+					</div>
+					no. of iterations for bilateral filter of edges (preprocessing)
+					<input type="range" id="trackbar9" value="0" min="0" max="10" step="1" onchange="generateImage()">
+					sigma - difference of gaussian for edges
+					<input type="range" id="trackbar" value="0.7" min="0" max="5" step="0.1" onchange="generateImage()">
+					<input type="text" id="weightValue" size="3" value="1" />
+					p - weighted sum of difference of gaussian
+					<input type="range" id="trackbar4" value="40" min="1" max="100" step="0.01"
+						onchange="generateImage()">
+					sigma (intensity) - bilateral filtering of edges
+					<input type="range" id="trackbar6" value="10" min="0.1" max="500" step="0.1"
+						onchange="generateImage()">
+					epsilon - thresholding for edges
+					<input type="range" id="trackbar2" value="127" min="0" max="255" step="0.01"
+						onchange="generateImage()">
+					<!-- k
+					<input type="range" id="trackbar3" value="1.6" min="0" max="200" step="0.01"
+						onchange="generateImage()"> -->
+					phi
+					<input type="range" id="trackbar5" value="1" min="0.01" max="10" step="0.01"
+						onchange="generateImage()">
+					sigma (intensity) - bilateral filtering of colour space
+					<input type="range" id="trackbar7" value="10" min="0.1" max="500" step="0.01"
+						onchange="generateImage()">
+					no. of iterations for bilateral filtering of colour space
+					<input type="range" id="trackbar8" value="1" min="1" max="10" step="1" onchange="generateImage()">
+					with colour?
+					<input type="checkbox" id="checkbox" onchange="generateImage()" checked><br>
+					<div class="card-footer">
+						<a href="#" id="button" class="card-link">Download Image</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal"></div>
+
+	<!-- References
+	http://3dstereophoto.blogspot.com/2018/05/non-photorealistic-rendering-separated_15.html
+	https://ssarcandy.tw/2017/06/26/Coherent-Line-Drawing/#Flow-based-Difference-of-Gaussians
+	https://www.ctolib.com/haoking-opencvjs.html -->
+
+	<script type="text/javascript">
+
+		async function generateImage() {
+
+			document.body.classList.add("loading");
+
+			// sigma:
+			// epsilon: luminance(the lower the whiter)
+			// k: the higher the k, the lesser the noise
+			// p: edge sharpening
+			// phi: sharpness of black / white transitions(recommended low for smoothing)
+			// sigmaColor
+			// sigmaSpace
+
+			// Define params
+			sigma = parseFloat(trackbar.value)
+			epsilon = parseFloat(trackbar2.value)
+			// k = parseFloat(trackbar3.value)
+			k = 1.6
+			p = parseFloat(trackbar4.value)
+			phi = parseFloat(trackbar5.value)
+			sigmaColor = parseFloat(trackbar6.value)
+			sigmaColoriser = parseFloat(trackbar7.value)
+			iterations = parseInt(trackbar8.value)
+			iterations0 = parseInt(trackbar9.value)
+			colourise = checkbox.checked
+
+			weightValue.setAttribute('value', trackbar.value)
+
+			// Define matrices
+			interim = new cv.Mat()
+			colour0 = new cv.Mat()
+			grayscale = new cv.Mat();
+			img1 = new cv.Mat();
+			img2 = new cv.Mat();
+			dog = new cv.Mat();
+			edges = new cv.Mat();
+			ksize = new cv.Size(37, 37);
+			// kszie = cv.Mat.zeros(3, 3, cv.CV_32F)
+
+			colour = new cv.Mat();
+			bf = new cv.Mat();
+
+			// Sobel
+			// let dstx = new cv.Mat();
+			// let dsty = new cv.Mat();
+			// cv.cvtColor(src, src, cv.COLOR_RGBA2RGB, 0);
+			// cv.Sobel(src, dstx, cv.CV_8U, 1, 0, 3, 1, 0, cv.BORDER_DEFAULT);
+			// cv.Sobel(src, dsty, cv.CV_8U, 0, 1, 3, 1, 0, cv.BORDER_DEFAULT);
+			// cv.imshow('imageCanvas', dstx);
+			// // cv.imshow('imageCanvas', dsty);
+			// dstx.delete(); dsty.delete();
+
+
+			// Operations for edges
+			// Preprocess
+			cv.cvtColor(src, colour0, cv.COLOR_RGBA2RGB, 0);
+			for (var iter = 0; iter < iterations0; iter++) {
+				cv.bilateralFilter(colour0, interim, 9, 1, 1, cv.BORDER_DEFAULT);
+
+				if (iter != iterations0 - 1) {
+					colour0.delete(); colour0 = interim.clone(); interim.delete(); interim = new cv.Mat();
+				}
+			}
+			cv.cvtColor(colour0, grayscale, cv.COLOR_RGB2GRAY, 0);
+			cv.GaussianBlur(grayscale, img1, ksize, sigma, 0);
+			cv.GaussianBlur(grayscale, img2, ksize, sigma * k, 0);
+			cv.addWeighted(img1, 1 + p, img2, -p, 0.0, dog, dtype);
+			cv.bilateralFilter(dog, edges, 9, sigmaColor, sigmaColor, cv.BORDER_DEFAULT);
+			if (edges.isContinuous()) {
+				edges.data.forEach(function (pixel, index, arr) {
+					if (pixel >= epsilon) {
+						arr[index] = 255;
+					} else {
+						if (colourise) {
+							arr[index] = 0;
+						} else {
+							arr[index] = 255 * (1 + Math.tanh(phi * (pixel - epsilon)));
+						}
+					}
+				});
+			}
+
+			if (colourise) {
+
+				// Operations for colour
+				cv.cvtColor(src, bf, cv.COLOR_RGBA2RGB, 0);
+				for (var iter = 0; iter < iterations; iter++) {
+					cv.bilateralFilter(bf, colour, 9, sigmaColoriser, sigmaColoriser, cv.BORDER_DEFAULT);
+
+					if (iter != iterations - 1) {
+						bf.delete(); bf = colour.clone(); colour.delete(); colour = new cv.Mat();
+					}
+				}
+
+				// Combining colour and edge
+				if (edges.isContinuous()) {
+					for (var row = 0; row < src.rows; row++) {
+						for (var col = 0; col < src.cols; col++) {
+							indexColor = row * src.cols * colour.channels() + col * colour.channels()
+							indexEdges = row * src.cols * 1 + col * 1
+
+							pixel = edges.data[indexEdges]
+
+							// If pixel is edge i.e. pixel < 255, then fill dst with edge grayscale value
+							// Else if no edge i.e. pixel >= 255, then fill with colour (leave)
+							if (pixel < 255) {
+								colour.data[indexColor] = pixel
+								colour.data[indexColor + 1] = pixel
+								colour.data[indexColor + 2] = pixel
+							}
+						}
+					}
+				}
+				// Show comic
+				cv.imshow('imageCanvas', colour);
+
+			} else {
+				// Show edges only
+				cv.imshow('imageCanvas', edges);
+			}
+
+			// Delete variables
+			interim.delete(); colour0.delete(); grayscale.delete(); img1.delete(); img2.delete(); dog.delete(); edges.delete();
+			colour.delete(); bf.delete();
+
+			document.body.classList.remove("loading");
+		}
+
+		document.body.classList.add("loading");
+
+		let imgElement = document.getElementById('imageOriginal');
+		let inputElement = document.getElementById('imageInput');
+		inputElement.addEventListener('change', (e) => {
+			imgElement.src = URL.createObjectURL(e.target.files[0]);
+		}, false);
+
+		// let hatchImgElement = document.getElementById('hatchOriginal');
+		// let hatchInputElement = document.getElementById('hatchInput');
+		// hatchInputElement.addEventListener('change', (e) => {
+		// 	hatchImgElement.src = URL.createObjectURL(e.target.files[0]);
+		// }, false);
+
+
+		let mat;
+		let trackbar = document.getElementById('trackbar');
+		let trackbar2 = document.getElementById('trackbar2');
+		// let trackbar3 = document.getElementById('trackbar3');
+		let trackbar4 = document.getElementById('trackbar4');
+		let trackbar5 = document.getElementById('trackbar5');
+		let trackbar6 = document.getElementById('trackbar6');
+		let trackbar7 = document.getElementById('trackbar7');
+		let trackbar8 = document.getElementById('trackbar8');
+		let trackbar9 = document.getElementById('trackbar9');
+		let checkbox = document.getElementById('checkbox');
+
+		let weightValue = document.getElementById('weightValue');
+
+		imgElement.onload = function () {
+			window.dtype = cv.CV_8U
+			window.thresholdType = cv.THRESH_TOZERO
+
+			mat = cv.imread(imgElement);
+			console.log(mat.rows)
+			console.log(mat.cols)
+			cv.imshow('imageCanvas', mat);
+			window.src = cv.imread('imageCanvas')
+			console.log(src.rows)
+			console.log(src.cols)
+
+			generateImage();
+		};
+
+		document.getElementById('button').onclick = function () {
+			this.href = document.getElementById("imageCanvas").toDataURL();
+			this.download = "image.png";
+		};
+
+		function onOpenCvReady() {
+			document.body.classList.remove("loading");
+		}
+
+	</script>
+	<script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+</body>
+
+</html>
