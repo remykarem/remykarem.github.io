@@ -21,8 +21,13 @@ jobs:
       with:
         mdbook-version: '0.4.30'
 
+    - name: Install Catpuccino
+      run: cargo install catpuccino
+
     - name: Build networking book
-      run: mdbook build books/networking-book
+      run: |
+        mdbook-catppuccin install
+        mdbook build books/networking-book
 
     # Add more build steps as needed for each book
 
