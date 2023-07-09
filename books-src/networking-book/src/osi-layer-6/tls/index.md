@@ -1,6 +1,8 @@
-# SSL/TLS
+# TLS
 
-Secure Sockets Layer / Transport Layer Security
+Transport Layer Security
+
+Previously known as SSL (Secure Sockets Layer)
 
 TLS _typically_ operates on top of TCP.
 

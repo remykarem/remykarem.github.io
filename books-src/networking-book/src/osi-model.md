@@ -1,5 +1,7 @@
 # OSI model
 
+Open Systems Interconnection model
+
 OSI model vs. TCP/IP model
 
 ![TCP/IP model](./tcp-ip.png)
