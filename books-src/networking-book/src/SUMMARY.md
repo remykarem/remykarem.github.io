@@ -23,96 +23,96 @@
 # Software/hardware layers
 
 - [Application]()
-- [Socket](./socket.md)
-  - [SOCK_STREAM](./socket/sock-stream.md)
-  - [SOCK_DGRAM](./socket/sock-dgram.md)
-  - [SOCK_RAW](./socket/sock-raw.md)
-- [Network interface](./layer-3/interfaces.md)
-- [Network Interface Controller](./network-interface-card.md)
+- [Socket](./software-hardware-layers/socket.md)
+  - [SOCK_STREAM](./software-hardware-layers/socket/sock-stream.md)
+  - [SOCK_DGRAM](./software-hardware-layers/socket/sock-dgram.md)
+  - [SOCK_RAW](./software-hardware-layers/socket/sock-raw.md)
+- [Network interface](./software-hardware-layers/interfaces.md)
+- [Network Interface Controller](./software-hardware-layers/network-interface-card.md)
 
 ---
 
 # ?
 
 - [Access networks](./access-networks.md)
-- [Router](./layer-3/router.md)
+- [Router](./osi-layer-3/router.md)
 
 ---
 
 # Protocols: Tunneling
 
-- [IPSec](./layer-3/ipsec.md)
+- [IPSec](./osi-layer-3/ipsec.md)
 - [OpenVPN]()
 
 ---
 
-# Protocols: Layer 7 — Application
+# Protocols: OSI Layer 7 — Application
 
-- [Overview](./layer-7/index.md)
-- [HTTP](./layer-7/http.md) 
+- [Overview](./osi-layer-7/index.md)
+- [HTTP](./osi-layer-7/http.md) 
   - [Workflow]()
-  - [Message format](./layer-7/http/message-format.md)
-  - [Features](./layer-7/http/features.md)
-  - [Browser](./layer-7/http/browser.md)
-- [HTTPS](./layer-7/https.md)
+  - [Message format](./osi-layer-7/http/message-format.md)
+  - [Features](./osi-layer-7/http/features.md)
+  - [Browser](./osi-layer-7/http/browser.md)
+- [HTTPS](./osi-layer-7/https.md)
   - [HTTPS tunnel]()
-- [SSH](./layer-7/ssh.md)
+- [SSH](./osi-layer-7/ssh.md)
   - [Workflow]()
-  - [SSH tunnel](./layer-7/ssh/ssh-tunnel.md)
-- [DNS](./layer-7/dns.md)
-- [SFTP](./layer-7/sftp.md)
+  - [SSH tunnel](./osi-layer-7/ssh/ssh-tunnel.md)
+- [DNS](./osi-layer-7/dns.md)
+- [SFTP](./osi-layer-7/sftp.md)
 - [SCP]()
-- [WebSocket](./layer-7/websocket.md)
-- [Telnet](./layer-7/telnet.md)
-- [BGP](./layer-7/bgp.md)
-- [DHCP](./layer-7/dhcp.md)
-- [POP, IMAP](./layer-7/pop-imap.md)
-- [SMTP](./layer-7/smtp.md)
+- [WebSocket](./osi-layer-7/websocket.md)
+- [Telnet](./osi-layer-7/telnet.md)
+- [BGP](./osi-layer-7/bgp.md)
+- [DHCP](./osi-layer-7/dhcp.md)
+- [POP, IMAP](./osi-layer-7/pop-imap.md)
+- [SMTP](./osi-layer-7/smtp.md)
 
 ---
 
-# Protocols: Layer 6 — Presentation
+# Protocols: OSI Layer 6 — Presentation
 
-- [TLS](./layer-6/ssl/index.md)
-  - [Setup](./layer-6/ssl/setup.md)
+- [TLS](./osi-layer-6/tls/index.md)
+  - [Setup](./osi-layer-6/tls/setup.md)
   - [Workflow]()
   - [DTLS]()
   - [TLS ciphers]()
-- [SSH](./layer-6/ssh/index.md)
-  - [Setup](./layer-6/ssh/setup.md)
-  - [Workflow](./layer-6/ssh/workflow.md)
+- [SSH](./osi-layer-6/ssh/index.md)
+  - [Setup](./osi-layer-6/ssh/setup.md)
+  - [Workflow](./osi-layer-6/ssh/workflow.md)
 
 ---
 
-# Protocols: Layer 4 — Transport
+# Protocols: OSI Layer 4 — Transport
 
-- [Overview](./layer-4/transport-layer.md)
-- [TCP](./layer-4/tcp.md)
-  - [Workflow](./layer-4/tcp/3-way-handshake.md)
-  - [Message format](./layer-4/tcp/message-format.md)
-  - [Tools](./layer-4/tcp/inspect.md)
-- [UDP](./layer-4/udp.md)
-- [QUIC](./layer-4/quic.md)
+- [Overview](./osi-layer-4/transport-layer.md)
+- [TCP](./osi-layer-4/tcp.md)
+  - [Workflow](./osi-layer-4/tcp/3-way-handshake.md)
+  - [Message format](./osi-layer-4/tcp/message-format.md)
+  - [Tools](./osi-layer-4/tcp/inspect.md)
+- [UDP](./osi-layer-4/udp.md)
+- [QUIC](./osi-layer-4/quic.md)
 
 ---
 
-# Protocols: Layer 3 — Network
+# Protocols: OSI Layer 3 — Network
 
-- [Overview](./layer-3/network-layer.md)
-- [IP](./layer-3/ipv4.md)
-  - [Workflow: Message routing](./layer-3/ip/routing.md)
-  - [Message format](./layer-3/ip/ip-packet.md)
-  - [Host addressing](./layer-3/ip/ip-addresses.md)
-  - [Fragmentation and reassembly](./layer-3/ip/fragmentation-and-reassembly.md)
-- [ICMP](./layer-3/icmp.md)
+- [Overview](./osi-layer-3/network-layer.md)
+- [IP](./osi-layer-3/ipv4.md)
+  - [Workflow: Message routing](./osi-layer-3/ip/routing.md)
+  - [Message format](./osi-layer-3/ip/ip-packet.md)
+  - [Host addressing](./osi-layer-3/ip/ip-addresses.md)
+  - [Fragmentation and reassembly](./osi-layer-3/ip/fragmentation-and-reassembly.md)
+- [ICMP](./osi-layer-3/icmp.md)
 - [IKEv2]()
 
 ---
 
-# Protocols: Layer 1 — Physical/Datalink
+# Protocols: OSI Layer 1 — Datalink
 
-- [Overview](./layer-1/index.md)
-- [ARP](./layer-1/arp.md)
+- [Overview](./osi-layer-1/index.md)
+- [ARP](./osi-layer-1/arp.md)
 - [802.11 Wi-Fi]()
 - [802.3 Ethernet]()
 
