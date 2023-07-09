@@ -21,12 +21,20 @@ Groups may have:
 * generators — a group can have either several or no generators.
 * subgroups
 
+~~~admonish question title="Generator"
+A generator is an element that reaches every element of the group when repeated.
+~~~
+
 Given a group $\mathbb{G}$ and a subgroup $\mathbb{H}$, the **cofactor** or **index of the subgroup** is the ratio $\frac{|\mathbb{G}|}{|\mathbb{H}|}$
 
 Groups can be:
 
 * finite or infinite
 * **cyclic** — if a group has generator(s)
+
+~~~admonish question title="Cyclic group"
+A group is cyclic if it has generator(s)
+~~~
 
 Elements of a group can:
 * repeat

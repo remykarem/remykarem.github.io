@@ -4,6 +4,15 @@
 
 ---
 
+# Axioms
+
+- [Closure](./axioms/closure.md)
+- [Associativity](./axioms/associativity.md)
+- [Identity](./axioms/identity.md)
+- [Invertability](./axioms/invertability.md)
+
+---
+
 # Algebraic structures
 
 - [Group-like]()
