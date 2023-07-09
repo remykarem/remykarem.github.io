@@ -57,8 +57,6 @@
 - [HTTPS](./osi-layer-7/https.md)
   - [HTTPS tunnel]()
 - [SSH](./osi-layer-7/ssh.md)
-  - [Workflow]()
-  - [SSH tunnel](./osi-layer-7/ssh/ssh-tunnel.md)
 - [DNS](./osi-layer-7/dns.md)
 - [SFTP](./osi-layer-7/sftp.md)
 - [SCP]()
@@ -93,6 +91,7 @@
   - [Tools](./osi-layer-4/tcp/inspect.md)
 - [UDP](./osi-layer-4/udp.md)
 - [QUIC](./osi-layer-4/quic.md)
+- [SSH tunnel](./osi-layer-4/ssh/ssh-tunnel.md)
 
 ---
 
