@@ -18,6 +18,7 @@
 - [Group-like]()
   - [Group](./algebraic-structures/group-like/group/index.md)
     - [Multiplicative group](./algebraic-structures/group-like/group/multiplicative.md)
+      - [Multiplicative group of integers modulo n](./algebraic-structures/group-like/group/multiplicative-integers-modulo-n.md)
     - [Lagrange's theorem](./algebraic-structures/group-like/group/lagranges-theorem.md)
   - [Abelian group](./algebraic-structures/group-like/abelian-group.md)
   - [Monoid](./algebraic-structures/group-like/monoid.md)
