@@ -30,6 +30,7 @@ jobs:
 
     - name: Build networking book
       run: |
+        mdbook build books-src/number-theory-book
         mdbook build books-src/system-design-book
         mdbook build books-src/spring-boot-book
         mdbook build books-src/db-book

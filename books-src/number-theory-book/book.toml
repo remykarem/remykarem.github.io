@@ -6,20 +6,17 @@ src = "src"
 title = "Number Theory Book"
 
 [output.html]
-site-url = "/books/your-book/html"
+site-url = "/books/number-theory-book"
 mathjax-support = true
 git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
-additional-css = ["././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/number-theory-book/{path}"  # change your-book
+additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
 default-theme = "frappé"
 no-section-label = true
 preferred-dark-theme = "macchiato"
 
 [build]
-build-dir = "."
-
-[preprocessor.toc]
-command = "mdbook-toc"
-renderer = ["html"]
+build-dir = "../../books/number-theory-book"
 
 [output.katex]
 
@@ -29,6 +26,3 @@ renderers = ["html"]
 [preprocessor.admonish]
 command = "mdbook-admonish"
 assets_version = "2.0.0" # do not edit: managed by `mdbook-admonish install`
-
-[preprocessor.catppuccin]
-assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
