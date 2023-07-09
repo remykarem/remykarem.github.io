@@ -4,56 +4,98 @@ The Diffie–Hellman key exchange (**DH** or **DHKE**) method allows two parties
 
 Breaking DH is a discrete logarithm problem.
 
+```admonish note
+Diffie-Hellman is considered a form of asymmetric cryptography because of the use of mathematically linked keys: a private key and a public key.
+```
+
 ## Important concepts
 
-* Primitive root modulo
-* Multiplicative group of integers modulo
-* Modular exponentation
-* Modular arithmetic
+- Cyclic groups
+- Multiplicative group of integers modulo a prime number
+- Modular arithmetic
 
 ## Trapdoor function
 
-Modular exponentiation?
+Modular exponentiation (discrete logarithm problem)
 
 ## How it works
 
-Define a secret $s$ and an agreed prime modulo $p$.
+Given
 
-Find $g$, a primitive root modulo $p$. Recall that
+|       | Private key |
+| ----- | ----------- |
+| Alice | $a$         |
+| Bob   | $b$         |
 
-$$
-g^s \equiv_p a
-$$
+where $a$ and $b$ are large numbers,
 
-for every $a$ coprime to $p$.
+how do we compute a shared secret?
 
-Let $a_{private}$ be Alice's private key and $b_{private}$ be Bob's private key.
+The private keys _need_ a mathematically related number; the public key.
 
-Their respective public keys are $a_{public} = g^{a_{private}}$ and $b_{public} = g^{b_{private}}$.
-
-Here's the setup where LHS is Alice and RHS is Bob. Both sides need to calculate $s = a_{private}b_{private}$.
-
-$$
-\begin{aligned}
-g^{s} &\equiv_p g^{s} \\
-g^{b_{private}a_{private}} &\equiv_p g^{a_{private}b_{private}} \\
-\end{aligned}
-$$
-
-Let Alice initiate the exchange. Alice computes $a_{public} = g^{a_{private}}$. Then sends to Bob:
+In order to generate a public key, we need a common operation $f$ (**commutative**) and a common (public) operand (?).
 
 $$
-\begin{aligned}
-g^{b_{private}a_{private}} &\equiv_p (g^{a_{private}})^{b_{private}} \\
-g^{b_{private}a_{private}} &\equiv_p (a_{public})^{b_{private}} \\
-\end{aligned}
+f(?, a, b) \rightarrow s
 $$
 
-Bob computes $b_{public} = g^{b_{private}}$. Then sends to Alice:
+At the same time we also need this operation to be **one-way**.
+
+We leverage on the properties of multiplicative group ("commutative operation") of integers modulo ("one-way ness") prime number $p$ (large for security).
 
 $$
-\begin{aligned}
-(g^{b_{private}})^{a_{private}} &\equiv_p (a_{public})^{b_{private}} \\
-(b_{public})^{a_{private}} &\equiv_p (a_{public})^{b_{private}} \\
-\end{aligned}
+g^{ab} \equiv_p s
 $$
+
+
+|       | Private key | Public key | Secret              |
+| ----- | ----------- | ---------- | ------------------- |
+| Alice | $a$         | $A = g^a$  | $s = (g^b)^a = B^a$ |
+| Bob   | $b$         | $B = g^b$  | $s = (g^a)^b = A^b$ |
+
+~~~admonish example
+Generate a large prime $p$ and generator $g$:
+
+```
+openssl dhparam -out dhparams.pem 256
+```
+
+Parse the DER encoding to get the values
+
+```
+openssl asn1parse -in dhparams.pem
+```
+
+Suppose $p$ is `0x94EC65835B717059AC19F5B0E914D6903DE00E61640464D844434C85C10425C3` and $g$ is `2`.
+
+Alice:
+
+```python
+g = 2
+p = 0x94EC65835B717059AC19F5B0E914D6903DE00E61640464D844434C85C10425C3
+a = 123
+A = pow(g,a,p)
+```
+
+Bob:
+
+```python
+g = 2
+p = 0x94EC65835B717059AC19F5B0E914D6903DE00E61640464D844434C85C10425C3
+b = 456
+B = pow(g,b,p)
+```
+
+Alice:
+
+```
+s = pow(B,a,p)
+```
+
+Bob:
+
+```
+s = pow(A,b,p)
+```
+
+~~~
