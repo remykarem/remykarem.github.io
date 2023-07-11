@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>Books</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        transition: background-color 0.5s ease, color 0.5s ease; /* smooth transition between themes */
+    }
+
+    .light-theme {
+        background-color: #ffffff;
+        color: #333333;
+    }
+
+    .dark-theme {
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    .light-theme a {
+        color: #000000;
+    }
+
+    .light-theme a:visited {
+        color: #800080;
+    }
+
+    .light-theme a:hover {
+        color: #FF0000;
+    }
+
+    .dark-theme a {
+        color: #ffffff;
+    }
+
+    .dark-theme a:visited {
+        color: #888888;
+    }
+
+    .dark-theme a:hover {
+        color: #dddddd;
+    }
+    </style>
+</head>
+
+<body>
+    <button id="theme-switcher">Switch Theme</button>
+
+    <p>Hi there! Just plain ol' HTML here. These are my own notes on various subjects:</p>
+
+    <p>Math</p>
+    <ul>
+        <li><a href="https://remykarem.github.io/books/number-theory-book">Number Theory Book</a></li>
+    </ul>
+    
+    <p>AI/ML/Stats</p>
+    <ul>
+        <li><a href="https://remykarem.github.io/books/ai-book">AI Book</a></li>
+        <li><a href="https://remykarem.github.io/books/ai-planning-book">AI Planning Book</a></li>
+        <li><a href="https://remykarem.github.io/books/stats-book">Stats Book</a></li>
+        <li><a href="https://remykarem.github.io/books/agi-book">AGI Book</a></li>
+    </ul>
+
+    <p>CS:</p>
+    <ul>
+        <li><a href="https://remykarem.github.io/books/system-design-book">System Design Book</a></li>
+        <li><a href="https://remykarem.github.io/books/spring-boot-book">Spring Boot Book</a></li>
+        <li><a href="https://remykarem.github.io/books/db-book">DB Book</a></li>
+        <li><a href="https://remykarem.github.io/books/security-book">Security Book</a></li>
+        <li><a href="https://remykarem.github.io/books/shell-book">Shell Book</a>, 
+            <a href="https://remykarem.github.io/books/c-book">C Book</a>,
+            <a href="https://remykarem.github.io/books/rust-book">Rust Book</a>,  
+            <a href="https://remykarem.github.io/books/kotlin-book">Kotlin Book</a>,
+            <a href="https://remykarem.github.io/books/the-art-of-coding-book">The Art of Coding Book</a></li>
+        <li><a href="https://remykarem.github.io/books/networking-book">Networking Book</a></li>
+        <li><a href="https://remykarem.github.io/books/cryptography-book">Crpytography Book</a></li>
+        <li><a href="https://remykarem.github.io/books/os-book">OS Book</a></li>
+        <li><a href="https://remykarem.github.io/books/x86-64-book">x86-64 Book</a></li>
+    </ul>
+
+    <script>
+        document.getElementById('theme-switcher').addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme');
+    });
+    </script>
+</body>
+
+</html>
