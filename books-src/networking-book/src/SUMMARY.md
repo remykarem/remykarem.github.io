@@ -78,6 +78,7 @@
   - [Workflow]()
   - [DTLS]()
   - [TLS ciphers]()
+  - [SSL proxying](./osi-layer-6/tls/ssl-proxying.md)
 - [SSH](./osi-layer-6/ssh/index.md)
   - [Setup](./osi-layer-6/ssh/setup.md)
   - [Workflow](./osi-layer-6/ssh/workflow.md)
