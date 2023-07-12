@@ -1,8 +1,13 @@
 # Setup
 
-For this protocol to work:
-1. the server must have an **SSL certificate**
-2. the client must have a list of ???
+For this protocol to work,
+* the server must have an **SSL certificate**
+* the client must have a list of ???
+
+There are also 3 entities at play:
+1. the server
+2. the client
+3. the certificate authority
 
 ## 1. The server must have an SSL certificate
 
