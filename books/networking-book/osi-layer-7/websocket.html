@@ -155,19 +155,28 @@
 <p><a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</a></p>
 <p><code>ws://</code></p>
 <p>WebSocket is built on top of TCP.</p>
-<p>A WebSocket connection is preferred when we need a persistent bi-directional (&quot;<strong>full duplex</strong>&quot;) low latency data flow from the client to the server and back.</p>
-<p>A WebSocket connection is established <strong>by upgrading an existing HTTP or HTTPS connection</strong>. As such it uses port 80 or 443. </p>
+<p>A WebSocket connection is a full-duplex connection.</p>
+<p>The connection is established <strong>by upgrading an existing HTTP or HTTPS connection</strong>. As such it uses port 80 or 443. </p>
+<div id="admonition-upgrading-an-http-connection" class="admonition tip">
+<div class="admonition-title">
+<p>Upgrading an HTTP connection</p>
+<p><a class="admonition-anchor-link" href="#admonition-upgrading-an-http-connection"></a></p>
+</div>
+<div>
 <p>Upgrading an HTTP connection might look like this:</p>
 <pre><code>HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
 </code></pre>
+</div>
+</div>
 <div id="admonition-example-applications" class="admonition example">
 <div class="admonition-title">
 <p>Example applications</p>
 <p><a class="admonition-anchor-link" href="#admonition-example-applications"></a></p>
 </div>
 <div>
+<p>A WebSocket connection is preferred when we need a persistent bi-directional low latency data flow from the client to the server and back.</p>
 <p>Chat apps, real-time social streams, browser-based multiplayer games.</p>
 </div>
 </div>
