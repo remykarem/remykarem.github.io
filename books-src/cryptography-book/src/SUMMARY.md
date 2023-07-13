@@ -4,12 +4,18 @@
 
 ---
 
-# Goals
+# Primary goals
 
-- [Authentication]()
-- [Confidentiality]()
-- [Integrity]()
-- [Non-repudiation]()
+- [Authenticity](./goals/authenticity.md)
+- [Confidentiality](./goals/confidentiality.md)
+- [Integrity](./goals/integrity.md)
+- [Non-repudiation](./goals/non-repudiation.md)
+- [Anonymity and privacy]()
+- [Forward secrecy]()
+
+---
+
+# Thing
 
 ---
 
