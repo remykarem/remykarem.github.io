@@ -85,6 +85,12 @@
 
 ---
 
+# Protocols: OSI Layer 5 — Session
+
+- [SOCKS]()
+
+---
+
 # Protocols: OSI Layer 4 — Transport
 
 - [Overview](./osi-layer-4/transport-layer.md)
