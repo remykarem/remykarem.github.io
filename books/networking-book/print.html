@@ -30,7 +30,6 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="./last-changed.css">
         <link rel="stylesheet" href="./mdbook-admonish.css">
         <link rel="stylesheet" href="../css/theme/catppuccin.css">
         <link rel="stylesheet" href="../css/theme/catppuccin-highlight.css">
@@ -155,7 +154,7 @@
 <li>https://jvns.ca/networking-zine.pdf</li>
 </ul>
 <p>(jvns’s network zines)</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="osi-model"><a class="header" href="#osi-model">OSI model</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="osi-model"><a class="header" href="#osi-model">OSI model</a></h1>
 <p>Open Systems Interconnection model</p>
 <p>OSI model vs. TCP/IP model</p>
 <p><img src="./tcp-ip.png" alt="TCP/IP model" />
@@ -167,9 +166,9 @@
 <tr><td>Layer 2  Internet</td><td>3</td><td>Source &amp; dest IP addr—(above)</td><td>Routing, addressing, subnetting, packets</td><td>IP, ICMP</td><td>OS kernel, routers</td></tr>
 <tr><td>Layer 1  Network access/link</td><td>1,2</td><td></td><td>Handles physical infrastructure and conversion digital data to signals.</td><td>Ethernet, Wi-Fi, MAC</td><td>Device drivers</td></tr>
 </tbody></table>
-</div><footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="cloud"><a class="header" href="#cloud">Cloud</a></h1>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="cloud"><a class="header" href="#cloud">Cloud</a></h1>
 <p><img src="./cloud-topology.png" alt="Cloud topology" /></p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="socket"><a class="header" href="#socket">Socket</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="socket"><a class="header" href="#socket">Socket</a></h1>
 <p>A socket is a software object <em>provided by the OS</em> to allow applications to send and receive data across the network.</p>
 <pre><code>man 2 socket
 </code></pre>
@@ -210,19 +209,19 @@
 <p>However, it uses file-like semantics like file descriptors.</p>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="sock_stream"><a class="header" href="#sock_stream">SOCK_STREAM</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sock_stream"><a class="header" href="#sock_stream">SOCK_STREAM</a></h1>
 <p>A socket of type <code>SOCK_STREAM</code> provides sequenced, reliable, full-duplex byte streams. </p>
 <p>This correlated with TCP.</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="sock_dgram"><a class="header" href="#sock_dgram">SOCK_DGRAM</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sock_dgram"><a class="header" href="#sock_dgram">SOCK_DGRAM</a></h1>
 <p>A socket of type <code>SOCK_DGRAM</code> supports connectionless, unreliable (typically) small messages.</p>
 <p>This correlates with UDP.</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="sock_raw"><a class="header" href="#sock_raw">SOCK_RAW</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sock_raw"><a class="header" href="#sock_raw">SOCK_RAW</a></h1>
 <p><code>SOCK_RAW</code> type sockets don't abstract some of the operations that <code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code> offer like:</p>
 <ul>
 <li>Handling network interfaces</li>
 <li>Handling packet construction</li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="network-interfaces"><a class="header" href="#network-interfaces">Network interfaces</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="network-interfaces"><a class="header" href="#network-interfaces">Network interfaces</a></h1>
 <p>This is a <em>software</em> abstraction of (but not limited to) physical network interfaces.</p>
 <p>These interfaces are <em>logical</em> interfaces: they can be linked to either physical hardware interfaces (eg. Wi-Fi, Ethernet card) or software-based interfaces (eg. VPN tunnels, loop interface).</p>
 <p>Common types of network interfaces:</p>
@@ -276,7 +275,7 @@ ifconfig
 <p>You don't typically interact directly with network interfaces. The OS abstracts this away using sockets.</p>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="network-interface-controller"><a class="header" href="#network-interface-controller">Network Interface Controller</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="network-interface-controller"><a class="header" href="#network-interface-controller">Network Interface Controller</a></h1>
 <p>aka Network Interface Card, Network Adapter, hardware port, hardware interface</p>
 <p>This is a hardware component that allows a device to connect to a network. An NIC controls the interaction between hardware and wired/optical/wireless medium.</p>
 <p>A host can have multiple NICs.</p>
@@ -339,7 +338,7 @@ ifconfig
 <p>Metallic media suffer from electrical noise and interference from nearby electrical sources.</p>
 <hr />
 <p>Transmission and reception of raw bit streams over a physical medium. Conversion of signals.</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="access-networks"><a class="header" href="#access-networks">Access networks</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="access-networks"><a class="header" href="#access-networks">Access networks</a></h1>
 <p>Networks that physically connect end systems (laptop, mobile phones) to the first router.</p>
 <ul>
 <li>Physical
@@ -373,13 +372,13 @@ ifconfig
 </ul>
 </li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="router"><a class="header" href="#router">Router</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="router"><a class="header" href="#router">Router</a></h1>
 <p>A network device that can (i) bridge between different networks together, (ii) assign IP addresses using a protocol called DHCP, and (iii) determine what traffic can pass between them (most routers have a built-in Firewall).</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="ipsec"><a class="header" href="#ipsec">IPSec</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ipsec"><a class="header" href="#ipsec">IPSec</a></h1>
 <p>Secure network protocol suite that authenticates and encrypts packets of data.</p>
 <p>Used in VPNs.</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="layer-7---application"><a class="header" href="#layer-7---application">Layer 7 - Application</a></h1>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="http"><a class="header" href="#http">HTTP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="layer-7---application"><a class="header" href="#layer-7---application">Layer 7 - Application</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="http"><a class="header" href="#http">HTTP</a></h1>
 <p>Hypertext Transfer Protocol</p>
 <p>HTTP is a client-server application layer protocol.</p>
 <p>HTTP/2 and earlier use TCP as its underlying transport protocol so that messages are guaranteed to get delivered in order. A connection must first be made.</p>
@@ -398,7 +397,7 @@ ifconfig
 <li>Persistent HTTP connections
 Because an HTTP session typically involves multiple non-persistent HTTP connections, the TCP connections which are established and torn down multiple times are inefficient. Persistent HTTP connections are developed such that the duration of the time before the server closes the connection is configurable. Hence, only 1 TCP connection is used to serve multiple requests.</li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="message-format"><a class="header" href="#message-format">Message format</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="message-format"><a class="header" href="#message-format">Message format</a></h1>
 <h2 id="http-methods"><a class="header" href="#http-methods">HTTP methods</a></h2>
 <ul>
 <li>GET</li>
@@ -475,7 +474,7 @@ Because an HTTP session typically involves multiple non-persistent HTTP connecti
 <li><a href="https://securityheaders.com/">https://securityheaders.com</a></li>
 <li><a href="https://report-uri.com/home/analyse/">https://report-uri.com/home/analyse/</a></li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="features"><a class="header" href="#features">Features</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="features"><a class="header" href="#features">Features</a></h1>
 <p>HTTP/2: <a href="https://tools.ietf.org/html/rfc7540">RFC 7540</a></p>
 <div class="table-wrapper"><table><thead><tr><th>Feature</th><th>HTTP/3</th><th>HTTP/2</th><th>HTTP/1.1</th><th>HTTP/1.0</th></tr></thead><tbody>
 <tr><td>Transport protocol</td><td>QUIC</td><td>TCP</td><td>TCP</td><td>TCP</td></tr>
@@ -540,7 +539,7 @@ Because an HTTP session typically involves multiple non-persistent HTTP connecti
 </code></pre>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="http-tunnel"><a class="header" href="#http-tunnel">HTTP tunnel</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="http-tunnel"><a class="header" href="#http-tunnel">HTTP tunnel</a></h1>
 <p>Encapsulating another protocol's data using HTTP</p>
 <p>This involves 3 components:</p>
 <ul>
@@ -575,7 +574,7 @@ Because an HTTP session typically involves multiple non-persistent HTTP connecti
 <p>HTTP clients automatically uses the HTTP CONNECT method (transparent to user) when it detects that it is connected to a proxy server.</p>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="browser"><a class="header" href="#browser">Browser</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="browser"><a class="header" href="#browser">Browser</a></h1>
 <p>The browser is an HTTP client.</p>
 <div id="admonition-assets" class="admonition note">
 <div class="admonition-title">
@@ -604,7 +603,7 @@ Because an HTTP session typically involves multiple non-persistent HTTP connecti
 <p>MIME-sniffing happens (for some web browsers) to determine the content of an asset. Specific to IE and Chrome. With clever naming, a resource can be determined to be an HTML document which has malicious script.</p>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="https"><a class="header" href="#https">HTTPS</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="https"><a class="header" href="#https">HTTPS</a></h1>
 <p>HTTP + TLS</p>
 <p><img src="osi-layer-7/./ssl.png" alt="SSL" /></p>
 <p><img src="osi-layer-7/./https.png" alt="HTTPS" /></p>
@@ -679,7 +678,7 @@ Because an HTTP session typically involves multiple non-persistent HTTP connecti
 <p><a href="https://tls13.xargs.org/">https://tls13.xargs.org/</a> (Visualisation)</p>
 </li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="ssh"><a class="header" href="#ssh">SSH</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ssh"><a class="header" href="#ssh">SSH</a></h1>
 <p>Secure Shell</p>
 <p>SSH is built on top of TCP.</p>
 <p>This protocol provides a secure way to access a remote computer via shell. The establishment of a secure communication is part of SSH (Layer 6).</p>
@@ -704,7 +703,7 @@ Because an HTTP session typically involves multiple non-persistent HTTP connecti
 </ul>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="dns"><a class="header" href="#dns">DNS</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dns"><a class="header" href="#dns">DNS</a></h1>
 <p>Domain Name System</p>
 <p>DNS is a client-server application layer protocol that translates hostnames on the Internet to IP addresses. DNS is a server and a database.</p>
 <p>Get my DNS server</p>
@@ -798,7 +797,7 @@ value=
 type=
 ttl=
 </code></pre>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="sftp"><a class="header" href="#sftp">SFTP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sftp"><a class="header" href="#sftp">SFTP</a></h1>
 <p>SSH File Transfer Protocol</p>
 <p>This protocol provides file transfer, file access and file management functionalities over any reliable data stream.</p>
 <p>SFTP typically uses SSH (Layer 6) to secure the data stream.</p>
@@ -811,7 +810,7 @@ ttl=
 <p>Note that SFTP uses the part on secure communication provided by SSH (Layer 6). It doesn't use the remote shell access capabilities of SSH.</p>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="websocket"><a class="header" href="#websocket">WebSocket</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="websocket"><a class="header" href="#websocket">WebSocket</a></h1>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</a></p>
 <p><code>ws://</code></p>
 <p>WebSocket is built on top of TCP.</p>
@@ -840,10 +839,10 @@ Connection: Upgrade
 <p>Chat apps, real-time social streams, browser-based multiplayer games.</p>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="websocket-secure"><a class="header" href="#websocket-secure">WebSocket Secure</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="websocket-secure"><a class="header" href="#websocket-secure">WebSocket Secure</a></h1>
 <p>WebSocket that is secured with TLS is typically referred to as WebSocket Secure.</p>
 <p>Commonly used with <code>wss://</code>.</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="telnet"><a class="header" href="#telnet">Telnet</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="telnet"><a class="header" href="#telnet">Telnet</a></h1>
 <p>Protocol to estable virtual terminal connection to remote host. Note that Telnet can be used to connect to any port on a remote host.</p>
 <p>Telnet runs on top of TCP.</p>
 <p>Type</p>
@@ -853,14 +852,14 @@ Connection: Upgrade
 <pre><code>GET / HTTP/1.1
 Host: www.example.com
 </code></pre>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="bgp"><a class="header" href="#bgp">BGP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bgp"><a class="header" href="#bgp">BGP</a></h1>
 <p>Border Gateway Protocol</p>
 <p>When a router receives a packet, it uses a protocol called BGP to decide what router the packet should go to next.</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="dhcp"><a class="header" href="#dhcp">DHCP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dhcp"><a class="header" href="#dhcp">DHCP</a></h1>
 <p>Dynamic Host Configuration Protocol</p>
 <p>DHCP servers automatically assign an unused IPv4 address to a new host. When a host is first attached to a subnet, it sends a DHCP request message in a UDP segment to the DHCP server.</p>
 <p>port: 67</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="pop-imap"><a class="header" href="#pop-imap">POP, IMAP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pop-imap"><a class="header" href="#pop-imap">POP, IMAP</a></h1>
 <p>Post Office Protocol v3, Internet Message Access Protocol</p>
 <p>POP/IMAP protocols are pull protocols used for getting email from an email server.</p>
 <p>These protocols use TLS for security.</p>
@@ -880,7 +879,7 @@ Host: www.example.com
 <li>All folders are synced.</li>
 <li>Inbox will be in sync on all devices.</li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="smtp"><a class="header" href="#smtp">SMTP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="smtp"><a class="header" href="#smtp">SMTP</a></h1>
 <p>Simple Mail Transfer Protocol (Sending Mail To People)</p>
 <p>SMTP is a push protocol, used to send email out to the SMTP server whenever it needs to. SMTP uses TCP, which means that transfers are reliable. Connection is established at port 25.</p>
 <ol>
@@ -921,7 +920,7 @@ Hey User,
 Regards,
 Raimi
 </code></pre>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="tls"><a class="header" href="#tls">TLS</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tls"><a class="header" href="#tls">TLS</a></h1>
 <p>Transport Layer Security</p>
 <p>Previously known as SSL (Secure Sockets Layer)</p>
 <p>TLS <em>typically</em> operates on top of TCP.</p>
@@ -940,7 +939,7 @@ Raimi
 <p>While server authentication is the most common, the client can also be additionally requested for authentication. This is known as <strong>mTLS</strong> or mutual TLS.</p>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="setup"><a class="header" href="#setup">Setup</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="setup"><a class="header" href="#setup">Setup</a></h1>
 <p>For this protocol to work,</p>
 <ul>
 <li>the server must have an <strong>SSL certificate</strong></li>
@@ -976,11 +975,11 @@ Raimi
 </ol>
 <p>Once validated, the CA will issue the SSL certificate to the owner of the server (via email etc.).</p>
 <h2 id="2-the-client-must-have-"><a class="header" href="#2-the-client-must-have-">2. The client must have ???</a></h2>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><p>hello</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="ssh-1"><a class="header" href="#ssh-1">SSH</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><p>hello</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ssh-1"><a class="header" href="#ssh-1">SSH</a></h1>
 <p>SSH typically operates on top of TCP.</p>
 <p>In some applications like GitHub and databases, the authentication parts of the SSH workflow (everything before the accessing of the remote shell) is used to authenticate the client with the server.</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="setup-1"><a class="header" href="#setup-1">Setup</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="setup-1"><a class="header" href="#setup-1">Setup</a></h1>
 <p>For this protocol to work, <strong>3 asymmetric key pairs</strong> are at play:</p>
 <h2 id="1-servers-host-key-pair-permanent"><a class="header" href="#1-servers-host-key-pair-permanent">1. Server's host key pair (permanent)</a></h2>
 <p>The private key, held by the server, is used to identify the server, typically stored in <code>/etc/ssh</code>.</p>
@@ -1024,7 +1023,7 @@ Raimi
 <p>More information can be found in</p>
 <pre><code>man ssh_config
 </code></pre>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="workflow"><a class="header" href="#workflow">Workflow</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="workflow"><a class="header" href="#workflow">Workflow</a></h1>
 <p>After TCP handshake, this is what happens:</p>
 <ol>
 <li>
@@ -1061,7 +1060,7 @@ Raimi
 </ul>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="layer-4---transport"><a class="header" href="#layer-4---transport">Layer 4 - Transport</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="layer-4---transport"><a class="header" href="#layer-4---transport">Layer 4 - Transport</a></h1>
 <p>What problems are we trying to solve?</p>
 <ul>
 <li>Network is unreliable due to <strong>congestion</strong> — when more packets than the network has bandwidth for are sent through, some packets get dropped (&quot;<strong>lost packets</strong>&quot;) and some get delayed (&quot;<strong>out-of-order</strong>&quot;).</li>
@@ -1114,7 +1113,7 @@ Raimi
 <p>Round-trip time</p>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="tcp"><a class="header" href="#tcp">TCP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tcp"><a class="header" href="#tcp">TCP</a></h1>
 <p>Transport Control Protocol</p>
 <p>TCP is a connection-oriented protocol. It is full-duplex (both hosts on a TCP connection can send messages to each other simultaneously).</p>
 <h2 id="reliable-delivery"><a class="header" href="#reliable-delivery">Reliable delivery</a></h2>
@@ -1138,13 +1137,13 @@ Congestion fixes:</li>
 <li>Send packets at a slower rate in response to congestion</li>
 <li>Track changes in traffic</li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="3-way-handshake"><a class="header" href="#3-way-handshake">3-way handshake</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="3-way-handshake"><a class="header" href="#3-way-handshake">3-way handshake</a></h1>
 <pre><code class="language-mermaid">sequenceDiagram
     client -&gt;&gt; server: SYN, SequenceNum = x, Acknowledgement = -
     server -&gt;&gt; client: SYN+ACK, SequenceNum = y, Acknowledgement = x+1
     client -&gt;&gt; server: ACK, SequenceNum = -, Acknowledgement = y+1
 </code></pre>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="message-format-1"><a class="header" href="#message-format-1">Message format</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="message-format-1"><a class="header" href="#message-format-1">Message format</a></h1>
 <p>A <strong>TCP packet</strong> consists of:</p>
 <ul>
 <li>Ethernet or wifi header</li>
@@ -1166,7 +1165,7 @@ Congestion fixes:</li>
 </li>
 <li>Data (payload)</li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="inspect"><a class="header" href="#inspect">Inspect</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="inspect"><a class="header" href="#inspect">Inspect</a></h1>
 <p>Capture packets</p>
 <pre><code class="language-sh">tcpdump [tcp|udp]  # socket type
     -i [en0|lo0]   # network interface
@@ -1175,7 +1174,7 @@ Congestion fixes:</li>
     port 3000      # port number (of destination?)
     -c 10          # capture 10 packets
 </code></pre>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="udp"><a class="header" href="#udp">UDP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="udp"><a class="header" href="#udp">UDP</a></h1>
 <p>User Datagram Protocol</p>
 <p>UDP is a connectionless protocol.</p>
 <p><strong>How it works</strong></p>
@@ -1209,10 +1208,10 @@ Congestion fixes:</li>
 </ul>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="quic"><a class="header" href="#quic">QUIC</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="quic"><a class="header" href="#quic">QUIC</a></h1>
 <p>Quick UDP Internet Connections</p>
 <p>QUIC includes TLS encryption by default.</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="ssh-tunnel"><a class="header" href="#ssh-tunnel">SSH tunnel</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ssh-tunnel"><a class="header" href="#ssh-tunnel">SSH tunnel</a></h1>
 <p>aka SSH port forwarding</p>
 <ol>
 <li>
@@ -1240,17 +1239,17 @@ Congestion fixes:</li>
 <p>If direct access to an application is blocked by a firewall.</p>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="layer-3---network-internet"><a class="header" href="#layer-3---network-internet">Layer 3 - Network (Internet)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="layer-3---network-internet"><a class="header" href="#layer-3---network-internet">Layer 3 - Network (Internet)</a></h1>
 <p>IP: “You're not supposed to be here!”</p>
 <p>Responsibilities:</p>
 <ul>
 <li>Host addressing</li>
 <li>Message forwarding: Since many networks are partitioned into subnetworks and connect to other networks for wide-area communications, networks use specialised hosts, called gateways or routers, to forward packets between networks.</li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="ip"><a class="header" href="#ip">IP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ip"><a class="header" href="#ip">IP</a></h1>
 <p>Internet Protocol</p>
 <p>Provides an addressing system that allows devices on the network to be identified.</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="routing"><a class="header" href="#routing">Routing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="routing"><a class="header" href="#routing">Routing</a></h1>
 <p>Maps a <strong>destination address</strong> to the <strong>gateway</strong> (i.e. next hop IP address) or <strong>host</strong> (intended destination).</p>
 <p>This is maintained via a <strong>routing table</strong>:</p>
 <div class="table-wrapper"><table><thead><tr><th>Destination</th><th>Gateway / Host</th></tr></thead><tbody>
@@ -1311,7 +1310,7 @@ default            192.168.1.254      UGScg             en0
 <p>Router is a device that connects two different IP networks.</p>
 <p><img src="osi-layer-3/ip/./ip4.png" alt="IP" /></p>
 <p><img src="osi-layer-3/ip/./ip5.png" alt="IP" /></p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="ip-packet"><a class="header" href="#ip-packet">IP packet</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ip-packet"><a class="header" href="#ip-packet">IP packet</a></h1>
 <p><strong>packets</strong></p>
 <p>The unit of information in the network layer</p>
 <p><strong>Datagram</strong></p>
@@ -1332,7 +1331,7 @@ default            192.168.1.254      UGScg             en0
 <li>IP data (payload)</li>
 <li></li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="ip-addresses"><a class="header" href="#ip-addresses">IP addresses</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ip-addresses"><a class="header" href="#ip-addresses">IP addresses</a></h1>
 <p>Hosts (computers) don’t have IP addresses. Interfaces on hosts have IP addresses.</p>
 <p>32-bit numbers written as 4 octets (decimals), separated by <code>.</code> Eg. 1.2.3.4.</p>
 <p>To identify each device in the world-wide web, Internet Assigned Numbers Authority (IANA) assigns IPV4 address as a unique identifier for each device on the Internet. Length of the IP address is 32 bits. Hence there are</p>
@@ -1388,10 +1387,10 @@ eg. 203.128.22.18</li>
 <p>Private networks that are not directly attached to the Internet.</p>
 <p><strong>Link-local address</strong></p>
 <p>169.254.0.0/16</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="fragmentation-and-reassembly"><a class="header" href="#fragmentation-and-reassembly">Fragmentation and reassembly</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fragmentation-and-reassembly"><a class="header" href="#fragmentation-and-reassembly">Fragmentation and reassembly</a></h1>
 <p>IPv4 packets need to be fragmented depending on the data link layer’s maximum transmission capability. They can be as big as 64KB.</p>
 <p><img src="osi-layer-3/ip/./ip2.png" alt="IP" /></p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="icmp"><a class="header" href="#icmp">ICMP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="icmp"><a class="header" href="#icmp">ICMP</a></h1>
 <p>Internet Control Message Protocol</p>
 <p>For diagnostics</p>
 <ul>
@@ -1418,7 +1417,7 @@ eg. 203.128.22.18</li>
 <li>Echo request and echo reply</li>
 <li>…</li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="layer-12---physicaldatalink"><a class="header" href="#layer-12---physicaldatalink">Layer 1/2 - Physical/Datalink</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="layer-12---physicaldatalink"><a class="header" href="#layer-12---physicaldatalink">Layer 1/2 - Physical/Datalink</a></h1>
 <p><strong>Responsibilities</strong></p>
 <p>Receive packet from network layer and deals with providing hop-to-hop communication between entities directly connected by a physical link.</p>
 <ul>
@@ -1426,7 +1425,7 @@ eg. 203.128.22.18</li>
 Responsible for controlling how devices in a network gain access to a medium and permission to transmit data</li>
 <li>Logical link control layer</li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="arp"><a class="header" href="#arp">ARP</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="arp"><a class="header" href="#arp">ARP</a></h1>
 <p>Address Resolution Protocol</p>
 <p>ARP maps an end host's IP address to a MAC address.</p>
 <p>Hosts maintain a table of these mappings, called an <strong>ARP cache</strong>.</p>
@@ -1446,13 +1445,13 @@ Responsible for controlling how devices in a network gain access to a medium and
 </code></pre>
 </div>
 </div>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="standards"><a class="header" href="#standards">Standards</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="standards"><a class="header" href="#standards">Standards</a></h1>
 <ul>
 <li>MIME type</li>
 </ul>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="type-a-url-on-the-browser"><a class="header" href="#type-a-url-on-the-browser">Type a URL on the browser</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="type-a-url-on-the-browser"><a class="header" href="#type-a-url-on-the-browser">Type a URL on the browser</a></h1>
 <p>https://twitter.com/manekinekko/status/1281704000572858375</p>
-<footer id="last-change">Last change: 2023-07-13</footer><div style="break-before: page; page-break-before: always;"></div><h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
 <h2 id="quicks"><a class="header" href="#quicks">Quicks</a></h2>
 <p><code>netstat</code> see open ports</p>
 <h2 id="transport-layer"><a class="header" href="#transport-layer">Transport layer</a></h2>
@@ -1522,7 +1521,7 @@ sudo tcpdump [...] [and|or] [...]
 <p>See what steps your packet takes to get somewhere</p>
 <pre><code>traceroute google.com
 </code></pre>
-<footer id="last-change">Last change: 2023-07-13</footer>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
