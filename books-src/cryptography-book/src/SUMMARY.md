@@ -35,6 +35,8 @@
   - [OAEP](./primitives/padding/oaep.md)
   - [PKCS #7](./primitives/padding/pkcs7.md)
 - [Encryption algorithms](./primitives/encryption-algorithms.md)
+  - [RSA-based](./cryptosystems/rsa/encryption-schemes.md)
+  - [ECC-based](./cryptosystems/ecc/encryption-algorithms.md)
   - [Block ciphers](./primitives/block-ciphers/index.md)
     - [AES](./primitives/block-ciphers/aes.md)
     - [AEAD]()
@@ -47,25 +49,21 @@
     - [Scrypt]()
     - [Argon]()
 - [Digital signature algorithms](./primitives/digital-signature.md)
-  - [RSA-based]()
-  - [ECC-based]()
+  - [RSA-based](./cryptosystems/rsa/digital-signature-algorithms.md)
+  - [ECC-based](./cryptosystems/ecc/digital-signature-algorithms.md)
   - [ElGamal]()
   - [Schnorr]()
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
     - [DHKE](./primitives/key-exchange-algorithms/diffie-hellman.md)
+    - [RSA-based](./cryptosystems/rsa/key-exchange.md)
+    - [ECC-based](./cryptosystems/ecc/key-exchange.md)
 
 ---
 
 # Cryptosystems
 
 - [RSA](./cryptosystems/rsa/index.md)
-    - [Encryption algorithms](./cryptosystems/rsa/encryption-schemes.md)
-    - [Digital signature algorithms](./cryptosystems/rsa/digital-signature-algorithms.md)
-    - [Key exchange algorithms](./cryptosystems/rsa/key-exchange.md)
 - [ECC](./cryptosystems/ecc/index.md)
-    - [Encryption algorithms](./cryptosystems/ecc/encryption-algorithms.md)
-    - [Digital signature algorithms](./cryptosystems/ecc/digital-signature-algorithms.md)
-    - [Key exchange algorithms](./cryptosystems/ecc/key-exchange.md)
 - [DSA](./cryptosystems/dsa.md)
 - [ElGamal]()
 - [PGP](./cryptosystems/pgp.md)
