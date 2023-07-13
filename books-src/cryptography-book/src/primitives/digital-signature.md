@@ -1,5 +1,9 @@
 # Digital signature
 
+$$
+(\text{claim}) \rightarrow \text{signature}
+$$
+
 ```admonish note
 Typically we say _sign_ with the private key and _verify_ with the public key instead of "encrypt" and "decrypt" respectively.
 ```
