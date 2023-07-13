@@ -47,6 +47,10 @@
     - [Scrypt]()
     - [Argon]()
 - [Digital signature algorithms](./primitives/digital-signature.md)
+  - [RSA-based]()
+  - [ECC-based]()
+  - [ElGamal]()
+  - [Schnorr]()
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
     - [DHKE](./primitives/key-exchange-algorithms/diffie-hellman.md)
 
