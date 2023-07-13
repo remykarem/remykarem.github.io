@@ -693,17 +693,6 @@ B = pow(g,b,p)
 <h1 id="key-exchange-1"><a class="header" href="#key-exchange-1">Key exchange</a></h1>
 <p>Can be used for key exchange. Client creates a secrets key and encrypts it with piblic key using one of the encryption algorithms. Server decrypts. </p>
 <p>Example of such key exchange is in SSH RSA.</p>
-<h2 id="rsa-key-exchange-for-ssh"><a class="header" href="#rsa-key-exchange-for-ssh">RSA key exchange for SSH</a></h2>
-<p>m = random bytes
-c = (m^e mod n) (from client) rsaes-oaep
-m = (c^d mod n) (what server gets)
-m is the secret key</p>
-<ul>
-<li>client and server each computes h:
-h = hash(m, pubkey, …) (nneded for future ssh session)
-encrypteddata = m(plaintext)</li>
-</ul>
-<h2 id="rsa--diffie-hellman"><a class="header" href="#rsa--diffie-hellman">RSA + Diffie-Hellman</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="ecc"><a class="header" href="#ecc">ECC</a></h1>
 <p>2nd-gen cryptosystem.</p>
