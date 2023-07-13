@@ -18,20 +18,10 @@
 
 ## Goals
 
-Typically, you want to make sure that the _data_ you receive:
-
-1. came from a known source (**authenticity**)
-2. was not altered during transmission (**integrity**)
-3. (optional) not understood by anyone during the transmission (**confidential**)
-
 You also want to make sure that _attackers_:
 
 1. cannot reuse any submitted proofs (**resistance to replay attack**)
 2. cannot find any pattern from the encryption (using **randomness** aka high entropy, dependent on the encryption algorithm)
-
-You also want to make sure that the _sender_:
-
-1. cannot deny sending the information or deny the authenticity of the signature (**non-repudiation**). This can be achieved by the concept of a unique key not meant to be shared (private key).
 
 Based on these requirements, here is an example infrastructure:
 
@@ -40,18 +30,6 @@ Based on these requirements, here is an example infrastructure:
   - For signing - sender has the private key A, receiver has a public key B.
 - Sender encrypts payload (confidentiality, authenticity) with the public key X.
 - Sender signs payload together with current timestamp (resistance to replay attack) with private key A.
-
-Definitions:
-
-- **Integrity** — proof that the item is not altered
-
-- **Confidentiality/privacy/secrecy** — no one can read (and understand) the message in the item
-
-- **Authenticity/authentication** — proof that the item comes from a known source
-
-- **Non-repudiation** — the signer cannot deny that they signed. Stronger property that not only provides authenticity but also prevents the sender from denying they sent the message.
-
-- Randomisation - if there is content encryption, will the same plaintext yield different ciphertexts?
 
 [https://en.wikipedia.org/wiki/Confusion_and_diffusion](https://en.wikipedia.org/wiki/Confusion_and_diffusion)
 
