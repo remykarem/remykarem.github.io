@@ -4,6 +4,15 @@
 
 ---
 
+# Goals
+
+- [Authentication]()
+- [Confidentiality]()
+- [Integrity]()
+- [Non-repudiation]()
+
+---
+
 # Primitives
 
 - [PRNGs]()
@@ -19,7 +28,8 @@
 - [Padding](./primitives/padding/index.md)
   - [OAEP](./primitives/padding/oaep.md)
   - [PKCS #7](./primitives/padding/pkcs7.md)
-- [Block ciphers](./primitives/block-ciphers/index.md)
+- [Encryption algorithms](./primitives/encryption-algorithms.md)
+  - [Block ciphers](./primitives/block-ciphers/index.md)
     - [AES](./primitives/block-ciphers/aes.md)
     - [AEAD]()
     - [ChaCha20-Poly1305]()
@@ -30,12 +40,6 @@
     - [Bcrypt]()
     - [Scrypt]()
     - [Argon]()
- 
----
-
-# Algorithms
-
-- [Encryption algorithms](./primitives/encryption-algorithms.md)
 - [Digital signature algorithms](./primitives/digital-signature.md)
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
     - [DHKE](./primitives/key-exchange-algorithms/diffie-hellman.md)
@@ -95,15 +99,6 @@
 - [Digital signatures]()
 - [Digital certificate](./applications/digital-certificate.md)
 - [Utils](./applications/utils.md)
-
----
-
-# Applications/Objectives
-
-- [Authentication]()
-- [Confidentiality]()
-- [Integrity]()
-- [Non-repudiation]()
 
 ---
 
