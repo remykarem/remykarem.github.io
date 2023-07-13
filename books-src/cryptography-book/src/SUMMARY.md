@@ -30,6 +30,11 @@
     - [Bcrypt]()
     - [Scrypt]()
     - [Argon]()
+ 
+---
+
+# Algorithms
+
 - [Encryption algorithms](./primitives/encryption-algorithms.md)
 - [Digital signature algorithms](./primitives/digital-signature.md)
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
