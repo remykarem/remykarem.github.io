@@ -2,7 +2,7 @@
 
 [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519)
 
-A JWT (JSON Web Token) is a text-based dot-separated Base64 URL-safe representation of *signature*, claims, metadata, and ciphertext.
+A JWT (JSON Web Token) is a text-based dot-separated Base64 URL-safe representation of **signature**, **claims** (eg. who you claim to be), **ciphertext**, and other metadata.
 
 ~~~admonish example
 
