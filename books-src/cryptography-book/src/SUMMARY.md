@@ -75,7 +75,7 @@
 
 ---
 
-# Applications
+# Applications??
 
 - [Secure random bytes](./applications/rand.md)
 - [Checksum](./applications/checksum.md)
@@ -90,6 +90,19 @@
 - [Digital signatures]()
 - [Digital certificate](./applications/digital-certificate.md)
 - [Utils](./applications/utils.md)
+
+---
+
+# Applications/Objectives
+
+- [Authentication]()
+- [Confidentiality]()
+- [Integrity]()
+- [Non-repudiation]()
+
+---
+
+# Scenarios?
 
 ---
 
