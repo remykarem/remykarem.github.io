@@ -1,4 +1,6 @@
-# Digital signature
+# Digital signature algorithms
+
+aka digital signature schemes, signature schemes
 
 Digital signatures typically involve a private-public key pair.
 
