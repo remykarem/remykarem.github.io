@@ -17,6 +17,9 @@
 
 # Thing
 
+- [Keys]()
+- [Signatures]()
+
 ---
 
 # Primitives
@@ -40,19 +43,21 @@
     - [Scrypt]()
     - [Argon]()
 - [Encryption algorithms](./primitives/encryption-algorithms.md)
-  - [RSA-based](./cryptosystems/rsa/encryption-schemes.md)
-  - [ECC-based](./cryptosystems/ecc/encryption-algorithms.md)
-  - [Block ciphers](./primitives/block-ciphers/index.md)
-    - [AES](./primitives/block-ciphers/aes.md)
+  - [Block ciphers](./primitives/encryption-algorithms/block-ciphers/index.md)
+    - [AES](./primitives/encryption-algorithms/block-ciphers/aes.md)
     - [AEAD]()
     - [ChaCha20-Poly1305]()
     - [Threefish]()
     - [DES]()
+  - [RSA-based](./primitives/encryption-algorithms/rsa.md)
+  - [ECC-based](./primitives/encryption-algorithms/ecc.md)
+  - [ElGamal]()
 - [Digital signature algorithms](./primitives/digital-signature.md)
-  - [RSA-based](./cryptosystems/rsa/digital-signature-algorithms.md)
-  - [ECC-based](./cryptosystems/ecc/digital-signature-algorithms.md)
+  - [RSA-based](./primitives/digital-signature/rsa.md)
+  - [ECC-based](./primitives/digital-signature/ecc.md)
   - [ElGamal]()
   - [Schnorr]()
+  - [DSA]()
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
     - [DHKE](./primitives/key-exchange-algorithms/diffie-hellman.md)
     - [RSA-based](./cryptosystems/rsa/key-exchange.md)
