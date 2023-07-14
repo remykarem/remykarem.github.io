@@ -2,9 +2,28 @@
 
 [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519)
 
-A JWT (JSON Web Token) is a text-based dot-separated Base64 URL-safe representation of **signature**, **claims** (eg. who you claim to be), **ciphertext**, and other metadata.
+JSON Web Token
+
+A JWT is a text-based dot-separated Base64 URL-safe representation of **signature**, **claims** (eg. who you claim to be), **ciphertext**, and other metadata.
+
+JWTs can either be a:
+* JWS
+* JWE
+
+This token is normally used in HTTP requests under the Authorization header.
+
+## JWS
+
+[RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) (JSON Web Signature)
+
+A JWS token consists of:
+* header
+* payload
+* signature
 
 ~~~admonish example
+
+This token is a JWS token.
 
 (newline spaces added for readability):
 
@@ -15,10 +34,18 @@ SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
 ~~~
 
-This token is normally used in HTTP requests under the Authorization header.
+~~~admonish note
+The [jwt.io](https://jwt.io) playground generates signatures i.e. JWS tokens.
+~~~
 
-JWTs can either have the following structures:
-* JWS (JSON Web Signature)
-* JWE (JSON Web Encryption)
+## JWE
 
-See [jwt.io](https://jwt.io) for more info.
+[RFC 7516](https://datatracker.ietf.org/doc/html/rfc7516) (JSON Web Encryption)
+
+A JWE token consists of
+* header
+* key (encrypted) — this key is used to encrypt the payloads, which is the purpose of JWEs
+* initialisation vector
+* ciphertext
+* signature
+

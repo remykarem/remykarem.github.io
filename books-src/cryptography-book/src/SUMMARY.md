@@ -15,17 +15,10 @@
 
 ---
 
-# Thing
-
-- [Keys]()
-- [Salt]()
-- [Signatures]()
-
----
-
 # Primitives
 
-- [PRNGs]()
+
+- [Secure randomness](./secure-randomness.md)
 - [Cryptographic hash functions](./primitives/cryptographic-hash-functions/index.md)
     - [MD5](./primitives/cryptographic-hash-functions/md5.md)
     - [SHA](./primitives/cryptographic-hash-functions/sha.md)
@@ -38,11 +31,12 @@
 - [Padding schemes](./primitives/padding/index.md)
   - [OAEP](./primitives/padding/oaep.md)
   - [PKCS #7](./primitives/padding/pkcs7.md)
-- [KDF](./primitives/kdf.md)
-    - [PBKDF2]()
-    - [Bcrypt]()
-    - [Scrypt]()
-    - [Argon]()
+- [Digital signature algorithms](./primitives/digital-signature.md)
+  - [RSA-based](./primitives/digital-signature/rsa.md)
+  - [ECC-based](./primitives/digital-signature/ecc.md)
+  - [ElGamal]()
+  - [Schnorr]()
+  - [DSA]()
 - [Encryption algorithms](./primitives/encryption-algorithms.md)
   - [Block ciphers](./primitives/encryption-algorithms/block-ciphers/index.md)
     - [AES](./primitives/encryption-algorithms/block-ciphers/aes.md)
@@ -53,12 +47,11 @@
   - [RSA-based](./primitives/encryption-algorithms/rsa.md)
   - [ECC-based](./primitives/encryption-algorithms/ecc.md)
   - [ElGamal]()
-- [Digital signature algorithms](./primitives/digital-signature.md)
-  - [RSA-based](./primitives/digital-signature/rsa.md)
-  - [ECC-based](./primitives/digital-signature/ecc.md)
-  - [ElGamal]()
-  - [Schnorr]()
-  - [DSA]()
+- [KDF](./primitives/kdf.md)
+    - [PBKDF2]()
+    - [Bcrypt]()
+    - [Scrypt]()
+    - [Argon]()
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
     - [DHKE](./primitives/key-exchange-algorithms/diffie-hellman.md)
     - [RSA-based](./cryptosystems/rsa/key-exchange.md)
@@ -77,6 +70,22 @@
 
 ---
 
+# Thing
+
+- [Keys]()
+    - [ECC](./applications/keys/ecc.md)
+    - [Code](./applications/code.md)
+    - [SSH](./applications/keys/ssh.md)
+- [Salt]()
+- [Signatures]()
+- [Tokens]()
+- [Claims]()
+- [Initialisation vector]()
+- [Digital certificates](./applications/digital-certificate.md)
+- [Fingerprints](./applications/fingerprint.md)
+
+---
+
 # Schemas, formats, standards
 
 - [ASN.1 schemas](./asn1-schemas/index.md)
@@ -90,8 +99,8 @@
 - [Common formats](./common-formats/index.md)
     - [PEM](./common-formats/pem.md)
     - [ASN.1 DER](./common-formats/der.md)
-    - [JKS](./common-formats/jks.md)
     - [JWK / JWKS](./common-formats/jwk.md)
+    - [JKS](./common-formats/jks.md)
     - [OpenSSH](./common-formats/openssh.md)
     - [JWT](./common-formats/jwt.md)
 - [Other standards](./standards.md)
@@ -100,18 +109,6 @@
 
 # Applications??
 
-- [Secure random bytes](./applications/rand.md)
-- [Checksum](./applications/checksum.md)
-- [HMAC](./applications/hmac.md)
-- [Block ciphers](./applications/block-ciphers.md)
-- [Keys]()
-    - [RSA](./applications/code.md)
-    - [ECC](./applications/keys/ecc.md)
-    - [SSH](./applications/keys/ssh.md)
-- [Fingerprint](./applications/fingerprint.md)
-- [Encryption](./applications/ciphertext.md)
-- [Digital signatures]()
-- [Digital certificate](./applications/digital-certificate.md)
 - [Utils](./applications/utils.md)
 
 ---

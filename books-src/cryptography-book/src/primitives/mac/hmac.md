@@ -6,6 +6,14 @@ $$
 \text{(message, key, \textbf{hashfunction})} \rightarrow \text{mac}
 $$
 
-~~~admonish example title="AWS SigV4"
+~~~admonish info title="AWS SigV4"
 AWS SigV4 uses HMAC-SHA256 to create a signature that is included in the HTTP request.
+~~~
+
+~~~admonish example title="OpenSSL"
+```
+echo -n "someplaintext" | openssl dgst -sha384 -hmac "secretkey"
+```
+
+See `man openssl-dgst`.
 ~~~

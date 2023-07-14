@@ -4,13 +4,13 @@ aka digital signature schemes, signature schemes
 
 Digital signatures typically involve a private-public key pair.
 
-You typically **generate signatures**:
+You typically _generate signatures_:
 
 $$
 (\text{claim}) \rightarrow \text{signature}
 $$
 
-and **verify them**:
+and _verify signatures_:
 
 $$
 (\text{signature}) \rightarrow \text{valid|invalid}
