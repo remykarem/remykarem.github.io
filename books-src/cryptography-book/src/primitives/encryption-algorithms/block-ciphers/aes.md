@@ -35,6 +35,21 @@ Salted__
 ```
 ~~~
 
+~~~admonish example title="OpenSSL"
+
+```bash
+echo -n "hello" | 
+openssl enc -aes-256-cbc | 
+base64
+```
+
+```bash
+echo -n "U2FsdGVkX1+DIdrNWd7HRuO6UXWzjT8YZTJ0ImGBbHQ=" |
+base64 -d |
+openssl enc -aes-256-cbc -d  # password is 123
+```
+~~~
+
 Resources:
 * [https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97](https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97)
 * [https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/](https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/)

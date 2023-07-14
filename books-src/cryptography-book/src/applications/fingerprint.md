@@ -1,6 +1,5 @@
 # Fingerprint
 
-
 ## RSA key pair
 
 To compare between a private and public key, compare the modulus:

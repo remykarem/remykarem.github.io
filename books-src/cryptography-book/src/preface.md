@@ -59,3 +59,5 @@ OpenSSL
 - OpenSSL 1.x
 - OpenSSL 3.x
 - LibreSSL (macOS) - `/usr/bin/openssl`
+
+OpenSSH
