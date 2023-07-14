@@ -105,6 +105,7 @@
 
 - [Protobuf](./protobuf.md)
 - [ASN.1](./asn1.md)
+- [JSON schema]()
 - [Apache Thrift]()
 
 ---
