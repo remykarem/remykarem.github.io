@@ -34,7 +34,7 @@
     - [HMAC](./primitives/mac/hmac.md)
     - [SipHash]()
     - [Poly1305]()
-- [Padding](./primitives/padding/index.md)
+- [Padding schemes](./primitives/padding/index.md)
   - [OAEP](./primitives/padding/oaep.md)
   - [PKCS #7](./primitives/padding/pkcs7.md)
 - [KDF](./primitives/kdf.md)
