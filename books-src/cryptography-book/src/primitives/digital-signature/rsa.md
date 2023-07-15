@@ -1,8 +1,1 @@
-# Digital signature algorithms
-
-[RFC 8017](https://datatracker.ietf.org/doc/html/rfc8017#section-8)
-
-There are 2 algorithms under the **Signature Schemes** section:
-
-* RSASSA-PSS
-* RSASSA-PKCS1-v1_5 (old)
+# RSA-based
