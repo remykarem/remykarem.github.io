@@ -60,3 +60,4 @@ Encryption
   - LibreSSL (macOS) - `/usr/bin/openssl`
 * OpenSSH
 * PyCryptodome
+* Bouncy Castle
