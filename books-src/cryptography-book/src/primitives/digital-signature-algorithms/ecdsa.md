@@ -1,4 +1,4 @@
-# Digital signature algorithms
+# ECDSA
 
 [RFC 6979](https://datatracker.ietf.org/doc/html/rfc6979)
 
@@ -79,7 +79,3 @@ Regenerate $k$ if $s = 0$.
 ```
 
 ### 5. Verify the message
-
-## EdDSA
-
-Ed25519 - EdDSA signature scheme using SHA-2 (SHA-512) and Curve25519.

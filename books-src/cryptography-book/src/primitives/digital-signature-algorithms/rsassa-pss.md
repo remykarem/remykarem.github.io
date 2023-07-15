@@ -4,4 +4,8 @@
 
 Probabilistic Signature Scheme
 
-This algorithm is **non-deterministic**.
+$$
+(\text{message, mgf}) \rightarrow \text{signature}
+$$
+
+This algorithm is **probabilistic**.

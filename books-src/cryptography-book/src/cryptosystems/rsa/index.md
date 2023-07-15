@@ -4,15 +4,17 @@
 
 Rivest-Shamir-Adleman; 1995; 1st-gen cryptosystem.
 
+Breaking RSA is an _integer factorisation_ problem.
+
 ```admonish warning
 There are many problems that plague RSA.
 
 https://www.youtube.com/watch?v=lElHzac8DDI
 ```
 
-Breaking RSA is an _integer factorisation_ problem.
-
-RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus $n$: one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf).
+~~~admonish warning title="Minimum 2048 bits"
+RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus $n$: one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 — see [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf) and [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-131Ar2.pdf).
+~~~
 
 - secret exponent: $d $
 - key exponent: $e $
@@ -179,7 +181,7 @@ How to find $d$? Extended Euclidean Algorithm? Is it unique?
 
 ---
 
-```admonish tip title="Homomorphism"
+```admonish info title="Homomorphism"
 RSA is multiplicative homomorphic, i.e.
 
 $$
