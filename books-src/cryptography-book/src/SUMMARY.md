@@ -29,7 +29,7 @@
     - [SipHash]()
     - [Poly1305]()
 - [Padding schemes](./primitives/padding-schemes/index.md)
-  - [PKCS1-v1_5]()
+  - [PKCS1-v1_5](./primitives/padding-schemes/PKCS1-v1_5.md)
   - [OAEP](./primitives/padding-schemes/oaep.md)
   - [PKCS #7](./primitives/padding-schemes/pkcs7.md)
 - [Digital signature algorithms](./primitives/digital-signature-algorithms/index.md)

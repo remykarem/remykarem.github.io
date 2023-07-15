@@ -54,10 +54,9 @@ Encryption
 
 ## Common cryptography libraries
 
-OpenSSL
-
-- OpenSSL 1.x
-- OpenSSL 3.x
-- LibreSSL (macOS) - `/usr/bin/openssl`
-
-OpenSSH
+* OpenSSL
+  - OpenSSL 1.x
+  - OpenSSL 3.x
+  - LibreSSL (macOS) - `/usr/bin/openssl`
+* OpenSSH
+* PyCryptodome

@@ -4,16 +4,16 @@ aka digital signature schemes, signature schemes
 
 Digital signatures typically involve a private-public key pair.
 
-You typically _generate signatures_:
+You typically _sign a message_ with a private key:
 
 $$
-(\text{claim}) \rightarrow \text{signature}
+(\text{message, privatekey}) \rightarrow \text{signature}
 $$
 
-and _verify signatures_:
+and _verify a signature_ with a public key:
 
 $$
-(\text{signature}) \rightarrow \text{valid|invalid}
+(\text{signature, publickey}) \rightarrow \text{valid|invalid}
 $$
 
 ```admonish note
