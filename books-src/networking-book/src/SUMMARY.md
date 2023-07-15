@@ -74,13 +74,14 @@
 # Protocols: OSI Layer 6 — Presentation
 
 - [TLS](./osi-layer-6/tls/index.md)
-  - [Setup](./osi-layer-6/tls/setup.md)
+  - [Setup: Trust chain](./osi-layer-6/tls/trust-chain.md)
+  - [Setup: Client-server](./osi-layer-6/tls/setup.md)
   - [Workflow]()
   - [DTLS]()
   - [TLS ciphers]()
   - [SSL proxying](./osi-layer-6/tls/ssl-proxying.md)
 - [SSH](./osi-layer-6/ssh/index.md)
-  - [Setup](./osi-layer-6/ssh/setup.md)
+  - [Setup: Client-server](./osi-layer-6/ssh/setup.md)
   - [Workflow](./osi-layer-6/ssh/workflow.md)
 
 ---
