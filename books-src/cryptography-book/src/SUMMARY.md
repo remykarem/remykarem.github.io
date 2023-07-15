@@ -33,7 +33,7 @@
   - [OAEP](./primitives/padding/oaep.md)
   - [PKCS #7](./primitives/padding/pkcs7.md)
 - [Digital signature algorithms](./primitives/digital-signature.md)
-  - [RSA-based](./primitives/digital-signature/rsa.md)
+  - [RSASSA-PKCS1-v1_5](./primitives/digital-signature/rsassa-pkcs1-v1_5.md)
   - [RSASSA PSS]()
   - [ECC-based](./primitives/digital-signature/ecc.md)
   - [ECDSA]()
