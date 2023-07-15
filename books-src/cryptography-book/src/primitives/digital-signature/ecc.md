@@ -1,8 +1,8 @@
 # Digital signature algorithms
 
-[RFC 6979](https://datatracker.ietf.org/doc/html/rfc6979) - Deterministic Usage of the Digital Signature Algorithm (DSA) and Elliptic Curve Digital Signature Algorithm (ECDSA)
+[RFC 6979](https://datatracker.ietf.org/doc/html/rfc6979)
 
-## ECDSA
+Elliptic Curve Digital Signature Algorithm
 
 An ECDSA signature is a tuple of $(h, r,s)$.
 
