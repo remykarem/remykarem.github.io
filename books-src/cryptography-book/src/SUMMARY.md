@@ -34,7 +34,7 @@
   - [PKCS #7](./primitives/padding/pkcs7.md)
 - [Digital signature algorithms](./primitives/digital-signature.md)
   - [RSASSA-PKCS1-v1_5](./primitives/digital-signature/rsassa-pkcs1-v1_5.md)
-  - [RSASSA PSS]()
+  - [RSASSA-PSS](./primitives/digital-signature/rsassa-pss.md)
   - [ECC-based](./primitives/digital-signature/ecc.md)
   - [ECDSA]()
   - [Ed25519]()
