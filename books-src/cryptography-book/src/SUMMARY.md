@@ -103,6 +103,7 @@
     - [JKS](./common-formats/jks.md)
     - [OpenSSH](./common-formats/openssh.md)
     - [JWT](./common-formats/jwt.md)
+    - [SAML token](./common-formats/saml-token.md)
 - [Other standards](./standards.md)
 
 ---
