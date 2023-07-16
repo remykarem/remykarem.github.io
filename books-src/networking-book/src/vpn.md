@@ -16,6 +16,10 @@ Using a separate interface for the VPN allows for more precise control over netw
 
    The VPN server acts like a DHCP server.
 
-4. **VPN client encrypts data**
+4. **VPN client updates host routing table**
 
-5. **VPN server decrypts data**
+5. **VPN client updates DNS settings**
+
+6. **VPN client encrypts data**
+
+7. **VPN server decrypts data**
