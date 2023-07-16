@@ -10,7 +10,7 @@ This protocol provides a secure way to access a remote computer via shell. The e
 SSH spans across layers 5, 6 and 7.
 ~~~
 
-~~~admonish note title="SSH implementations"
+~~~admonish info title="SSH implementations"
 * OpenSSH (macOS)
 * PuTTY (Windows, Linux)
 ~~~
