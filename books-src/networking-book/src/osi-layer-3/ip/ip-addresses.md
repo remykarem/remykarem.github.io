@@ -1,6 +1,6 @@
 # IP addresses
 
-Hosts (computers) don’t have IP addresses. Interfaces on hosts have IP addresses.
+Hosts (computers) don’t have IP addresses. **Network interfaces on hosts have IP addresses.**
 
 32-bit numbers written as 4 octets (decimals), separated by `.` Eg. 1.2.3.4.
 
