@@ -42,5 +42,3 @@ openssl s_client -connect jvns.ca:443 -servername jvns.ca
 * [https://stackoverflow.com/a/67197597/4570466](https://stackoverflow.com/a/67197597/4570466)
 
 * [https://howhttps.works](https://howhttps.works/)
-
-* [https://tls13.xargs.org/](https://tls13.xargs.org/) (Visualisation)

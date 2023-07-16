@@ -4,9 +4,13 @@ aka Network Interface Card, Network Adapter, hardware port, hardware interface
 
 This is a hardware component that allows a device to connect to a network. An NIC controls the interaction between hardware and wired/optical/wireless medium.
 
+~~~admonish info title="OSI model"
+NIC would map to OSI Layer 1.
+~~~
+
 A host can have multiple NICs.
 
-Every NIC has a physical address called **MAC address** (Media Access Control) which is a unique serial number. 
+**Every NIC has a physical address called MAC address** (Media Access Control) which is a unique serial number. 
 
 ~~~admonish note
 A typical MAC address is 6 octets long, eg. 00:0a:95:9d:68:16.

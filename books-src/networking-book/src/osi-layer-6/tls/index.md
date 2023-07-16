@@ -15,3 +15,7 @@ This protocol provides
 ~~~admonish note title="Client _and_ server authentication"
 While server authentication is the most common, the client can also be additionally requested for authentication. This is known as **mTLS** or mutual TLS.
 ~~~
+
+## References:
+* [https://tls13.xargs.org/](https://tls13.xargs.org/) (Visualisation)
+  

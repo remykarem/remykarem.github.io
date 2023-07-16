@@ -2,10 +2,10 @@
 
 SSH typically operates on top of TCP.
 
-In some applications like GitHub and databases, the authentication parts of the SSH workflow (everything before the accessing of the remote shell) is used to authenticate the client with the server.
+Here, SSH is used for client authentication and establishing a secure connection.
 
-~~~admonish example title="GitHub"
-When you clone a repository from GitHub using SSH, you're using the SSH protocol to authenticate and establish a secure connection.
+~~~admonish example title="Using SSH with GitHub"
+When you clone a repository from GitHub using SSH, you're using the SSH protocol to authenticate and establish a secure connection (instead of accessing a remote shell).
 
 The communication between your computer and GitHub is encrypted, ensuring that your data is transferred securely.
 ~~~

@@ -6,7 +6,7 @@ A socket is a software object _provided by the OS_ to allow applications to send
 man 2 socket
 ```
 
-~~~admonish info title="OSI layers"
+~~~admonish info title="OSI model"
 Sockets is OSI Layer 4 and 5.
 ~~~
 

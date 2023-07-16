@@ -1,6 +1,10 @@
-# IP addresses
+# Host addressing
 
-Hosts (computers) don’t have IP addresses. **Network interfaces on hosts have IP addresses.**
+An IP address is mapped to a _network interface_ in the host.
+
+~~~admonish
+Hosts (computers) don’t have IP addresses. Network interfaces do.
+~~~
 
 32-bit numbers written as 4 octets (decimals), separated by `.` Eg. 1.2.3.4.
 
