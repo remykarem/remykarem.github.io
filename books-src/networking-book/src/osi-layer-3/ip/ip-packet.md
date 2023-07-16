@@ -8,14 +8,13 @@ The unit of information in the network layer
 
 A basic transfer unit
 
-- Version
-- Length
-- Source address
-- Destination address
-- Protocol
-    - Protocol “1” is ICMP.
-- Checksum
-- Flags
-- TTL
-- IP data (payload)
-- 
+- Header
+  - Version
+  - Length
+  - **Source address**
+  - **Destination address**
+  - Protocol
+  - Checksum
+  - Flags
+  - TTL
+- **Payload**
