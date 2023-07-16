@@ -10,30 +10,6 @@ Network interface probably spans OSI Layers 1, 2 and 3.
 
 Common types of network interfaces:
 
-- Hardware-based
-  - **Wi-Fi interface**
-  - Ethernet interface
-- Software-based
-  - **Loopback interface** — special network interface used by a device to send _packets_ to itself
-  - Virtual Network Interface — used in containerisation software
-  - Tunnel interface — used in VPNs, to convert IPv4 to IPv6 and vice versa, etc.
-
-````admonish tip
-In macOS, you can list the network interfaces:
-
-```
-ifconfig / ip
-ifconfig
-```
-
-whereas in Linux it's
-
-```
-ipconfig
-```
-
-The usual suspects are:
-
 | Interface      | Use                      |
 | -------------- | ------------------------ |
 | `en0`          | Usually Wi-Fi            |
@@ -45,6 +21,32 @@ The usual suspects are:
 | `gif0`, `stf0` | Tunnel interfaces        |
 | `utunXXX`      | Interfaces for VPN       |
 
+- Hardware-based
+  - **Wi-Fi interface**
+  - Ethernet interface
+- Software-based
+  - **Loopback interface** — special network interface used by a device to send _packets_ to itself
+  - `utun` (VPN tunnel) — userspace tunnel; used in VPNs
+  - Virtual Network Interface — used in containerisation software
+
+~~~admonish info title="Userspace tunnel"
+The tunnel is created in the user space of the OS, instead of the kernel space.
+
+This means the tunnel is managed by user-level process.
+~~~
+
+````admonish tip
+In macOS, you can list the network interfaces:
+
+```
+ifconfig
+```
+
+whereas in Linux it's
+
+```
+ipconfig
+```
 ````
 
 ~~~admonish note

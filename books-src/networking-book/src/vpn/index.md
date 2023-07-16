@@ -1,5 +1,7 @@
 # VPN
 
+The idea of a VPN can be extended to Cloudflare's edge.
+
 1. **VPN client establishes connection with VPN server**
 
    This is made using the existing network interface. 

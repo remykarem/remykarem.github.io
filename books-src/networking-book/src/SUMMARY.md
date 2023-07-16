@@ -27,16 +27,22 @@
   - [SOCK_STREAM](./software-hardware-layers/socket/sock-stream.md)
   - [SOCK_DGRAM](./software-hardware-layers/socket/sock-dgram.md)
   - [SOCK_RAW](./software-hardware-layers/socket/sock-raw.md)
+- [Route table](./software-hardware-layers/route-table.md)
 - [Network interface](./software-hardware-layers/interfaces.md)
 - [Network Interface Controller](./software-hardware-layers/network-interface-card.md)
 
 ---
 
-# Protocols: Tunneling
+# Tunnel protocols
 
-- [VPN](./vpn.md)
-  - [IPSec](./osi-layer-3/ipsec.md)
-  - [OpenVPN]()
+- [VPN goals]()
+- [VPN](./vpn/index.md)
+  - [IPSec](./vpn/ipsec.md)
+    - [IKE]()
+    - [IKEv2](./vpn/ikev2.md)
+  - [SSL VPN]()
+  - [OpenVPN](./vpn/openvpn.md)
+  - [WireGuard](./vpn/wireguard.md)
 - [Cloudflare tunnel]()
 
 ---
@@ -52,8 +58,13 @@
   - [Browser](./osi-layer-7/http/browser.md)
   - [HTTPS](./osi-layer-7/https.md)
 - [SSH](./osi-layer-7/ssh.md)
-- [DNS](./osi-layer-7/dns.md)
+- [DNS](./osi-layer-7/dns/index.md)
+  - [Setup]()
+  - [Workflow]()
+  - [Record types](./osi-layer-7/dns/record-types.md)
 - [SFTP](./osi-layer-7/sftp.md)
+- [MQTT]()
+- [NTP]()
 - [SCP]()
 - [WebSocket](./osi-layer-7/websocket.md)
   - [WebSocket Secure](./osi-layer-7/websocket-secure.md)
@@ -72,7 +83,7 @@
   - [Setup: Client-server](./osi-layer-6/tls/setup.md)
   - [Workflow]()
   - [DTLS]()
-  - [TLS ciphers]()
+  - [TLS cipher suite](./osi-layer-6/tls/cipher-suite.md)
   - [SSL proxying](./osi-layer-6/tls/ssl-proxying.md)
 - [SSH](./osi-layer-6/ssh/index.md)
   - [Setup: Client-server](./osi-layer-6/ssh/setup.md)
@@ -108,7 +119,6 @@
   - [Host addressing](./osi-layer-3/ip/ip-addresses.md)
   - [Fragmentation and reassembly](./osi-layer-3/ip/fragmentation-and-reassembly.md)
 - [ICMP](./osi-layer-3/icmp.md)
-- [IKEv2]()
 
 ---
 
