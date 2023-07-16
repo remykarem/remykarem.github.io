@@ -7,7 +7,7 @@ man 2 socket
 ```
 
 ~~~admonish info title="OSI layers"
-Sockets is OSI Layer 4
+Sockets is OSI Layer 4 and 5.
 ~~~
 
 Sockets are an abstraction of the network interface, encompassing Layer 3 (`SOCK_RAW`) and Layer 4 (`SOCK_STREAM` and `SOCK_DGRAM`; TCP and UDP respectively). The system call allows you to:
