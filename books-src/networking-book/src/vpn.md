@@ -11,3 +11,5 @@ Using a separate interface for the VPN allows for more precise control over netw
 ~~~
 
 3. **VPN server assigns an IP address to the new network interface**
+
+   The VPN server acts like a DHCP server. 
