@@ -4,8 +4,8 @@ Maps a **destination address** to the **gateway** (i.e. next hop IP address) or 
 
 This is maintained via a **routing table**:
 
-| Destination | Gateway / Host              | Network interface |
-| ----------- | --------------------------- |
+| Destination | Gateway / Host       | Network interface |
+| ----------- | --------------------------- | -- |
 | 127.0.0.1   | 127.0.0.1                   | lo0 |
 | (others)    | 192.168.1.254 (home router) | en0 |
 
