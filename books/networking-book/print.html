@@ -394,7 +394,13 @@ ifconfig
 <p>A network device that can (i) bridge between different networks together, (ii) assign IP addresses using a protocol called DHCP, and (iii) determine what traffic can pass between them (most routers have a built-in Firewall).</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="vpn"><a class="header" href="#vpn">VPN</a></h1>
 <ol>
-<li>Creates a new network interface</li>
+<li>
+<p><strong>VPN client establishes connection with VPN server</strong></p>
+<p>This is made using the existing network interface. </p>
+</li>
+<li>
+<p><strong>VPN client creates a new network interface</strong></p>
+</li>
 </ol>
 <div id="admonition-why-cant-we-just-use-existing-network-interfaces" class="admonition question">
 <div class="admonition-title">
@@ -405,6 +411,9 @@ ifconfig
 <p>Using a separate interface for the VPN allows for more precise control over network traffic and makes the implementation of the VPN features more straightforward.</p>
 </div>
 </div>
+<ol start="3">
+<li><strong>VPN server assigns an IP address to the new network interface</strong></li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ipsec"><a class="header" href="#ipsec">IPSec</a></h1>
 <p>Secure network protocol suite that authenticates and encrypts packets of data.</p>
 <p>Used in VPNs.</p>
