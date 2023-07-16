@@ -6,6 +6,10 @@ A socket is a software object _provided by the OS_ to allow applications to send
 man 2 socket
 ```
 
+~~~admonish info title="OSI layers"
+Sockets is OSI Layer 4
+~~~
+
 Sockets are an abstraction of the network interface, encompassing Layer 3 (`SOCK_RAW`) and Layer 4 (`SOCK_STREAM` and `SOCK_DGRAM`; TCP and UDP respectively). The system call allows you to:
 
 * Create socket
