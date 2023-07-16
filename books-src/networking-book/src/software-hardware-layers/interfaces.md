@@ -4,6 +4,10 @@ This is a _software_ abstraction of (but not limited to) physical network interf
 
 These interfaces are _logical_ interfaces: they can be linked to either physical hardware interfaces (eg. Wi-Fi, Ethernet card) or software-based interfaces (eg. VPN tunnels, loop interface).
 
+~~~admonish info title="OSI layers"
+Network interface probably spans OSI Layers 1, 2 and 3.
+~~~
+
 Common types of network interfaces:
 
 - Hardware-based
