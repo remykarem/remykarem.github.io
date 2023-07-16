@@ -6,7 +6,7 @@
 
 2. **VPN client creates a new network interface**
 
-   The VPN client software serves as an intermediary between the virtual network interface and the physical network interface.
+   The VPN client software will then serve as an intermediary between the newly created virtual network interface and the physical network interface.
 
 ~~~admonish question title="Why can't we just use existing network interfaces?"
 Using a separate interface for the VPN allows for more precise control over network traffic and makes the implementation of the VPN features more straightforward.
