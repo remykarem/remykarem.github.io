@@ -44,7 +44,7 @@
   - [Block ciphers](./primitives/encryption-algorithms/block-ciphers/index.md)
     - [AES](./primitives/encryption-algorithms/block-ciphers/aes.md)
     - [AEAD]()
-    - [ChaCha20-Poly1305]()
+    - [ChaCha20]()
     - [Threefish]()
     - [DES]()
   - [RSA-based](./primitives/encryption-algorithms/rsa.md)
