@@ -1,13 +1,13 @@
 # Routing
 
-Maps a **destination address** to the **gateway** (i.e. next hop IP address) or **host** (intended destination).
+Maps a **destination address** to the **gateway** (i.e. next hop IP address) or **host** (intended destination), which is tied to a particular network interface.
 
 This is maintained via a **routing table**:
 
 | Destination | Gateway / Host              |
-| ----------- | --------------------------- |
-| 127.0.0.1   | 127.0.0.1                   |
-| (others)    | 192.168.1.254 (home router) |
+| ----------- | --------------------------- | Network interface
+| 127.0.0.1   | 127.0.0.1                   | lo0
+| (others)    | 192.168.1.254 (home router) | en0
 
 ````admonish tip title="View routing table"
 You can see the routing table using
