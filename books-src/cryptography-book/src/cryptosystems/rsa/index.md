@@ -51,7 +51,7 @@ $$
 ## Main idea
 
 $$
-m = (m^{ed}) \bmod n
+m^{ed} \equiv_n m
 $$
 
 ```admonish note
@@ -77,14 +77,14 @@ Explain why modular exponentation would be useful without mentioning Euler's the
 We require
 
 $$
-(m^e)^d \equiv m (\bmod n)
+(m^e)^d \equiv_n m
 $$
 
 which when rewritten becomes
 
 $$
 \begin{equation} \tag{1}
-    m^{ed} \equiv m (\bmod n)
+    m^{ed} \equiv_n m
 \end{equation}
 $$
 
@@ -92,10 +92,10 @@ $$
 pow(m, e*d, n) == m
 ```
 
-Because $m^{ed} = m^1 (\bmod n)$, we require $e$ and $d$ to be multiplicative inverse, i.e. 
+Because $m^{ed} \equiv_n m^1$, we require $e$ and $d$ to be multiplicative inverse, i.e. 
 
 $$
-ed \equiv 1 (\bmod H)
+ed \equiv_H 1
 $$
 
 ```python
@@ -118,17 +118,17 @@ Substituting $(2)$ into $m^{ed} (\bmod n)$ we get
 
 $$
 \begin{align}
-m^{ed} &= m^{1 + kH} \\
-       &= m \cdot m^{kH} (\bmod n) \\
+m^{ed} &\equiv_n m^{1 + kH} \\
+       &\equiv_n m \cdot m^{kH} \\
 \end{align}
 $$
 
-At this point, we somehow need $m^{kH} \equiv 1 (\bmod n)$ to satisfy $(1)$.
+At this point, we somehow need $m^{kH} \equiv_n 1$ to satisfy $(1)$.
 
 There's an equation that looks similar to this — **Euler's theorem**:
 
 $$
-a^{\phi(n)} \equiv 1 (\bmod n)
+a^{\phi(n)} \equiv_n 1
 $$
 
 Our choice of $H$ has to be $\phi(n)$. Euler's theorem also requires that $m$ and $n$ be coprime.
