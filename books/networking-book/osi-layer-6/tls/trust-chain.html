@@ -153,6 +153,15 @@
                         <h1 id="setup-trust-chain"><a class="header" href="#setup-trust-chain">Setup: Trust chain</a></h1>
 <p>For this protocol to work, we rely on the trust infrastructure of the web.</p>
 <p>The trust infrastructure is made up CAs (<strong>certificate authorities</strong>) and <strong>SSL certificates</strong>.</p>
+<div id="admonition-examples-of-cas" class="admonition example">
+<div class="admonition-title">
+<p>Examples of CAs</p>
+<p><a class="admonition-anchor-link" href="#admonition-examples-of-cas"></a></p>
+</div>
+<div>
+<p>Let's Encrypt, DigiCert, Sectigo, GlobalSign</p>
+</div>
+</div>
 <p>A (root) CA generates a certificate for itself, and certificates for servers and other CAs (&quot;intermediary CAs&quot;).</p>
 <p>A CA can in turn generate certificates for other servers and other CAs and so on.</p>
 <p>If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate.</p>
@@ -208,6 +217,7 @@
 <p>In a Chrome browser, you can see the chain when you click the padlock.</p>
 </div>
 </div>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
