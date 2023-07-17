@@ -27,8 +27,8 @@ jobs:
         tar xvzf mdbook-admonish-v1.9.0-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
         curl -O -L https://github.com/lzanini/mdbook-katex/releases/download/v0.3.15/mdbook-katex-v0.3.15-x86_64-unknown-linux-musl.tar.gz
         tar xvzf mdbook-katex-v0.3.15-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
-        curl -O -L https://github.com/badboy/mdbook-last-changed/releases/download/v0.1.3/mdbook-last-changed-v0.1.3-x86_64-unknown-linux-musl.tar.gz
-        tar xvzf mdbook-last-changed-v0.1.3-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
+        curl -O -L https://github.com/badboy/mdbook-mermaid/releases/download/v0.12.6/mdbook-mermaid-v0.12.6-x86_64-unknown-linux-musl.tar.gz
+        tar xvzf mdbook-mermaid-v0.12.6-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
         rm mdbook-*
 
     - name: Build networking book
