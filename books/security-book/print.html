@@ -155,7 +155,7 @@
                     <main>
                         <h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="basic-auth"><a class="header" href="#basic-auth">Basic auth</a></h1>
-<p>In Basic auth, the username and password are concatenated together (with a colon in between), then base64-encoded.</p>
+<p>In Basic auth, the username and password are concatenated together (with a colon <code>;</code>), then base64-encoded.</p>
 <p>It is then included in the HTTP request under the <code>Authorization</code> header.</p>
 <pre><code>Authorization: Basic &lt;username+password&gt;
 </code></pre>
