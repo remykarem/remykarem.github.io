@@ -20,6 +20,11 @@ This is an X.509 certificate.
 
 This certificate is issued _out-of-band_ by a CA.
 
+There are two ways to obtain an SSL certificate:
+* via CSR -- manual way
+* via ACME (Automatic Certificate Management Environment) -- a modern, automated way
+
+~~~admonish note title="via CSR"
 To request for an SSL certificate from a CA, the owner of the server needs to submit a **Certificate Signing Request** (CSR) to the CA. The workflow is as such:
 
 1. The server generates a key pair.
@@ -32,6 +37,7 @@ To request for an SSL certificate from a CA, the owner of the server needs to su
 4. The CA validates the domain ownership (via DCV etc.).
 
 Once validated, the CA will issue the SSL certificate to the owner of the server (via email etc.).
+~~~
 
 ## 2. The client must have the corresponding root CA's certificate
 
