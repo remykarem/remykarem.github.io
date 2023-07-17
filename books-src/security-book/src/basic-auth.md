@@ -1,6 +1,6 @@
 # Basic auth
 
-In Basic auth, the username and password are concatenated together (with a colon in between), then base64-encoded.
+In Basic auth, the username and password are concatenated together (with a colon `;`), then base64-encoded.
 
 It is then included in the HTTP request under the `Authorization` header.
 
