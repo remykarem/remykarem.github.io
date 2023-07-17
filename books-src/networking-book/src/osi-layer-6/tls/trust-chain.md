@@ -4,6 +4,10 @@ For this protocol to work, we rely on the trust infrastructure of the web.
 
 The trust infrastructure is made up CAs (**certificate authorities**) and **SSL certificates**.
 
+~~~admonish example title="Examples of CAs"
+Let's Encrypt, DigiCert, Sectigo, GlobalSign
+~~~
+
 A (root) CA generates a certificate for itself, and certificates for servers and other CAs ("intermediary CAs").
 
 A CA can in turn generate certificates for other servers and other CAs and so on.
