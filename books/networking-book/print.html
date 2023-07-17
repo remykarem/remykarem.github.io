@@ -1172,6 +1172,17 @@ Raimi
 <li>signature(s) from a CA (signed with their private key)</li>
 </ul>
 <p>This certificate is issued <em>out-of-band</em> by a CA.</p>
+<p>There are two ways to obtain an SSL certificate:</p>
+<ul>
+<li>via CSR -- manual way</li>
+<li>via ACME (Automatic Certificate Management Environment) -- a modern, automated way</li>
+</ul>
+<div id="admonition-via-csr" class="admonition note">
+<div class="admonition-title">
+<p>via CSR</p>
+<p><a class="admonition-anchor-link" href="osi-layer-6/tls/setup.html#admonition-via-csr"></a></p>
+</div>
+<div>
 <p>To request for an SSL certificate from a CA, the owner of the server needs to submit a <strong>Certificate Signing Request</strong> (CSR) to the CA. The workflow is as such:</p>
 <ol>
 <li>The server generates a key pair.</li>
@@ -1187,6 +1198,8 @@ Raimi
 <li>The CA validates the domain ownership (via DCV etc.).</li>
 </ol>
 <p>Once validated, the CA will issue the SSL certificate to the owner of the server (via email etc.).</p>
+</div>
+</div>
 <h2 id="2-the-client-must-have-the-corresponding-root-cas-certificate"><a class="header" href="#2-the-client-must-have-the-corresponding-root-cas-certificate">2. The client must have the corresponding root CA's certificate</a></h2>
 <p>The client needs to trust the CA that issued the server's certificate.</p>
 <p>To do that, the client needs to have the corresponding CA certificate or the root CA (usually this).</p>
