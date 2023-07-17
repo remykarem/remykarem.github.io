@@ -194,7 +194,7 @@
 <div>
 <p>Suppose a client has made 2 requests (&quot;streams&quot;) to the server over the same TCP connection.</p>
 <p>Instead of the server responding to stream 1 fully (all frames), then stream 2 (all frames),</p>
-<pre><code class="language-mermaid">sequenceDiagram
+<pre class="mermaid">sequenceDiagram
     client -&gt;&gt; server: stream 1
     client -&gt;&gt; server: stream 2
     server -&gt;&gt; client: stream 1 frame 1
@@ -202,9 +202,9 @@
     server -&gt;&gt; client: stream 2 frame 1
     server -&gt;&gt; client: stream 2 frame 2
     server -&gt;&gt; client: stream 2 frame 3
-</code></pre>
+</pre>
 <p>the server can <em>interleave</em> (&quot;multiplex&quot;) the frames between different streams.</p>
-<pre><code class="language-mermaid">sequenceDiagram
+<pre class="mermaid">sequenceDiagram
     client -&gt;&gt; server: stream 1
     client -&gt;&gt; server: stream 2
     server -&gt;&gt; client: stream 1 frame 1
@@ -212,7 +212,7 @@
     server -&gt;&gt; client: stream 1 frame 2
     server -&gt;&gt; client: stream 2 frame 2
     server -&gt;&gt; client: stream 2 frame 3
-</code></pre>
+</pre>
 </div>
 </div>
 

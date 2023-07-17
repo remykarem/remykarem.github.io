@@ -654,7 +654,7 @@ Because an HTTP session typically involves multiple non-persistent HTTP connecti
 <div>
 <p>Suppose a client has made 2 requests (&quot;streams&quot;) to the server over the same TCP connection.</p>
 <p>Instead of the server responding to stream 1 fully (all frames), then stream 2 (all frames),</p>
-<pre><code class="language-mermaid">sequenceDiagram
+<pre class="mermaid">sequenceDiagram
     client -&gt;&gt; server: stream 1
     client -&gt;&gt; server: stream 2
     server -&gt;&gt; client: stream 1 frame 1
@@ -662,9 +662,9 @@ Because an HTTP session typically involves multiple non-persistent HTTP connecti
     server -&gt;&gt; client: stream 2 frame 1
     server -&gt;&gt; client: stream 2 frame 2
     server -&gt;&gt; client: stream 2 frame 3
-</code></pre>
+</pre>
 <p>the server can <em>interleave</em> (&quot;multiplex&quot;) the frames between different streams.</p>
-<pre><code class="language-mermaid">sequenceDiagram
+<pre class="mermaid">sequenceDiagram
     client -&gt;&gt; server: stream 1
     client -&gt;&gt; server: stream 2
     server -&gt;&gt; client: stream 1 frame 1
@@ -672,7 +672,7 @@ Because an HTTP session typically involves multiple non-persistent HTTP connecti
     server -&gt;&gt; client: stream 1 frame 2
     server -&gt;&gt; client: stream 2 frame 2
     server -&gt;&gt; client: stream 2 frame 3
-</code></pre>
+</pre>
 </div>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="http-tunnel"><a class="header" href="#http-tunnel">HTTP tunnel</a></h1>
@@ -1419,11 +1419,11 @@ Congestion fixes:</li>
 <li>Track changes in traffic</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="3-way-handshake"><a class="header" href="#3-way-handshake">3-way handshake</a></h1>
-<pre><code class="language-mermaid">sequenceDiagram
+<pre class="mermaid">sequenceDiagram
     client -&gt;&gt; server: SYN, SequenceNum = x, Acknowledgement = -
     server -&gt;&gt; client: SYN+ACK, SequenceNum = y, Acknowledgement = x+1
     client -&gt;&gt; server: ACK, SequenceNum = -, Acknowledgement = y+1
-</code></pre>
+</pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="message-format-1"><a class="header" href="#message-format-1">Message format</a></h1>
 <p>A <strong>TCP packet</strong> consists of:</p>
 <ul>
