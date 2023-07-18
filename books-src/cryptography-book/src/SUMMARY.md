@@ -58,7 +58,7 @@
     - [Argon]()
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
     - [DHKE](./primitives/key-exchange-algorithms/diffie-hellman.md)
-    - [RSA-based](./cryptosystems/rsa/key-exchange.md)
+    - [RSA key exchange](./cryptosystems/rsa/key-exchange.md)
     - [ECC-based](./cryptosystems/ecc/key-exchange.md)
 
 ---
