@@ -809,9 +809,17 @@ B = pow(g,b,p)
 </code></pre>
 </div>
 </div><div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-<h1 id="key-exchange-1"><a class="header" href="#key-exchange-1">Key exchange</a></h1>
+<h1 id="rsa-key-exchange"><a class="header" href="#rsa-key-exchange">RSA Key exchange</a></h1>
 <p>Can be used for key exchange. Client creates a secrets key and encrypts it with piblic key using one of the encryption algorithms. Server decrypts. </p>
-<p>Example of such key exchange is in SSH RSA.</p>
+<div id="admonition-warning" class="admonition warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="cryptosystems/rsa/key-exchange.html#admonition-warning"></a></p>
+</div>
+<div>
+<p>RSA key exchange does not offer perfect forward secrecy.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="key-exchange-algorithms"><a class="header" href="#key-exchange-algorithms">Key exchange algorithms</a></h1>
 <p>DH: n is Alice's secret key, P is Bob's public key, some hash of nP is the secret key shared between Alice and Bob.</p>
