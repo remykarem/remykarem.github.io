@@ -7,12 +7,18 @@
 - [I/O](./io.md)
 - [Process abstraction]()
 - [Process memory](./process_memory.md)
+- [Process state]()
 - [Process scheduling]()
+- [Context switching]()
 - [Threads](./threads.md)
 - [Inter-process communication]()
 - [Memory management](./memory_management.md)
 - [System calls](./system_calls.md)
 - [Vectorisation](./vectorisation.md)
+- [User permissions]()
+- [File systems]()
+- [Control groups]()
+- [Namespaces]()
 
 ---
 
