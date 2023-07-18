@@ -74,6 +74,7 @@
 - [DHCP](./osi-layer-7/dhcp.md)
 - [POP, IMAP](./osi-layer-7/pop-imap.md)
 - [SMTP](./osi-layer-7/smtp.md)
+- [Tor](./osi-layer-7/tor.md)
 
 ---
 
