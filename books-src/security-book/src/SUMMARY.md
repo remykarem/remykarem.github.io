@@ -17,6 +17,10 @@
 - [LDAP]()
 - [TOTP](./totp.md)
 - [SSH]()
+- [One-time code]()
+- [CAPTCHA]()
+- [SSO]()
+- [Passkeys]()
 
 ---
 
