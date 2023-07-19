@@ -52,3 +52,7 @@ ipconfig
 ~~~admonish note
 You don't typically interact directly with network interfaces. The OS abstracts this away using sockets.
 ~~~
+
+~~~admonish tip
+Run `networkQuality` to run an Internet speed test from your Mac.
+~~~
