@@ -18,6 +18,11 @@ Get my DNS server
 cat /etc/resolv.conf   
 ```
 
+~~~admonish tip
+prints the DNS servers for the specified network service.
+networksetup -getdnsservers <networkservice>
+~~~
+
 where nameserver is the local dns server
 
 The computer has a Local resolver library to cache DNS mappings.
