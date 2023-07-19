@@ -4,6 +4,10 @@ Domain Name System
 
 DNS is a client-server application layer protocol that translates hostnames on the Internet to IP addresses. DNS is a server and a database.
 
+~~~admonish note
+Devices within the network get their DNS server settings from the router either manually or via (DHCP).
+~~~
+
 ~~~admonish tip title="Hosts file"
 The hosts file is a simple text file that maps hostnames to IP addresses. It is checked before DNS is used, so entries in your hosts file will override DNS. 
 
