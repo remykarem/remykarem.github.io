@@ -63,6 +63,7 @@
   - [Workflow]()
   - [Record types](./osi-layer-7/dns/record-types.md)
   - [DoH](./osi-layer-7/dns/doh.md)
+  - [DoT]()
 - [SFTP](./osi-layer-7/sftp.md)
 - [MQTT]()
 - [NTP]()
