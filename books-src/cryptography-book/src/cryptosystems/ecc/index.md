@@ -37,10 +37,6 @@ Note that unlike RSA, ECC does not inherently have an encryption algorithm. Inst
 * $d$ — **private key**; scalar value
 * $(x,y)$ — **public key**; the point on the curve when performing the scalar multiplication $dG$.
 
-(No inherent encryption)
-* To encrypt a message using ECC, the sender chooses a random scalar k and uses the recipient's public key P to derive a point Q on the curve: Q = kP. The sender then uses the x-coordinate of Q as a shared secret to encrypt the message. The encryption process is typically performed using a symmetric encryption algorithm such as AES.
-* Decryption: To decrypt a message using ECC, the recipient uses their private key d to derive the point Q on the curve that was used to generate the shared secret: Q = dP. The recipient can then use the x-coordinate of Q to decrypt the message.
-
 ## Trapdoor function
 
 Scalar multiplication of a point on an EC over a prime field.
