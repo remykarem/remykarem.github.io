@@ -1031,11 +1031,6 @@ B = pow(g,b,p)
 <li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span> — <strong>private key</strong>; scalar value</li>
 <li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> — <strong>public key</strong>; the point on the curve when performing the scalar multiplication <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">G</span></span></span></span>.</li>
 </ul>
-<p>(No inherent encryption)</p>
-<ul>
-<li>To encrypt a message using ECC, the sender chooses a random scalar k and uses the recipient's public key P to derive a point Q on the curve: Q = kP. The sender then uses the x-coordinate of Q as a shared secret to encrypt the message. The encryption process is typically performed using a symmetric encryption algorithm such as AES.</li>
-<li>Decryption: To decrypt a message using ECC, the recipient uses their private key d to derive the point Q on the curve that was used to generate the shared secret: Q = dP. The recipient can then use the x-coordinate of Q to decrypt the message.</li>
-</ul>
 <h2 id="trapdoor-function-1"><a class="header" href="#trapdoor-function-1">Trapdoor function</a></h2>
 <p>Scalar multiplication of a point on an EC over a prime field.</p>
 <p>Finding the reverse of this is the discrete logarithm problem (which I have yet to figure out how to arrive at that).</p>
