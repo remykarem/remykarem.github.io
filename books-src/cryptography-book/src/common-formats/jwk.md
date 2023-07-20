@@ -4,7 +4,7 @@
 
 A JWK (JSON Web Key) is a JSON representation of cryptographic keys — PKI (private or public) and symmetric keys. The values are all Base64 URL-safe.
 
-A JWK set can hold multiple keys.
+A JWKS (JWK set) can hold multiple JWK's.
 
 ~~~admonish example title="Example 1: RSA key"
 A JWK representing a _public_ RSA key looks like this (taken from [here](https://datatracker.ietf.org/doc/html/rfc7517#appendix-A.1)).
