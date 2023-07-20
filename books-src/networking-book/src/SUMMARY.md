@@ -76,7 +76,7 @@
 - [POP, IMAP](./osi-layer-7/pop-imap.md)
 - [SMTP](./osi-layer-7/smtp.md)
 - [Tor](./osi-layer-7/tor.md)
-- [iCloud Private Relay]()
+- [iCloud Private Relay](./osi-layer-7/icloud-private-relay.md)
 
 ---
 
