@@ -6,6 +6,10 @@
 
 - [IdP]()
 
+# Device posture assessment
+
+- [Something]()
+
 # Authentication & authorisation
 
 - [Basic auth](./basic-auth.md)
