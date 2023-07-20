@@ -24,6 +24,7 @@
 - [SAML]()
 - [LDAP]()
 - [TOTP](./totp.md)
+  - [Microsoft Authenticator]()
 - [SSH]()
 - [One-time code]()
 - [CAPTCHA]()
