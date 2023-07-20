@@ -2,6 +2,10 @@
 
 - [Chapter 1](./chapter_1.md)
 
+# Things
+
+- [IdP]()
+
 # Authentication & authorisation
 
 - [Basic auth](./basic-auth.md)
@@ -21,6 +25,8 @@
 - [CAPTCHA]()
 - [SSO]()
 - [Passkeys]()
+- [Biometric]()
+- [Facial recognition]()
 
 ---
 
