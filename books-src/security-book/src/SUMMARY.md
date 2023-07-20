@@ -5,6 +5,7 @@
 # Things
 
 - [IdP]()
+- [Directory and identity management service]()
 
 # Device posture assessment
 
