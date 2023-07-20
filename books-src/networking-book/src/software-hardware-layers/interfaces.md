@@ -38,13 +38,13 @@ This means the tunnel is managed by user-level process.
 ````admonish tip
 In macOS, you can list the network interfaces:
 
-```
+```sh
 ifconfig
 ```
 
 whereas in Linux it's
 
-```
+```sh
 ipconfig
 ```
 ````
@@ -55,4 +55,12 @@ You don't typically interact directly with network interfaces. The OS abstracts 
 
 ~~~admonish tip
 Run `networkQuality` to run an Internet speed test from your Mac.
+~~~
+
+~~~admonish tip
+To log all outgoing IP addresses from a specific network interface, do
+
+```sh
+sudo tcpdump -i en0 -n -tttt
+```
 ~~~

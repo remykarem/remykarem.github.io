@@ -336,10 +336,10 @@ default            192.168.1.254      UGScg             en0
 </div>
 <div>
 <p>In macOS, you can list the network interfaces:</p>
-<pre><code>ifconfig
+<pre><code class="language-sh">ifconfig
 </code></pre>
 <p>whereas in Linux it's</p>
-<pre><code>ipconfig
+<pre><code class="language-sh">ipconfig
 </code></pre>
 </div>
 </div>
@@ -359,6 +359,17 @@ default            192.168.1.254      UGScg             en0
 </div>
 <div>
 <p>Run <code>networkQuality</code> to run an Internet speed test from your Mac.</p>
+</div>
+</div>
+<div id="admonition-tip-2" class="admonition tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="software-hardware-layers/interfaces.html#admonition-tip-2"></a></p>
+</div>
+<div>
+<p>To log all outgoing IP addresses from a specific network interface, do</p>
+<pre><code class="language-sh">sudo tcpdump -i en0 -n -tttt
+</code></pre>
 </div>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="network-interface-controller"><a class="header" href="#network-interface-controller">Network Interface Controller</a></h1>
