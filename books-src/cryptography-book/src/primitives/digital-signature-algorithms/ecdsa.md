@@ -4,6 +4,8 @@
 
 Elliptic Curve Digital Signature Algorithm
 
+ECDSA is **probabilistic**. It is based on DSA.
+
 An ECDSA signature is a tuple of $(h, r,s)$.
 
 ### 1. Hash the message
