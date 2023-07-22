@@ -50,7 +50,8 @@
 # Firewalls
 
 - [Application-level]()
-  - [WAF]()
+  - [Stateless]()
+  - [Stateful]()
 - [Packet-level]()
   - [Stateless]()
   - [Stateful]()
