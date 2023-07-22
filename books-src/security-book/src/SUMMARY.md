@@ -36,7 +36,11 @@
 
 ---
 
-# Web security
+# Privacy and anonymity
+
+- [DNS leak]()
+
+# Attacks
 
 - [Links](./links.md)
 - [Attacks]()
