@@ -64,3 +64,16 @@ To log all outgoing IP addresses from a specific network interface, do
 sudo tcpdump -i en0 -n -tttt
 ```
 ~~~
+
+
+~~~admonish tip
+A network interface is like a network configuration:
+
+
+* IP address
+* Subnet mask
+* Default gateway
+* DNS servers
+
+Configurations are retrieved from a DHCP ssrver. 
+~~~
