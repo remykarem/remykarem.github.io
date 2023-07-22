@@ -47,6 +47,16 @@
 
 ---
 
+# Firewalls
+
+- [Application-level]()
+  - [WAF]()
+- [Packet-level]()
+  - [Stateless]()
+  - [Stateful]()
+
+---
+
 # Protocols: OSI Layer 7 — Application
 
 - [Overview](./osi-layer-7/index.md)
