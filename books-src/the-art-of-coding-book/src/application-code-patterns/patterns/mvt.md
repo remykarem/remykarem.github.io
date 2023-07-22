@@ -11,4 +11,7 @@ Model-View-Template
 
 ~~~admonish example title="Django"
 Django uses this pattern.
+
+* Form?
+* Serialiser?
 ~~~
