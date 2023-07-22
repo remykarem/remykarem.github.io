@@ -4,6 +4,8 @@ Domain Name System
 
 DNS is a client-server application layer protocol that translates hostnames on the Internet to IP addresses. DNS is a server and a database.
 
+A hostname is also known as a DNS hostname.
+
 ~~~admonish note
 Devices within the network get their DNS server settings from the router either manually or via (DHCP).
 ~~~
