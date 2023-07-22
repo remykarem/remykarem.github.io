@@ -2,6 +2,10 @@
 
 Dynamic Host Configuration Protocol
 
-DHCP servers automatically assign an unused IPv4 address to a new host. When a host is first attached to a subnet, it sends a DHCP request message in a UDP segment to the DHCP server.
+A DHCP server provides the **network configurations** to its client:
+* IP address
+* Subnet mask
+* Default gateway
+* DNS servers
 
 port: 67
