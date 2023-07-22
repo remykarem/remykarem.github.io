@@ -6,6 +6,10 @@ DNS is a client-server application layer protocol that translates hostnames on t
 
 A hostname is also known as a DNS hostname.
 
+~~~admonish hint title="DNS servers"
+Amazon Route 53, 1.1.1.1, 8.8.8.8
+~~~
+
 ~~~admonish note
 Devices within the network get their DNS server settings from the router either manually or via (DHCP).
 ~~~
