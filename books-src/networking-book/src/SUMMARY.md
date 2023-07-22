@@ -61,6 +61,7 @@
 - [DNS](./osi-layer-7/dns/index.md)
   - [Setup: DNS registrars]()
   - [Setup: DNS servers]()
+  - [Setup: Client-server]()
   - [Workflow]()
   - [Record types](./osi-layer-7/dns/record-types.md)
   - [DoH](./osi-layer-7/dns/doh.md)
