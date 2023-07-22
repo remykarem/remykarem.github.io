@@ -1059,7 +1059,13 @@ Host: www.example.com
 <p>When a router receives a packet, it uses a protocol called BGP to decide what router the packet should go to next.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dhcp"><a class="header" href="#dhcp">DHCP</a></h1>
 <p>Dynamic Host Configuration Protocol</p>
-<p>DHCP servers automatically assign an unused IPv4 address to a new host. When a host is first attached to a subnet, it sends a DHCP request message in a UDP segment to the DHCP server.</p>
+<p>A DHCP server provides the <strong>network configurations</strong> to its client:</p>
+<ul>
+<li>IP address</li>
+<li>Subnet mask</li>
+<li>Default gateway</li>
+<li>DNS servers</li>
+</ul>
 <p>port: 67</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pop-imap"><a class="header" href="#pop-imap">POP, IMAP</a></h1>
 <p>Post Office Protocol v3, Internet Message Access Protocol</p>
