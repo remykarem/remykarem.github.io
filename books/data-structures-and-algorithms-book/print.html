@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Data structures</li><li class="chapter-item expanded "><div>List</div></li><li class="chapter-item expanded "><div>Linked list</div></li><li class="chapter-item expanded "><div>Array</div></li><li class="chapter-item expanded "><div>Doubly linked list</div></li><li class="chapter-item expanded "><div>Stack</div></li><li class="chapter-item expanded "><div>Queue</div></li><li class="chapter-item expanded "><div>Deque</div></li><li class="chapter-item expanded "><div>Priority queue</div></li><li class="chapter-item expanded "><div>Set</div></li><li class="chapter-item expanded "><div>Map</div></li><li class="chapter-item expanded "><div>Hashmap</div></li><li class="chapter-item expanded "><div>Tree</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Problems</li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Data structures</li><li class="chapter-item expanded "><a href="data-structures/list.html">List</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="data-structures/linked-list.html">Linked list</a></li><li class="chapter-item expanded "><a href="data-structures/doubly-linked-list.html">Doubly linked list</a></li></ol></li><li class="chapter-item expanded "><a href="data-structures/stack.html">Stack</a></li><li class="chapter-item expanded "><a href="data-structures/queue.html">Queue</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="data-structures/deque.html">Deque</a></li><li class="chapter-item expanded "><a href="data-structures/priority-queue.html">Priority queue</a></li></ol></li><li class="chapter-item expanded "><a href="data-structures/set.html">Set</a></li><li class="chapter-item expanded "><a href="data-structures/hash-map.html">Hash table</a></li><li class="chapter-item expanded "><a href="data-structures/tree.html">Tree</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="data-structures/binary-tree.html">Binary tree</a></li><li class="chapter-item expanded "><a href="data-structures/binary-search-tree.html">Binary search tree</a></li><li class="chapter-item expanded "><a href="data-structures/heap.html">Heap</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">Algorithms</li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Problems</li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -155,6 +155,163 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="preface"><a class="header" href="#preface">Preface</a></h1>
+<ul>
+<li>
+<p>Best case: Ω</p>
+</li>
+<li>
+<p>Average case:</p>
+<p>O</p>
+</li>
+<li>
+<p>Worst case:</p>
+<p>O</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="list"><a class="header" href="#list">List</a></h1>
+<ul>
+<li>Have order</li>
+<li>Add, remove</li>
+</ul>
+<aside>
+💡 Python's `list` involves an underlying hash table such that:
+<p>Lookup <code>li[5]</code>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
+<p>Length <code>len(li)</code>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
+</aside>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="linked-list"><a class="header" href="#linked-list">Linked list</a></h1>
+<ul>
+<li>Each element has
+<ul>
+<li>a value</li>
+<li>a ref ro next element</li>
+</ul>
+</li>
+<li>append()</li>
+<li>remove(el)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="doubly-linked-list"><a class="header" href="#doubly-linked-list">Doubly linked list</a></h1>
+<ul>
+<li>Each element
+<ul>
+<li>a value</li>
+<li>a ref to next element</li>
+<li>a ref to prev element</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="stack"><a class="header" href="#stack">Stack</a></h1>
+<ul>
+<li>“Push”</li>
+<li>“Pop”</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="queue"><a class="header" href="#queue">Queue</a></h1>
+<ul>
+<li>“Head”</li>
+<li>“Tail”</li>
+<li>Remove: “dequeue”</li>
+<li>Add: “enqueue”</li>
+<li>“Peek”: See head of element</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="deque"><a class="header" href="#deque">Deque</a></h1>
+<ul>
+<li>Can enqueue and dequeue from both sides</li>
+</ul>
+<aside>
+💡 Use `collections.deque`
+</aside>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="priority-queue"><a class="header" href="#priority-queue">Priority queue</a></h1>
+<ul>
+<li>Each element has
+<ul>
+<li>a value</li>
+<li>a ref to next element</li>
+<li><strong>a priority value</strong></li>
+</ul>
+</li>
+<li>Dequeue: remove element with highest priority</li>
+<li>Implementations:
+<ul>
+<li>Heap <code>heapq</code></li>
+<li>List <code>list</code> with sorting</li>
+<li><code>queue.PriorityQueue</code></li>
+</ul>
+</li>
+</ul>
+<p>https://towardsdatascience.com/introduction-to-priority-queues-in-python-83664d3178c3</p>
+<p>Problems where priority queues will come in handy:
+largest, smallest, best, worst, top, minimum, maximum, ...</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="set"><a class="header" href="#set">Set</a></h1>
+<ul>
+<li>No order</li>
+<li>No repeated elements</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="hash-table"><a class="header" href="#hash-table">Hash table</a></h1>
+<aside>
+💡 A hash map in Python is a `dict`.
+</aside>
+<pre><code class="language-python">class Hashmap:
+
+    def __init__(self):
+        self.table = [None] * 10
+
+    def put(self, key, value):
+        idx = hash(key) % 10
+        if self.table[idx] is None:
+            self.table[idx] = [(key, value)]
+        else:
+            for i, el in enumerate(self.table[idx]):
+                k,v = el
+                if k == key:
+                    self.table[idx][0] = (key,value)
+                    return
+            self.table[idx].append((key,value))
+
+    def get(self, key):
+        idx = hash(key) % 10
+        for k,v in self.table[idx]:
+            if k==key:
+                return v
+        raise
+</code></pre>
+<aside>
+✅ **Hashing**
+value  —hash function→  Hash value / collection of values
+<key,value>  —hash function on key→  Hash value / collection of values
+</aside>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="tree"><a class="header" href="#tree">Tree</a></h1>
+<ul>
+<li>Extension of linked list</li>
+<li>“node”, “level”, “parent”-“child”, “height”, “depth”</li>
+<li>All nodes must be connected. There must not be any cycles.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="binary-tree"><a class="header" href="#binary-tree">Binary tree</a></h1>
+<p>Every parent node has at most 2 children.</p>
+<aside>
+💡 A **complete binary tree**, all levels are full (except maybe the deepest, where the nodes are as far to the left as possible).
+</aside>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="binary-search-tree"><a class="header" href="#binary-search-tree">Binary search tree</a></h1>
+<p>Value of left child &lt; value of parent node </p>
+<p>and</p>
+<p>value of parent node &lt; value of right child</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="heap"><a class="header" href="#heap">Heap</a></h1>
+<p>Min heap (more common) or max heap. </p>
+<aside>
+💡 Heap property: value of parent is smaller than children
+</aside>
+<p>Note: every sorted list <em>does</em> satifies the heap property.</p>
 
                     </main>
 
