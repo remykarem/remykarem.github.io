@@ -15,6 +15,7 @@ additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../cs
 default-theme="macchiato"
 preferred-dark-theme="macchiato"
 no-section-label = true
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [build]
 build-dir = "../../books/data-structures-and-algorithms-book"
@@ -30,3 +31,6 @@ renderers = ["html"]
 
 [preprocessor.catppuccin]
 assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
