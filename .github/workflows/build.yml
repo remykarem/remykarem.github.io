@@ -31,7 +31,7 @@ jobs:
         tar xvzf mdbook-mermaid-v0.12.6-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
         rm mdbook-*
 
-    - name: Build networking book
+    - name: Build books
       run: |
         mdbook build books-src/number-theory-book
         mdbook build books-src/system-design-book
@@ -45,7 +45,7 @@ jobs:
         mdbook build books-src/networking-book
         mdbook build books-src/cryptography-book
         mdbook build books-src/os-book
-        mdbook build books-src/x86-64-book
+        mdbook build books-src/data-structures-and-algorithms-book
 
     # Add more build steps as needed for each book
 
