@@ -16,7 +16,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
 
 ## Creating a new book
 
-1. Go into `books`.
+1. Go into `books-src`.
 
 2. Create a folder `books/your-book` and `cd` into it.
 
@@ -43,7 +43,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     no-section-label = true
 
     [build]
-    build-dir = "."  # this is for mathy books. for non-mathy, use "./html"
+    build-dir = "../../books/your-book"  # this is for mathy books. for non-mathy, use "./html"
 
     [preprocessor.toc]
     command = "mdbook-toc"
