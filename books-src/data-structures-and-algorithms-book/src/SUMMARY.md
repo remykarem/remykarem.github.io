@@ -1,6 +1,7 @@
 # Summary
 
 - [Preface](./preface.md)
+- [Classes of problems](./classes-of-problems.md)
  
 ---
 
@@ -19,11 +20,28 @@
     - [Binary tree](./data-structures/binary-tree.md)
     - [Binary search tree](./data-structures/binary-search-tree.md)
     - [Heap](./data-structures/heap.md)
+- [Graph](./data-structures/graph.md)
+    - [MST](./data-structures/mst.md)
 
 ---
 
 # Algorithms
 
----
-
-# Problems
+- [Search](./algorithms/search/index.md)
+    - [Depth-first](./algorithms/search/depth-first.md)
+    - [Breadth-first](./algorithms/search/breadth-first.md)
+    - [Best-first]()
+    - [A*]()
+    - [Dijkstra](./algorithms/search/dijkstra.md)
+    - [Linear search]()
+    - [Binary search]()
+- [Sort]()
+    - [Bubble sort](./algorithms/sort/bubble-sort.md)
+    - [Selection sort]()
+    - [Insertion sort]()
+    - [Merge sort](./algorithms/sort/merge-sort.md)
+    - [Quick sort](./algorithms/sort/quick-sort.md)
+    - [Bucket sort]()
+- [Path finding](./algorithms/path-finding/index.md)
+- [Recursive]()
+- [DP]()
