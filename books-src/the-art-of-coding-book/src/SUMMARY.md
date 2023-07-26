@@ -61,6 +61,9 @@
 
 - [Composition over inheritance](./composition-over-inheritance.md)
 
+- [Inheritance]()
+- [Polymorphism]()
+
 ---
 
 # Functional programming "patterns"
