@@ -162,10 +162,23 @@
 <p>Used with a <strong>stack</strong>.</p>
 <ul>
 <li>Pre-order</li>
-<li>In-order (left to right)</li>
-<li>Post-order (bottom to top?)
-Here: D, F, E, B, C, A</li>
+<li>In-order</li>
+<li>Post-order</li>
 </ul>
+<pre class="mermaid">graph TD
+    1 --&gt; 2
+    1 --&gt; 3
+</pre>
+<pre class="mermaid">graph TD
+    2 --&gt; 1
+    2 --&gt; 3
+</pre>
+<pre class="mermaid">graph TD
+    3 --&gt; 1
+    3 --&gt; 2
+</pre>
+<p><button id="backButton">Back</button>
+<button id="nextButton">Next</button></p>
 
                     </main>
 
