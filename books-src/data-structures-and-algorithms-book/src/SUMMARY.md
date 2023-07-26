@@ -20,6 +20,7 @@
     - [Binary tree](./data-structures/binary-tree.md)
     - [Binary search tree](./data-structures/binary-search-tree.md)
     - [Heap](./data-structures/heap.md)
+    - [B+ tree]()
 - [Graph](./data-structures/graph.md)
     - [MST](./data-structures/mst.md)
 
