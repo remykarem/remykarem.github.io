@@ -559,11 +559,5 @@ graph TD
     style K fill:#f9d71c,stroke:#333,stroke-width:2px
 ```
 
-<style>
-    svg.inactive {
-        display: none;
-    }
-</style>
-
 <button id="backButton">Back</button>
 <button id="nextButton">Next</button>

@@ -15,11 +15,5 @@ graph TD
     3 --> -
 ```
 
-<style>
-    svg.inactive {
-        display: none;
-    }
-</style>
-
 <button id="backButton">Back</button>
 <button id="nextButton">Next</button>
