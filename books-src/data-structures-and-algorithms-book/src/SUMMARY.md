@@ -30,8 +30,11 @@
 # Algorithms
 
 - [Search](./algorithms/search/index.md)
-    - [Depth-first](./algorithms/search/depth-first.md)
     - [Breadth-first](./algorithms/search/breadth-first.md)
+    - [Depth-first](./algorithms/search/depth-first/index.md)
+        - [Pre-order](./algorithms/search/depth-first/pre-order.md)
+        - [In-order](./algorithms/search/depth-first/in-order.md)
+        - [Post-order](./algorithms/search/depth-first/post-order.md)
     - [Best-first]()
     - [A*]()
     - [Dijkstra](./algorithms/search/dijkstra.md)
