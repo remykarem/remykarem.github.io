@@ -13,7 +13,25 @@ graph TD
 
     3 --> 1
     3 --> -
+```
+
+```mermaid
+graph TD
+    5 --> 3
+    5 --> 8
+
+    3 --> 1
+    3 --> -
 
     8 --> 7
     8 --> 10
 ```
+
+<style>
+    svg.inactive {
+        display: none;
+    }
+</style>
+
+<button id="backButton">Back</button>
+<button id="nextButton">Next</button>
