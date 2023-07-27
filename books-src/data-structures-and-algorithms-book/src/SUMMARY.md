@@ -11,8 +11,6 @@
     - [Linked list](./data-structures/linked-list.md)
     - [Doubly linked list](./data-structures/doubly-linked-list.md)
 - [Array](./data-structures/array.md)
-- [Set](./data-structures/set.md)
-- [Stack](./data-structures/stack.md)
 - [Queue](./data-structures/queue.md)
     - [Deque](./data-structures/deque.md)
 - [Hash table](./data-structures/hash-map.md)
@@ -26,7 +24,15 @@
     - [Suffix tree]()
 - [Graph](./data-structures/graph.md)
     - [MST](./data-structures/mst.md)
-- [Vertex buffer]()
+
+---
+
+# Abstract data structures
+
+- [Buffer]()
+- [Priority queue](./data-structures/priority-queue.md)
+- [Set](./data-structures/set.md)
+- [Stack](./data-structures/stack.md)
 
 ---
 
@@ -51,7 +57,6 @@
     - [Quick sort](./algorithms/sort/quick-sort.md)
     - [Bucket sort]()
 - [Path finding](./algorithms/path-finding/index.md)
-- [Priority queue](./data-structures/priority-queue.md)
 
 ---
 
