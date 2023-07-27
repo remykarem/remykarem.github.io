@@ -147,6 +147,8 @@
 - [ARP](./osi-layer-1/arp.md)
 - [802.11 Wi-Fi]()
 - [802.3 Ethernet]()
+- [NFC]()
+- [Bluetooth]()
 
 ---
 
