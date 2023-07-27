@@ -25,6 +25,7 @@
 - [Passkeys]()
 - [Biometric]()
 - [Facial recognition]()
+- [MFA]()
 
 # Directory services
 
