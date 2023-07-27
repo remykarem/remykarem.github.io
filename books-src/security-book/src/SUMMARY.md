@@ -30,6 +30,7 @@
 
 - [LDAP]()
 - [Microsoft Active Directory]()
+- [Amazon Cloud Directory]()
 - [X.500]()
 
 # Device posture assessment
