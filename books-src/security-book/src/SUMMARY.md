@@ -2,14 +2,7 @@
 
 - [Chapter 1](./chapter_1.md)
 
-# Things
-
-- [IdP]()
-- [Directory and identity management service]()
-
-# Device posture assessment
-
-- [Something]()
+---
 
 # Authentication & authorisation
 
@@ -23,7 +16,6 @@
   - [Hybrid Flow]()
 - [OIDC](./oidc.md)
 - [SAML]()
-- [LDAP]()
 - [TOTP](./totp.md)
   - [Microsoft Authenticator]()
 - [SSH]()
@@ -33,6 +25,20 @@
 - [Passkeys]()
 - [Biometric]()
 - [Facial recognition]()
+
+# Directory services
+
+- [LDAP]()
+
+# Device posture assessment
+
+- [Something]()
+
+---
+
+# Tings
+
+- [IdP]()
 
 ---
 
