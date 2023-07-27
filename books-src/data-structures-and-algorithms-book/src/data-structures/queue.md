@@ -1,5 +1,7 @@
 # Queue
 
+FIFO — First In First Out
+
 - “Head”
 - “Tail”
 - Remove: “dequeue”
