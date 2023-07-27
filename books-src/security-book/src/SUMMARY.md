@@ -29,6 +29,8 @@
 # Directory services
 
 - [LDAP]()
+- [Microsoft Active Directory]()
+- [X.500]()
 
 # Device posture assessment
 
