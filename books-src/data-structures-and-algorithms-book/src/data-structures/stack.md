@@ -1,4 +1,3 @@
 # Stack
 
-- “Push”
-- “Pop”
+LIFO — Last In First Out

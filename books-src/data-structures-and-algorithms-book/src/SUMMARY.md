@@ -10,20 +10,23 @@
 - [List](./data-structures/list.md)
     - [Linked list](./data-structures/linked-list.md)
     - [Doubly linked list](./data-structures/doubly-linked-list.md)
-- [2D]()
+- [Array](./data-structures/array.md)
+- [Set](./data-structures/set.md)
 - [Stack](./data-structures/stack.md)
 - [Queue](./data-structures/queue.md)
     - [Deque](./data-structures/deque.md)
-    - [Priority queue](./data-structures/priority-queue.md)
-- [Set](./data-structures/set.md)
 - [Hash table](./data-structures/hash-map.md)
 - [Tree](./data-structures/tree.md)
     - [Binary tree](./data-structures/binary-tree.md)
     - [Binary search tree](./data-structures/binary-search-tree.md)
     - [Heap](./data-structures/heap.md)
-    - [B+ tree]()
+    - [B+ tree](./data-structures/b+-tree.md)
+    - [B tree]()
+    - [r-tree]()
+    - [Suffix tree]()
 - [Graph](./data-structures/graph.md)
     - [MST](./data-structures/mst.md)
+- [Vertex buffer]()
 
 ---
 
@@ -48,5 +51,12 @@
     - [Quick sort](./algorithms/sort/quick-sort.md)
     - [Bucket sort]()
 - [Path finding](./algorithms/path-finding/index.md)
+- [Priority queue](./data-structures/priority-queue.md)
+
+---
+
+# ?
+
+- [Iterative]()
 - [Recursive]()
 - [DP]()
