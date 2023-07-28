@@ -12,5 +12,6 @@ Node characteristics:
 * **Type** — one of root, internal, leaf. Or parent vs. child
 * **Depth** or **level**
 * **Tilt**
+* **Cousins** — two nodes are cousins if they have the same depth but different parents
 
 - All nodes must be connected. There must not be any cycles.
