@@ -33,6 +33,7 @@
     - [B tree]()
     - [r-tree]()
     - [Suffix tree]()
+    - [Merkle tree]()
 - [Graph](./data-structures/graph.md)
     - [MST](./data-structures/mst.md)
 
@@ -40,6 +41,8 @@
 
 # Algorithms
 
+- [Hashing]()
+  - [Merkle]()
 - [Search](./algorithms/search/index.md)
     - [Breadth-first](./algorithms/search/breadth-first.md)
     - [Depth-first](./algorithms/search/depth-first/index.md)
