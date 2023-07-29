@@ -34,6 +34,7 @@
     - [r-tree]()
     - [Suffix tree]()
     - [Merkle tree]()
+    - [Greater tree]()
 - [Graph](./data-structures/graph.md)
     - [MST](./data-structures/mst.md)
 
