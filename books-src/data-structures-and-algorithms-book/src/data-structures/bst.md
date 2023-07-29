@@ -1,4 +1,6 @@
-# Binary search tree
+# BST
+
+Binary search tree
 
 Value of left child < value of parent node 
 
