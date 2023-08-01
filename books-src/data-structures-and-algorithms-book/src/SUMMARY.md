@@ -56,6 +56,8 @@
     - [Dijkstra](./algorithms/search/dijkstra.md)
     - [Linear search]()
     - [Binary search]()
+- [Creational]()
+    - [Maximum binary tree]()
 - [Sort]()
     - [Bubble sort](./algorithms/sort/bubble-sort.md)
     - [Selection sort]()
