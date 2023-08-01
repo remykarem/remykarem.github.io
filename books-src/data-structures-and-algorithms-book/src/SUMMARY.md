@@ -25,6 +25,7 @@
 - [Stack](./data-structures/stack.md)
 - [Tree](./data-structures/tree.md)
     - [Binary tree](./data-structures/binary-tree.md)
+      - [Maximum binary tree]()
     - [BST](./data-structures/bst.md)
         - [Red-black tree]()
         - [AVL]()
