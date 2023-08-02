@@ -79,7 +79,7 @@
 
 - [Declarative vs. imperative]()
 - [Convention over configuration]()
-- [Error handling]()
+- [Error handling patterns](./error-handling-patterns.md)
 - [Defensive programming](./defensive-programming.md)
 - [RAII](./creational/raii.md)
 - [Dependency injection](./creational/dependency-injection.md)
