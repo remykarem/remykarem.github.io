@@ -23,7 +23,9 @@
 
 - [Structural]()
   - [CDN](./components/cdn.md)
+  - [DLQ](./components/queue/dlq.md)
   - [Cache]()
+  - [Queue](./components/queue/index.md)
   - [Firewall]()
   - [API gateway](./components/api-gateway.md)
   - [Forward proxy](./components/forward-proxy.md)
