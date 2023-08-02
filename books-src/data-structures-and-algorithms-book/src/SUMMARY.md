@@ -66,6 +66,7 @@
     - [Merge sort](./algorithms/sort/merge-sort.md)
     - [Quick sort](./algorithms/sort/quick-sort.md)
     - [Bucket sort]()
+- [Merge]()
 - [Path finding](./algorithms/path-finding/index.md)
 
 ---
