@@ -1,5 +1,14 @@
 # Maximum binary tree
 
+```
+
+  4 6 3 10000 5 1
+  --L--   |   -R-
+          |
+       maximum
+
+```
+
 Given an array,
 
 1. parent — **maximum** of the array
