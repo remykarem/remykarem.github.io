@@ -39,6 +39,7 @@
     - [Greater tree]()
 - [Graph](./data-structures/graph.md)
     - [MST](./data-structures/mst.md)
+    - [LSM tree]()
 
 ---
 
