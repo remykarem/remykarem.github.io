@@ -35,6 +35,7 @@
     - [Merkle tree]()
     - [Greater tree]()
 - [Graph](./data-structures/graph.md)
+    - [Star graph](./star-graph.md)
     - [MST](./data-structures/mst.md)
     - [LSM tree]()
 
