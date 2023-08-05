@@ -15,3 +15,7 @@ Node characteristics:
 * **Cousins** — two nodes are cousins if they have the same depth but different parents
 
 - All nodes must be connected. There must not be any cycles.
+
+~~~admonish example
+Decision trees
+~~~
