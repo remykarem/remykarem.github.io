@@ -19,9 +19,6 @@
 - [Queue](./data-structures/queue.md)
     - [Deque](./data-structures/deque.md)
 - [Hash table](./data-structures/hash-map.md)
-- [Buffer]()
-- [Priority queue](./data-structures/priority-queue.md)
-- [Set](./data-structures/set.md)
 - [Stack](./data-structures/stack.md)
 - [Tree](./data-structures/tree.md)
     - [Binary tree](./data-structures/binary-tree.md)
@@ -40,6 +37,14 @@
 - [Graph](./data-structures/graph.md)
     - [MST](./data-structures/mst.md)
     - [LSM tree]()
+
+---
+
+# Abstract data structures
+
+- [Priority queue](./data-structures/priority-queue.md)
+- [Set](./data-structures/set.md)
+- [Buffer]()
 
 ---
 
