@@ -24,7 +24,7 @@
 
 # ?
 
-- [WAL](./write-ahead-log.md)
+- [WAL](./wal.md)
 - [Transaction log](./transaction-log.md)
 - [Replication log](./replication-log.md)
 
