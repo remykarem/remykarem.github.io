@@ -10,6 +10,12 @@ When to pick NoSQL?
 - When you need to handle a lot of read write operations; O(1)
 - When you are not sure with data modelling
 
+~~~admonish note title="schema-on-read, schema-on-write"
+In SQL, schema is validated on write. Akin to statically typed languages.
+
+in NoS, schema is validated on read, akin to dynamically typed languages.
+~~~
+
 ---
 
 My summary:
