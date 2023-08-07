@@ -4,7 +4,7 @@
 
 ---
 
-# Storage and data
+# Storage
 
 - [The big picture](./storage/storage_management.md)
 
@@ -26,7 +26,7 @@
 
 ---
 
-# ?
+# Logging
 
 - [WAL](./wal.md)
 - [Transaction log](./transaction-log.md)
