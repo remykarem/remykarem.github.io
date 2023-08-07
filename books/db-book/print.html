@@ -169,7 +169,17 @@
 </ul>
 <p>The topic on storage of data is closely related to <a href="storage/../query/query_processing/access_methods.html">access methods</a> because at the end of the day, data needs to be accessed.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="file"><a class="header" href="#file">File</a></h1>
-<p>A <strong>database file</strong> (or <strong>file</strong> or <strong>table store</strong>) is a collection of <a href="storage/data_structures/page.html">pages</a>. The file should support:</p>
+<p>A <strong>database file</strong> (or <strong>file</strong> or <strong>table store</strong>) is a <em>series</em> of <a href="storage/data_structures/page.html">pages</a>.</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="storage/data_structures/file.html#admonition-note"></a></p>
+</div>
+<div>
+<p>This file is an actual file in the filesystem.</p>
+</div>
+</div>
+<p>The file should support:</p>
 <ul>
 <li>iterating over the pages</li>
 <li>performing read, cread, update, delete on the pages.</li>
