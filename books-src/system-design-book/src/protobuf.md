@@ -2,7 +2,7 @@
 
 With a **proto definition**,
 
-```go
+```protobuf
 message Person {
   optional string name = 1;
   optional int32 id = 2;
