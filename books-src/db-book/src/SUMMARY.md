@@ -26,6 +26,13 @@
  
 ---
 
+# Indexing
+
+- [Ordered indices]()
+- [Hash indices]()
+
+---
+
 # Data structures
 
 - [Index]()
