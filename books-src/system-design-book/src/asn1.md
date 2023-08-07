@@ -4,7 +4,7 @@
 
 With an **ASN.1 specification**
 
-```
+```asn1
 FooProtocol DEFINITIONS ::= BEGIN
 
     FooQuestion ::= SEQUENCE {
