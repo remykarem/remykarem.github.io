@@ -18,6 +18,10 @@
       - [Data page]()
     - [Record](./storage/data_structures/record.md)
     - [Others](./storage/data_structures/others.md)
+ 
+---
+
+# Disk I/O
 
 - [Buffer management](./storage/buffer_management/buffer_management.md)
     - [Frame & buffer pool](./storage/buffer_management/frame_and_buffer_pool.md)
