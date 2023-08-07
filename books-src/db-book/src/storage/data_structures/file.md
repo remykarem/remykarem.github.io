@@ -1,6 +1,12 @@
 # File
 
-A **database file** (or **file** or **table store**) is a collection of [pages](page.md). The file should support:
+A **database file** (or **file** or **table store**) is a _series_ of [pages](page.md).
+
+~~~admonish note
+This file is an actual file in the filesystem.
+~~~
+
+The file should support:
 * iterating over the pages
 * performing read, cread, update, delete on the pages.
 
