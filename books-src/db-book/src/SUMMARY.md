@@ -11,7 +11,11 @@
 - [Data structures](./storage/data_structures/data_structures.md)
     - [File](./storage/data_structures/file.md)
     - [Index](./indexing/indexing.md)
+      - [Clustered]()
+      - [Non-clustered]()
     - [Page](./storage/data_structures/page.md)
+      - [Index page]()
+      - [Data page]()
     - [Record](./storage/data_structures/record.md)
     - [Others](./storage/data_structures/others.md)
 
