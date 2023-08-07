@@ -8,15 +8,33 @@
 # Data structures
 
 - [File](./storage/data_structures/file.md)
-- [Index](./indexing/indexing.md)
-  - [Clustered]()
-  - [Non-clustered]()
+     - [Heap file]()
+     - [Sorted file]()
+     - [Clustered file]()
 - [Page](./storage/data_structures/page.md)
-  - [Index page]()
-  - [Data page]()
+  - [Page type]()
+    - [Index page](./indexing/indexing.md)
+        - [Clustered]()
+        - [Non-clustered]()
+    - [Data page]()
+  - [Page format]()
+    - [Slotted page](./storage/data_structures/slotted-page.md)
+    - [Log-structured]()
 - [Record](./storage/data_structures/record.md)
 - [Others](./storage/data_structures/others.md)
+    - [Free Space Map]()
  
+---
+
+# Data structures
+
+- [Index]()
+- [Table]()
+- [Sequence]()
+- [View]()
+- [Materialised view]()
+- [TOAST table]()
+
 ---
 
 # Disk I/O
@@ -42,10 +60,9 @@
 
 # Data manipulation
 
-- [Data manipulation]()
-    - [Sort]()
-    - [Aggregate]()
-    - [Join]()
+- [Sort]()
+- [Aggregate]()
+- [Join]()
 
 ---
 
@@ -82,11 +99,17 @@
 
 ---
 
+# Properties
+
+---
+
 # Failure and recovery
 
 - [Failures]()
 - [Loggin schemes]()
 - [ARIES algorithm]()
+
+---
 
 # Appendix
 
