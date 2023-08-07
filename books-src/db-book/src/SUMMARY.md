@@ -1,12 +1,11 @@
 # Summary
 
 [Preface](./preface.md)
+- [The big picture](./storage/storage_management.md)
 
 ---
 
-# Storage
-
-- [The big picture](./storage/storage_management.md)
+# Data structures
 
 - [Data structures](./storage/data_structures/data_structures.md)
     - [File](./storage/data_structures/file.md)
@@ -35,6 +34,10 @@
 - [WAL](./wal.md)
 - [Transaction log](./transaction-log.md)
 - [Replication log](./replication-log.md)
+
+---
+
+# Locking
 
 ---
 
