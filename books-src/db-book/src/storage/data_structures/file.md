@@ -3,7 +3,7 @@
 A **database file** (or **file** or **table store**) is a _series_ of [pages](page.md).
 
 ~~~admonish note
-This file is an actual file in the filesystem.
+This file is an actual file on the disk.
 ~~~
 
 The file should support:
@@ -35,25 +35,15 @@ The job of a disk space manager is:
 
 There are different ways to do this. **File organisation** looks into this.
 
-Design choice: how many OS files? One OS file for each relation?
+~~~admonish example title="Postgres"
+In Postgres, a table or index is stored in one or more files.
 
-Database   | OS files
------------|--------------------
-Postgres   |  
-Oracle     | 
-IBM DB2    | 
-SQLite     | 1 OS file for the entire database
-SQL Server |
-MySQL      |
+When a table or index grows more than 1GB, Postgres uses additional files.
+~~~
 
-* Unsorted (heap) file organisation
-    * List
-    * Page directory
-* Sorted file organisation
-* Clustered file organisation
-
-
-
+~~~admonish example title="SQLite"
+SQLite uses 1 file for the entire database.
+~~~
 
 ```kotlin
 interface PageManagement {
