@@ -23,10 +23,10 @@ Table data is stored in the `base` folder.
 
 To know which folder is for which database:
 
-~~~sql
+```sql
 SELECT oid, datname
 FROM pg_database;
-~~~
+```
 
 To know which folder is for which table(s), you can do
 
