@@ -194,13 +194,22 @@
 <p>In Postgres, we can see it via</p>
 <pre><code class="language-sql">SHOW data_directory;
 </code></pre>
-<p>Table data is stored in the <code>base</code> folder. To know which folder is for which table(s), you can do</p>
-<pre><code class="language-sql">SELECT oid, relname, relkind
+<p>Table data is stored in the <code>base</code> folder.</p>
+<p>To know which folder is for which database:</p>
+<pre><code class="language-sql">SELECT oid, datname
+FROM pg_database;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+To know which folder is for which table(s), you can do
+
+```sql
+SELECT oid, relname, relkind
 FROM pg_class
 WHERE relkind IN ('r', 'i');
+```
 </code></pre>
-</div>
-</div>
 <p>The job of a disk space manager is:</p>
 <ul>
 <li>to manage the <strong>database files</strong></li>
@@ -208,16 +217,10 @@ WHERE relkind IN ('r', 'i');
 <li>to keep track of how much free space there is in the pages</li>
 </ul>
 <p>There are different ways to do this. <strong>File organisation</strong> looks into this.</p>
-<div id="admonition-postgres" class="admonition example">
-<div class="admonition-title">
-<p>Postgres</p>
-<p><a class="admonition-anchor-link" href="storage/data_structures/file.html#admonition-postgres"></a></p>
-</div>
-<div>
-<p>In Postgres, a table or index is stored in one or more files.</p>
-<p>When a table or index grows more than 1GB, Postgres uses additional files.</p>
-</div>
-</div>
+<pre><code class="language-admonish example title=&quot;Postgres&quot;">In Postgres, a table or index is stored in one or more files.
+
+When a table or index grows more than 1GB, Postgres uses additional files.
+</code></pre>
 <div id="admonition-sqlite" class="admonition example">
 <div class="admonition-title">
 <p>SQLite</p>

@@ -19,7 +19,16 @@ In Postgres, we can see it via
 SHOW data_directory;
 ```
 
-Table data is stored in the `base` folder. To know which folder is for which table(s), you can do
+Table data is stored in the `base` folder.
+
+To know which folder is for which database:
+
+~~~sql
+SELECT oid, datname
+FROM pg_database;
+~~~
+
+To know which folder is for which table(s), you can do
 
 ```sql
 SELECT oid, relname, relkind
