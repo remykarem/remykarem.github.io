@@ -38,6 +38,7 @@
     - [Star graph](./star-graph.md)
     - [MST](./data-structures/mst.md)
     - [LSM tree]()
+    - [DAG]()
 
 ---
 
