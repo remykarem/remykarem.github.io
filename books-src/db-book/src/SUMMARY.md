@@ -5,7 +5,7 @@
 
 ---
 
-# Data structures
+# Data storage
 
 - [File](./storage/data_structures/file.md)
      - [Heap file]()
@@ -22,18 +22,7 @@
     - [Log-structured]()
 - [Record](./storage/data_structures/record.md)
 - [Others](./storage/data_structures/others.md)
-    - [Free Space Map]()
- 
----
-
-# Indexing
-
-- [Ordered indices]()
-- [Hash indices]()
-
----
-
-# File
+- [Free Space Map]()
 
 - [Database]()
 - [Index]()
@@ -42,7 +31,7 @@
 - [View]()
 - [Materialised view]()
 - [TOAST table]()
-
+ 
 ---
 
 # Disk I/O
@@ -54,44 +43,20 @@
 
 ---
 
-# Logging
+# Indexing
 
-- [WAL](./wal.md)
-- [Transaction log](./transaction-log.md)
-- [Replication log](./replication-log.md)
-
----
-
-# Locking
+- [Ordered indices]()
+- [Hash indices]()
 
 ---
 
-# Data manipulation
-
-- [Sort]()
-- [Aggregate]()
-- [Join]()
-
----
-
-# Query
+# Searching
 
 - [Query execution](./query/query_execution.md)
     - [Processing models](./query/query_processing/processing_models.md)
     - [Access methods](./query/query_processing/access_methods.md)
     - [Parallel execution](./query/query_processing/parallel_execution.md)
 - [Query planning & optimisation](./query/query_planning.md)
-- [SQL]()
-    - [Basic](./query/sql/basic.md)
-    - [Intermediate]()
-    - [Advanced](./query/sql/advanced.md)
-
----
-
-# Connections
-
-- [Connections & connection pooling]()
-- [Database driver, client, adapter]()
 
 ---
 
@@ -104,18 +69,30 @@
 - [Two-phase locking]()
 - [Timestamp ordering]()
 - [MVCC]()
+- [Logging]()
+  - [WAL](./wal.md)
+  - [Transaction log](./transaction-log.md)
+  - [Replication log](./replication-log.md)
 
 ---
 
-# Properties
+# Query language
+
+- [SQL]()
+    - [Basic](./query/sql/basic.md)
+    - [Intermediate]()
+    - [Advanced](./query/sql/advanced.md)
 
 ---
 
-# Failure and recovery
+# Security
 
-- [Failures]()
-- [Loggin schemes]()
-- [ARIES algorithm]()
+---
+
+# Connections
+
+- [Connections & connection pooling]()
+- [Database driver, client, adapter]()
 
 ---
 
