@@ -17,5 +17,9 @@ A record can have 2 different formats:
 * Variable length
     * Array of fields delimited by special symbols
     * Array of field offsets
+ 
+~~~admonish example title="Postgres"
+Postgres uses a variable-length record format.
 
-> This contiguous storage is a setup for a row store.
+Additionally it uses TOAST for large data values that don't fit a page.
+~~~

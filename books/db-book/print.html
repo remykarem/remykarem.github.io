@@ -327,9 +327,16 @@ WHERE relkind IN ('r', 'i');
 </ul>
 </li>
 </ul>
-<blockquote>
-<p>This contiguous storage is a setup for a row store.</p>
-</blockquote>
+<div id="admonition-postgres" class="admonition example">
+<div class="admonition-title">
+<p>Postgres</p>
+<p><a class="admonition-anchor-link" href="storage/data_structures/record.html#admonition-postgres"></a></p>
+</div>
+<div>
+<p>Postgres uses a variable-length record format.</p>
+<p>Additionally it uses TOAST for large data values that don't fit a page.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="others"><a class="header" href="#others">Others</a></h1>
 <ul>
 <li>Mapping of page ID to a file path and offset.</li>

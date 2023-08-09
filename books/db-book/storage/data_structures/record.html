@@ -170,9 +170,16 @@
 </ul>
 </li>
 </ul>
-<blockquote>
-<p>This contiguous storage is a setup for a row store.</p>
-</blockquote>
+<div id="admonition-postgres" class="admonition example">
+<div class="admonition-title">
+<p>Postgres</p>
+<p><a class="admonition-anchor-link" href="#admonition-postgres"></a></p>
+</div>
+<div>
+<p>Postgres uses a variable-length record format.</p>
+<p>Additionally it uses TOAST for large data values that don't fit a page.</p>
+</div>
+</div>
 
                     </main>
 
