@@ -1,5 +1,9 @@
 # Slotted page
 
+~~~admonish example title="Postgres"
+Postgres uses the slotted page structure for its table and index pages.
+~~~
+
 Below is an example of slotted page `Page 7` with 3 slots corresponding to 3 different records.
 
 ```txt
