@@ -13,7 +13,7 @@
      - [Clustered file]()
 - [Page](./storage/data_structures/page.md)
   - [Page type]()
-    - [Index page](./indexing/indexing.md)
+    - [Index page]()
         - [Clustered]()
         - [Non-clustered]()
     - [Data page]()
@@ -45,6 +45,7 @@
 
 # Indexing
 
+- [Indexing](./indexing/indexing.md)
 - [Ordered indices]()
 - [Hash indices]()
 
@@ -78,10 +79,9 @@
 
 # Query language
 
-- [SQL]()
-    - [Basic](./query/sql/basic.md)
-    - [Intermediate]()
-    - [Advanced](./query/sql/advanced.md)
+- [Basic](./query/sql/basic.md)
+- [Intermediate]()
+- [Advanced](./query/sql/advanced.md)
 
 ---
 
