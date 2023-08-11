@@ -9,3 +9,5 @@ Resources:
 * [https://thodrek.github.io/cs564-fall17/lectures/lecture-10/Lecture_10_BM.pdf](https://thodrek.github.io/cs564-fall17/lectures/lecture-10/Lecture_10_BM.pdf)
 
 The high-level design is like virtual memory.
+
+[https://blog.dvsj.in/system-design/database-concepts/](https://blog.dvsj.in/system-design/database-concepts/)
