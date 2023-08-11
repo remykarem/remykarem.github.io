@@ -11,3 +11,11 @@ The buffer pool has a limited number of frames available. **Eviction policy** or
 * LRU (Least Recently Used)
 * MRU (Most Recently Used)
 * Clock
+
+~~~admonish hint title="Flush buffer"
+In Postgres, to flush a buffer, do:
+
+```sql
+CHECKPOINT
+```
+~~~
