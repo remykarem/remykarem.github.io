@@ -16,3 +16,13 @@ Local states can be
 * passed in -- useful when following together with the traversal
 
 Apart from passing in nodes, you can also pass other things/nodes. 
+
+### Where do side effects happen?
+
+At every stack? At the leaf?
+
+### Traversal order
+
+This might matter in some trees like BST for efficiency (eg. short circuiting). 
+
+It can also play a part in looking for aggregates like mode, grouping duplicates together etc.
