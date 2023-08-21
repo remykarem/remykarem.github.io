@@ -41,13 +41,23 @@
         #previous, #next {
             margin: 10px;
         }
+        #traditionalScript {
+            display: block;
+            font-size: 14px;  /* Adjust as needed */
+            margin-top: 10px;
+            color: #e0e0e0; /* Light font color */
+            font-family: 'Arial', sans-serif;
+        }
     </style>
 </head>
 <body>
 
 <div>
     <button id="previous">Previous</button>
-    <div id="flashcard">Click to flip!</div>
+    <div id="flashcard">
+        Click to flip!
+    </div>
+    <span id="traditionalScript"></span>
     <button id="next">Next</button>
 </div>
 
@@ -112,7 +122,13 @@ $(document).ready(function() {
     let isFlipped = false;
 
     function updateFlashcard() {
-        $("#flashcard").text(isFlipped ? words[currentIndex].english : words[currentIndex].thai);
+        if (isFlipped) {
+            $("#flashcard").text(words[currentIndex].english);
+            $("#traditionalScript").text(words[currentIndex].thai); // Show the Thai script in traditional style
+        } else {
+            $("#flashcard").text(words[currentIndex].thai);
+            $("#traditionalScript").text("");  // Hide the traditional script
+        }
     }
 
     $("#flashcard").click(function() {
