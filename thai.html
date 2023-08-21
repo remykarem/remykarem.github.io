@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
+            background-color: #1e1e1e; /* Slightly lighter than the body for contrast */
             font-family: 'Kanit', sans-serif;
             display: flex;
             justify-content: center;
@@ -17,13 +18,25 @@
         #flashcard {
             width: 600px;
             height: 200px;
-            border: 1px solid #ccc;
+            background-color: #1e1e1e; /* Slightly lighter than the body for contrast */
+            border: 1px solid #444; /* Dark border color */
+            color: #e0e0e0; /* Light font color */
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             user-select: none;
             font-size: 60px;
+        }
+        button {
+            background-color: #333; /* Dark background for buttons */
+            color: #e0e0e0; /* Light font color for buttons */
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #444; /* Slightly lighter color when hovering */
         }
         #previous, #next {
             margin: 10px;
