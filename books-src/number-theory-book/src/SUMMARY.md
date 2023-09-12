@@ -62,6 +62,7 @@
       - [Euler's theorem](./prime-numbers/eulers-theorem.md)
       - [CRT](./prime-numbers/crt.md)
       - [Sum of two squares theorem](./prime-numbers/sum-of-two-squares-theorem.md)
+      - [Twin prime](./prime-numbers/twin-prime.md)
       - [My own theorem](./prime-numbers/my-own-theorem.md)
 - [Nonprime numbers]()
   - [Pythagorean Theorem](./pythagorean-theorem.md)
