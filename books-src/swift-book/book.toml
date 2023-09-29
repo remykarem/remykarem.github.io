@@ -1,0 +1,34 @@
+[book]
+authors = ["Raimi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Swift Book"
+
+[output.html]
+site-url = "/books/swift-book"  # this is for mathy books. for non-mathy, use "/books/your-book"
+mathjax-support = true
+git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/swift-book/{path}"  # change your-book
+additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
+default-theme = "frappé"
+preferred-dark-theme = "macchiato"
+no-section-label = true
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[build]
+build-dir = "../../books/swift-book"  # this is for mathy books. for non-mathy, use "./html"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "2.0.1" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.catppuccin]
+assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
