@@ -49,6 +49,7 @@
     - [ChaCha20]()
   - [RSAES-OAEP](./primitives/encryption-algorithms/rsa.md)
   - [RSAES-PKCS1-v1_5]()
+  - [ECIES](./primitives/encryption-algorithms/ecies.md)
   - [ElGamal]()
 - [Authenticated encryption]()
   - [AES-GCM]()
