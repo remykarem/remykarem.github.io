@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Page not found - Swift Book</title>
-        <base href="/books/swift-book">
+        <title>Optionals - Swift Book</title>
 
 
         <!-- Custom HTML head -->
@@ -87,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="optionals.html">Optionals</a></li><li class="chapter-item expanded "><a href="object-oriented-programming.html">Object-oriented programming</a></li><li class="chapter-item expanded "><a href="protocol-oriented-programming.html">Protocol-oriented programming</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="optionals.html" class="active">Optionals</a></li><li class="chapter-item expanded "><a href="object-oriented-programming.html">Object-oriented programming</a></li><li class="chapter-item expanded "><a href="protocol-oriented-programming.html">Protocol-oriented programming</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -129,6 +128,9 @@
                         <a href="https://github.com/remykarem/remykarem.github.io" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
+                        <a href="https://github.com/remykarem/remykarem.github.io/edit/main/books/swift-book/src/optionals.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -155,14 +157,46 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="optionals"><a class="header" href="#optionals">Optionals</a></h1>
+<h2 id="optional-binding"><a class="header" href="#optional-binding">Optional binding</a></h2>
+<p>Find out if an optional contains a value, and if so, make that value available
+Binding the value to the constant
+Common to name the constant same as the optional. Only exists in the scope
+Can comma-separate bindings</p>
+<aside>
+💡 Similar to safe calls `?.` in Kotlin.
+</aside>
+<p>Use <code>if let</code>:</p>
+<pre><code class="language-swift">if let catAge = catAge {
+    print(&quot;The cat is \(catAge) years old&quot;)
+} else {
+    print(&quot;Cat is ageless. Beware.&quot;)
+}
+</code></pre>
+<h2 id="guard-statement"><a class="header" href="#guard-statement">Guard statement</a></h2>
+<p>This uses <code>guard let</code>, similar to <code>if let</code> but only used in functions</p>
+<pre><code class="language-swift">func printCatInfo(catName: String?, catAge: Int?) {
+    guard let catName = catName, let catAge = catAge else {
+        print(&quot;No cat or name&quot;)
+        return
+    }
+    print(&quot;The cat is \(catName) and is \(catAge)&quot;)
+}
+printCatInfo(catName: &quot;Ozma&quot;, catAge: 7)
+printCatInfo(catName: nil, catAge: 7)
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="preface.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
+                            <a rel="next" href="object-oriented-programming.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -170,7 +204,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="preface.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
+                    <a rel="next" href="object-oriented-programming.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>

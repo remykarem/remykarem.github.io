@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Page not found - Swift Book</title>
-        <base href="/books/swift-book">
+        <title>Protocol-oriented programming - Swift Book</title>
 
 
         <!-- Custom HTML head -->
@@ -87,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="optionals.html">Optionals</a></li><li class="chapter-item expanded "><a href="object-oriented-programming.html">Object-oriented programming</a></li><li class="chapter-item expanded "><a href="protocol-oriented-programming.html">Protocol-oriented programming</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="optionals.html">Optionals</a></li><li class="chapter-item expanded "><a href="object-oriented-programming.html">Object-oriented programming</a></li><li class="chapter-item expanded "><a href="protocol-oriented-programming.html" class="active">Protocol-oriented programming</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -129,6 +128,9 @@
                         <a href="https://github.com/remykarem/remykarem.github.io" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
+                        <a href="https://github.com/remykarem/remykarem.github.io/edit/main/books/swift-book/src/protocol-oriented-programming.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -155,13 +157,200 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="protocol-oriented-programming"><a class="header" href="#protocol-oriented-programming">Protocol-oriented programming</a></h1>
+<pre><code class="language-swift">protocol ExampleProtocol {
+    
+    // Property
+    var simpleDescription: String { get }
+    
+    func adjust()
+}
+class SimpleClass: ExampleProtocol {
+    var simpleDescription: String = &quot;a simple class&quot;
+    
+    func adjust() {
+        simpleDescription += &quot; Now adjusted.&quot;
+    }
+}
+var a = SimpleClass()
+a.adjust()
+let aDescription = a.simpleDescription
+</code></pre>
+<pre><code class="language-swift">// This allows you to encapsulate the functional concept in a way that doesn't require a base class
+
+/// Retrns
+///
+/// kmkdmfd?
+///
+///     let hjhh = kmk
+protocol Bird {
+    /// HHHcddc
+    var name: String { get }
+    /// Can or not
+    var canFly: Bool { get }
+}
+
+extension Bird {
+    
+    // Set the default behaviour to true whenever the type is also Flyable
+    var canFly: Bool {
+        return self is Flyable
+    }
+}
+
+// or protocol: Bird: CustomStringConvertible
+extension CustomStringConvertible where Self: Bird {
+    var description: String {
+        return canFly ? &quot;I can fly&quot; : &quot;Guess I'll just sit =(&quot;
+    }
+}
+
+/**
+The area of the `Shape` instance.
+
+Computation depends on the shape of the instance.
+For a triangle, `area` is equivalent to:
+
+    let height = triangle.calculateHeight()
+    let area = triangle.base * height / 2
+ */
+protocol Flyable {
+    var airspeedVelocity: Double { get }
+}
+
+struct FlappyBird: Bird, Flyable {
+    let name: String
+    let flappyFrequency: Double
+    let flappyAmplitude: Double
+    
+    var airspeedVelocity: Double {
+        return 3 * flappyFrequency * flappyAmplitude
+    }
+}
+
+struct Penguin: Bird {
+    let name: String
+}
+
+struct SwiftBird: Bird, Flyable {
+    var name: String {
+        return &quot;Swift \(version)&quot;
+    }
+    let version: Double
+    
+    var airspeedVelocity: Double {
+        return version * 1000.0
+    }
+}
+
+enum UnladenSwallow: Bird, Flyable {
+    case african, european, unknown
+    
+    var name: String {
+        switch self {
+        case .african:
+            return &quot;African&quot;
+        case .european:
+            return &quot;European&quot;
+        case .unknown:
+            return &quot;What do you mean? African or European?&quot;
+        }
+    }
+    
+    var airspeedVelocity: Double {
+        switch self {
+        case .african:
+            return 10.0
+        case .european:
+            return 9.9
+        case .unknown:
+            fatalError(&quot;You are thrown from the bridge of death!&quot;)
+        }
+    }
+}
+
+extension UnladenSwallow {
+    var canFly: Bool {
+        return self != .unknown
+    }
+}
+
+UnladenSwallow.african
+UnladenSwallow.african.canFly.description
+
+// Another class
+class Motorcycle {
+    init(name: String) {
+        self.name = name
+        speed = 200
+    }
+    var name: String
+    var speed: Double
+}
+
+// Bring it together
+protocol Racer {
+    var speed: Double { get }  // speed is the only thing racers care about
+}
+
+extension FlappyBird: Racer {
+    var speed: Double {
+        return airspeedVelocity
+    }
+}
+
+extension SwiftBird: Racer {
+    var speed: Double {
+        return airspeedVelocity
+    }
+}
+
+// MARK: - dcjdcn
+extension Penguin: Racer {
+    var speed: Double {
+        return 42  // full waddle speed
+    }
+}
+
+extension UnladenSwallow: Racer {
+    var speed: Double {
+        return canFly ? airspeedVelocity : 0
+    }
+}
+
+extension Motorcycle: Racer {}
+
+let racers: [Racer] =
+    [UnladenSwallow.african,
+     UnladenSwallow.european,
+     UnladenSwallow.unknown,
+     Penguin(name: &quot;King Penguin&quot;),
+     SwiftBird(version: 3.0),
+     FlappyBird(name: &quot;Felipe&quot;, flappyFrequency: 20.0, flappyAmplitude: 3.0),
+     Motorcycle(name: &quot;Giacomo&quot;)
+]
+
+/// Returns the magnitude of a vector in three dimensions
+/// from the given components.
+///
+/// You want to discuss? Discuss lah!
+///
+/// - Parameters:
+///     - racers: hbvhdsb
+func topSpeed(of racers: [Racer]) -&gt; Double {
+    return racers.max(by: { $0.speed &lt; $1.speed })?.speed ?? 0
+}
+
+topSpeed(of: racers) // 3000
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="object-oriented-programming.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
 
                         <div style="clear: both"></div>
@@ -170,6 +359,9 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="object-oriented-programming.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
             </nav>
 
