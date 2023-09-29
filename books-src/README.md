@@ -18,11 +18,11 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
 
 1. Go into `books-src`.
 
-2. Create a folder `books/your-book` and `cd` into it.
+2. Create a folder `your-book` and `cd` into it.
 
 3. Run `mdbook init`.
 
-4. Update the `books/your-book/book.toml` file with:
+4. Update the `your-book/book.toml` file with:
 
     ```toml
     [book]
