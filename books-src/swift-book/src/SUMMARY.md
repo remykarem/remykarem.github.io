@@ -1,3 +1,9 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+[Preface](./preface.md)
+
+---
+
+- [Optionals](./optionals.md)
+- [Object-oriented programming](./object-oriented-programming.md)
+- [Protocol-oriented programming](./protocol-oriented-programming.md)
