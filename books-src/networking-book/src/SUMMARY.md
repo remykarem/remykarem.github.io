@@ -44,6 +44,7 @@
   - [OpenVPN](./vpn/openvpn.md)
   - [WireGuard](./vpn/wireguard.md)
 - [Cloudflare tunnel]()
+- [Split tunnelling](./vpn/split-tunnelling.md)
 
 ---
 
