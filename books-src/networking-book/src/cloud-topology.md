@@ -2,6 +2,12 @@
 
 ![Cloud topology](./cloud-topology.png)
 
+### VPC 
+
+### Subnet
+
+A subnet is associated with a VPC.
+
 ### Internet gateway
 
 An Internet gateway is associated with a VPC.
