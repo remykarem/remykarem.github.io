@@ -1,6 +1,20 @@
 # Protocol-oriented programming
 
 ```swift
+protocol Flyable {
+  func fly()
+}
+```
+
+Unlike many languages, Swift's interfaces can define properties in the protocol.
+
+```swift
+protocol Flyable {
+  var name: String { get }
+}
+```
+
+```swift
 protocol ExampleProtocol {
     
     // Property

@@ -460,6 +460,15 @@ catty?.bestBuddy = Person(name: &quot;Dorothy&quot;)
 catty = nil
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="protocol-oriented-programming"><a class="header" href="#protocol-oriented-programming">Protocol-oriented programming</a></h1>
+<pre><code class="language-swift">protocol Flyable {
+  func fly()
+}
+</code></pre>
+<p>Unlike many languages, Swift's interfaces can define properties in the protocol.</p>
+<pre><code class="language-swift">protocol Flyable {
+  var name: String { get }
+}
+</code></pre>
 <pre><code class="language-swift">protocol ExampleProtocol {
     
     // Property
