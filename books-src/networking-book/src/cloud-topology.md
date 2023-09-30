@@ -2,6 +2,10 @@
 
 ![Cloud topology](./cloud-topology.png)
 
+### Route 53
+
+Mapping of domain name to AWS resource.
+
 ### VPC 
 
 ### Subnet
