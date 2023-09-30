@@ -168,18 +168,19 @@
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="cloud"><a class="header" href="#cloud">Cloud</a></h1>
 <p><img src="./cloud-topology.png" alt="Cloud topology" /></p>
-<h3 id="route-53"><a class="header" href="#route-53">Route 53</a></h3>
+<h2 id="route-53"><a class="header" href="#route-53">Route 53</a></h2>
 <p>Mapping of domain name to AWS resource.</p>
-<h3 id="vpc"><a class="header" href="#vpc">VPC</a></h3>
-<h3 id="subnet"><a class="header" href="#subnet">Subnet</a></h3>
+<h2 id="vpc"><a class="header" href="#vpc">VPC</a></h2>
+<p>...</p>
+<h2 id="subnet"><a class="header" href="#subnet">Subnet</a></h2>
 <p>A subnet is associated with a VPC.</p>
-<h3 id="internet-gateway"><a class="header" href="#internet-gateway">Internet gateway</a></h3>
+<h2 id="internet-gateway"><a class="header" href="#internet-gateway">Internet gateway</a></h2>
 <p>An Internet gateway is associated with a VPC.</p>
-<h3 id="nat-gateway"><a class="header" href="#nat-gateway">NAT gateway</a></h3>
+<h2 id="nat-gateway"><a class="header" href="#nat-gateway">NAT gateway</a></h2>
 <p>A NAT gateway must be associated with a public subnet. </p>
 <p>It is used to enable instances in a <em>private subnet</em> to initiate IPv4 outbound traffic to internet or other services. </p>
 <p>it only handles the inbound responses from those outbound requests. </p>
-<h3 id="route-table"><a class="header" href="#route-table">Route table</a></h3>
+<h2 id="route-table"><a class="header" href="#route-table">Route table</a></h2>
 <p>A <strong>main route table</strong> is created for a VPC by default. </p>
 <p>Any subnets created within this VPC can either be associated with either</p>
 <ul>

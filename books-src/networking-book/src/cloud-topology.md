@@ -2,21 +2,23 @@
 
 ![Cloud topology](./cloud-topology.png)
 
-### Route 53
+## Route 53
 
 Mapping of domain name to AWS resource.
 
-### VPC 
+## VPC
 
-### Subnet
+...
+
+## Subnet
 
 A subnet is associated with a VPC.
 
-### Internet gateway
+## Internet gateway
 
 An Internet gateway is associated with a VPC.
 
-### NAT gateway
+## NAT gateway
 
 A NAT gateway must be associated with a public subnet. 
 
@@ -24,7 +26,7 @@ It is used to enable instances in a _private subnet_ to initiate IPv4 outbound t
 
 it only handles the inbound responses from those outbound requests. 
 
-### Route table
+## Route table
 
 A **main route table** is created for a VPC by default. 
 
