@@ -2,6 +2,10 @@
 
 ![Cloud topology](./cloud-topology.png)
 
+### Internet gateway
+
+An Internet gateway is associated with a VPC.
+
 ### NAT gateway
 
 A NAT gateway must be associated with a public subnet. 
