@@ -2,7 +2,11 @@
 
 ![Cloud topology](./cloud-topology.png)
 
-NAT gateway isused to enable instances in a _private subnet_ to initiate IPv4 outbound traffic to internet or other services. 
+### NAT gateway
+
+A NAT gateway must be associated with a public subnet. 
+
+A NAT gateway is used to enable instances in a _private subnet_ to initiate IPv4 outbound traffic to internet or other services. 
 
 it only handles the inbound responses from those outbound requests. 
 
