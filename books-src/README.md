@@ -36,7 +36,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     site-url = "/books/your-book/html"  # this is for mathy books. for non-mathy, use "/books/your-book"
     mathjax-support = true
     git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
-    edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books/your-book/{path}"  # change your-book
+    edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/your-book/{path}"  # change your-book
     additional-css = ["last-changed.css"]
     default-theme = "frappé"
     preferred-dark-theme = "macchiato"
