@@ -154,6 +154,13 @@
 <p><img src="./cloud-topology.png" alt="Cloud topology" /></p>
 <p>NAT gateway isused to enable instances in a <em>private subnet</em> to initiate IPv4 outbound traffic to internet or other services. </p>
 <p>it only handles the inbound responses from those outbound requests. </p>
+<h3 id="route-table"><a class="header" href="#route-table">Route table</a></h3>
+<p>A <strong>main route table</strong> is created for a VPC by default. </p>
+<p>Any subnets created within this VPC can either be associated with either</p>
+<ul>
+<li>the main route table (default), or</li>
+<li>a <strong>custom route table</strong></li>
+</ul>
 
                     </main>
 

@@ -170,6 +170,13 @@
 <p><img src="./cloud-topology.png" alt="Cloud topology" /></p>
 <p>NAT gateway isused to enable instances in a <em>private subnet</em> to initiate IPv4 outbound traffic to internet or other services. </p>
 <p>it only handles the inbound responses from those outbound requests. </p>
+<h3 id="route-table"><a class="header" href="#route-table">Route table</a></h3>
+<p>A <strong>main route table</strong> is created for a VPC by default. </p>
+<p>Any subnets created within this VPC can either be associated with either</p>
+<ul>
+<li>the main route table (default), or</li>
+<li>a <strong>custom route table</strong></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="socket"><a class="header" href="#socket">Socket</a></h1>
 <p>A socket is a software object <em>provided by the OS</em> to allow applications to send and receive data across the network.</p>
 <pre><code>man 2 socket
@@ -232,7 +239,7 @@
 <li>Handling network interfaces</li>
 <li>Handling packet construction</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="route-table"><a class="header" href="#route-table">Route table</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="route-table-1"><a class="header" href="#route-table-1">Route table</a></h1>
 <p>Maps a <strong>destination address</strong> to the <strong>gateway</strong> (i.e. next hop IP address) or <strong>host</strong> (intended destination), which is tied to a particular network interface.</p>
 <p>This is maintained via a <strong>routing table</strong>:</p>
 <div class="table-wrapper"><table><thead><tr><th>Destination</th><th>Gateway / Host</th><th>Network interface</th></tr></thead><tbody>
