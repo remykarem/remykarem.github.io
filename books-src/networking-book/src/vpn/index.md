@@ -25,3 +25,7 @@ Using a separate interface for the VPN allows for more precise control over netw
 6. **VPN client encrypts data**
 
 7. **VPN server decrypts data**
+
+8. **VPN server forwards packets if needed**
+
+   The VPN server checks its own routing table to determine whether the packet should be forwarded.
