@@ -87,7 +87,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="optionals.html">Optionals</a></li><li class="chapter-item expanded "><a href="object-oriented-programming.html">Object-oriented programming</a></li><li class="chapter-item expanded "><a href="protocol-oriented-programming.html">Protocol-oriented programming</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><div>Control flow</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="control-flow/guard-statement.html">Guard statement</a></li></ol></li><li class="chapter-item expanded "><a href="optionals.html">Optionals</a></li><li class="chapter-item expanded "><a href="object-oriented-programming.html">Object-oriented programming</a></li><li class="chapter-item expanded "><a href="protocol-oriented-programming.html">Protocol-oriented programming</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -157,6 +157,7 @@
                     <main>
                         <h1 id="preface"><a class="header" href="#preface">Preface</a></h1>
 <p><a href="http://nilhcem.com/swift-is-like-kotlin/">http://nilhcem.com/swift-is-like-kotlin/</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="guard-statement"><a class="header" href="#guard-statement">Guard statement</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="optionals"><a class="header" href="#optionals">Optionals</a></h1>
 <h2 id="optional-binding"><a class="header" href="#optional-binding">Optional binding</a></h2>
 <p>Find out if an optional contains a value, and if so, make that value available
@@ -191,7 +192,7 @@ Can comma-separate bindings</p>
     print(&quot;Cat is ageless. Beware.&quot;)
 }
 </code></pre>
-<h2 id="guard-statement"><a class="header" href="#guard-statement">Guard statement</a></h2>
+<h2 id="guard-statement-1"><a class="header" href="#guard-statement-1">Guard statement</a></h2>
 <p>This uses <code>guard let</code>, similar to <code>if let</code> but only used in functions</p>
 <pre><code class="language-swift">func printCatInfo(catName: String?, catAge: Int?) {
     guard let catName = catName, let catAge = catAge else {
