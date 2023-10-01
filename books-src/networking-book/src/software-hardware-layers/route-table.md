@@ -2,6 +2,10 @@
 
 Maps a **destination address** to the **gateway** (i.e. next hop IP address) or **host** (intended destination), which is tied to a particular network interface.
 
+~~~admonish info title="OSI model"
+Routing is parked under OSI Layer 3.
+~~~
+
 This is maintained via a **routing table**:
 
 | Destination | Gateway / Host       | Network interface |
