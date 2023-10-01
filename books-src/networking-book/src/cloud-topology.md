@@ -34,6 +34,12 @@ Any subnets created within this VPC can either be associated with either
 * the main route table (default), or
 * a **custom route table**
 
+## VPC peering
+
+A network connection between two VPCs.
+
+New routes should be added to the VPC's route table to specify which traffic should traverse the peering connection.
+
 ## Network ACL
 
 A Network ACL is associated with a subnet.
