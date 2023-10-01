@@ -26,6 +26,10 @@ It is used to enable instances in a _private subnet_ to initiate IPv4 outbound t
 
 it only handles the inbound responses from those outbound requests. 
 
+## Virtual Private Gateway
+
+## VPN as a gateway
+
 ## Route table
 
 A **main route table** is created for a VPC by default. 
