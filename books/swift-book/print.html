@@ -207,6 +207,24 @@ printCatInfo(catName: &quot;Ozma&quot;, catAge: 7)
 printCatInfo(catName: nil, catAge: 7)
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="read-only-computed-properties"><a class="header" href="#read-only-computed-properties">Read-only computed properties</a></h1>
+<p>Read-only computed properties are defined with <code>var</code>.</p>
+<pre><code class="language-swift">struct Person {
+    let name: String
+    var greeting: String {
+        &quot;Good morning, I am \(name)&quot;
+    }
+}
+</code></pre>
+<p>which is shorthand for</p>
+<pre><code class="language-swift">struct Person {
+    let name: String
+    var greeting: String {
+        get {
+            &quot;Good morning, I am \(name)&quot;
+        }
+    }
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="object-oriented-programming"><a class="header" href="#object-oriented-programming">Object-oriented programming</a></h1>
 <pre><code class="language-swift">class Animal {
     let name: String
