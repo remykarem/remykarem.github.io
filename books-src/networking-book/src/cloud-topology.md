@@ -34,3 +34,14 @@ Any subnets created within this VPC can either be associated with either
 * the main route table (default), or
 * a **custom route table**
 
+## Network ACL
+
+A Network ACL is associated with a subnet.
+
+## Security group
+
+A security group is associated with a resource / EC2 instance.
+
+## ENI
+
+An Elastic Network Interface is associated with an instance. More than one ENIs can be attached to an instance. 
