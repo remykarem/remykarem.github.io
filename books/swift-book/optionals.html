@@ -173,6 +173,24 @@ Can comma-separate bindings</p>
     print(&quot;Cat is ageless. Beware.&quot;)
 }
 </code></pre>
+<p>Instead of</p>
+<pre><code class="language-swift">if let catAge = catAge {
+    if catAge != 0 {
+        print(&quot;The cat is \(catAge) years old&quot;)
+    } else {
+        print(&quot;Cat is ageless. Beware.&quot;)
+    }
+} else {
+    print(&quot;Cat is ageless. Beware.&quot;)
+}
+</code></pre>
+<p>we can combine</p>
+<pre><code class="language-swift">if let catAge = catAge, catAge != 0 {
+    print(&quot;The cat is \(catAge) years old&quot;)
+} else {
+    print(&quot;Cat is ageless. Beware.&quot;)
+}
+</code></pre>
 <h2 id="guard-statement"><a class="header" href="#guard-statement">Guard statement</a></h2>
 <p>This uses <code>guard let</code>, similar to <code>if let</code> but only used in functions</p>
 <pre><code class="language-swift">func printCatInfo(catName: String?, catAge: Int?) {

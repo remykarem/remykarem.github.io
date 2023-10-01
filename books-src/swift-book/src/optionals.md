@@ -22,6 +22,30 @@ if let catAge = catAge {
 }
 ```
 
+Instead of
+
+```swift
+if let catAge = catAge {
+    if catAge != 0 {
+        print("The cat is \(catAge) years old")
+    } else {
+        print("Cat is ageless. Beware.")
+    }
+} else {
+    print("Cat is ageless. Beware.")
+}
+```
+
+we can combine
+
+```swift
+if let catAge = catAge, catAge != 0 {
+    print("The cat is \(catAge) years old")
+} else {
+    print("Cat is ageless. Beware.")
+}
+```
+
 ## Guard statement
 
 This uses `guard let`, similar to `if let` but only used in functions
