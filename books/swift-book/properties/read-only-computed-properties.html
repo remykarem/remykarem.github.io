@@ -176,6 +176,33 @@
     }
 }
 </code></pre>
+<div id="admonition-computed-property-vs-function" class="admonition tip">
+<div class="admonition-title">
+<p>Computed property vs. function</p>
+<p><a class="admonition-anchor-link" href="#admonition-computed-property-vs-function"></a></p>
+</div>
+<div>
+<p>This</p>
+<pre><code class="language-swift">struct Person {
+    let name: String
+
+    var greeting: String {
+        &quot;Good morning, I am \(name)&quot;
+    }
+}
+</code></pre>
+<p>is probably more readable than</p>
+<pre><code class="language-swift">struct Person {
+    let name: String
+
+    func getGreeting() -&gt; String {
+        &quot;Good morning, I am \(name)&quot;
+    }
+}
+</code></pre>
+<p>except that the called might not be aware that the property is computed.</p>
+</div>
+</div>
 
                     </main>
 
