@@ -56,6 +56,10 @@ A security group is associated with a resource / EC2 instance.
 
 An Elastic Network Interface is associated with an instance. More than one ENIs can be attached to an instance. 
 
+An ENI is automatically created for every EC2 instance.
+
 ## WAF
 
 ...
+
+## VPC endpoint
