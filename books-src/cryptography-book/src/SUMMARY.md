@@ -72,9 +72,8 @@
 - [RSA](./cryptosystems/rsa/index.md)
 - [ECC](./cryptosystems/ecc/index.md)
 - [DSA](./cryptosystems/dsa.md)
-- [ElGamal]()
 - [PGP](./cryptosystems/pgp.md)
-- [GPG]()
+- [ElGamal]()
 
 ---
 
