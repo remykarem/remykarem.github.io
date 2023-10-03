@@ -79,9 +79,7 @@ NoSQL databases might not prioritise this.
 
 ### Consistency (in CAP theorem)
 
-```admonish note
-Consistency here refers to every read from the database receiving the _most recent write_ or an error.
-```
+Every _read_ request **returns the most recent write**.
 
 In SQL databases, databases can achieve immediate consistency.
 
@@ -89,8 +87,8 @@ In NoSQL databases, achieving this is challenging due to delays and failures in 
 
 ### Availability (in CAP theorem)
 
-SQL databases _can_ be highly available, but this involves implementing some methods like replication, failover, clustering and load balancing.
+Every request (read or write) **receives a non-error response**.
 
-NoSQL databases are _designed_ to provide high availability.
+### Partial Tolerance (in CAP theorem)
 
-### Partial ??? (in CAP theorem)
+The system **continues to operate despite any network failures**.
