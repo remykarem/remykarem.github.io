@@ -26,6 +26,7 @@
   - [DLQ](./components/queue/dlq.md)
   - [Cache]()
   - [Firewall]()
+  - [Lambda](./components/serverless-compute-service.md)
   - [Compute]()
   - [Database](./components/database.md)
   - [API gateway](./components/api-gateway.md)
