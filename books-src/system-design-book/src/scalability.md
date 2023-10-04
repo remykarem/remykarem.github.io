@@ -1,7 +1,5 @@
 # Scalability
 
-The ability of a system to **adapt to increased workloads**.
-
-This is done by adding more resources, such as additional servers, databases, or services.
+The ability of a system to **adapt to increased or decreased workloads** by adding or removing **resources**.
 
 Pricing is also a factor for consideration. 
