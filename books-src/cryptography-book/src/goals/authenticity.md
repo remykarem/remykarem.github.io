@@ -1,8 +1,10 @@
 # Authenticity
 
-**Authenticity** is ensures that something is _genuine_ ("real", "not fake") and _can be trusted_. This implies that the information comes from a _verified source_.
+**Authenticity** ensures that a _party is genuine_ ("real", "not fake") and _can be trusted_. This implies that the information comes from a _verified source_.
 
-Authenticity prevents impersonation.
+Authenticity thus prevents impersonation.
+
+
 
 ~~~admonish note title ="Authentication vs. authenticity"
 Authentication is a procedure to ensure authenticity — it verifies the identity of a party.
