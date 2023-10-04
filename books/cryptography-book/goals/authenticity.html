@@ -163,6 +163,26 @@
 <h1 id="authenticity"><a class="header" href="#authenticity">Authenticity</a></h1>
 <p><strong>Authenticity</strong> ensures that a <em>party is genuine</em> (&quot;real&quot;, &quot;not fake&quot;) and <em>can be trusted</em>. This implies that the information comes from a <em>verified source</em>.</p>
 <p>Authenticity thus prevents impersonation.</p>
+<div id="admonition-violation-of-authenticity-replay-attack" class="admonition warning">
+<div class="admonition-title">
+<p>Violation of authenticity: Replay attack</p>
+<p><a class="admonition-anchor-link" href="#admonition-violation-of-authenticity-replay-attack"></a></p>
+</div>
+<div>
+<p>Authenticity is violated when impersonation occurs.</p>
+<p>An example is when an attacker impersonates a legitimate user by replaying their past messages. This is called a replay attack.</p>
+</div>
+</div>
+<div id="admonition-violation-of-authenticity-private-key-compromise" class="admonition warning">
+<div class="admonition-title">
+<p>Violation of authenticity: Private key compromise</p>
+<p><a class="admonition-anchor-link" href="#admonition-violation-of-authenticity-private-key-compromise"></a></p>
+</div>
+<div>
+<p>Authenticity is violated when impersonation occurs.</p>
+<p>This can happen when a private key is compromised and is used bu an adversary to generate a signed message.</p>
+</div>
+</div>
 <div id="admonition-authentication-vs-authenticity" class="admonition note">
 <div class="admonition-title">
 <p>Authentication vs. authenticity</p>
@@ -170,15 +190,6 @@
 </div>
 <div>
 <p>Authentication is a procedure to ensure authenticity — it verifies the identity of a party.</p>
-</div>
-</div>
-<div id="admonition-authentication-failure" class="admonition example">
-<div class="admonition-title">
-<p>Authentication failure</p>
-<p><a class="admonition-anchor-link" href="#admonition-authentication-failure"></a></p>
-</div>
-<div>
-<p>An example of an authentication failure is when an attacker impersonates a legitimate user by replaying their past messages. This is called a replay attack.</p>
 </div>
 </div>
 <p>Authenticity is typically achieved using digital signatures or MACs.</p>
