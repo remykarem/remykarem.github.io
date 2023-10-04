@@ -2,7 +2,7 @@
 
 [RFC 5208](https://datatracker.ietf.org/doc/html/rfc5208)
 
-PKCS #8 applies to all PKI keys. It provides an option to encrypt the private key.
+PKCS #8 is a format that is commonly used for many public-private keys. It provides an option to encrypt the private key.
 
 A private key is defined in [Section 5](https://datatracker.ietf.org/doc/html/rfc5208#section-5):
 
