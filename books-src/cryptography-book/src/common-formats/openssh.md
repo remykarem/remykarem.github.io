@@ -12,3 +12,5 @@ The OpenSSH format is used to represent private and public keys that are used fo
 ssh-rsa AAAAB...
 ```
 ~~~
+
+[OpenSSH private key binary format](http://dnaeon.github.io/openssh-private-key-binary-format/)
