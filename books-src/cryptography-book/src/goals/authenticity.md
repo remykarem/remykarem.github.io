@@ -13,7 +13,7 @@ An example is when an attacker impersonates a legitimate user by replaying their
 ~~~admonish warning title="Violation of authenticity: Private key compromise"
 Authenticity is violated when impersonation occurs.
 
-This can happen when a private key is compromised and is used bu an adversary to generate a signed message.
+This can happen when a private key is compromised and is used by another party to generate a signed message.
 ~~~
 
 ~~~admonish note title ="Authentication vs. authenticity"
