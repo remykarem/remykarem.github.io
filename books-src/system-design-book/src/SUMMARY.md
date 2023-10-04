@@ -4,26 +4,44 @@
 
 ---
 
+# In the event of
+
+- [Why systems fail](./why-systems-fail.md)
+
+---
+
 # Goals
 
 - [Scalability](./scalability.md)
 - [Availability](./availability.md)
 - [Performance](./performance.md)
+- [Fault tolerance?](./fault-tolerance.md)
 
 ---
 
-# Techniques
+# Strategies
 
-- [Coupling, isolation]()
-- [Fault tolerance](./fault-tolerance.md)
-- [Replication](./replication.md)
+- [Caching](./components/caching.md)
 - [Redundancy](./redundancy.md)
+- [Replication](./replication.md)
+- [Auto-scaling]()
+- [Rate limiting](./components/rate-limiting.md)
+- [Load balancing](./components/load-balancing.md)
+- [Coupling, isolation]()
+- [Logging & monitoring](./components/logging-and-monitoring.md)
 
 ---
 
-# In the event of
+# Traits
 
-- [Why systems fail](./why-systems-fail.md)
+- [Routing](./components/routing.md)
+- [Scheduling](./components/scheduling.md)
+- [Data storage](./components/data-storage.md)
+- [Identity hiding](./components/identity-hiding.md)
+- [Concurrency control](./components/concurrency-control.md)
+- [Control outgoing requests](./components/control-outgoing-requests.md)
+- [SSL encryption & decryption](./components/ssl-encryption-and-decryption.md)
+- [Authentication & authorisation](./components/authentication-and-authorisation.md)
 
 ---
 
@@ -42,35 +60,21 @@
 
 ---
 
-# Components
+# Services / components / resources / structural
 
-- [Structural]()
-  - [CDN](./components/cdn.md)
-  - [DLQ](./components/queue/dlq.md)
-  - [Cache]()
-  - [Firewall]()
-  - [Lambda](./components/serverless-compute-service.md)
-  - [Compute]()
-  - [Database](./components/database.md)
-  - [API gateway](./components/api-gateway.md)
-  - [Forward proxy](./components/forward-proxy.md)
-  - [Message queue](./components/queue/index.md)
-  - [Message broker](./components/message-broker.md)
-  - [Event bus service](./components/event-bus-service.md)
-  - [Reverse proxy ("load balancer")](./components/reverse-proxy.md)
-- [Traits]()
-  - [Caching](./components/caching.md)
-  - [Routing](./components/routing.md)
-  - [Scheduling](./components/scheduling.md)
-  - [Data storage](./components/data-storage.md)
-  - [Rate limiting](./components/rate-limiting.md)
-  - [Identity hiding](./components/identity-hiding.md)
-  - [Load balancing](./components/load-balancing.md)
-  - [Concurrency control](./components/concurrency-control.md)
-  - [Logging & monitoring](./components/logging-and-monitoring.md)
-  - [Control outgoing requests](./components/control-outgoing-requests.md)
-  - [SSL encryption & decryption](./components/ssl-encryption-and-decryption.md)
-  - [Authentication & authorisation](./components/authentication-and-authorisation.md)
+- [CDN](./components/cdn.md)
+- [DLQ](./components/queue/dlq.md)
+- [Cache]()
+- [Firewall]()
+- [Lambda](./components/serverless-compute-service.md)
+- [Compute]()
+- [Database](./components/database.md)
+- [API gateway](./components/api-gateway.md)
+- [Forward proxy](./components/forward-proxy.md)
+- [Message queue](./components/queue/index.md)
+- [Message broker](./components/message-broker.md)
+- [Event bus service](./components/event-bus-service.md)
+- [Reverse proxy ("load balancer")](./components/reverse-proxy.md)
 
 ---
 
