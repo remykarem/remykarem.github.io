@@ -11,7 +11,8 @@ PrivateKeyInfo ::= SEQUENCE {
     version                   Version,
     privateKeyAlgorithm       PrivateKeyAlgorithmIdentifier,
     privateKey                PrivateKey,
-    attributes           [0]  IMPLICIT Attributes OPTIONAL }
+    attributes           [0]  IMPLICIT Attributes OPTIONAL
+}
 ```
 
 ```admonish question title="Public keys"
