@@ -2,11 +2,11 @@
 
 The core concepts of system design are the fundamental building blocks that are used to design, build, and maintain complex systems. Some of the core concepts of system design include:
 
-**Scalability**: The ability of a system to *handle increased loads* by adding more resources, such as additional servers, databases, or services.
+**Scalability**
 
-**Availability**: The ability of a system to remain operational and accessible, even *in the face of failures or other disruptions*.
+**Availability**
 
-**Performance**: The ability of a system to respond quickly and efficiently to requests, and to handle high volumes of traffic.
+**Performance**
 
 Capacity planning: The process of determining the resources needed to support a system, and of ensuring that those resources are available and properly configured.
 
