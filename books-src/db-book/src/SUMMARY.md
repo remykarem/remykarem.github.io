@@ -90,7 +90,7 @@
 - [ACID](./concurrency/acid.md)
 - [Timestamp ordering]()
 - [MVCC]()
-- [Locking]()
+- [Locking](./concurrency/locking.md)
   - [Transaction lock]()
   - [Two-phase locking]()
 - [Logging]()
