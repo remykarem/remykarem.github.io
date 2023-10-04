@@ -1,6 +1,6 @@
 # Authenticity
 
-**Authenticity** is a property of information that guarantees it is _genuine_ and _can be trusted_. This implies that the information comes from a _verified source_.
+**Authenticity** is a property of information that guarantees it is _genuine_ ("real", "not fake") and _can be trusted_. This implies that the information comes from a _verified source_.
 
 **Authentication** procedure can ensure authenticity — it verifies the identity of a party.
 
