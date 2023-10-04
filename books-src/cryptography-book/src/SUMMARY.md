@@ -7,9 +7,9 @@
 # Primary goals
 
 - [Authenticity](./goals/authenticity.md)
+- [Non-repudiation](./goals/non-repudiation.md)
 - [Confidentiality](./goals/confidentiality.md)
 - [Integrity](./goals/integrity.md)
-- [Non-repudiation](./goals/non-repudiation.md)
 - [Anonymity and privacy]()
 - [Forward secrecy]()
 
