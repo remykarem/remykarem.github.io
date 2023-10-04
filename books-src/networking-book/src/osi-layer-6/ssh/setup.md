@@ -2,9 +2,9 @@
 
 For this protocol to work, **3 asymmetric key pairs** are at play:
 
-## 1. Server's host key pair (permanent)
+## 1. Host key pair (permanent)
 
-The private key, held by the server, is used to identify the server, typically stored in `/etc/ssh`.
+The private key, held by the server, is used to identify the server. It is typically stored in `/etc/ssh`.
 
 These keys should be automatically created when installing SSH on the server (?), so no generation is required.
 
@@ -16,20 +16,33 @@ This can be RSA, ECDSA, ED25519 etc.
 
 The public key is shared with the client _during the initial connection_. The client then stores this key typically in `~/.ssh/known_hosts`.
 
-
 ~~~admonish warning title="Trust On First Use"
 The server should ideally share this public key with the clients _out-of-band_ prior to any SSH connections.
 
-Otherwise, the client is left to blindly trust the server on first connection.
+Otherwise, the client is left to blindly trust the server on first connection. The client is then susceptible to MITM attack.
 ~~~
 
-## 2. Client's key pair (permanent)
+~~~admonish question title="What's a good practice then?"
+1. Get the host fingerprint out-of-band.
+
+2. Connect to the SSH.
+
+3. When it prompts for
+
+    ```
+    Are you sure you want to continue connecting (yes/no/[fingerprint])?
+    ```
+
+    paste the fingerprint instead of typing `yes` or `no`.
+~~~
+
+## 2. "SSH key pair" (permanent)
 
 The private key, held by the client, is used for authenticating with the server.
 
 The public key, should be shared with the server out-of-band prior to any SSH connection. This is typically stored in `~/.ssh/authorized_keys` at the server.
 
-## 3. Ephemeral key pair
+## 3. Session key pair (ephemeral)
 
 The client and the server _each_ will have to generate a key pair for every SSH session.
 
