@@ -3,7 +3,7 @@ authors = ["Raimi"]
 language = "en"
 multilingual = false
 src = "src"
-title = "system-design-book"
+title = "System Design Book"
 
 [output.html]
 site-url = "/books/system-design-book/"
