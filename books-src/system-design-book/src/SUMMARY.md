@@ -1,6 +1,9 @@
 # Summary
 
 [Preface](./preface.md)
+[Scalability](./scalability.md)
+[Availability](./availability.md)
+[Performance](./performance.md)
 
 ---
 
