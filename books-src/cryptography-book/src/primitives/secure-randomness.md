@@ -1,5 +1,7 @@
 # Cryptographically secure random bytes
 
+We wanna make sure that attackers cannot find any pattern from the encryption (using **randomness** aka high entropy, dependent on the encryption algorithm)
+
 ~~~admonish example title="*nix"
 Use `/dev/urandom`.
 

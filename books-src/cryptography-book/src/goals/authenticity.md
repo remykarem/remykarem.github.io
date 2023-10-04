@@ -2,18 +2,20 @@
 
 **Authenticity** ensures that a _party is genuine_ ("real", "not fake") and _can be trusted_. This implies that the information comes from a _verified source_.
 
-Authenticity thus prevents impersonation.
-
-~~~admonish warning title="Violation of authenticity: Replay attack"
-Authenticity is violated when impersonation occurs.
-
-An example is when an attacker impersonates a legitimate user by replaying their past messages. This is called a replay attack.
+~~~admonish note title="Trusted party"
+A trusted party does not have to be a single entity. It could be a group of entities — as long as they are all trusted.
 ~~~
 
-~~~admonish warning title="Violation of authenticity: Private key compromise"
-Authenticity is violated when impersonation occurs.
+Authenticity thus prevents impersonation.
 
-This can happen when a private key is compromised and is used by another party to generate a signed message.
+Worded differently, authenticity is violated when impersonation occurs.
+
+~~~admonish warning title="Violation of authenticity: Replay attack"
+When an attacker impersonates a legitimate user by replaying their past messages.
+~~~
+
+~~~admonish warning title="Violation of authenticity: Private key / shared secret compromise"
+This can happen when a private key or shared secret is compromised and is used by another unintended party to generate a signed message.
 ~~~
 
 ~~~admonish note title ="Authentication vs. authenticity"
