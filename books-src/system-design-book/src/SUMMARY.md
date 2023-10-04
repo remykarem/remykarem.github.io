@@ -1,13 +1,33 @@
 # Summary
 
 [Preface](./preface.md)
-[Scalability](./scalability.md)
-[Availability](./availability.md)
-[Performance](./performance.md)
 
 ---
 
-# System architectural patterns
+# Goals
+
+- [Scalability](./scalability.md)
+- [Availability](./availability.md)
+- [Performance](./performance.md)
+
+---
+
+# Techniques
+
+- [Coupling, isolation]()
+- [Fault tolerance](./fault-tolerance.md)
+- [Replication](./replication.md)
+- [Redundancy](./redundancy.md)
+
+---
+
+# In the event of
+
+- [Why systems fail](./why-systems-fail.md)
+
+---
+
+# System architectural patterns (coupling patterns?)
 
 - [Single unit]()
   - [Monolithic]()
@@ -46,6 +66,7 @@
   - [Rate limiting](./components/rate-limiting.md)
   - [Identity hiding](./components/identity-hiding.md)
   - [Load balancing](./components/load-balancing.md)
+  - [Concurrency control](./components/concurrency-control.md)
   - [Logging & monitoring](./components/logging-and-monitoring.md)
   - [Control outgoing requests](./components/control-outgoing-requests.md)
   - [SSL encryption & decryption](./components/ssl-encryption-and-decryption.md)
