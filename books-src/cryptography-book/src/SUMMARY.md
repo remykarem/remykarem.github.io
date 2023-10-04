@@ -8,15 +8,21 @@
 
 - [Authenticity](./goals/authenticity.md)
 - [Non-repudiation](./goals/non-repudiation.md)
-- [Confidentiality](./goals/confidentiality.md)
 - [Integrity](./goals/integrity.md)
+- [Confidentiality](./goals/confidentiality.md)
 - [Anonymity and privacy]()
 - [Forward secrecy]()
 
 ---
 
-# Primitives
+# Cryptographic keys
 
+- [Shared secret]()
+- [Private-public key pair](./cryptographic-keys/private-public-key-pair.md)
+
+---
+
+# Algorithms, primitives
 
 - [Secure randomness](./primitives/secure-randomness.md)
 - [Cryptographic hash functions](./primitives/cryptographic-hash-functions/index.md)
@@ -108,7 +114,8 @@
     - [ASN.1 DER](./common-formats/der.md)
     - [JWK / JWKS](./common-formats/jwk.md)
     - [JKS](./common-formats/jks.md)
-    - [OpenSSH](./common-formats/openssh.md)
+    - [OpenSSH public key format](./common-formats/openssh-public-key-format.md)
+    - [openssh-key-v1](./common-formats/openssh-key-v1.md)
     - [JWT](./common-formats/jwt.md)
     - [SAML token](./common-formats/saml-token.md)
 - [Other standards](./standards.md)
@@ -121,7 +128,9 @@
 
 ---
 
-# Scenarios?
+# Scenarios
+
+- [Scenarios](./scenarios.md)
 
 ---
 
