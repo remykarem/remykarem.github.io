@@ -1,5 +1,7 @@
-# Formats
+# ASN.1 schemas
 
-"Formats" define the data structure of the cryptographic objects.
+Private and public key data are often encoded into binary using the ASN.1 DER encoding rules.
 
-Java calls these "key specs."
+Additionally, these binaries are also usually converted into the Base64 format.
+
+The data that is encoded depends on the schemas used (e.g. PKCS #8).
