@@ -162,7 +162,18 @@
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="non-repudiation"><a class="header" href="#non-repudiation">Non-repudiation</a></h1>
 <p>Non-repudiation is a property of information that ensures a party, which has signed a document digitally or sent a message, <em>cannot later deny</em> having done so.</p>
+<p>This means that there must <em>only be one party</em> that has performed the signing or sending the message. </p>
 <p>This relies on the ownership of a key strictly unique to a party and not meant to be shared (&quot;<strong>private key</strong>&quot;).</p>
+<div id="admonition-example" class="admonition example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<p>If a private key is shared, then the non-repudiation property is violated.</p>
+<p>This means the original holder of the private key denies having done something (a bad thing) because they shared the key with another party.</p>
+</div>
+</div>
 
                     </main>
 
