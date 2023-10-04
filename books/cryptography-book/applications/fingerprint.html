@@ -170,10 +170,10 @@
 <h2 id="ssh-key-pair"><a class="header" href="#ssh-key-pair">SSH key pair</a></h2>
 <p>You can use SSH fingerprints to compare between any two keys. A key pair should have the same fingerprint.</p>
 <p>? Not sure what values these fingerprints are based on.</p>
-<pre><code class="language-bash">ssh-keygen -l -E &lt;hash&gt; -f &lt;key&gt;
+<pre><code class="language-bash">ssh-keygen -l -v -E sha256 -f &lt;filepath&gt;
 </code></pre>
-<p>SSH has a cute way to represent keys visually:</p>
-<pre><code class="language-bash">ssh-keygen -l -v -f &lt;key&gt;
+<p>ssh-keygen can also represent keys visually:</p>
+<pre><code class="language-bash">ssh-keygen -l -v -f &lt;filepath&gt;
 </code></pre>
 
                     </main>
