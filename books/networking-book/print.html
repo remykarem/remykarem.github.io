@@ -1085,6 +1085,32 @@ ttl=
 <p>It doesn't use the remote shell access capabilities of SSH.</p>
 </div>
 </div>
+<p>The SFTP protocol defines a variety of operations for file transfer and manipulation.</p>
+<div class="table-wrapper"><table><thead><tr><th>operation</th><th>sftp cli client</th></tr></thead><tbody>
+<tr><td>open</td><td></td></tr>
+<tr><td>close</td><td></td></tr>
+<tr><td>read</td><td></td></tr>
+<tr><td>write</td><td></td></tr>
+<tr><td>remove</td><td>rm</td></tr>
+<tr><td>mkdir</td><td>mkdir</td></tr>
+<tr><td>rmdir</td><td>rmdir</td></tr>
+<tr><td>stat</td><td>ls, lstat</td></tr>
+<tr><td>setstat</td><td>chmod, chown</td></tr>
+<tr><td>fstat</td><td></td></tr>
+<tr><td>rename</td><td>rename</td></tr>
+<tr><td>readlink</td><td></td></tr>
+<tr><td>symlink</td><td>ln</td></tr>
+<tr><td>realpath</td><td></td></tr>
+</tbody></table>
+</div><div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="osi-layer-7/sftp.html#admonition-note"></a></p>
+</div>
+<div>
+<p>The operations seem oddly similar to UNIX file syscalls.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="websocket"><a class="header" href="#websocket">WebSocket</a></h1>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</a></p>
 <p><code>ws://</code></p>
