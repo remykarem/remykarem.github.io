@@ -155,27 +155,50 @@
                         <h1 id="system-calls"><a class="header" href="#system-calls">System calls</a></h1>
 <p><code>man -k .</code>  Get system calls</p>
 <p><strong>File descriptors and opening files</strong></p>
-<pre><code class="language-c">#include &lt;fcntl.h&gt;
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;fcntl.h&gt;
 #include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
 #include &lt;stdio.h&gt;
 
-int fd1, fd2;
+int main() {
 
-fd1 = open(&quot;hello.txt&quot;, O_RDONLY);
-if (fd1 &lt; 0) {
-perror(&quot;c1&quot;);
-exit(1);
+  int fd;
+  struct stat file_stat;
+  const char *filename = &quot;hello.txt&quot;;
+
+  // Open the file
+  fd = open(filename, O_RDONLY);
+  if (fd &lt; 0) {
+    perror(&quot;c1&quot;);
+    return 1;
   }
 
-fd2 = open(&quot;hello.txt&quot;, O_RDONLY);
-if (fd2 &lt; 0) {
-perror(&quot;c1&quot;);
-exit(1);
+  // File attributes
+  if (stat(filename, &amp;file_stat) == -1) {
+      perror(&quot;stat&quot;);
+      return 1;
   }
+  printf(&quot;File: %s\n&quot;, filename);
+  printf(&quot;Size: %lld bytes\n&quot;, (long long) file_stat.st_size);
+  printf(&quot;Permissions: %o\n&quot;, file_stat.st_mode &amp; 0777);
+  printf(&quot;Owner ID: %d\n&quot;, file_stat.st_uid);
+  printf(&quot;Group ID: %d\n&quot;, file_stat.st_gid);
+
+  // Close the file
+  if (close(fd) == -1) {
+    perror(&quot;Error closing the file&quot;);
+    return 2;
+  }
+
+  return 0;  
+}
 </code></pre>
 <h2 id="files"><a class="header" href="#files">Files</a></h2>
 <ul>
 <li><code>open</code></li>
+<li><code>close</code></li>
 <li><code>read</code></li>
 <li><code>write</code></li>
 <li><code>execve</code></li>
