@@ -13,6 +13,6 @@ Designed for
 Soecific to AWS:
 * **automatic scaling**
 
-~~~admonition example
+~~~admonish example
 AWS Lambda
 ~~~
