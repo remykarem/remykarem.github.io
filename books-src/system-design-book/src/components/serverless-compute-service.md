@@ -11,7 +11,7 @@ Designed for
 * short-lived operations — aligned with event-driven tasks that are _designed to respond quickly to changes_
 
 Soecific to AWS:
-* **automatic scaling**
+* [**automatic scaling**](../auto-scaling.md)
 
 ~~~admonish example
 AWS Lambda
