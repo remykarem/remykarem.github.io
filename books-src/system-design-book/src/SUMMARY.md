@@ -24,7 +24,7 @@
 - [Caching](./components/caching.md)
 - [Redundancy](./redundancy.md)
 - [Replication](./replication.md)
-- [Auto-scaling]()
+- [Auto-scaling](./auto-scaling.md)
 - [Rate limiting](./components/rate-limiting.md)
 - [Load balancing](./components/load-balancing.md)
 - [Coupling, isolation]()
