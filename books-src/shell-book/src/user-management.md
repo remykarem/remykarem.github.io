@@ -16,7 +16,7 @@ username:passwd:userId:groupId:userIdinfo:homedir:cmdshell
 
 `w` who is logged in
 
-`id`
+`id` — see all users
 
 `users`
 
