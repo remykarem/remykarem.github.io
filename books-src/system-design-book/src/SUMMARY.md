@@ -15,6 +15,7 @@
 - [Scalability](./scalability.md)
 - [Availability](./availability.md)
 - [Performance](./performance.md)
+- [Reliability](./reliability.md)
 - [Fault tolerance?](./fault-tolerance.md)
 
 ---
