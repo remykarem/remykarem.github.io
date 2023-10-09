@@ -35,7 +35,7 @@ Salted__
 ```
 ~~~
 
-~~~admonish example title="OpenSSL"
+~~~admonish example title="Encrypt file with OpenSSL"
 
 ```bash
 echo -n "hello" | 
