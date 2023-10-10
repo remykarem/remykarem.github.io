@@ -122,6 +122,13 @@
 
 ---
 
+# ???
+
+- [Request-driven]()
+- [Event-driven]()
+
+---
+
 # System architectural patterns (coupling patterns?)
 
 - [Single unit]()
