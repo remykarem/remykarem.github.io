@@ -33,7 +33,7 @@
 
 ---
 
-# Traits
+# Core functionalities
 
 - [Routing](./components/routing.md)
 - [Scheduling](./components/scheduling.md)
@@ -46,22 +46,7 @@
 
 ---
 
-# System architectural patterns (coupling patterns?)
-
-- [Single unit]()
-  - [Monolithic]()
-- [Collection of functionalities]()
-  - [Service-oriented architecture]()
-  - [Microservices](./patterns/microservices.md)
-  - [Layered]()
-- [Collection of functions]()
-  - [Serverless]()
-- [Collection of events]()
-  - [Event-driven architecture](./patterns/event-driven-architecture.md)
-
----
-
-# Services / components / resources / structural
+# Components
 
 - [CDN](./components/cdn.md)
 - [DLQ](./components/queue/dlq.md)
@@ -128,7 +113,27 @@
 # Database
 
 - [SQL vs. NoSQL](./sql-vs-nosql.md)
+
+---
+
+# Consistency models
+
 - [Consistency models](./consistency-models.md)
+
+---
+
+# System architectural patterns (coupling patterns?)
+
+- [Single unit]()
+  - [Monolithic]()
+- [Collection of functionalities]()
+  - [Service-oriented architecture]()
+  - [Microservices](./patterns/microservices.md)
+  - [Layered]()
+- [Collection of functions]()
+  - [Serverless]()
+- [Collection of events]()
+  - [Event-driven architecture](./patterns/event-driven-architecture.md)
 
 ---
 
