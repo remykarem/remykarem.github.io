@@ -158,6 +158,22 @@
 <li><a href="../data-storage.html">Message <strong>storage</strong> (FIFO)</a></li>
 <li><a href="../concurrency-control.html">Processing messages in order</a></li>
 </ul>
+<p>Types of queues</p>
+<ul>
+<li><strong>Standard queue</strong> —
+<ul>
+<li>not a strict FIFO</li>
+<li>Every message is processed at least once</li>
+</ul>
+</li>
+<li><strong>FIFO queue</strong>
+<ul>
+<li>Strict FIFO</li>
+<li>Every message is processed only once</li>
+</ul>
+</li>
+<li><strong>DLQ</strong> — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully.</li>
+</ul>
 <div id="admonition-example" class="admonition example">
 <div class="admonition-title">
 <p>Example</p>
@@ -167,6 +183,7 @@
 <p>AWS SQS</p>
 </div>
 </div>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
