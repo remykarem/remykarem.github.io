@@ -4,6 +4,7 @@
 * Asynchronous; non-blocking
 * Stateless
 * Webhooks — The server fires an HTTP event to all registered endpoints of the consumer
+* Often employs pub/sub model where multiple components can react to a single event
 
 ~~~admonish note title="Blocking"
 Flow of execution is blocked waiting for another process to complete
