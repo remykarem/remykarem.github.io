@@ -6,7 +6,7 @@
 | `command > file`           | redirects stdout to `file`                            |
 | `command >> file`          | redirects stdout to `file` by appending               |
 | `command 2> file`          | redirects stderr to `file`                            |
-| `command < file`           | redirects stdin. gives input from `file` to `command` |
+| `command < file`           | redirects stdin of `command` from `file`. i.e. input of command comes from `file`|
 | `command << EOF ... EOF`   | here document                                         |
 | `command <<< sometext`     | here string                                           |
 | `command 2>&1`             | redirect stderr to stdout                             |
