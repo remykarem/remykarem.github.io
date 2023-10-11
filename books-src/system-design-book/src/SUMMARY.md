@@ -30,6 +30,7 @@
 - [Load balancing](./components/load-balancing.md)
 - [Coupling, isolation]()
 - [Logging & monitoring](./components/logging-and-monitoring.md)
+- [Loose coupling of services]()
 
 ---
 
