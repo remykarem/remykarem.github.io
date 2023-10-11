@@ -125,11 +125,11 @@
 # ???
 
 - [Request-driven]()
-- [Event-driven]()
+- [Event-driven architecture](./patterns/event-driven-architecture.md)
 
 ---
 
-# System architectural patterns (coupling patterns?)
+# System architectural patterns / coupling patterns / composing components
 
 - [Single unit]()
   - [Monolithic]()
@@ -137,10 +137,6 @@
   - [Service-oriented architecture]()
   - [Microservices](./patterns/microservices.md)
   - [Layered]()
-- [Collection of functions]()
-  - [Serverless]()
-- [Collection of events]()
-  - [Event-driven architecture](./patterns/event-driven-architecture.md)
 
 ---
 
