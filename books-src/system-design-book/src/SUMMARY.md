@@ -49,15 +49,15 @@
 # Components
 
 - [CDN](./components/cdn.md)
-- [DLQ](./components/queue/dlq.md)
 - [Cache]()
 - [Firewall]()
+- [Queue](./components/queue/index.md)
+  - [DLQ](./components/queue/dlq.md)
 - [Lambda](./components/serverless-compute-service.md)
 - [Compute]()
 - [Database](./components/database.md)
 - [API gateway](./components/api-gateway.md)
 - [Forward proxy](./components/forward-proxy.md)
-- [Message queue](./components/queue/index.md)
 - [Message broker](./components/message-broker.md)
 - [Event bus service](./components/event-bus-service.md)
 - [Reverse proxy ("load balancer")](./components/reverse-proxy.md)
