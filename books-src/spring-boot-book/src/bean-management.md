@@ -1,4 +1,4 @@
-# Bean management
+# Bean registration
 
 **Beans** are nothing but Java objects in the application.
 
@@ -52,6 +52,22 @@ This usually occurs if the type of the bean is an interface, or when you have 2 
 
 `@Qualifier`, `@Primary`
 
+### Perform actions after bean registration
+
+A use case is if you want to validate externalised configurations at start time.
+
+One way is to create an `@Component` bean with a `@PostConstruct` function.
+
+```kotlin,noplayground
+@Component
+class SomeBeanValidator(myBean: MyBean) {
+
+    @PostConstruct
+    fun validate() {
+        doSomething(myBean)
+    }
+}
+```
 
 ### Include bean dependencies
 

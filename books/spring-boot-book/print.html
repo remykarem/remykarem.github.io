@@ -157,7 +157,7 @@
 <p><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/">https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/</a></p>
 <p><a href="https://docs.spring.io/spring-framework/docs/current/reference/html/index.html">https://docs.spring.io/spring-framework/docs/current/reference/html/index.html</a></p>
 <p><a href="https://docs.spring.io/spring-framework/docs/5.3.19/reference/html/web.html#spring-web">https://docs.spring.io/spring-framework/docs/5.3.19/reference/html/web.html#spring-web</a></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="bean-management"><a class="header" href="#bean-management">Bean management</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bean-registration"><a class="header" href="#bean-registration">Bean registration</a></h1>
 <p><strong>Beans</strong> are nothing but Java objects in the application.</p>
 <p>In Spring, they are managed by the IoC. What you have to do is to <em>register</em> them, and Spring will instantiate for you. Thereafter you can use them anywhere in the codebase via dependency injection.</p>
 <!-- toc -->
@@ -208,6 +208,18 @@ class SomeConfiguration {
 <h3 id="register-beans-with-same-name"><a class="header" href="#register-beans-with-same-name">Register beans with same name</a></h3>
 <p>This usually occurs if the type of the bean is an interface, or when you have 2 different configuration classes having the same function name.</p>
 <p><code>@Qualifier</code>, <code>@Primary</code></p>
+<h3 id="perform-actions-after-bean-registration"><a class="header" href="#perform-actions-after-bean-registration">Perform actions after bean registration</a></h3>
+<p>A use case is if you want to validate externalised configurations at start time.</p>
+<p>One way is to create an <code>@Component</code> bean with a <code>@PostConstruct</code> function.</p>
+<pre><code class="language-kotlin noplayground">@Component
+class SomeBeanValidator(myBean: MyBean) {
+
+    @PostConstruct
+    fun validate() {
+        doSomething(myBean)
+    }
+}
+</code></pre>
 <h3 id="include-bean-dependencies"><a class="header" href="#include-bean-dependencies">Include bean dependencies</a></h3>
 <p>Declare the dependencies in the constructor of a class declaration.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="externalised-configuration"><a class="header" href="#externalised-configuration">Externalised configuration</a></h1>
