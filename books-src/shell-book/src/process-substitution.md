@@ -11,3 +11,9 @@ When you don't wanna create a file (required by a command) from the output of so
 ~~~admonish failure title="POSIX-compliance"
 Command substitution is not POSIX-compliant.
 ~~~
+
+~~~admonish example
+```
+diff <(ls /dir1) <(ls /dir2)
+```
+~~~
