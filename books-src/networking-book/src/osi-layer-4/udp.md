@@ -29,3 +29,7 @@ Consists of:
 - Network management
 - Live audio/video streaming
 ```
+
+```admonish faq title="Why would I use UDP?"
+UDP is commonly used in time-sensitive communications where occasional drops of packet (from the network) is better than waiting.
+```
