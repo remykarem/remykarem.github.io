@@ -91,3 +91,4 @@
 - [Leaky abstraction]()
 - [Typestate pattern]()
 - [Enum pattern]()
+- [Early return](./early_return.md)
