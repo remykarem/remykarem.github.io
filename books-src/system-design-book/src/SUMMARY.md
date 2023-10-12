@@ -53,7 +53,6 @@
 - [Cache]()
 - [Firewall]()
 - [Queue](./components/queue/index.md)
-  - [DLQ](./components/queue/dlq.md)
 - [Lambda](./components/serverless-compute-service.md)
 - [Compute]()
 - [Database](./components/database.md)
