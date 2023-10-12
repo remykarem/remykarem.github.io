@@ -30,6 +30,12 @@ PGP is an [insecure](https://latacora.micro.blog/2019/07/16/the-pgp-problem.html
 Source: https://blog.yossarian.net/
 ```
 
+```admonish example title="Who's using PGP?"
+AWS Transfer Family is.
+
+[Encrypt and decrypt files with PGP and AWS Transfer Family](https://aws.amazon.com/blogs/storage/encrypt-and-decrypt-files-with-pgp-and-aws-transfer-family/)
+```
+
 ```admonish info title="Variants"
 * OpenPGP — open standard
 * GPG (GnuPG) — OpenPGP-compliant software
