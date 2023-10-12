@@ -58,7 +58,11 @@ An Elastic Network Interface is associated with an instance. More than one ENIs 
 
 An ENI is automatically created for every EC2 instance.
 
-## WAF
+## Network Firewall
+
+Both incoming and outgoing
+
+## WAF (Web Application Firewall)
 
 For incoming
 
