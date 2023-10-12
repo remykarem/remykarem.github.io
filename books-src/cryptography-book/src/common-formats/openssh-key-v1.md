@@ -6,6 +6,12 @@ This is the OpenSSH "proprietary" private key format.
 Traditionally OpenSSH has used the OpenSSL-compatible formats PKCS#1 (for RSA) and SEC1 (for EC) for private keys.
 ~~~
 
+~~~admonish warning title="Looks like PKCS #1"
+Note that OpenSSH can generate a PEM of that looks like PKCS #1 but it's not.
+
+An example is when you encrypt the RSA private key.
+~~~
+
 ~~~admonish example
 ```
 -----BEGIN OPENSSH PRIVATE KEY-----
