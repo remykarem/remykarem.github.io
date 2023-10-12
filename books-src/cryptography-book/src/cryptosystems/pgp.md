@@ -2,7 +2,7 @@
 
 [RFC 4880](https://datatracker.ietf.org/doc/html/rfc4880)
 
-PGP is an encryption program for encrypting data.
+PGP is a hybrid encryption program for encrypting data. It uses both a symmetric and asymmetric key.
 
 Encryption:
 
