@@ -89,6 +89,6 @@
 - [Lazy initialisation pattern]()
 - [Design by Contract]()
 - [Leaky abstraction]()
-- [Typestate pattern]()
+- [Typestate pattern](./typestate_pattern.md)
 - [Enum pattern]()
 - [Early return](./early_return.md)
