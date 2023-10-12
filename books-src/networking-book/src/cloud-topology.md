@@ -60,6 +60,6 @@ An ENI is automatically created for every EC2 instance.
 
 ## WAF
 
-...
+For incoming
 
 ## VPC endpoint
