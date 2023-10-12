@@ -22,7 +22,7 @@
 - [One-time code]()
 - [CAPTCHA]()
 - [SSO]()
-- [Passkeys]()
+- [Passkeys](./passkeys.md)
 - [Biometric]()
 - [Facial recognition]()
 - [MFA]()
