@@ -44,6 +44,18 @@ The private key, held by the client, is used for authenticating with the server.
 
 The public key, should be shared with the server out-of-band prior to any SSH connection. This is typically stored in `~/.ssh/authorized_keys` at the server.
 
+There is an option to encrypt the private key at rest, which requires a passphrase.
+
+~~~admonish info title="Passphrase and ssh-agent"
+`ssh-agent` is a program that assists with SSH (Secure Shell) key management.
+
+It is typically used to hold private keys in memory so that they can be used without requiring the user to type in the passphrase every time the key is needed.
+
+The `AddKeysToAgent` and `UseKeychain` SSH configs are associated with this SSH agent.
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
+~~~
+
 ## 3. Session key pair (ephemeral)
 
 The client and the server _each_ will have to generate a key pair for every SSH session.
@@ -58,16 +70,6 @@ To test connection, we can do
 ```
 ssh -T <hostname>
 ```
-~~~
-
-~~~admonish info title="ssh-agent"
-`ssh-agent` is a program that assists with SSH (Secure Shell) key management.
-
-It is typically used to hold private keys in memory so that they can be used without requiring the user to type in the passphrase every time the key is needed.
-
-The `AddKeysToAgent` and `UseKeychain` SSH configs are associated with this SSH agent.
-
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
 ~~~
 
 User configurations are typically stored at `~/.ssh/config`:
