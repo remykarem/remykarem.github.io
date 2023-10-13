@@ -30,7 +30,7 @@ PGP is an [insecure](https://latacora.micro.blog/2019/07/16/the-pgp-problem.html
 Source: https://blog.yossarian.net/
 ```
 
-```admonish example title="Who's using PGP?"
+```admonish question title="Who's using PGP?"
 * AWS Transfer Family: [Encrypt and decrypt files with PGP and AWS Transfer Family](https://aws.amazon.com/blogs/storage/encrypt-and-decrypt-files-with-pgp-and-aws-transfer-family/)
 * GitHub: [Commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification)
 * IntelliJ: [Set up GPG commit signing](https://www.jetbrains.com/help/idea/set-up-GPG-commit-signing.html)
