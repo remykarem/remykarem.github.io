@@ -1,5 +1,8 @@
 # Consistency models
 
+* Immediate consistency
+* Eventual consistency
+
 |  | ACID | BASE |
 | --- | --- | --- |
 | Atomic |  |  |
@@ -80,7 +83,9 @@ NoSQL databases might not prioritise this.
 
 ### Consistency (in CAP theorem)
 
-Every _read_ request **returns the most recent write**.
+**Every read request (across all nodes) returns the most recent write** ("immediate consistency")
+
+Otherwise, the system will show different things.
 
 In SQL databases, databases can achieve immediate consistency.
 
@@ -88,9 +93,15 @@ In NoSQL databases, achieving this is challenging due to delays and failures in 
 
 ### Availability (in CAP theorem)
 
-Every request (read or write) **receives a non-error response**.
+In the event of any node failure,
+
+every request (read or write) **receives a non-error response**.
+
+Otherwise, the system will show an error.
 
 ### Partial Tolerance (in CAP theorem)
 
-The system **continues to operate despite any network failures**.
+In the event of a network failure ("network partition"),
+
+the system **continues to operate**.
 

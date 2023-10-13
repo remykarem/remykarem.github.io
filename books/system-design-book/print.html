@@ -706,6 +706,10 @@ https://www.youtube.com/watch?v=Z3SYDTMP3ME</p>
 <p>SQL databases are typically sccaled vertically by increasing the horsepower of the machine (CPU, RAM, SSD).</p>
 <p>NoSQL are <em>designed</em> to scale horizontally.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="consistency-models"><a class="header" href="#consistency-models">Consistency models</a></h1>
+<ul>
+<li>Immediate consistency</li>
+<li>Eventual consistency</li>
+</ul>
 <div class="table-wrapper"><table><thead><tr><th></th><th>ACID</th><th>BASE</th></tr></thead><tbody>
 <tr><td>Atomic</td><td></td><td></td></tr>
 <tr><td>Consistent</td><td></td><td></td></tr>
@@ -775,13 +779,17 @@ again prints documents without any errors</li>
 <p>NoSQL databases might not prioritise this.</p>
 <h3 id="durability-in-acid"><a class="header" href="#durability-in-acid">Durability (in ACID)</a></h3>
 <h3 id="consistency-in-cap-theorem"><a class="header" href="#consistency-in-cap-theorem">Consistency (in CAP theorem)</a></h3>
-<p>Every <em>read</em> request <strong>returns the most recent write</strong>.</p>
+<p><strong>Every read request (across all nodes) returns the most recent write</strong> (&quot;immediate consistency&quot;)</p>
+<p>Otherwise, the system will show different things.</p>
 <p>In SQL databases, databases can achieve immediate consistency.</p>
 <p>In NoSQL databases, achieving this is challenging due to delays and failures in communication between database nodes.</p>
 <h3 id="availability-in-cap-theorem"><a class="header" href="#availability-in-cap-theorem">Availability (in CAP theorem)</a></h3>
-<p>Every request (read or write) <strong>receives a non-error response</strong>.</p>
+<p>In the event of any node failure,</p>
+<p>every request (read or write) <strong>receives a non-error response</strong>.</p>
+<p>Otherwise, the system will show an error.</p>
 <h3 id="partial-tolerance-in-cap-theorem"><a class="header" href="#partial-tolerance-in-cap-theorem">Partial Tolerance (in CAP theorem)</a></h3>
-<p>The system <strong>continues to operate despite any network failures</strong>.</p>
+<p>In the event of a network failure (&quot;network partition&quot;),</p>
+<p>the system <strong>continues to operate</strong>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="event-driven-architecture"><a class="header" href="#event-driven-architecture">Event-driven architecture</a></h1>
 <ul>
 <li>Events</li>
