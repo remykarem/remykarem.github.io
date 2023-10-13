@@ -119,6 +119,7 @@
     - [openssh-key-v1](./common-formats/openssh-key-v1.md)
     - [JWT](./common-formats/jwt.md)
     - [SAML token](./common-formats/saml-token.md)
+    - [ASCII armor](./common-formats/ascii-armor.md)
 - [Other standards](./standards.md)
 
 ---
