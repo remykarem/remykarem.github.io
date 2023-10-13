@@ -34,6 +34,8 @@ Otherwise, the client is left to blindly trust the server on first connection. T
     ```
 
     paste the fingerprint instead of typing `yes` or `no`.
+
+GitHub, on the other hand, does it this way: [GitHub SSH key fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
 ~~~
 
 ## 2. "SSH key pair" (permanent)
