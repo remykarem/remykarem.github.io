@@ -1,5 +1,7 @@
 # PGP
 
+Pretty Good Privacy
+
 [RFC 4880](https://datatracker.ietf.org/doc/html/rfc4880)
 
 PGP is a hybrid encryption system for encrypting data. It uses both a symmetric and asymmetric key.
