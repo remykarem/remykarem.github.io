@@ -4,14 +4,16 @@ For this protocol to work, **3 asymmetric key pairs** are at play:
 
 ## 1. Host key pair (permanent)
 
-The private key, held by the server, is used to identify the server. It is typically stored in `/etc/ssh`.
+The private key, held by the server, is used for host authentication. It is typically stored in `/etc/ssh`.
 
 These keys should be automatically created when installing SSH on the server (?), so no generation is required.
 
-~~~admonish note title="_n_ pairs of server host keys"
-There are _n_ pairs of server host keys, where _n_ is the no. of asymmetric cryptography used.
+~~~admonish info title="Host key algorithms"
+These are the algorithms that the server will advertise to the client for host authentication.
 
 This can be RSA, ECDSA, ED25519 etc.
+
+This value can be set as the `HostKeyAlgorithms` configuration.
 ~~~
 
 The public key is shared with the client _during the initial connection_. The client then stores this key typically in `~/.ssh/known_hosts`.
