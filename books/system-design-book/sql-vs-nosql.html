@@ -193,35 +193,6 @@
 <h3 id="scalability"><a class="header" href="#scalability">Scalability</a></h3>
 <p>SQL databases are typically sccaled vertically by increasing the horsepower of the machine (CPU, RAM, SSD).</p>
 <p>NoSQL are <em>designed</em> to scale horizontally.</p>
-<h3 id="atomicity-in-acid"><a class="header" href="#atomicity-in-acid">Atomicity (in ACID)</a></h3>
-<p>SQL databases are <em>designed</em> to provide atomicity across multiple tables.</p>
-<p>Some NoSQL databases can provide atomicity too.</p>
-<h3 id="consistency-in-acid"><a class="header" href="#consistency-in-acid">Consistency (in ACID)</a></h3>
-<div id="admonition-note" class="admonition note">
-<div class="admonition-title">
-<p>Note</p>
-<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
-</div>
-<div>
-<p>Consistency here means data integrity.</p>
-</div>
-</div>
-<p>SQL databases are <em>designed</em> to provide consistency.</p>
-<p>NoSQL databases are not designed to provide consistency by default.</p>
-<h3 id="isolation-in-acid"><a class="header" href="#isolation-in-acid">Isolation (in ACID)</a></h3>
-<p>This refers to the behaviour of transactions when they are executed <em>concurrently</em>.</p>
-<p>Isolation ensures that concurrent execution of transactions results in a system state that would be obtained if transactions were executed serially.</p>
-<p>SQL databases are <em>designed</em> to provide isolation.</p>
-<p>NoSQL databases might not prioritise this.</p>
-<h3 id="durability-in-acid"><a class="header" href="#durability-in-acid">Durability (in ACID)</a></h3>
-<h3 id="consistency-in-cap-theorem"><a class="header" href="#consistency-in-cap-theorem">Consistency (in CAP theorem)</a></h3>
-<p>Every <em>read</em> request <strong>returns the most recent write</strong>.</p>
-<p>In SQL databases, databases can achieve immediate consistency.</p>
-<p>In NoSQL databases, achieving this is challenging due to delays and failures in communication between database nodes.</p>
-<h3 id="availability-in-cap-theorem"><a class="header" href="#availability-in-cap-theorem">Availability (in CAP theorem)</a></h3>
-<p>Every request (read or write) <strong>receives a non-error response</strong>.</p>
-<h3 id="partial-tolerance-in-cap-theorem"><a class="header" href="#partial-tolerance-in-cap-theorem">Partial Tolerance (in CAP theorem)</a></h3>
-<p>The system <strong>continues to operate despite any network failures</strong>.</p>
 
                     </main>
 
