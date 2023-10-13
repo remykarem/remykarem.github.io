@@ -1491,6 +1491,19 @@ Raimi
 <h2 id="2-ssh-key-pair-permanent"><a class="header" href="#2-ssh-key-pair-permanent">2. &quot;SSH key pair&quot; (permanent)</a></h2>
 <p>The private key, held by the client, is used for authenticating with the server.</p>
 <p>The public key, should be shared with the server out-of-band prior to any SSH connection. This is typically stored in <code>~/.ssh/authorized_keys</code> at the server.</p>
+<p>There is an option to encrypt the private key at rest, which requires a passphrase.</p>
+<div id="admonition-passphrase-and-ssh-agent" class="admonition info">
+<div class="admonition-title">
+<p>Passphrase and ssh-agent</p>
+<p><a class="admonition-anchor-link" href="osi-layer-6/ssh/setup.html#admonition-passphrase-and-ssh-agent"></a></p>
+</div>
+<div>
+<p><code>ssh-agent</code> is a program that assists with SSH (Secure Shell) key management.</p>
+<p>It is typically used to hold private keys in memory so that they can be used without requiring the user to type in the passphrase every time the key is needed.</p>
+<p>The <code>AddKeysToAgent</code> and <code>UseKeychain</code> SSH configs are associated with this SSH agent.</p>
+<p>https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent</p>
+</div>
+</div>
 <h2 id="3-session-key-pair-ephemeral"><a class="header" href="#3-session-key-pair-ephemeral">3. Session key pair (ephemeral)</a></h2>
 <p>The client and the server <em>each</em> will have to generate a key pair for every SSH session.</p>
 <p>They are used to establish the session's shared secret using a key exchange algorithm.</p>
@@ -1504,18 +1517,6 @@ Raimi
 <p>To test connection, we can do</p>
 <pre><code>ssh -T &lt;hostname&gt;
 </code></pre>
-</div>
-</div>
-<div id="admonition-ssh-agent" class="admonition info">
-<div class="admonition-title">
-<p>ssh-agent</p>
-<p><a class="admonition-anchor-link" href="osi-layer-6/ssh/setup.html#admonition-ssh-agent"></a></p>
-</div>
-<div>
-<p><code>ssh-agent</code> is a program that assists with SSH (Secure Shell) key management.</p>
-<p>It is typically used to hold private keys in memory so that they can be used without requiring the user to type in the passphrase every time the key is needed.</p>
-<p>The <code>AddKeysToAgent</code> and <code>UseKeychain</code> SSH configs are associated with this SSH agent.</p>
-<p>https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent</p>
 </div>
 </div>
 <p>User configurations are typically stored at <code>~/.ssh/config</code>:</p>
