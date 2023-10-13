@@ -60,10 +60,12 @@ ssh -T <hostname>
 ```
 ~~~
 
-~~~admonish info title="SSH agent"
+~~~admonish info title="ssh-agent"
 `ssh-agent` is a program that assists with SSH (Secure Shell) key management.
 
 It is typically used to hold private keys in memory so that they can be used without requiring the user to type in the passphrase every time the key is needed.
+
+The `AddKeysToAgent` and `UseKeychain` SSH configs are associated with this SSH agent.
 
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
 ~~~
