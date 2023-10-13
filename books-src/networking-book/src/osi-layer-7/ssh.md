@@ -14,11 +14,3 @@ SSH spans across layers 5, 6 and 7.
 * OpenSSH (macOS)
 * PuTTY (Windows, Linux)
 ~~~
-
-~~~admonish example title="Test connection"
-To test connection, we can do
-
-```
-ssh -T <hostname>
-```
-~~~
