@@ -17,6 +17,12 @@
 - [Performance](./performance.md)
 - [Reliability](./reliability.md)
 - [Fault tolerance?](./fault-tolerance.md)
+  - [Partial tolerance]()
+- [Consistency]()
+- [Atomicity]()
+- [Data integrity]()
+- [Isolation]()
+- [Durability]()
 
 ---
 
