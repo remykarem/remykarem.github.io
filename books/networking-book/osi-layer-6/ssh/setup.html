@@ -155,16 +155,17 @@
                         <h1 id="setup"><a class="header" href="#setup">Setup</a></h1>
 <p>For this protocol to work, <strong>3 asymmetric key pairs</strong> are at play:</p>
 <h2 id="1-host-key-pair-permanent"><a class="header" href="#1-host-key-pair-permanent">1. Host key pair (permanent)</a></h2>
-<p>The private key, held by the server, is used to identify the server. It is typically stored in <code>/etc/ssh</code>.</p>
+<p>The private key, held by the server, is used for host authentication. It is typically stored in <code>/etc/ssh</code>.</p>
 <p>These keys should be automatically created when installing SSH on the server (?), so no generation is required.</p>
-<div id="admonition-_n_-pairs-of-server-host-keys" class="admonition note">
+<div id="admonition-host-key-algorithms" class="admonition info">
 <div class="admonition-title">
-<p><em>n</em> pairs of server host keys</p>
-<p><a class="admonition-anchor-link" href="#admonition-_n_-pairs-of-server-host-keys"></a></p>
+<p>Host key algorithms</p>
+<p><a class="admonition-anchor-link" href="#admonition-host-key-algorithms"></a></p>
 </div>
 <div>
-<p>There are <em>n</em> pairs of server host keys, where <em>n</em> is the no. of asymmetric cryptography used.</p>
+<p>These are the algorithms that the server will advertise to the client for host authentication.</p>
 <p>This can be RSA, ECDSA, ED25519 etc.</p>
+<p>This value can be set as the <code>HostKeyAlgorithms</code> configuration.</p>
 </div>
 </div>
 <p>The public key is shared with the client <em>during the initial connection</em>. The client then stores this key typically in <code>~/.ssh/known_hosts</code>.</p>
