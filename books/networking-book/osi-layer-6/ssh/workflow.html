@@ -156,11 +156,18 @@
 <p>After TCP handshake, this is what happens:</p>
 <ol>
 <li>
-<p><strong>Server sends its public host key (initial connection only)</strong></p>
+<p>Protocol version exchange</p>
+</li>
+<li>
+<p>Algorithm negotiation</p>
+</li>
+<li>
+<p><strong>Server authentication</strong></p>
+<p>The server sends its public host key (initial connection only)</p>
 <p>If the client has never connected to this server before, it uses the &quot;trust on first use&quot; model and asks the user to confirm the server's key fingerprint. If the client has connected to this server before, it checks the server's public key against the one it has saved from previous connections.</p>
 </li>
 <li>
-<p><strong>Set up session key (shared secret)</strong></p>
+<p><strong>Session key (shared secret)</strong></p>
 <p>A key exchange algorithm is used to set up a shared secret. The server creates a key pair and sends the client the public key (in this session itself). See key exchange algorithm for more.</p>
 <p>Both the client and the server will then have the same shared secret.</p>
 <p>This secret will be used as a key for <em>symmetric encryption</em> for the remainder of the session to encrypt the communication.</p>
@@ -189,6 +196,14 @@
 </ul>
 </div>
 </div>
+<ol start="6">
+<li>
+<p>Session establishment</p>
+</li>
+<li>
+<p>Session termination</p>
+</li>
+</ol>
 
                     </main>
 
