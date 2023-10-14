@@ -218,21 +218,21 @@
 <p>https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent</p>
 </div>
 </div>
-<h2 id="3-session-key-pair-ephemeral"><a class="header" href="#3-session-key-pair-ephemeral">3. Session key pair (ephemeral)</a></h2>
-<p>The client and the server <em>each</em> will have to generate a key pair for every SSH session.</p>
-<p>They are used to establish the session's shared secret using a key exchange algorithm.</p>
-<hr />
 <div id="admonition-test-connection" class="admonition example">
 <div class="admonition-title">
 <p>Test connection</p>
 <p><a class="admonition-anchor-link" href="#admonition-test-connection"></a></p>
 </div>
 <div>
-<p>To test connection, we can do</p>
+<p>To test connection to the server, the client can do</p>
 <pre><code>ssh -T &lt;hostname&gt;
 </code></pre>
 </div>
 </div>
+<h2 id="3-session-key-pair-ephemeral"><a class="header" href="#3-session-key-pair-ephemeral">3. Session key pair (ephemeral)</a></h2>
+<p>The client and the server <em>each</em> will have to generate a key pair for every SSH session.</p>
+<p>They are used to establish the session's shared secret using a key exchange algorithm.</p>
+<hr />
 <p>User configurations are typically stored at <code>~/.ssh/config</code>:</p>
 <pre><code class="language-config">Host examplehostname
     HostName example.com
