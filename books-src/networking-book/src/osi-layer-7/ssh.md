@@ -2,7 +2,7 @@
 
 Secure Shell
 
-This protocol provides shell access to access a remote computer in a secure way. The establishment of a secure communication is part of SSH (Layer 6).
+This protocol provides **remote shell** access to access a remote computer in a secure way. The establishment of a secure communication is part of SSH (Layer 6).
 
 SSH is built on top of TCP.
 
