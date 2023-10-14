@@ -8,7 +8,7 @@ For this protocol to work, these things need to be set up first.
 These keys should be automatically created when installing SSH on the server (?), so no generation is required.
 ~~~
 
-The private key, held by the server, is used for **host authentication**. It is typically stored in `/etc/ssh`.
+The private key, held by the server, is used for host authentication. It is typically stored in `/etc/ssh`.
 
 ~~~admonish info title="Host key algorithms"
 These are the algorithms that the server will advertise to the client for host authentication.
@@ -42,9 +42,9 @@ Otherwise, the client is left to blindly trust the server on first connection. T
 GitHub, on the other hand, does it this way: [GitHub SSH key fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
 ~~~
 
-## 2. Key pair for client authentication
+## 2. Keys for client authentication
 
-The private key, held by the client, is used for authenticating with the server ("**client authentication**").
+The private key, held by the client, is used for authenticating with the serve.
 
 The public key, should be shared with the server out-of-band prior to any SSH connection. This is typically stored in `~/.ssh/authorized_keys` at the server.
 
