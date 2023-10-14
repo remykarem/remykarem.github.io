@@ -2,7 +2,7 @@
 
 For this protocol to work, these things need to be set up first.
 
-## 1. Key pair for server authentication
+## Key pair for server authentication
 
 ~~~admonish note
 These keys should be automatically created when installing SSH on the server (?), so no generation is required.
@@ -42,7 +42,7 @@ Otherwise, the client is left to blindly trust the server on first connection. T
 GitHub, on the other hand, does it this way: [GitHub SSH key fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
 ~~~
 
-## 2. Keys for client authentication
+## Keys for client authentication
 
 The private key, held by the client, is used for authenticating with the serve.
 
@@ -74,7 +74,7 @@ ssh -T <hostname>
 ```
 ~~~
 
----
+## Other user configurations
 
 User configurations are typically stored at `~/.ssh/config`:
 
@@ -85,6 +85,8 @@ Host examplehostname
     User raimi
     Port 11566
 ```
+
+## Other system configurations
 
 System configurations are typically stored at `/etc/ssh/ssh_config`.
 
