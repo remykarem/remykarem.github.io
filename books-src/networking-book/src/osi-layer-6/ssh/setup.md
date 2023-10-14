@@ -58,6 +58,14 @@ The `AddKeysToAgent` and `UseKeychain` SSH configs are associated with this SSH 
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
 ~~~
 
+~~~admonish example title="Test connection"
+To test connection to the server, the client can do
+
+```
+ssh -T <hostname>
+```
+~~~
+
 ## 3. Session key pair (ephemeral)
 
 The client and the server _each_ will have to generate a key pair for every SSH session.
@@ -65,14 +73,6 @@ The client and the server _each_ will have to generate a key pair for every SSH 
 They are used to establish the session's shared secret using a key exchange algorithm.
 
 ---
-
-~~~admonish example title="Test connection"
-To test connection, we can do
-
-```
-ssh -T <hostname>
-```
-~~~
 
 User configurations are typically stored at `~/.ssh/config`:
 
