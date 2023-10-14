@@ -4,7 +4,7 @@ For this protocol to work, **3 asymmetric key pairs** are at play:
 
 ## 1. Host key pair (permanent)
 
-The private key, held by the server, is used for host authentication. It is typically stored in `/etc/ssh`.
+The private key, held by the server, is used for _host authentication_. It is typically stored in `/etc/ssh`.
 
 These keys should be automatically created when installing SSH on the server (?), so no generation is required.
 
@@ -40,9 +40,9 @@ Otherwise, the client is left to blindly trust the server on first connection. T
 GitHub, on the other hand, does it this way: [GitHub SSH key fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
 ~~~
 
-## 2. "SSH key pair" (permanent)
+## 2. Authentication key pair (permanent)
 
-The private key, held by the client, is used for authenticating with the server.
+The private key, held by the client, is used for authenticating with the server ("**client authentication**").
 
 The public key, should be shared with the server out-of-band prior to any SSH connection. This is typically stored in `~/.ssh/authorized_keys` at the server.
 

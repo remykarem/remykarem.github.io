@@ -155,7 +155,7 @@
                         <h1 id="setup"><a class="header" href="#setup">Setup</a></h1>
 <p>For this protocol to work, <strong>3 asymmetric key pairs</strong> are at play:</p>
 <h2 id="1-host-key-pair-permanent"><a class="header" href="#1-host-key-pair-permanent">1. Host key pair (permanent)</a></h2>
-<p>The private key, held by the server, is used for host authentication. It is typically stored in <code>/etc/ssh</code>.</p>
+<p>The private key, held by the server, is used for <em>host authentication</em>. It is typically stored in <code>/etc/ssh</code>.</p>
 <p>These keys should be automatically created when installing SSH on the server (?), so no generation is required.</p>
 <div id="admonition-host-key-algorithms" class="admonition info">
 <div class="admonition-title">
@@ -202,8 +202,8 @@
 <p>GitHub, on the other hand, does it this way: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints">GitHub SSH key fingerprints</a></p>
 </div>
 </div>
-<h2 id="2-ssh-key-pair-permanent"><a class="header" href="#2-ssh-key-pair-permanent">2. &quot;SSH key pair&quot; (permanent)</a></h2>
-<p>The private key, held by the client, is used for authenticating with the server.</p>
+<h2 id="2-authentication-key-pair-permanent"><a class="header" href="#2-authentication-key-pair-permanent">2. Authentication key pair (permanent)</a></h2>
+<p>The private key, held by the client, is used for authenticating with the server (&quot;<strong>client authentication</strong>&quot;).</p>
 <p>The public key, should be shared with the server out-of-band prior to any SSH connection. This is typically stored in <code>~/.ssh/authorized_keys</code> at the server.</p>
 <p>There is an option to encrypt the private key at rest, which requires a passphrase.</p>
 <div id="admonition-passphrase-and-ssh-agent" class="admonition info">
