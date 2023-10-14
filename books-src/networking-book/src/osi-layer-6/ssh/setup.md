@@ -58,6 +58,12 @@ The `AddKeysToAgent` and `UseKeychain` SSH configs are associated with this SSH 
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
 ~~~
 
+~~~admonish note title="Other client authentication methods"
+Apart from asymmetric key pair, other authentication methods include:
+- Password — the password is encrypted using the shared secret key
+- SSH certificates
+~~~
+
 ~~~admonish example title="Test connection"
 To test connection to the server, the client can do
 
