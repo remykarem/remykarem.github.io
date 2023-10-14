@@ -165,7 +165,13 @@
 <p>Sockets is OSI Layer 4 and 5.</p>
 </div>
 </div>
-<p>Sockets are an abstraction of the network interface, encompassing Layer 3 (<code>SOCK_RAW</code>) and Layer 4 (<code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code>; TCP and UDP respectively). The system call allows you to:</p>
+<p>Sockets are an abstraction of the</p>
+<ol>
+<li>route table, and</li>
+<li>network interface,
+hence encompassing Layer 3 (<code>SOCK_RAW</code>) and Layer 4 (<code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code>; TCP and UDP respectively).</li>
+</ol>
+<p>The system call allows you to:</p>
 <ul>
 <li>Create socket</li>
 <li>Bind socket to an IP address</li>
