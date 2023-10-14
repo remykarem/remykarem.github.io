@@ -2,7 +2,7 @@
 
 AES is a block cipher that operates on **blocks of 128 bits**. It breaks the plaintext into similar size blocks.
 
-The key length can be **128**, **192** or **256** bits.
+The key length can be 128, 192 or 256 bits.
 
 The ciphertext typically includes the initialisation vector and ciphertext itself.
 
