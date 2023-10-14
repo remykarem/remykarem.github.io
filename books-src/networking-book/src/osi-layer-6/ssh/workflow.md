@@ -29,12 +29,6 @@ After TCP handshake, this is what happens:
     1. The server uses the public key to encrypt some message.
     2. The client calculates a hash which is a function of the decrypted message and other metadata, then sends to server.
     3. Server compares with its own calculation of hash (which should be the same).
-    
-~~~admonish note title="Other client authentication methods"
-Apart from asymmetric key pair, other authentication methods include:
-- Password — the password is encrypted using the shared secret key
-- SSH certificates
-~~~
 
 6. Session establishment
 
