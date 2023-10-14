@@ -1,6 +1,6 @@
 # Setup
 
-For this protocol to work, **3 asymmetric key pairs** are at play:
+For this protocol to work, these things need to be set up first.
 
 ## 1. Host key pair (permanent)
 
@@ -71,12 +71,6 @@ To test connection to the server, the client can do
 ssh -T <hostname>
 ```
 ~~~
-
-## 3. Session key pair (ephemeral)
-
-The client and the server _each_ will have to generate a key pair for every SSH session.
-
-They are used to establish the session's shared secret using a key exchange algorithm.
 
 ---
 
