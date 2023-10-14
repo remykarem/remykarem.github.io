@@ -50,6 +50,7 @@
 
 # Firewalls
 
+- [Strategies](./firewall/strategies.md)
 - [Application-level]()
   - [Stateless]()
   - [Stateful]()
