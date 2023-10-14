@@ -4,7 +4,7 @@ For this protocol to work, **3 asymmetric key pairs** are at play:
 
 ## 1. Host key pair (permanent)
 
-The private key, held by the server, is used for _host authentication_. It is typically stored in `/etc/ssh`.
+The private key, held by the server, is used for **host authentication**. It is typically stored in `/etc/ssh`.
 
 These keys should be automatically created when installing SSH on the server (?), so no generation is required.
 
