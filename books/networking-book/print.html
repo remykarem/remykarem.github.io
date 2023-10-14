@@ -1477,7 +1477,7 @@ Raimi
 </li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setup"><a class="header" href="#setup">Setup</a></h1>
-<p>For this protocol to work, <strong>3 asymmetric key pairs</strong> are at play:</p>
+<p>For this protocol to work, these things need to be set up first.</p>
 <h2 id="1-host-key-pair-permanent"><a class="header" href="#1-host-key-pair-permanent">1. Host key pair (permanent)</a></h2>
 <p>The private key, held by the server, is used for <strong>host authentication</strong>. It is typically stored in <code>/etc/ssh</code>.</p>
 <p>These keys should be automatically created when installing SSH on the server (?), so no generation is required.</p>
@@ -1566,9 +1566,6 @@ Raimi
 </code></pre>
 </div>
 </div>
-<h2 id="3-session-key-pair-ephemeral"><a class="header" href="#3-session-key-pair-ephemeral">3. Session key pair (ephemeral)</a></h2>
-<p>The client and the server <em>each</em> will have to generate a key pair for every SSH session.</p>
-<p>They are used to establish the session's shared secret using a key exchange algorithm.</p>
 <hr />
 <p>User configurations are typically stored at <code>~/.ssh/config</code>:</p>
 <pre><code class="language-config">Host examplehostname
