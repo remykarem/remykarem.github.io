@@ -10,7 +10,12 @@ man 2 socket
 Sockets is OSI Layer 4 and 5.
 ~~~
 
-Sockets are an abstraction of the network interface, encompassing Layer 3 (`SOCK_RAW`) and Layer 4 (`SOCK_STREAM` and `SOCK_DGRAM`; TCP and UDP respectively). The system call allows you to:
+Sockets are an abstraction of the
+1. route table, and
+2. network interface,
+hence encompassing Layer 3 (`SOCK_RAW`) and Layer 4 (`SOCK_STREAM` and `SOCK_DGRAM`; TCP and UDP respectively).
+
+The system call allows you to:
 
 * Create socket
 * Bind socket to an IP address
