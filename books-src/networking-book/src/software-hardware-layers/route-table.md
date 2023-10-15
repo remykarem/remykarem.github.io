@@ -55,3 +55,11 @@ In Linux:
 ip route show default
 ```
 ````
+
+````admonish hint title="Find gateway for an IP address"
+In macOS, use `route`:
+
+```
+route -n get <ipaddress>
+```
+````

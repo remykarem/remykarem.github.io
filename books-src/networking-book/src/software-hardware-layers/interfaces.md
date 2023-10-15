@@ -73,10 +73,8 @@ sudo tcpdump -i en0 -n -tttt
 ```
 ~~~
 
-
 ~~~admonish tip
 A network interface is like a network configuration:
-
 
 * IP address
 * Subnet mask
