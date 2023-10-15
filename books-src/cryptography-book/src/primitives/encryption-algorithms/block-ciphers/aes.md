@@ -50,6 +50,10 @@ openssl enc -aes-256-cbc -d  # password is 123
 ```
 ~~~
 
+~~~admonish example
+OpenVPN uses aes-256-cbc as its default cipher. 
+~~~
+
 Resources:
 * [https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97](https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97)
 * [https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/](https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/)
