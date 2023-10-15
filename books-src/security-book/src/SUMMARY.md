@@ -9,6 +9,7 @@
 - [Basic auth](./basic-auth.md)
 - [Digest auth]()
 - [Form-based auth]()
+- [SSL certificate]()
 - [Token-in-header]()
 - [OAuth 2.0](./oauth2-0.md)
   - [Authorization Code Flow](./oauth2-0/authorization-code-flow.md)
@@ -27,11 +28,15 @@
 - [Facial recognition]()
 - [MFA]()
 
+---
+
 # Directory services
 
 - [Microsoft Active Directory]()
 - [Amazon Cloud Directory]()
 - [X.500]()
+
+---
 
 # Device posture assessment
 
