@@ -35,9 +35,9 @@
 
 # Tunnels
 
-- [SSH tunnel]()
-- [TLS tunnel]()
-- [VPN tunnel]()
+- [SSH tunnel](./tunnels/ssh-tunnel.md)
+- [TLS tunnel](./tunnels/tls-tunnel.md)
+- [VPN tunnel](./tunnels/vpn-tunnel.md)
 
 ---
 
