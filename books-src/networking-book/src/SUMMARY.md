@@ -33,16 +33,16 @@
 
 ---
 
-# Tunnel protocols
+# VPN
 
-- [VPN goals]()
-- [VPN](./vpn/index.md)
+- [How it works](./vpn/index.md)
+- [Protocols]()
+  - [WireGuard](./vpn/wireguard.md)
+  - [OpenVPN](./vpn/openvpn.md)
   - [IPSec](./vpn/ipsec.md)
     - [IKE]()
     - [IKEv2](./vpn/ikev2.md)
   - [SSL VPN]()
-  - [OpenVPN](./vpn/openvpn.md)
-  - [WireGuard](./vpn/wireguard.md)
 - [Cloudflare tunnel]()
 - [Split tunnelling](./vpn/split-tunnelling.md)
 
