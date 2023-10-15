@@ -10,8 +10,8 @@
 - [Non-repudiation](./goals/non-repudiation.md)
 - [Integrity](./goals/integrity.md)
 - [Confidentiality](./goals/confidentiality.md)
+- [Forward secrecy](./goals/forward-secrecy.md)
 - [Anonymity and privacy]()
-- [Forward secrecy]()
 
 ---
 
@@ -19,6 +19,16 @@
 
 - [Shared secret]()
 - [Private-public key pair](./cryptographic-keys/private-public-key-pair.md)
+
+---
+
+# Cryptosystems
+
+- [RSA](./cryptosystems/rsa/index.md)
+- [ECC](./cryptosystems/ecc/index.md)
+- [DSA](./cryptosystems/dsa.md)
+- [PGP](./cryptosystems/pgp.md)
+- [ElGamal]()
 
 ---
 
@@ -56,9 +66,14 @@
   - [Stream ciphers]()
     - [ChaCha20](./primitives/encryption-algorithms/stream-ciphers/chacha20.md)
   - [RSAES-OAEP](./primitives/encryption-algorithms/rsa.md)
-  - [RSAES-PKCS1-v1_5]()
+  - [RSAES-PKCS1-v1_5](./primitives/encryption-algorithms/rsaes-pkcs1-v1_5.md)
   - [ECIES](./primitives/encryption-algorithms/ecies.md)
   - [ElGamal]()
+- [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
+    - [DHKE](./primitives/key-exchange-algorithms/diffie-hellman.md)
+    - [RSA key exchange](./primitives/key-exchange-algorithms/rsa-key-exchange.md)
+    - [ECDH](./primitives/key-exchange-algorithms/ecdh.md)
+    - [X25519](./primitives/key-exchange-algorithms/x25519.md)
 - [Authenticated encryption]()
   - [AES-GCM]()
   - [ChaCha20-Poly1305]()
@@ -68,20 +83,6 @@
     - [Bcrypt]()
     - [Scrypt]()
     - [Argon]()
-- [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
-    - [DHKE](./primitives/key-exchange-algorithms/diffie-hellman.md)
-    - [RSA key exchange](./cryptosystems/rsa/key-exchange.md)
-    - [ECC-based](./cryptosystems/ecc/key-exchange.md)
-
----
-
-# Cryptosystems
-
-- [RSA](./cryptosystems/rsa/index.md)
-- [ECC](./cryptosystems/ecc/index.md)
-- [DSA](./cryptosystems/dsa.md)
-- [PGP](./cryptosystems/pgp.md)
-- [ElGamal]()
 
 ---
 
