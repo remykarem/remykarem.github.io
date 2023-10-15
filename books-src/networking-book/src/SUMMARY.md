@@ -33,6 +33,14 @@
 
 ---
 
+# Tunnels
+
+- [SSH tunnel]()
+- [TLS tunnel]()
+- [VPN tunnel]()
+
+---
+
 # VPN
 
 - [How it works](./vpn/index.md)
@@ -144,12 +152,20 @@
 
 ---
 
-# Protocols: OSI Layer 1 — Datalink
+# Protocols: OSI Layer 2 — Link
 
-- [Overview](./osi-layer-1/index.md)
-- [ARP](./osi-layer-1/arp.md)
 - [802.11 Wi-Fi]()
 - [802.3 Ethernet]()
+
+---
+
+# Protocols: OSI Layer 1 — Physical
+
+- [Overview](./osi-layer-1/index.md)
+- [3G]()
+- [4G]()
+- [Optical fibre]()
+- [ARP](./osi-layer-1/arp.md)
 - [NFC]()
 - [Bluetooth]()
 
