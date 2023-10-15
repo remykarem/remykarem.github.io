@@ -23,7 +23,7 @@ jobs:
 
     - name: Download mdbook preprocessors
       run: |
-        curl -O -L https://github.com/tommilligan/mdbook-admonish/releases/download/v1.9.0/mdbook-admonish-v1.13.0-x86_64-unknown-linux-musl.tar.gz
+        curl -O -L https://github.com/tommilligan/mdbook-admonish/releases/download/v1.9.0/mdbook-admonish-v1.9.0-x86_64-unknown-linux-musl.tar.gz
         tar xvzf mdbook-admonish-v1.9.0-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
         curl -O -L https://github.com/lzanini/mdbook-katex/releases/download/v0.3.15/mdbook-katex-v0.3.15-x86_64-unknown-linux-musl.tar.gz
         tar xvzf mdbook-katex-v0.3.15-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
