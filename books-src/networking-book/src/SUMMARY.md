@@ -162,10 +162,12 @@
 
 ---
 
-# Unclassified
+# Others
 
-- [Standards](./standards.md)
-- [Type a URL on the browser](./what-happens.md)
-- [Troubleshooting](./troubleshooting.md)
+- [Standards](./others/standards.md)
+- [Type a URL on the browser](./others/what-happens.md)
+- [Troubleshooting](./others/troubleshooting.md)
 - [Compression]()
 - [MIME]()
+- [Noise protocol](./others/noise-protocol.md)
+- [Signal protocol](./others/signal-protocol.md)
