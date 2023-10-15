@@ -47,6 +47,7 @@ jobs:
         mdbook build books-src/cryptography-book
         mdbook build books-src/os-book
         mdbook build books-src/data-structures-and-algorithms-book
+        mdbook build books-src/x86-64-book
 
     # Add more build steps as needed for each book
 
