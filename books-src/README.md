@@ -42,6 +42,9 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
     preferred-dark-theme = "macchiato"
     no-section-label = true
 
+    [output.html.print]
+    enable = false
+
     [build]
     build-dir = "../../books/your-book"  # this is for mathy books. for non-mathy, use "./html"
 
