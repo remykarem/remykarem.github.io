@@ -12,6 +12,9 @@ edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/
 no-section-label = true
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
+[output.html.print]
+enable = false
+
 [build]
 build-dir = "../../books/networking-book"
 
