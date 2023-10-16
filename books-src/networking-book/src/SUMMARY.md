@@ -84,7 +84,7 @@
   - [Setup: DNS servers]()
   - [Setup: Client-server]()
   - [Workflow]()
-  - [Record types](./osi-layer-7/dns/record-types.md)
+  - [DNS record](./osi-layer-7/dns/dns-record.md)
   - [DoH](./osi-layer-7/dns/doh.md)
   - [DoT]()
 - [SFTP](./osi-layer-7/sftp.md)
