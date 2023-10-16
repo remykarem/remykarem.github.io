@@ -146,7 +146,7 @@
 - [IP](./osi-layer-3/ipv4.md)
   - [Workflow: Message routing](./osi-layer-3/ip/routing.md)
   - [Message format](./osi-layer-3/ip/ip-packet.md)
-  - [Host addressing](./osi-layer-3/ip/ip-addresses.md)
+  - [IP addressing](./osi-layer-3/ip/ip-addresses.md)
   - [Fragmentation and reassembly](./osi-layer-3/ip/fragmentation-and-reassembly.md)
 - [ICMP](./osi-layer-3/icmp.md)
 
