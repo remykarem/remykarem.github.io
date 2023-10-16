@@ -18,6 +18,10 @@ ipconfig getifaddr en0
 ```
 ~~~
 
+## The CIDR notation
+
+The CIDR notation is used to express a range of IP addresses.
+
 ## Special addresses
 
 **Self-identification**
