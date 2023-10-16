@@ -86,6 +86,7 @@
   - [Workflow]()
   - [DNS record](./osi-layer-7/dns/dns-record.md)
   - [DoH](./osi-layer-7/dns/doh.md)
+  - [ODoH](./osi-layer-7/dns/odoh.md)
   - [DoT]()
 - [SFTP](./osi-layer-7/sftp.md)
 - [MQTT]()
