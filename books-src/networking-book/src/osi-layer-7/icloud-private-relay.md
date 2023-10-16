@@ -1,5 +1,5 @@
 # iCloud Private Relay
 
-Uses QUIC
+Uses QUIC, ODoH
 
 [iCloud Private Relay](https://blog.cloudflare.com/icloud-private-relay/)
