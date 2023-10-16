@@ -1,4 +1,14 @@
-# Record types
+# DNS record
+
+A DNS record is a list of mappings of hostname to IP address. An entry has the format:
+
+```
+(name, value, type, ttl)
+```
+
+where TTL (time-to-live) specifies how long the entry can be cached by the client. The values of “name”, “value”, and “type” vary from record types.
+
+There are different types of DNS records:
 
 ## A Record (Address Record)
 
