@@ -74,7 +74,7 @@
     - [RSA key exchange](./primitives/key-exchange-algorithms/rsa-key-exchange.md)
     - [ECDH](./primitives/key-exchange-algorithms/ecdh.md)
     - [X25519](./primitives/key-exchange-algorithms/x25519.md)
-- [HPKE](./primitives/hpke.md)
+- [KEM](./primitives/kem.md)
 - [Authenticated encryption]()
   - [AES-GCM]()
   - [ChaCha20-Poly1305]()
@@ -84,6 +84,7 @@
     - [Bcrypt]()
     - [Scrypt]()
     - [Argon]()
+- [HPKE](./primitives/hpke.md)
 
 ---
 
