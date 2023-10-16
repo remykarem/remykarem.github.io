@@ -1,6 +1,6 @@
 # Key exchange
 
-Both parties contribute to the negotiation of the shared secret.
+In key exchange protocols, _both parties_ contribute to the negotiation of the shared secret.
 
 This requires each party to have a private and public key.
 
