@@ -18,37 +18,6 @@ ipconfig getifaddr en0
 ```
 ~~~
 
-## Address classes
-
-| Class | Length of subnet ID | Range | Default subnet mask | Remarks |
-| --- | --- | --- | --- | --- |
-| Class A | 1 octet | 0.0.0.0 to 127.255.255.255 | 255.0.0.0 |  |
-| Class B | 2 octets | 128.0.0.0 to 191.255.255.255 | 255.255.0.0 |  |
-| Class C | 3 Octets | 192.0.0.0 to 223.255.255.255 | 255.255.255.0 |  |
-| Class D |  |  |  | For multicast |
-| Class E |  |  |  | Reserved |
-
-## Subnetting
-
-- Subnetting based on octets (deprecated).
-- Variable-length subnetting.
-
-| Subnet | No. of possible addresses | Lowest address | Highest address |
-| --- | --- | --- | --- |
-| 10.0.0.0/30 | 2^2 | 10.0.0.0 | 10.0.0.3 |
-| 192.0.2.0/24 | 2^8 | 192.0.2.0 | 192.0.2.255 |
-
-## Address assignment using subnetting
-
-- Subnet mask: host bits set to 0
-eg. 203.128.22.0 and a host can be 203.128.22.7
-- Network address: host bits set to 0
-eg. 203.128.22.0.
-- Broadcast address: host bits set to 255 (all binary 1’s)
-eg. 203.128.22.255
-- Host address: host bits
-eg. 203.128.22.18
-
 ## Special addresses
 
 **Self-identification**
@@ -70,3 +39,7 @@ Private networks that are not directly attached to the Internet.
 **Link-local address**
 
 169.254.0.0/16
+
+~~~admonish question
+What's this...
+~~~

@@ -172,36 +172,6 @@
 </code></pre>
 </div>
 </div>
-<h2 id="address-classes"><a class="header" href="#address-classes">Address classes</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Class</th><th>Length of subnet ID</th><th>Range</th><th>Default subnet mask</th><th>Remarks</th></tr></thead><tbody>
-<tr><td>Class A</td><td>1 octet</td><td>0.0.0.0 to 127.255.255.255</td><td>255.0.0.0</td><td></td></tr>
-<tr><td>Class B</td><td>2 octets</td><td>128.0.0.0 to 191.255.255.255</td><td>255.255.0.0</td><td></td></tr>
-<tr><td>Class C</td><td>3 Octets</td><td>192.0.0.0 to 223.255.255.255</td><td>255.255.255.0</td><td></td></tr>
-<tr><td>Class D</td><td></td><td></td><td></td><td>For multicast</td></tr>
-<tr><td>Class E</td><td></td><td></td><td></td><td>Reserved</td></tr>
-</tbody></table>
-</div>
-<h2 id="subnetting"><a class="header" href="#subnetting">Subnetting</a></h2>
-<ul>
-<li>Subnetting based on octets (deprecated).</li>
-<li>Variable-length subnetting.</li>
-</ul>
-<div class="table-wrapper"><table><thead><tr><th>Subnet</th><th>No. of possible addresses</th><th>Lowest address</th><th>Highest address</th></tr></thead><tbody>
-<tr><td>10.0.0.0/30</td><td>2^2</td><td>10.0.0.0</td><td>10.0.0.3</td></tr>
-<tr><td>192.0.2.0/24</td><td>2^8</td><td>192.0.2.0</td><td>192.0.2.255</td></tr>
-</tbody></table>
-</div>
-<h2 id="address-assignment-using-subnetting"><a class="header" href="#address-assignment-using-subnetting">Address assignment using subnetting</a></h2>
-<ul>
-<li>Subnet mask: host bits set to 0
-eg. 203.128.22.0 and a host can be 203.128.22.7</li>
-<li>Network address: host bits set to 0
-eg. 203.128.22.0.</li>
-<li>Broadcast address: host bits set to 255 (all binary 1’s)
-eg. 203.128.22.255</li>
-<li>Host address: host bits
-eg. 203.128.22.18</li>
-</ul>
 <h2 id="special-addresses"><a class="header" href="#special-addresses">Special addresses</a></h2>
 <p><strong>Self-identification</strong></p>
 <p>0.0.0.0/8</p>
@@ -213,6 +183,15 @@ eg. 203.128.22.18</li>
 <p>Private networks that are not directly attached to the Internet.</p>
 <p><strong>Link-local address</strong></p>
 <p>169.254.0.0/16</p>
+<div id="admonition-question" class="admonition question">
+<div class="admonition-title">
+<p>Question</p>
+<p><a class="admonition-anchor-link" href="#admonition-question"></a></p>
+</div>
+<div>
+<p>What's this...</p>
+</div>
+</div>
 
                     </main>
 
