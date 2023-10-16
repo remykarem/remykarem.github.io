@@ -108,13 +108,3 @@ Point of contact for DNS query
 
 
 ![DNS](dns.png)
-
-# **DNS records / resource records**
-
-A DNS record is a list of mappings of hostname to IP address. An entry has the format:
-
-```
-(name, value, type, ttl)
-```
-
-where TTL (time-to-live) specifies how long the entry can be cached by the client. The values of “name”, “value”, and “type” vary from record types.
