@@ -58,6 +58,8 @@ An Elastic Network Interface is associated with an instance. More than one ENIs 
 
 An ENI is automatically created for every EC2 instance.
 
+An ENI is similar to a virtual network interface — it has attributes like private IP address etc. It also has a **security group**.
+
 ## Network Firewall
 
 Both incoming and outgoing
