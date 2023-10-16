@@ -1,4 +1,4 @@
-# Host addressing
+# IP addressing
 
 An IP address is mapped to a _network interface_ in the host.
 
