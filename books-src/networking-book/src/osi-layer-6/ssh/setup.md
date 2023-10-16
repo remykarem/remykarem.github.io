@@ -50,6 +50,12 @@ The public key, should be shared with the server out-of-band prior to any SSH co
 
 There is an option to encrypt the private key at rest, which requires a passphrase.
 
+~~~admonish info title="Accepted public key cryptography algorithms"
+Both the server and the client can specify the public key algorithms it accepts and is willing to use (respectively).
+
+This can be done via the `PubkeyAcceptedAlgorithms` configuration.
+~~~
+
 ~~~admonish info title="Passphrase and ssh-agent"
 `ssh-agent` is a program that assists with SSH (Secure Shell) key management.
 

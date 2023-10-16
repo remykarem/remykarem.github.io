@@ -210,6 +210,16 @@
 <p>The private key, held by the client, is used for authenticating with the serve.</p>
 <p>The public key, should be shared with the server out-of-band prior to any SSH connection. This is typically stored in <code>~/.ssh/authorized_keys</code> at the server.</p>
 <p>There is an option to encrypt the private key at rest, which requires a passphrase.</p>
+<div id="admonition-accepted-public-key-cryptography-algorithms" class="admonition info">
+<div class="admonition-title">
+<p>Accepted public key cryptography algorithms</p>
+<p><a class="admonition-anchor-link" href="#admonition-accepted-public-key-cryptography-algorithms"></a></p>
+</div>
+<div>
+<p>Both the server and the client can specify the public key algorithms it accepts and is willing to use (respectively).</p>
+<p>This can be done via the <code>PubkeyAcceptedAlgorithms</code> configuration.</p>
+</div>
+</div>
 <div id="admonition-passphrase-and-ssh-agent" class="admonition info">
 <div class="admonition-title">
 <p>Passphrase and ssh-agent</p>
