@@ -24,11 +24,13 @@ The CIDR notation is used to express a range of IP addresses.
 
 The n in
 
+```
 a.b.c.d/n
+```
 
 means the first n bits are fixed.
 
-So 127.0.0.0/8 is a range of 127.0.0.0 to 127.255.255.255
+So `127.0.0.0/8` corresponds to `127.xxx.xxx.xxx`, which is a range of 127.0.0.0 to 127.255.255.255
 
 ## Special addresses
 
