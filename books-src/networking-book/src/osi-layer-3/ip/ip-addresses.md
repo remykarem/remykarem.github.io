@@ -22,6 +22,14 @@ ipconfig getifaddr en0
 
 The CIDR notation is used to express a range of IP addresses.
 
+The n in
+
+a.b.c.d/n
+
+means the first n bits are fixed.
+
+So 127.0.0.0/8 is a range of 127.0.0.0 to 127.255.255.255
+
 ## Special addresses
 
 **Self-identification**
