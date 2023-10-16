@@ -2,12 +2,6 @@
 
 Internet Control Message Protocol
 
-For diagnostics
-
-- Used by
-    - ping
-    - traceroute
-
 **Messages**
 
 - Destination unreachable
@@ -20,3 +14,9 @@ For diagnostics
 - Time exceeded
 - Echo request and echo reply
 - …
+
+~~~admonish example title="Use case"
+ICMP is not commonly used for exchange of data.
+
+Instead it's used as diagnostics. ping and traceroute use this.
+~~~
