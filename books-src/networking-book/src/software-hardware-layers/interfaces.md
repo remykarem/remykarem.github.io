@@ -76,7 +76,9 @@ sudo tcpdump -i en0 -n -tttt
 ~~~admonish tip
 A network interface is like a network configuration:
 
-* IP address
+* private IP address
+* one or more public IP addresses
+* MAC address
 * Subnet mask
 * Default gateway
 * DNS servers
