@@ -12,6 +12,8 @@ Rate at which the network can transport bits
 
 Therefore, the goals of Layer 4 (not guaranteed by all protocols) are:
 
+- **Packet segmentation**
+
 - **Provide reliable delivery** of packets
   - No lost packets
   - In-order delivery
