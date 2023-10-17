@@ -12,7 +12,7 @@ Mapping of domain name to AWS resource.
 
 ## Subnet
 
-A subnet is associated with a VPC.
+A subnet is associated with a [VPC](#vpc).
 
 ## Internet gateway
 
