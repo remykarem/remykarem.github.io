@@ -4,6 +4,15 @@
 
 ---
 
+# Trust models
+
+- [Trust chain]()
+- [Web of Trust]()
+- [Zero Trust](./trust-models/zero-trust.md)
+- [Trust On First Use]()
+
+---
+
 # Authentication & authorisation
 
 - [Basic auth](./basic-auth.md)
