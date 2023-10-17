@@ -1,4 +1,4 @@
-# RSA key exchange
+# Static RSA key exchange
 
 RFC 5246
 
