@@ -72,7 +72,7 @@
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
     - [DH](./primitives/key-exchange-algorithms/diffie-hellman.md)
     - [DHE](primitives/key-exchange-algorithms/ephemeral-diffie-hellman.md)
-    - [RSA key exchange](./primitives/key-exchange-algorithms/rsa-key-exchange.md)
+    - [Static RSA key exchange](./primitives/key-exchange-algorithms/static-rsa-key-exchange.md)
     - [ECDH](./primitives/key-exchange-algorithms/ecdh.md)
     - [ECDHE](./primitives/key-exchange-algorithms/ephemeral-ecdh.md)
     - [X25519](./primitives/key-exchange-algorithms/x25519.md)
