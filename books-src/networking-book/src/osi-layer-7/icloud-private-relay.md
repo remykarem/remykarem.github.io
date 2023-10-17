@@ -1,6 +1,9 @@
 # iCloud Private Relay
 
-Uses QUIC, ODoH
+The iCloud Private relay makes use of
+* chain of relays
+* QUIC
+* ODoH. 
 
 ~~~admonish quote
 Unlike a traditional VPN, iCloud Private Relay's dual-hop architecture ensures no single party has access to both the user's IP address and the details of their browsing activity.
