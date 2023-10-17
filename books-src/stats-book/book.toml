@@ -12,6 +12,7 @@ mathjax-support = true
 git-repository-url = "https://github.com/remykarem/remkarem.github.io"
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/stats-book/{path}"  # change your-book
 additional-css = ["last-changed.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css", "././mdbook-admonish.css"]
+no-section-label = true
 default-theme = "macchiato"
 preferred-dark-theme = "macchiato"
 
