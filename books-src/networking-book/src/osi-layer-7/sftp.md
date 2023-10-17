@@ -31,6 +31,6 @@ The SFTP protocol defines a variety of operations for file transfer and manipula
 | symlink   | ln              |
 | realpath  |                 |
 
-~~~admonish note
-The operations seem oddly similar to UNIX file syscalls.
+~~~admonish note title="SFTP vs. Unix file system"
+The naming convention is consistent with file system manipulation syscalls.
 ~~~
