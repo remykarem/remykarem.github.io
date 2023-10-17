@@ -11,15 +11,6 @@
 
 ---
 
-# Network architectures
-
-- [Client-server]()
-- [P2P]()
-- [Hybrid]()
-- [Data centres]()
-
----
-
 # Software/hardware layers
 
 - [Application]()
