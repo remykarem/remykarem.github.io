@@ -6,6 +6,8 @@ Pretty Good Privacy
 
 PGP is a hybrid encryption system for encrypting data. It uses both a symmetric and asymmetric key.
 
+PGP also uses a decentralised trust model called Web of Trust. 
+
 Encryption:
 
 $$
