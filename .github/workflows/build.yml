@@ -33,6 +33,7 @@ jobs:
 
     - name: Build books
       run: |
+        mdbook build books-src/ai-planning-book
         mdbook build books-src/number-theory-book
         mdbook build books-src/system-design-book
         mdbook build books-src/spring-boot-book
