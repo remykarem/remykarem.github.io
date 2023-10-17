@@ -4,4 +4,6 @@
 
 Hybrid Public Key Encryption
 
+A protocol designed to securely exchange data using symmetric and asymmetric encryption.
+
 Uses KEM as one of its components. 
