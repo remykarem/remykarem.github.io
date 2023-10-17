@@ -50,7 +50,9 @@ A Network ACL is associated with a subnet.
 
 ## Security group
 
-A security group is associated with a resource / EC2 instance.
+A security group defines inbound and outbound rules.
+
+## Instance / resource
 
 ## ENI
 
