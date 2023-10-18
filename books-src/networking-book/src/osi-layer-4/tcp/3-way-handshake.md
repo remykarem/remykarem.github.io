@@ -1,4 +1,6 @@
-# 3-way handshake
+# Workflow
+
+TCP works by a 3-way handshake:
 
 ```mermaid
 sequenceDiagram

@@ -148,7 +148,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="3-way-handshake"><a class="header" href="#3-way-handshake">3-way handshake</a></h1>
+                        <h1 id="workflow"><a class="header" href="#workflow">Workflow</a></h1>
+<p>TCP works by a 3-way handshake:</p>
 <pre class="mermaid">sequenceDiagram
     client -&gt;&gt; server: SYN, SequenceNum = x, Acknowledgement = -
     server -&gt;&gt; client: SYN+ACK, SequenceNum = y, Acknowledgement = x+1
