@@ -92,3 +92,4 @@
 - [Typestate pattern](./typestate_pattern.md)
 - [Enum pattern]()
 - [Early return](./early_return.md)
+- [KISS]()
