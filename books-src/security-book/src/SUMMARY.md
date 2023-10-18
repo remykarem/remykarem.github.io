@@ -4,6 +4,11 @@
 
 ---
 
+# Principles
+
+- [Principle of Least Privilege]()
+- [Compartmentalisation]()
+
 # Trust models
 
 - [Trust chain]()
