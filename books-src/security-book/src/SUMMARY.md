@@ -36,6 +36,7 @@
 - [Biometric]()
 - [Facial recognition]()
 - [MFA]()
+- [Public key]()
 
 ---
 
