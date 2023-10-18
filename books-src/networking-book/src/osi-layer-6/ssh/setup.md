@@ -57,9 +57,7 @@ This can be done via the `PubkeyAcceptedAlgorithms` configuration.
 ~~~
 
 ~~~admonish info title="Passphrase and ssh-agent"
-`ssh-agent` is a program that assists with SSH (Secure Shell) key management.
-
-It is typically used to hold private keys in memory so that they can be used without requiring the user to type in the passphrase every time the key is needed.
+`ssh-agent` is a program that assists with passphrase-protected private keys (in memory) so that the user doesn't have to type in the passphrase every time the key is needed.
 
 The `AddKeysToAgent` and `UseKeychain` SSH configs are associated with this SSH agent.
 
