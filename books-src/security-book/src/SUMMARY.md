@@ -16,6 +16,7 @@
 # Authentication & authorisation
 
 - [Basic auth](./basic-auth.md)
+- [Username-password]()
 - [Digest auth]()
 - [Form-based auth]()
 - [SSL certificate]()
@@ -37,6 +38,7 @@
 - [Facial recognition]()
 - [MFA]()
 - [Public key]()
+- [Kerberos]()
 
 ---
 
