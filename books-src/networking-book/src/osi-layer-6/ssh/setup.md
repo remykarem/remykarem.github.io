@@ -2,7 +2,7 @@
 
 For this protocol to work, these things need to be set up first.
 
-## Key pair for server authentication
+## For server authentication
 
 ~~~admonish note
 These keys should be automatically created when installing SSH on the server (?), so no generation is required.
@@ -42,9 +42,9 @@ Otherwise, the client is left to blindly trust the server on first connection. T
 GitHub, on the other hand, does it this way: [GitHub SSH key fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
 ~~~
 
-## Keys for client authentication
+## For client authentication
 
-The private key, held by the client, is used for authenticating with the serve.
+The private key, held by the client, is used for authenticating with the server.
 
 The public key, should be shared with the server out-of-band prior to any SSH connection. This is typically stored in `~/.ssh/authorized_keys` at the server.
 
@@ -70,6 +70,8 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
 Apart from asymmetric key pair, other authentication methods include:
 - Password — the password is encrypted using the shared secret key
 - SSH certificates
+
+The client authentication can also be two-factor.
 ~~~
 
 ~~~admonish example title="Test connection"
