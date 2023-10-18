@@ -19,7 +19,7 @@ It is easier for a client to manage a list of _root_ certificates, rather than m
 ```
 
 ```admonish info title="Trust store"
-Operating systems and browsers come with a list of trusted root certificates ("**trust store"**).
+Operating systems, browsers and other applications come with a list of trusted root certificates ("**trust store"**).
 
 In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under **System Roots**.
 
