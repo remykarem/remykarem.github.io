@@ -42,6 +42,12 @@ Otherwise, the client is left to blindly trust the server on first connection. T
 GitHub, on the other hand, does it this way: [GitHub SSH key fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
 ~~~
 
+## User account
+
+A username needs to be associated for every connection.
+
+To create an account, a user account needs to be created in the Linux system itself.
+
 ## For client authentication
 
 The private key, held by the client, is used for authenticating with the server.
