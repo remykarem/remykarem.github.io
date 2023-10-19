@@ -8,13 +8,15 @@ title = "Security Book"
 [output.html]
 site-url = "/books/security-book"  # this is for mathy books. for non-mathy, use "/books/your-book"
 mathjax-support = true
-git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/security-book/{path}"  # change your-book
 additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 no-section-label = true
+
+[output.html.print]
+enable = false
 
 [build]
 build-dir = "../../books/security-book"  # this is for mathy books. for non-mathy, use "./html"
