@@ -1,11 +1,5 @@
 # Preface
 
-[https://cryptobook.nakov.com](https://cryptobook.nakov.com/)
-
-[https://connect2id.com/products/nimbus-jose-jwt/examples](https://connect2id.com/products/nimbus-jose-jwt/examples)
-
-[https://developers.google.com/tink/deterministic-encryption](https://developers.google.com/tink/deterministic-encryption)
-
 Proofs
 
 | Ting                | Integrity | Authenticity | Non-repudiation |
@@ -34,3 +28,7 @@ Encryption
 * OpenSSH
 * PyCryptodome
 * Bouncy Castle
+* [Tink](https://developers.google.com/tink)
+
+## Others
+[https://cryptobook.nakov.com](https://cryptobook.nakov.com/)
