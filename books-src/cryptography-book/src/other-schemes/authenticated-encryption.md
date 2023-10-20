@@ -1,6 +1,7 @@
 # Authenticated encryption
 
 Examples:
-* AES + GCM
-* AES + CCM
+* AES + GCM — includes an authentication tag
+* AES + CCM — includes a MAC
+* AES + EAX + OCB
 * ChaCha20 + Poly1305
