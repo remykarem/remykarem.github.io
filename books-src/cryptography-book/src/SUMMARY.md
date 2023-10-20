@@ -87,9 +87,10 @@
 
 # Other schemes
 
-- [Authenticated encryption (AEAD)](./other-schemes/aead/index.md)
+- [Authenticated encryption](./other-schemes/authenticated-encryption/index.md)
   - [AES-GCM]()
   - [ChaCha20-Poly1305]()
+  - [AEAD]()
 - [HPKE](./primitives/hpke.md)
 
 ---
