@@ -147,7 +147,7 @@
 
 # Attacks
 
-- [Chosen Plaintext Attack]()
+- [Chosen Plaintext Attack](./attacks/chosen-plaintext-attack.md)
 - [Chosen Ciphertext Attack]()
 - [Brute-force attack]()
 - [Length extension attack]()
