@@ -13,6 +13,7 @@ Types of queues
   * Strict FIFO
   * Every message is processed only once
 * **DLQ** — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully.
+* **Work queue** or **task queue**
 
 ~~~admonish example
 AWS SQS
