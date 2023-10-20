@@ -1,5 +1,7 @@
 # Non-repudiation
 
+aka non-deniability
+
 Non-repudiation ensures that a party has indeed performed a cryptographic action (like signed a document digitally or sent a message), and _cannot later deny_ having done so (because there is evidence in the party's action).
 
 ~~~admonish note title="Authenticity vs. non-repudiation"
