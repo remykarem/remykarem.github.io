@@ -1,6 +1,6 @@
 # Authenticated encryption
 
-Authenticated encryption provides [confidentiality](../confidentiality.md) _and_ [authenticity](../authenticity.md).
+Authenticated encryption provides [confidentiality](../goals/confidentiality.md) _and_ [authenticity](../goals/authenticity.md).
 
 Examples:
 * AES + GCM — includes an authentication tag
