@@ -90,7 +90,7 @@
 - [Authenticated encryption](./other-schemes/authenticated-encryption/index.md)
   - [AES-GCM]()
   - [ChaCha20-Poly1305]()
-  - [AEAD]()
+  - [AEAD](./other-schemes/authenticated-encryption/aead.md)
 - [HPKE](./primitives/hpke.md)
 
 ---
