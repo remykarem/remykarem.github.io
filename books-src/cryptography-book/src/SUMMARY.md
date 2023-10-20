@@ -149,5 +149,7 @@
 
 # Attacks
 
+- [Chosen Plaintext Attack]()
+- [Chosen Ciphertext Attack]()
 - [Brute-force attack]()
 - [Length extension attack]()
