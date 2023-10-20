@@ -77,15 +77,19 @@
     - [ECDHE](./primitives/key-exchange-algorithms/ephemeral-ecdh.md)
     - [X25519](./primitives/key-exchange-algorithms/x25519.md)
 - [KEM](./primitives/kem.md)
-- [Authenticated encryption]()
-  - [AES-GCM]()
-  - [ChaCha20-Poly1305]()
-  - [AEAD]()
 - [KDF](./primitives/kdf.md)
     - [PBKDF2]()
     - [Bcrypt]()
     - [Scrypt]()
     - [Argon]()
+
+---
+
+# Other schemes
+
+- [Authenticated encryption (AEAD)](./other-schemes/aead/index.md)
+  - [AES-GCM]()
+  - [ChaCha20-Poly1305]()
 - [HPKE](./primitives/hpke.md)
 
 ---
