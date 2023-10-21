@@ -7,7 +7,7 @@ Purpose
 Applications
 * Rate limiting
 * Monitoring
-* Batching
+* [Batching](../../batching.md)
 
 Common characteristics:
 * Managed queues are usually [distributed](../../distributed.md)
