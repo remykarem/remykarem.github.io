@@ -49,7 +49,7 @@ Finding the reverse of this is the discrete logarithm problem (which I have yet 
 |----|---| --- |
 |[Curve25519](https://en.wikipedia.org/wiki/Curve25519)| Montgomery | $2^{255} - 19$ |
 |[Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519)| Twisted Edwards | $2^{255} - 19$ |
-|P-256 / secp256r1 / prime256v1|Weierstrass | $2^{256} - 2^{224} + 2^{192} + 2^{96} - 1$ |
+| NIST P-256 / secp256r1 / prime256v1|Weierstrass | $2^{256} - 2^{224} + 2^{192} + 2^{96} - 1$ |
 |P-384| Weierstrass | $2^{384} - 2^{128} - 2^{96} + 2^{32} - 1$ |
 |secp256k1| Weierstrass | $2^{256} - 2^{32} - 977$ |
 |Ed448-Goldilocks| Edwards | $2^{448} - 2^{224} - 1$ |
