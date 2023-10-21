@@ -4,6 +4,11 @@ Purpose
 * [Message **storage** (FIFO)](../data-storage.md)
 * [Processing messages in order](../concurrency-control.md)
 
+Applications
+* Rate limiting
+* Monitoring
+* Batching
+
 Types of queues
 
 * **Standard queue** —
