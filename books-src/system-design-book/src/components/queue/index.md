@@ -1,7 +1,7 @@
 # Message queue
 
 Purpose
-* [Message **storage** (FIFO)](../data-storage.md)
+* [Short-term data **storage** (FIFO)](../data-storage.md)
 * [Processing messages in order](../concurrency-control.md)
 
 Applications
