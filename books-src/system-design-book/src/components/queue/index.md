@@ -9,6 +9,8 @@ Applications
 * Monitoring
 * Batching
 
+Managed queues are usually [distributed](../../distributed.md)
+
 Types of queues
 
 * **Standard queue** —
