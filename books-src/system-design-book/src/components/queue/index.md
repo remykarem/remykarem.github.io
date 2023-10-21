@@ -5,7 +5,7 @@ Purpose
 * [Processing messages in order](../concurrency-control.md)
 
 Applications
-* Rate limiting
+* [Rate limiting](../../rate-limiting.md)
 * Monitoring
 * [Batching](../../batching.md)
 
