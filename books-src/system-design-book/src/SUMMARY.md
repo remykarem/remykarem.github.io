@@ -29,6 +29,7 @@
 # Strategies
 
 - [Caching](./components/caching.md)
+- [Batching](./batching.md)
 - [Redundancy](./redundancy.md)
 - [Replication](./replication.md)
 - [Distributed](./distributed.md)
