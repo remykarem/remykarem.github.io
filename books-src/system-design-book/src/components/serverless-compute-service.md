@@ -3,6 +3,7 @@
 Serverless compute service
 
 Characteristics:
+* [distributed](../../distributed.md) by design
 * **stateless** — every function is processed in isolation
 * **serverless** — this means faster start time
 
