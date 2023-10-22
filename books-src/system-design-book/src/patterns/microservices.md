@@ -2,7 +2,8 @@
 
 [https://microservices.io](https://microservices.io)
 
-* Database per service
+* [Loosely coupled](../strategies/loose-coupling-of-services.md)
+* Database-per-service
 * Code at same level of maturiryy
 * Separate buld for each microservice
 * Single responsibility
