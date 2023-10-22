@@ -142,8 +142,8 @@
 - [Single unit]()
   - [Monolithic]()
 - [Collection of functionalities]()
-  - [Service-oriented architecture]()
   - [Microservices](./patterns/microservices.md)
+  - [Service-oriented architecture]()
   - [Layered]()
 
 ---
