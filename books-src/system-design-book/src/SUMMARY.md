@@ -76,8 +76,8 @@
 
 - [Overview](./data-management-patterns/overview.md)
 - [Structural: Organising]()
-  - [Shared database](./data-management-patterns/shared-database.md)
   - [Database-per-Service](./data-management-patterns/database-per-service.md)
+  - [Shared database](./data-management-patterns/shared-database.md)
 - [Behavioural: Querying]()
   - [API composition](./data-management-patterns/api-composition.md)
   - [Saga](./data-management-patterns/saga.md)
