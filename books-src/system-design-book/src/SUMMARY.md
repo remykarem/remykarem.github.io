@@ -110,7 +110,7 @@
     - [Point-to-point]()
     - [Task queues]()
   - [Pub/Sub](./messaging-patterns/pub-sub.md)
-- [Type III: Direction](./messaging-patterns/direction.md)
+- [Type III: Responsibility & direction](./messaging-patterns/direction.md)
   - [Polling (Pull)](./messaging-patterns/polling.md)
   - [Webhook (Push)](./messaging-patterns/webhook.md)
 - [Type IV: Streamingness]()
