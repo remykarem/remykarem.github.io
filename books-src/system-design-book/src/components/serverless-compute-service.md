@@ -3,7 +3,7 @@
 Serverless compute service
 
 Characteristics:
-* [distributed](../distributed.md) by design
+* [distributed](../strategies/distributed.md) by design
 * **stateless** — every function is processed in isolation
 * **serverless** — this means faster start time
 
@@ -12,7 +12,7 @@ Designed for
 * short-lived operations — aligned with event-driven tasks that are _designed to respond quickly to changes_
 
 Soecific to AWS:
-* [**automatic scaling**](../auto-scaling.md)
+* [**automatic scaling**](../strategies/auto-scaling.md)
 
 ~~~admonish example
 AWS Lambda

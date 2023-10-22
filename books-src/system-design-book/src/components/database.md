@@ -1,4 +1,4 @@
 # Database
 
 Purpose:
-* [Data storage](./data-storage.md)
+* [Data storage](../core-functionalities/data-storage.md)
