@@ -12,11 +12,11 @@
 
 # Goals
 
-- [Scalability](./scalability.md)
-- [Availability](./availability.md)
-- [Performance](./performance.md)
-- [Reliability](./reliability.md)
-- [Fault tolerance?](./fault-tolerance.md)
+- [Scalability](./goals/scalability.md)
+- [Availability](./goals/availability.md)
+- [Performance](./goals/performance.md)
+- [Reliability](./goals/reliability.md)
+- [Fault tolerance?](./goals/fault-tolerance.md)
   - [Partial tolerance]()
 - [Consistency]()
 - [Atomicity]()
@@ -28,17 +28,17 @@
 
 # Strategies
 
-- [Caching](./components/caching.md)
-- [Batching](./batching.md)
-- [Redundancy](./redundancy.md)
-- [Distributed](./distributed.md)
-  - [Replication](./replication.md)
+- [Caching](./strategies/caching.md)
+- [Batching](./strategies/batching.md)
+- [Redundancy](./strategies/redundancy.md)
+- [Distributed](./strategies/distributed.md)
+  - [Replication](./strategies/replication.md)
   - [Sharding]()
-- [Auto-scaling](./auto-scaling.md)
-- [Rate limiting](./components/rate-limiting.md)
-- [Load balancing](./components/load-balancing.md)
+- [Auto-scaling](./strategies/auto-scaling.md)
+- [Rate limiting](./strategies/rate-limiting.md)
+- [Load balancing](./strategies/load-balancing.md)
 - [Coupling, isolation]()
-- [Logging & monitoring](./components/logging-and-monitoring.md)
+- [Logging & monitoring](./strategies/logging-and-monitoring.md)
 - [Loose coupling of services]()
 
 ---
@@ -115,7 +115,7 @@
   - [Polling (Pull)](./messaging-patterns/polling.md)
   - [Webhook (Push)](./messaging-patterns/webhook.md)
 - [Type IV: Streamingness]()
-  - [Streaming](./streaming.md)
+  - [Streaming](./messaging-patterns/streaming.md)
 
 ---
 
@@ -163,22 +163,22 @@
 
 # Deployment strategies
 
-- [Deployment strategies](./deployment-strategies.md)
+- [Deployment strategies](./others/deployment-strategies.md)
 
 ---
 
 # Interface description languages
 
-- [Protobuf](./protobuf.md)
-- [ASN.1](./asn1.md)
-- [JSON schema](./json-schema.md)
+- [Protobuf](./others/protobuf.md)
+- [ASN.1](./others/asn1.md)
+- [JSON schema](./others/json-schema.md)
 - [Apache Thrift]()
 
 ---
 
 # Unclassified
 
-- [Connections](./connections.md)
+- [Connections](./others/connections.md)
 - [Network architecture and communication protocols]()
-    - [Network architectures](./network-architectures.md)
-- [Web architecture & software architecture](./web-architecture-and-software-architecture.md)
+    - [Network architectures](./others/network-architectures.md)
+- [Web architecture & software architecture](./others/web-architecture-and-software-architecture.md)
