@@ -50,7 +50,7 @@
 - [Load balancing](./strategies/load-balancing.md)
 - [Coupling, isolation]()
 - [Logging & monitoring](./strategies/logging-and-monitoring.md)
-- [Loose coupling of services]()
+- [Loose coupling of services](./strategies/loose-coupling-of-services.md)
 
 ---
 
