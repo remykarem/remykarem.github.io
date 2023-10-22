@@ -17,3 +17,9 @@ Soecific to AWS:
 ~~~admonish example
 AWS Lambda
 ~~~
+
+~~~admonish example
+Spring Cloud Function is a framework built on top of Spring Boot that abstracts over the underlying serverless compute service.
+
+It also offers local testing.
+~~~
