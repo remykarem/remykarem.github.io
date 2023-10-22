@@ -122,10 +122,18 @@
 - [Consistency models](./consistency-models.md)
   - [Immediate consistency]()
     - [ACID](./distributed-system/consistency-models/immediate-consistency/acid.md)
+    - [Two-Phase Commit]()
+    - [Paxos & Raft consensus protocols]()
+    - [Locks and distributed lock manager]()
+    - [Consistent hashing]()
+    - [Gossip protocols]()
   - [Eventual consistency]()
     - [BASE]()
+  - [Eventual consistency]()
+  - [Weak consistency]()
 - [Distributed database]()
   - [SQL vs. NoSQL](./sql-vs-nosql.md)
+- [Concurrency control]()
 
 ---
 
