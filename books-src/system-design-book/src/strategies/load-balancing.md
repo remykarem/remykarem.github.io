@@ -9,4 +9,8 @@ Load balancing algorithms:
 * Weighted Round Robin
 * Least Connections
 
+Load balancing can be done at:
+* Layer 4 (transport) — looks at source, destination, port
+* Layer 7 (application) — looks at content eg. HTTP header
+
 Visualisation: [https://samwho.dev/load-balancing/](https://samwho.dev/load-balancing/)
