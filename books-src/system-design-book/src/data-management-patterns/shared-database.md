@@ -6,4 +6,4 @@ Pros:
 * Simple to implement
 
 Cons:
-* Create **high coupling** between services; hard to scale services independently
+* Creates **high coupling** between services; hard to scale services independently
