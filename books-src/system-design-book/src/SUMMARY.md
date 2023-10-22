@@ -118,15 +118,15 @@
 
 ---
 
-# Database
+# Distributed tings
 
-- [SQL vs. NoSQL](./sql-vs-nosql.md)
+- [Consistency models](./consistency-models.md)
 
 ---
 
-# Consistency models
+# Database
 
-- [Consistency models](./consistency-models.md)
+- [SQL vs. NoSQL](./sql-vs-nosql.md)
 
 ---
 
