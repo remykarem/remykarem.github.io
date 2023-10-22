@@ -12,6 +12,9 @@ additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../cs
 no-section-label = true
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
+[output.html.print]
+enable = false
+
 [build]
 build-dir = "../../books/system-design-book/"
 
