@@ -39,6 +39,7 @@
 # Strategies
 
 - [Caching](./strategies/caching.md)
+- [Failover](./strategies/failover.md)
 - [Batching](./strategies/batching.md)
 - [Redundancy](./strategies/redundancy.md)
 - [Distributed](./strategies/distributed.md)
