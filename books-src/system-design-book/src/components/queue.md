@@ -1,16 +1,16 @@
 # Message queue
 
 Purpose
-* [Short-term data **storage** (FIFO)](../data-storage.md)
-* [Processing messages in order](../concurrency-control.md)
+* [Short-term data **storage** (FIFO)](../core-functionalities/data-storage.md)
+* [Processing messages in order](../core-functionalities/concurrency-control.md)
 
 Applications
-* [Rate limiting](../../rate-limiting.md)
+* [Rate limiting](../strategies/rate-limiting.md)
 * Monitoring
-* [Batching](../../batching.md)
+* [Batching](../strategies/batching.md)
 
 Common characteristics:
-* Managed queues are usually [distributed](../../distributed.md)
+* Managed queues are usually [distributed](../strategies/distributed.md)
 
 Types of queues
 

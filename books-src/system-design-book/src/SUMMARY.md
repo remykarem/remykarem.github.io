@@ -17,12 +17,22 @@
 - [Performance](./goals/performance.md)
 - [Reliability](./goals/reliability.md)
 - [Fault tolerance?](./goals/fault-tolerance.md)
-  - [Partial tolerance]()
-- [Consistency]()
+  - [Partition tolerance](./goals/partition-tolerance.md)
+- [Consistency](./goals/consistency.md)
 - [Atomicity]()
-- [Data integrity]()
-- [Isolation]()
-- [Durability]()
+
+---
+
+# Core functionalities
+
+- [Routing](./core-functionalities/routing.md)
+- [Scheduling](./core-functionalities/scheduling.md)
+- [Data storage](./core-functionalities/data-storage.md)
+- [Identity hiding](./core-functionalities/identity-hiding.md)
+- [Concurrency control](./core-functionalities/concurrency-control.md)
+- [Control outgoing requests](./core-functionalities/control-outgoing-requests.md)
+- [SSL encryption & decryption](./core-functionalities/ssl-encryption-and-decryption.md)
+- [Authentication & authorisation](./core-functionalities/authentication-and-authorisation.md)
 
 ---
 
@@ -43,25 +53,12 @@
 
 ---
 
-# Core functionalities
-
-- [Routing](./components/routing.md)
-- [Scheduling](./components/scheduling.md)
-- [Data storage](./components/data-storage.md)
-- [Identity hiding](./components/identity-hiding.md)
-- [Concurrency control](./components/concurrency-control.md)
-- [Control outgoing requests](./components/control-outgoing-requests.md)
-- [SSL encryption & decryption](./components/ssl-encryption-and-decryption.md)
-- [Authentication & authorisation](./components/authentication-and-authorisation.md)
-
----
-
 # Components
 
 - [CDN](./components/cdn.md)
 - [Cache]()
 - [Firewall]()
-- [Queue](./components/queue/index.md)
+- [Queue](./components/queue.md)
 - [Lambda](./components/serverless-compute-service.md)
 - [Compute]()
 - [Database](./components/database.md)
@@ -119,15 +116,16 @@
 
 ---
 
-# Distributed tings
+# Distributed system
 
+- [CAP theorem](./distributed-system/cap-theorem.md)
 - [Consistency models](./consistency-models.md)
-
----
-
-# Database
-
-- [SQL vs. NoSQL](./sql-vs-nosql.md)
+  - [Immediate consistency]()
+    - [ACID](./distributed-system/consistency-models/immediate-consistency/acid.md)
+  - [Eventual consistency]()
+    - [BASE]()
+- [Distributed database]()
+  - [SQL vs. NoSQL](./sql-vs-nosql.md)
 
 ---
 
