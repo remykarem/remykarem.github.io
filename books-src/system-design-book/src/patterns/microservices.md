@@ -4,12 +4,13 @@
 
 * [Loosely coupled](../strategies/loose-coupling-of-services.md)
 * [Database-per-service](../data-management-patterns/database-per-service.md)
-* Code at same level of maturiryy
-* Separate buld for each microservice
-* Single responsibility
+* Separate build for each microservice
 * Deploy into containers
 * Servers are stateless
 * DDD
 * Microfrontend (?)
 
-From blog.bytebytego.com
+Cons:
+* It becomes harder to [maintain](../goals/maintainability.md) multiple services.
+
+Adapted from blog.bytebytego.com
