@@ -31,7 +31,7 @@
   - [Client Credentials Flow]()
   - [Hybrid Flow]()
 - [OIDC](./oidc.md)
-- [SAML]()
+- [SAML](./saml.md)
 - [TOTP](./totp.md)
   - [Microsoft Authenticator]()
 - [SSH]()
