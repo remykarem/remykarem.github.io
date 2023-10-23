@@ -2,7 +2,7 @@
 
 Characteristics
 
-* [Loosely coupled](../strategies/loose-coupling-of-services.md)
+* [Loosely coupled](../strategies/loose-coupling-of-services.md); organised by business capability
 * [Database-per-service](../data-management-patterns/database-per-service.md)
 * Separate build for each microservice
 * Deploy into containers
