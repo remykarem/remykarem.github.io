@@ -1,6 +1,6 @@
 # Microservices
 
-[https://microservices.io](https://microservices.io)
+Characteristics
 
 * [Loosely coupled](../strategies/loose-coupling-of-services.md)
 * [Database-per-service](../data-management-patterns/database-per-service.md)
@@ -13,4 +13,7 @@
 Cons:
 * It becomes harder to [maintain](../goals/maintainability.md) multiple services.
 
-Adapted from blog.bytebytego.com
+References:
+* [Microservices by Martin Fowler](https://martinfowler.com/articles/microservices.html)
+* [microservices.io](https://microservices.io)
+* blog.bytebytego.com
