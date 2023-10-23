@@ -20,6 +20,7 @@
   - [Partition tolerance](./goals/partition-tolerance.md)
 - [Consistency](./goals/consistency.md)
 - [Atomicity]()
+- [Maintainability](maintainability.md)
 
 ---
 
