@@ -8,6 +8,7 @@
 
 - [Principle of Least Privilege]()
 - [Compartmentalisation]()
+- [Reduce blast radius](./reduce-blast-radius.md)
 
 # Trust models
 
