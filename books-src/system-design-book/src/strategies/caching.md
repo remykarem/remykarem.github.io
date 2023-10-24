@@ -9,7 +9,7 @@ Common caching strategies / consistency strategies:
 * Write-Through Cache — write to both backend storage annd cache
 * Write-Around Cache — write to backend storage only
 * Write-Back Cache — write to cache, and write to backend storage asynchronously
-* Read-Through Cache
+* Read-Through Cache — if in cache, return, else retrieve from db then write to cache then return
 * Cache-Aside
 * Eventual Consistency
 
