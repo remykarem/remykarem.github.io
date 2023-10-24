@@ -13,8 +13,8 @@ Common characteristics:
 * Managed queues are usually [distributed](../strategies/distributed.md)
 
 When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between
-(i) the entities that produce the message (the clients that send request), and 
-(ii) the entities that consume the message (the web server responding to the request). 
+* (i) the entities that produce the message (the clients that send request), and 
+* (ii) the entities that consume the message (the web server responding to the request). 
 In this way, the producer can produce messages at its pace, and the consumer can process messages at its pace. 
 
 Types of queues
