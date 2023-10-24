@@ -20,7 +20,7 @@ In this way, the producer can produce messages at its pace, and the consumer can
 
 The introduction of a queue provides a **buffer**, allowing for differences in consumption and production rates.
 
-This _facilitates_ [scalability](../goals/scalability.md)
+This _facilitates_ [scalability](../goals/scalability.md).
 
 Types of queues
 
