@@ -15,7 +15,12 @@ Common characteristics:
 When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between
 * (i) the entities that produce the message (the clients that send request), and 
 * (ii) the entities that consume the message (the web server responding to the request). 
-In this way, the producer can produce messages at its pace, and the consumer can process messages at its pace. 
+
+In this way, the producer can produce messages at its pace, and the consumer can process messages at its pace.
+
+The introduction of a queue provides a **buffer**, allowing for differences in consumption and production rates.
+
+This _facilitates_ [scalability](../goals/scalability.md)
 
 Types of queues
 
