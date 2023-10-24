@@ -57,7 +57,7 @@
 - [Load balancing](./strategies/load-balancing.md)
 - [Coupling, isolation]()
 - [Logging & monitoring](./strategies/logging-and-monitoring.md)
-- [Adding layer of abstraction](adding-layer-of-abstraction.md)
+- [Adding layer of abstraction](./strategies/adding-layer-of-abstraction.md)
 
 ---
 
