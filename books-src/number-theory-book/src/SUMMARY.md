@@ -53,6 +53,7 @@
       - [Safe prime]()
       - [Sofie Germain prime]()
       - [Fermat numbers](./prime-numbers/fermat-numbers.md)
+      - [Shor's algorithm](./prime-numbers/shors-algorithm.md)
     - [Tests]()
       - [Miller-Rabin test]()
     - [Theorems]()
