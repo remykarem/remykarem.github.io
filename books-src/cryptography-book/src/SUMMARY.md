@@ -54,6 +54,7 @@
   - [RSASSA-PSS](./primitives/digital-signature-algorithms/rsassa-pss.md)
   - [ECDSA](./primitives/digital-signature-algorithms/ecdsa.md)
   - [EdDSA](./primitives/digital-signature-algorithms/eddsa.md)
+  - [CRYSTALS-Dilithium](./primitives/digital-signature-algorithms/crystals-dilithium.md)
   - [ElGamal]()
   - [Schnorr]()
   - [DSA]()
