@@ -6,4 +6,4 @@ An IdP is a system that **authenticates** users, and communicates their identity
 
 An IdP also typically integrates with a **directory service**.
 
-Examples of IdP: Azure AD, Amazon Cognito, auth0, Singpass
+Examples of IdP: Azure AD, Amazon Cognito, auth0, Singpass, Techpass
