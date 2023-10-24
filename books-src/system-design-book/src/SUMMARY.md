@@ -37,12 +37,18 @@
 
 ---
 
+# Ideal state
+
+- [Redundancy](./strategies/redundancy.md)
+- [Loose coupling of services](./strategies/loose-coupling-of-services.md)
+
+---
+
 # Strategies
 
 - [Caching](./strategies/caching.md)
 - [Failover](./strategies/failover.md)
 - [Batching](./strategies/batching.md)
-- [Redundancy](./strategies/redundancy.md)
 - [Distributed](./strategies/distributed.md)
   - [Replication](./strategies/replication.md)
   - [Sharding]()
@@ -51,7 +57,7 @@
 - [Load balancing](./strategies/load-balancing.md)
 - [Coupling, isolation]()
 - [Logging & monitoring](./strategies/logging-and-monitoring.md)
-- [Loose coupling of services](./strategies/loose-coupling-of-services.md)
+- [Adding layer of abstraction](adding-layer-of-abstraction.md)
 
 ---
 
