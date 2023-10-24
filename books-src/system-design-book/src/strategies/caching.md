@@ -13,7 +13,13 @@ Common caching strategies / consistency strategies:
 * Cache-Aside
 * Eventual Consistency
 
-Common eviction strategies:
+## Expiration policy
+
+How long should data stay in the cache?
+
+## Eviction policy
+
+If there's not enough memory, which data should go first?
 
 * Least Recently Used
 * Most Recently Used
