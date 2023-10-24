@@ -12,6 +12,11 @@ Applications
 Common characteristics:
 * Managed queues are usually [distributed](../strategies/distributed.md)
 
+When you introduce a queue with a web server, we are [decoupling](../strategies/loose-coupling-of-services.md)
+(i) the entities that produce the message (the clients that send request), and 
+(ii) the entities that consume the message (the web server responding to the request). 
+In this way, 
+
 Types of queues
 
 * **Standard queue** —
