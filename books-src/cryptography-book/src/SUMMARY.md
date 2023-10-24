@@ -66,6 +66,7 @@
     - [3DES](./primitives/encryption-algorithms/block-ciphers/3des.md)
   - [Stream ciphers]()
     - [ChaCha20](./primitives/encryption-algorithms/stream-ciphers/chacha20.md)
+    - [RC4](./primitives/encryption-algorithms/stream-ciphers/rc4.md)
   - [RSAES-OAEP](./primitives/encryption-algorithms/rsa.md)
   - [RSAES-PKCS1-v1_5](./primitives/encryption-algorithms/rsaes-pkcs1-v1_5.md)
   - [ECIES](./primitives/encryption-algorithms/ecies.md)
