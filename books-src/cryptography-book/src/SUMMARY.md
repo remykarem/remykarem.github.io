@@ -25,7 +25,8 @@
 # Cryptosystems
 
 - [RSA](./cryptosystems/rsa/index.md)
-- [ECC](./cryptosystems/ecc/index.md)
+- [Elliptic curve cryptography](./cryptosystems/ecc/index.md)
+- [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography.md)
 - [DSA](./cryptosystems/dsa.md)
 - [PGP](./cryptosystems/pgp.md)
 - [ElGamal]()
