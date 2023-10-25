@@ -27,11 +27,6 @@
 - [Form-based auth]()
 - [SSL certificate]()
 - [Token-in-header]()
-- [OAuth 2.0](./oauth2-0.md)
-  - [Authorization Code Flow](./oauth2-0/authorization-code-flow.md)
-  - [Client Credentials Flow]()
-  - [Hybrid Flow]()
-- [OIDC](./oidc.md)
 - [SAML](./saml.md)
 - [TOTP](./totp.md)
   - [Microsoft Authenticator]()
@@ -45,6 +40,16 @@
 - [MFA]()
 - [Public key]()
 - [Kerberos]()
+
+---
+
+# Authorisation
+
+- [OAuth 2.0](./oauth2-0.md)
+  - [Authorization Code Flow](./oauth2-0/authorization-code-flow.md)
+  - [Client Credentials Flow]()
+  - [Hybrid Flow]()
+- [OIDC](./oidc.md)
 
 ---
 
