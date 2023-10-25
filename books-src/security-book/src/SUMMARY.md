@@ -48,11 +48,15 @@
 
 ---
 
-# Directory services
+# Tings
 
-- [Microsoft Active Directory]()
-- [Amazon Cloud Directory]()
-- [X.500]()
+- [IdP](./idp.md)
+- [IAM]()
+- [MDM]()
+- [Directory services()
+  - [Microsoft Active Directory]()
+  - [Amazon Cloud Directory]()
+  - [X.500]()
 
 ---
 
@@ -61,14 +65,6 @@
 - [Tanium]()
 - [Pulse Secure]()
 - [Cisco Identity Services]()
-
----
-
-# Tings
-
-- [IdP](./idp.md)
-- [IAM]()
-- [MDM]()
 
 ---
 
