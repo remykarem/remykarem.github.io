@@ -1,6 +1,4 @@
-# Metrics
-
-## AUC
+# AUC
 
 [https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5](https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5)
 
@@ -13,5 +11,6 @@ AUC 1 means it has good measure of separability
 AUC 0 means it is predicting cats as dogs and dogs as cats. 
 AUC 0.5 means it is not capable of distinguishing between classes.
 
-> 💡 **AUC = 0.7**
+~~~admonish note title="AUC 0.7"
 There is a 70% chance that the model will be able to distinguish between positive and negative class.
+~~~

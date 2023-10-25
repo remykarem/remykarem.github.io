@@ -29,7 +29,6 @@
 - [EDA++](./eda-plus-plus.md)
 - [Tests](./tests.md)
 - [ML system design](./ml-system-design.md)
-- [Metrics](./general-metrics.md)
 - [Bonus questions](./general/bonus-questions.md)
 - [Bias-variance decomposition](./bias-variance-decomposition.md)
 - [Rare event classification / anomaly detection](./rare-event-classification.md)
@@ -37,6 +36,13 @@
 - [Coursera](./coursera.md)
 - [Improve generalisation](./improve-generalisation.md)
 - [Course history](./general-course-history.md)
+
+---
+
+# Metrics
+
+- [AUC](./general-metrics.md)
+- [MRR](./metrics.md)
 
 ---
 
@@ -125,7 +131,6 @@
 ---
 
 - [Loss functions](./loss-functions.md)
-- [Metrics](./metrics.md)
 - [Hyperparameter optimisation]()
 
 ---

@@ -1,6 +1,4 @@
-# Metrics
-
-## MRR
+# MRR
 
 Mean reciprocal rank
 
