@@ -19,7 +19,7 @@
 
 ---
 
-# Authentication & authorisation
+# Authentication
 
 - [Basic auth](./basic-auth.md)
 - [Username-password]()
@@ -27,7 +27,6 @@
 - [Form-based auth]()
 - [SSL certificate]()
 - [Token-in-header]()
-- [SAML](./saml.md)
 - [TOTP](./totp.md)
   - [Microsoft Authenticator]()
 - [SSH]()
@@ -39,7 +38,6 @@
 - [Facial recognition]()
 - [MFA]()
 - [Public key]()
-- [Kerberos]()
 
 ---
 
@@ -50,6 +48,11 @@
   - [Client Credentials Flow]()
   - [Hybrid Flow]()
 - [OIDC](./oidc.md)
+- [SAML](./saml.md)
+- [Kerberos]()
+- [JWT]()
+- [SCIM]()
+- [LDAP]()
 
 ---
 
