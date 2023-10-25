@@ -40,7 +40,6 @@
 # Ideal state
 
 - [Redundancy](./strategies/redundancy.md)
-- [Stateless service](./strategies/stateless-service.md)
 - [Loose coupling of services](./strategies/loose-coupling-of-services.md)
 
 ---
@@ -61,6 +60,10 @@
 - [Vertical scaling](./strategies/vertical-scaling.md)
 - [Horizontal scaling](./strategies/horizontal-scaling.md)
 - [Adding layer of abstraction](./strategies/adding-layer-of-abstraction.md)
+
+# Strategies II
+
+- [Stateless service](./strategies/stateless-service.md)
 
 ---
 
