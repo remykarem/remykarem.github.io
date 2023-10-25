@@ -1,3 +1,5 @@
 # IAM
 
-May include [IdP](./idp.md)
+Rules to control user access to resources.
+
+May include user verification [IdP](./idp.md)
