@@ -52,13 +52,13 @@
 
 - [IdP](./idp.md)
 - [IAM](./iam.md)
-- [MDM]()
 - [Directory service](./directory-service.md)
 
 ---
 
 # Device posture assessment
 
+- [MDM]()
 - [Tanium]()
 - [Pulse Secure]()
 - [Cisco Identity Services]()
