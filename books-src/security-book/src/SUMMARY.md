@@ -53,7 +53,7 @@
 - [IdP](./idp.md)
 - [IAM]()
 - [MDM]()
-- [Directory services]()
+- [Directory service](./directory-service.md)
   - [Microsoft Active Directory]()
   - [Amazon Cloud Directory]()
   - [X.500]()
