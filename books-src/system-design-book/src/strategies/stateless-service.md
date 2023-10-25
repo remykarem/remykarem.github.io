@@ -1,3 +1,3 @@
 # Stateless service
 
-Facilitates [scalability](../goals/scalability.md)
+Facilitates [horizontal scaling](./horizontal-scaling.md)
