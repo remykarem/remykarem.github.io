@@ -54,9 +54,6 @@
 - [IAM]()
 - [MDM]()
 - [Directory service](./directory-service.md)
-  - [Microsoft Active Directory]()
-  - [Amazon Cloud Directory]()
-  - [X.500]()
 
 ---
 
