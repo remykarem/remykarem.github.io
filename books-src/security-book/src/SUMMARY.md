@@ -51,7 +51,7 @@
 # Tings
 
 - [IdP](./idp.md)
-- [IAM]()
+- [IAM](./iam.md)
 - [MDM]()
 - [Directory service](./directory-service.md)
 
