@@ -40,7 +40,6 @@
 # Ideal state
 
 - [Redundancy](./strategies/redundancy.md)
-- [Loose coupling of services](./strategies/loose-coupling-of-services.md)
 
 ---
 
@@ -64,6 +63,7 @@
 # Strategies II
 
 - [Stateless service](./strategies/stateless-service.md)
+- [Loose coupling of services](./strategies/loose-coupling-of-services.md)
 
 ---
 
