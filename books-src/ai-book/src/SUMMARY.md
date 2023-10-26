@@ -2,10 +2,13 @@
 
 [Preface](./preface.md)
 
+---
+
 # Trending applications
 
 - [Technologies / libraries](./technolgoies-libraries.md)
-- [Retrieval augmented generation](./retrieval-augmented-generation.md)
+
+---
 
 # General
 
@@ -18,9 +21,10 @@
   - [Survival analysis](./survival-analysis.md)
   - [Market basket analysis]()
   - [Time series analysis]()
-- [Stream processing](./stream-processing.md)
+  - [Rare event classification / anomaly detection](./rare-event-classification.md)
 - [Hyperparameter optimisation](./hyperparameter-optimisation.md)
 - [Feature transformation](./feature-transformation.md)
+- [Stream processing](./stream-processing.md)
 - [Feature selection](./feature-selection.md)
 - [Feature engineering](./feature-engineering.md)
 - [Train-test split](./train-test-split.md)
@@ -31,7 +35,6 @@
 - [ML system design](./ml-system-design.md)
 - [Bonus questions](./general/bonus-questions.md)
 - [Bias-variance decomposition](./bias-variance-decomposition.md)
-- [Rare event classification / anomaly detection](./rare-event-classification.md)
 - [BLAS](./blas.md)
 - [Coursera](./coursera.md)
 - [Improve generalisation](./improve-generalisation.md)
@@ -176,6 +179,13 @@
   - [VAE](./generative-ai/vae.md)
   - [GAN](./generative-ai/gan.md)
   - [Diffusion model]()
+
+---
+
+# Information retrieval
+
+- [Information retrieval](./information-retrieval.md)
+- [Retrieval augmented generation](./retrieval-augmented-generation.md)
 
 ---
 
