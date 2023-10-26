@@ -46,6 +46,7 @@
 
 - [AUC](./general-metrics.md)
 - [MRR](./metrics.md)
+- [Top-k](./top-k.md)
 
 ---
 
