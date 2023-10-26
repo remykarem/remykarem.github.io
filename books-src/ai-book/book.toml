@@ -8,13 +8,14 @@ title = "AI/ML/DS book"
 [output.html]
 site-url = "/books/ai-book"
 mathjax-support = true
-# Required for preprocess.last-changed
-git-repository-url = "https://github.com/remykarem/remkarem.github.io"
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/ai-book/{path}"  # change your-book
 additional-css = ["last-changed.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css", "././mdbook-admonish.css"]
 default-theme="frappé"
 no-section-label = true
 preferred-dark-theme="macchiato"
+
+[output.html.print]
+enable = false
 
 [build]
 build-dir = "../../books/ai-book"

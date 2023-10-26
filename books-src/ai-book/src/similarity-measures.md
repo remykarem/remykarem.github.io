@@ -63,7 +63,9 @@ $$
 \sum_i a_i b_i
 $$
 
-> 💡 Difference between dot product and inner product is that the dot product is a specific inner product that works on $\mathcal{R}^n$.
+~~~admonish hint title="Dot product vs. inner product"
+Difference between dot product and inner product is that the dot product is a specific inner product that works on $\mathcal{R}^n$.
+~~~
 
 ## Cosine similarity
 
@@ -79,7 +81,9 @@ $$
 \cos(\theta) = \frac{\sum_i a_i b_i}{\sqrt{\sum_i a_i^2} \cdot \sqrt{\sum_i b_i^2}}
 $$
 
-> 💡 Difference between dot product and cosine similarity is that **cosine similarity ignores the magnitude** (scaled by magnitude).
+~~~admonish hint title="Dot product vs. cosine similarity"
+Difference between dot product and cosine similarity is that **cosine similarity ignores the magnitude** (scaled by magnitude).
+~~~
 
 ## Pearson correlation
 
@@ -87,7 +91,9 @@ $$
 \text{Corr}(a,b) = \frac{\sum_i (a_i-\bar{a})(b_i-\bar{b})}{\sqrt{\sum_i (a_i-\bar{a})^2} \cdot \sqrt{\sum_i (b_i-\bar{b})^2}}
 $$
 
-> 💡 Difference between cosine similarity and correlation is correlation is **invariant to shifts.**
+~~~admonish hint title="Cosine similarity vs. correlation"
+Difference between cosine similarity and correlation is correlation is **invariant to shifts.**
+~~~
 
 ## Minkowski distance
 
