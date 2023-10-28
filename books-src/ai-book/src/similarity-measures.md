@@ -103,16 +103,19 @@ $$
 (\sum_i (a_i-b_i)^p)^\frac{1}{p}
 $$
 
-- Jaccard distance: compare the unique items
-- Mahalanobis distance
-- Maximum distance
-- Haversine distance - distance between 2 points on a sphere
-- Hamming distance
-- Levenshtein distance
-
 ![Euclidean distance](./Euclidean_Distance.png)
 
+## Hamming distance
+
+## Haversine distance
+
+distance between 2 points on a sphere
+
+## Levenshtein distance
+
 ## Jaccard distance
+
+compare the unique items
 
 ## Mahalanobis distance
     

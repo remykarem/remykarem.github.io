@@ -2,19 +2,26 @@
 
 [Preface](./preface.md)
 - [Course history](./general-course-history.md)
+- [Trending](./technolgoies-libraries.md)
 
 ---
 
-# Trending applications
-
-- [Technologies / libraries](./technolgoies-libraries.md)
-
----
-
-# Objective functions
+# Loss functions
 
 - [Loss functions](./loss-functions.md)
-- [Hyperparameter optimisation]()
+  - [MSE](./loss-functions/mse.md)
+  - [MAE](./loss-functions/mae.md)
+  - [Binary cross entropy](./loss-functions/binary-cross-entropy.md)
+  - [Categorical cross entropy](./loss-functions/categorical-cross-entropy.md)
+  - [KL divergence](./loss-functions/kl-divergence.md)
+  - [MLE](./loss-functions/mle.md)
+  - [MAP](./loss-functions/map.md)
+  - [MAPE](./loss-functions/mape.md)
+  - [Huber loss](./loss-functions/huber-loss.md)
+  - [Contrastive loss](./loss-functions/contrastive-loss.md)
+  - [Triplet loss](./loss-functions/triplet-loss.md)
+- [Regularisation]()
+  - [Label smoothing](./loss-functions/label-smoothing.md)
 
 ---
 
