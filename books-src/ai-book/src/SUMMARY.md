@@ -27,6 +27,10 @@
 
 # Representations
 
+- [Vector]()
+- [Set]()
+- [String]()
+- [Natural language]()
 - [Similarity measures](./similarity-measures.md)
 - [Similarity search](./similarity-search.md)
 - [Similar items](./similar-items.md)
