@@ -2,6 +2,10 @@
 
 ASCII armor is an encoding used in PGP.
 
+It can be used to represent:
+* PGP cryptographic objects
+* PGP encryption, signatures
+
 ~~~admonish example
 ```txt
 -----BEGIN PGP PUBLIC KEY BLOCK-----
