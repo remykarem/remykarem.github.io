@@ -51,7 +51,8 @@ openssl enc -aes-256-cbc -d  # password is 123
 ~~~
 
 ~~~admonish example
-OpenVPN uses aes-256-cbc as its default cipher. 
+* AWS S3 uses AES-256 for server-side encryption at rest.
+* OpenVPN uses aes-256-cbc as its default cipher. 
 ~~~
 
 Resources:
