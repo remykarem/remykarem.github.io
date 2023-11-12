@@ -1,6 +1,8 @@
-# ASCII armor
+# OpenPGP ASCII armor
 
-ASCII armor is an encoding used in PGP.
+[RFC 4880](https://datatracker.ietf.org/doc/html/rfc4880)
+
+ASCII armor is an encoding used in OpenPGP.
 
 It can be used to represent:
 * PGP cryptographic objects
