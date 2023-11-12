@@ -156,8 +156,24 @@
 <h1 id="openpgp"><a class="header" href="#openpgp">OpenPGP</a></h1>
 <p>Pretty Good Privacy</p>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc4880">RFC 4880</a></p>
-<p>OpenPGP is a hybrid encryption system for authenticating and encrypting data. It uses both a symmetric and asymmetric key.</p>
-<p>OpenPGP also uses a decentralised trust model called <strong>Web of Trust</strong>. </p>
+<p>OpenPGP is an open standard for hybrid encryption system to authenticate and encrypt data using existing cryptosystems like RSA, ECC, ElGamal and DSA. It uses both a symmetric and asymmetric key.</p>
+<p>Functions:</p>
+<ul>
+<li>encryption/decryption
+<ul>
+<li>RSA</li>
+<li>ECC-based key exchange protocol</li>
+</ul>
+</li>
+<li>signature
+<ul>
+<li>RSA</li>
+<li>ECC-based</li>
+</ul>
+</li>
+<li>certification</li>
+</ul>
+<p>OpenPGP has the concept of keys and subkeys.</p>
 <div id="admonition-openpgp-vs-pgp" class="admonition note">
 <div class="admonition-title">
 <p>OpenPGP vs. PGP</p>
@@ -165,24 +181,22 @@
 </div>
 <div>
 <p>People use &quot;PGP&quot; and &quot;OpenPGP&quot; interchangeably.</p>
+<p>PGP was originally developed as a propietary software for encrypting and decrypting emails.</p>
+<p>OpenPGP is developed to provide a standard for PGP-compatible software.</p>
 </div>
 </div>
+<h2 id="encryptiondecryption"><a class="header" href="#encryptiondecryption">Encryption/decryption</a></h2>
 <p>Encryption:</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(message, </span><span class="mord text"><span class="mord textbf">key</span></span><span class="mord">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">ciphertext</span></span></span></span></span></span></p>
 <p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord text"><span class="mord textbf">key</span></span><span class="mord">, </span><span class="mord text"><span class="mord textbf">public key</span></span><span class="mord">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord text"><span class="mord textbf">encrypted key</span></span></span></span></span></span></span></p>
 <p>Decryption:</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord text"><span class="mord textbf">encrypted key</span></span><span class="mord">, </span><span class="mord text"><span class="mord textbf">private key</span></span><span class="mord">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord textbf">key</span></span></span></span></span></span></p>
 <p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord text"><span class="mord textbf">key</span></span><span class="mord">, </span><span class="mord text"><span class="mord">ciphertext</span></span><span class="mord">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">message</span></span></span></span></span></span></p>
-<div id="admonition-openpgp-vs-pgp-1" class="admonition info">
-<div class="admonition-title">
-<p>OpenPGP vs. PGP</p>
-<p><a class="admonition-anchor-link" href="#admonition-openpgp-vs-pgp-1"></a></p>
-</div>
-<div>
-<p>PGP was originally developed as a propietary software for encrypting and decrypting emails.</p>
-<p>OpenPGP is developed to provide a standard for PGP-compatible software.</p>
-</div>
-</div>
+<h2 id="signature"><a class="header" href="#signature">Signature</a></h2>
+<h2 id="certification"><a class="header" href="#certification">Certification</a></h2>
+<p>OpenPGP also uses a decentralised trust model called <strong>Web of Trust</strong>. </p>
+<p>This is used to sign other keys.</p>
+<hr />
 <div id="admonition-implementations" class="admonition info">
 <div class="admonition-title">
 <p>Implementations</p>
