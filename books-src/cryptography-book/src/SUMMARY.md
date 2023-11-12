@@ -28,7 +28,7 @@
 - [Elliptic curve cryptography](./cryptosystems/ecc/index.md)
 - [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography.md)
 - [DSA](./cryptosystems/dsa.md)
-- [PGP](./cryptosystems/pgp.md)
+- [OpenPGP](./cryptosystems/openpgp.md)
 - [ElGamal]()
 
 ---
