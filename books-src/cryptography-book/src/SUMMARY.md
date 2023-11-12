@@ -28,9 +28,12 @@
 - [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography.md)
 - [ECC](./cryptosystems/ecc/index.md)
 - [RSA](./cryptosystems/rsa/index.md)
-- [OpenPGP](./cryptosystems/openpgp.md)
 - [DSA](./cryptosystems/dsa.md)
 - [ElGamal]()
+
+---
+
+- [OpenPGP](./cryptosystems/openpgp.md)
 
 ---
 
