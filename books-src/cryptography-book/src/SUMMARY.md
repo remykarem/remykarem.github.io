@@ -4,7 +4,7 @@
 
 ---
 
-# Primary goals
+# Goals
 
 - [Authenticity](./goals/authenticity.md)
 - [Non-repudiation](./goals/non-repudiation.md)
@@ -12,6 +12,7 @@
 - [Confidentiality](./goals/confidentiality.md)
 - [Forward secrecy](./goals/forward-secrecy.md)
 - [Anonymity and privacy]()
+- [Performance](./goals/performance.md)
 
 ---
 
