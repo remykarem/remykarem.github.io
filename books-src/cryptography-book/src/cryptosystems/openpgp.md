@@ -1,4 +1,4 @@
-# PGP
+# OpenPGP
 
 Pretty Good Privacy
 
