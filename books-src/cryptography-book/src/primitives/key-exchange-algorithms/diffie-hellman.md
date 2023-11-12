@@ -8,8 +8,10 @@ Breaking DH is a discrete logarithm problem.
 Diffie-Hellman is considered a form of asymmetric cryptography because of the use of mathematically linked keys: a private key and a public key.
 ```
 
-~~~admonish warning title="No forward secrecy"
-ECDH doesn't offer forward secrecy.
+~~~admonish warning title="Security concerns"
+No authentication.
+
+Susceptible to MITM.p
 ~~~
 
 ## Important concepts
