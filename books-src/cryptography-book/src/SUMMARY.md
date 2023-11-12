@@ -124,16 +124,16 @@
     - [PKIPath](./asn1-schemas/pkipath.md)
     - [X.509](./asn1-schemas/x509.md)
 - [Formats](./formats/index.md)
+    - [JWT](./formats/jwt.md)
     - [PEM](./formats/pem.md)
     - [ASN.1 DER](./formats/der.md)
     - [JWK / JWKS](./formats/jwk.md)
     - [JKS](./formats/jks.md)
     - [OpenSSH public key format](./formats/openssh-public-key-format.md)
     - [openssh-key-v1](./formats/openssh-key-v1.md)
-    - [JWT](./formats/jwt.md)
-    - [SAML token](./formats/saml-token.md)
     - [OpenPGP ASCII armor](./formats/openpgp-ascii-armor.md)
     - [OpenPGP binary](./formats/openpgp-binary.md)
+    - [SAML token](./formats/saml-token.md)
 - [Standards](./standards.md)
 
 ---
