@@ -45,6 +45,8 @@ Finding the reverse of this is the discrete logarithm problem (which I have yet 
 
 ## Common curves
 
+Note that some curves are created by NIST eg. P-256, P-384.
+
 |Curve name| Form | Prime field, p |
 |----|---| --- |
 |[Curve25519](https://en.wikipedia.org/wiki/Curve25519)| Montgomery | $2^{255} - 19$ |
