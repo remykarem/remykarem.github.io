@@ -24,11 +24,11 @@
 
 # Cryptosystems
 
-- [RSA](./cryptosystems/rsa/index.md)
-- [Elliptic curve cryptography](./cryptosystems/ecc/index.md)
 - [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography.md)
-- [DSA](./cryptosystems/dsa.md)
+- [Elliptic curve cryptography](./cryptosystems/ecc/index.md)
+- [RSA](./cryptosystems/rsa/index.md)
 - [OpenPGP](./cryptosystems/openpgp.md)
+- [DSA](./cryptosystems/dsa.md)
 - [ElGamal]()
 
 ---
