@@ -4,11 +4,13 @@ Pretty Good Privacy
 
 [RFC 4880](https://datatracker.ietf.org/doc/html/rfc4880)
 
-PGP is a hybrid encryption system for encrypting data. It uses both a symmetric and asymmetric key.
+OpenPGP is a hybrid encryption system for authenticating and encrypting data. It uses both a symmetric and asymmetric key.
 
-PGP is often associated with sending encrypted emails and encrypting files.
+OpenPGP also uses a decentralised trust model called **Web of Trust**. 
 
-PGP also uses a decentralised trust model called Web of Trust. 
+```admonish note title="OpenPGP vs. PGP"
+People use "PGP" and "OpenPGP" interchangeably.
+```
 
 Encryption:
 
@@ -40,6 +42,8 @@ OpenPGP is developed to provide a standard for PGP-compatible software.
 * GPG (GnuPG) — OpenPGP-compliant software
 * [GPGTools](https://gpgtools.org)
 * Symantec's PGP
+
+[OpenPGP implementations](https://www.openpgp.org/software/developer/)
 ```
 
 ```admonish question title="Who's using PGP?"
