@@ -1,8 +1,8 @@
 # Key exchange
 
-In key exchange protocols, _both parties_ contribute to the negotiation of the shared secret.
+In key exchange protocols, _both parties_ contribute to the negotiation of a **shared secret**.
 
-This shared secret can be used for an encryption algorithm.
+This shared secret can be used for encryption, typically [block ciphers](../encryption-algorithms/block-ciphers/index.md) or stream ciphers.
 
 In a key exchange algorithm, each party must have a private and public key respectively.
 
