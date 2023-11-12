@@ -1,7 +1,7 @@
 # DSA
 
-1st-gen.
+Digital Signature Algorithm
 
-An old US govt algorithm.
+1st-gen; an old US govt algorithm.
 
 Designed specifically for digital signatures.
