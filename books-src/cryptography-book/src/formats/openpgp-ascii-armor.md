@@ -1,0 +1,1 @@
+# OpenPGP ASCII armor
