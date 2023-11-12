@@ -4,13 +4,29 @@ Pretty Good Privacy
 
 [RFC 4880](https://datatracker.ietf.org/doc/html/rfc4880)
 
-OpenPGP is a hybrid encryption system for authenticating and encrypting data. It uses both a symmetric and asymmetric key.
+OpenPGP is an open standard for hybrid encryption system to authenticate and encrypt data using existing cryptosystems like RSA, ECC, ElGamal and DSA. It uses both a symmetric and asymmetric key.
 
-OpenPGP also uses a decentralised trust model called **Web of Trust**. 
+Functions:
+
+* encryption/decryption
+  * RSA
+  * ECC-based key exchange protocol
+* signature
+  * RSA
+  * ECC-based
+* certification
+
+OpenPGP has the concept of keys and subkeys.
 
 ```admonish note title="OpenPGP vs. PGP"
 People use "PGP" and "OpenPGP" interchangeably.
+
+PGP was originally developed as a propietary software for encrypting and decrypting emails.
+
+OpenPGP is developed to provide a standard for PGP-compatible software. 
 ```
+
+## Encryption/decryption
 
 Encryption:
 
@@ -32,11 +48,15 @@ $$
 \text{(\textbf{key}, \text{ciphertext})} \rightarrow \text{message}
 $$
 
-```admonish info title="OpenPGP vs. PGP"
-PGP was originally developed as a propietary software for encrypting and decrypting emails.
+## Signature
 
-OpenPGP is developed to provide a standard for PGP-compatible software. 
-```
+## Certification
+
+OpenPGP also uses a decentralised trust model called **Web of Trust**. 
+
+This is used to sign other keys.
+
+---
 
 ```admonish info title="Implementations"
 * GPG (GnuPG) — OpenPGP-compliant software
