@@ -30,20 +30,27 @@ $$
 \text{(\textbf{key}, \text{ciphertext})} \rightarrow \text{message}
 $$
 
-```admonish warning
-PGP is an [insecure](https://latacora.micro.blog/2019/07/16/the-pgp-problem.html) and [outdated](https://moxie.org/2015/02/24/gpg-and-me.html) ecosystem that hasn’t reflected cryptographic best practices in [decades](https://blog.cryptographyengineering.com/2014/08/13/whats-matter-with-pgp/).
+```admonish info title="OpenPGP vs. PGP"
+PGP was originally developed as a propietary software for encrypting and decrypting emails.
 
-Source: https://blog.yossarian.net/
+OpenPGP is developed to provide a standard for PGP-compatible software. 
+```
+
+```admonish info title="Implementations"
+* GPG (GnuPG) — OpenPGP-compliant software
+* [GPGTools](https://gpgtools.org)
+* Symantec's PGP
 ```
 
 ```admonish question title="Who's using PGP?"
 * AWS Transfer Family: [Encrypt and decrypt files with PGP and AWS Transfer Family](https://aws.amazon.com/blogs/storage/encrypt-and-decrypt-files-with-pgp-and-aws-transfer-family/)
 * GitHub: [Commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification)
 * IntelliJ: [Set up GPG commit signing](https://www.jetbrains.com/help/idea/set-up-GPG-commit-signing.html)
+* Apple: [Protecting Security Information](https://support.apple.com/en-us/HT201214)
 ```
 
-```admonish info title="Variants"
-* OpenPGP — open standard
-* GPG (GnuPG) — OpenPGP-compliant software
-* Symantec's PGP
+```admonish warning
+PGP is an [insecure](https://latacora.micro.blog/2019/07/16/the-pgp-problem.html) and [outdated](https://moxie.org/2015/02/24/gpg-and-me.html) ecosystem that hasn’t reflected cryptographic best practices in [decades](https://blog.cryptographyengineering.com/2014/08/13/whats-matter-with-pgp/).
+
+Source: https://blog.yossarian.net/
 ```
