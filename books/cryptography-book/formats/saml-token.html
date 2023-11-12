@@ -154,6 +154,52 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="saml-token"><a class="header" href="#saml-token">SAML token</a></h1>
+<p>Security Assertion Markup Language</p>
+<p>A token that contains information about a user such as a user's identity, entitlements, or authentication status.</p>
+<div id="admonition-example" class="admonition example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<pre><code>&lt;saml:Assertion
+    ID=&quot;_b084492a00816&quot;
+    IssueInstant=&quot;2023-07-15T13:55:47Z&quot;
+    Version=&quot;2.0&quot;
+    xmlns:saml=&quot;urn:oasis:names:tc:SAML:2.0:assertion&quot;
+    &gt;
+    &lt;saml:Issuer&gt;https://www.example.com/SAML&lt;/saml:Issuer&gt;
+    &lt;saml:Subject&gt;
+        &lt;saml:NameID&gt;user@example.com&lt;/saml:NameID&gt;
+        &lt;saml:SubjectConfirmation&gt;
+            &lt;saml:SubjectConfirmationData
+                NotOnOrAfter=&quot;2023-07-15T14:00:47Z&quot;
+                Recipient=&quot;https://sp.example.com/acs&quot;
+                /&gt;
+        &lt;/saml:SubjectConfirmation&gt;
+    &lt;/saml:Subject&gt;
+    &lt;saml:Conditions
+        NotBefore=&quot;2023-07-15T13:50:47Z&quot;
+        NotOnOrAfter=&quot;2023-07-15T14:00:47Z&quot;
+        &gt;
+        &lt;saml:AudienceRestriction&gt;
+            &lt;saml:Audience&gt;https://sp.example.com/metadata&lt;/saml:Audience&gt;
+        &lt;/saml:AudienceRestriction&gt;
+    &lt;/saml:Conditions&gt;
+    &lt;saml:AuthnStatement
+        AuthnInstant=&quot;2023-07-15T13:53:22Z&quot;
+        SessionIndex=&quot;_b084492a00816&quot;
+        &gt;
+        &lt;saml:AuthnContext&gt;
+            &lt;saml:AuthnContextClassRef&gt;
+                urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+            &lt;/saml:AuthnContextClassRef&gt;
+        &lt;/saml:AuthnContext&gt;
+    &lt;/saml:AuthnStatement&gt;
+&lt;/saml:Assertion&gt;
+</code></pre>
+</div>
+</div>
 
                     </main>
 

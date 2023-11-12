@@ -154,6 +154,97 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="pem"><a class="header" href="#pem">PEM</a></h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7468">RFC 7468</a></p>
+<p>Common filenames: <code>.pem</code></p>
+<p>The PEM (Privacy-Enhanced Mail) encoding is a text with</p>
+<ol>
+<li>Base64 (encoded from binary) wrapped to 64 characters per line,</li>
+<li>a header, and</li>
+<li>a footer.</li>
+</ol>
+<div id="admonition-pem-wikipedia" class="admonition quote">
+<div class="admonition-title">
+<p>PEM (Wikipedia)</p>
+<p><a class="admonition-anchor-link" href="#admonition-pem-wikipedia"></a></p>
+</div>
+<div>
+<p>Many cryptography standards use ASN.1 to define their data structures, and Distinguished Encoding Rules (DER) to serialize those structures.</p>
+<p>Because DER produces binary output, it can be challenging to transmit the resulting files through systems, like electronic mail, that only support ASCII.</p>
+<p>The PEM format solves this problem by encoding the binary data using base64. PEM also defines a one-line header, consisting of -----BEGIN, a label, and -----, and a one-line footer, consisting of -----END, a label, and -----. The label determines the type of message encoded.</p>
+</div>
+</div>
+<div id="admonition-example-1-generic-private-key" class="admonition example">
+<div class="admonition-title">
+<p>Example 1: Generic private key</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-1-generic-private-key"></a></p>
+</div>
+<div>
+<pre><code>----BEGIN PRIVATE KEY----
+MIIJRAIBADANBgkqhkiG9w0BAQEFAASCCS4wggkqAgEAAoICAQD2GlhF9HuoPwiF
+S8lh0lHCwVGlVq0Jqtmp7ieyVOZ0mbU6T2KCDwkL3mWWSiVZc+cjh3EOsXtyzuiq
+-----END PRIVATE KEY-----
+</code></pre>
+</div>
+</div>
+<div id="admonition-example-2-rsa-private-key" class="admonition example">
+<div class="admonition-title">
+<p>Example 2: RSA private key</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-2-rsa-private-key"></a></p>
+</div>
+<div>
+<pre><code>----BEGIN RSA PRIVATE KEY----
+MIIJRAIBADANBgkqhkiG9w0BAQEFAASCCS4wggkqAgEAAoICAQD2GlhF9HuoPwiF
+S8lh0lHCwVGlVq0Jqtmp7ieyVOZ0mbU6T2KCDwkL3mWWSiVZc+cjh3EOsXtyzuiq
+-----END RSA PRIVATE KEY-----
+</code></pre>
+</div>
+</div>
+<div id="admonition-example-3-ec-private-key" class="admonition example">
+<div class="admonition-title">
+<p>Example 3: EC private key</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-3-ec-private-key"></a></p>
+</div>
+<div>
+<pre><code>-----BEGIN EC PRIVATE KEY-----
+...
+</code></pre>
+</div>
+</div>
+<div id="admonition-example-4-digital-certificate" class="admonition example">
+<div class="admonition-title">
+<p>Example 4: Digital certificate</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-4-digital-certificate"></a></p>
+</div>
+<div>
+<p><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/">Cloudflare Certificate</a></p>
+</div>
+</div>
+<div id="admonition-example-5-ssh-private-key" class="admonition example">
+<div class="admonition-title">
+<p>Example 5: SSH private key</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-5-ssh-private-key"></a></p>
+</div>
+<div>
+<pre><code class="language-txt">-----BEGIN OPENSSH PRIVATE KEY-----
+b3Bl...
+-----END OPENSSH PRIVATE KEY-----
+</code></pre>
+</div>
+</div>
+<div id="admonition-example-6-ssh-public-key" class="admonition example">
+<div class="admonition-title">
+<p>Example 6: SSH public key</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-6-ssh-public-key"></a></p>
+</div>
+<div>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc4716">RFC 4716</a></p>
+<pre><code class="language-txt">---- BEGIN SSH2 PUBLIC KEY ----
+Comment: &quot;2048-bit RSA, converted by ...&quot;
+AAAAB...
+---- END SSH2 PUBLIC KEY ----
+</code></pre>
+</div>
+</div>
 
                     </main>
 

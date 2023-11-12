@@ -154,6 +154,56 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="jwt"><a class="header" href="#jwt">JWT</a></h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7519">RFC 7519</a></p>
+<p>JSON Web Token</p>
+<p>A JWT is a text-based dot-separated Base64 URL-safe representation of <strong>signature</strong>, <strong>claims</strong> (eg. who you claim to be), <strong>ciphertext</strong>, and other metadata.</p>
+<p>JWTs can either be a:</p>
+<ul>
+<li>JWS</li>
+<li>JWE</li>
+</ul>
+<p>This token is normally used in HTTP requests under the Authorization header.</p>
+<h2 id="jws"><a class="header" href="#jws">JWS</a></h2>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7515">RFC 7515</a> (JSON Web Signature)</p>
+<p>A JWS token consists of:</p>
+<ul>
+<li>header</li>
+<li>payload</li>
+<li>signature</li>
+</ul>
+<div id="admonition-example" class="admonition example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<p>This token is a JWS token.</p>
+<p>(newline spaces added for readability):</p>
+<pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.
+SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+</code></pre>
+</div>
+</div>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>The <a href="https://jwt.io">jwt.io</a> playground generates signatures i.e. JWS tokens.</p>
+</div>
+</div>
+<h2 id="jwe"><a class="header" href="#jwe">JWE</a></h2>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7516">RFC 7516</a> (JSON Web Encryption)</p>
+<p>A JWE token consists of</p>
+<ul>
+<li>header</li>
+<li>key (encrypted) — this key is used to encrypt the payloads, which is the purpose of JWEs</li>
+<li>initialisation vector</li>
+<li>ciphertext</li>
+<li>signature</li>
+</ul>
 
                     </main>
 
