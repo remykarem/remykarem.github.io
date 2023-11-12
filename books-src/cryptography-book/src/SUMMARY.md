@@ -131,8 +131,8 @@
     - [openssh-key-v1](./common-formats/openssh-key-v1.md)
     - [JWT](./common-formats/jwt.md)
     - [SAML token](./common-formats/saml-token.md)
-    - [PGP armor](./common-formats/ascii-armor.md)
-    - [PGP binary]()
+    - [OpenPGP ASCII armor](./common-formats/openpgp-ascii-armor.md)
+    - [OpenPGP binary](./common-formats/openpgp-binary.md)
 - [Other standards](./standards.md)
 
 ---
