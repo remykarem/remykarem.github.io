@@ -1,6 +1,14 @@
 # Authenticated encryption
 
-Authenticated encryption provides [confidentiality](../goals/confidentiality.md) _and_ [authenticity](../goals/authenticity.md).
+Authenticated encryption offers:
+* [confidentiality](../goals/confidentiality.md)
+* [authenticity](../goals/authenticity.md) – only someone with the correct key could have generated an authentication tag that matches the one calculated by recipient
+* [integrity](../goals/integrity.md) – via authentication tag
+
+The authentication tag is based on:
+* the key
+* the ciphertext
+* the associated data
 
 Examples:
 * AES + GCM — includes an authentication tag
