@@ -1,1 +1,1 @@
-# Ephemeral Diffie-Hellman
+# DHE
