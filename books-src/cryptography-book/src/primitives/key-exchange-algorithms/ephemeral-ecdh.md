@@ -1,1 +1,1 @@
-# Ephemeral ECDH
+# ECDHE
