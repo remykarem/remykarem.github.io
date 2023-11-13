@@ -1,7 +1,5 @@
 # ECDH
 
-Example: X25519 (Curve25519)
-
 Suppose A has
 * private key: $d_A$
 
@@ -22,6 +20,10 @@ where
 * $Q_A = d_A \times G$
 
 This means that LHS needs to use its private key $d_A$ and multiply it by the other party's $Q_B$.
+
+~~~admonish example
+X25519 (Curve25519)
+~~~
 
 ~~~admonish warning title="No forward secrecy"
 ECDH doesn't offer forward secrecy.
