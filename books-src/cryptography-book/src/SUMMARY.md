@@ -81,7 +81,7 @@
     - [DH](./primitives/key-exchange-algorithms/diffie-hellman.md)
     - [DHE](primitives/key-exchange-algorithms/ephemeral-diffie-hellman.md)
     - [ECDH](./primitives/key-exchange-algorithms/ecdh.md)
-    - [ECDHE](./primitives/key-exchange-algorithms/ephemeral-ecdh.md)
+    - [ECDHE](./primitives/key-exchange-algorithms/ecdhe.md)
 - [KEM](./primitives/kem/index.md)
   - [Kyber](./primitives/kem/kyber.md)
 - [KDF](./primitives/kdf.md)
