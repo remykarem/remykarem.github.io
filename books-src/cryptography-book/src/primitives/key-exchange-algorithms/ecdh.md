@@ -3,11 +3,11 @@
 Suppose A has
 * private key: $d_A$
 
-Given an agreed base point $G$ and shared secret to compute $s$:
+Given an agreed base point $G$ and shared secret to compute $S$:
 
 $$
 \begin{aligned}
-s &= s \\
+S &= S \\
 ? \times G &= ? \times G \\
 d_A \times d_B \times G &= d_A \times d_B \times G \\
 d_A \times (d_B \times G) &= d_B \times (d_A \times G) \\
