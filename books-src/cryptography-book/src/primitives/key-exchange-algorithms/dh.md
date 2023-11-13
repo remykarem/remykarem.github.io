@@ -1,5 +1,7 @@
 # DH
 
+Diffie-Hellman
+
 The Diffie–Hellman key exchange (**DH** or **DHKE**) method allows two parties that have no prior knowledge of each other to jointly establish a shared secret key over an insecure channel.
 
 Breaking DH is a discrete logarithm problem.
