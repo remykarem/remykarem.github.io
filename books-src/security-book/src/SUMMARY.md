@@ -55,12 +55,12 @@
 
 # Authorisation
 
-- [OAuth 2.0](./oauth2-0.md)
+- [OAuth 2.0](./authorisation/oauth2-0.md)
   - [Authorization Code Flow](./oauth2-0/authorization-code-flow.md)
   - [Client Credentials Flow]()
   - [Hybrid Flow]()
-- [OIDC](./oidc.md)
-- [SAML](./saml.md)
+- [OIDC](./authorisation/oidc.md)
+- [SAML](./authorisation/saml.md)
 - [Kerberos]()
 - [JWT]()
 - [SCIM]()
