@@ -151,16 +151,25 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="ssltls"><a class="header" href="#ssltls">SSL/TLS</a></h1>
+<p>What do you need?</p>
+<ul>
+<li>Key exchange algorithm</li>
+<li>KDF</li>
+</ul>
+<hr />
 <p>Given the recipient's public key, what does the sender do?</p>
 <ol>
 <li>
-<p>Create a new key pair (KEK).</p>
+<p>Create a new key pair for the KEK. Depends if it's for ephemeral use.</p>
 </li>
 <li>
 <p>Generate the raw shared secret from the sender's private key and the recipient's public key.</p>
 </li>
 <li>
 <p>Generate the shared secret (DEK) from the raw shared secret using KDF.</p>
+</li>
+<li>
+<p>Encrypt the data using the DEK.</p>
 </li>
 <li>
 <p>Send the (i) encrypted data, and (ii) the sender's public key (part of KEK) as the payload.</p>
