@@ -151,6 +151,20 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="totp"><a class="header" href="#totp">TOTP</a></h1>
+<p>Time-based/HMAC-based One-Time Password</p>
+<p>$$
+(\text{time}, \text{key}) \rightarrow \text{otp}
+$$</p>
+<p>The underlying cryptographic primitive used here is the <strong>HMAC</strong>. (Notice that this function is similar to HMAC anyways.)</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>Because OTP relies on time, the client's device and the server should be roughly synchronised.</p>
+</div>
+</div>
 
                     </main>
 
