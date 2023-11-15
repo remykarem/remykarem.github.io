@@ -25,7 +25,7 @@
 - [S/MIME]()
 - [E2EE]()
 - [Signal protocol]()
-- [SSL/TLS]()
+- [SSL/TLS](./confidentiality/ssl-tls.md)
 - [SSH]()
 - [VPN]()
 
