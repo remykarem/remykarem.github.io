@@ -23,7 +23,7 @@
 
 - [SSL/TLS](./confidentiality/ssl-tls.md)
 - [SSH]()
-- [PGP]()
+- [PGP](./confidentiality/pgp.md)
 - [S/MIME]()
 - [E2EE]()
 - [Signal protocol]()
