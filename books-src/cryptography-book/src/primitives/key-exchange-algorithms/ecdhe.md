@@ -12,6 +12,10 @@ Given the recipient's public key, what does the sender do?
 
 3. Encrypt the data using the DEK.
 
-4. Encrypt the DEK.
+4. Send the (i) encrypted data, and (ii) the sender's public key (part of KEK) as the payload.
 
-5. Send the (i) encrypted data, (ii) the encrypted DEK, and (iii) the sender's public key as the payload.
+~~~admonish note
+Note that the DEK (nor the encrypted DEK) is not sent over to the recipient.
+
+This is because the recipient can calculate it themselves using the recipient's private key and the sender's public key.
+~~~
