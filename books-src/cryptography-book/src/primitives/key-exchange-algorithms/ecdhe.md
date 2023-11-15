@@ -19,5 +19,5 @@ Given the recipient's public key, what does the sender do?
 ~~~admonish note
 Note that the DEK (nor the encrypted DEK) is not sent over to the recipient.
 
-This is because the recipient can calculate it themselves using the recipient's private key and the sender's public key.
+This is because the recipient can calculate it themselves using the recipient's private key and the sender's public key, and the KDF algorithm. 
 ~~~
