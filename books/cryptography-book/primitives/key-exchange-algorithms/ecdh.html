@@ -175,6 +175,34 @@
 <p>X25519 (Curve25519)</p>
 </div>
 </div>
+<p>Given the recipient's public key, what does the sender do?</p>
+<ol>
+<li>
+<p>Create a new key pair (KEK).</p>
+</li>
+<li>
+<p>Generate the raw shared secret from the sender's private key and the recipient's public key.</p>
+</li>
+<li>
+<p>Generate the shared secret (DEK) from the raw shared secret using KDF.</p>
+</li>
+<li>
+<p>Encrypt the data using the DEK.</p>
+</li>
+<li>
+<p>Send the (i) encrypted data, and (ii) the sender's public key (part of KEK) as the payload.</p>
+</li>
+</ol>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>Note that the DEK (nor the encrypted DEK) is not sent over to the recipient.</p>
+<p>This is because the recipient can calculate it themselves using the recipient's private key and the sender's public key, and the KDF algorithm.</p>
+</div>
+</div>
 <div id="admonition-no-forward-secrecy" class="admonition warning">
 <div class="admonition-title">
 <p>No forward secrecy</p>
