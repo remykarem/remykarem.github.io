@@ -21,12 +21,12 @@
 
 # Confidentiality
 
+- [SSL/TLS](./confidentiality/ssl-tls.md)
+- [SSH]()
 - [PGP]()
 - [S/MIME]()
 - [E2EE]()
 - [Signal protocol]()
-- [SSL/TLS](./confidentiality/ssl-tls.md)
-- [SSH]()
 - [VPN]()
 
 ---
