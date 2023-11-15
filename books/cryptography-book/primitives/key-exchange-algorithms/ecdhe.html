@@ -155,35 +155,7 @@
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="ecdhe"><a class="header" href="#ecdhe">ECDHE</a></h1>
 <p>Ephemeral ECDH</p>
-<p>The math stays the same. The difference is that a new EC key pair is generated for every session.</p>
-<p>Given the recipient's public key, what does the sender do?</p>
-<ol>
-<li>
-<p>Create a new key pair (KEK).</p>
-</li>
-<li>
-<p>Generate the raw shared secret from the sender's private key and the recipient's public key.</p>
-</li>
-<li>
-<p>Generate the shared secret (DEK) from the raw shared secret using KDF.</p>
-</li>
-<li>
-<p>Encrypt the data using the DEK.</p>
-</li>
-<li>
-<p>Send the (i) encrypted data, and (ii) the sender's public key (part of KEK) as the payload.</p>
-</li>
-</ol>
-<div id="admonition-note" class="admonition note">
-<div class="admonition-title">
-<p>Note</p>
-<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
-</div>
-<div>
-<p>Note that the DEK (nor the encrypted DEK) is not sent over to the recipient.</p>
-<p>This is because the recipient can calculate it themselves using the recipient's private key and the sender's public key, and the KDF algorithm.</p>
-</div>
-</div>
+<p>The math stays the same. The difference is that a new EC key pair (KEK) is generated for every session.</p>
 
                     </main>
 
