@@ -168,12 +168,19 @@
 <p>Encrypt the data using the DEK.</p>
 </li>
 <li>
-<p>Encrypt the DEK.</p>
-</li>
-<li>
-<p>Send the (i) encrypted data, (ii) the encrypted DEK, and (iii) the sender's public key as the payload.</p>
+<p>Send the (i) encrypted data, and (ii) the sender's public key (part of KEK) as the payload.</p>
 </li>
 </ol>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>Note that the DEK (nor the encrypted DEK) is not sent over to the recipient.</p>
+<p>This is because the recipient can calculate it themselves using the recipient's private key and the sender's public key.</p>
+</div>
+</div>
 
                     </main>
 
