@@ -19,6 +19,15 @@
 
 ---
 
+# Confidentiality
+
+- [PGP]()
+- [S/MIME]()
+- [E2EE]()
+- [Signal protocol]()
+
+---
+
 # Authentication
 
 - [Basic auth](./basic-auth.md)
