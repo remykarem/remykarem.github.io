@@ -33,19 +33,19 @@
 
 # Authentication
 
-- [Basic auth](./basic-auth.md)
+- [Basic auth](./authentication/basic-auth.md)
 - [Username-password]()
 - [Digest auth]()
 - [Form-based auth]()
 - [SSL certificate]()
 - [Token-in-header]()
-- [TOTP](./totp.md)
+- [TOTP](./authentication/totp.md)
   - [Microsoft Authenticator]()
 - [SSH]()
 - [One-time code]()
 - [CAPTCHA]()
 - [SSO]()
-- [Passkeys](./passkeys.md)
+- [Passkeys](./authentication/passkeys.md)
 - [Biometric]()
 - [Facial recognition]()
 - [MFA]()
