@@ -162,7 +162,10 @@
 <p>Create a new key pair (KEK).</p>
 </li>
 <li>
-<p>Generate a shared secret (DEK) from the sender's private key and the recipient's public key.</p>
+<p>Generate the raw shared secret from the sender's private key and the recipient's public key.</p>
+</li>
+<li>
+<p>Generate the shared secret (DEK) from the raw shared secret using KDF.</p>
 </li>
 <li>
 <p>Encrypt the data using the DEK.</p>
