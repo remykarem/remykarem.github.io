@@ -161,6 +161,13 @@
 <li><strong>Salt</strong> — a pseudorandom nonsecret value</li>
 <li>... — other params include iteration count</li>
 </ul>
+<p>What's the purpose of KDF?</p>
+<ul>
+<li><strong>Uniform format</strong> – a specific key size might be needed for symmetric encryption</li>
+<li><strong>Security enhancements</strong> – raw shared secrets might have patterns</li>
+<li><strong>Key material expansion</strong> – can generate multiple keys from a single raw shared secret if needed</li>
+<li><strong>Consistency</strong> – agreeing on the same KDF ensures that both parties derive exactly the same key</li>
+</ul>
 <p>Types of KDF</p>
 <ul>
 <li>
