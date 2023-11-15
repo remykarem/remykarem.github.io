@@ -10,6 +10,12 @@ $$
 * **Salt** — a pseudorandom nonsecret value
 * ... — other params include iteration count
 
+What's the purpose of KDF?
+* **Uniform format** – a specific key size might be needed for symmetric encryption
+* **Security enhancements** – raw shared secrets might have patterns
+* **Key material expansion** – can generate multiple keys from a single raw shared secret if needed
+* **Consistency** – agreeing on the same KDF ensures that both parties derive exactly the same key
+
 Types of KDF
 
 - Hash-based (most common)
