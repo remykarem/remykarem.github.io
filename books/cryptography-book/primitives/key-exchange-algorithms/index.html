@@ -157,6 +157,16 @@
 <p>In key exchange protocols, <em>both parties</em> contribute to the negotiation of a <strong>shared secret</strong> (&quot;key&quot;).</p>
 <p>This shared secret can be used for encryption, typically <a href="../encryption-algorithms/block-ciphers/index.html">block ciphers</a> or stream ciphers.</p>
 <p>In a key exchange algorithm, each party must have a private and public key respectively.</p>
+<div id="admonition-raw-shared-secret-and-kdf" class="admonition tip">
+<div class="admonition-title">
+<p>Raw shared secret and KDF</p>
+<p><a class="admonition-anchor-link" href="#admonition-raw-shared-secret-and-kdf"></a></p>
+</div>
+<div>
+<p>In practise, the raw shared secret that is generated is not used for encryption.</p>
+<p>Instead, the raw shared secret undergoes KDF.</p>
+</div>
+</div>
 <div id="admonition-use-case" class="admonition example">
 <div class="admonition-title">
 <p>Use case</p>
