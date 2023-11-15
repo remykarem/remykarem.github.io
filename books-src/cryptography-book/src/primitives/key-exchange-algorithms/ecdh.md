@@ -15,11 +15,11 @@ d_A \times Q_B &= d_B \times Q_A
 \end{aligned}
 $$
 
-where
+where the public keys are
 * $Q_B = d_B \times G$, and
 * $Q_A = d_A \times G$
 
-This means that LHS needs to use its private key $d_A$ and multiply it by the other party's $Q_B$.
+This means that LHS needs to use its private key $d_A$ and multiply it by the other party's public key $Q_B$.
 
 ~~~admonish example
 X25519 (Curve25519)
