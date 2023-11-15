@@ -150,7 +150,42 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="oauth-20"><a class="header" href="#oauth-20">OAuth 2.0</a></h1>
+                        <h1 id="oauth-20--oidc"><a class="header" href="#oauth-20--oidc">OAuth 2.0 / OIDC</a></h1>
+<p>OAuth 2.0 is primarily an <em>authorisation</em> protocol.</p>
+<p>It might be easier to first think in terms of accessing a <em>resource</em>:</p>
+<ul>
+<li><strong>resources</strong> — eg. photos.</li>
+<li><strong>resource owner</strong> — the owner of the photos</li>
+<li><strong>resource server</strong> — the server that hosts the photos</li>
+</ul>
+<p>An application that makes use of such photos would need to access those resources on behalf of the users' photos. This application is the <strong>client</strong>. </p>
+<div id="admonition-client-vs-resource-server" class="admonition note">
+<div class="admonition-title">
+<p>Client vs. resource server</p>
+<p><a class="admonition-anchor-link" href="#admonition-client-vs-resource-server"></a></p>
+</div>
+<div>
+<p>The application can be the same server that hosts the photos.</p>
+</div>
+</div>
+<p>Finally, the server that authenticates the user is called an <strong>authorization server</strong>.</p>
+<p>OAuth 2.0 uses <em>tokens</em> to represent several states:</p>
+<ul>
+<li><strong>access token</strong> — a credential used by an application to <em>access</em> an API</li>
+<li><strong>refresh token</strong></li>
+<li><strong>ID token</strong> — a credential used to authenticate a user (OIDC)</li>
+</ul>
+<h2 id="oidc"><a class="header" href="#oidc">OIDC</a></h2>
+<p>Similar to OAuth 2.0.</p>
+<div id="admonition-real-world-application-singpass" class="admonition tip">
+<div class="admonition-title">
+<p>Real world application: Singpass</p>
+<p><a class="admonition-anchor-link" href="#admonition-real-world-application-singpass"></a></p>
+</div>
+<div>
+<p>Singpass uses OIDC.</p>
+</div>
+</div>
 
                     </main>
 
