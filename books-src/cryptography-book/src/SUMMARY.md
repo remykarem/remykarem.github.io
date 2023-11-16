@@ -46,6 +46,7 @@
     - [MD5](./primitives/cryptographic-hash-functions/md5.md)
     - [SHA](./primitives/cryptographic-hash-functions/sha.md)
     - [BLAKE2](./primitives/cryptographic-hash-functions/blake2.md)
+    - [BLAKE3](./primitives/cryptographic-hash-functions/blake3.md)
 - [MGFs](./primitives/mask-generation-functions/index.md)
   - [MGF1](./primitives/mask-generation-functions/mgf1.md)
 - [MAC](./primitives/mac/index.md)
