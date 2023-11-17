@@ -21,6 +21,8 @@
 
 # Confidentiality
 
+- [Symmetric encryption]()
+- [Asymmetric encryption]()
 - [Key exchange + hybrid encryption]()
   - [SSL/TLS](./confidentiality/ssl-tls.md)
   - [SSH]()
