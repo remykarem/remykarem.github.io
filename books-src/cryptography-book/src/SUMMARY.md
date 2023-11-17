@@ -64,7 +64,7 @@
   - [EdDSA](./primitives/digital-signature-algorithms/eddsa.md)
   - [CRYSTALS-Dilithium](./primitives/digital-signature-algorithms/crystals-dilithium.md)
   - [ElGamal]()
-  - [Schnorr]()
+  - [Schnorr](./primitives/digital-signature-algorithms/schnorr.md)
   - [DSA]()
 - [Encryption algorithms](./primitives/encryption-algorithms/index.md)
   - [Block ciphers](./primitives/encryption-algorithms/block-ciphers/index.md)
