@@ -159,7 +159,7 @@
 
 # Attacks
 
-- [Chosen Plaintext Attack](./attacks/chosen-plaintext-attack.md)
-- [Chosen Ciphertext Attack]()
+- [CPA](./attacks/chosen-plaintext-attack.md)
+- [CCA]()
 - [Brute-force attack]()
 - [Length extension attack]()
