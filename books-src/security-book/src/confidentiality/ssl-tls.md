@@ -1,5 +1,7 @@
 # SSL/TLS
 
+Session-based encryption
+
 What do you need?
 
 * An agreed key exchange algorithm
