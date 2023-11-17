@@ -4,6 +4,9 @@
 
 Common filenames: `.pfx`, `.p12`
 
-This format can store _multiple_ cryptographic objects — server certificate, intermediate certificates and the private key.
+This format can store _multiple_ cryptographic objects:
+* private key,
+* server certificate, and
+* intermediate certificates.
 
 The individual certificates are in [X.509](./x509.md) format.
