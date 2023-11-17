@@ -21,13 +21,16 @@
 
 # Confidentiality
 
-- [SSL/TLS](./confidentiality/ssl-tls.md)
-- [SSH]()
-- [PGP](./confidentiality/pgp.md)
-- [S/MIME]()
+- [Key exchange + hybrid encryption]()
+  - [SSL/TLS](./confidentiality/ssl-tls.md)
+  - [SSH]()
+  - [PGP](./confidentiality/pgp.md)
+  - [S/MIME]()
 - [E2EE]()
-- [Signal protocol]()
-- [VPN]()
+  - [Signal protocol]()
+- [Zero-Knowledge Proof]()
+- [Homomorphic encryption]()
+- [Quantum Key Distribution]()
 
 ---
 
