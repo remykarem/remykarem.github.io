@@ -2,8 +2,8 @@
 
 What do you need?
 
-* Key exchange algorithm
-* KDF
+* An agreed key exchange algorithm
+* An agreed KDF
 
 ---
 
