@@ -1,4 +1,6 @@
-# Chosen Plaintext Attack
+# CPA
+
+Chosen Plaintext Attack
 
 The attacker chooses arbitrary plaintexts and obtain the corresponding ciphertexts. 
 
