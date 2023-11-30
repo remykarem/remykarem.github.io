@@ -8,8 +8,8 @@ Characteristics:
 * **serverless** — this means faster start time
 
 Designed for
-* **event-driven** architecture because of the stateless nature of event processing
-* short-lived operations — aligned with event-driven tasks that are _designed to respond quickly to changes_
+* **event-driven** architecture — execute code in response to events
+* **short-lived** operations — _designed to respond quickly to changes_, aligned with event-driven tasks
 
 Soecific to AWS:
 * [**automatic scaling**](../strategies/auto-scaling.md)
