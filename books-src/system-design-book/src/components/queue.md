@@ -13,8 +13,9 @@ Applications
 * Monitoring
 * [Batching](../strategies/batching.md)
 
-Common characteristics:
-* Managed queues are usually [distributed](../strategies/distributed.md)
+Managed queues are usually [distributed](../strategies/distributed.md). This distributed nature results in:
+* messages delivered more than once
+* messages delivered out-of-order
 
 When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between
 1. the entities that produce the message (the clients that send request), and 
