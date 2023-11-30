@@ -165,9 +165,10 @@
 <li>Monitoring</li>
 <li><a href="../strategies/batching.html">Batching</a></li>
 </ul>
-<p>Common characteristics:</p>
+<p>Managed queues are usually <a href="../strategies/distributed.html">distributed</a>. This distributed nature results in:</p>
 <ul>
-<li>Managed queues are usually <a href="../strategies/distributed.html">distributed</a></li>
+<li>messages delivered more than once</li>
+<li>messages delivered out-of-order</li>
 </ul>
 <p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between</p>
 <ol>
