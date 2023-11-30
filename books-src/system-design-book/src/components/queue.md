@@ -1,5 +1,9 @@
 # Message queue
 
+Actors:
+* Producer — creates a message and pushes it into the queue
+* Consumer — reads a message and deletes it from the queue
+
 Purpose
 * [Short-term data **storage** (FIFO)](../core-functionalities/data-storage.md)
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
