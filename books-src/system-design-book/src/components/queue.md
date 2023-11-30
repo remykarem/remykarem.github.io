@@ -13,12 +13,12 @@ Common characteristics:
 * Managed queues are usually [distributed](../strategies/distributed.md)
 
 When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between
-* (i) the entities that produce the message (the clients that send request), and 
-* (ii) the entities that consume the message (the web server responding to the request). 
+1. the entities that produce the message (the clients that send request), and 
+2. the entities that consume the message (the web server responding to the request). 
 
-In this way, the producer can produce messages at its pace, and the consumer can process messages at its pace.
+This layer of abstraction allows the producer to produce messages at its own pace, and the consumer can process messages at its own pace.
 
-The introduction of a queue provides a **buffer**, allowing for differences in consumption and production rates.
+The introduction of a queue therefore provides a **buffer**, allowing for differences in consumption rates and production rates.
 
 This _facilitates_ [scalability](../goals/scalability.md).
 

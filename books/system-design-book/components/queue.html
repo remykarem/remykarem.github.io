@@ -165,12 +165,12 @@
 <li>Managed queues are usually <a href="../strategies/distributed.html">distributed</a></li>
 </ul>
 <p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between</p>
-<ul>
-<li>(i) the entities that produce the message (the clients that send request), and </li>
-<li>(ii) the entities that consume the message (the web server responding to the request). </li>
-</ul>
-<p>In this way, the producer can produce messages at its pace, and the consumer can process messages at its pace.</p>
-<p>The introduction of a queue provides a <strong>buffer</strong>, allowing for differences in consumption and production rates.</p>
+<ol>
+<li>the entities that produce the message (the clients that send request), and </li>
+<li>the entities that consume the message (the web server responding to the request). </li>
+</ol>
+<p>This layer of abstraction allows the producer to produce messages at its own pace, and the consumer can process messages at its own pace.</p>
+<p>The introduction of a queue therefore provides a <strong>buffer</strong>, allowing for differences in consumption rates and production rates.</p>
 <p>This <em>facilitates</em> <a href="../goals/scalability.html">scalability</a>.</p>
 <p>Types of queues</p>
 <ul>
