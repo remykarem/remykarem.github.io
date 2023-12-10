@@ -58,7 +58,9 @@
 - [Logging & monitoring](./strategies/logging-and-monitoring.md)
 - [Vertical scaling](./strategies/vertical-scaling.md)
 - [Horizontal scaling](./strategies/horizontal-scaling.md)
+- [Retry mechanism](./strategies/retry-mechanism.md)
 - [Adding layer of abstraction](./strategies/adding-layer-of-abstraction.md)
+md)
 
 # Strategies II
 
