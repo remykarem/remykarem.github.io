@@ -46,7 +46,7 @@ AWS SQS
 ~~~
 
 Queues usually offer some features for the consumers:
-- [retry mechanism](../strategies/retry-mechanism.md)
+- [retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
 - integration with DLQ to help with [manual intervention](../strategies/manual-intervention.md)
 
 How does it work?
