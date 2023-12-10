@@ -59,6 +59,7 @@
 - [Vertical scaling](./strategies/vertical-scaling.md)
 - [Horizontal scaling](./strategies/horizontal-scaling.md)
 - [Retry mechanism](./strategies/retry-mechanism.md)
+- [Manual intervention](./strategies/manual-intervention.md)
 - [Adding layer of abstraction](./strategies/adding-layer-of-abstraction.md)
 md)
 
