@@ -61,7 +61,6 @@
 - [Retry mechanism](./strategies/retry-mechanism.md)
 - [Manual intervention](./strategies/manual-intervention.md)
 - [Adding layer of abstraction](./strategies/adding-layer-of-abstraction.md)
-md)
 
 # Strategies II
 
