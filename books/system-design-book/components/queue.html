@@ -180,31 +180,23 @@
 <p>This <em>facilitates</em> <a href="../goals/scalability.html">scalability</a>.</p>
 <p>Types of queues</p>
 <ul>
-<li>
-<p><strong>Standard queue</strong> —</p>
+<li><strong>Standard queue</strong> is designed to prioritise higher throughput. This means:
 <ul>
-<li>not a strict FIFO</li>
+<li>Not a strict FIFO</li>
 <li>Every message is processed at least once</li>
 </ul>
 </li>
-<li>
-<p><strong>FIFO queue</strong></p>
+<li><strong>FIFO queue</strong> is designed to prioritise:
 <ul>
 <li>Strict FIFO</li>
 <li>Every message is processed only once</li>
 </ul>
 </li>
-<li>
-<p><strong>DLQ</strong> — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully.</p>
-</li>
-<li>
-<p><strong>Work queue</strong> or <strong>task queue</strong> — designed to allow <em>multiple workers</em> to consume tasks concurrently</p>
-</li>
-<li>
-<p><strong>Delay queue</strong> — postpone the delivery of new messages to the queue for a period of time</p>
-<p>Applications: rate limiting, batching (accumulate messages before processing) etc.</p>
-</li>
+<li><strong>DLQ</strong> — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully.</li>
+<li><strong>Work queue</strong> or <strong>task queue</strong> — designed to allow <em>multiple workers</em> to consume tasks concurrently</li>
+<li><strong>Delay queue</strong> — postpone the delivery of new messages to the queue for a period of time</li>
 </ul>
+<p>Applications: rate limiting, batching (accumulate messages before processing) etc.</p>
 <div id="admonition-example" class="admonition example">
 <div class="admonition-title">
 <p>Example</p>
