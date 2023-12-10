@@ -1,4 +1,4 @@
-# Why systems fail
+# Types of failures
 
 - Software crashes
 - Hardware failures
