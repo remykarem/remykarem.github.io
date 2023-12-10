@@ -45,6 +45,9 @@ Applications: rate limiting, batching (accumulate messages before processing) et
 AWS SQS
 ~~~
 
+Queues usually offer some features:
+- [retry mechanism](../strategies/retry-mechanism.md)
+
 How does it work?
 1. When a consumer receives a message, the message becomes temporarily hidden from other consumers.
 2. The consumer has to process it within a period of time k, then it becomes visible to consumers again. This is the **visibility timeout** period.
