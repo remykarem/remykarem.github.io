@@ -47,6 +47,7 @@ AWS SQS
 
 Queues usually offer some features for the consumers:
 - [retry mechanism](../strategies/retry-mechanism.md)
+- integration with DLQ to help with [manual intervention](../strategies/manual-intervention.md)
 
 How does it work?
 1. When a consumer receives a message, the message becomes temporarily hidden from other consumers.
