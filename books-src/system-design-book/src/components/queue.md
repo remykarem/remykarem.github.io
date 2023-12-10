@@ -8,11 +8,6 @@ Purpose
 * [Short-term limited data **storage** (FIFO)](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
-Applications
-* [Rate limiting](../strategies/rate-limiting.md)
-* Monitoring
-* [Batching](../strategies/batching.md)
-
 Managed queues are usually [distributed](../strategies/distributed.md). This distributed nature results in:
 * messages delivered more than once
 * messages delivered out-of-order
@@ -46,8 +41,10 @@ AWS SQS
 ~~~
 
 Queues usually offer some features for the consumers:
-- [retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
-- integration with DLQ to help with [manual intervention](../strategies/manual-intervention.md)
+- [Retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
+- Integration with DLQ to help with [manual intervention](../strategies/manual-intervention.md)
+- [Batching](../strategies/batching.md)
+- [Rate limiting](../strategies/rate-limiting.md)
 
 How does it work?
 1. When a consumer receives a message, the message becomes temporarily hidden from other consumers.

@@ -159,12 +159,6 @@
 <li><a href="../core-functionalities/data-storage.html">Short-term limited data <strong>storage</strong> (FIFO)</a> – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. </li>
 <li><a href="../core-functionalities/concurrency-control.html">Processing messages in order</a></li>
 </ul>
-<p>Applications</p>
-<ul>
-<li><a href="../strategies/rate-limiting.html">Rate limiting</a></li>
-<li>Monitoring</li>
-<li><a href="../strategies/batching.html">Batching</a></li>
-</ul>
 <p>Managed queues are usually <a href="../strategies/distributed.html">distributed</a>. This distributed nature results in:</p>
 <ul>
 <li>messages delivered more than once</li>
@@ -208,8 +202,10 @@
 </div>
 <p>Queues usually offer some features for the consumers:</p>
 <ul>
-<li><a href="../strategies/retry-mechanism.html">retry mechanism</a>, usually meant for <a href="../failures.html">transient failures</a></li>
-<li>integration with DLQ to help with <a href="../strategies/manual-intervention.html">manual intervention</a></li>
+<li><a href="../strategies/retry-mechanism.html">Retry mechanism</a>, usually meant for <a href="../failures.html">transient failures</a></li>
+<li>Integration with DLQ to help with <a href="../strategies/manual-intervention.html">manual intervention</a></li>
+<li><a href="../strategies/batching.html">Batching</a></li>
+<li><a href="../strategies/rate-limiting.html">Rate limiting</a></li>
 </ul>
 <p>How does it work?</p>
 <ol>
