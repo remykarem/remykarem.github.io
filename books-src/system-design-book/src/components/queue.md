@@ -5,7 +5,7 @@ Actors:
 * Consumer — reads a message and deletes it from the queue
 
 Purpose
-* [Short-term data **storage** (FIFO)](../core-functionalities/data-storage.md)
+* [Short-term limited data **storage** (FIFO)](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
 Applications
@@ -45,7 +45,7 @@ Applications: rate limiting, batching (accumulate messages before processing) et
 AWS SQS
 ~~~
 
-Queues usually offer some features:
+Queues usually offer some features for the consumers:
 - [retry mechanism](../strategies/retry-mechanism.md)
 
 How does it work?
