@@ -4,9 +4,9 @@
 
 ---
 
-# In the event of
+# Failures
 
-- [Why systems fail](./why-systems-fail.md)
+- [Types of failures](./types-of-failures.md)
 
 ---
 
