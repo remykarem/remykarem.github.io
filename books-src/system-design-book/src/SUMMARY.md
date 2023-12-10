@@ -171,11 +171,11 @@
 
 ---
 
-# Correction
+# Design principles
 
-- [Backoff policies]()
-
----
+- [Idempotence](./design-principles/idempotence.md)
+- [Efficient use of resources](./design-principles/efficient-use-of-resources.md)
+- [Single source of truth](./design-principles/single-source-of-truth.md)
 
 # Container orchestration
 
