@@ -25,4 +25,6 @@ Webhooks are commonly used in event-driven architecture.
 * Integration between systems
 * Notifications
 * Monitoring and alerts
+
+[Stripe Webhook Docs](https://stripe.com/docs/webhooks)
 ~~~
