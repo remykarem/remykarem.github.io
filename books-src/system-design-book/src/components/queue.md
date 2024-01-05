@@ -26,7 +26,7 @@ Types of queues
 
 * **Standard queue** is designed to prioritise higher throughput. This means:
   * Not a strict FIFO
-  * Every message is processed at least once
+  * Every message might be processed more than once
 * **FIFO queue** is designed to prioritise:
   * Strict FIFO
   * Every message is processed only once
