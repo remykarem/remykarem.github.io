@@ -1,6 +1,6 @@
 # Webhook (Push)
 
-aka Push APIs
+aka Push APIs, callback APIs
 
 A webhook is an HTTP request (with some payload) triggered by an event in a source system, then sent to a destination system.
 
