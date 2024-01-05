@@ -124,6 +124,8 @@
     - [Point-to-point]()
     - [Task queues]()
   - [Pub/Sub](./messaging-patterns/pub-sub.md)
+  - [Fan-out](./messaging-patterns/fan-out.md)
+  - [Fan-in](./messaging-patterns/fan-in.md)
 - [Type III: Responsibility & direction](./messaging-patterns/direction.md)
   - [Polling (Pull)](./messaging-patterns/polling.md)
   - [Webhook (Push)](./messaging-patterns/webhook.md)
@@ -173,7 +175,7 @@
 
 # Design principles
 
-- [Idempotence](./design-principles/idempotence.md)
+- [Idempotency](./design-principles/idempotency.md)
 - [Efficient use of resources](./design-principles/efficient-use-of-resources.md)
 - [Single source of truth](./design-principles/single-source-of-truth.md)
 
