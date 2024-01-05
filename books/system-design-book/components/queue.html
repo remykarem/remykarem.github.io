@@ -164,12 +164,8 @@
 <li>messages delivered more than once</li>
 <li>messages delivered out-of-order</li>
 </ul>
-<p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between</p>
-<ol>
-<li>the entities that produce the message (the clients that send request), and </li>
-<li>the entities that consume the message (the web server responding to the request). </li>
-</ol>
-<p>This layer of abstraction allows the producer to produce messages at its own pace, and the consumer can process messages at its own pace.</p>
+<p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between (i) the producers of the message, and (ii) the consumers of the message. </p>
+<p>This layer of abstraction allows the producer to produce messages <em>at its own pace</em>, and the consumer can similarly process messages <em>at its own pace</em>.</p>
 <p>The introduction of a queue therefore provides a <strong>buffer</strong>, allowing for differences in consumption rates and production rates.</p>
 <p>This <em>facilitates</em> <a href="../goals/scalability.html">scalability</a>.</p>
 <p>Types of queues</p>

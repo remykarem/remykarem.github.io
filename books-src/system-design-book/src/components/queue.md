@@ -12,11 +12,9 @@ Managed queues are usually [distributed](../strategies/distributed.md). This dis
 * messages delivered more than once
 * messages delivered out-of-order
 
-When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between
-1. the entities that produce the message (the clients that send request), and 
-2. the entities that consume the message (the web server responding to the request). 
+When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between (i) the producers of the message, and (ii) the consumers of the message. 
 
-This layer of abstraction allows the producer to produce messages at its own pace, and the consumer can process messages at its own pace.
+This layer of abstraction allows the producer to produce messages _at its own pace_, and the consumer can similarly process messages _at its own pace_.
 
 The introduction of a queue therefore provides a **buffer**, allowing for differences in consumption rates and production rates.
 
