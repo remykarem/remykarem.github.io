@@ -152,7 +152,12 @@
 <p>Batch processing can be useful for:</p>
 <ul>
 <li><strong>network latency</strong>: You make one call instead of <em>n</em> calls.</li>
-<li><strong>atomicity</strong>: The all-or-nothing behaviour can help simplify error handling. </li>
+<li><strong>atomicity</strong>: The all-or-nothing behaviour can help simplify error handling.</li>
+</ul>
+<p>Other design considerations:</p>
+<ul>
+<li>Do <em>n</em> items in the request correspond to <em>n</em> items in the response?</li>
+<li>How to handle duplicates in the request?</li>
 </ul>
 <p>Examples:</p>
 <ul>

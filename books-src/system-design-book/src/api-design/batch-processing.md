@@ -3,7 +3,11 @@
 Batch processing can be useful for:
 
 * **network latency**: You make one call instead of _n_ calls.
-* **atomicity**: The all-or-nothing behaviour can help simplify error handling. 
+* **atomicity**: The all-or-nothing behaviour can help simplify error handling.
+
+Other design considerations:
+* Do _n_ items in the request correspond to _n_ items in the response?
+* How to handle duplicates in the request?
 
 Examples:
 
