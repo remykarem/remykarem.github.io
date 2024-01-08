@@ -12,6 +12,8 @@ Managed queues are usually [distributed](../strategies/distributed.md). This dis
 * messages delivered more than once
 * messages delivered out-of-order
 
+Additionally, in AWS, SQS messages can be encrypted at rest using SQS-managed encryption or KMS.
+
 Messages are locked during processing, sothat multiple producers can send and multiple consumers can receive messages _at the same time_.
 
 When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between (i) the producers of the message, and (ii) the consumers of the message. 
