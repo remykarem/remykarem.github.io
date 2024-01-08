@@ -8,7 +8,7 @@ Purpose
 * [Short-term limited data **storage** (FIFO)](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
-Managed queues are usually [distributed](../strategies/distributed.md). This distributed nature results in:
+Messages in managed queues are stored redundantly. This [distributed](../strategies/distributed.md) nature results in:
 * messages delivered more than once
 * messages delivered out-of-order
 
