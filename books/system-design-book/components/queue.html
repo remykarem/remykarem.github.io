@@ -164,6 +164,7 @@
 <li>messages delivered more than once</li>
 <li>messages delivered out-of-order</li>
 </ul>
+<p>Additionally, in AWS, SQS messages can be encrypted at rest using SQS-managed encryption or KMS.</p>
 <p>Messages are locked during processing, sothat multiple producers can send and multiple consumers can receive messages <em>at the same time</em>.</p>
 <p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between (i) the producers of the message, and (ii) the consumers of the message. </p>
 <p>This layer of abstraction allows the producer to produce messages <em>at its own pace</em>, and the consumer can similarly process messages <em>at its own pace</em>.</p>
