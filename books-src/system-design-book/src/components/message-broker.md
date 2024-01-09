@@ -10,5 +10,8 @@ Purposes:
 * Message transformation
 
 ~~~admonish example
-Amazon SNS, Apache Kafka, RabbitMQ
+Apache Kafka, RabbitMQ.
+
+Amazon SNS is not a message broker. 
 ~~~
+
