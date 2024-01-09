@@ -2,7 +2,7 @@
 
 aka pub/sub service
 
-A message broker is a message queue++.
+A message broker is a [message queue](./queue.md)++.
 
 Purposes:
 * [Message **storage** (FIFO)](../core-functionalities/data-storage.md)
