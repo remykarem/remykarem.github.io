@@ -8,5 +8,5 @@ Purposes:
 * Message transformation
 
 ~~~admonish example
-Apache Kafka, RabbitMQ
+Amazon SNS, Apache Kafka, RabbitMQ
 ~~~
