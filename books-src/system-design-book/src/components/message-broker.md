@@ -1,5 +1,7 @@
 # Message broker
 
+aka pub/sub service
+
 A message broker is a message queue++.
 
 Purposes:
