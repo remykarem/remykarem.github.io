@@ -51,3 +51,7 @@ Queues usually offer some features for the consumers:
 How does it work?
 1. When a consumer receives a message, the message becomes _temporarily hidden_ from other consumers.
 2. The consumer has to process it within a period of time k, then it becomes visible to consumers again. This is the **visibility timeout** period.
+
+The visibility timeout should therefore be:
+* at least larger than the processing timeout to prevent more than once processing
+* extended to cover the time required to process a batch of messages (in long polling, especially)
