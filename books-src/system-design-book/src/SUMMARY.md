@@ -69,7 +69,7 @@
 
 ---
 
-# Components
+# Components / Resources
 
 - [CDN](./components/cdn.md)
 - [Cache]()
@@ -81,6 +81,7 @@
 - [API gateway](./components/api-gateway.md)
 - [Forward proxy](./components/forward-proxy.md)
 - [Message broker](./components/message-broker.md)
+- [Pub/Sub service](./components/pub-sub-service.md)
 - [Event bus service](./components/event-bus-service.md)
 - [Reverse proxy ("load balancer")](./components/reverse-proxy.md)
 
