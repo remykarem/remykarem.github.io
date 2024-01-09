@@ -1,7 +1,7 @@
 # Pub/Sub service
 
 Purpose:
-* [Message **routing**](../core-functionalities/routing.md)
+* [Asynchronous message **routing**](../core-functionalities/routing.md)
 
 ~~~admonish example
 Amazon SNS
