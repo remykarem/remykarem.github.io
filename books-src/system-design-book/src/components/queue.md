@@ -9,6 +9,7 @@ Purpose
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
 Messages in managed queues are stored redundantly. This [distributed](../strategies/distributed.md) nature results in:
+* slightly delayed messages (mentioned in the docs)
 * messages delivered more than once
 * messages delivered out-of-order
 
@@ -57,3 +58,9 @@ How does it work?
 The visibility timeout should therefore be:
 * at least larger than the processing timeout to prevent more than once processing
 * extended to cover the time required to process a batch of messages (in long polling, especially)
+
+Other features
+* Short polling or long polling
+* Message retention period — maximum period how long a message can stay in the queue
+* Delivery delay
+* Configuring a DLQ
