@@ -27,7 +27,7 @@ This _facilitates_ [scalability](../goals/scalability.md).
 Types of queues
 
 * **Standard queue** is designed to prioritise higher throughput. This means:
-  * Not a strict FIFO
+  * Not a strict FIFO ("Best-Effort Ordering")
   * Every message might be processed more than once
 * **FIFO queue** is designed to prioritise:
   * Strict FIFO
