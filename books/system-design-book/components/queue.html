@@ -176,12 +176,14 @@
 <ul>
 <li>Not a strict FIFO (&quot;Best-Effort Ordering&quot;)</li>
 <li>Every message might be processed more than once</li>
+<li>Unlimited throughput</li>
 </ul>
 </li>
 <li><strong>FIFO queue</strong> is designed to prioritise:
 <ul>
 <li>Strict FIFO</li>
 <li>Every message is processed only once</li>
+<li>High throughput (lower than that of Standard queue)</li>
 </ul>
 </li>
 <li><strong>DLQ</strong> — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully.</li>

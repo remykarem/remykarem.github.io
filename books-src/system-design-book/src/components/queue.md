@@ -29,9 +29,11 @@ Types of queues
 * **Standard queue** is designed to prioritise higher throughput. This means:
   * Not a strict FIFO ("Best-Effort Ordering")
   * Every message might be processed more than once
+  * Unlimited throughput
 * **FIFO queue** is designed to prioritise:
   * Strict FIFO
   * Every message is processed only once
+  * High throughput (lower than that of Standard queue)
 * **DLQ** — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully.
 * **Work queue** or **task queue** — designed to allow _multiple workers_ to consume tasks concurrently
 * **Delay queue** — postpone the delivery of new messages to the queue for a period of time
