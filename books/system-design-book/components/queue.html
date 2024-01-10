@@ -214,6 +214,20 @@
 <p>AWS SQS</p>
 </div>
 </div>
+<div id="admonition-when-to-use-a-fifo-queue" class="admonition question">
+<div class="admonition-title">
+<p>When to use a FIFO queue?</p>
+<p><a class="admonition-anchor-link" href="#admonition-when-to-use-a-fifo-queue"></a></p>
+</div>
+<div>
+<p>You would use FIFO when the order of events is critical, or when duplicates cannot be tolerated:</p>
+<ul>
+<li>Integrating with a third-party systems where events need to be processed in order</li>
+<li>E-commerce order management system where order is critical</li>
+</ul>
+<p>Based on <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html">Getting started with Amazon SQS FIFO queues</a></p>
+</div>
+</div>
 <p>Queues usually offer some features for the consumers:</p>
 <ul>
 <li><a href="../strategies/retry-mechanism.html">Retry mechanism</a>, usually meant for <a href="../failures.html">transient failures</a></li>
