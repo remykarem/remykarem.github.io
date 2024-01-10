@@ -153,7 +153,7 @@
   - [Weak consistency]()
 - [Distributed database]()
   - [SQL vs. NoSQL](./sql-vs-nosql.md)
-- [Concurrency control]()
+- [Concurrency control](./distributed-system/concurrency-control.md)
 
 ---
 
