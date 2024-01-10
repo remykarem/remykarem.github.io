@@ -2,6 +2,8 @@
 
 [Preface](./preface.md)
 
+[Metrics](./metrics.md)
+
 ---
 
 # Failures
