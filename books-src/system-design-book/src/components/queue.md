@@ -78,3 +78,6 @@ Other features
 * Message retention period — maximum period how long a message can stay in the queue
 * Delivery delay
 * Configuring a DLQ
+
+keywords
+inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window
