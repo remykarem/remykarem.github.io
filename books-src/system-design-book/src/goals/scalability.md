@@ -1,6 +1,6 @@
 # Scalability
 
-The ability of a system to **adapt to increased or decreased workloads** by adding or removing **resources** efficiently.
+The ability of a system to **adapt to increased or decreased workloads** without sacrificing performance or (**resources**) efficiency.
 
 ~~~admonish note
 The keyword here is resource efficiency.
