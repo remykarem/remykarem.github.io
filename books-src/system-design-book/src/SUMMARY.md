@@ -1,7 +1,6 @@
 # Summary
 
 [Preface](./preface.md)
-
 [Metrics](./metrics.md)
 
 ---
