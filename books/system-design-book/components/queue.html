@@ -151,12 +151,12 @@
                         <h1 id="message-queue"><a class="header" href="#message-queue">Message queue</a></h1>
 <p>Actors:</p>
 <ul>
-<li>Producer — creates a message and pushes it into the queue</li>
-<li>Consumer — reads a message and deletes it from the queue</li>
+<li><strong>Producer</strong> — creates a message and pushes it into the queue</li>
+<li><strong>Consumer</strong> — reads a message and deletes it from the queue</li>
 </ul>
 <p>Purpose</p>
 <ul>
-<li><a href="../core-functionalities/data-storage.html">Short-term limited data <strong>storage</strong> (FIFO)</a> – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. </li>
+<li><a href="../core-functionalities/data-storage.html">Short-term FIFO data <strong>storage</strong></a> – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. </li>
 <li><a href="../core-functionalities/concurrency-control.html">Processing messages in order</a></li>
 </ul>
 <p>In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This <a href="../strategies/distributed.html">distributed</a> nature results in:</p>
