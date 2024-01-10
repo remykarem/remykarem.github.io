@@ -191,7 +191,19 @@
 <li><strong>Work queue</strong> or <strong>task queue</strong> — designed to allow <em>multiple workers</em> to consume tasks concurrently</li>
 <li><strong>Delay queue</strong> — postpone the delivery of new messages to the queue for a period of time</li>
 </ul>
-<p>Applications: rate limiting, batching (accumulate messages before processing) etc.</p>
+<div id="admonition-applications" class="admonition example">
+<div class="admonition-title">
+<p>Applications</p>
+<p><a class="admonition-anchor-link" href="#admonition-applications"></a></p>
+</div>
+<div>
+<ul>
+<li>Batch messages for future processing</li>
+<li>Decouple requests from intensive background work</li>
+</ul>
+<p>Adapted from <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html">Amazon SQS</a></p>
+</div>
+</div>
 <div id="admonition-example" class="admonition example">
 <div class="admonition-title">
 <p>Example</p>

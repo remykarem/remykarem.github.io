@@ -39,7 +39,12 @@ Types of queues
 * **Work queue** or **task queue** — designed to allow _multiple workers_ to consume tasks concurrently
 * **Delay queue** — postpone the delivery of new messages to the queue for a period of time
 
-Applications: rate limiting, batching (accumulate messages before processing) etc.
+~~~admonish example title="Applications"
+* Batch messages for future processing
+* Decouple requests from intensive background work
+
+Adapted from [Amazon SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
+~~~
 
 ~~~admonish example
 AWS SQS
