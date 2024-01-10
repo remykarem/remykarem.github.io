@@ -178,6 +178,7 @@
 <li>messages delivered out-of-order</li>
 </ul>
 </li>
+<li>Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.</li>
 </ul>
 <p>Benefits </p>
 <p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between (i) the producers of the message, and (ii) the consumers of the message. </p>
