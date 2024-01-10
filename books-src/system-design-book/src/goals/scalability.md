@@ -29,4 +29,9 @@ Scaling up and down dynamically
 
 **Testing scalability**
 
-Run load & stress tests on the system by simulating concurrent traffic
+Run load (no. of users, transactions, data volume) & stress tests on the system by simulating concurrent traffic. This helps to identify bottlenecks.
+
+How to measure scalability?
+
+* Performance metrics
+* Resource usage
