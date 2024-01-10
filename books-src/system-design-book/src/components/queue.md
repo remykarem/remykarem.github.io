@@ -8,15 +8,23 @@ Purpose
 * [Short-term FIFO data **storage**](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
-In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
-* absence of message in one of the servers
-* slightly delayed messages (mentioned in the docs)
-* messages delivered more than once
-* messages delivered out-of-order
+Features:
+- [Retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
+- Integration with DLQ to help with [manual intervention](../strategies/manual-intervention.md)
+- [Batching](../strategies/batching.md)
+- [Rate limiting](../strategies/rate-limiting.md)
+- Short polling or long polling
+- Message retention period — maximum period how long a message can stay in the queue
+- Delivery delay
+- Configuring a DLQ
+- Messages are locked during processing, sothat multiple producers can send and multiple consumers can receive messages _at the same time_.
+- High availability — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
+  * absence of message in one of the servers
+  * slightly delayed messages (mentioned in the docs)
+  * messages delivered more than once
+  * messages delivered out-of-order
 
-Additionally, in AWS, SQS messages can be encrypted at rest using SQS-managed encryption or KMS.
-
-Messages are locked during processing, sothat multiple producers can send and multiple consumers can receive messages _at the same time_.
+Benefits 
 
 When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between (i) the producers of the message, and (ii) the consumers of the message. 
 
@@ -59,12 +67,6 @@ You would use FIFO when the order of events is critical, or when duplicates cann
 Based on [Getting started with Amazon SQS FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
 ~~~
 
-Queues usually offer some features for the consumers:
-- [Retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
-- Integration with DLQ to help with [manual intervention](../strategies/manual-intervention.md)
-- [Batching](../strategies/batching.md)
-- [Rate limiting](../strategies/rate-limiting.md)
-
 How does it work?
 1. When a consumer receives a message, the message becomes _temporarily hidden_ from other consumers.
 2. The consumer has to process it within a period of time k, then it becomes visible to consumers again. This is the **visibility timeout** period.
@@ -72,12 +74,6 @@ How does it work?
 The visibility timeout should therefore be:
 * at least larger than the processing timeout to prevent more than once processing
 * extended to cover the time required to process a batch of messages (in long polling, especially)
-
-Other features
-* Short polling or long polling
-* Message retention period — maximum period how long a message can stay in the queue
-* Delivery delay
-* Configuring a DLQ
 
 keywords
 inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window

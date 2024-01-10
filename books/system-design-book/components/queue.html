@@ -159,15 +159,27 @@
 <li><a href="../core-functionalities/data-storage.html">Short-term FIFO data <strong>storage</strong></a> – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. </li>
 <li><a href="../core-functionalities/concurrency-control.html">Processing messages in order</a></li>
 </ul>
-<p>In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This <a href="../strategies/distributed.html">distributed</a> nature results in:</p>
+<p>Features:</p>
+<ul>
+<li><a href="../strategies/retry-mechanism.html">Retry mechanism</a>, usually meant for <a href="../failures.html">transient failures</a></li>
+<li>Integration with DLQ to help with <a href="../strategies/manual-intervention.html">manual intervention</a></li>
+<li><a href="../strategies/batching.html">Batching</a></li>
+<li><a href="../strategies/rate-limiting.html">Rate limiting</a></li>
+<li>Short polling or long polling</li>
+<li>Message retention period — maximum period how long a message can stay in the queue</li>
+<li>Delivery delay</li>
+<li>Configuring a DLQ</li>
+<li>Messages are locked during processing, sothat multiple producers can send and multiple consumers can receive messages <em>at the same time</em>.</li>
+<li>High availability — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This <a href="../strategies/distributed.html">distributed</a> nature results in:
 <ul>
 <li>absence of message in one of the servers</li>
 <li>slightly delayed messages (mentioned in the docs)</li>
 <li>messages delivered more than once</li>
 <li>messages delivered out-of-order</li>
 </ul>
-<p>Additionally, in AWS, SQS messages can be encrypted at rest using SQS-managed encryption or KMS.</p>
-<p>Messages are locked during processing, sothat multiple producers can send and multiple consumers can receive messages <em>at the same time</em>.</p>
+</li>
+</ul>
+<p>Benefits </p>
 <p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between (i) the producers of the message, and (ii) the consumers of the message. </p>
 <p>This layer of abstraction allows the producer to produce messages <em>at its own pace</em>, and the consumer can similarly process messages <em>at its own pace</em>.</p>
 <p>The introduction of a queue therefore provides a <strong>buffer</strong>, allowing for differences in consumption rates and production rates.</p>
@@ -228,13 +240,6 @@
 <p>Based on <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html">Getting started with Amazon SQS FIFO queues</a></p>
 </div>
 </div>
-<p>Queues usually offer some features for the consumers:</p>
-<ul>
-<li><a href="../strategies/retry-mechanism.html">Retry mechanism</a>, usually meant for <a href="../failures.html">transient failures</a></li>
-<li>Integration with DLQ to help with <a href="../strategies/manual-intervention.html">manual intervention</a></li>
-<li><a href="../strategies/batching.html">Batching</a></li>
-<li><a href="../strategies/rate-limiting.html">Rate limiting</a></li>
-</ul>
 <p>How does it work?</p>
 <ol>
 <li>When a consumer receives a message, the message becomes <em>temporarily hidden</em> from other consumers.</li>
@@ -244,13 +249,6 @@
 <ul>
 <li>at least larger than the processing timeout to prevent more than once processing</li>
 <li>extended to cover the time required to process a batch of messages (in long polling, especially)</li>
-</ul>
-<p>Other features</p>
-<ul>
-<li>Short polling or long polling</li>
-<li>Message retention period — maximum period how long a message can stay in the queue</li>
-<li>Delivery delay</li>
-<li>Configuring a DLQ</li>
 </ul>
 <p>keywords
 inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window</p>
