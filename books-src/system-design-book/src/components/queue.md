@@ -1,11 +1,11 @@
 # Message queue
 
 Actors:
-* Producer — creates a message and pushes it into the queue
-* Consumer — reads a message and deletes it from the queue
+* **Producer** — creates a message and pushes it into the queue
+* **Consumer** — reads a message and deletes it from the queue
 
 Purpose
-* [Short-term limited data **storage** (FIFO)](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
+* [Short-term FIFO data **storage**](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
 In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
