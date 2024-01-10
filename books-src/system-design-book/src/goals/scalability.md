@@ -10,7 +10,7 @@ We can put a price tag to the resource, and optimise towards reducing the cost.
 Any unused resources count towards the cost.
 ~~~
 
-Scalability is the ability of an application to handle or withstand increased workload without sacrificing latency. Types of scaling:
+Types of scaling:
 
 - Vertical scaling / scaling up: improve hardware
 - Horizontal scaling / scaling out: add more hardware
@@ -33,5 +33,5 @@ Run load (no. of users, transactions, data volume) & stress tests on the system 
 
 How to measure scalability?
 
-* Performance metrics
-* Resource usage
+* [Performance metrics](../metrics.md)
+* [Resource usage](../metrics.md)
