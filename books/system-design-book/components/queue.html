@@ -159,8 +159,9 @@
 <li><a href="../core-functionalities/data-storage.html">Short-term limited data <strong>storage</strong> (FIFO)</a> – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. </li>
 <li><a href="../core-functionalities/concurrency-control.html">Processing messages in order</a></li>
 </ul>
-<p>Messages in managed queues are stored redundantly. This <a href="../strategies/distributed.html">distributed</a> nature results in:</p>
+<p>In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This <a href="../strategies/distributed.html">distributed</a> nature results in:</p>
 <ul>
+<li>absence of message in one of the servers</li>
 <li>slightly delayed messages (mentioned in the docs)</li>
 <li>messages delivered more than once</li>
 <li>messages delivered out-of-order</li>
