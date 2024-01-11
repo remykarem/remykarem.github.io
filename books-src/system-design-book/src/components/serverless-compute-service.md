@@ -15,9 +15,6 @@ Designed for
 * **event-driven** architecture — execute code in response to events
 * **short-lived** operations — _designed to respond quickly to changes_, aligned with event-driven tasks
 
-Soecific to AWS:
-* [**automatic scaling**](../strategies/auto-scaling.md)
-
 ~~~admonish example
 AWS Lambda
 ~~~
