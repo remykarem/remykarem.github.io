@@ -627,8 +627,11 @@ EOF
 <pre><code class="language-sh">tr -d '\n'
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="split"><a class="header" href="#split">Split</a></h1>
+<h2 id="get-the-2nd-value-of-a-line-whose-columns-are-separated-by-whitespaces"><a class="header" href="#get-the-2nd-value-of-a-line-whose-columns-are-separated-by-whitespaces">Get the 2nd value of a line whose columns are separated by whitespaces:</a></h2>
+<pre><code class="language-sh">awk '{printf $4}'
+</code></pre>
 <h2 id="get-the-4th-value-of-a-comma-delimited-line"><a class="header" href="#get-the-4th-value-of-a-comma-delimited-line">Get the 4th value of a comma-delimited line:</a></h2>
-<pre><code class="language-sh">awk -F ',' '{printf $2}'
+<pre><code class="language-sh">awk -F ',' '{printf $4}'
 </code></pre>
 <h2 id="get-last-value-of-a-comma-delimited-line"><a class="header" href="#get-last-value-of-a-comma-delimited-line">Get last value of a comma-delimited line:</a></h2>
 <pre><code class="language-sh">awk -F ',' '{printf $NF}'
@@ -653,7 +656,8 @@ EOF
 <li><code>$NR</code> — no. of rows</li>
 </ul>
 </div>
-</div><div style="break-before: page; page-break-before: always;"></div><h1 id="chunk"><a class="header" href="#chunk">Chunk</a></h1>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chunk"><a class="header" href="#chunk">Chunk</a></h1>
 <h2 id="format-a-string-into-lines-of-64-characters"><a class="header" href="#format-a-string-into-lines-of-64-characters">Format a string into lines of 64 characters</a></h2>
 <pre><code class="language-shell">fold -w 64
 </code></pre>
