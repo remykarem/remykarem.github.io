@@ -37,6 +37,13 @@ SFTP clients can have the capability to set file permissions automatically after
 This is typically done to mirror the permissions of the file on the client-side system.
 ~~~
 
-~~~admonish note title="SFTP vs. Unix file system"
+~~~admonish note tip="SFTP vs. Unix file system"
 The naming convention is consistent with file system manipulation syscalls.
+~~~
+
+~~~admonish example title="SFTP clients"
+* OpenSSH's SFTP client
+* FileZilla
+* WinSCP (Windows)
+* PuTTY's PSFTP (Windows)
 ~~~
