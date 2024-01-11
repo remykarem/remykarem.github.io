@@ -151,23 +151,41 @@
                         <h1 id="telnet"><a class="header" href="#telnet">Telnet</a></h1>
 <p>Teletype network</p>
 <p>Protocol to establish a bidirectional interactive text-based connection.</p>
+<p>Telnet can be used to connect to any port on a remote host. It runs on top of TCP.</p>
+<div id="admonition-connectivity-test" class="admonition info">
+<div class="admonition-title">
+<p>Connectivity test</p>
+<p><a class="admonition-anchor-link" href="#admonition-connectivity-test"></a></p>
+</div>
+<div>
+<p>Telnet is commonly used for diagnosing problems and connectivity only.</p>
+</div>
+</div>
 <div id="admonition-warning" class="admonition warning">
 <div class="admonition-title">
 <p>Warning</p>
 <p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
 </div>
 <div>
-<p>Telnet sends data in plain text.</p>
+<p>Telnet is not secure. It transmits all data in plain text.</p>
 </div>
 </div>
-<p>Telnet can be used to connect to any port on a remote host.</p>
-<p>Telnet runs on top of TCP.</p>
+<div id="admonition-example" class="admonition example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<pre><code>telnet &lt;some-ssh-host&gt; 22
+</code></pre>
 <pre><code>telnet example.com 80
 </code></pre>
 <p>and</p>
 <pre><code>GET / HTTP/1.1
 Host: www.example.com
 </code></pre>
+</div>
+</div>
 
                     </main>
 
