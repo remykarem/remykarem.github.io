@@ -156,6 +156,17 @@
 </ul>
 <p>Backoff policies</p>
 <ul>
+<li>Fixed backoff / constant backoff / uniform retry interval</li>
+<li>Exponential backoff</li>
+<li>Capped exponential backoff</li>
+</ul>
+<p>Why prefer exponential backoff to fixed backoff?</p>
+<ul>
+<li>Reduce congestion from older requests.</li>
+<li>Prioritise newer requests (in the case of a queue) possibly due to transient errors. Older requests are possibly due to application error that requires some time to fix.</li>
+<li>Avoid synchronisation risk.</li>
+</ul>
+<ul>
 <li>Count: How many more times to retry?</li>
 <li>Frequency: Exponential backoff</li>
 <li>Randomness: Jitter can prevent synchronised retries</li>
