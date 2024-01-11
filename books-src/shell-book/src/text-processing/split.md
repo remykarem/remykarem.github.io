@@ -1,9 +1,15 @@
 # Split
 
+## Get the 2nd value of a line whose columns are separated by whitespaces:
+
+```sh
+awk '{printf $4}'
+```
+
 ## Get the 4th value of a comma-delimited line:
 
 ```sh
-awk -F ',' '{printf $2}'
+awk -F ',' '{printf $4}'
 ```
 
 ## Get last value of a comma-delimited line:
