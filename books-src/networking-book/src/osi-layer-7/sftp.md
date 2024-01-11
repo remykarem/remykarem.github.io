@@ -31,6 +31,12 @@ The SFTP protocol defines a variety of operations for file transfer and manipula
 | symlink   | ln              |
 | realpath  |                 |
 
+~~~admonish note title="Automatic permission setting"
+SFTP clients can have the capability to set file permissions automatically after a file is uploaded.
+
+This is typically done to mirror the permissions of the file on the client-side system.
+~~~
+
 ~~~admonish note title="SFTP vs. Unix file system"
 The naming convention is consistent with file system manipulation syscalls.
 ~~~
