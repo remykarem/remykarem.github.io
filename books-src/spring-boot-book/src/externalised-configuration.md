@@ -73,3 +73,7 @@ class SomeService(
     private val hobbies: List<String>,
 )
 ```
+
+~~~admonish tip="Environment variables"
+You can use the property-placeholder syntax to inject environment variables: `${MY_ENV_VARIABLES}`.
+~~~

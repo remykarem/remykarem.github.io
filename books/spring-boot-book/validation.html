@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js frappé">
+<html lang="en" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -18,7 +18,6 @@
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
@@ -39,7 +38,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "frappé" : "frappé";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -65,7 +64,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('frappé')
+            html.classList.remove('light')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -84,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded "><a href="bean-management.html"><strong aria-hidden="true">1.</strong> Bean management</a></li><li class="chapter-item expanded "><a href="externalised-configuration.html"><strong aria-hidden="true">2.</strong> Externalised configuration</a></li><li class="chapter-item expanded "><a href="converters.html"><strong aria-hidden="true">3.</strong> Converters</a></li><li class="chapter-item expanded "><a href="interceptors.html"><strong aria-hidden="true">4.</strong> Interceptors</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">5.</strong> Filters</a></li><li class="chapter-item expanded "><a href="http-client.html"><strong aria-hidden="true">6.</strong> HTTP client</a></li><li class="chapter-item expanded "><a href="cron-job.html"><strong aria-hidden="true">7.</strong> Cron job</a></li><li class="chapter-item expanded "><a href="validation.html" class="active"><strong aria-hidden="true">8.</strong> Validation</a></li><li class="chapter-item expanded "><a href="serialisation.html"><strong aria-hidden="true">9.</strong> Serialisation</a></li><li class="chapter-item expanded "><a href="persistence.html"><strong aria-hidden="true">10.</strong> Persistence</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Exception handling</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Caching</div></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">13.</strong> Testing</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> Annotation processing</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.</strong> Swagger</div></li><li class="chapter-item expanded "><a href="concepts.html"><strong aria-hidden="true">16.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/application-context.html"><strong aria-hidden="true">16.1.</strong> Application context</a></li><li class="chapter-item expanded "><a href="concepts/web-servlet.html"><strong aria-hidden="true">16.2.</strong> Web servlet</a></li><li class="chapter-item expanded "><a href="concepts/filter.html"><strong aria-hidden="true">16.3.</strong> Filter</a></li><li class="chapter-item expanded "><a href="concepts/proxying.html"><strong aria-hidden="true">16.4.</strong> Proxying</a></li></ol></li><li class="chapter-item expanded "><a href="common-starters.html"><strong aria-hidden="true">17.</strong> Common starters</a></li><li class="chapter-item expanded "><a href="gotchas.html"><strong aria-hidden="true">18.</strong> Gotchas</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Spring Security</li><li class="chapter-item expanded "><a href="spring-security/security-configuration.html"><strong aria-hidden="true">19.</strong> Security configuration</a></li><li class="chapter-item expanded "><a href="spring-security/architecture.html"><strong aria-hidden="true">20.</strong> Architecture</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded "><a href="bean-management.html">Bean management</a></li><li class="chapter-item expanded "><a href="externalised-configuration.html">Externalised configuration</a></li><li class="chapter-item expanded "><a href="converters.html">Converters</a></li><li class="chapter-item expanded "><a href="interceptors.html">Interceptors</a></li><li class="chapter-item expanded "><a href="filters.html">Filters</a></li><li class="chapter-item expanded "><a href="http-client.html">HTTP client</a></li><li class="chapter-item expanded "><a href="cron-job.html">Cron job</a></li><li class="chapter-item expanded "><a href="validation.html" class="active">Validation</a></li><li class="chapter-item expanded "><a href="serialisation.html">Serialisation</a></li><li class="chapter-item expanded "><a href="persistence.html">Persistence</a></li><li class="chapter-item expanded "><div>Exception handling</div></li><li class="chapter-item expanded "><div>Caching</div></li><li class="chapter-item expanded "><a href="testing.html">Testing</a></li><li class="chapter-item expanded "><div>Annotation processing</div></li><li class="chapter-item expanded "><div>Swagger</div></li><li class="chapter-item expanded "><a href="concepts.html">Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/application-context.html">Application context</a></li><li class="chapter-item expanded "><a href="concepts/web-servlet.html">Web servlet</a></li><li class="chapter-item expanded "><a href="concepts/filter.html">Filter</a></li><li class="chapter-item expanded "><a href="concepts/proxying.html">Proxying</a></li></ol></li><li class="chapter-item expanded "><a href="common-starters.html">Common starters</a></li><li class="chapter-item expanded "><a href="gotchas.html">Gotchas</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Spring Security</li><li class="chapter-item expanded "><a href="spring-security/security-configuration.html">Security configuration</a></li><li class="chapter-item expanded "><a href="spring-security/architecture.html">Architecture</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -102,13 +101,13 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
                         </ul>
@@ -120,12 +119,6 @@
                     <h1 class="menu-title">Spring Boot book</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
-                        <a href="https://github.com/remykarem/remykarem.github.io" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
-                        </a>
                         <a href="https://github.com/remykarem/remykarem.github.io/edit/main/books-src/spring-boot-book/src/validation.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
