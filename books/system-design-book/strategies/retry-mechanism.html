@@ -162,16 +162,28 @@
 </ul>
 <p>Why prefer exponential backoff to fixed backoff?</p>
 <ul>
-<li>Reduce congestion from older requests.</li>
-<li>Prioritise newer requests (in the case of a queue) possibly due to transient errors. Older requests are possibly due to application error that requires some time to fix.</li>
+<li>Reduce network congestion from older requests.</li>
+<li>Reduce server load.</li>
+<li>Prioritise newer requests (in the case of a queue) possibly due to transient errors. Older requests are possibly due to application error; so we allow some time to recover.</li>
 <li>Avoid synchronisation risk.</li>
+<li>Helps with <a href="../goals/scalability.html">scalability</a> as the workload increases — at any point of time given <em>m</em> messages, we retry <em>k</em> recent requests (where $k \le m$) vs. at any point of time we retry $k = m$ messages</li>
 </ul>
+<p>Characteristics of a policy:</p>
 <ul>
 <li>Count: How many more times to retry?</li>
 <li>Frequency: Exponential backoff</li>
 <li>Randomness: Jitter can prevent synchronised retries</li>
 <li>Selective: Not all failures should be retried. For example, 4xx is usually because of the request itself.</li>
 </ul>
+<div id="admonition-what-about-synchronised-retries" class="admonition question">
+<div class="admonition-title">
+<p>What about synchronised retries?</p>
+<p><a class="admonition-anchor-link" href="#admonition-what-about-synchronised-retries"></a></p>
+</div>
+<div>
+<p>???</p>
+</div>
+</div>
 
                     </main>
 
