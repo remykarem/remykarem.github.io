@@ -1,4 +1,4 @@
-# Map / split
+# Map, split
 
 ## Update a line
 
