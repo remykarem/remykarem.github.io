@@ -24,9 +24,9 @@ The public key is shared with the client _during the initial connection_. The cl
 The server should ideally share this public key with the clients _out-of-band_ prior to any SSH connections.
 
 Otherwise, the client is left to blindly trust the server on first connection. The client is then susceptible to MITM attack.
-~~~
 
-~~~admonish question title="What's a good practice then?"
+What's a good practice then? Out-of-band.
+
 1. Get the host fingerprint out-of-band.
 
 2. Connect to the SSH.
@@ -40,6 +40,8 @@ Otherwise, the client is left to blindly trust the server on first connection. T
     paste the fingerprint instead of typing `yes` or `no`.
 
 GitHub, on the other hand, does it this way: [GitHub SSH key fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
+
+We could also do `ssh-keyscan [hostname]` but there is still a MITM risk.
 ~~~
 
 ## User account
