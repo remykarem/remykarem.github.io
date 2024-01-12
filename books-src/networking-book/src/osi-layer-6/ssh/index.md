@@ -9,3 +9,7 @@ When you clone a repository from GitHub using SSH, you're using the SSH protocol
 
 The communication between your computer and GitHub is encrypted, ensuring that your data is transferred securely.
 ~~~
+
+~~~admonish tip
+Use `-v` or `-vv` etc. for verbosity.
+~~~
