@@ -14,7 +14,7 @@ SFTP doesn't use the remote shell access capabilities of SSH.
 
 The SFTP protocol defines a variety of operations for file transfer and manipulation.
 
-| operation | sftp cli client |
+| File operation | SFTP CLI client |
 |-----------|-----------------|
 | open      |                 |
 | close     |                 |
@@ -46,4 +46,8 @@ The naming convention is consistent with file system manipulation syscalls.
 * FileZilla
 * WinSCP (Windows)
 * PuTTY's PSFTP (Windows)
+~~~
+
+~~~admonish tip
+Use `-v` for debugging purposes.
 ~~~
