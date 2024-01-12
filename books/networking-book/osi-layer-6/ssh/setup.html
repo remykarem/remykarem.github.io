@@ -204,9 +204,9 @@
 <p>A username needs to be associated for every connection.</p>
 <p>To create an account, a user account needs to be created in the Linux system itself.</p>
 <h2 id="for-client-authentication"><a class="header" href="#for-client-authentication">For client authentication</a></h2>
-<p>The private key, held by the client, is used for authenticating with the server.</p>
-<p>The public key, should be shared with the server out-of-band prior to any SSH connection. This is typically stored in <code>~/.ssh/authorized_keys</code> at the server.</p>
-<p>There is an option to encrypt the private key at rest, which requires a passphrase.</p>
+<p>A private key, held by the client, is used for authenticating with the server.</p>
+<p>The corresponding public key should be shared with the server out-of-band prior to the first SSH connection. This is typically stored in <code>~/.ssh/authorized_keys</code> at the server.</p>
+<p>There is also an option to encrypt the private key at rest, which requires a passphrase.</p>
 <div id="admonition-accepted-public-key-cryptography-algorithms" class="admonition info">
 <div class="admonition-title">
 <p>Accepted public key cryptography algorithms</p>

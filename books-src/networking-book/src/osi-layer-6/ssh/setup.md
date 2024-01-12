@@ -52,11 +52,11 @@ To create an account, a user account needs to be created in the Linux system its
 
 ## For client authentication
 
-The private key, held by the client, is used for authenticating with the server.
+A private key, held by the client, is used for authenticating with the server.
 
-The public key, should be shared with the server out-of-band prior to any SSH connection. This is typically stored in `~/.ssh/authorized_keys` at the server.
+The corresponding public key should be shared with the server out-of-band prior to the first SSH connection. This is typically stored in `~/.ssh/authorized_keys` at the server.
 
-There is an option to encrypt the private key at rest, which requires a passphrase.
+There is also an option to encrypt the private key at rest, which requires a passphrase.
 
 ~~~admonish info title="Accepted public key cryptography algorithms"
 Both the server and the client can specify the public key algorithms it accepts and is willing to use (respectively).
