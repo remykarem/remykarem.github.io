@@ -161,6 +161,7 @@
 </div>
 </div>
 <p>A private key (&quot;<strong>host key</strong>&quot;), held by the server, is used for host authentication. It is typically stored in the server's <code>/etc/ssh</code>.</p>
+<p>The corresponding public key is shared with the client <em>during the initial connection</em>. The client then stores this key typically in <code>~/.ssh/known_hosts</code>.</p>
 <div id="admonition-host-key-algorithms" class="admonition info">
 <div class="admonition-title">
 <p>Host key algorithms</p>
@@ -172,7 +173,6 @@
 <p>This value can be set as the <code>HostKeyAlgorithms</code> configuration.</p>
 </div>
 </div>
-<p>The public key is shared with the client <em>during the initial connection</em>. The client then stores this key typically in <code>~/.ssh/known_hosts</code>.</p>
 <div id="admonition-trust-on-first-use" class="admonition warning">
 <div class="admonition-title">
 <p>Trust On First Use</p>
