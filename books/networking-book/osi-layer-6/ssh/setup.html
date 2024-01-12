@@ -181,14 +181,7 @@
 <div>
 <p>The server should ideally share this public key with the clients <em>out-of-band</em> prior to any SSH connections.</p>
 <p>Otherwise, the client is left to blindly trust the server on first connection. The client is then susceptible to MITM attack.</p>
-</div>
-</div>
-<div id="admonition-whats-a-good-practice-then" class="admonition question">
-<div class="admonition-title">
-<p>What's a good practice then?</p>
-<p><a class="admonition-anchor-link" href="#admonition-whats-a-good-practice-then"></a></p>
-</div>
-<div>
+<p>What's a good practice then? Out-of-band.</p>
 <ol>
 <li>
 <p>Get the host fingerprint out-of-band.</p>
@@ -204,6 +197,7 @@
 </li>
 </ol>
 <p>GitHub, on the other hand, does it this way: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints">GitHub SSH key fingerprints</a></p>
+<p>We could also do <code>ssh-keyscan [hostname]</code> but there is still a MITM risk.</p>
 </div>
 </div>
 <h2 id="user-account"><a class="header" href="#user-account">User account</a></h2>
