@@ -10,6 +10,10 @@ SSH is built on top of TCP.
 SSH spans across layers 5, 6 and 7.
 ~~~
 
+~~~admonish tip
+Use `-v` or `-vv` etc. for verbosity.
+~~~
+
 ~~~admonish info title="SSH implementations"
 * OpenSSH (macOS)
 * PuTTY (Windows, Linux)
