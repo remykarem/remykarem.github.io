@@ -80,7 +80,7 @@ Apart from asymmetric key pair, other authentication methods include:
 The client authentication can also be two-factor.
 ~~~
 
-~~~admonish example title="Test connection"
+~~~admonish tip title="Test connection"
 To test connection to the server, the client can do
 
 ```
