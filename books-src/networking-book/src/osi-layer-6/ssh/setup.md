@@ -2,13 +2,13 @@
 
 For this protocol to work, these things need to be set up first.
 
-## For server authentication
+## For server authentication ("host authentication")
 
 ~~~admonish note
 These keys should be automatically created when installing SSH on the server (?), so no generation is required.
 ~~~
 
-The private key, held by the server, is used for host authentication. It is typically stored in `/etc/ssh`.
+A private key, held by the server, is used for host authentication. It is typically stored in `/etc/ssh`.
 
 ~~~admonish info title="Host key algorithms"
 These are the algorithms that the server will advertise to the client for host authentication.
