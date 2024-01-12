@@ -10,6 +10,8 @@ These keys should be automatically created when installing SSH on the server (?)
 
 A private key ("**host key**"), held by the server, is used for host authentication. It is typically stored in the server's `/etc/ssh`.
 
+The corresponding public key is shared with the client _during the initial connection_. The client then stores this key typically in `~/.ssh/known_hosts`.
+
 ~~~admonish info title="Host key algorithms"
 These are the algorithms that the server will advertise to the client for host authentication.
 
@@ -17,8 +19,6 @@ This can be RSA, ECDSA, ED25519 etc.
 
 This value can be set as the `HostKeyAlgorithms` configuration.
 ~~~
-
-The public key is shared with the client _during the initial connection_. The client then stores this key typically in `~/.ssh/known_hosts`.
 
 ~~~admonish warning title="Trust On First Use"
 The server should ideally share this public key with the clients _out-of-band_ prior to any SSH connections.
