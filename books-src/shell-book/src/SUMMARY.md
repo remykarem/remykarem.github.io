@@ -43,7 +43,7 @@
   - [Count](./text-processing/count.md)
   - [Append and prepend](./text-processing/line-manipulation.md)
   - [Search and replace](./text-processing/search-and-replace.md)
-  - [Split](./text-processing/split.md)
+  - [Map, split](./text-processing/split.md)
   - [Chunk](./text-processing/chunk.md)
   - [Compare](./text-processing/compare.md)
   - [Trim](./text-processing/trim.md)
