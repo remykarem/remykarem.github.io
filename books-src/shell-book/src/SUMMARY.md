@@ -49,6 +49,7 @@
   - [Compare](./text-processing/compare.md)
   - [Trim](./text-processing/trim.md)
 - [Binary processing]()
+  - [Read](./binary-processing/read.md)
   - [Create / write to binary](./binary-processing/write.md)
   - [Skip](./binary-processing/skip.md)
 - [Image processing](./image-processing.md)
