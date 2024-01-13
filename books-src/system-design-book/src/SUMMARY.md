@@ -29,6 +29,7 @@
 
 - [Routing](./core-functionalities/routing.md)
 - [Scheduling](./core-functionalities/scheduling.md)
+- [Pipelining](./core-functionalities/pipelining.md)
 - [Data storage](./core-functionalities/data-storage.md)
 - [Identity hiding](./core-functionalities/identity-hiding.md)
 - [Concurrency control](./core-functionalities/concurrency-control.md)
