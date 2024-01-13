@@ -628,10 +628,13 @@ EOF
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="map-split"><a class="header" href="#map-split">Map, split</a></h1>
 <h2 id="update-a-line"><a class="header" href="#update-a-line">Update a line</a></h2>
+<pre><code class="language-sh">awk '{ printf &quot;Hello&quot;$7 }'
+</code></pre>
+<p>or</p>
 <pre><code class="language-sh">awk '{ printf &quot;Hello %s&quot;,$7 }'
 </code></pre>
 <h2 id="get-the-2nd-value-of-a-line-whose-columns-are-separated-by-whitespaces"><a class="header" href="#get-the-2nd-value-of-a-line-whose-columns-are-separated-by-whitespaces">Get the 2nd value of a line whose columns are separated by whitespaces:</a></h2>
-<pre><code class="language-sh">awk '{ printf $4 }'
+<pre><code class="language-sh">awk '{ printf $2 }'
 </code></pre>
 <h2 id="get-the-4th-value-of-a-comma-delimited-line"><a class="header" href="#get-the-4th-value-of-a-comma-delimited-line">Get the 4th value of a comma-delimited line:</a></h2>
 <pre><code class="language-sh">awk -F ',' '{ printf $4 }'
