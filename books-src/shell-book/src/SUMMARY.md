@@ -41,7 +41,7 @@
 - [Text processing](./text-processing/index.md)
   - [File]()
     - [From clipboard](./write-to-file-from-clipboard.md)
-    - [To clipboard](./file/to-clipboard.md)
+    - [To clipboard](./text-processing/file/to-clipboard.md)
     - [Compare](./text-processing/compare.md)
   - [Line]()
     - [Get and remove lines](./text-processing/line/get-and-remove-lines.md)
