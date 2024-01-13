@@ -583,28 +583,6 @@ EOF
 <pre><code class="language-shell">cmp file1 file2
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="get-and-remove-lines"><a class="header" href="#get-and-remove-lines">Get and remove lines</a></h1>
-<p>Get 3rd line</p>
-<pre><code class="language-sh">sed -n '3p'
-</code></pre>
-<div id="admonition-note" class="admonition note">
-<div class="admonition-title">
-<p>Note</p>
-<p><a class="admonition-anchor-link" href="text-processing/file.html#admonition-note"></a></p>
-</div>
-<div>
-<p><code>-n</code> — don't print unnecessary stuff..
-<code>p</code> stands for print</p>
-</div>
-</div>
-<p>Get 4th to 8th lines:</p>
-<pre><code class="language-sh">sed -n '4,8p'
-</code></pre>
-<p>Remove lines</p>
-<pre><code class="language-sh">sed '1d;$d'
-</code></pre>
-<p>To remove last 4 lines</p>
-<pre><code class="language-sh">tail 
-</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="map-split"><a class="header" href="#map-split">Map, split</a></h1>
 <h2 id="update-a-line"><a class="header" href="#update-a-line">Update a line</a></h2>
 <pre><code class="language-sh">awk '{ printf &quot;Hello&quot;$7 }'
