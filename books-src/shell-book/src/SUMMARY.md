@@ -43,7 +43,7 @@
     - [From clipboard](./write-to-file-from-clipboard.md)
     - [Compare](./text-processing/compare.md)
   - [Line]()
-    - [Get and remove lines](./text-processing/file.md)
+    - [Get and remove lines](./text-processing/line/get-and-remove-lines.md)
     - [Map, split](./text-processing/split.md)
     - [Filtering](./text-processing/filtering.md)
   - [Generic]()
