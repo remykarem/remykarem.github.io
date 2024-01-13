@@ -168,6 +168,9 @@
 <h2 id="get-last-value-of-a-comma-delimited-line"><a class="header" href="#get-last-value-of-a-comma-delimited-line">Get last value of a comma-delimited line:</a></h2>
 <pre><code class="language-sh">awk -F ',' '{ printf $NF }'
 </code></pre>
+<h2 id="get-second-to-last-value-of-a-comma-delimited-line"><a class="header" href="#get-second-to-last-value-of-a-comma-delimited-line">Get second to last value of a comma-delimited line:</a></h2>
+<pre><code class="language-sh">awk -F ',' '{ printf $(NF-1) }'
+</code></pre>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
 <p>Tip</p>

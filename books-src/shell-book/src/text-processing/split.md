@@ -30,6 +30,12 @@ awk -F ',' '{ printf $4 }'
 awk -F ',' '{ printf $NF }'
 ```
 
+## Get second to last value of a comma-delimited line:
+
+```sh
+awk -F ',' '{ printf $(NF-1) }'
+```
+
 ```admonish tip
 Play around with `print` and `printf`
 ```
