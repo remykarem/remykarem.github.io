@@ -153,6 +153,28 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="get-and-remove-lines"><a class="header" href="#get-and-remove-lines">Get and remove lines</a></h1>
+<p>Get 3rd line</p>
+<pre><code class="language-sh">sed -n '3p'
+</code></pre>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p><code>-n</code> — don't print unnecessary stuff..
+<code>p</code> stands for print</p>
+</div>
+</div>
+<p>Get 4th to 8th lines:</p>
+<pre><code class="language-sh">sed -n '4,8p'
+</code></pre>
+<p>Remove lines</p>
+<pre><code class="language-sh">sed '1d;$d'
+</code></pre>
+<p>To remove last 4 lines</p>
+<pre><code class="language-sh">tail 
+</code></pre>
 
                     </main>
 
