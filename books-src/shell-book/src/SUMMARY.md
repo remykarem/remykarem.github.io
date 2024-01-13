@@ -37,16 +37,19 @@
 
 # Applications
 
-- [Write to file from clipboard](./write-to-file-from-clipboard.md)
+
 - [Text processing](./text-processing/index.md)
-  - [Get and remove lines](./text-processing/file.md)
+  - [File]()
+    - [From clipboard](./write-to-file-from-clipboard.md)
+    - [Compare](./text-processing/compare.md)
+  - [Line]()
+    - [Get and remove lines](./text-processing/file.md)
+    - [Filtering](./text-processing/filtering.md)
   - [Count](./text-processing/count.md)
   - [Append and prepend](./text-processing/line-manipulation.md)
   - [Search and replace](./text-processing/search-and-replace.md)
   - [Map, split](./text-processing/split.md)
-  - [Filtering](./text-processing/filtering.md)
   - [Chunk](./text-processing/chunk.md)
-  - [Compare](./text-processing/compare.md)
   - [Trim](./text-processing/trim.md)
 - [Binary processing]()
   - [Read](./binary-processing/read.md)
