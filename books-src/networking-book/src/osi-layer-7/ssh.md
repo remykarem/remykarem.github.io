@@ -22,5 +22,7 @@ Use `-v` or `-vv` etc. for verbosity.
 ~~~
 
 ~~~admonish info title="SSH versions"
-SSH1 and SSH2
+SSH-2 is the latest version.
+
+SSH-1 is obsolete and is considered vulnerable (see wiki).
 ~~~
