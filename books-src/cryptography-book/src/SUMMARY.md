@@ -130,7 +130,7 @@
     - [PKCS #8](./asn1-schemas/pkcs8.md)
     - [PKCS #12](./asn1-schemas/pkcs12.md)
     - [PFX](./asn1-schemas/pfx.md)
-    - [RFC 5915](./asn1-schemas/ecprivatekey.md)
+    - [ECPrivateKey](./asn1-schemas/ecprivatekey.md)
     - [PKIPath](./asn1-schemas/pkipath.md)
     - [X.509](./asn1-schemas/x509.md)
 - [Formats](./formats/index.md)
