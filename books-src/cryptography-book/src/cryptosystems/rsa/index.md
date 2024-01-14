@@ -6,6 +6,12 @@ Rivest-Shamir-Adleman; 1995; 1st-gen cryptosystem.
 
 Breaking RSA is an _integer factorisation_ problem.
 
+```admonish warning title="Prefer ECC to RSA"
+ECC has more advantages than RSA.
+
+"[T]he advantages of elliptic curve cryptography over traditional RSA are widely accepted." — from Cloudflare's post [A (Relatively Easy To Understand) Primer on Elliptic Curve Cryptography](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography).
+```
+
 ```admonish warning
 There are many problems that plague RSA.
 
