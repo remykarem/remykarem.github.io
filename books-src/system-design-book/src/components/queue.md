@@ -16,8 +16,7 @@ Features:
 - Short polling or long polling
 - Message retention period — maximum period how long a message can stay in the queue
 - Delivery delay
-- Configuring a DLQ
-- Messages are locked during processing, sothat multiple producers can send and multiple consumers can receive messages _at the same time_.
+- [Messages are locked](../distributed-system/concurrency-control.md) during processing, sothat multiple producers can send and multiple consumers can receive messages _at the same time_.
 - High availability — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
   * absence of message in one of the servers
   * slightly delayed messages (mentioned in the docs)
