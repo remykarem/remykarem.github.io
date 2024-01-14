@@ -154,49 +154,6 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="openssh-key-v1"><a class="header" href="#openssh-key-v1">openssh-key-v1</a></h1>
-<p>This is the OpenSSH &quot;proprietary&quot; private key format.</p>
-<div id="admonition-note" class="admonition note">
-<div class="admonition-title">
-<p>Note</p>
-<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
-</div>
-<div>
-<p>Traditionally OpenSSH has used the OpenSSL-compatible formats PKCS#1 (for RSA) and SEC1 (for EC) for private keys.</p>
-</div>
-</div>
-<div id="admonition-looks-like-pkcs-1" class="admonition warning">
-<div class="admonition-title">
-<p>Looks like PKCS #1</p>
-<p><a class="admonition-anchor-link" href="#admonition-looks-like-pkcs-1"></a></p>
-</div>
-<div>
-<p>Note that OpenSSH can generate a PEM of that looks like PKCS #1 but it's not.</p>
-<p>An example is when you encrypt the RSA private key.</p>
-</div>
-</div>
-<div id="admonition-example" class="admonition example">
-<div class="admonition-title">
-<p>Example</p>
-<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
-</div>
-<div>
-<pre><code>-----BEGIN OPENSSH PRIVATE KEY-----
-b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAaAAAABNlY2RzYS
-1zaGEyLW5pc3RwMjU2AAAACG5pc3RwMjU2AAAAQQR9WZPeBSvixkhjQOh9yCXXlEx5CN9M
-yh94CJJ1rigf8693gc90HmahIR5oMGHwlqMoS7kKrRw+4KpxqsF7LGvxAAAAqJZtgRuWbY
-EbAAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBH1Zk94FK+LGSGNA
-6H3IJdeUTHkI30zKH3gIknWuKB/zr3eBz3QeZqEhHmgwYfCWoyhLuQqtHD7gqnGqwXssa/
-EAAAAgBzKpRmMyXZ4jnSt3ARz0ul6R79AXAr5gQqDAmoFeEKwAAAAOYWpAYm93aWUubG9j
-YWwBAg==
------END OPENSSH PRIVATE KEY-----
-</code></pre>
-</div>
-</div>
-<p>Links:</p>
-<ul>
-<li><a href="https://coolaj86.com/articles/the-openssh-private-key-format/">The OpenSSH Private Key Format</a></li>
-<li><a href="http://dnaeon.github.io/openssh-private-key-binary-format/">OpenSSH private key binary format</a></li>
-</ul>
 
                     </main>
 
