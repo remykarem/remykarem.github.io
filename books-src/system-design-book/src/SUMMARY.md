@@ -32,7 +32,6 @@
 - [Pipelining](./core-functionalities/pipelining.md)
 - [Data storage](./core-functionalities/data-storage.md)
 - [Identity hiding](./core-functionalities/identity-hiding.md)
-- [Concurrency control](./core-functionalities/concurrency-control.md)
 - [Control outgoing requests](./core-functionalities/control-outgoing-requests.md)
 - [SSL encryption & decryption](./core-functionalities/ssl-encryption-and-decryption.md)
 - [Authentication & authorisation](./core-functionalities/authentication-and-authorisation.md)
