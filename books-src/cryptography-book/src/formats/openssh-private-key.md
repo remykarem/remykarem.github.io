@@ -1,4 +1,6 @@
-# openssh-key-v1
+# OpenSSH private key
+
+aka openssh-key-v1
 
 This is the OpenSSH "proprietary" private key format.
 
