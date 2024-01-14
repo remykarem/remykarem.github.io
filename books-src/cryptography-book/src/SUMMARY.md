@@ -38,6 +38,7 @@
 ---
 
 - [OpenPGP](./cryptosystems/openpgp.md)
+- [SLIFT](./cryptosystems/slift.md)
 
 ---
 
