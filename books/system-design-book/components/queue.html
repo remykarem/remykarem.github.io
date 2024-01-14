@@ -154,7 +154,7 @@
 <li><strong>Producer</strong> — creates a message and pushes it into the queue</li>
 <li><strong>Consumer</strong> — reads a message and deletes it from the queue</li>
 </ul>
-<p>Purpose</p>
+<p>Purpose:</p>
 <ul>
 <li><a href="../core-functionalities/data-storage.html">Short-term FIFO data <strong>storage</strong></a> – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. </li>
 <li><a href="../core-functionalities/concurrency-control.html">Processing messages in order</a></li>
@@ -162,7 +162,7 @@
 <p>Features:</p>
 <ul>
 <li><a href="../strategies/retry-mechanism.html">Retry mechanism</a>, usually meant for <a href="../failures.html">transient failures</a></li>
-<li>Integration with DLQ to help with <a href="../strategies/manual-intervention.html">manual intervention</a></li>
+<li>Integration with DLQ</li>
 <li><a href="../strategies/batching.html">Batching</a></li>
 <li><a href="../strategies/rate-limiting.html">Rate limiting</a></li>
 <li>Short polling or long polling</li>
@@ -179,7 +179,7 @@
 </li>
 <li>Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.</li>
 </ul>
-<p>Benefits </p>
+<p>Benefits:</p>
 <p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between (i) the producers of the message, and (ii) the consumers of the message. </p>
 <p>This layer of abstraction allows the producer to produce messages <em>at its own pace</em>, and the consumer can similarly process messages <em>at its own pace</em>.</p>
 <p>The introduction of a queue therefore provides a <strong>buffer</strong>, allowing for differences in consumption rates and production rates.</p>
@@ -200,7 +200,7 @@
 <li>High throughput (lower than that of Standard queue)</li>
 </ul>
 </li>
-<li><strong>DLQ</strong> — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully.</li>
+<li><strong>DLQ</strong> — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully. Used for <a href="../strategies/manual-intervention.html">manual intervention</a>.</li>
 <li><strong>Work queue</strong> or <strong>task queue</strong> — designed to allow <em>multiple workers</em> to consume tasks concurrently</li>
 <li><strong>Delay queue</strong> — postpone the delivery of new messages to the queue for a period of time</li>
 </ul>

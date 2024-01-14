@@ -4,13 +4,13 @@ Actors:
 * **Producer** — creates a message and pushes it into the queue
 * **Consumer** — reads a message and deletes it from the queue
 
-Purpose
+Purpose:
 * [Short-term FIFO data **storage**](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
 Features:
 - [Retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
-- Integration with DLQ to help with [manual intervention](../strategies/manual-intervention.md)
+- Integration with DLQ
 - [Batching](../strategies/batching.md)
 - [Rate limiting](../strategies/rate-limiting.md)
 - Short polling or long polling
@@ -24,7 +24,7 @@ Features:
   * messages delivered out-of-order
 - Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.
 
-Benefits 
+Benefits:
 
 When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between (i) the producers of the message, and (ii) the consumers of the message. 
 
@@ -44,7 +44,7 @@ Types of queues
   * Strict FIFO
   * Every message is processed only once
   * High throughput (lower than that of Standard queue)
-* **DLQ** — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully.
+* **DLQ** — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully. Used for [manual intervention](../strategies/manual-intervention.md).
 * **Work queue** or **task queue** — designed to allow _multiple workers_ to consume tasks concurrently
 * **Delay queue** — postpone the delivery of new messages to the queue for a period of time
 
