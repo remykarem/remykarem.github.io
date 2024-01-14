@@ -4,12 +4,20 @@ aka openssh-key-v1
 
 This is the OpenSSH "proprietary" private key format.
 
+This is a PEM-like format.
+
+~~~admonish warning title="Like PEM but not PEM"
+This format is not a PEM format.
+
+It also does not use DER-encoding to serialise the crytographic objects.
+~~~
+
 ~~~admonish note
 Traditionally OpenSSH has used the OpenSSL-compatible formats PKCS#1 (for RSA) and SEC1 (for EC) for private keys.
 ~~~
 
 ~~~admonish warning title="Looks like PKCS #1"
-Note that OpenSSH can generate a PEM of that looks like PKCS #1 but it's not.
+Note that OpenSSH can generate a PEM that looks like PKCS #1 but it's not.
 
 An example is when you encrypt the RSA private key.
 ~~~

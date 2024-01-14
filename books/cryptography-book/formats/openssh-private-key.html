@@ -156,6 +156,17 @@
 <h1 id="openssh-private-key"><a class="header" href="#openssh-private-key">OpenSSH private key</a></h1>
 <p>aka openssh-key-v1</p>
 <p>This is the OpenSSH &quot;proprietary&quot; private key format.</p>
+<p>This is a PEM-like format.</p>
+<div id="admonition-like-pem-but-not-pem" class="admonition warning">
+<div class="admonition-title">
+<p>Like PEM but not PEM</p>
+<p><a class="admonition-anchor-link" href="#admonition-like-pem-but-not-pem"></a></p>
+</div>
+<div>
+<p>This format is not a PEM format.</p>
+<p>It also does not use DER-encoding to serialise the crytographic objects.</p>
+</div>
+</div>
 <div id="admonition-note" class="admonition note">
 <div class="admonition-title">
 <p>Note</p>
@@ -171,7 +182,7 @@
 <p><a class="admonition-anchor-link" href="#admonition-looks-like-pkcs-1"></a></p>
 </div>
 <div>
-<p>Note that OpenSSH can generate a PEM of that looks like PKCS #1 but it's not.</p>
+<p>Note that OpenSSH can generate a PEM that looks like PKCS #1 but it's not.</p>
 <p>An example is when you encrypt the RSA private key.</p>
 </div>
 </div>
