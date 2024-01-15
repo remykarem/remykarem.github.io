@@ -152,7 +152,13 @@
 <p>Write conflicts occur when two or more clients try to update the same data at the same time, resulting in inconsistent updates.</p>
 <p>Strategies:</p>
 <ul>
-<li><strong>Last Write Wins</strong> (LWW) — use timestamp to identify which write is the final write</li>
+<li>
+<p><strong>Last Write Wins</strong> (LWW)</p>
+<p>Attach a timestamp to each write. Pick the biggest timestamp as the most recent, and discard any writes with an earlier timestamp.</p>
+</li>
+<li>
+<p><strong>CRDT</strong> (conflict-free replicated data type)</p>
+</li>
 </ul>
 <div id="admonition-databases-using-lww" class="admonition example">
 <div class="admonition-title">
