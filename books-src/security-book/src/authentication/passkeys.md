@@ -1,5 +1,7 @@
 # Passkeys
 
-Passkeys are a password replacement that validates your identity using touch, facial recognition, a device password, or a PIN.
+aka [WebAuthn / Web Authentication](https://webauthn.io)
 
-Passkey shapes for a passwordless future. 
+Passkeys use public key cryptography for authentication. During account registration, the user sends creates a new key pair and sends the public key to the server.
+
+Passkeys are passwordless; no shared secrets are involved.
