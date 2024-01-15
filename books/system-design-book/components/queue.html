@@ -162,6 +162,16 @@
 <p>Features:</p>
 <ul>
 <li>
+<p><a href="../goals/availability.html">High availability</a> — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This <a href="../strategies/distributed.html">distributed</a> nature results in:</p>
+<ul>
+<li>absence of message in one of the servers</li>
+<li>slightly delayed messages (mentioned in the docs)</li>
+<li>messages delivered more than once</li>
+<li>messages delivered out-of-order</li>
+<li>Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.</li>
+</ul>
+</li>
+<li>
 <p><a href="../distributed-system/concurrency-control.html">Locking mechanism</a> — Messages are locked during processing, so that multiple producers can send and multiple consumers can receive messages <em>at the same time</em>.</p>
 <p>How does it work?</p>
 <ol>
@@ -195,16 +205,6 @@
 </li>
 <li>
 <p>Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first</p>
-</li>
-<li>
-<p>High availability — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This <a href="../strategies/distributed.html">distributed</a> nature results in:</p>
-<ul>
-<li>absence of message in one of the servers</li>
-<li>slightly delayed messages (mentioned in the docs)</li>
-<li>messages delivered more than once</li>
-<li>messages delivered out-of-order</li>
-<li>Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.</li>
-</ul>
 </li>
 </ul>
 <p>Benefits:</p>
