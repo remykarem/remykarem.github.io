@@ -17,12 +17,21 @@ Features:
 - Message retention period — maximum period how long a message can stay in the queue
 - Delivery delay
 - [Messages are locked](../distributed-system/concurrency-control.md) during processing, sothat multiple producers can send and multiple consumers can receive messages _at the same time_.
+  
+  How does it work?
+  1. When a consumer receives a message, the message becomes _temporarily hidden_ from other consumers.
+  2. The consumer has to process it within a period of time k, then it becomes visible to consumers again. This is the **visibility timeout** period.
+
+  The visibility timeout should therefore be:
+  * at least larger than the processing timeout to prevent more than once processing
+  * extended to cover the time required to process a batch of messages (in long polling, especially)
+    
 - High availability — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
   * absence of message in one of the servers
   * slightly delayed messages (mentioned in the docs)
   * messages delivered more than once
   * messages delivered out-of-order
-- Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.
+  * Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.
 
 Benefits:
 
@@ -66,14 +75,6 @@ You would use FIFO when the order of events is critical, or when duplicates cann
 
 Based on [Getting started with Amazon SQS FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
 ~~~
-
-How does it work?
-1. When a consumer receives a message, the message becomes _temporarily hidden_ from other consumers.
-2. The consumer has to process it within a period of time k, then it becomes visible to consumers again. This is the **visibility timeout** period.
-
-The visibility timeout should therefore be:
-* at least larger than the processing timeout to prevent more than once processing
-* extended to cover the time required to process a batch of messages (in long polling, especially)
 
 keywords
 inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window
