@@ -97,6 +97,8 @@
   - [WAL](./wal.md)
   - [Transaction log](./transaction-log.md)
   - [Replication log](./replication-log.md)
+- [Checkpointing](./concurrency/checkpointing.md)
+- [MVCC](./concurrency/mvcc.md)
 
 ---
 
