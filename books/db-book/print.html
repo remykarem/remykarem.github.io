@@ -568,7 +568,8 @@ pin page and return address
 <p><a class="admonition-anchor-link" href="wal.html#admonition-postgres"></a></p>
 </div>
 <div>
-<p>Postgres uses WAL</p>
+<p>In Postgres, every change ot the database is first written to the WAL.</p>
+<p>The actual database files are updated later, based on the WAL.</p>
 </div>
 </div>
 <div id="admonition-sqlite" class="admonition example">

@@ -5,7 +5,9 @@ Write-ahead log
 Data is typically written to a write-ahead log before being indexed in a B-tree.
 
 ~~~admonish example title="Postgres"
-Postgres uses WAL
+In Postgres, every change ot the database is first written to the WAL.
+
+The actual database files are updated later, based on the WAL.
 ~~~
 
 ~~~admonish example title="SQLite"
