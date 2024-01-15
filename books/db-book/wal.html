@@ -155,13 +155,22 @@
                         <h1 id="wal"><a class="header" href="#wal">WAL</a></h1>
 <p>Write-ahead log</p>
 <p>Data is typically written to a write-ahead log before being indexed in a B-tree.</p>
-<div id="admonition-example" class="admonition example">
+<div id="admonition-postgres" class="admonition example">
 <div class="admonition-title">
-<p>Example</p>
-<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+<p>Postgres</p>
+<p><a class="admonition-anchor-link" href="#admonition-postgres"></a></p>
 </div>
 <div>
 <p>Postgres uses WAL</p>
+</div>
+</div>
+<div id="admonition-sqlite" class="admonition example">
+<div class="admonition-title">
+<p>SQLite</p>
+<p><a class="admonition-anchor-link" href="#admonition-sqlite"></a></p>
+</div>
+<div>
+<p>In SQLite, the reader (processes querying the database) access data from both the main database file and the WAL files.</p>
 </div>
 </div>
 <div id="admonition-see-wal-in-postgres" class="admonition tip">
