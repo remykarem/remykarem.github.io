@@ -27,7 +27,7 @@ Otherwise, the client is left to blindly trust the server on first connection. T
 
 What's a good practice then? Out-of-band.
 
-1. Get the host fingerprint out-of-band.
+1. Get the host's public key or **host fingerprint** out-of-band.
 
 2. Connect to the SSH.
 
