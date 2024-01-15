@@ -9,13 +9,6 @@ Purpose:
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
 Features:
-- [Retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
-- Integration with DLQ
-- [Batching](../strategies/batching.md)
-- [Rate limiting](../strategies/rate-limiting.md)
-- Short polling or long polling
-- Message retention period — maximum period how long a message can stay in the queue
-- Delivery delay
 - [Locking mechanism](../distributed-system/concurrency-control.md) — Messages are locked during processing, so that multiple producers can send and multiple consumers can receive messages _at the same time_.
   
   How does it work?
@@ -28,6 +21,13 @@ Features:
  
   If you want to release the lock while processing, you can set the visibility timeout to 0.
     
+- [Retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
+- Short polling or long polling
+- Integration with DLQ
+- [Batching](../strategies/batching.md)
+- [Rate limiting](../strategies/rate-limiting.md)
+- Housekeeping — **message retention period** is the maximum period how long a message can stay in the queue
+- Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first
 - High availability — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
   * absence of message in one of the servers
   * slightly delayed messages (mentioned in the docs)
