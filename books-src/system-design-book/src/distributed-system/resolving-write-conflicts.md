@@ -4,3 +4,7 @@ Write conflicts occur when two or more clients try to update the same data at th
 
 Strategies:
 * **Last Write Wins** (LWW) — use timestamp to identify which write is the final write
+
+~~~admonish example title="Databases using LWW"
+Cassandra, DynamoDB
+~~~
