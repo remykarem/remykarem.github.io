@@ -40,6 +40,7 @@
     - [Frame & buffer pool](./storage/buffer_management/frame_and_buffer_pool.md)
     - [Buffer manager](./storage/buffer_management/buffer_manager.md)
     - [Optimisations](./storage/buffer_management/optimisations.md)
+    - [Background writer](./storage/buffer_management/background-writer.md)
 
 ---
 
