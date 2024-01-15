@@ -11,5 +11,5 @@ The communication between your computer and GitHub is encrypted, ensuring that y
 ~~~
 
 ~~~admonish tip
-Use `-v` or `-vv` etc. for verbosity.
+Use `ssh -v` or `ssh -vv` etc. for verbosity.
 ~~~
