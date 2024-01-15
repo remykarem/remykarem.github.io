@@ -34,6 +34,10 @@ SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
 ~~~
 
+~~~admonish example title="AWS API Gateway"
+JWTs can be used as an authoriser in AWS API Gateway.
+~~~
+
 ~~~admonish note
 The [jwt.io](https://jwt.io) playground generates signatures i.e. JWS tokens.
 ~~~
