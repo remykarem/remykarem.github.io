@@ -64,8 +64,9 @@ Types of queues
 ~~~admonish example title="Applications"
 * Batch messages for future processing
 * Decouple requests from intensive background work
+* Decouple microservices and process event-driven applications — Separate frontend from backend systems, such as in a banking application. Customers immediately get a response, but the bill payments are processed in the background.
 
-Adapted from [Amazon SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
+Adapted from [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html) and [Amazon SQS Product Page](https://aws.amazon.com/sqs/).
 ~~~
 
 ~~~admonish example
