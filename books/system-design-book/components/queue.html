@@ -183,7 +183,7 @@
 <p>Delivery delay</p>
 </li>
 <li>
-<p><a href="../distributed-system/concurrency-control.html">Messages are locked</a> during processing, sothat multiple producers can send and multiple consumers can receive messages <em>at the same time</em>.</p>
+<p><a href="../distributed-system/concurrency-control.html">Locking mechanism</a> — Messages are locked during processing, so that multiple producers can send and multiple consumers can receive messages <em>at the same time</em>.</p>
 <p>How does it work?</p>
 <ol>
 <li>When a consumer receives a message, the message becomes <em>temporarily hidden</em> from other consumers.</li>
@@ -194,6 +194,7 @@
 <li>at least larger than the processing timeout to prevent more than once processing</li>
 <li>extended to cover the time required to process a batch of messages (in long polling, especially)</li>
 </ul>
+<p>If you want to release the lock while processing, you can set the visibility timeout to 0.</p>
 </li>
 <li>
 <p>High availability — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This <a href="../strategies/distributed.html">distributed</a> nature results in:</p>
