@@ -57,7 +57,7 @@ Types of queues
   * High throughput (lower than that of Standard queue)
 * **DLQ** — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully. Used for [manual intervention](../strategies/manual-intervention.md).
 * **Work queue** or **task queue** — designed to allow _multiple workers_ to consume tasks concurrently
-* **Delay queue** — postpone the delivery of new messages to the queue for a period of time
+* **Delay queue** — postpone the delivery of new messages to the queue for a period of time (why would you wanna do this...?)
 
 ~~~admonish example title="Applications"
 * Batch messages for future processing
