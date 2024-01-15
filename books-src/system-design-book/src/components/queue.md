@@ -35,6 +35,7 @@ Features:
 - [Rate limiting](../strategies/rate-limiting.md)
 - Housekeeping — **message retention period** is the maximum period how long a message can stay in the queue
 - Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first
+- Encryption at rest
 
 Benefits:
 
