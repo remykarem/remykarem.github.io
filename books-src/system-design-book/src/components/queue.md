@@ -16,7 +16,7 @@ Features:
 - Short polling or long polling
 - Message retention period — maximum period how long a message can stay in the queue
 - Delivery delay
-- [Messages are locked](../distributed-system/concurrency-control.md) during processing, sothat multiple producers can send and multiple consumers can receive messages _at the same time_.
+- [Locking mechanism](../distributed-system/concurrency-control.md) — Messages are locked during processing, so that multiple producers can send and multiple consumers can receive messages _at the same time_.
   
   How does it work?
   1. When a consumer receives a message, the message becomes _temporarily hidden_ from other consumers.
@@ -25,6 +25,8 @@ Features:
   The visibility timeout should therefore be:
   * at least larger than the processing timeout to prevent more than once processing
   * extended to cover the time required to process a batch of messages (in long polling, especially)
+ 
+  If you want to release the lock while processing, you can set the visibility timeout to 0.
     
 - High availability — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
   * absence of message in one of the servers
