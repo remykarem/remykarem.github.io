@@ -3,7 +3,7 @@ authors = ["Raimi"]
 language = "en"
 multilingual = false
 src = "src"
-title = "networking-book"
+title = "Networking Book"
 
 [output.html]
 site-url = "/books/networking-book/"
