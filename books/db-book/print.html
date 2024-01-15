@@ -604,6 +604,20 @@ pin page and return address
 <p>Tracks replication state in a database cluster.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="checkpointing"><a class="header" href="#checkpointing">Checkpointing</a></h1>
 <p>A checkpoint is the moment when the database system ensures that all changes up to that point are written to the actual database files on disk.</p>
+<p>Checkpoints can be triggered automatically or manually.</p>
+<div id="admonition-postgres" class="admonition example">
+<div class="admonition-title">
+<p>Postgres</p>
+<p><a class="admonition-anchor-link" href="concurrency/checkpointing.html#admonition-postgres"></a></p>
+</div>
+<div>
+<p>Postgres has a dedicated <code>checkpointer</code> background process that is responsible
+to ensure that the data recorded in WAL is periodically and safely written to the main database files on disk.</p>
+<p>You can trigger checkpoints manually using the SQL command</p>
+<pre><code class="language-sql">CHECKPOINT
+</code></pre>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mvcc"><a class="header" href="#mvcc">MVCC</a></h1>
 <p>Multi-Version Concurrency Control</p>
 <p>Each transaction sees a <em>snapshot</em> of the database at a particular point in time.</p>
