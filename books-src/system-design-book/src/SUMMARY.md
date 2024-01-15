@@ -155,6 +155,7 @@
 - [Distributed database]()
   - [SQL vs. NoSQL](./sql-vs-nosql.md)
 - [Concurrency control](./distributed-system/concurrency-control.md)
+  - [Resolving write conflicts](./distributed-system/resolving-write-conflicts.md)
 
 ---
 
