@@ -1,4 +1,4 @@
-# Other standards
+# Standards
 
 * IETF standards
 
