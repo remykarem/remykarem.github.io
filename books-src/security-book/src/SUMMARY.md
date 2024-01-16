@@ -98,6 +98,10 @@
 
 - [DNS leak]()
 
+# Other practices
+
+- [Key rotation](./key-rotation.md)
+
 # Attacks
 
 - [Links](./links.md)
