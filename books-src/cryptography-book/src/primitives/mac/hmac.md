@@ -1,5 +1,7 @@
 # HMAC
 
+[RFC 2104](https://datatracker.ietf.org/doc/html/rfc2104) [RFC 4868](https://datatracker.ietf.org/doc/html/rfc4868)
+
 Deterministic!
 
 $$
