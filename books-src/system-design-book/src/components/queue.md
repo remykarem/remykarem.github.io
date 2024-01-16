@@ -67,6 +67,8 @@ Types of queues
 * Decouple microservices and process event-driven applications — Separate frontend from backend systems, such as in a banking application. Customers immediately get a response, but the bill payments are processed in the background.
 
 Adapted from [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html) and [Amazon SQS Product Page](https://aws.amazon.com/sqs/).
+
+* Queues can act as buffers between 2 systems. This decouples the processing speed of the producer and the consumption rate of the downstream services.
 ~~~
 
 ~~~admonish example
