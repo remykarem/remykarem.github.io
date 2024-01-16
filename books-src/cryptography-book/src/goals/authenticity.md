@@ -8,15 +8,10 @@ A trusted party does not have to be a single entity. It could be a group of enti
 
 Authenticity thus prevents impersonation.
 
-Worded differently, authenticity is violated when impersonation occurs.
+Worded differently, authenticity is violated when impersonation occurs. This happens in the following scenarios:
 
-~~~admonish warning title="Violation of authenticity: Replay attack"
-When an attacker impersonates a legitimate user by replaying their past messages.
-~~~
-
-~~~admonish warning title="Violation of authenticity: Private key / shared secret compromise"
-This can happen when a private key or shared secret is compromised and is used by another unintended party to generate a signed message.
-~~~
+* [Replay attack]()
+* Private key / shared secret compromise
 
 ~~~admonish note title ="Authentication vs. authenticity"
 Authentication is a procedure to ensure authenticity — it verifies the identity of a party.
