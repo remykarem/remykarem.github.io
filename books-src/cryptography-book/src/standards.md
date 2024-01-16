@@ -14,6 +14,6 @@
 
 * [IETF](https://www.ietf.org/) (Internet Engineering Task Force)
 
-  The IETF is an organisation that publishes standards for the Internet.
+  The IETF is an organisation that publishes standards for the Internet. The standards are documents that are called RFCs (Request for Comments).
   
 * [NIST](https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology) - National Institute of Standards and Technology
