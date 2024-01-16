@@ -8,7 +8,7 @@ After TCP handshake, this is what happens:
 
 3. **Server authentication**
 
-    The server sends its public host key (initial connection only)
+    The server presents itself to the client with its public key / fingerprint by sending its public host key (initial connection only).
 
     If the client has never connected to this server before, it uses the "trust on first use" model and asks the user to confirm the server's key fingerprint.
 
