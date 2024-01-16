@@ -31,6 +31,10 @@ Scaling up and down dynamically
 
 Run load (no. of users, transactions, data volume) & stress tests on the system by simulating concurrent traffic. This helps to identify bottlenecks.
 
+~~~admonish warning title="Scalability mismatches"
+When part of the system is more scalable than the downstream services.
+~~~
+
 How to measure scalability?
 
 * [Performance metrics](../metrics.md)
