@@ -5,7 +5,7 @@
 Deterministic!
 
 $$
-\text{(message, key, \textbf{hashfunction})} \rightarrow \text{mac}
+\text{(message, key)} \rightarrow_\text{hashfunction} \text{mac}
 $$
 
 ~~~admonish info title="AWS SigV4"
