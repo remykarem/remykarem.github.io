@@ -164,6 +164,6 @@
 
 - [CPA](./attacks/chosen-plaintext-attack.md)
 - [CCA]()
-- [Replay attack]()
+- [Replay attack](./attacks/replay-attack.md)
 - [Brute-force attack]()
 - [Length extension attack]()
