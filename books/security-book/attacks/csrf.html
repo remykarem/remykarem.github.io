@@ -151,6 +151,42 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="csrf"><a class="header" href="#csrf">CSRF</a></h1>
+<p>Cross-Site Request Forgery</p>
+<p>CSRF exploits the fact that a <strong>cookie</strong>, saved in the <strong>browser</strong> (read: not the browser tab), is <strong>automatically</strong> sent together with subsequent requests to the server.</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>CSRF attacks commonly occur within the context of a <strong>web browser</strong>, since it automatically handles cookies.</p>
+<p>However, it is not restricted to browsers; any client that performs automatic cookie handling could be susceptible to a CSRF attack.</p>
+</div>
+</div>
+<div id="admonition-example-attack-1" class="admonition example">
+<div class="admonition-title">
+<p>Example attack 1</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-attack-1"></a></p>
+</div>
+<div>
+<p><strong>What you know</strong></p>
+<p>You know that a server <a href="http://example-bank.com">http://example-bank.com</a> requires a cookie in its request for identification and authentication.</p>
+<p>You also know that a certain endpoint <a href="http://example-bank.com/transfer?account=xxx&amp;amount=xxx">http://example-bank.com/transfer?account=xxx&amp;amount=xxx</a> transfers money to another account.</p>
+<p><strong>Deliver</strong></p>
+<p>We'll execute a <em>phishing attack</em>.</p>
+<p>Craft an email that has a link <a href="http://example-bank.com/transfer?account=raimi&amp;amount=10000">http://example-bank.com/transfer?account=raimi&amp;amount=10000</a> to a particular user who has a lot of money. We'll make it a hyperlink such that the query path is not apparent to the user. Send this email to the user.</p>
+<p><strong>Hope</strong></p>
+<p>We hope that the user has already been authenticated with <a href="http://example-bank.com">http://example-bank.com</a>, and therefore already has cookies saved in the browser.</p>
+<p><strong>Attack</strong></p>
+<p>Once the user clicks, the link opens up the browser, and navigates to the <a href="http://example-bank.com/transfer?account=raimi&amp;amount=10000">http://example-bank.com/transfer?account=raimi&amp;amount=10000</a> page, <strong>along with the saved cookies</strong>.</p>
+<p>Congrats, you now have $10,000 in your account.</p>
+</div>
+</div>
+<h2 id="mitigation"><a class="header" href="#mitigation">Mitigation</a></h2>
+<ul>
+<li><a href="./mitigation/anti-csrf-token.html">Anti-CSRF token</a></li>
+<li><a href="./mitigation/same-site-cookie-attribute.html">Same-Site cookie attribute</a></li>
+</ul>
 
                     </main>
 
