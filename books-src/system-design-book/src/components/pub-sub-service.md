@@ -1,4 +1,4 @@
-# Pub/Sub service
+# Pub/Sub messaging service
 
 Purpose:
 * [Asynchronous message **routing**](../core-functionalities/routing.md)
