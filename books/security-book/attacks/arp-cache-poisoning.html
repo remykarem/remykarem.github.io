@@ -151,6 +151,12 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="arp-cache-poisoning"><a class="header" href="#arp-cache-poisoning">ARP cache poisoning</a></h1>
+<p>ARP cache poisoning works in the following way:</p>
+<ol>
+<li>Victim requests for the MAC address of the machine with IP address <code>a.b.c.d</code>. </li>
+<li>Attacker sends a spoofed reply that maps IP address <code>a.b.c.d</code> to the attacker’s MAC address.</li>
+<li>Victim’s ARP cache is updated (”poisoned”) with this information. Future communications between the victim and IP address <code>a.b.c.d</code> will be between the victim and the attacker.</li>
+</ol>
 
                     </main>
 
