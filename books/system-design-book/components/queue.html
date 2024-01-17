@@ -242,13 +242,21 @@
 </div>
 <div>
 <ul>
-<li>Batch messages for future processing</li>
-<li>Decouple requests from intensive background work</li>
-<li>Decouple microservices and process event-driven applications — Separate frontend from backend systems, such as in a banking application. Customers immediately get a response, but the bill payments are processed in the background.</li>
-</ul>
-<p>Adapted from <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html">Amazon SQS Developer Guide</a> and <a href="https://aws.amazon.com/sqs/">Amazon SQS Product Page</a>.</p>
-<ul>
-<li>Queues can act as buffers between 2 systems. This decouples the processing speed of the producer and the consumption rate of the downstream services.</li>
+<li>
+<p>Batch messages for future processing. <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html">Amazon SQS Developer Guide</a></p>
+</li>
+<li>
+<p>Decouple requests from intensive background work. <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html">Amazon SQS Developer Guide</a></p>
+</li>
+<li>
+<p>Decouple microservices and process event-driven applications — Separate frontend from backend systems, such as in a banking application. Customers immediately get a response, but the bill payments are processed in the background. <a href="https://aws.amazon.com/sqs/">Amazon SQS Product Page</a></p>
+</li>
+<li>
+<p>Queues can act as buffers between 2 systems. This decouples the processing speed of the producer and the consumption rate of the downstream services. (or upstream vs. downstream)</p>
+</li>
+<li>
+<p>to make temporary outages survivable by stashing traffic-in-transit. <a href="https://www.tbray.org/ongoing/When/201x/2019/05/26/SQS">On SQS by Tim Bray</a></p>
+</li>
 </ul>
 </div>
 </div>

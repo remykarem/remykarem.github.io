@@ -62,13 +62,14 @@ Types of queues
 * **Delay queue** — postpone the delivery of new messages to the queue for a period of time (why would you wanna do this...?)
 
 ~~~admonish example title="Applications"
-* Batch messages for future processing
-* Decouple requests from intensive background work
-* Decouple microservices and process event-driven applications — Separate frontend from backend systems, such as in a banking application. Customers immediately get a response, but the bill payments are processed in the background.
+* Batch messages for future processing. [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
+* Decouple requests from intensive background work. [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
 
-Adapted from [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html) and [Amazon SQS Product Page](https://aws.amazon.com/sqs/).
+* Decouple microservices and process event-driven applications — Separate frontend from backend systems, such as in a banking application. Customers immediately get a response, but the bill payments are processed in the background. [Amazon SQS Product Page](https://aws.amazon.com/sqs/)
 
-* Queues can act as buffers between 2 systems. This decouples the processing speed of the producer and the consumption rate of the downstream services.
+* Queues can act as buffers between 2 systems. This decouples the processing speed of the producer and the consumption rate of the downstream services. (or upstream vs. downstream)
+
+* to make temporary outages survivable by stashing traffic-in-transit. [On SQS by Tim Bray](https://www.tbray.org/ongoing/When/201x/2019/05/26/SQS)
 ~~~
 
 ~~~admonish example
