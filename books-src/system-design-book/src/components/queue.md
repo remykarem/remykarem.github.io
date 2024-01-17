@@ -5,7 +5,7 @@ Actors:
 * **Consumer** — reads a message and deletes it from the queue
 
 Purpose:
-* [Short-term FIFO data **storage**](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
+* [Short-term FIFO message **storage**](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
 Features:
