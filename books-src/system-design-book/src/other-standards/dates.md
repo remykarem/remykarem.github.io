@@ -12,7 +12,7 @@
 
 1.	Date and Time in UTC (Coordinated Universal Time):
 
-  2024-01-19T15:20:30Z
+    2024-01-19T15:20:30Z
 
 2.	Date and Time with an Offset from UTC:
 
