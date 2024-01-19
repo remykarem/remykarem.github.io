@@ -205,6 +205,13 @@
 
 ---
 
+# Other standards
+
+- [Data URI](./other-standards/data-uri.md)
+- [Dates](./other-standards/dates.md)
+
+---
+
 # Interface description languages
 
 - [Protobuf](./others/protobuf.md)
