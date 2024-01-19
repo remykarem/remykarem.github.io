@@ -199,6 +199,7 @@
 # Encodings
 
 - [Unicode & UTF-8](./others/unicode-and-utf-8.md)
+- [ASCII]()
 - [Base64]()
 - [DER]()
 
