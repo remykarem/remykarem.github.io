@@ -111,6 +111,7 @@
   - [GraphQL](./api-design/api-architectural-styles/graphql.md)
   - [gRPC](./api-design/api-architectural-styles/grpc.md)
   - [SOAP](./api-design/api-architectural-styles/soap.md)
+- [API versioning](./api-design/versioning.md)
 - [Batch processing](./api-design/batch-processing.md)
 - [API performance](./api-design/api-peformance.md)
 
