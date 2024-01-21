@@ -33,9 +33,12 @@
   - [RSA](./cryptosystems/rsa/index.md)
 - [FFC]()
   - [DSA](./cryptosystems/dsa.md)
-- [ElGamal]()
+- [???]()
+  - [ElGamal]()
 
 ---
+
+# Encryption/signing software
 
 - [OpenPGP](./cryptosystems/openpgp.md)
 - [SLIFT](./cryptosystems/slift.md)
