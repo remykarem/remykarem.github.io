@@ -2,11 +2,10 @@
 
 * IETF standards
 
-* FIPS Publication 140-2
-
-  a US and Canadian government standard that specifies the security requirements for cryptographic modules that protect sensitive information
+* FIPS (Federal Information Processing Standard) — standards published by the NIST
  
 * PKCS #5 describes some password-based encryption algorithm to encrypt the private key information.
+
 * JSON Object Signing and Encryption (JOSE)
   * [RFC 7518](https://datatracker.ietf.org/doc/html/rfc7518) - JSON Web Algorithms (JWA)
 
