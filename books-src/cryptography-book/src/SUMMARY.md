@@ -22,6 +22,7 @@
 - [Private-public key pair](./cryptographic-keys/private-public-key-pair.md)
 - [DEK](./cryptographic-keys/dek.md)
 - [KEK](./cryptographic-keys/kek.md)
+- [Security tokens](./cryptographic-keys/security-tokens.md)
 
 ---
 
