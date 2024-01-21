@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=lElHzac8DDI
 ```
 
 ~~~admonish warning title="Minimum 2048 bits"
-RSA is an algorithm that generates public-private keys. You need to specify the length of the modulus $n$: one of 1024, 2048, 3072, 4096, 8192, 16,384 bits. NIST recommends 2048 — see [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57Pt3r1.pdf) and [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-131Ar2.pdf).
+NIST recommends at least 2048 bits for $n$, the size of the modulus. See [Key strength](../../cryptographic-keys/key-strength.md).
 ~~~
 
 - secret exponent: $d $
