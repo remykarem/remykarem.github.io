@@ -154,46 +154,6 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="kdf"><a class="header" href="#kdf">KDF</a></h1>
-<p>Key-derivation functions</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(key, </span><span class="mord text"><span class="mord textbf">salt</span></span><span class="mord">, length, ...)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">derivedkey</span></span></span></span></span></span></p>
-<ul>
-<li><strong>Key</strong> — password, etc.</li>
-<li><strong>Salt</strong> — a pseudorandom nonsecret value</li>
-<li>... — other params include iteration count</li>
-</ul>
-<p>What's the purpose of KDF?</p>
-<ul>
-<li><strong>Uniform format</strong> – a specific key size might be needed for symmetric encryption</li>
-<li><strong>Security enhancements</strong> – raw shared secrets might have patterns</li>
-<li><strong>Key material expansion</strong> – can generate multiple keys from a single raw shared secret if needed</li>
-<li><strong>Consistency</strong> – agreeing on the same KDF ensures that both parties derive exactly the same key</li>
-</ul>
-<p>Types of KDF</p>
-<ul>
-<li>
-<p>Hash-based (most common)</p>
-<ul>
-<li>
-<p>Bcrypt</p>
-<pre><code>$2a$07$wHirdrK4OLB0vk9r3fiseeYjQaCZ0bIeKY9qLsNep/I2nZAXbOb7m
-</code></pre>
-</li>
-<li>
-<p>Scrypt</p>
-<pre><code>16384$8$1$kytG1MHY1KU=$afc338d494dc89be40e317788e3cd9166d066709db0e6481f0801bd918710f46
-</code></pre>
-</li>
-<li>
-<p>Argon</p>
-<pre><code>$argon2d$v=19$m=1024,t=16,p=4$c2FsdDEyM3NhbHQxMjM$2dVtFVPCezhvjtyu2PaeXOeBR+RUZ6SqhtD/+QF4F1o
-</code></pre>
-</li>
-</ul>
-</li>
-<li>
-<p>Block cipher-based</p>
-</li>
-</ul>
 
                     </main>
 
