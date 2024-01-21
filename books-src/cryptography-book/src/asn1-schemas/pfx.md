@@ -2,7 +2,7 @@
 
 Personal Information Exchange
 
-Common filename: `.pfx`
+Filename extensions: `.pfx`
 
 The PFX format is similar to [PKCS #12](./pkcs12.md) in terms of the cryptographic objects it stores.
 
