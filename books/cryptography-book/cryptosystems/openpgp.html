@@ -194,9 +194,18 @@
 <p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord text"><span class="mord textbf">encrypted key</span></span><span class="mord">, </span><span class="mord text"><span class="mord textbf">private key</span></span><span class="mord">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord textbf">key</span></span></span></span></span></span></p>
 <p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord text"><span class="mord textbf">key</span></span><span class="mord">, </span><span class="mord text"><span class="mord">ciphertext</span></span><span class="mord">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">message</span></span></span></span></span></span></p>
 <h2 id="signature"><a class="header" href="#signature">Signature</a></h2>
-<h2 id="certification"><a class="header" href="#certification">Certification</a></h2>
-<p>OpenPGP also uses a decentralised trust model called <strong>Web of Trust</strong>. </p>
-<p>This is used to sign other keys.</p>
+<p>In addition to encryption, OpenPGP allows the sender to sign the message using the private key.</p>
+<h2 id="trust"><a class="header" href="#trust">Trust</a></h2>
+<p>You can include information about which keys you trust or have signed in your public key ring when you distribute your public key.</p>
+<div id="admonition-keyring" class="admonition note">
+<div class="admonition-title">
+<p>Keyring</p>
+<p><a class="admonition-anchor-link" href="#admonition-keyring"></a></p>
+</div>
+<div>
+<p>A collection of keys that a user has stored on their system.</p>
+</div>
+</div>
 <hr />
 <div id="admonition-implementations" class="admonition info">
 <div class="admonition-title">
