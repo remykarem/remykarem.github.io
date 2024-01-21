@@ -27,3 +27,6 @@ Symmetric algorithms:
 * Closed-source
 * Commercial
 * Windows only
+
+Resources:
+* [PrivyLink Resources](https://www.privylink.com/resources/whitepapers.htm)
