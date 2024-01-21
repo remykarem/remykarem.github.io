@@ -29,4 +29,5 @@ Symmetric algorithms:
 * Windows only
 
 Resources:
+* [PrivyLink SLIFT](https://privylink.com/products/slift.htm)
 * [PrivyLink Resources](https://www.privylink.com/resources/whitepapers.htm)
