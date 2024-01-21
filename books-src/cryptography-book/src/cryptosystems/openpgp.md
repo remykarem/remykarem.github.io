@@ -62,7 +62,7 @@ This is used to sign other keys.
 
 ```admonish info title="Implementations"
 * PGP by Symantec — commercial encryption tool
-* GPG (GnuPG) — OpenPGP-compliant software
+* GPG (Gnu Privacy Guard) — OpenPGP-compliant software
 * [GPGTools](https://gpgtools.org)
 
 [OpenPGP implementations](https://www.openpgp.org/software/developer/)
