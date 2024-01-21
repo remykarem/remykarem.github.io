@@ -23,7 +23,9 @@ People use "PGP" and "OpenPGP" interchangeably.
 
 PGP was originally developed as a propietary software for encrypting and decrypting emails.
 
-OpenPGP is developed to provide a standard for PGP-compatible software. 
+The OpenPGP standard was later developed, based on PGP, to provide a standard for PGP-compatible software.
+
+Modern versions of PGP are designed to be compatible with the OpenPGP standard.
 ```
 
 ## Encryption/decryption
@@ -59,9 +61,9 @@ This is used to sign other keys.
 ---
 
 ```admonish info title="Implementations"
+* PGP by Symantec — commercial encryption tool
 * GPG (GnuPG) — OpenPGP-compliant software
 * [GPGTools](https://gpgtools.org)
-* Symantec's PGP
 
 [OpenPGP implementations](https://www.openpgp.org/software/developer/)
 ```
