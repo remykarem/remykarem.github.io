@@ -102,6 +102,10 @@
 
 - [Key rotation](./key-rotation.md)
 
+# Others
+
+- [CVE](./cve.md)
+
 # Attacks
 
 - [Links](./links.md)
