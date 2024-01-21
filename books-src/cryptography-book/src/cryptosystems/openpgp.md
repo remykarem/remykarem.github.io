@@ -52,11 +52,15 @@ $$
 
 ## Signature
 
-## Certification
+In addition to encryption, OpenPGP allows the sender to sign the message using the private key.
 
-OpenPGP also uses a decentralised trust model called **Web of Trust**. 
+## Trust
 
-This is used to sign other keys.
+You can include information about which keys you trust or have signed in your public key ring when you distribute your public key.
+
+~~~admonish note title="Keyring"
+A collection of keys that a user has stored on their system.
+~~~
 
 ---
 
