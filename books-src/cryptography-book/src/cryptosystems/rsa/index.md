@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=lElHzac8DDI
 ```
 
 ~~~admonish warning title="Minimum 2048 bits"
-NIST recommends at least 2048 bits for $n$, the size of the modulus. See [Key strength](../../cryptographic-keys/key-strength.md).
+NIST recommends at least 2048 bits for the _size_ of the modulus. See [Key strength](../../cryptographic-keys/key-strength.md).
 ~~~
 
 - secret exponent: $d $
