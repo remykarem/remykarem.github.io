@@ -1,5 +1,7 @@
 # SHA
 
+[FIPS 180-4](https://csrc.nist.gov/pubs/fips/180-4/upd1/final)
+
 Hash function | Digest size   | Names | Remarks
 --------------|----------|----------|---
 SHA-1         | 160 bits | SHA-1 | ⚠️ broken
