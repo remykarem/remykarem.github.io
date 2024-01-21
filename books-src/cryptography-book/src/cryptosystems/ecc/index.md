@@ -8,6 +8,10 @@ Breaking ECC is an _elliptic curve discrete logarithm_ problem.
 
 Note that unlike RSA, ECC does not inherently have an encryption algorithm. Instead, it is mainly used to establish a shared secret key that can be used for symmetric encryption.
 
+~~~admonish warning title="Recommendation"
+Based on the NIST recommendations in [Key strength](../../cryptographic-keys/key-strength.md), the order of the generator should be...
+~~~
+
 ## Important concepts
 
 * **Elliptic curve** and its properties
