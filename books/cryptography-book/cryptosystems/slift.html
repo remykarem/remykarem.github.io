@@ -155,40 +155,30 @@
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="slift"><a class="header" href="#slift">SLIFT</a></h1>
 <p>Secure Lightweight Information &amp; File Transfer; by PrivyLink</p>
-<p>Encryption:</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(message, </span><span class="mord text"><span class="mord textbf">recipient’s public key</span></span><span class="mord">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">ciphertext</span></span></span></span></span></span></p>
-<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord text"><span class="mord textbf">key</span></span><span class="mord">, </span><span class="mord text"><span class="mord textbf">public key</span></span><span class="mord">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord text"><span class="mord textbf">encrypted key</span></span></span></span></span></span></span></p>
-<p><a href="https://privylink.com/products/sliftez.htm">SLIFT-Ez</a></p>
+<p>Possible encryption method is hybrid (like OpenPGP) — encrypt data using asymmetric key (KEK), then encrypt the KEK using the RSA private key (CEK)</p>
+<p>&quot;Our TrustField Platform SDK uses NIST FIPS certified crypto algorithm, namely, 1024-bit RSA and 192-bit 3DES-CBC digital envelope to encrypt any specified file and transfer it to the destination server over a TCP/IP channel.&quot;</p>
+<p>Features:</p>
 <ul>
-<li>PKCS#11 keys</li>
-<li>PKCS#7 signed and encrypted file format</li>
+<li>Encrypted data uses PKCS#7 format</li>
+<li>Encrypted data includes the certificates of recipients</li>
+<li>Encrypted data possibly includes signature</li>
 </ul>
-<p>Public key cryptography:</p>
+<p>Note the following:</p>
 <ul>
-<li>RSA 1024</li>
-</ul>
-<p>Symmetric algorithms:</p>
-<ul>
-<li>
-<p>3-DES</p>
-</li>
-<li>
-<p>DES</p>
-</li>
-<li>
-<p>Closed-source</p>
-</li>
-<li>
-<p>Commercial</p>
-</li>
-<li>
-<p>Windows only</p>
-</li>
+<li>Closed-source (?)</li>
+<li>Commercial</li>
+<li>Available in Windows only</li>
+<li>SDK available in Java (and C++) only; SDK for v1.1 compiled to Java 5 (EOL Nov 2009)</li>
+<li>Advertised symmetric algorithm (3DES, DES) are obsolete.</li>
+<li>Documentation looks obsolete</li>
+<li>Newer generation cryptography (ECC) not advertised</li>
 </ul>
 <p>Resources:</p>
 <ul>
+<li><a href="https://privylink.com/products/sliftez.htm">SLIFT-Ez</a></li>
 <li><a href="https://privylink.com/products/slift.htm">PrivyLink SLIFT</a></li>
 <li><a href="https://www.privylink.com/resources/whitepapers.htm">PrivyLink Resources</a></li>
+<li><a href="https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/validation-search?searchmode=validation&amp;producttype=-1&amp;ipp=250&amp;orderBy=ValidationDate">PrivyLink in NIST Cryptographic Algorithm Validation Program</a></li>
 </ul>
 
                     </main>
