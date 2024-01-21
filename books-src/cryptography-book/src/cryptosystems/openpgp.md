@@ -73,6 +73,7 @@ This is used to sign other keys.
 * GitHub: [Commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification)
 * IntelliJ: [Set up GPG commit signing](https://www.jetbrains.com/help/idea/set-up-GPG-commit-signing.html)
 * Apple: [Protecting Security Information](https://support.apple.com/en-us/HT201214)
+* NIST: [Encrypting Software/Data for Transmission to NIST](https://www.nist.gov/itl/iad/image-group/products-and-services/encrypting-softwaredata-transmission-nist)
 ```
 
 ```admonish warning
