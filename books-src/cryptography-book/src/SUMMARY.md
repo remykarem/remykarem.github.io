@@ -25,7 +25,7 @@
 
 ---
 
-- [Key strength](./key-strength.md)
+- [Key strength](./cryptographic-keys/key-strength.md)
 
 ---
 
