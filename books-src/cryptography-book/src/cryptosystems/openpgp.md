@@ -2,7 +2,7 @@
 
 Pretty Good Privacy
 
-[RFC 4880](https://datatracker.ietf.org/doc/html/rfc4880)
+[RFC 4880](https://datatracker.ietf.org/doc/html/rfc4880), [RFC 6637](https://datatracker.ietf.org/doc/html/rfc6637)
 
 OpenPGP is an open standard for hybrid encryption system to authenticate and encrypt data using existing cryptosystems like RSA, ECC, ElGamal and DSA. It uses both a symmetric and asymmetric key.
 
