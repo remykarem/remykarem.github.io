@@ -54,7 +54,7 @@ Finding the reverse of this is the discrete logarithm problem (which I have yet 
 Note that some curves are created by NIST eg. P-256, P-384.
 
 |Curve name | Prime field, p |
-|---- --- |
+|----| --- |
 |[Curve25519](https://en.wikipedia.org/wiki/Curve25519) | $2^{255} - 19$ |
 |[Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519) | $2^{255} - 19$ |
 | NIST P-256 / secp256r1 / prime256v1 | $2^{256} - 2^{224} + 2^{192} + 2^{96} - 1$ |
