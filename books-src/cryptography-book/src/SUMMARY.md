@@ -23,9 +23,9 @@
 - [DEK](./cryptographic-keys/dek.md)
 - [KEK](./cryptographic-keys/kek.md)
 
-# Key strength
+---
 
-- [Effective strength](./effective-strength.md)
+- [Key strength](./key-strength.md)
 
 ---
 
