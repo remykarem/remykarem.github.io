@@ -2,6 +2,16 @@
 
 Secure Lightweight Information & File Transfer; by PrivyLink
 
+Encryption:
+
+$$
+\text{(message, \textbf{recipient's public key})} \rightarrow \text{ciphertext}
+$$
+
+$$
+\text{(\textbf{key}, \textbf{public key})} \rightarrow \text{\textbf{encrypted key}}
+$$
+
 [SLIFT-Ez](https://privylink.com/products/sliftez.htm)
 * PKCS#11 keys
 * PKCS#7 signed and encrypted file format
