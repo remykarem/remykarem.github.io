@@ -78,6 +78,7 @@ A collection of keys that a user has stored on their system.
 * IntelliJ: [Set up GPG commit signing](https://www.jetbrains.com/help/idea/set-up-GPG-commit-signing.html)
 * Apple: [Protecting Security Information](https://support.apple.com/en-us/HT201214)
 * NIST: [Encrypting Software/Data for Transmission to NIST](https://www.nist.gov/itl/iad/image-group/products-and-services/encrypting-softwaredata-transmission-nist)
+* GitHub: [Storing large secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#storing-large-secrets)
 ```
 
 ```admonish warning
