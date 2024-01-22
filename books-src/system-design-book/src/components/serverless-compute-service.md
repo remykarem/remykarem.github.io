@@ -12,6 +12,7 @@ Features:
 * [Rate limiting](../strategies/rate-limiting.md)
 * [Retry mechanism](../strategies/retry-mechanism.md)
 * DLQ integration
+* Event source mapping (from SQS etc.); batches
 
 Designed for
 * **event-driven** architecture — execute code in response to events
