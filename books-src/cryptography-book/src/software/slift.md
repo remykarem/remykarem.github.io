@@ -9,7 +9,7 @@ Possible encryption method is hybrid (like OpenPGP) — encrypt data using asymm
 Features:
 * Encrypted data uses PKCS#7 format
 * Encrypted data includes the certificates of recipients
-* Encrypted data possibly includes signature
+* Signing the message (by the sender)
 
 Note the following:
 * Closed-source (?)
