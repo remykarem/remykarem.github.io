@@ -3,16 +3,16 @@ authors = ["remykarem"]
 language = "en"
 multilingual = false
 src = "src"
-title = "db-book"
+title = "Database Book"
 
 [output.html]
-site-url = "/books/db-book/"
+site-url = "/books/database-book/"
 additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
 no-section-label = true
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/db-book/{path}"
 
 [build]
-build-dir = "../../books/db-book/"
+build-dir = "../../books/database-book/"
 
 [preprocessor]
 
