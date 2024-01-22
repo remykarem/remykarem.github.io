@@ -32,12 +32,12 @@
 
 # Cryptosystems
 
-- [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography.md)
 - [ECC](./cryptosystems/ecc/index.md)
-- [IFC]()
-  - [RSA](./cryptosystems/rsa/index.md)
+- [IFC](./cryptosystems/ifc/index.md)
+  - [RSA](./cryptosystems/ifc/rsa/index.md)
 - [FFC]()
   - [DSA](./cryptosystems/dsa.md)
+- [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography.md)
 - [???]()
   - [ElGamal]()
 
