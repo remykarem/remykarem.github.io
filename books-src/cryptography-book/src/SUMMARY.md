@@ -43,7 +43,7 @@
 
 ---
 
-# Encryption/signing software
+# Software
 
 - [OpenPGP](./software/openpgp.md)
 - [SLIFT](./software/slift.md)
