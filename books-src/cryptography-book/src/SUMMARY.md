@@ -97,13 +97,13 @@
     - [DHE](primitives/key-exchange-algorithms/dhe.md)
     - [ECDH](./primitives/key-exchange-algorithms/ecdh.md)
     - [ECDHE](./primitives/key-exchange-algorithms/ecdhe.md)
-- [KEM](./primitives/kem/index.md)
-  - [Kyber](./primitives/kem/kyber.md)
 - [KDF](./primitives/kdf/index.md)
     - [PBKDF2](./primitives/kdf/pbkdf2.md)
     - [Bcrypt]()
     - [Scrypt]()
     - [Argon]()
+- [KEM](./primitives/kem/index.md)
+  - [Kyber](./primitives/kem/kyber.md)
 
 ---
 
