@@ -1,13 +1,15 @@
-# Batch processing
+# Batch API, processing
+
+Ensure
+* **Size of batch** — There's a min. and max. no. of items to process (see [Dropbox batch copy API](https://www.dropbox.com/developers/documentation/http/documentation#files-copy_batch)
+* **Duplicates** — How to handle duplicates in the request?
+* **Result mapping** — [Dropbox](https://www.dropbox.com/developers/documentation/http/documentation#files-copy_batch) replies with a status for every message
 
 Batch processing can be useful for:
 
 * **network latency**: You make one call instead of _n_ calls.
 * **atomicity**: The all-or-nothing behaviour can help simplify error handling.
 
-Other design considerations:
-* Do _n_ items in the request correspond to _n_ items in the response?
-* How to handle duplicates in the request?
 
 Examples:
 
