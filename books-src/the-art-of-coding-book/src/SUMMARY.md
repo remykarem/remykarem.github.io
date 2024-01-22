@@ -44,13 +44,13 @@
     - [Proxy]()
 
   - [Behavioural](./gang-of-four/behavioural/index.md)
+    - [Strategy](./gang-of-four/behavioural/strategy.md)
     - [Iterator](./gang-of-four/behavioural/iterator.md)
     - [Chain of Responsibility](./gang-of-four/behavioural/chain-of-responsibility.md)
     - [Observer](./gang-of-four/behavioural/observer.md)
     - [Mediator](./gang-of-four/behavioural/mediator.md)
     - [Command](./gang-of-four/behavioural/command.md)
     - [State](./gang-of-four/behavioural/state.md)
-    - [Strategy]()
 
 - [SOLID Principles]()
   - [Single Responsibility]()
