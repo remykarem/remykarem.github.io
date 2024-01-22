@@ -18,7 +18,8 @@
 
 # Cryptographic keys
 
-- [Shared secret]()
+- [Password / passphrase](./cryptographic-keys/password-passphrase.md)
+- [Shared secret](./cryptographic-keys/shared-secret.md)
 - [Private-public key pair](./cryptographic-keys/private-public-key-pair.md)
 - [DEK](./cryptographic-keys/dek.md)
 - [KEK](./cryptographic-keys/kek.md)
