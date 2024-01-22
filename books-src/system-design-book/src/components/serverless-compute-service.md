@@ -11,6 +11,7 @@ Features:
 * [Auto-scalable](../strategies/auto-scaling.md)
 * [Rate limiting](../strategies/rate-limiting.md)
 * [Retry mechanism](../strategies/retry-mechanism.md)
+* DLQ integration
 
 Designed for
 * **event-driven** architecture — execute code in response to events
