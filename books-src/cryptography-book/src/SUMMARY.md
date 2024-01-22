@@ -98,6 +98,8 @@
   - [RSAES-PKCS1-v1_5](./primitives/encryption-algorithms/rsaes-pkcs1-v1_5.md)
   - [ECIES](./primitives/encryption-algorithms/ecies.md)
   - [ElGamal]()
+- [Authenticated encryption](./primitives/authenticated-encryption.md)
+  - [AEAD](./primitives/aead.md)
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
     - [Static RSA key exchange](./primitives/key-exchange-algorithms/static-rsa-key-exchange.md)
     - [DH](./primitives/key-exchange-algorithms/dh.md)
@@ -111,13 +113,6 @@
     - [Argon]()
 - [KEM](./primitives/kem/index.md)
   - [Kyber](./primitives/kem/kyber.md)
-
----
-
-# Other schemes
-
-- [Authenticated encryption](./other-schemes/authenticated-encryption.md)
-- [AEAD](./other-schemes/aead.md)
 - [HPKE](./primitives/hpke.md)
 
 ---
