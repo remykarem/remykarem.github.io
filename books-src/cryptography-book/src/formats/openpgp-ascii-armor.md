@@ -21,4 +21,6 @@ tpaVjKSc4ANsaJcCuDzO+03GQqaNKUhqAP46xoS626H+p8uVyRfcxn0M1h8qSnmy
 =ujb1
 -----END PGP PUBLIC KEY BLOCK-----
 ```
+
+The `=ujb1` is the checksum.
 ~~~
