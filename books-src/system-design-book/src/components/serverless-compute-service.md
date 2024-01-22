@@ -13,6 +13,7 @@ Features:
 * [Retry mechanism](../strategies/retry-mechanism.md)
 * DLQ integration
 * Event source mapping (from SQS etc.); batches
+* Caching — can store static assets in `/tmp` for reuse by subsequent invocation by the same instance
 
 Designed for
 * **event-driven** architecture — execute code in response to events
