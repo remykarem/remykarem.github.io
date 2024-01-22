@@ -40,7 +40,7 @@ jobs:
         mdbook build books-src/number-theory-book
         mdbook build books-src/system-design-book
         mdbook build books-src/spring-boot-book
-        mdbook build books-src/db-book
+        mdbook build books-src/database-book
         mdbook build books-src/security-book
         mdbook build books-src/swift-book
         mdbook build books-src/the-art-of-coding-book
