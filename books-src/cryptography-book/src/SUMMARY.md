@@ -36,8 +36,8 @@
 - [IFC](./cryptosystems/ifc/index.md)
   - [RSA](./cryptosystems/ifc/rsa/index.md)
 - [FFC]()
-  - [DSA](./cryptosystems/dsa.md)
-- [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography.md)
+  - [DSA](./cryptosystems/ffc/dsa.md)
+- [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography/index.md)
 - [???]()
   - [ElGamal]()
 
@@ -45,8 +45,8 @@
 
 # Encryption/signing software
 
-- [OpenPGP](./cryptosystems/openpgp.md)
-- [SLIFT](./cryptosystems/slift.md)
+- [OpenPGP](./software/openpgp.md)
+- [SLIFT](./software/slift.md)
 
 ---
 
