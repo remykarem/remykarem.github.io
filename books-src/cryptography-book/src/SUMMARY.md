@@ -34,9 +34,16 @@
 # Cryptosystems
 
 - [ECC](./cryptosystems/ecc/index.md)
+  - [Curve25519]()
+  - [Ed25519]()
+  - [NIST P-256 / secp256r1 / prime256v1]()
+  - [P-384]()
+  - [secp256k1]()
+  - [Ed448-Goldilocks]()
 - [IFC](./cryptosystems/ifc/index.md)
   - [RSA](./cryptosystems/ifc/rsa/index.md)
 - [FFC]()
+  - [DH]()
   - [DSA](./cryptosystems/ffc/dsa.md)
 - [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography/index.md)
 - [???]()
