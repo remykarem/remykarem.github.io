@@ -6,7 +6,7 @@ We wanna make sure that attackers cannot find any pattern from the encryption (u
 Use `/dev/urandom`.
 
 ```bash
-LC_ALL=C tr -dc a-zA-Z0-9 < /dev/urandom | head -c10
+cat /dev/urandom | LC_ALL=C tr -dc a-zA-Z0-9 | head -c10
 ```
 
 Based on [this](https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string) StackOverflow post.
@@ -16,7 +16,7 @@ Based on [this](https://unix.stackexchange.com/questions/230673/how-to-generate-
 Use `openssl rand`.
 
 ```bash
-LC_ALL=C tr -dc a-zA-Z0-9 < <(openssl rand 1000) | head -c10
+openssl rand 1000 | LC_ALL=C tr -dc a-zA-Z0-9 | head -c10
 ```
 
 ```bash

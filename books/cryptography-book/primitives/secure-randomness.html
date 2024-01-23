@@ -162,7 +162,7 @@
 </div>
 <div>
 <p>Use <code>/dev/urandom</code>.</p>
-<pre><code class="language-bash">LC_ALL=C tr -dc a-zA-Z0-9 &lt; /dev/urandom | head -c10
+<pre><code class="language-bash">cat /dev/urandom | LC_ALL=C tr -dc a-zA-Z0-9 | head -c10
 </code></pre>
 <p>Based on <a href="https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string">this</a> StackOverflow post.</p>
 </div>
@@ -174,7 +174,7 @@
 </div>
 <div>
 <p>Use <code>openssl rand</code>.</p>
-<pre><code class="language-bash">LC_ALL=C tr -dc a-zA-Z0-9 &lt; &lt;(openssl rand 1000) | head -c10
+<pre><code class="language-bash">openssl rand 1000 | LC_ALL=C tr -dc a-zA-Z0-9 | head -c10
 </code></pre>
 <pre><code class="language-bash">openssl rand -hex 16
 </code></pre>
@@ -211,6 +211,7 @@ window.crypto.getRandomValues(array);
 </code></pre>
 </div>
 </div>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
