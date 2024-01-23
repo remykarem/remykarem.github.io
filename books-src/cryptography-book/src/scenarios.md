@@ -8,6 +8,8 @@
 
    Ciphertext offers confidentiality and, depending on the encryption, may or may not offer authentication.
 
+   If confidentiality isn't the goal then encryption might not be appropriate.
+
    Using RSA encryption, it offers little to zero authentication, because we assume a public key is exposed to the world. 
 
 - Only encrypting the HTTP payload ("confidentiality")
