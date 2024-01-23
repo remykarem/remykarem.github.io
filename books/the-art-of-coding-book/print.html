@@ -653,7 +653,12 @@ log(message=&quot;hello&quot;, destination=udp_socket_adapter)
 <ul>
 <li>the <strong>Strategy interface</strong></li>
 <li>the <strong>concrete Strategy implementations</strong> of this interface</li>
-<li>the <strong>context class</strong> that will use the Strategies — this class's main purpose is to <em>decouple</em> the Strategies from the client code</li>
+<li>the <strong>context class</strong> that will use the Strategies — this class's has several purposes:
+<ul>
+<li>to decouple the <em>implementation details</em> of the Strategies from the client code</li>
+<li>to encapsulate the <em>strategy selection</em></li>
+</ul>
+</li>
 <li>the <strong>client code</strong></li>
 </ul>
 <div id="admonition-like-rust-enum" class="admonition warning">
