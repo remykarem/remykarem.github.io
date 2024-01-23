@@ -11,3 +11,4 @@
   - [Gaussian process]()
   - [Poisson process]()
 - [Bayesian](./bayesian.md)
+- [Birthday paradox](./birthday-paradox.md)
