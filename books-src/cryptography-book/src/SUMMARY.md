@@ -176,5 +176,6 @@
 - [CPA](./attacks/chosen-plaintext-attack.md)
 - [CCA]()
 - [Replay attack](./attacks/replay-attack.md)
+- [Birthday attack](./attacks/birthday-attack.md)
 - [Brute-force attack]()
 - [Length extension attack]()
