@@ -3,13 +3,16 @@ authors = ["Raimi"]
 language = "en"
 multilingual = false
 src = "src"
-title = "shell-book"
+title = "Shell Book"
 
 [output.html]
 site-url = "/books/shell-book/"
 additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
 no-section-label = true
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/shell-book/{path}"  # change your-book
+
+[output.html.print]
+enable = false
 
 [build]
 build-dir = "../../books/shell-book/"
