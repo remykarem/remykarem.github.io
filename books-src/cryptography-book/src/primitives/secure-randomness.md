@@ -1,6 +1,10 @@
 # Cryptographically secure random bytes
 
-We wanna make sure that attackers cannot find any pattern from the encryption (using **randomness** aka high entropy, dependent on the encryption algorithm)
+We wanna make sure that attackers cannot find any pattern from the encryption, so we need some form of randomness aka entropy.
+
+Entropy can be obtained from multiple entropy sources. See Apple's [Random number generation](https://support.apple.com/en-sg/guide/security/seca0c73a75b/web).
+
+See also this article on [Myths about /dev/urandom](https://www.2uo.de/myths-about-urandom/).
 
 ~~~admonish example title="*nix"
 Use `/dev/urandom`.
