@@ -1,9 +1,9 @@
 # Authenticated encryption
 
-Authenticated encryption offers:
-* [confidentiality](../goals/confidentiality.md)
-* [authenticity](../goals/authenticity.md) – only someone with the correct key could have generated an authentication tag that matches the one calculated by recipient
-* [integrity](../goals/integrity.md) – via authentication tag
+Authenticated encryption is a symmetric encryption that offers:
+* [confidentiality](../../goals/confidentiality.md)
+* [authenticity](../../goals/authenticity.md) – only someone with the correct key could have generated an authentication tag that matches the one calculated by recipient
+* [integrity](../../goals/integrity.md) – via authentication tag
 
 The authentication tag is based on:
 * the key
