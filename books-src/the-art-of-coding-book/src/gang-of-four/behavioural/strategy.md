@@ -11,3 +11,5 @@ You'll need:
 ~~~admonish warning title="Like Rust enum"
 Looks freakishly similar to Rust's enum
 ~~~
+
+You can easily add more strategies without modifying the existing classes, adhering to the open-closed principle.
