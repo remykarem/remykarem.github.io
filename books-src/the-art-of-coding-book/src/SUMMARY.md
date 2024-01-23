@@ -54,7 +54,7 @@
 
 - [SOLID Principles]()
   - [Single Responsibility]()
-  - [Open-Closed]()
+  - [Open-Closed](./solid/open-closed-principle.md)
   - [Liskov Substitution]()
   - [Interface Segregation](./solid/interface-segregation-principle.md)
   - [Dependency Inversion]()
