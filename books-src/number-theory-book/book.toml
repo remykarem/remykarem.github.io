@@ -8,12 +8,14 @@ title = "Number Theory Book"
 [output.html]
 site-url = "/books/number-theory-book"
 mathjax-support = true
-git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/number-theory-book/{path}"  # change your-book
 additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
 default-theme = "frappé"
 no-section-label = true
 preferred-dark-theme = "macchiato"
+
+[output.html.print]
+enable = false
 
 [build]
 build-dir = "../../books/number-theory-book"

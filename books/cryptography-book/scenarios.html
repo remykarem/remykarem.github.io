@@ -156,6 +156,16 @@
 <h1 id="scenarios"><a class="header" href="#scenarios">Scenarios</a></h1>
 <ul>
 <li>
+<p>Only signing the timestamp when sending HTTP requests</p>
+<p>The attacker can mutate the payload (instead of the signature) and therefore poison the system.</p>
+</li>
+<li>
+<p>Using ciphertext as a form of authentication</p>
+<p>Ciphertext offers confidentiality and, depending on the encryption, may or may not offer authentication.</p>
+<p>If confidentiality isn't the goal then encryption might not be appropriate.</p>
+<p>Using RSA encryption, it offers little to zero authentication, because we assume a public key is exposed to the world. </p>
+</li>
+<li>
 <p>Only encrypting the HTTP payload (&quot;confidentiality&quot;)</p>
 <p>An attacker might not be able to read the data in transit. But they may be able to flip bits without detection. A GET can be changed to PUT by flipping bits, without interfering with the ciphertext.</p>
 </li>

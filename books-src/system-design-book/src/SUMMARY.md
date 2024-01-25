@@ -117,6 +117,12 @@
 
 ---
 
+# Data synchronisation
+
+- [Data synchronisation](./data-synchronisation/index.md)
+
+---
+
 # Messaging patterns
 
 - [Overview](./messaging-patterns/overview.md)
@@ -203,6 +209,7 @@
 - [ASCII]()
 - [Base64]()
 - [DER]()
+- [URL encoding]()
 
 ---
 

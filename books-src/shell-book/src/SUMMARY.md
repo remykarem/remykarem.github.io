@@ -25,6 +25,7 @@
 - [Variables](./variables.md)
 - [Alias](./alias.md)
 - [Functions](./functions.md)
+- [String](./string.md)
 - [Debugging and help](./debugging.md)
 - [Prompt](./prompt.md)
 - [Control flow](./control-flow.md)
