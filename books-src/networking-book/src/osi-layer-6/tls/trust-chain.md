@@ -21,7 +21,7 @@ It is easier for a client to manage a list of _root_ certificates, rather than m
 ```admonish info title="Trust store"
 Operating systems, browsers and other applications come with a list of trusted root certificates ("**trust store"**).
 
-In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under **System Roots**.
+In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under **System Roots**. See [Available trusted root certificates for Apple operating systems](https://support.apple.com/en-us/HT209143).
 
 Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. For example, in Java, the trust store is typically found in a file name **cacerts** in the Java installation directory.
 ```
