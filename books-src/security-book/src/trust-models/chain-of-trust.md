@@ -1,8 +1,14 @@
-# Chain of trust
+# Chain of Trust
 
 aka trust chain
 
-The trust infrastructure is made up CAs (**certificate authorities**) and **certificates** (SSL certificates).
+The idea of Chain of Trust is we should trust a group of credible entities called **CAs** (certificate authorities) and we should trust who they trust.
+
+~~~admonish example title="Examples of CAs"
+Let's Encrypt, DigiCert, Sectigo, GlobalSign
+~~~
+
+**Certificates** are a way of saying that a CA trusts another entity. These certificates are [X.509 certificates](https://remykarem.github.io/books/cryptography-book/asn1-schemas/x509.html).
 
 A (root) CA generates a certificate for itself, and generates certificates for servers and other CAs ("intermediary CAs").
 
@@ -10,8 +16,8 @@ Other CAs can in turn generate certificates for other servers and other CAs and 
 
 If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate.
 
-~~~admonish example title="Examples of CAs"
-Let's Encrypt, DigiCert, Sectigo, GlobalSign
+~~~admonish note title="Self-signed cert"
+???
 ~~~
 
 ```admonish tip title="Clients only need to store root certificates"
