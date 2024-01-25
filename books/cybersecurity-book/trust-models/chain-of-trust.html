@@ -194,16 +194,9 @@
 <p><strong>Certificates</strong> are a way of saying that a CA trusts another entity. These certificates are <a href="https://remykarem.github.io/books/cryptography-book/asn1-schemas/x509.html">X.509 certificates</a>.</p>
 <p>A (root) CA generates a certificate for itself, and generates certificates for servers and other CAs (&quot;intermediary CAs&quot;).</p>
 <p>Other CAs can in turn generate certificates for other servers and other CAs and so on.</p>
+<h2 id="certificate-verification"><a class="header" href="#certificate-verification">Certificate verification</a></h2>
+<p>The algorithm to verify a certificate is called <strong>certificate path validation</strong>.</p>
 <p>If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate.</p>
-<div id="admonition-self-signed-cert" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Self-signed cert</p>
-<p><a class="admonition-anchor-link" href="#admonition-self-signed-cert"></a></p>
-</div>
-<div>
-<p>???</p>
-</div>
-</div>
 <div id="admonition-clients-only-need-to-store-root-certificates" class="admonition admonish-tip">
 <div class="admonition-title">
 <p>Clients only need to store root certificates</p>
@@ -233,7 +226,15 @@
 <p>The documentation for <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/">Install the Cloudflare certificate</a> has a good overview to install the root certificate for OSes (macOS, iOS) and applications (Python, JetBrains).</p>
 </div>
 </div>
-<h2 id="certificate-verification"><a class="header" href="#certificate-verification">Certificate verification</a></h2>
+<div id="admonition-self-signed-certificate" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Self-signed certificate</p>
+<p><a class="admonition-anchor-link" href="#admonition-self-signed-certificate"></a></p>
+</div>
+<div>
+<p>???</p>
+</div>
+</div>
 <p>How does the client verify a certificate?</p>
 <ul>
 <li>hostname matching (against the requested URL)</li>
