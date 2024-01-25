@@ -8,11 +8,11 @@ title = "AI Planning Book"
 [output.html]
 site-url = "/books/ai-planning-book"
 mathjax-support = true
-additional-css = ["././mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css", "./mdbook-admonish.css", "./theme/catppuccin-admonish.css"]
 default-theme="frappé"
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/ai-planning-book/{path}"  # change your-book
 no-section-label = true
 preferred-dark-theme="macchiato"
+additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [build]

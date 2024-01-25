@@ -11,8 +11,8 @@ editable = true
 [output.html]
 site-url = "/books/spring-boot-book"
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/spring-boot-book/{path}"  # change your-book
-additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 no-section-label = true
+additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [output.html.print]

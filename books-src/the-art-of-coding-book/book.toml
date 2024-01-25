@@ -7,11 +7,11 @@ title = "The Art of Coding Book"
 
 [output.html]
 site-url = "/books/the-art-of-coding-book"  # this is for mathy books. for non-mathy, use "/books/your-book"
-additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
 no-section-label = true
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/the-art-of-coding-book/{path}"  # change your-book
+additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [output.html.print]

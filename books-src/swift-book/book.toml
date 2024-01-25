@@ -10,10 +10,10 @@ site-url = "/books/swift-book"  # this is for mathy books. for non-mathy, use "/
 mathjax-support = true
 git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/swift-book/{path}"  # change your-book
-additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
 no-section-label = true
+additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [build]

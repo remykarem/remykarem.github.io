@@ -9,10 +9,10 @@ title = "AI/ML/DS book"
 site-url = "/books/ai-book"
 mathjax-support = true
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/ai-book/{path}"  # change your-book
-additional-css = ["last-changed.css", "./theme/catppuccin.css", "./theme/catppuccin-highlight.css", "././mdbook-admonish.css", "./mdbook-admonish.css", "./theme/catppuccin-admonish.css"]
 default-theme="frappé"
 no-section-label = true
 preferred-dark-theme="macchiato"
+additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [output.html.print]
