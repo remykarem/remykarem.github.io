@@ -187,6 +187,9 @@
 <p>Replace newline character with newline character literal (<code>\n</code>)</p>
 <pre><code class="language-sh">awk '{ printf &quot;%s\\n&quot;, $0 }'
 </code></pre>
+<p>Replace newline character literal (<code>\n</code>) with a newline character</p>
+<pre><code class="language-sh">sed 's/\\n/\n/g'
+</code></pre>
 
                     </main>
 
