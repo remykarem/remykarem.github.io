@@ -18,18 +18,29 @@ Other CAs can in turn generate certificates for other servers and other CAs and 
 
 The algorithm to verify a certificate is called **certificate path validation**.
 
-If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate.
-
-```admonish tip title="Clients only need to store root certificates"
-It is easier for a client to manage a list of _root_ certificates, rather than managing individual CA certs.
-```
+If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate. This verification is done against the client's trust store.
 
 ```admonish info title="Trust store"
 Operating systems, browsers and other applications come with a list of trusted root certificates ("**trust store"**).
 
 In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under **System Roots**. See [Available trusted root certificates for Apple operating systems](https://support.apple.com/en-us/HT209143).
 
-Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. For example, in Java, the trust store is typically found in a file name **cacerts** in the Java installation directory.
+The browser... not too sure... maybe it uses the OS'es trust store (?)
+
+Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. For example, in Java, the trust store is typically found in a file name `cacerts` somewhere in the Java installation directory.
+```
+
+What information does the client verify?
+
+* hostname matching (against the requested URL)
+* certificate validity
+* CA issuer
+* the client validates the:
+* **certificate signature** — use the public key of the issuing CA to verify that the certificate has not been tampered with
+* **certificate chain** — if the issuing CA is an intermediate CA, get the intermediate CA's certificate and repeat the steps above. if it's a root CA, verify against the OS trust store.
+
+```admonish tip title="Clients only need to store root certificates"
+It is easier for a client to manage a list of _root_ certificates, rather than managing individual CA certs.
 ```
 
 ```admonish question title="How to add root certificates to trust store?"
@@ -39,15 +50,6 @@ The documentation for [Install the Cloudflare certificate](https://developers.cl
 ~~~admonish note title="Self-signed certificate"
 ???
 ~~~
-
-How does the client verify a certificate?
-
-* hostname matching (against the requested URL)
-* certificate validity
-* CA issuer
-* the client validates the:
-* **certificate signature** — use the public key of the issuing CA to verify that the certificate has not been tampered with
-* **certificate chain** — if the issuing CA is an intermediate CA, get the intermediate CA's certificate and repeat the steps above. if it's a root CA, verify against the OS trust store.
 
 ~~~admonish question title="How to show certificates of intermediate CAs?"
 The server typically sends its own certificate and the intermediate CA's certificates as well. 
