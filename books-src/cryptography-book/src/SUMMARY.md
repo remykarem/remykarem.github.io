@@ -34,12 +34,11 @@
 # Cryptosystems
 
 - [ECC](./cryptosystems/ecc/index.md)
-  - [Curve25519]()
-  - [Ed25519]()
-  - [NIST P-256 / secp256r1 / prime256v1]()
-  - [P-384]()
+  - [Curve25519](./cryptosystems/ecc/curve25519.md)
+  - [Ed25519](./cryptosystems/ecc/ed25519.md)
+  - [NIST P-256 / secp256r1 / prime256v1](./cryptosystems/ecc/p-256.md)
+  - [P-384](./cryptosystems/ecc/p-384.md)
   - [secp256k1]()
-  - [Ed448-Goldilocks]()
 - [IFC](./cryptosystems/ifc/index.md)
   - [RSA](./cryptosystems/ifc/rsa/index.md)
 - [FFC]()
