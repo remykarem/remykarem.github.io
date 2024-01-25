@@ -11,6 +11,15 @@ We can see this as the server sends request to client.
 ~~~
 
 ~~~admonish note title="Vocabulary"
+FromGitHub:
+* create a webhook — involves soecifying a URL and subscribing to event types
+* subscribe the webhook to an event
+* trigger the webhook
+* listen for webhook deliveries and respond to them
+* webhook URL
+* if webhook goes down
+* redeliver webhook
+
 * register a webhook endpoint
 * push real-time event data
 * webhook endpoint
