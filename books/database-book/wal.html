@@ -33,6 +33,8 @@
         <link rel="stylesheet" href="./mdbook-admonish.css">
         <link rel="stylesheet" href="../css/theme/catppuccin.css">
         <link rel="stylesheet" href="../css/theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
 
     </head>
     <body>
@@ -155,7 +157,7 @@
                         <h1 id="wal"><a class="header" href="#wal">WAL</a></h1>
 <p>Write-ahead log</p>
 <p>Data is typically written to a write-ahead log before being indexed in a B-tree.</p>
-<div id="admonition-postgres" class="admonition example">
+<div id="admonition-postgres" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Postgres</p>
 <p><a class="admonition-anchor-link" href="#admonition-postgres"></a></p>
@@ -165,7 +167,7 @@
 <p>The actual database files are updated later, based on the WAL.</p>
 </div>
 </div>
-<div id="admonition-sqlite" class="admonition example">
+<div id="admonition-sqlite" class="admonition admonish-example">
 <div class="admonition-title">
 <p>SQLite</p>
 <p><a class="admonition-anchor-link" href="#admonition-sqlite"></a></p>
@@ -174,7 +176,7 @@
 <p>In SQLite, the reader (processes querying the database) access data from both the main database file and the WAL files.</p>
 </div>
 </div>
-<div id="admonition-see-wal-in-postgres" class="admonition tip">
+<div id="admonition-see-wal-in-postgres" class="admonition admonish-tip">
 <div class="admonition-title">
 <p>See WAL in Postgres</p>
 <p><a class="admonition-anchor-link" href="#admonition-see-wal-in-postgres"></a></p>
@@ -238,6 +240,8 @@
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        <script type="text/javascript" src="mermaid.min.js"></script>
+        <script type="text/javascript" src="mermaid-init.js"></script>
 
 
     </body>

@@ -32,6 +32,7 @@
         <link rel="stylesheet" href="../.././mdbook-admonish.css">
         <link rel="stylesheet" href="../.././theme/catppuccin.css">
         <link rel="stylesheet" href="../.././theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href="../.././theme/catppuccin-admonish.css">
 
     </head>
     <body>
@@ -151,7 +152,7 @@
                         <h1 id="setup"><a class="header" href="#setup">Setup</a></h1>
 <p>For this protocol to work, these things need to be set up first.</p>
 <h2 id="for-server-authentication-host-authentication"><a class="header" href="#for-server-authentication-host-authentication">For server authentication (&quot;host authentication&quot;)</a></h2>
-<div id="admonition-note" class="admonition note">
+<div id="admonition-note" class="admonition admonish-note">
 <div class="admonition-title">
 <p>Note</p>
 <p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
@@ -162,7 +163,7 @@
 </div>
 <p>A private key (&quot;<strong>host key</strong>&quot;), held by the server, is used for host authentication. It is typically stored in the server's <code>/etc/ssh</code>.</p>
 <p>The corresponding public key is shared with the client <em>during the initial connection</em>. The client then stores this key typically in <code>~/.ssh/known_hosts</code>.</p>
-<div id="admonition-host-key-algorithms" class="admonition info">
+<div id="admonition-host-key-algorithms" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Host key algorithms</p>
 <p><a class="admonition-anchor-link" href="#admonition-host-key-algorithms"></a></p>
@@ -173,7 +174,7 @@
 <p>This value can be set as the <code>HostKeyAlgorithms</code> configuration.</p>
 </div>
 </div>
-<div id="admonition-trust-on-first-use" class="admonition warning">
+<div id="admonition-trust-on-first-use" class="admonition admonish-warning">
 <div class="admonition-title">
 <p>Trust On First Use</p>
 <p><a class="admonition-anchor-link" href="#admonition-trust-on-first-use"></a></p>
@@ -207,7 +208,7 @@
 <p>A private key, held by the client, is used for authenticating with the server.</p>
 <p>The corresponding public key should be shared with the server out-of-band prior to the first SSH connection. This is typically stored in <code>~/.ssh/authorized_keys</code> at the server.</p>
 <p>There is also an option to encrypt the private key at rest, which requires a passphrase.</p>
-<div id="admonition-accepted-public-key-cryptography-algorithms" class="admonition info">
+<div id="admonition-accepted-public-key-cryptography-algorithms" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Accepted public key cryptography algorithms</p>
 <p><a class="admonition-anchor-link" href="#admonition-accepted-public-key-cryptography-algorithms"></a></p>
@@ -217,7 +218,7 @@
 <p>This can be done via the <code>PubkeyAcceptedAlgorithms</code> configuration.</p>
 </div>
 </div>
-<div id="admonition-passphrase-and-ssh-agent" class="admonition info">
+<div id="admonition-passphrase-and-ssh-agent" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Passphrase and ssh-agent</p>
 <p><a class="admonition-anchor-link" href="#admonition-passphrase-and-ssh-agent"></a></p>
@@ -228,7 +229,7 @@
 <p>https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent</p>
 </div>
 </div>
-<div id="admonition-client-authentication-methods" class="admonition note">
+<div id="admonition-client-authentication-methods" class="admonition admonish-note">
 <div class="admonition-title">
 <p>Client authentication methods</p>
 <p><a class="admonition-anchor-link" href="#admonition-client-authentication-methods"></a></p>
@@ -242,7 +243,7 @@
 <p>The client authentication can also be multi-factor. It is common to use (i) asymmetric key pair, and (ii) password.</p>
 </div>
 </div>
-<div id="admonition-test-connection" class="admonition tip">
+<div id="admonition-test-connection" class="admonition admonish-tip">
 <div class="admonition-title">
 <p>Test connection</p>
 <p><a class="admonition-anchor-link" href="#admonition-test-connection"></a></p>

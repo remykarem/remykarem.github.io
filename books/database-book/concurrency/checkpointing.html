@@ -33,6 +33,8 @@
         <link rel="stylesheet" href=".././mdbook-admonish.css">
         <link rel="stylesheet" href="../../css/theme/catppuccin.css">
         <link rel="stylesheet" href="../../css/theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href=".././theme/catppuccin.css">
+        <link rel="stylesheet" href=".././theme/catppuccin-admonish.css">
 
     </head>
     <body>
@@ -155,7 +157,7 @@
                         <h1 id="checkpointing"><a class="header" href="#checkpointing">Checkpointing</a></h1>
 <p>A checkpoint is the moment when the database system ensures that all changes up to that point are written to the actual database files on disk.</p>
 <p>Checkpoints can be triggered automatically or manually.</p>
-<div id="admonition-postgres" class="admonition example">
+<div id="admonition-postgres" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Postgres</p>
 <p><a class="admonition-anchor-link" href="#admonition-postgres"></a></p>
@@ -215,6 +217,8 @@ to ensure that the data recorded in WAL is periodically and safely written to th
         <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../mermaid.min.js"></script>
+        <script type="text/javascript" src="../mermaid-init.js"></script>
 
 
     </body>

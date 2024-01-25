@@ -77,9 +77,7 @@ cargo install mdbook mdbook-toc mdbook-last-changed mdbook-catppuccin mdbook-kat
 6. Run other preprocessors
 
     ```bash
-    mdbook-admonish install
-    mdbook-catppuccin install
-    mdbook-mermaid install
+    mdbook-admonish install && mdbook-catppuccin install && mdbook-mermaid install
     ```
 
 7. Update `books/index.html`.

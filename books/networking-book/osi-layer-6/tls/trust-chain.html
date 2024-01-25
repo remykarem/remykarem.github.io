@@ -32,6 +32,7 @@
         <link rel="stylesheet" href="../.././mdbook-admonish.css">
         <link rel="stylesheet" href="../.././theme/catppuccin.css">
         <link rel="stylesheet" href="../.././theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href="../.././theme/catppuccin-admonish.css">
 
     </head>
     <body>
@@ -151,7 +152,7 @@
                         <h1 id="setup-trust-chain"><a class="header" href="#setup-trust-chain">Setup: Trust chain</a></h1>
 <p>For this protocol to work, we rely on the trust infrastructure of the web.</p>
 <p>The trust infrastructure is made up CAs (<strong>certificate authorities</strong>) and <strong>SSL certificates</strong>.</p>
-<div id="admonition-examples-of-cas" class="admonition example">
+<div id="admonition-examples-of-cas" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Examples of CAs</p>
 <p><a class="admonition-anchor-link" href="#admonition-examples-of-cas"></a></p>
@@ -163,7 +164,7 @@
 <p>A (root) CA generates a certificate for itself, and certificates for servers and other CAs (&quot;intermediary CAs&quot;).</p>
 <p>A CA can in turn generate certificates for other servers and other CAs and so on.</p>
 <p>If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate.</p>
-<div id="admonition-clients-only-need-to-store-root-certificates" class="admonition tip">
+<div id="admonition-clients-only-need-to-store-root-certificates" class="admonition admonish-tip">
 <div class="admonition-title">
 <p>Clients only need to store root certificates</p>
 <p><a class="admonition-anchor-link" href="#admonition-clients-only-need-to-store-root-certificates"></a></p>
@@ -172,7 +173,7 @@
 <p>It is easier for a client to manage a list of <em>root</em> certificates, rather than managing individual CA certs.</p>
 </div>
 </div>
-<div id="admonition-trust-store" class="admonition info">
+<div id="admonition-trust-store" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Trust store</p>
 <p><a class="admonition-anchor-link" href="#admonition-trust-store"></a></p>
@@ -183,7 +184,7 @@
 <p>Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. For example, in Java, the trust store is typically found in a file name <strong>cacerts</strong> in the Java installation directory.</p>
 </div>
 </div>
-<div id="admonition-how-to-add-root-certificates-to-trust-store" class="admonition question">
+<div id="admonition-how-to-add-root-certificates-to-trust-store" class="admonition admonish-question">
 <div class="admonition-title">
 <p>How to add root certificates to trust store?</p>
 <p><a class="admonition-anchor-link" href="#admonition-how-to-add-root-certificates-to-trust-store"></a></p>
@@ -202,7 +203,7 @@
 <li><strong>certificate signature</strong> — use the public key of the issuing CA to verify that the certificate has not been tampered with</li>
 <li><strong>certificate chain</strong> — if the issuing CA is an intermediate CA, get the intermediate CA's certificate and repeat the steps above. if it's a root CA, verify against the OS trust store.</li>
 </ul>
-<div id="admonition-how-to-show-certificates-of-intermediate-cas" class="admonition question">
+<div id="admonition-how-to-show-certificates-of-intermediate-cas" class="admonition admonish-question">
 <div class="admonition-title">
 <p>How to show certificates of intermediate CAs?</p>
 <p><a class="admonition-anchor-link" href="#admonition-how-to-show-certificates-of-intermediate-cas"></a></p>

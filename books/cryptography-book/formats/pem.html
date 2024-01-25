@@ -34,6 +34,7 @@
         <link rel="stylesheet" href="../../css/theme/catppuccin-highlight.css">
         <link rel="stylesheet" href=".././theme/catppuccin.css">
         <link rel="stylesheet" href=".././theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href=".././theme/catppuccin-admonish.css">
 
         <!-- MathJax -->
         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -162,7 +163,7 @@
 <li>a header, and</li>
 <li>a footer.</li>
 </ol>
-<div id="admonition-pem-wikipedia" class="admonition quote">
+<div id="admonition-pem-wikipedia" class="admonition admonish-quote">
 <div class="admonition-title">
 <p>PEM (Wikipedia)</p>
 <p><a class="admonition-anchor-link" href="#admonition-pem-wikipedia"></a></p>
@@ -173,7 +174,7 @@
 <p>The PEM format solves this problem by encoding the binary data using base64. PEM also defines a one-line header, consisting of -----BEGIN, a label, and -----, and a one-line footer, consisting of -----END, a label, and -----. The label determines the type of message encoded.</p>
 </div>
 </div>
-<div id="admonition-example-1-generic-private-key" class="admonition example">
+<div id="admonition-example-1-generic-private-key" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example 1: Generic private key</p>
 <p><a class="admonition-anchor-link" href="#admonition-example-1-generic-private-key"></a></p>
@@ -186,7 +187,7 @@ S8lh0lHCwVGlVq0Jqtmp7ieyVOZ0mbU6T2KCDwkL3mWWSiVZc+cjh3EOsXtyzuiq
 </code></pre>
 </div>
 </div>
-<div id="admonition-example-2-rsa-private-key" class="admonition example">
+<div id="admonition-example-2-rsa-private-key" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example 2: RSA private key</p>
 <p><a class="admonition-anchor-link" href="#admonition-example-2-rsa-private-key"></a></p>
@@ -199,7 +200,7 @@ S8lh0lHCwVGlVq0Jqtmp7ieyVOZ0mbU6T2KCDwkL3mWWSiVZc+cjh3EOsXtyzuiq
 </code></pre>
 </div>
 </div>
-<div id="admonition-example-3-ec-private-key" class="admonition example">
+<div id="admonition-example-3-ec-private-key" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example 3: EC private key</p>
 <p><a class="admonition-anchor-link" href="#admonition-example-3-ec-private-key"></a></p>
@@ -210,7 +211,7 @@ S8lh0lHCwVGlVq0Jqtmp7ieyVOZ0mbU6T2KCDwkL3mWWSiVZc+cjh3EOsXtyzuiq
 </code></pre>
 </div>
 </div>
-<div id="admonition-example-4-digital-certificate" class="admonition example">
+<div id="admonition-example-4-digital-certificate" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example 4: Digital certificate</p>
 <p><a class="admonition-anchor-link" href="#admonition-example-4-digital-certificate"></a></p>
@@ -219,7 +220,7 @@ S8lh0lHCwVGlVq0Jqtmp7ieyVOZ0mbU6T2KCDwkL3mWWSiVZc+cjh3EOsXtyzuiq
 <p><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/">Cloudflare Certificate</a></p>
 </div>
 </div>
-<div id="admonition-example-5-ssh-private-key" class="admonition example">
+<div id="admonition-example-5-ssh-private-key" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example 5: SSH private key</p>
 <p><a class="admonition-anchor-link" href="#admonition-example-5-ssh-private-key"></a></p>
@@ -231,7 +232,7 @@ b3Bl...
 </code></pre>
 </div>
 </div>
-<div id="admonition-example-6-ssh-public-key" class="admonition example">
+<div id="admonition-example-6-ssh-public-key" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example 6: SSH public key</p>
 <p><a class="admonition-anchor-link" href="#admonition-example-6-ssh-public-key"></a></p>
@@ -292,6 +293,8 @@ AAAAB...
         <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../mermaid.min.js"></script>
+        <script type="text/javascript" src="../mermaid-init.js"></script>
 
 
     </body>
