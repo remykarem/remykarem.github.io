@@ -4,6 +4,4 @@ Personal Information Exchange
 
 Filename extensions: `.pfx`
 
-The PFX format is similar to [PKCS #12](./pkcs12.md) in terms of the cryptographic objects it stores.
-
-This format is usually password protected and used in Windows.
+The PFX format is the same as [PKCS #12](./pkcs12.md) (see [this](https://stackoverflow.com/a/6821061/4570466) StackOverflow post). It is commonly used in Windows.
