@@ -209,6 +209,7 @@
 - [ASCII]()
 - [Base64]()
 - [DER]()
+- [URL encoding]()
 
 ---
 
