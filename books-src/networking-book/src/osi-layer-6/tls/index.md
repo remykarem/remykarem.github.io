@@ -4,7 +4,7 @@ Transport Layer Security
 
 Previously known as SSL (Secure Sockets Layer)
 
-TLS _typically_ operates on top of TCP.
+TLS _typically_ operates on top of TCP. It relies on the Chain of Trust infrastructure.
 
 This protocol provides
 
