@@ -187,9 +187,18 @@
 <ul>
 <li>private key,</li>
 <li>server certificate, and</li>
-<li>intermediate certificates.</li>
+<li>CA certificates.</li>
 </ul>
 <p>The individual certificates are in <a href="./x509.html">X.509</a> format.</p>
+<div id="admonition-example" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<p>openssl pkcs12 -export -inkey privatekey.pem -in cert.pem -certfile cacert.pem -out pkcs12.pfx</p>
+</div>
+</div>
 
                     </main>
 
