@@ -10,6 +10,7 @@ Batch processing can be useful for:
 * **network latency**: You make one call instead of _n_ calls.
 * **atomicity**: The all-or-nothing behaviour can help simplify error handling.
 
+Additionally, batch processing can be done **asynchronously** like Dropbox's [/copy_batch API](https://www.dropbox.com/developers/documentation/http/documentation#files-copy_batch). This API may run synchronously or asynchronously. If the latter, the (asynchronous) job ID is returned immediately.
 
 Examples:
 
