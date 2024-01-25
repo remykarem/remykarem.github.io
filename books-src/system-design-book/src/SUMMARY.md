@@ -119,8 +119,7 @@
 
 # Data synchronisation
 
-- [Differential sync]()
-- [Delta sync]()
+- [Data synchronisation](./data-synchronisation/index.md)
 
 ---
 
