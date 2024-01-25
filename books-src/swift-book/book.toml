@@ -10,7 +10,7 @@ site-url = "/books/swift-book"  # this is for mathy books. for non-mathy, use "/
 mathjax-support = true
 git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/swift-book/{path}"  # change your-book
-additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css"]
+additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
 no-section-label = true
@@ -25,10 +25,10 @@ renderer = ["html"]
 
 [preprocessor.admonish]
 command = "mdbook-admonish"
-assets_version = "2.0.1" # do not edit: managed by `mdbook-admonish install`
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 
 [preprocessor.catppuccin]
-assets_version = "0.1.1" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
+assets_version = "2.1.0" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
 
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
