@@ -9,10 +9,10 @@ title = "x86-64 Book"
 site-url = "/books/x86-64-book"  # this is for mathy books. for non-mathy, use "/books/your-book"
 mathjax-support = true
 git-repository-url = "https://github.com/remykarem/remykarem.github.io" # Required for preprocess.last-changed
-additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 no-section-label = true
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
+additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [build]

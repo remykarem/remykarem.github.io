@@ -7,9 +7,9 @@ title = "os-book"
 
 [output.html]
 site-url = "/books/os-book/"
-additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/os-book/{path}"  # change your-book
 no-section-label = true
+additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [build]

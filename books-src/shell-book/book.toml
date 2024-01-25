@@ -7,9 +7,9 @@ title = "Shell Book"
 
 [output.html]
 site-url = "/books/shell-book/"
-additional-css = ["./mdbook-admonish.css", "../css/theme/catppuccin.css", "../css/theme/catppuccin-highlight.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 no-section-label = true
 edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/shell-book/{path}"  # change your-book
+additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [output.html.print]
