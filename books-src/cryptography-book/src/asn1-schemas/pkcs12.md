@@ -4,7 +4,7 @@
 
 Common filenames: `.p12`, `.pfx`
 
-This format can store _multiple_ cryptographic objects:
+This format can store _at least one_ of the following cryptographic objects:
 * private key,
 * server certificate, and
 * CA certificates.
