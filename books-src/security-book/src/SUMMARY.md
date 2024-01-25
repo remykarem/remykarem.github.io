@@ -12,8 +12,8 @@
 
 # Trust models
 
-- [Chain of trust](./trust-models/chain-of-trust.md)
-- [Web of Trust]()
+- [Chain of Trust](./trust-models/chain-of-trust.md)
+- [Web of Trust](./trust-models/web-of-trust.md)
 - [Zero Trust](./trust-models/zero-trust.md)
 - [Trust On First Use]()
 - [Direct trust]()
