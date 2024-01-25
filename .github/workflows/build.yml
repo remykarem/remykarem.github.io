@@ -45,7 +45,7 @@ jobs:
         mdbook build books-src/swift-book
         mdbook build books-src/the-art-of-coding-book
         mdbook build books-src/rust-book
-        cp books-src/kotlin-book/html books/kotlin-book
+        cp -r books-src/kotlin-book/html books/kotlin-book
         mdbook build books-src/c-book
         mdbook build books-src/shell-book
         mdbook build books-src/networking-book
