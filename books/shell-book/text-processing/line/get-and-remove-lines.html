@@ -195,6 +195,8 @@
 <p>Get 4th to 8th lines:</p>
 <pre><code class="language-sh">sed -n '4,8p'
 </code></pre>
+<pre><code class="language-sh">awk 'NR&gt;=4 &amp;&amp; NR&lt;=8'
+</code></pre>
 <p>Remove lines</p>
 <pre><code class="language-sh">sed '1d;$d'
 </code></pre>

@@ -18,6 +18,10 @@ Get 4th to 8th lines:
 sed -n '4,8p'
 ```
 
+```sh
+awk 'NR>=4 && NR<=8'
+```
+
 Remove lines
 
 ```sh
