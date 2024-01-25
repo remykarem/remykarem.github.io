@@ -7,8 +7,8 @@ Strategies:
 
   Attach a timestamp to each write. Pick the biggest timestamp as the most recent, and discard any writes with an earlier timestamp.
 
-* **CRDT** (conflict-free replicated data type)
+  ~~~admonish example title="Databases using LWW"
+  Cassandra, DynamoDB
+  ~~~
 
-~~~admonish example title="Databases using LWW"
-Cassandra, DynamoDB
-~~~
+* **CRDT** (conflict-free replicated data type)
