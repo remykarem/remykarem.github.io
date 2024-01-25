@@ -6,9 +6,10 @@ Get 3rd line
 sed -n '3p'
 ```
 
-```admonish
-`-n` — don't print unnecessary stuff..
+```admonish tip title="sed"
+`-n` — don't print unnecessary stuff.. (?)
 `p` stands for print
+`d` stands for delete
 ```
 
 Get 4th to 8th lines:
@@ -27,4 +28,18 @@ To remove last 4 lines
 
 ```sh
 tail 
+```
+
+Get kth line onwards:
+
+```sh
+awk 'NR>=k
+```
+
+```sh
+sed -n 'k,$p'
+```
+
+```sh
+tail -n +k
 ```
