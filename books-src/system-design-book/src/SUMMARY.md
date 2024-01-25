@@ -117,6 +117,13 @@
 
 ---
 
+# Data synchronisation
+
+- [Differential sync]()
+- [Delta sync]()
+
+---
+
 # Messaging patterns
 
 - [Overview](./messaging-patterns/overview.md)
