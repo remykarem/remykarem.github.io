@@ -13,6 +13,10 @@ The individual certificates are in [X.509](./x509.md) format.
 
 Note that the output can additionally be protected by password ("import password" / "export password") too.
 
-```admonish example
+Additionally, when importing a PKCS #12, you can encrypt the underlying private key before exporting the private key out.
+
+~~~admonish example
+```
 openssl pkcs12 -export -inkey privatekey.pem -in cert.pem -certfile cacert.pem -out pkcs12.pfx
 ```
+~~~

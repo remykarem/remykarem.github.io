@@ -191,13 +191,15 @@
 </ul>
 <p>The individual certificates are in <a href="./x509.html">X.509</a> format.</p>
 <p>Note that the output can additionally be protected by password (&quot;import password&quot; / &quot;export password&quot;) too.</p>
+<p>Additionally, when importing a PKCS #12, you can encrypt the underlying private key before exporting the private key out.</p>
 <div id="admonition-example" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example</p>
 <p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
 </div>
 <div>
-<p>openssl pkcs12 -export -inkey privatekey.pem -in cert.pem -certfile cacert.pem -out pkcs12.pfx</p>
+<pre><code>openssl pkcs12 -export -inkey privatekey.pem -in cert.pem -certfile cacert.pem -out pkcs12.pfx
+</code></pre>
 </div>
 </div>
 
