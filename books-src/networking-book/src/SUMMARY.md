@@ -101,7 +101,6 @@
 - [Overview](./osi-layer-6/overview.md)
 - [TLS](./osi-layer-6/tls/index.md)
   - [Workflow](./osi-layer-6/tls/workflow.md)
-  - [Setup: Trust chain](./osi-layer-6/tls/trust-chain.md)
   - [Setup: Client-server](./osi-layer-6/tls/setup.md)
   - [DTLS](./osi-layer-6/tls/dtls.md)
   - [TLS cipher suite](./osi-layer-6/tls/cipher-suite.md)
