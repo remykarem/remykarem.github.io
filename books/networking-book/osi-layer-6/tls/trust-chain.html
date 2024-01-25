@@ -178,39 +178,6 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="setup-trust-chain"><a class="header" href="#setup-trust-chain">Setup: Trust chain</a></h1>
-<p>For this protocol to work, we rely on the trust infrastructure of the web.</p>
-<div id="admonition-how-to-add-root-certificates-to-trust-store" class="admonition admonish-question">
-<div class="admonition-title">
-<p>How to add root certificates to trust store?</p>
-<p><a class="admonition-anchor-link" href="#admonition-how-to-add-root-certificates-to-trust-store"></a></p>
-</div>
-<div>
-<p>The documentation for <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/">Install the Cloudflare certificate</a> has a good overview to install the root certificate for OSes (macOS, iOS) and applications (Python, JetBrains).</p>
-</div>
-</div>
-<h2 id="certificate-verification"><a class="header" href="#certificate-verification">Certificate verification</a></h2>
-<p>How does the client verify a certificate?</p>
-<ul>
-<li>hostname matching (against the requested URL)</li>
-<li>certificate validity</li>
-<li>CA issuer</li>
-<li>the client validates the:</li>
-<li><strong>certificate signature</strong> — use the public key of the issuing CA to verify that the certificate has not been tampered with</li>
-<li><strong>certificate chain</strong> — if the issuing CA is an intermediate CA, get the intermediate CA's certificate and repeat the steps above. if it's a root CA, verify against the OS trust store.</li>
-</ul>
-<div id="admonition-how-to-show-certificates-of-intermediate-cas" class="admonition admonish-question">
-<div class="admonition-title">
-<p>How to show certificates of intermediate CAs?</p>
-<p><a class="admonition-anchor-link" href="#admonition-how-to-show-certificates-of-intermediate-cas"></a></p>
-</div>
-<div>
-<p>The server typically sends its own certificate and the intermediate CA's certificates as well. </p>
-<p>In OpenSSL, use the <code>-showcerts</code> option.</p>
-<pre><code>openssl s_client -showcerts -servername jvns.ca -connect jvns.ca:443 2&gt;/dev/null
-</code></pre>
-<p>In a Chrome browser, you can see the chain when you click the padlock.</p>
-</div>
-</div>
 
                     </main>
 
