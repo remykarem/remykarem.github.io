@@ -2,30 +2,6 @@
 
 For this protocol to work, we rely on the trust infrastructure of the web.
 
-The trust infrastructure is made up CAs (**certificate authorities**) and **SSL certificates**.
-
-~~~admonish example title="Examples of CAs"
-Let's Encrypt, DigiCert, Sectigo, GlobalSign
-~~~
-
-A (root) CA generates a certificate for itself, and certificates for servers and other CAs ("intermediary CAs").
-
-A CA can in turn generate certificates for other servers and other CAs and so on.
-
-If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate.
-
-```admonish tip title="Clients only need to store root certificates"
-It is easier for a client to manage a list of _root_ certificates, rather than managing individual CA certs.
-```
-
-```admonish info title="Trust store"
-Operating systems, browsers and other applications come with a list of trusted root certificates ("**trust store"**).
-
-In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under **System Roots**. See [Available trusted root certificates for Apple operating systems](https://support.apple.com/en-us/HT209143).
-
-Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. For example, in Java, the trust store is typically found in a file name **cacerts** in the Java installation directory.
-```
-
 ```admonish question title="How to add root certificates to trust store?"
 The documentation for [Install the Cloudflare certificate](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/) has a good overview to install the root certificate for OSes (macOS, iOS) and applications (Python, JetBrains).
 ```

@@ -179,39 +179,6 @@
                     <main>
                         <h1 id="setup-trust-chain"><a class="header" href="#setup-trust-chain">Setup: Trust chain</a></h1>
 <p>For this protocol to work, we rely on the trust infrastructure of the web.</p>
-<p>The trust infrastructure is made up CAs (<strong>certificate authorities</strong>) and <strong>SSL certificates</strong>.</p>
-<div id="admonition-examples-of-cas" class="admonition admonish-example">
-<div class="admonition-title">
-<p>Examples of CAs</p>
-<p><a class="admonition-anchor-link" href="#admonition-examples-of-cas"></a></p>
-</div>
-<div>
-<p>Let's Encrypt, DigiCert, Sectigo, GlobalSign</p>
-</div>
-</div>
-<p>A (root) CA generates a certificate for itself, and certificates for servers and other CAs (&quot;intermediary CAs&quot;).</p>
-<p>A CA can in turn generate certificates for other servers and other CAs and so on.</p>
-<p>If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate.</p>
-<div id="admonition-clients-only-need-to-store-root-certificates" class="admonition admonish-tip">
-<div class="admonition-title">
-<p>Clients only need to store root certificates</p>
-<p><a class="admonition-anchor-link" href="#admonition-clients-only-need-to-store-root-certificates"></a></p>
-</div>
-<div>
-<p>It is easier for a client to manage a list of <em>root</em> certificates, rather than managing individual CA certs.</p>
-</div>
-</div>
-<div id="admonition-trust-store" class="admonition admonish-info">
-<div class="admonition-title">
-<p>Trust store</p>
-<p><a class="admonition-anchor-link" href="#admonition-trust-store"></a></p>
-</div>
-<div>
-<p>Operating systems, browsers and other applications come with a list of trusted root certificates (&quot;<strong>trust store&quot;</strong>).</p>
-<p>In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under <strong>System Roots</strong>. See <a href="https://support.apple.com/en-us/HT209143">Available trusted root certificates for Apple operating systems</a>.</p>
-<p>Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. For example, in Java, the trust store is typically found in a file name <strong>cacerts</strong> in the Java installation directory.</p>
-</div>
-</div>
 <div id="admonition-how-to-add-root-certificates-to-trust-store" class="admonition admonish-question">
 <div class="admonition-title">
 <p>How to add root certificates to trust store?</p>
