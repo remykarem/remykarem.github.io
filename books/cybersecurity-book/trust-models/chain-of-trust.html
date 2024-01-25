@@ -196,16 +196,7 @@
 <p>Other CAs can in turn generate certificates for other servers and other CAs and so on.</p>
 <h2 id="certificate-verification"><a class="header" href="#certificate-verification">Certificate verification</a></h2>
 <p>The algorithm to verify a certificate is called <strong>certificate path validation</strong>.</p>
-<p>If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate.</p>
-<div id="admonition-clients-only-need-to-store-root-certificates" class="admonition admonish-tip">
-<div class="admonition-title">
-<p>Clients only need to store root certificates</p>
-<p><a class="admonition-anchor-link" href="#admonition-clients-only-need-to-store-root-certificates"></a></p>
-</div>
-<div>
-<p>It is easier for a client to manage a list of <em>root</em> certificates, rather than managing individual CA certs.</p>
-</div>
-</div>
+<p>If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate. This verification is done against the client's trust store.</p>
 <div id="admonition-trust-store" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Trust store</p>
@@ -214,7 +205,26 @@
 <div>
 <p>Operating systems, browsers and other applications come with a list of trusted root certificates (&quot;<strong>trust store&quot;</strong>).</p>
 <p>In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under <strong>System Roots</strong>. See <a href="https://support.apple.com/en-us/HT209143">Available trusted root certificates for Apple operating systems</a>.</p>
-<p>Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. For example, in Java, the trust store is typically found in a file name <strong>cacerts</strong> in the Java installation directory.</p>
+<p>The browser... not too sure... maybe it uses the OS'es trust store (?)</p>
+<p>Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. For example, in Java, the trust store is typically found in a file name <code>cacerts</code> somewhere in the Java installation directory.</p>
+</div>
+</div>
+<p>What information does the client verify?</p>
+<ul>
+<li>hostname matching (against the requested URL)</li>
+<li>certificate validity</li>
+<li>CA issuer</li>
+<li>the client validates the:</li>
+<li><strong>certificate signature</strong> — use the public key of the issuing CA to verify that the certificate has not been tampered with</li>
+<li><strong>certificate chain</strong> — if the issuing CA is an intermediate CA, get the intermediate CA's certificate and repeat the steps above. if it's a root CA, verify against the OS trust store.</li>
+</ul>
+<div id="admonition-clients-only-need-to-store-root-certificates" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Clients only need to store root certificates</p>
+<p><a class="admonition-anchor-link" href="#admonition-clients-only-need-to-store-root-certificates"></a></p>
+</div>
+<div>
+<p>It is easier for a client to manage a list of <em>root</em> certificates, rather than managing individual CA certs.</p>
 </div>
 </div>
 <div id="admonition-how-to-add-root-certificates-to-trust-store" class="admonition admonish-question">
@@ -235,15 +245,6 @@
 <p>???</p>
 </div>
 </div>
-<p>How does the client verify a certificate?</p>
-<ul>
-<li>hostname matching (against the requested URL)</li>
-<li>certificate validity</li>
-<li>CA issuer</li>
-<li>the client validates the:</li>
-<li><strong>certificate signature</strong> — use the public key of the issuing CA to verify that the certificate has not been tampered with</li>
-<li><strong>certificate chain</strong> — if the issuing CA is an intermediate CA, get the intermediate CA's certificate and repeat the steps above. if it's a root CA, verify against the OS trust store.</li>
-</ul>
 <div id="admonition-how-to-show-certificates-of-intermediate-cas" class="admonition admonish-question">
 <div class="admonition-title">
 <p>How to show certificates of intermediate CAs?</p>
