@@ -14,11 +14,11 @@ A (root) CA generates a certificate for itself, and generates certificates for s
 
 Other CAs can in turn generate certificates for other servers and other CAs and so on.
 
-If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate.
+## Certificate verification
 
-~~~admonish note title="Self-signed cert"
-???
-~~~
+The algorithm to verify a certificate is called **certificate path validation**.
+
+If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate.
 
 ```admonish tip title="Clients only need to store root certificates"
 It is easier for a client to manage a list of _root_ certificates, rather than managing individual CA certs.
@@ -36,7 +36,9 @@ Some applications (eg. Java, IntelliJ) have their own trust store independent of
 The documentation for [Install the Cloudflare certificate](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/) has a good overview to install the root certificate for OSes (macOS, iOS) and applications (Python, JetBrains).
 ```
 
-## Certificate verification
+~~~admonish note title="Self-signed certificate"
+???
+~~~
 
 How does the client verify a certificate?
 
