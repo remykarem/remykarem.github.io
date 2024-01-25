@@ -1,7 +1,7 @@
 # Batch API, processing
 
 Ensure
-* **Size of batch** — There's a min. and max. no. of items to process (see [Dropbox batch copy API](https://www.dropbox.com/developers/documentation/http/documentation#files-copy_batch)
+* **Size of batch** — There's a min. and max. no. of items to process (see [Dropbox batch copy API](https://www.dropbox.com/developers/documentation/http/documentation#files-copy_batch))
 * **Duplicates** — How to handle duplicates in the request?
 * **Result mapping** — [Dropbox](https://www.dropbox.com/developers/documentation/http/documentation#files-copy_batch) replies with a status for every message
 
