@@ -185,10 +185,20 @@
 <p>Common filename extensions: <code>.crt</code>, <code>.cert</code>, <code>.pem</code></p>
 <p>Standard format for public key certificates.</p>
 <p>This format does not contain the private key.</p>
-<div id="admonition-example-1" class="admonition admonish-example">
+<div id="admonition-obtain-the-certificate-fingerprint" class="admonition admonish-example">
 <div class="admonition-title">
-<p>Example 1</p>
-<p><a class="admonition-anchor-link" href="#admonition-example-1"></a></p>
+<p>Obtain the certificate fingerprint</p>
+<p><a class="admonition-anchor-link" href="#admonition-obtain-the-certificate-fingerprint"></a></p>
+</div>
+<div>
+<pre><code>openssl x509 -noout -fingerprint -sha256 -inform &lt;pem-or-der&gt; -in &lt;cert&gt;
+</code></pre>
+</div>
+</div>
+<div id="admonition-example-1-parsing-an-x509-certificate" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example 1: Parsing an X.509 certificate</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-1-parsing-an-x509-certificate"></a></p>
 </div>
 <div>
 <p>This is an example taken from <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/">Cloudflare Docs</a>.</p>
@@ -238,10 +248,10 @@ Signature Algorithm: ecdsa-with-SHA512
 </code></pre>
 </div>
 </div>
-<div id="admonition-example-2" class="admonition admonish-example">
+<div id="admonition-example-2-parsing-an-x509-certificate" class="admonition admonish-example">
 <div class="admonition-title">
-<p>Example 2</p>
-<p><a class="admonition-anchor-link" href="#admonition-example-2"></a></p>
+<p>Example 2: Parsing an X.509 certificate</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-2-parsing-an-x509-certificate"></a></p>
 </div>
 <div>
 <p>This is a certificate from chat.openai.com.</p>
