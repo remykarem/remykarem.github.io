@@ -12,7 +12,7 @@
 
 # Trust models
 
-- [Trust chain]()
+- [Chain of trust](./trust-models/chain-of-trust.md)
 - [Web of Trust]()
 - [Zero Trust](./trust-models/zero-trust.md)
 - [Trust On First Use]()
