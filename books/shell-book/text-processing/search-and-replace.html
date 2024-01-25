@@ -184,6 +184,9 @@
 <p>Delete all newline characters</p>
 <pre><code class="language-sh">tr -d '\n'
 </code></pre>
+<p>Replace newline character with newline character literal (<code>\n</code>)</p>
+<pre><code class="language-sh">awk '{ printf &quot;%s\\n&quot;, $0 }'
+</code></pre>
 
                     </main>
 
