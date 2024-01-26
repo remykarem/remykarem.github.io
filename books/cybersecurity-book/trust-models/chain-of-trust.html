@@ -227,6 +227,16 @@
 <li><strong>certificate signature</strong> — use the public key of the issuing CA to verify that the certificate has not been tampered with</li>
 <li><strong>certificate chain</strong> — if the issuing CA is an intermediate CA, get the intermediate CA's certificate and repeat the steps above. if it's a root CA, verify against the OS trust store.</li>
 </ul>
+<div id="admonition-verify-using-macoss-keychain-access" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Verify using macOS's Keychain Access</p>
+<p><a class="admonition-anchor-link" href="#admonition-verify-using-macoss-keychain-access"></a></p>
+</div>
+<div>
+<p>Go to Keychain Access. Then <strong>Certificate Assistant</strong> &gt; <strong>Evaluate</strong>.</p>
+<p><a href="https://support.apple.com/en-sg/guide/keychain-access/kyca2794/mac">Determine if a certificate is valid using Keychain Access on Mac</a></p>
+</div>
+</div>
 <div id="admonition-verify-using-openssl" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Verify using OpenSSL</p>
