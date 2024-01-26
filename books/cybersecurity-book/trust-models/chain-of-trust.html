@@ -197,13 +197,13 @@
 <h2 id="certificate-verification"><a class="header" href="#certificate-verification">Certificate verification</a></h2>
 <p>The algorithm to verify a certificate is called <strong>certificate path validation</strong>.</p>
 <p>If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate. This verification is done against the client's trust store.</p>
-<div id="admonition-trust-store" class="admonition admonish-info">
+<div id="admonition-trust-stores" class="admonition admonish-info">
 <div class="admonition-title">
-<p>Trust store</p>
-<p><a class="admonition-anchor-link" href="#admonition-trust-store"></a></p>
+<p>Trust stores</p>
+<p><a class="admonition-anchor-link" href="#admonition-trust-stores"></a></p>
 </div>
 <div>
-<p>Operating systems, browsers and other applications come with a list of trusted root certificates (&quot;<strong>trust store&quot;</strong>).</p>
+<p>Different OSes, browsers and other applications come with their set of trusted root certificates aka <strong>trust stores</strong>.</p>
 <p>In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under <strong>System Roots</strong>. See <a href="https://support.apple.com/en-us/HT209143">Available trusted root certificates for Apple operating systems</a>.</p>
 <p>In macOS, there's also <code>/etc/ssl/cert.pem</code> (???)</p>
 <p>The browser... not too sure... maybe it uses the OS'es trust store (?)</p>
@@ -214,6 +214,7 @@
 <pre><code>python3 -c &quot;import ssl; print(ssl.get_default_verify_paths())&quot;
 </code></pre>
 </li>
+<li>OpenSSL — Usually in <code>/etc/ssl/cert.pem</code></li>
 </ul>
 </div>
 </div>
@@ -226,6 +227,18 @@
 <li><strong>certificate signature</strong> — use the public key of the issuing CA to verify that the certificate has not been tampered with</li>
 <li><strong>certificate chain</strong> — if the issuing CA is an intermediate CA, get the intermediate CA's certificate and repeat the steps above. if it's a root CA, verify against the OS trust store.</li>
 </ul>
+<div id="admonition-verify-using-openssl" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Verify using OpenSSL</p>
+<p><a class="admonition-anchor-link" href="#admonition-verify-using-openssl"></a></p>
+</div>
+<div>
+<p>You can verify a certificate with</p>
+<pre><code>openssl verify certificate.crt
+</code></pre>
+<p>which (natürlich) uses OpenSSL's trust store.</p>
+</div>
+</div>
 <div id="admonition-clients-only-need-to-store-root-certificates" class="admonition admonish-tip">
 <div class="admonition-title">
 <p>Clients only need to store root certificates</p>
