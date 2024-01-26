@@ -47,6 +47,12 @@ What information does the client verify?
 * **certificate signature** — use the public key of the issuing CA to verify that the certificate has not been tampered with
 * **certificate chain** — if the issuing CA is an intermediate CA, get the intermediate CA's certificate and repeat the steps above. if it's a root CA, verify against the OS trust store.
 
+~~~admonish example title="Verify using macOS's Keychain Access"
+Go to Keychain Access. Then **Certificate Assistant** > **Evaluate**.
+
+[Determine if a certificate is valid using Keychain Access on Mac](https://support.apple.com/en-sg/guide/keychain-access/kyca2794/mac)
+~~~
+
 ~~~admonish example title="Verify using OpenSSL"
 You can verify a certificate with
 
