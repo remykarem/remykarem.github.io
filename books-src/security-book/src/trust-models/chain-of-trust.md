@@ -25,6 +25,8 @@ Operating systems, browsers and other applications come with a list of trusted r
 
 In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under **System Roots**. See [Available trusted root certificates for Apple operating systems](https://support.apple.com/en-us/HT209143).
 
+In macOS, there's also `/etc/ssl/cert.pem` (???)
+
 The browser... not too sure... maybe it uses the OS'es trust store (?)
 
 Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. 
@@ -67,3 +69,4 @@ openssl s_client -showcerts -servername jvns.ca -connect jvns.ca:443 2>/dev/null
 
 In a Chrome browser, you can see the chain when you click the padlock.
 ~~~
+
