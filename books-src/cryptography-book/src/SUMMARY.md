@@ -172,9 +172,10 @@
 
 # Attacks
 
+- [Replay attack](./attacks/replay-attack.md)
 - [CPA](./attacks/chosen-plaintext-attack.md)
 - [CCA]()
-- [Replay attack](./attacks/replay-attack.md)
 - [Birthday attack](./attacks/birthday-attack.md)
+- [Timing attack](./attacks/timing-attack.md)
 - [Brute-force attack]()
 - [Length extension attack]()
