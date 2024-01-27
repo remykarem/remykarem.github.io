@@ -2,7 +2,7 @@
 
 - Only signing the timestamp when sending HTTP requests
 
-   The attacker can mutate the payload (instead of the signature) and therefore poison the system.
+   The attacker can replay the request (within k seconds where k is set by the server and guessed by the attacker) and mutate the payload (instead of the signature), thereby poisoning the system.
 
 - Using ciphertext as a form of authentication
 
