@@ -1,6 +1,6 @@
 # Scenarios
 
-- Only signing the timestamp when sending HTTP requests
+- Only signing the timestamp when sending HTTP requests (server does not store the signed timestamp)
 
    **Authenticity** — weak authenticity as the request can be replayed within _k_ seconds (where _k_ is set by the server and guessed by the attacker)
 
