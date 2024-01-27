@@ -183,7 +183,7 @@
 <h1 id="scenarios"><a class="header" href="#scenarios">Scenarios</a></h1>
 <ul>
 <li>
-<p>Only signing the timestamp when sending HTTP requests</p>
+<p>Only signing the timestamp when sending HTTP requests (server does not store the signed timestamp)</p>
 <p><strong>Authenticity</strong> — weak authenticity as the request can be replayed within <em>k</em> seconds (where <em>k</em> is set by the server and guessed by the attacker)</p>
 <p><strong>Integrity</strong> of the payload cannot be guaranteed. Attacker has the ability to mutate the underlying state of the application</p>
 </li>
