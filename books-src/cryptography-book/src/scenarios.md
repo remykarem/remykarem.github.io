@@ -2,7 +2,9 @@
 
 - Only signing the timestamp when sending HTTP requests
 
-   The attacker can replay the request (within k seconds where k is set by the server and guessed by the attacker) and mutate the payload (instead of the signature), thereby poisoning the system.
+   **Authenticity** — weak authenticity as the request can be replayed within _k_ seconds (where _k_ is set by the server and guessed by the attacker)
+
+   **Integrity** of the payload cannot be guaranteed. Attacker has the ability to mutate the underlying state of the application
 
 - Using ciphertext as a form of authentication
 
