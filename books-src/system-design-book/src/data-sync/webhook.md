@@ -112,6 +112,8 @@ Webhooks are commonly used in event-driven architecture.
 
   [HN](https://news.ycombinator.com/item?id=32521159)
 
+* Additionally as the webhook provider, set up an /events endpoints
+
 ~~~admonish question title="Thin vs. thick webhooks"
 This pattern is where the webhook payload contains a reference ID which you will use to call an API to retrieve the payload.
 
