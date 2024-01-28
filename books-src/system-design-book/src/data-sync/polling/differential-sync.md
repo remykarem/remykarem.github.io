@@ -15,3 +15,5 @@ The server provides the data that has changed:
   ~~~admonish note title="Dropbox migrated from differential sync to real-time updates"
   Dropbox migrated from Delta API (V1) to Webhooks (V2)
   ~~~
+
+See StackOverflow [post](https://softwareengineering.stackexchange.com/a/370378)
