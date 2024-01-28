@@ -23,10 +23,3 @@ Non-blocking architecture
 Reactive / event-driven architecture.
 
 This means the code is written to react to the events (IO) occurring regularly, as opposed to sequentially moving through the lines of code. Event-driven architecture is all about processing asynchronous data streams. Eg. Nodejs is a single-threaded non-blocking framework written to handle more IO intensive tasks. It has an event loop architecture.
-
-**Latency**
-
-Latency is the amount of time a system takes to respond to a user request. It is usually divided into 2 parts:
-
-- Network latency
-- Application latency
