@@ -84,3 +84,11 @@ Webhooks are commonly used in event-driven architecture.
 
   [Stripe](https://stripe.com/docs/webhooks#handle-duplicate-events)
 
+* Retry mechanism
+
+  [Stripe](https://stripe.com/docs/webhooks#retries) attempts to deliver an event for up to 3 days with an exponential backoff.
+
+* Event ordering guarantee
+
+  [Stripe] doesn't guarantee the delivery of events in the order in which they are generated, and expects the endpoints to handle accordingly.
+  
