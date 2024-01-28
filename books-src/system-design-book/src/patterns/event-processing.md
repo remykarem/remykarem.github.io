@@ -1,6 +1,6 @@
 # Event processing
 
-The nature of events:
+Events have the following characteristics:
 * might be duplicated
 * might not come in the same order that they are generated.
 
