@@ -2,7 +2,7 @@
 
 [The Webhook Standard](https://www.standardwebhooks.com)
 
-A webhook is an _integration_ where the server (the system with data) sends ("**pushes**") data to the client (the system which requires the data).
+A webhook is an _integration_ where the server sends ("**pushes**") data to the client.
 
 Because this is event-triggered, the destination system will get the data (related to that event) in _real-time_.
 
@@ -12,6 +12,8 @@ Actors:
   This is the server, in the context of webhook, is a system that provides data (in particular, notification).
 
 * Webhook consumer (receiver)
+
+  This is the client, the system which requires the data.
 
 To create a webhook, register the webhook URL with the webhook provider. Then, subscribe the webhook to events of interest.
 
