@@ -16,4 +16,8 @@ The server provides the data that has changed:
   Dropbox migrated from Delta API (V1) to Webhooks (V2)
   ~~~
 
+~~~admonish warning title="Deleting items"
+If items can be deleted, a differential sync can become an issue.
+~~~
+
 See StackOverflow [post](https://softwareengineering.stackexchange.com/a/370378)
