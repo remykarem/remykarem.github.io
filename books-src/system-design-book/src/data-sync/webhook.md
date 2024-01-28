@@ -111,3 +111,9 @@ Webhooks are commonly used in event-driven architecture.
   [Shopify](https://shopify.dev/docs/apps/webhooks/best-practices#implement-reconciliation-jobs)
 
   [HN](https://news.ycombinator.com/item?id=32521159)
+
+~~~admonish question title="Thin vs. thick webhooks"
+This pattern is where the webhook payload contains a reference ID which you will use to call an API to retrieve the payload.
+
+Svix uses this.
+~~~
