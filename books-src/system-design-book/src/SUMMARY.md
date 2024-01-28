@@ -118,7 +118,7 @@
 
 ---
 
-# Data sync patterns
+# Data sync / getting new data patterns
 
 - [Polling](./data-sync/polling/index.md)
   - [Event-based](./data-sync/polling/event-based.md)
