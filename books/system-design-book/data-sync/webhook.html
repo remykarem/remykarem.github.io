@@ -278,8 +278,8 @@
 <ul>
 <li>
 <p>Webhook clients should not take long to respond</p>
-<p>Eg. 10s for <a href="https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds">GitHub</a>, 20s for <a href="https://stackoverflow.com/a/71445729">Stripe</a>.</p>
-<p>Additionally, GitHub suggests asynchronous processing of messages by setting up a queue.</p>
+<p>Eg. <a href="https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds">GitHub</a> will timeout a request after 10s. Additionally, GitHub suggests asynchronous processing of messages by setting up a queue.</p>
+<p><a href="https://stackoverflow.com/a/71445729">Stripe</a> has a timeout of 20s. They expect the server to promptly respond with an 2xx HTTP status code to indicate that the their Stripe Event was successfully received.</p>
 </li>
 <li>
 <p>Missed deliveries should be redeliverable</p>
