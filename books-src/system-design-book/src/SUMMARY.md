@@ -114,6 +114,7 @@
 - [API versioning](./api-design/versioning.md)
 - [Batch processing](./api-design/batch-processing.md)
 - [API performance](./api-design/api-peformance.md)
+- [Encoding signatures](./api-design/encoding-signatures.md)
 
 ---
 
