@@ -1,14 +1,12 @@
-# Data synchronisation
-
-## Full sync
+# Differential sync
   
-## Differential sync (by updated time)
+## By updated time
 
 Polling
 
 aka delta query, change tracking
 
-## Differential sync (since last call)
+## Since last call
 
 Requires polling
   
