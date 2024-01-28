@@ -266,6 +266,25 @@
 <p><a href="https://stripe.com/docs/webhooks">Stripe Webhook Docs</a></p>
 </div>
 </div>
+<h2 id="best-practices"><a class="header" href="#best-practices">Best practices</a></h2>
+<ul>
+<li>
+<p>Webhook clients should not take long to respond</p>
+<p>Eg. 10s for <a href="https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds">GitHub</a>, 20s for <a href="https://stackoverflow.com/a/71445729">Stripe</a> </p>
+</li>
+<li>
+<p>Missed deliveries should be redeliverable</p>
+<p><a href="https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/redelivering-webhooks">GitHub</a></p>
+</li>
+<li>
+<p>Webhook servers to implement a unique delivery ID to prevent replay attack</p>
+<p>eg. <a href="https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#use-the-x-github-delivery-header">GitHub</a> uses the <code>X-GitHub-Delivery</code> header</p>
+</li>
+<li>
+<p>Check event type before processing</p>
+<p><a href="https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#check-the-event-type-and-action-before-processing-the-event">Source</a></p>
+</li>
+</ul>
 
                     </main>
 
