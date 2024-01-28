@@ -180,8 +180,14 @@
                         <h1 id="polling"><a class="header" href="#polling">Polling</a></h1>
 <p>In polling, the client keeps calling the server for updates.</p>
 <h2 id="events-pattern"><a class="header" href="#events-pattern">/events pattern</a></h2>
-<p>Refer to Stripe's <a href="https://stripe.com/docs/api/events">Events</a> endpoint
-<a href="https://blog.sequin.io/events-not-webhooks/">Events not webhooks by Sequin</a></p>
+<p>The server provides data of all the <em>events</em> (create, update etc.).</p>
+<p>The client polls and keeps a cursor locally to keep track which events the client has seen / processed.</p>
+<p>The <code>events</code> table can serve as a &quot;queue&quot; for outbound work for webhook senders.</p>
+<p>References:</p>
+<ul>
+<li><a href="https://blog.sequin.io/events-not-webhooks/">Events not webhooks by Sequin</a></li>
+<li><a href="https://stripe.com/docs/api/events">Events</a> endpoint</li>
+</ul>
 <h2 id=""><a class="header" href="#">???</a></h2>
 <p>There are 2 types of polling:</p>
 <ul>
