@@ -123,6 +123,7 @@
 - [Polling](./data-sync/polling.md)
   - [Short vs. long](./data-sync/index.md)
 - [Webhook](./data-sync/webhook.md)
+- [Webhook vs. polling](./data-sync/webhook-vs-polling.md)
 
 ---
 
