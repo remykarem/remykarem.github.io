@@ -52,7 +52,9 @@ Webhooks are commonly used in event-driven architecture.
 
 * Webhook clients should not take long to respond
 
-  Eg. 10s for [GitHub](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds), 20s for [Stripe](https://stackoverflow.com/a/71445729) 
+  Eg. 10s for [GitHub](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds), 20s for [Stripe](https://stackoverflow.com/a/71445729).
+
+  Additionally, GitHub suggests asynchronous processing of messages by setting up a queue.
 
 * Missed deliveries should be redeliverable
 
@@ -65,3 +67,15 @@ Webhooks are commonly used in event-driven architecture.
 * Check event type before processing
 
   [Source](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#check-the-event-type-and-action-before-processing-the-event)
+
+
+## Other practices
+
+* Viewing past webhook deliveries
+
+  Eg. [GitHub](https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/viewing-webhook-deliveries) allows viewing of webhooks delivered in the past 3 days.
+
+* Testing webhooks
+
+  Eg. [GitHub](https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/testing-webhooks) allows testing of webhook deliveries.
+

@@ -278,7 +278,8 @@
 <ul>
 <li>
 <p>Webhook clients should not take long to respond</p>
-<p>Eg. 10s for <a href="https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds">GitHub</a>, 20s for <a href="https://stackoverflow.com/a/71445729">Stripe</a> </p>
+<p>Eg. 10s for <a href="https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds">GitHub</a>, 20s for <a href="https://stackoverflow.com/a/71445729">Stripe</a>.</p>
+<p>Additionally, GitHub suggests asynchronous processing of messages by setting up a queue.</p>
 </li>
 <li>
 <p>Missed deliveries should be redeliverable</p>
@@ -291,6 +292,17 @@
 <li>
 <p>Check event type before processing</p>
 <p><a href="https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#check-the-event-type-and-action-before-processing-the-event">Source</a></p>
+</li>
+</ul>
+<h2 id="other-practices"><a class="header" href="#other-practices">Other practices</a></h2>
+<ul>
+<li>
+<p>Viewing past webhook deliveries</p>
+<p>Eg. <a href="https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/viewing-webhook-deliveries">GitHub</a> allows viewing of webhooks delivered in the past 3 days.</p>
+</li>
+<li>
+<p>Testing webhooks</p>
+<p>Eg. <a href="https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/testing-webhooks">GitHub</a> allows testing of webhook deliveries.</p>
 </li>
 </ul>
 
