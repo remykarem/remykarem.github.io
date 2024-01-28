@@ -123,7 +123,7 @@
 - [Polling](./data-sync/polling/index.md)
   - [Event-based](./data-sync/polling/event-based.md)
   - [Differential sync](./data-sync/polling/differential-sync.md)
-- [Webhook](./data-sync/webhook.md)
+- [Webhook](./data-sync/webhook/index.md)
 - [Webhook vs. polling](./data-sync/webhook-vs-polling.md)
 
 ---
