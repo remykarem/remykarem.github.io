@@ -182,6 +182,7 @@
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="replay-attack"><a class="header" href="#replay-attack">Replay attack</a></h1>
 <p>An attacker impersonates a legitimate user by replaying their past messages.</p>
+<p>A mitigation is to have a tolerance of <em>k</em> minutes between the signed timestamp and current time (eg. <a href="https://stripe.com/docs/webhooks#replay-attacks">Stripe</a>).</p>
 
                     </main>
 
