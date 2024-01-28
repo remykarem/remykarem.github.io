@@ -45,3 +45,21 @@ Webhooks are commonly used in event-driven architecture.
 
 [Stripe Webhook Docs](https://stripe.com/docs/webhooks)
 ~~~
+
+## Best practices
+
+* Webhook clients should not take long to respond
+
+  Eg. 10s for [GitHub](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds), 20s for [Stripe](https://stackoverflow.com/a/71445729) 
+
+* Missed deliveries should be redeliverable
+
+  [GitHub](https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/redelivering-webhooks)
+
+* Webhook servers to implement a unique delivery ID to prevent replay attack
+
+  eg. [GitHub](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#use-the-x-github-delivery-header) uses the `X-GitHub-Delivery` header
+
+* Check event type before processing
+
+  [Source](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#check-the-event-type-and-action-before-processing-the-event)
