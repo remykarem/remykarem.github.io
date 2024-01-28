@@ -1,4 +1,4 @@
-# Webhook (Push)
+# Webhook
 
 aka Push APIs, callback APIs
 
