@@ -52,9 +52,9 @@ Webhooks are commonly used in event-driven architecture.
 
 * Webhook clients should not take long to respond
 
-  Eg. 10s for [GitHub](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds), 20s for [Stripe](https://stackoverflow.com/a/71445729).
+  Eg. [GitHub](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds) will timeout a request after 10s. Additionally, GitHub suggests asynchronous processing of messages by setting up a queue.
 
-  Additionally, GitHub suggests asynchronous processing of messages by setting up a queue.
+  [Stripe](https://stackoverflow.com/a/71445729) has a timeout of 20s. They expect the server to promptly respond with an 2xx HTTP status code to indicate that the their Stripe Event was successfully received.
 
 * Missed deliveries should be redeliverable
 
