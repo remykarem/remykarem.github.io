@@ -6,7 +6,7 @@ A webhook is an _integration_ where the server (the system with data) sends ("**
 
 A webhook is an HTTP request (with some payload) triggered by an event in a source system, then sent to a destination system.
 
-Because this is event-triggered, the destination system will get the data (related to that event) in real-time.
+Because this is event-triggered, the destination system will get the data (related to that event) in _real-time_.
 
 A **server**, in the context of webhook, is a system that provides data (in particular, notification).
 
