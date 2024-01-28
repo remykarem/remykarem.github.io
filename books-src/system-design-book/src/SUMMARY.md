@@ -118,9 +118,12 @@
 
 ---
 
-# Data synchronisation
+# Data sync patterns
 
-- [Data synchronisation](./data-synchronisation/index.md)
+- [Polling (Pull)](./data-sync/polling.md)
+  - [Data synchronisation](./data-sync/index.md)
+- [Webhook (Push)](./data-sync/webhook.md)
+- [Type III: Responsibility & direction](./data-sync/direction.md)
 
 ---
 
@@ -137,9 +140,6 @@
   - [Pub/Sub](./messaging-patterns/pub-sub.md)
   - [Fan-out](./messaging-patterns/fan-out.md)
   - [Fan-in](./messaging-patterns/fan-in.md)
-- [Type III: Responsibility & direction](./messaging-patterns/direction.md)
-  - [Polling (Pull)](./messaging-patterns/polling.md)
-  - [Webhook (Push)](./messaging-patterns/webhook.md)
 - [Type IV: Streamingness]()
   - [Streaming](./messaging-patterns/streaming.md)
 
