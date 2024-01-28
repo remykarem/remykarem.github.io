@@ -8,7 +8,7 @@ The `events` table can serve as a "queue" for outbound work for webhook senders.
 
 References:
 * [Events not webhooks by Sequin](https://blog.sequin.io/events-not-webhooks/)
-* [Events](https://stripe.com/docs/api/events) endpoint
+* Stripe's [Events](https://stripe.com/docs/api/events) endpoint
 
 ## ???
 
