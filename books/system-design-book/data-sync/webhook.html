@@ -311,6 +311,14 @@
 <p>Handling duplicate events</p>
 <p><a href="https://stripe.com/docs/webhooks#handle-duplicate-events">Stripe</a></p>
 </li>
+<li>
+<p>Retry mechanism</p>
+<p><a href="https://stripe.com/docs/webhooks#retries">Stripe</a> attempts to deliver an event for up to 3 days with an exponential backoff.</p>
+</li>
+<li>
+<p>Event ordering guarantee</p>
+<p>[Stripe] doesn't guarantee the delivery of events in the order in which they are generated, and expects the endpoints to handle accordingly.</p>
+</li>
 </ul>
 
                     </main>
