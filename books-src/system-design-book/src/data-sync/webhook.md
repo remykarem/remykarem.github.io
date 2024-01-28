@@ -106,6 +106,8 @@ Webhooks are commonly used in event-driven architecture.
 
   [Stripe](https://stripe.com/docs/webhooks#event-ordering) doesn't guarantee the delivery of events in the order in which they are generated, and expects the endpoints to handle accordingly.
 
-* Implement reconciliation jobs
+* Implement reconciliation jobs along with the webhook
 
   [Shopify](https://shopify.dev/docs/apps/webhooks/best-practices#implement-reconciliation-jobs)
+
+  [HN](https://news.ycombinator.com/item?id=32521159)
