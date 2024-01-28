@@ -222,6 +222,13 @@
 
 ---
 
+# Identifiers
+
+- [UUID]()
+- [GUID]()
+
+---
+
 # Interface description languages
 
 - [Protobuf](./others/protobuf.md)
