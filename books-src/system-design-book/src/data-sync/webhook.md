@@ -56,6 +56,12 @@ Webhooks are commonly used in event-driven architecture.
 
   [Stripe](https://stackoverflow.com/a/71445729) has a timeout of 20s. They expect the server to promptly respond with an 2xx HTTP status code to indicate that the their Stripe Event was successfully received.
 
+  [Shopify](https://shopify.dev/docs/apps/webhooks/best-practices) has a timeout of 5s.
+
+  ~~~admonish tip title="Optimise connection management"
+  [Shopify](https://shopify.dev/docs/apps/webhooks/best-practices#optimize-connection-management) uses HTTP Keep-Alive to reuse connections to the sam ehost and endpoint to reduce network congestion and latency in subsequent requests.
+  ~~~
+
 * Missed deliveries should be redeliverable
 
   [GitHub](https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/redelivering-webhooks)
@@ -70,11 +76,19 @@ Webhooks are commonly used in event-driven architecture.
 
 * Verifying webhook requests
 
+* Webhook clients should expect a burst of requests
+
+  [Shopify](https://shopify.dev/docs/apps/webhooks/best-practices#prepare-your-endpoint-for-a-burst-of-requests).
+
+  Additionally, [Shopify](https://shopify.dev/docs/apps/webhooks/configuration/eventbridge) suggests using AWS EventBridge to manage large volumes of event notifications
+
 ## Other practices
 
 * Viewing past webhook deliveries
 
   Eg. [GitHub](https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/viewing-webhook-deliveries) allows viewing of webhooks delivered in the past 3 days.
+
+  [Shopify](https://shopify.dev/docs/apps/webhooks/best-practices#track-failures)
 
 * Testing webhooks
 
@@ -82,7 +96,7 @@ Webhooks are commonly used in event-driven architecture.
 
 * Handling duplicate events
 
-  [Stripe](https://stripe.com/docs/webhooks#handle-duplicate-events)
+  [Stripe](https://stripe.com/docs/webhooks#handle-duplicate-events), [Shopify](https://shopify.dev/docs/apps/webhooks/best-practices#ignore-duplicates)
 
 * Retry mechanism
 
@@ -91,4 +105,7 @@ Webhooks are commonly used in event-driven architecture.
 * Event ordering guarantee
 
   [Stripe](https://stripe.com/docs/webhooks#event-ordering) doesn't guarantee the delivery of events in the order in which they are generated, and expects the endpoints to handle accordingly.
-  
+
+* Implement reconciliation jobs
+
+  [Shopify](https://shopify.dev/docs/apps/webhooks/best-practices#implement-reconciliation-jobs)
