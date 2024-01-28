@@ -4,7 +4,7 @@
 
 JSON Web Token
 
-A JWT is a text-based dot-separated Base64 URL-safe representation of **signature**, **claims** (eg. who you claim to be), **ciphertext**, and other metadata.
+A JWT is a dot-separated Base64-URL-safe-encoded JSON representation of **signature**, **claims** (eg. who you claim to be), **ciphertext**, and other metadata.
 
 JWTs can either be a:
 * JWS
