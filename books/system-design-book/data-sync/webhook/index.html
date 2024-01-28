@@ -179,7 +179,7 @@
                     <main>
                         <h1 id="webhook"><a class="header" href="#webhook">Webhook</a></h1>
 <p><a href="https://www.standardwebhooks.com">The Webhook Standard</a></p>
-<p>A webhook is an <em>integration</em> where the server (the system with data) sends (&quot;<strong>pushes</strong>&quot;) data to the client (the system which requires the data).</p>
+<p>A webhook is an <em>integration</em> where the server sends (&quot;<strong>pushes</strong>&quot;) data to the client.</p>
 <p>Because this is event-triggered, the destination system will get the data (related to that event) in <em>real-time</em>.</p>
 <p>Actors:</p>
 <ul>
@@ -189,6 +189,7 @@
 </li>
 <li>
 <p>Webhook consumer (receiver)</p>
+<p>This is the client, the system which requires the data.</p>
 </li>
 </ul>
 <p>To create a webhook, register the webhook URL with the webhook provider. Then, subscribe the webhook to events of interest.</p>
