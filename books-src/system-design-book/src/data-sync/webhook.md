@@ -68,6 +68,7 @@ Webhooks are commonly used in event-driven architecture.
 
   [Source](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#check-the-event-type-and-action-before-processing-the-event)
 
+* Verifying webhook requests
 
 ## Other practices
 
@@ -77,5 +78,9 @@ Webhooks are commonly used in event-driven architecture.
 
 * Testing webhooks
 
-  Eg. [GitHub](https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/testing-webhooks) allows testing of webhook deliveries.
+  [GitHub](https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/testing-webhooks), [Stripe](https://stripe.com/docs/webhooks#test-webhook)
+
+* Handling duplicate events
+
+  [Stripe](https://stripe.com/docs/webhooks#handle-duplicate-events)
 
