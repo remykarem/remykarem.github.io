@@ -178,11 +178,14 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="differential-sync"><a class="header" href="#differential-sync">Differential sync</a></h1>
-<h2 id="by-updated-time"><a class="header" href="#by-updated-time">By updated time</a></h2>
-<p>Polling</p>
+<p>The server provides the data that has changed:</p>
+<ul>
+<li>
+<p><strong>Based on updated time in the request</strong></p>
 <p>aka delta query, change tracking</p>
-<h2 id="since-last-call"><a class="header" href="#since-last-call">Since last call</a></h2>
-<p>Requires polling</p>
+</li>
+<li>
+<p><strong>Since the last API call</strong></p>
 <div id="admonition-dropboxs-delta-api-deprecated" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Dropbox's delta API (deprecated)</p>
@@ -201,6 +204,8 @@
 <p>Dropbox migrated from Delta API (V1) to Webhooks (V2)</p>
 </div>
 </div>
+</li>
+</ul>
 
                     </main>
 
