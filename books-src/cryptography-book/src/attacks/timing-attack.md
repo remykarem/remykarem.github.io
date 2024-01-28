@@ -10,4 +10,6 @@ Timing attacks can be performed against regular equality operators or regular lo
 
   Instead, use cryptographically safe comparison methods provided by libraries which perform "constant time" string comparison.
 
+  Some keywords to look for: secure, timing safe, equal, compare
+
   Taken from GitHub's [Validating webhook deliveries](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries#validating-webhook-deliveries).
