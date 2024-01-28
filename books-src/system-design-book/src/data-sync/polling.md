@@ -2,6 +2,13 @@
 
 In polling, the client keeps calling the server for updates.
 
+## /events pattern
+
+Refer to Stripe's [Events](https://stripe.com/docs/api/events) endpoint
+[Events not webhooks by Sequin](https://blog.sequin.io/events-not-webhooks/)
+
+## ???
+
 There are 2 types of polling:
 
 - **Short polling** – returns a response immediately, even if empty. $k = 0$.
