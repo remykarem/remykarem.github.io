@@ -90,5 +90,5 @@ Webhooks are commonly used in event-driven architecture.
 
 * Event ordering guarantee
 
-  [Stripe] doesn't guarantee the delivery of events in the order in which they are generated, and expects the endpoints to handle accordingly.
+  [Stripe](https://stripe.com/docs/webhooks#event-ordering) doesn't guarantee the delivery of events in the order in which they are generated, and expects the endpoints to handle accordingly.
   
