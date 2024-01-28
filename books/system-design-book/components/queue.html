@@ -246,23 +246,44 @@
 <p>This <em>facilitates</em> <a href="../goals/scalability.html">scalability</a>.</p>
 <p>Types of queues</p>
 <ul>
-<li><strong>Standard queue</strong> is designed to prioritise higher throughput. This means:
+<li>
+<p><strong>Standard queue</strong> is designed to prioritise higher throughput. This means:</p>
 <ul>
 <li>Not a strict FIFO (&quot;Best-Effort Ordering&quot;)</li>
 <li>Every message might be processed more than once</li>
 <li>Unlimited throughput</li>
 </ul>
 </li>
-<li><strong>FIFO queue</strong> is designed to prioritise:
+<li>
+<p><strong>FIFO queue</strong> is designed to prioritise:</p>
 <ul>
 <li>Strict FIFO</li>
 <li>Every message is processed only once</li>
 <li>High throughput (lower than that of Standard queue)</li>
 </ul>
 </li>
-<li><strong>DLQ</strong> — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully. Used for <a href="../strategies/manual-intervention.html">manual intervention</a>.</li>
-<li><strong>Work queue</strong> or <strong>task queue</strong> — designed to allow <em>multiple workers</em> to consume tasks concurrently</li>
-<li><strong>Delay queue</strong> — postpone the delivery of new messages to the queue for a period of time (why would you wanna do this...?)</li>
+<li>
+<p><strong>DLQ</strong> — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully. Used for <a href="../strategies/manual-intervention.html">manual intervention</a>.</p>
+</li>
+<li>
+<p><strong>Poison message queue</strong> — a qurue that stores poison messages</p>
+<div id="admonition-poison-message" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Poison message</p>
+<p><a class="admonition-anchor-link" href="#admonition-poison-message"></a></p>
+</div>
+<div>
+<p>A poison message or poison-pill message is a message that can be received but cannot be processed due to format issues.</p>
+<p>AWS recommends such messages to be pushed to DLQ.</p>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Work queue</strong> or <strong>task queue</strong> — designed to allow <em>multiple workers</em> to consume tasks concurrently</p>
+</li>
+<li>
+<p><strong>Delay queue</strong> — postpone the delivery of new messages to the queue for a period of time (why would you wanna do this...?)</p>
+</li>
 </ul>
 <div id="admonition-applications" class="admonition admonish-example">
 <div class="admonition-title">
