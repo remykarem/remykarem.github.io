@@ -1,1 +1,0 @@
-# Type III: Responsibility & direction

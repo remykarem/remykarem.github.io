@@ -123,7 +123,6 @@
 - [Polling (Pull)](./data-sync/polling.md)
   - [Data synchronisation](./data-sync/index.md)
 - [Webhook (Push)](./data-sync/webhook.md)
-- [Type III: Responsibility & direction](./data-sync/direction.md)
 
 ---
 
