@@ -10,6 +10,11 @@
 
 * Latency
 
+  Latency is the amount of time a system takes to respond to a user request. It is usually divided into 2 parts:
+
+  - Network latency
+  - Application latency
+
 * Resource usage
     * CPU
     * Memory
