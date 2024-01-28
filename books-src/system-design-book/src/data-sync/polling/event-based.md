@@ -1,8 +1,4 @@
-# Polling
-
-In polling, the client keeps calling the server for updates.
-
-## /events pattern
+# Event-based
 
 The server provides data of all the _events_ (create, update etc.).
 
