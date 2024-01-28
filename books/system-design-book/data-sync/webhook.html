@@ -280,6 +280,16 @@
 <p>Webhook clients should not take long to respond</p>
 <p>Eg. <a href="https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds">GitHub</a> will timeout a request after 10s. Additionally, GitHub suggests asynchronous processing of messages by setting up a queue.</p>
 <p><a href="https://stackoverflow.com/a/71445729">Stripe</a> has a timeout of 20s. They expect the server to promptly respond with an 2xx HTTP status code to indicate that the their Stripe Event was successfully received.</p>
+<p><a href="https://shopify.dev/docs/apps/webhooks/best-practices">Shopify</a> has a timeout of 5s.</p>
+<div id="admonition-optimise-connection-management" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Optimise connection management</p>
+<p><a class="admonition-anchor-link" href="#admonition-optimise-connection-management"></a></p>
+</div>
+<div>
+<p><a href="https://shopify.dev/docs/apps/webhooks/best-practices#optimize-connection-management">Shopify</a> uses HTTP Keep-Alive to reuse connections to the sam ehost and endpoint to reduce network congestion and latency in subsequent requests.</p>
+</div>
+</div>
 </li>
 <li>
 <p>Missed deliveries should be redeliverable</p>
@@ -296,12 +306,18 @@
 <li>
 <p>Verifying webhook requests</p>
 </li>
+<li>
+<p>Webhook clients should expect a burst of requests</p>
+<p><a href="https://shopify.dev/docs/apps/webhooks/best-practices#prepare-your-endpoint-for-a-burst-of-requests">Shopify</a>.</p>
+<p>Additionally, <a href="https://shopify.dev/docs/apps/webhooks/configuration/eventbridge">Shopify</a> suggests using AWS EventBridge to manage large volumes of event notifications</p>
+</li>
 </ul>
 <h2 id="other-practices"><a class="header" href="#other-practices">Other practices</a></h2>
 <ul>
 <li>
 <p>Viewing past webhook deliveries</p>
 <p>Eg. <a href="https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/viewing-webhook-deliveries">GitHub</a> allows viewing of webhooks delivered in the past 3 days.</p>
+<p><a href="https://shopify.dev/docs/apps/webhooks/best-practices#track-failures">Shopify</a></p>
 </li>
 <li>
 <p>Testing webhooks</p>
@@ -309,7 +325,7 @@
 </li>
 <li>
 <p>Handling duplicate events</p>
-<p><a href="https://stripe.com/docs/webhooks#handle-duplicate-events">Stripe</a></p>
+<p><a href="https://stripe.com/docs/webhooks#handle-duplicate-events">Stripe</a>, <a href="https://shopify.dev/docs/apps/webhooks/best-practices#ignore-duplicates">Shopify</a></p>
 </li>
 <li>
 <p>Retry mechanism</p>
@@ -318,6 +334,10 @@
 <li>
 <p>Event ordering guarantee</p>
 <p><a href="https://stripe.com/docs/webhooks#event-ordering">Stripe</a> doesn't guarantee the delivery of events in the order in which they are generated, and expects the endpoints to handle accordingly.</p>
+</li>
+<li>
+<p>Implement reconciliation jobs</p>
+<p><a href="https://shopify.dev/docs/apps/webhooks/best-practices#implement-reconciliation-jobs">Shopify</a></p>
 </li>
 </ul>
 
