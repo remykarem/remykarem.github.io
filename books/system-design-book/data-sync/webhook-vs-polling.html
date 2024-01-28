@@ -179,7 +179,8 @@
                     <main>
                         <h1 id="webhook-vs-polling"><a class="header" href="#webhook-vs-polling">Webhook vs. polling</a></h1>
 <div class="table-wrapper"><table><thead><tr><th></th><th>Webhook</th><th>Polling / REST API</th></tr></thead><tbody>
-<tr><td>Resource</td><td>Fewer resources</td><td>A lot of resources</td></tr>
+<tr><td>Frequency</td><td>As needed</td><td>Very frequent</td></tr>
+<tr><td>Payload</td><td>Smaller</td><td>Higher</td></tr>
 <tr><td>Near real-time updates</td><td>Yes</td><td>No</td></tr>
 <tr><td>Loss of events</td><td>Events are retried and usually persisted thereafter</td><td>Client might miss them due to incorrect request or missed call; persistence is overridden etc.</td></tr>
 </tbody></table>

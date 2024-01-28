@@ -2,7 +2,8 @@
 
 |                        | Webhook         | Polling / REST API |
 |------------------------|-----------------|--------------------|
-| Resource               | Fewer resources | A lot of resources |
+| Frequency              | As needed       | Very frequent      |
+| Payload                | Smaller         | Higher             |
 | Near real-time updates | Yes             | No                 |
 | Loss of events         | Events are retried and usually persisted thereafter | Client might miss them due to incorrect request or missed call; persistence is overridden etc. |
 
