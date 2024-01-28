@@ -1,7 +1,5 @@
 # Webhook
 
-aka Push APIs, callback APIs
-
 A webhook is an _integration_ where the server (the system with data) sends ("**pushes**") data to the client (the system which requires the data).
 
 A webhook is an HTTP request (with some payload) triggered by an event in a source system, then sent to a destination system.
@@ -9,6 +7,10 @@ A webhook is an HTTP request (with some payload) triggered by an event in a sour
 Because this is event-triggered, the destination system will get the data (related to that event) in _real-time_.
 
 A **server**, in the context of webhook, is a system that provides data (in particular, notification).
+
+~~~admonish note title="Webhook or REST API"
+GitHub makes a [distinction](https://docs.github.com/en/webhooks/about-webhooks#choosing-webhooks-or-the-rest-api) between a webhook and a REST API.
+~~~
 
 ~~~admonish note title="Webhook vs. API integration"
 A webhook shouldn't be compared to an API. 
