@@ -120,8 +120,9 @@
 
 # Data sync patterns
 
-- [Polling](./data-sync/polling.md)
-  - [Short vs. long](./data-sync/index.md)
+- [Polling]()
+  - [Event-based](./data-sync/polling/event-based.md)
+  - [Differential sync](./data-sync/polling/differential-sync.md)
 - [Webhook](./data-sync/webhook.md)
 - [Webhook vs. polling](./data-sync/webhook-vs-polling.md)
 
