@@ -172,6 +172,7 @@
 
 - [Request-driven]()
 - [Event-driven architecture](./patterns/event-driven-architecture.md)
+  - [Event processing](./patterns/event-processing.md)
 
 ---
 
