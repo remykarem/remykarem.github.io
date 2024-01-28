@@ -4,11 +4,18 @@
 
 A webhook is an _integration_ where the server (the system with data) sends ("**pushes**") data to the client (the system which requires the data).
 
-A webhook is an HTTP request (with some payload) triggered by an event in a source system, then sent to a destination system.
-
 Because this is event-triggered, the destination system will get the data (related to that event) in _real-time_.
 
-A **server**, in the context of webhook, is a system that provides data (in particular, notification).
+Actors:
+* Webhook provider (sender)
+
+  This is the server, in the context of webhook, is a system that provides data (in particular, notification).
+
+* Webhook consumer (receiver)
+
+To create a webhook, register the webhook URL with the webhook provider. Then, subscribe the webhook to events of interest.
+
+The webhook provider triggers the webhook. The webhook consumer listens for **webhook requests** or webhook deliveries and responds to them.
 
 ~~~admonish note title="Webhook or REST API"
 GitHub makes a [distinction](https://docs.github.com/en/webhooks/about-webhooks#choosing-webhooks-or-the-rest-api) between a webhook and a REST API.
@@ -18,31 +25,9 @@ GitHub makes a [distinction](https://docs.github.com/en/webhooks/about-webhooks#
 A webhook shouldn't be compared to an API. 
 ~~~
 
-~~~admonish hint
-We can see this as the server sends request to client.
-~~~
-
-~~~admonish note title="Vocabulary"
-FromGitHub:
-* create a webhook — involves soecifying a URL and subscribing to event types
-* subscribe the webhook to an event
-* trigger the webhook
-* listen for webhook deliveries and respond to them
-* webhook URL
-* if webhook goes down
-* redeliver webhook
-
-* register a webhook endpoint
-* push real-time event data
-* webhook endpoint
-* webhook request
-* webhook provider (eg. Stripe)
-* webhook consumer
-~~~
-
-Webhooks are commonly used in event-driven architecture. 
-
 ~~~admonish example title="Uses"
+Webhooks are commonly used in event-driven architecture.
+
 * Integration between systems
 * Notifications
 * Monitoring and alerts
@@ -100,7 +85,7 @@ Webhooks are commonly used in event-driven architecture.
 
   [Stripe](https://stripe.com/docs/webhooks#handle-duplicate-events), [Shopify](https://shopify.dev/docs/apps/webhooks/best-practices#ignore-duplicates)
 
-* Retry mechanism
+* Retry mechanism, webhook redelivery
 
   [Stripe](https://stripe.com/docs/webhooks#retries) attempts to deliver an event for up to 3 days with an exponential backoff.
 
