@@ -180,9 +180,19 @@
                         <h1 id="webhook"><a class="header" href="#webhook">Webhook</a></h1>
 <p><a href="https://www.standardwebhooks.com">The Webhook Standard</a></p>
 <p>A webhook is an <em>integration</em> where the server (the system with data) sends (&quot;<strong>pushes</strong>&quot;) data to the client (the system which requires the data).</p>
-<p>A webhook is an HTTP request (with some payload) triggered by an event in a source system, then sent to a destination system.</p>
 <p>Because this is event-triggered, the destination system will get the data (related to that event) in <em>real-time</em>.</p>
-<p>A <strong>server</strong>, in the context of webhook, is a system that provides data (in particular, notification).</p>
+<p>Actors:</p>
+<ul>
+<li>
+<p>Webhook provider (sender)</p>
+<p>This is the server, in the context of webhook, is a system that provides data (in particular, notification).</p>
+</li>
+<li>
+<p>Webhook consumer (receiver)</p>
+</li>
+</ul>
+<p>To create a webhook, register the webhook URL with the webhook provider. Then, subscribe the webhook to events of interest.</p>
+<p>The webhook provider triggers the webhook. The webhook consumer listens for <strong>webhook requests</strong> or webhook deliveries and responds to them.</p>
 <div id="admonition-webhook-or-rest-api" class="admonition admonish-note">
 <div class="admonition-title">
 <p>Webhook or REST API</p>
@@ -201,72 +211,13 @@
 <p>A webhook shouldn't be compared to an API.</p>
 </div>
 </div>
-<div id="admonition-hint" class="admonition admonish-tip">
-<div class="admonition-title">
-<p>Hint</p>
-<p><a class="admonition-anchor-link" href="#admonition-hint"></a></p>
-</div>
-<div>
-<p>We can see this as the server sends request to client.</p>
-</div>
-</div>
-<div id="admonition-vocabulary" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Vocabulary</p>
-<p><a class="admonition-anchor-link" href="#admonition-vocabulary"></a></p>
-</div>
-<div>
-<p>FromGitHub:</p>
-<ul>
-<li>
-<p>create a webhook — involves soecifying a URL and subscribing to event types</p>
-</li>
-<li>
-<p>subscribe the webhook to an event</p>
-</li>
-<li>
-<p>trigger the webhook</p>
-</li>
-<li>
-<p>listen for webhook deliveries and respond to them</p>
-</li>
-<li>
-<p>webhook URL</p>
-</li>
-<li>
-<p>if webhook goes down</p>
-</li>
-<li>
-<p>redeliver webhook</p>
-</li>
-<li>
-<p>register a webhook endpoint</p>
-</li>
-<li>
-<p>push real-time event data</p>
-</li>
-<li>
-<p>webhook endpoint</p>
-</li>
-<li>
-<p>webhook request</p>
-</li>
-<li>
-<p>webhook provider (eg. Stripe)</p>
-</li>
-<li>
-<p>webhook consumer</p>
-</li>
-</ul>
-</div>
-</div>
-<p>Webhooks are commonly used in event-driven architecture. </p>
 <div id="admonition-uses" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Uses</p>
 <p><a class="admonition-anchor-link" href="#admonition-uses"></a></p>
 </div>
 <div>
+<p>Webhooks are commonly used in event-driven architecture.</p>
 <ul>
 <li>Integration between systems</li>
 <li>Notifications</li>
@@ -329,7 +280,7 @@
 <p><a href="https://stripe.com/docs/webhooks#handle-duplicate-events">Stripe</a>, <a href="https://shopify.dev/docs/apps/webhooks/best-practices#ignore-duplicates">Shopify</a></p>
 </li>
 <li>
-<p>Retry mechanism</p>
+<p>Retry mechanism, webhook redelivery</p>
 <p><a href="https://stripe.com/docs/webhooks#retries">Stripe</a> attempts to deliver an event for up to 3 days with an exponential backoff.</p>
 </li>
 <li>
