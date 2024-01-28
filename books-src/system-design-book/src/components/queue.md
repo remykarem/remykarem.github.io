@@ -58,6 +58,14 @@ Types of queues
   * Every message is processed only once
   * High throughput (lower than that of Standard queue)
 * **DLQ** — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully. Used for [manual intervention](../strategies/manual-intervention.md).
+* **Poison message queue** — a qurue that stores poison messages
+
+  ~~~admonish note title="Poison message"
+  A poison message or poison-pill message is a message that can be received but cannot be processed due to format issues.
+
+  AWS recommends such messages to be pushed to DLQ.
+  ~~~
+
 * **Work queue** or **task queue** — designed to allow _multiple workers_ to consume tasks concurrently
 * **Delay queue** — postpone the delivery of new messages to the queue for a period of time (why would you wanna do this...?)
 
