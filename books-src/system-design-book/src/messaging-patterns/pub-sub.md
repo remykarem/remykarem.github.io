@@ -11,5 +11,11 @@ This pattern allows messages to be delivered to multiple consumers. Think "broad
 A message is consumed by _mutiple subscribers_.
 ```
 
+~~~admonish note title="Pub/Sub vs Webhook"
+* **Decoupling / indirect communication** — Publisher doesn't know about subscribers (there's a message broker). For webhooks, producer needs to know the consumers URL.
+
+* **Many-to-many vs. point-to-point communication** — one message can be received by many subscribers. For webhooks, a message is meant for a consumer.
+~~~
+
 Examples of AWS services:
 * SNS

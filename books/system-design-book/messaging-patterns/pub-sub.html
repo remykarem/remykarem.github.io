@@ -193,6 +193,22 @@
 <p>A message is consumed by <em>mutiple subscribers</em>.</p>
 </div>
 </div>
+<div id="admonition-pubsub-vs-webhook" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Pub/Sub vs Webhook</p>
+<p><a class="admonition-anchor-link" href="#admonition-pubsub-vs-webhook"></a></p>
+</div>
+<div>
+<ul>
+<li>
+<p><strong>Decoupling / indirect communication</strong> — Publisher doesn't know about subscribers (there's a message broker). For webhooks, producer needs to know the consumers URL.</p>
+</li>
+<li>
+<p><strong>Many-to-many vs. point-to-point communication</strong> — one message can be received by many subscribers. For webhooks, a message is meant for a consumer.</p>
+</li>
+</ul>
+</div>
+</div>
 <p>Examples of AWS services:</p>
 <ul>
 <li>SNS</li>
