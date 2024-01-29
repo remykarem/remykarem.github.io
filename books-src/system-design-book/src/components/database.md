@@ -4,4 +4,6 @@ Purpose:
 * [Data storage](../core-functionalities/data-storage.md)
 
 Non-features:
-* Locking (unlike in queue)
+* [Locking](../distributed-system/concurrency-control.md) (unlike in queue)
+
+  Locking is possible but requires a lot of work (???)
