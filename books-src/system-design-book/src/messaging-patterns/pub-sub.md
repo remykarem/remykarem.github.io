@@ -3,7 +3,7 @@
 Publish/Subscribe
 
 1. A **publisher** sends a message ("**event**") to a **channel**/**topic**.
-2. The message is distributed (via the message system) to all **subscribers** who have **registered**/**subscribed** to the respective 
+2. The message is distributed (via the message system) to all **subscribers** who have **registered**/**subscribed** to the respective topic
 
 This pattern allows messages to be delivered to multiple consumers. Think "broadcasting".
 
