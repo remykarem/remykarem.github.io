@@ -11,7 +11,9 @@ Purposes:
 
 ~~~admonish example
 Apache Kafka, RabbitMQ.
+~~~
 
+~~~admonish note
 Amazon SNS is not a message broker. 
 ~~~
 
