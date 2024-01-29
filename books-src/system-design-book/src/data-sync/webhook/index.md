@@ -11,9 +11,13 @@ Actors:
 
   This is the server, in the context of webhook, is a system that provides data (in particular, notification).
 
+  It is an application that sends webhooks to an external API.
+
 * Webhook consumer (receiver)
 
   This is the client, the system which requires the data.
+
+  It is an API that receives the webhooks.
 
 To create a webhook, register the webhook URL with the webhook provider. Then, subscribe the webhook to events of interest.
 
