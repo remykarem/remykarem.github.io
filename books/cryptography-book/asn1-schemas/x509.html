@@ -184,12 +184,13 @@
 <p><a href="https://www.itu.int/rec/T-REC-X.509/en">X.509</a>, <a href="https://datatracker.ietf.org/doc/html/rfc5280">RFC 5280</a></p>
 <p>Common filename extensions: <code>.crt</code>, <code>.cert</code>, <code>.pem</code></p>
 <p>Standard format for public key certificates.</p>
+<p>The purpose of a certificate is to show that the holder of the certificate is &quot;verified&quot; by a CA.</p>
 <p>The information includes:</p>
 <ul>
 <li>Issuer details (country, organisation name etc.)</li>
 <li>Validity period</li>
 <li>Subject name — the issuee</li>
-<li>Subject public key — the issuee's public key</li>
+<li><strong>Subject public key</strong> — the issuee's public key</li>
 <li>Purpose of key usage —  eg. <code>TLS Web Server Authentication</code>, <code>TLS Web Client Authentication</code>. Available in X.509v3</li>
 <li>Certificate signature — to show that this was indeed issued by the issuer</li>
 </ul>
