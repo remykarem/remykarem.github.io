@@ -144,8 +144,6 @@
     - [PKIPath](./asn1-schemas/pkipath.md)
     - [X.509](./asn1-schemas/x509.md)
     - [JWT](./formats/jwt.md)
-    - [PEM](./formats/pem.md)
-    - [ASN.1 DER](./formats/der.md)
     - [JWK / JWKS](./formats/jwk.md)
     - [JKS](./formats/jks.md)
     - [OpenSSH private key](./formats/openssh-private-key.md)
