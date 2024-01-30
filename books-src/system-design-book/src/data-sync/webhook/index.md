@@ -77,6 +77,12 @@ Webhooks are commonly used in event-driven architecture.
 
 ## Other practices
 
+* Responding with `2xx` to acknowledge webhooks
+
+  ~~~admonish tip title="Difference from the regular APIs"
+  This is different from the usual meaning of `2xx` which means the request succeeded with or without a reponse.
+  ~~~
+
 * Viewing past webhook deliveries
 
   Eg. [GitHub](https://docs.github.com/en/webhooks/testing-and-troubleshooting-webhooks/viewing-webhook-deliveries) allows viewing of webhooks delivered in the past 3 days.
