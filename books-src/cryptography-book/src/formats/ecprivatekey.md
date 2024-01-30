@@ -2,6 +2,8 @@
 
 [RFC 5915](https://datatracker.ietf.org/doc/html/rfc5915)
 
+ASN.1 schema
+
 An EC private key is defined in [Appendix A](https://datatracker.ietf.org/doc/html/rfc5915#appendix-A):
 
 ```

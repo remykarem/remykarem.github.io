@@ -2,6 +2,8 @@
 
 Found in [RFC 6066](https://datatracker.ietf.org/doc/html/rfc6066)
 
+ASN.1 schema
+
 This format can store multiple certificates together. It can't contain private keys.
 
 ```

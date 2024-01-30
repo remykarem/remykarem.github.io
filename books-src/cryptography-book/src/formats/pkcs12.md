@@ -4,6 +4,8 @@
 
 Common filenames: `.p12`, `.pfx`
 
+ASN.1 schema
+
 This format can store _at least one_ of the following cryptographic objects:
 * **private key**,
 * server certificate, and
