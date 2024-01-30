@@ -115,6 +115,7 @@
 - [Batch processing](./api-design/batch-processing.md)
 - [API performance](./api-design/api-peformance.md)
 - [Encoding signatures](./api-design/encoding-signatures.md)
+- [Retry-safe]()
 
 ---
 
