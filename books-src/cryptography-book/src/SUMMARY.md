@@ -152,9 +152,8 @@
   - [X.509](./formats/x509.md)
 - [Encodings](./encodings/index.md)
   - [PEM](./encodings/pem.md)
-  - [ASN.1 DER](./encodings/der.md)
-  - [OpenPGP ASCII armor](./encodings/openpgp-ascii-armor.md)
-  - [OpenPGP binary](./encodings/openpgp-binary.md)
+  - [PEM & ASN.1 DER](./encodings/der.md)
+  - [OpenPGP: ASCII armor & binary](./encodings/openpgp-binary.md)
 - [Standards](./standards.md)
 
 ---
