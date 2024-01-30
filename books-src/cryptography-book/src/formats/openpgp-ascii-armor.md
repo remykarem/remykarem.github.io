@@ -5,7 +5,7 @@
 ASCII armor is an encoding used in OpenPGP.
 
 It can be used to represent:
-* PGP cryptographic objects
+* PGP cryptographic objects (private key, public key)
 * PGP encryption, signatures
 
 ~~~admonish example
