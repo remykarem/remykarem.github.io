@@ -6,7 +6,7 @@ The OpenPGP message format can be used to represent:
 * PGP cryptographic objects (private key, public key)
 * PGP encryption, signatures
 
-~~~admonish example
+~~~admonish example title="Text-encoded example"
 ```txt
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
