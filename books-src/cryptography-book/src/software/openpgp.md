@@ -33,17 +33,21 @@ Modern versions of PGP are designed to be compatible with the OpenPGP standard.
 Encryption:
 
 $$
-\text{(message, \textbf{key})} \rightarrow \text{ciphertext}
+\text{(message, \textbf{cek})} \rightarrow \text{ciphertext}
 $$
 
 $$
-\text{(\textbf{key}, \textbf{public key})} \rightarrow \text{\textbf{encrypted key}}
+\text{(\textbf{cek}, \textbf{public key})} \rightarrow \text{\textbf{encrypted cek}}
 $$
+
+~~~admonish note
+The ciphertext is usually sent together with the encrypted CEK. 
+~~~
 
 Decryption:
 
 $$
-\text{(\textbf{encrypted key}, \textbf{private key})} \rightarrow \textbf{key}
+\text{(\textbf{encrypted cek}, \textbf{private key})} \rightarrow \textbf{cek}
 $$
 
 $$
