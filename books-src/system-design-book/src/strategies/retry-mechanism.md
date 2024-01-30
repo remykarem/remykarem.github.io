@@ -1,5 +1,7 @@
 # Retry mechanism
 
+Retries allow clients to survive random partial failures and short-lived transient failures by sending the same request again.
+
 Helps with:
 - [Fault tolerance](../goals/fault-tolerance.md)
 - [Reliability](../goals/reliability.md)
