@@ -134,7 +134,7 @@
 
 # Schemas, formats, standards
 
-- [ASN.1 schemas](./asn1-schemas/index.md)
+- [Formats](./asn1-schemas/index.md)
     - [PKCS #1](./asn1-schemas/pkcs1.md)
     - [PKCS #7 / P7B](./asn1-schemas/pkcs7.md)
     - [PKCS #8](./asn1-schemas/pkcs8.md)
@@ -143,7 +143,6 @@
     - [ECPrivateKey](./asn1-schemas/ecprivatekey.md)
     - [PKIPath](./asn1-schemas/pkipath.md)
     - [X.509](./asn1-schemas/x509.md)
-- [Formats](./formats/index.md)
     - [JWT](./formats/jwt.md)
     - [PEM](./formats/pem.md)
     - [ASN.1 DER](./formats/der.md)
@@ -154,6 +153,11 @@
     - [OpenPGP ASCII armor](./formats/openpgp-ascii-armor.md)
     - [OpenPGP binary](./formats/openpgp-binary.md)
     - [SAML token](./formats/saml-token.md)
+- [Encodings](./formats/index.md)
+  - [PEM](./formats/pem.md)
+  - [ASN.1 DER](./formats/der.md)
+  - [OpenPGP ASCII armor](./formats/openpgp-ascii-armor.md)
+  - [OpenPGP binary](./formats/openpgp-binary.md)
 - [Standards](./standards.md)
 
 ---
