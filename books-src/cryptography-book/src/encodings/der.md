@@ -1,6 +1,8 @@
 # DER
 
-The "DER format" is binary.
+ASN.1 DER
+
+This is a binary encoding.
 
 I so named it because the underlying data is _encoded_ to binary via DER.
 

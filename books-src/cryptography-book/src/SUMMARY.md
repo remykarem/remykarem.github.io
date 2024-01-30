@@ -132,7 +132,7 @@
 
 ---
 
-# Schemas, formats, standards
+# Formats, encodings, standards
 
 - [Formats](./formats/index.md)
   - [ECPrivateKey](./formats/ecprivatekey.md)
@@ -152,8 +152,8 @@
   - [X.509](./formats/x509.md)
 - [Encodings](./encodings/index.md)
   - [PEM](./encodings/pem.md)
-  - [PEM & ASN.1 DER](./encodings/der.md)
-  - [OpenPGP: ASCII armor & binary](./encodings/openpgp-binary.md)
+  - [DER](./encodings/der.md)
+  - [OpenPGP: ASCII armor & binary](./encodings/openpgp.md)
 - [Standards](./standards.md)
 
 ---
