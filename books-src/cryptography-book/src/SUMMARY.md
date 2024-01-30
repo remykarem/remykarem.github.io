@@ -145,7 +145,7 @@
     - [JKS](./formats/jks.md)
     - [JWK / JWKS](./formats/jwk.md)
     - [JWT](./formats/jwt.md)
-    - [OpenPGP message format](./formats/openpgp-ascii-armor.md)
+    - [OpenPGP message format](./formats/openpgp-message-format.md)
     - [OpenSSH private key](./formats/openssh-private-key.md)
     - [OpenSSH public key](./formats/openssh-public-key-format.md)
     - [SAML token](./formats/saml-token.md)
