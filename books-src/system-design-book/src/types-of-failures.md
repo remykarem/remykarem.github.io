@@ -7,7 +7,7 @@
   - Intermittent hardware issues
 - Partial failure
 
-  A percentage of requests succeeds
+  When a part of the system fails but still having the system run correctly. In this case, a percentage of requests succeeds
 
 - Software crashes
 - Hardware failures
