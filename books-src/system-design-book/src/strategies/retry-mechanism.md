@@ -19,6 +19,8 @@ Backoff policies
   * Helps with [scalability](../goals/scalability.md) as the workload increases — at any point of time given _m_ messages, we retry _k_ recent requests (where $k \le m$) vs. at any point of time we retry $k = m$ messages
   ~~~
 
+Another strategy is to add jitter to spread out any contention.
+
 Characteristics of a policy:
 - Count: How many more times to retry?
 - Frequency: Exponential backoff
