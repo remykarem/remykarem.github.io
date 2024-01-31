@@ -186,17 +186,27 @@
 </ul>
 <p>Backoff policies</p>
 <ul>
-<li>Fixed backoff / constant backoff / uniform retry interval</li>
-<li>Exponential backoff</li>
-<li>Capped exponential backoff</li>
-</ul>
+<li>
+<p>Fixed backoff / constant backoff / uniform retry interval</p>
+</li>
+<li>
+<p>(Capped) exponential backoff</p>
+<div id="admonition-why-prefer-exponential-backoff-to-fixed-backoff" class="admonition admonish-question">
+<div class="admonition-title">
 <p>Why prefer exponential backoff to fixed backoff?</p>
+<p><a class="admonition-anchor-link" href="#admonition-why-prefer-exponential-backoff-to-fixed-backoff"></a></p>
+</div>
+<div>
 <ul>
 <li>Reduce network congestion from older requests.</li>
 <li>Reduce server load.</li>
 <li>Prioritise newer requests (in the case of a queue) possibly due to transient errors. Older requests are possibly due to application error; so we allow some time to recover.</li>
 <li>Avoid synchronisation risk.</li>
 <li>Helps with <a href="../goals/scalability.html">scalability</a> as the workload increases — at any point of time given <em>m</em> messages, we retry <em>k</em> recent requests (where $k \le m$) vs. at any point of time we retry $k = m$ messages</li>
+</ul>
+</div>
+</div>
+</li>
 </ul>
 <p>Characteristics of a policy:</p>
 <ul>
