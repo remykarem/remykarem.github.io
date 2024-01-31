@@ -179,6 +179,20 @@
                     <main>
                         <h1 id="versioning"><a class="header" href="#versioning">Versioning</a></h1>
 <p>https://developers.asana.com/reference/rest-api-reference</p>
+<p>Some strategies:</p>
+<ul>
+<li>URI versioning (<code>/v1</code>)
+<ul>
+<li>Global level (e.g. Stripe)</li>
+<li>Resource level</li>
+</ul>
+</li>
+<li>HTTP header (e.g. Stripe)</li>
+<li>Nullable (in JSON property)</li>
+</ul>
+<p>At Stripe, only &quot;[w]hen a breaking change is introduced to the Stripe API, a new dated version is released.&quot; </p>
+<p>References:
+<a href="https://stripe.com/docs/upgrades">Stripe: Upgrades</a></p>
 
                     </main>
 
