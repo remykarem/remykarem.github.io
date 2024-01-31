@@ -48,6 +48,7 @@
 
 - [Caching](./strategies/caching.md)
 - [Failover](./strategies/failover.md)
+- [Timeout](./strategies/timeout.md)
 - [Batching](./strategies/batching.md)
 - [Distributed](./strategies/distributed.md)
   - [Replication](./strategies/replication.md)
