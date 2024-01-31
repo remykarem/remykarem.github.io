@@ -8,7 +8,8 @@ Helps with:
 
 Backoff policies
 * Fixed backoff / constant backoff / uniform retry interval
-* (Capped) exponential backoff
+* Exponential backoff
+* Capped exponential backoff
 
   ~~~admonish question title="Why prefer exponential backoff to fixed backoff?"
   * Reduce network congestion from older requests.
