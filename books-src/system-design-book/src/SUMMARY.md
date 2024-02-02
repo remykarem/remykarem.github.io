@@ -223,6 +223,7 @@
 
 - [Data URI](./other-standards/data-uri.md)
 - [Dates](./other-standards/dates.md)
+- [Floating point numbers](./other-standards/floating-point-numbers.md)
 
 ---
 
