@@ -4,6 +4,18 @@
 
 ---
 
+## Goals
+
+- [Readability]()
+- [Maintainability]()
+
+## Strategies
+
+- [Comments]()
+- [Don't touch code unnecessarily]()
+
+---
+
 # Application code patterns
 
 - [Overview](./application-code-patterns/index.md)
