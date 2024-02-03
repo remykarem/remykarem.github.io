@@ -32,3 +32,5 @@ Encryption
 
 ## Others
 [https://cryptobook.nakov.com](https://cryptobook.nakov.com/)
+
+[Intuition for Cryptography](https://azeemba.com/posts/intuition-for-cryptography.html)
