@@ -10,6 +10,7 @@ Amazon SNS
 Features:
 * Message filtering
 * Message ordering
+* DLQ integration
 
 Examples of subscribers are a Lambda and a queue. 
 
