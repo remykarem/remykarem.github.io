@@ -1,5 +1,8 @@
 # Preface
 
+* [IPC — Unix Domain Sockets](https://goodyduru.github.io/os/2023/10/03/ipc-unix-domain-sockets.html)
+* [IPC — Unix Signals](https://goodyduru.github.io//os/2023/10/05/ipc-unix-signals.html)
+
 An operating system is a system software that manages computer hardware, software resources, and provides common services
 
 Everything is either a file or a process.
