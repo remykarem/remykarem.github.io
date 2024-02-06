@@ -8,6 +8,11 @@
 * UUIDv4
 
   * 122 bits pseudo randomly generated
+
+    ~~~admonish note
+    This is roughly 5 * 10^36
+    ~~~
+    
   * 6 bits for version and variant
 
 * UUIDv7
