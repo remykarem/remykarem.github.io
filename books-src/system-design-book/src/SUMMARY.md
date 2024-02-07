@@ -230,6 +230,7 @@
 # Unique identifiers
 
 - [UUID](./unique-identifiers/uuid.md)
+- [ULID](./unique-identifiers/ulid.md)
 - [GUID]()
 
 ---
