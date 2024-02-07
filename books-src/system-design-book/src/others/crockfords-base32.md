@@ -1,0 +1,1 @@
+# Crockford's Base32

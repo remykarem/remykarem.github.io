@@ -214,6 +214,7 @@
 - [Unicode & UTF-8](./others/unicode-and-utf-8.md)
 - [ASCII]()
 - [Base64]()
+- [Crockford's Base32](./others/crockfords-base32.md)
 - [DER](./others/der.md)
 - [URL encoding]()
 
