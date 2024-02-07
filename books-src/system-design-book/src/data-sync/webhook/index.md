@@ -113,6 +113,8 @@ Webhooks are commonly used in event-driven architecture.
 
 * Additionally as the webhook provider, set up an /events endpoints
 
+* Webhook providers can store external requests in a database or in logs (see [Storing External Requests](https://www.pgrs.net/2023/12/14/storing-external-requests/). 
+
 ~~~admonish question title="Thin vs. thick webhooks"
 This pattern is where the webhook payload contains a reference ID which you will use to call an API to retrieve the payload.
 
