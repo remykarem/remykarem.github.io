@@ -1,6 +1,8 @@
 # Crockford's Base32
 
-$32 = 2^5$
+[Crockford's Base32](https://www.crockford.com/base32.html)
+
+It's called base 32 because it encodes 5 bits of information in one character ($32 = 2^5$).
 
 ~~~admonish question title="Who is Crockford even?"
 Daniel Crockford is involved in the development of JavaScript.
