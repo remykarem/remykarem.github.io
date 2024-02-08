@@ -1,5 +1,7 @@
 # Dates
 
+
+
 ## [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822#section-3.3)
 
 * `Tue, 1 Jul 2003 10:52:37 +0200`
@@ -31,5 +33,8 @@
     15:20:30
 
 ```admonish note
-RFC 3339 is a subset of ISO 8601
+RFC 3339 includes a subset of ISO 8601 and contains some of its own standards.
 ```
+
+References:
+[RFC 3339 vs. ISO 8601](https://ijmacd.github.io/rfc3339-iso8601/)
