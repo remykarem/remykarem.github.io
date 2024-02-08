@@ -7,6 +7,9 @@ Characteristics:
 * **stateless** — every function is processed in isolation
 * **serverless** — this means faster start time
 
+Responsibility:
+* Lightweight [**compute**](../core-functionalities/compute.md)
+
 Features:
 * [Auto-scalable](../strategies/auto-scaling.md)
 * [Rate limiting](../strategies/rate-limiting.md)
