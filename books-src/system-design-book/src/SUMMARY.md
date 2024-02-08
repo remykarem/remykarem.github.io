@@ -27,6 +27,7 @@
 
 # Core functionalities
 
+- [Compute](./core-functionalities/compute.md)
 - [Routing](./core-functionalities/routing.md)
 - [Scheduling](./core-functionalities/scheduling.md)
 - [Pipelining](./core-functionalities/pipelining.md)
