@@ -1,6 +1,6 @@
 # Preprocessing
 
-Process headers, macros, etc.
+Process headers, directives, macros, etc.
 
 These are usually found in an `/include` folder.
 
@@ -12,6 +12,6 @@ cpp
 
 To specify the `/include` directory,
 
-```
+```sh
 export CPPFLAGS="-I/somedirectory/include"
 ```
