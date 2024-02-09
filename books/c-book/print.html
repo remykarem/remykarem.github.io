@@ -884,6 +884,13 @@ $ ./hello
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="linking"><a class="header" href="#linking">Linking</a></h1>
 <p>Link → <code>.exe</code></p>
+<p>The linker combines object files and <em>libraries</em> into an executable or library.</p>
+<p>The linker resolves references to external symbols (eg. variables or functions) defined in other objects or libraries.</p>
+<p>The <code>/lib</code> folder contains these libraries.</p>
+<p>To specify the folder,</p>
+<pre><code class="language-sh">export LDFLAGS=&quot;-L/somedirectory/lib&quot;
+</code></pre>
+<h2 id="example-to-manually-link"><a class="header" href="#example-to-manually-link">Example to manually link</a></h2>
 <ol>
 <li>
 <p>Create library</p>

@@ -2,6 +2,20 @@
 
 Link → `.exe`
 
+The linker combines object files and _libraries_ into an executable or library.
+
+The linker resolves references to external symbols (eg. variables or functions) defined in other objects or libraries.
+
+The `/lib` folder contains these libraries.
+
+To specify the folder,
+
+```sh
+export LDFLAGS="-L/somedirectory/lib"
+```
+
+## Example to manually link
+
 1. Create library
     
     `adding.cpp`
