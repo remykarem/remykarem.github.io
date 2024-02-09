@@ -76,15 +76,21 @@
     ```
     
     Flags
+
+    * `LDFLAGS` for linker eg. LDFLAGS="-L..."
+
+    * `CPPFLAGS` for C/C++ preprocessor eg. CPPFLAGS="-I..."
     
-    `C_INCLUDE_PATH`
+    * `C_INCLUDE_PATH`
     
-    `CPPFLAGS` for C/C++ preprocessor eg. CPPFLAGS="-I..."
+    * `CFLAGS` for C compiler eg. CFLAGS=""
     
-    `CFLAGS` for C compiler eg. CFLAGS=""
+    * `CXXFLAGS` for C++ compiler eg. CXXFLAGS=
     
-    `CXXFLAGS` for C++ compiler eg. CXXFLAGS=
+
     
-    `LDFLAGS` for linker eg. LDFLAGS="-L..."
-    
-    `cpp -v` to list the default include-paths
+`cpp -v` to list the default include-paths
+
+~~~admonish tip title="Brew"
+Use `brew --prefix <program>` to find the folder that has the `lib` and `include` folders.
+~~~
