@@ -10,17 +10,15 @@ See also this article on [Myths about /dev/urandom](https://www.2uo.de/myths-abo
 Use `/dev/urandom`.
 
 ```bash
-cat /dev/urandom | LC_ALL=C tr -dc a-zA-Z0-9 | head -c10
+cat /dev/urandom | head -c10 
 ```
-
-Based on [this](https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string) StackOverflow post.
 ~~~
 
 ~~~admonish example title="OpenSSL"
 Use `openssl rand`.
 
 ```bash
-openssl rand 1000 | LC_ALL=C tr -dc a-zA-Z0-9 | head -c10
+openssl rand 1000 | head -c10
 ```
 
 ```bash
