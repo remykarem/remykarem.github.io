@@ -1,4 +1,4 @@
-# Cryptographically secure random bytes
+# Cryptographically secure randomness
 
 We wanna make sure that attackers cannot find any pattern from the encryption, so we need some form of randomness aka entropy.
 
