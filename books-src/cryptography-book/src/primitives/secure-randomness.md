@@ -15,14 +15,8 @@ cat /dev/urandom | head -c10
 ~~~
 
 ~~~admonish example title="OpenSSL"
-Use `openssl rand`.
-
 ```bash
-openssl rand 1000 | head -c10
-```
-
-```bash
-openssl rand -hex 16
+openssl rand 10
 ```
 ~~~
 
