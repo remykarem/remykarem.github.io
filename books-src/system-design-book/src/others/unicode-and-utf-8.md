@@ -7,7 +7,7 @@ The convention to write code point values is `U+1F4A9` where `1F4A9` is hexadeci
 **UTF-8** is an encoding; a mapping of a code point to a byte array. Specifically, UTF-8 stores code points in 1 to 4 bytes.
 
 ~~~admonish example
-💩 is stored as `f09f 92a9`.
+💩 is stored as `f0 9f 92 a9`.
 ~~~
 
 Readings: [Unicode](https://tonsky.me/blog/unicode/)
