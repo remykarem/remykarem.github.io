@@ -836,14 +836,35 @@ $ ./hello
   -m&lt;option&gt;  x86 options. see [here](https://gcc.gnu.org/onlinedocs/gcc/x86-Options.html). eg -mavx2, ...
 </code></pre>
 <p>Flags</p>
-<p><code>C_INCLUDE_PATH</code></p>
-<p><code>CPPFLAGS</code> for C/C++ preprocessor eg. CPPFLAGS=&quot;-I...&quot;</p>
-<p><code>CFLAGS</code> for C compiler eg. CFLAGS=&quot;&quot;</p>
-<p><code>CXXFLAGS</code> for C++ compiler eg. CXXFLAGS=</p>
+<ul>
+<li>
 <p><code>LDFLAGS</code> for linker eg. LDFLAGS=&quot;-L...&quot;</p>
-<p><code>cpp -v</code> to list the default include-paths</p>
+</li>
+<li>
+<p><code>CPPFLAGS</code> for C/C++ preprocessor eg. CPPFLAGS=&quot;-I...&quot;</p>
+</li>
+<li>
+<p><code>C_INCLUDE_PATH</code></p>
+</li>
+<li>
+<p><code>CFLAGS</code> for C compiler eg. CFLAGS=&quot;&quot;</p>
+</li>
+<li>
+<p><code>CXXFLAGS</code> for C++ compiler eg. CXXFLAGS=</p>
 </li>
 </ul>
+</li>
+</ul>
+<p><code>cpp -v</code> to list the default include-paths</p>
+<div id="admonition-brew" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Brew</p>
+<p><a class="admonition-anchor-link" href="build.html#admonition-brew"></a></p>
+</div>
+<div>
+<p>Use <code>brew --prefix &lt;program&gt;</code> to find the folder that has the <code>lib</code> and <code>include</code> folders.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="preprocessing"><a class="header" href="#preprocessing">Preprocessing</a></h1>
 <p>Process headers, macros, etc.</p>
 <pre><code class="language-c">cpp
