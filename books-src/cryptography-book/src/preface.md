@@ -1,5 +1,17 @@
 # Preface
 
+Cryptography deals with:
+* bitwise mathematical operations
+* modular arithmetics.
+
+Therefore, many cryptographic objects are represented as binary data aka byte arrays (eg. shared secrets) and numbers (eg. modulus of RSA).
+
+Binary data is usually represented as text using Base64 encoding or hexadecimal string. 
+
+Numbers are usually represented as... idk I can't think of an example.
+
+---
+
 Proofs
 
 | Ting                | Integrity | Authenticity | Non-repudiation |
