@@ -12,6 +12,7 @@ Features:
 * Signing the message (by the sender)
 
 Note the following:
+* SDK includes the TrustField provider (in the context of Java security)
 * Closed-source (?)
 * Commercial
 * Available in Windows only
