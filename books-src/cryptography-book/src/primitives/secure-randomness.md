@@ -8,6 +8,10 @@ Entropy can be obtained from multiple entropy sources. See Apple's [Random numbe
 
 See also this article on [Myths about /dev/urandom](https://www.2uo.de/myths-about-urandom/).
 
+~~~admonish question
+What is random even lol
+~~~
+
 ~~~admonish example title="*nix"
 Use `/dev/urandom`.
 
