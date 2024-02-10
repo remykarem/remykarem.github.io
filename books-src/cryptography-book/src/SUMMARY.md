@@ -20,6 +20,12 @@
 
 ---
 
+# Measure
+
+- [Entropy](./measure/entropy.md)
+
+---
+
 # Cryptographic keys
 
 - [Password / passphrase](./cryptographic-keys/password-passphrase.md)
