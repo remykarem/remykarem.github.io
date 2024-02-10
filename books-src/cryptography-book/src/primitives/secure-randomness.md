@@ -1,5 +1,7 @@
 # Cryptographically secure randomness
 
+CSPRNG (cryptographically secure pseudorandom number generator)
+
 We wanna make sure that attackers cannot find any pattern from the encryption, so we need some form of randomness aka entropy.
 
 Entropy can be obtained from multiple entropy sources. See Apple's [Random number generation](https://support.apple.com/en-sg/guide/security/seca0c73a75b/web).
@@ -40,4 +42,8 @@ window.crypto.getRandomValues(array);
 
 ~~~admonish warning title="Math.random()"
 JavaScript's Math.random is not cryptographically secure.
+~~~
+
+~~~admonish warning title="UUIDs might not be secure"
+A StackOverflow post [Using V4 UUID for authentication](https://security.stackexchange.com/a/157277) says that [RFC 4122](https://www.rfc-editor.org/rfc/rfc4122) says that UUID implementations might not use a cryptographically secure random number generator.
 ~~~
