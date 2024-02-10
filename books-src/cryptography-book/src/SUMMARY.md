@@ -23,6 +23,7 @@
 # Measure
 
 - [Entropy](./measure/entropy.md)
+- [Key strength](./measure/key-strength.md)
 
 ---
 
@@ -34,10 +35,6 @@
 - [DEK](./cryptographic-keys/dek.md)
 - [KEK](./cryptographic-keys/kek.md)
 - [Security tokens](./cryptographic-keys/security-tokens.md)
-
----
-
-- [Key strength](./cryptographic-keys/key-strength.md)
 
 ---
 
