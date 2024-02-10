@@ -4,7 +4,7 @@
 
 ---
 
-# Goals
+# Goals / guarantees
 
 - [Authenticity](./goals/authenticity.md)
 - [Non-repudiation](./goals/non-repudiation.md)
@@ -13,6 +13,10 @@
 - [Forward secrecy](./goals/forward-secrecy.md)
 - [Anonymity and privacy]()
 - [Performance](./goals/performance.md)
+
+---
+
+- [Secure randomness](./primitives/secure-randomness.md)
 
 ---
 
@@ -59,7 +63,6 @@
 
 # Algorithms, primitives
 
-- [Secure randomness](./primitives/secure-randomness.md)
 - [Cryptographic hash functions](./primitives/cryptographic-hash-functions/index.md)
     - [MD5](./primitives/cryptographic-hash-functions/md5.md)
     - [SHA](./primitives/cryptographic-hash-functions/sha.md)
