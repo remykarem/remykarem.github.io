@@ -46,4 +46,6 @@ JavaScript's Math.random is not cryptographically secure.
 
 ~~~admonish warning title="Some UUID implementations might not be cryptographically secure"
 A StackOverflow post [Using V4 UUID for authentication](https://security.stackexchange.com/a/157277) says that [RFC 4122 Section 6](https://datatracker.ietf.org/doc/html/rfc4122#section-6) says that UUID implementations might not use a cryptographically secure random number generator.
+
+UUIDv4's main goal is to generate unique identifiers, not unpredictability.
 ~~~
