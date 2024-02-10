@@ -37,3 +37,7 @@ window.crypto.getRandomValues(array);
 >>> secrets.token_bytes(16)
 ```
 ~~~
+
+~~~admonish warning title="Math.random()"
+JavaScript's Math.random is not cryptographically secure.
+~~~
