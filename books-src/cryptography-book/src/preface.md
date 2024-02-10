@@ -6,7 +6,7 @@ Cryptography deals with:
 
 Therefore, many cryptographic objects are represented as binary data aka byte arrays (eg. shared secrets) and numbers (eg. modulus of RSA).
 
-Binary data is usually represented as text using Base64 encoding or hexadecimal string. 
+Binary data is usually represented as hexadecimal string or encoded using Base64.
 
 Numbers are usually represented as... idk I can't think of an example.
 
