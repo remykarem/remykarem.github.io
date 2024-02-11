@@ -47,7 +47,7 @@ In OpenSSL, sometimes you might get the warning
 *** WARNING : deprecated key derivation used.
 ```
 
-which indicates that the password input you are providing is being used for KDF. However, the KDF used is an [old method](../../kdf/older-methods.md).
+which indicates that the password input you are providing is being used for KDF. However, the KDF used is a [PBKDF1](../../kdf/pbkdf1.md) which is no longer recommended.
 ~~~
 
 ~~~admonish tip title="In practice: Automatic padding"
