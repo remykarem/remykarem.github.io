@@ -194,5 +194,6 @@
 - [CCA]()
 - [Birthday attack](./attacks/birthday-attack.md)
 - [Timing attack](./attacks/timing-attack.md)
+- [Rainbow attack](./attacks/rainbow-attack.md)
 - [Brute-force attack]()
 - [Length extension attack]()
