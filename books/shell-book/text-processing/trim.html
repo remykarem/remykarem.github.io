@@ -178,8 +178,24 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="trim"><a class="header" href="#trim">Trim</a></h1>
-<p>???</p>
-<p>I can't get any of the StackOverflow solutions to work???</p>
+<h2 id="trim-leading"><a class="header" href="#trim-leading">Trim leading</a></h2>
+<pre><code class="language-sh">sed 's/^ //'
+</code></pre>
+<p>or for any no. of spaces</p>
+<pre><code class="language-sh">sed 's/^ *//'
+</code></pre>
+<p>or for any no. of whitespaces</p>
+<pre><code class="language-sh">sed 's/^[[:space:]]*//
+</code></pre>
+<h2 id="trim-trailing"><a class="header" href="#trim-trailing">Trim trailing</a></h2>
+<pre><code class="language-sh">sed 's/ $//'
+</code></pre>
+<p>or for any no. of spaces</p>
+<pre><code class="language-sh">sed 's/ *$//'
+</code></pre>
+<p>or for any no. of whitespaces</p>
+<pre><code class="language-sh">sed 's/[[:space:]]*$//
+</code></pre>
 
                     </main>
 
