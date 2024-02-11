@@ -4,7 +4,11 @@ Data Encryption Standard
 
 [FIPS 46-3](https://csrc.nist.gov/pubs/fips/46-3/final)
 
-DES operates a **block of 64 bits**.
+DES operates on a **block of 64 bits** using a 64-bit key.
+
+~~~admonish note title="Effective key bits"
+The key is actually 56 bits long. 8 bits are for parity.
+~~~
 
 ~~~admonish warning
 OpenSSL considers this as a weak cipher.
