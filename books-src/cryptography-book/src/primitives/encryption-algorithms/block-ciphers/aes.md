@@ -6,23 +6,9 @@ Advanced Encryption Standard
 
 AES is a block cipher that operates on a **block of 128 bits**. It breaks the plaintext into similar size blocks.
 
-The key length can be 128, 192 or 256 bits.
+The key length can be one of the following (bits): **128**, **192** or **256**.
 
 The ciphertext typically includes the initialisation vector and ciphertext itself.
-
-~~~admonish note title="AES algorithm names"
-AES algorithms are typically named as such:
-
-```txt
-AES-<key-length>-<mode-of-operation>
-```
-
-like
-
-```
-AES-128-CBC
-```
-~~~
 
 ~~~admonish example title="Ciphertext"
 
@@ -43,14 +29,14 @@ Salted__
 
 ```bash
 echo -n "hello" | 
-openssl enc -aes-256-cbc | 
+openssl enc -aes-256-cbc -pbkdf2 | 
 base64
 ```
 
 ```bash
-echo -n "U2FsdGVkX1+DIdrNWd7HRuO6UXWzjT8YZTJ0ImGBbHQ=" |
+echo -n "U2FsdGVkX19eOFx2c4vZzUBqShy+giooq9P8VVMLtx0=" |
 base64 -d |
-openssl enc -aes-256-cbc -d  # password is 123
+openssl enc -aes-256-cbc -d -pbkdf2  # password is 123
 ```
 ~~~
 
