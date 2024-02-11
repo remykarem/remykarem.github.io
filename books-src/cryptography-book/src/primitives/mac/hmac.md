@@ -13,7 +13,7 @@ AWS SigV4 uses HMAC-SHA256 to create a signature that is included in the HTTP re
 ~~~
 
 ~~~admonish example title="OpenSSL"
-```
+```sh
 echo -n "someplaintext" | openssl dgst -sha384 -hmac "secretkey"
 ```
 
