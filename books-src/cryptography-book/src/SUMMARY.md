@@ -13,6 +13,7 @@
 - [Forward secrecy](./goals/forward-secrecy.md)
 - [Anonymity and privacy]()
 - [Performance](./goals/performance.md)
+- [Portability](./goals/portability.md)
 
 ---
 
