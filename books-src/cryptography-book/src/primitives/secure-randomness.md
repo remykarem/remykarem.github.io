@@ -16,7 +16,7 @@ What is random even lol
 Use `/dev/urandom`.
 
 ```bash
-cat /dev/urandom | head -c10 
+head -c10 /dev/urandom
 ```
 ~~~
 
