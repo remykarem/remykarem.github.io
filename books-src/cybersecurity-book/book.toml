@@ -8,7 +8,7 @@ title = "Cybersecurity Book"
 [output.html]
 site-url = "/books/cybersecurity-book"  # this is for mathy books. for non-mathy, use "/books/your-book"
 mathjax-support = true
-edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/security-book/{path}"  # change your-book
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/cybersecurity-book/{path}"  # change your-book
 default-theme = "frappé"
 preferred-dark-theme = "macchiato"
 no-section-label = true
