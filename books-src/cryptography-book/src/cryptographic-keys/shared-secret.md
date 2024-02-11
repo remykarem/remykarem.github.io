@@ -1,3 +1,3 @@
 # Shared secret
 
-aka secret, shared key, symmetric key
+aka secret key, secret, shared key, symmetric key
