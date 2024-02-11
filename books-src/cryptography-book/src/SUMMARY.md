@@ -63,12 +63,14 @@
 
 - [OpenPGP](./software/openpgp.md)
 - [SLIFT](./software/slift.md)
+- [age](./software/age.md)
 
 ---
 
 # Algorithms, primitives
 
 - [Cryptographic hash functions](./primitives/cryptographic-hash-functions/index.md)
+    - [MD2]()
     - [MD5](./primitives/cryptographic-hash-functions/md5.md)
     - [SHA](./primitives/cryptographic-hash-functions/sha.md)
     - [BLAKE2](./primitives/cryptographic-hash-functions/blake2.md)
@@ -189,11 +191,14 @@
 
 # Attacks
 
-- [Replay attack](./attacks/replay-attack.md)
 - [CPA](./attacks/chosen-plaintext-attack.md)
 - [CCA]()
+- [Replay attack](./attacks/replay-attack.md)
+- [Side-channel attack]()
+  - [Timing attack](./attacks/timing-attack.md)
 - [Birthday attack](./attacks/birthday-attack.md)
 - [Timing attack](./attacks/timing-attack.md)
 - [Rainbow attack](./attacks/rainbow-attack.md)
 - [Brute-force attack]()
+- [Padding Oracle Attack](./attacks/padding-oracle-attack.md)
 - [Length extension attack]()

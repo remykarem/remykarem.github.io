@@ -1,7 +1,9 @@
 # PBKDF1
 
-An old method
+RFC 2898
 
-* MD5-based — the MD5 hash function is used for key derivation
-* SHA1-based — the SHA-1 hash function is used for key derivation
-* Single iteration
+PBKDF1 applies a hash function (MD2, MD5, SHA1) to derive keys.
+
+~~~admonish warning
+This is no longer recommended and secure.
+~~~

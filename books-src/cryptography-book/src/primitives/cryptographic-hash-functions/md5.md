@@ -2,10 +2,10 @@
 
 Message-Digest Algorithm 5
 
-Digest size: 128 bits (16 bytes)
+Digest size: 128 bits
 
 ~~~admonish example title="OpenSSL"
-```
+```sh
 echo -n "hello" | openssl md5
 ```
 ~~~
