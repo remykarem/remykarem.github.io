@@ -4,7 +4,7 @@ Advanced Encryption Standard
 
 [FIPS 197](https://csrc.nist.gov/pubs/fips/197/final)
 
-AES is a block cipher that operates on **blocks of 128 bits**. It breaks the plaintext into similar size blocks.
+AES is a block cipher that operates on a **block of 128 bits**. It breaks the plaintext into similar size blocks.
 
 The key length can be 128, 192 or 256 bits.
 
