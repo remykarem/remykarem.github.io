@@ -85,7 +85,7 @@
   - [PKCS1-v1_5](./primitives/padding-schemes/PKCS1-v1_5.md)
   - [OAEP](./primitives/padding-schemes/oaep.md)
 - [KDF](./primitives/kdf/index.md)
-    - [Older methods](./primitives/kdf/older-methods.md)
+    - [PBKDF1](./primitives/kdf/pbkdf1.md)
     - [PBKDF2](./primitives/kdf/pbkdf2.md)
     - [Bcrypt]()
     - [Scrypt]()
