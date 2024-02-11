@@ -37,6 +37,7 @@ Encryption
   - OpenSSL 1.x
   - OpenSSL 3.x
   - LibreSSL (macOS) - `/usr/bin/openssl`
+  - BoringSSL (Google)
 * OpenSSH
 * PyCryptodome
 * Bouncy Castle
