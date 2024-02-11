@@ -4,7 +4,7 @@ Data Encryption Standard
 
 [FIPS 46-3](https://csrc.nist.gov/pubs/fips/46-3/final)
 
-DES operates in **blocks of 64 bits**.
+DES operates a **block of 64 bits**.
 
 ~~~admonish warning
 OpenSSL considers this as a weak cipher.
