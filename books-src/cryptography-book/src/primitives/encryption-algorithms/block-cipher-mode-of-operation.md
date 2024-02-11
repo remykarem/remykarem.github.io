@@ -1,6 +1,6 @@
 #  Block cipher mode of operation
 
-Block ciphers usually operate in a **mode of operation**. This involves *repeated* transformations of a block, in order to achieve confidentiality and authentication. 
+Block ciphers (eg. AES, DES) usually operate in a **mode of operation**. This involves *repeated* transformations of a block, in order to achieve confidentiality and authentication. 
 
 $$
 \text{(message, \textbf{key}, \textbf{modeofoperation})} \rightarrow \text{ciphertext}
