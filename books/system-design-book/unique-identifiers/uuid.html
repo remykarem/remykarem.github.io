@@ -180,40 +180,14 @@
                         <p>x# UUID</p>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc4122">RFC 4122</a></p>
 <p>128-bit</p>
-<ul>
-<li>
-<p>UUIDv4</p>
-<ul>
-<li>
-<p>122 bits pseudo randomly generated</p>
-<div id="admonition-note" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Note</p>
-<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
-</div>
-<div>
-<pre><code>This is roughly 5 * 10^36
-</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>6 bits for version and variant</p>
-</li>
-</ul>
-</li>
-<li>
-<p>UUIDv7</p>
-</li>
-</ul>
-<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Temporal</th><th>Name-based</th><th>Randomness</th></tr></thead><tbody>
-<tr><td>UUIDv1</td><td>Yes</td><td>MAC</td><td>?</td></tr>
-<tr><td>UUIDv2</td><td></td><td></td><td></td></tr>
-<tr><td>UUIDv3</td><td>No</td><td>URL/OID</td><td>?</td></tr>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Temporal</th><th>Node</th><th>Randomness</th></tr></thead><tbody>
+<tr><td>UUIDv1</td><td>Yes</td><td>Yes</td><td>?</td></tr>
+<tr><td>UUIDv2</td><td>Yes</td><td>No</td><td></td></tr>
+<tr><td>UUIDv3</td><td>No</td><td>No</td><td>?</td></tr>
 <tr><td>UUIDv4</td><td>No</td><td>No</td><td>122 bits</td></tr>
-<tr><td>UUIDv5</td><td>No</td><td>URL/OID</td><td>?</td></tr>
-<tr><td>UUIDv6</td><td></td><td></td><td></td></tr>
-<tr><td>UUIDv7</td><td>Yes</td><td></td><td>?</td></tr>
+<tr><td>UUIDv5</td><td>No</td><td>No</td><td>?</td></tr>
+<tr><td>UUIDv6</td><td>Yes</td><td>Yes</td><td></td></tr>
+<tr><td>UUIDv7</td><td>Yes</td><td>No</td><td>?</td></tr>
 </tbody></table>
 </div>
 <p>References:
