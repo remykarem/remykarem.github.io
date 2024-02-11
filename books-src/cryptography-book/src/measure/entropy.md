@@ -2,6 +2,10 @@
 
 add javascript here
 
+$$
+H = \log_2 N
+$$
+
 * Bits of entropy is used to measure the unpredictability or randomness of anpiece of information. 
 * Entropy definition. System with outcomes.
 * Higher entropy means it’s “more random” or harder to guess. 
