@@ -1,4 +1,4 @@
-#  Mode of operation
+#  Block cipher mode of operation
 
 Block ciphers usually operate in a **mode of operation**. This involves *repeated* transformations of a block, in order to achieve confidentiality and authentication. 
 
