@@ -97,7 +97,7 @@
     - [DES](./primitives/encryption-algorithms/block-ciphers/des.md)
     - [3DES](./primitives/encryption-algorithms/block-ciphers/3des.md)
     - [Threefish]()
-  - [Mode of operation](./primitives/encryption-algorithms/mode-of-operation/index.md)
+  - [Mode of operation](./primitives/encryption-algorithms/mode-of-operation.md)
   - [Stream ciphers]()
     - [ChaCha20](./primitives/encryption-algorithms/stream-ciphers/chacha20.md)
     - [RC4](./primitives/encryption-algorithms/stream-ciphers/rc4.md)
