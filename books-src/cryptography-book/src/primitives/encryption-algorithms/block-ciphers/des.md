@@ -4,6 +4,8 @@
 
 Data Encryption Standard
 
+DES operates in **blocks of 64 bits**.
+
 ~~~admonish warning
 OpenSSL considers this as a weak cipher.
 
