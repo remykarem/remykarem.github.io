@@ -28,3 +28,4 @@ Features:
 References:
 * [The Wild World of Unique Identifiers (UUID, ULID, etc)](https://blog.scaledcode.com/blog/wild-world-unique-id/) by Kyle Carter
 * [Analyzing New Unique Identifier Formats (UUIDv6, UUIDv7, and UUIDv8)](https://blog.scaledcode.com/blog/analyzing-new-unique-id/) by Kyle Carter
+* [UUIDv7 generator](https://uuid7.com)
