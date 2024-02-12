@@ -15,12 +15,12 @@
 | UUIDv7  | 48       | No   | 74     |
 | UUIDv8  | ?        | ?    |        |
   
-Pros:
-* Decentralised generation 
+Things to consider:
+* Decentralised generation
+* Global uniqueness
+* Time sortable
 * Less guessable than sequential IDs
-
-Cons:
-* Poor index locality for older versions
+* **Index locality**
 * Privacy issues (MAC address)
 
 References:
