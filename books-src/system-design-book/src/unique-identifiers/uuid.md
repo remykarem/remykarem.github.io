@@ -23,7 +23,7 @@ Offers:
 Features:
 * **Temporal information**
 * **Sequential**
-  ~~~admonish tip title="Why sequential?"
+  ~~~admonish question title="Why do we want sequential?"
   Helps with data locality in the database
   ~~~
 * Privacy issues (MAC address)
