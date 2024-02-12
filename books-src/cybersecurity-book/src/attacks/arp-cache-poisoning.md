@@ -1,5 +1,7 @@
 # ARP cache poisoning
 
+aka ARP spoofing
+
 ARP cache poisoning works in the following way:
 
 1. Victim requests for the MAC address of the machine with IP address `a.b.c.d`. 
