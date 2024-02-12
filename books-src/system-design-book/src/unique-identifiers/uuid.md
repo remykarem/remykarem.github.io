@@ -7,12 +7,12 @@
 | Version | Temporal | Node | Random |
 |---------|----------|------|--------|
 | UUIDv1  | Yes      | Yes  | ?      |
-| UUIDv2  | Yes      | No   |        |
-| UUIDv3  | No       | No   | ?      |
-| UUIDv4  | -        | No   | 122    |
-| UUIDv5  | No       | No   | ?      |
+| UUIDv2  | Yes      | -    |        |
+| UUIDv3  | -        | -    | ?      |
+| UUIDv4  | -        | -    | 122    |
+| UUIDv5  | -        | -    | ?      |
 | UUIDv6  | 60       | Yes  | -      |
-| UUIDv7  | 48       | No   | 74     |
+| UUIDv7  | 48       | -    | 74     |
 | UUIDv8  | ?        | ?    |        |
   
 Offers:
