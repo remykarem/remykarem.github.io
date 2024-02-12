@@ -1,6 +1,12 @@
 # Dates
 
+## Unix timestamp
 
+No. of seconds elapsed since Unix epoch, i.e. 1 Jan 1970 UTC.
+
+## POSIX timestamp
+
+No. of seconds elapsed since Unix epoch, i.e. 1 Jan 1970 UTC, ignoring leap seconds (?).
 
 ## [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822#section-3.3)
 
