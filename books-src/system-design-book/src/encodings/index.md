@@ -12,6 +12,8 @@ For example, the "length" of "🤦🏼‍♂️" is different in various languag
 * Python — 5
 * JavaScript — 7
 * Rust — 17
+* Swift — 1
+* Elixir — 1
 
 So which is "correct"?
 
