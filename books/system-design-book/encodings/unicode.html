@@ -177,38 +177,92 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="unicode"><a class="header" href="#unicode">Unicode</a></h1>
-<p>Unicode is a mapping of a symbol to a number (&quot;<strong>code point</strong>&quot;, in Unicode speak). Eg. the symbol 💩 is assigned to the (decimal) number <code>128169</code>.</p>
-<p>Unicode is a <strong>32-bit</strong> character set, but only about 1 million code points are assigned a symbol.</p>
-<p>The convention to write code point values is <code>U+1F4A9</code> where <code>1F4A9</code> is hexadecimal for <code>128169</code>.</p>
+                        <h1 id="unicode--grapheme"><a class="header" href="#unicode--grapheme">Unicode &amp; grapheme</a></h1>
+<p>Unicode is a mapping of a <em>symbol</em> to a number (&quot;<strong>code point</strong>&quot;, in Unicode speak).</p>
+<p>These numbers are represented in hexadecimal and are usually formatted as <code>U+FE0F</code>.</p>
+<div id="admonition-example-of-symbols" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example of symbols</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-of-symbols"></a></p>
+</div>
+<div>
+<p>The symbol 💩 is assigned to <code>U+1F4A9</code>.
+The acute accent in European languages is assigned to <code>U+0301</code>.</p>
+</div>
+</div>
+<div id="admonition-see-unicode-values-in-macos" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>See Unicode values in macOS</p>
+<p><a class="admonition-anchor-link" href="#admonition-see-unicode-values-in-macos"></a></p>
+</div>
+<div>
+<p>In macOS, you can see go to <strong>Character Viewer</strong> (Ctrl+Cmd+Space), select a symbol, right-click, then select <strong>Copy Character Info</strong>. You'll get:</p>
+<p>💩</p>
+<p>pile of poop</p>
+<p>Unicode: U+1F4A9, UTF-8: F0 9F 92 A9</p>
+</div>
+</div>
+<p>A <em>human-readable character</em> is called a <strong>grapheme</strong> or a <strong>grapheme cluster</strong>. A grapheme can be encoded with multiple code points.</p>
+<div id="admonition-example-of-graphemes" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example of graphemes</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-of-graphemes"></a></p>
+</div>
+<div>
+<p>The character 🤦 is made up of 1 code point: <code>U+1F926</code>.</p>
+<pre><code class="language-sh">echo -e '\U1F926'
+</code></pre>
+<p>😱🤟🏽🤟🏽
+face screaming in fear
+Unicode: U+1F631, UTF-8: F0 9F 98 B1</p>
+<p>The character 🤦🏼‍♂️ is made up of 5 code points: <code>U+1F926</code>, <code>U+1F3FB</code>, <code>U+200D</code>, <code>U+2642</code>, <code>U+FE0F</code>.</p>
+<pre><code class="language-sh">echo -e '\U1F926\U1F3FB\U200D\U2642\UFE0F'
+</code></pre>
+</div>
+</div>
+<p>Unicode is a <strong>32-bit</strong> symbol set, but only about 1 million code points are assigned a symbol.</p>
+<div id="admonition-private-use" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Private Use</p>
+<p><a class="admonition-anchor-link" href="#admonition-private-use"></a></p>
+</div>
+<div>
+<p>There are also code points that are reserved for app developers and will never be defined by Unicode itself. These code points are called &quot;Private Use&quot;.</p>
+</div>
+</div>
 <p>The following are subsets of Unicode:</p>
 <ul>
 <li><a href="./ascii.html">ASCII</a></li>
 <li><a href="./iso-8859.html">Latin-1</a></li>
 </ul>
-<div id="admonition-emojis" class="admonition admonish-warning">
+<div id="admonition-same-same-but-different" class="admonition admonish-warning">
 <div class="admonition-title">
-<p>Emojis</p>
-<p><a class="admonition-anchor-link" href="#admonition-emojis"></a></p>
+<p>Same same but different</p>
+<p><a class="admonition-anchor-link" href="#admonition-same-same-but-different"></a></p>
 </div>
 <div>
-<p>An emoji that you see might be longer than 32 bits 😱.</p>
+<p>Two human-readable characters might look the same but they can be made up of different code points.</p>
+<p>Example: Å and Å</p>
+<pre><code class="language-sh">echo -e '\U00C5'
+echo -e '\U0041\U030A'
+</code></pre>
+<p>or <code>'</code> and <code>’</code></p>
+<pre><code class="language-sh">echo -e '\U0027'
+echo -e '\U2019'
+</code></pre>
+<p>or</p>
+<p>In such cases, you need to perform normalisation on the Unicode data.</p>
+<p>Normalisation is used to decompose characters into their base characters and optional marks. After decomposing, you can encode the string in ASCII ignoring non-ASCII characters, or alternatively, replace or remove them.</p>
 </div>
 </div>
-<div id="admonition-storage" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Storage</p>
-<p><a class="admonition-anchor-link" href="#admonition-storage"></a></p>
-</div>
-<div>
+<h2 id="storage"><a class="header" href="#storage">Storage</a></h2>
 <p>Unicode can be stored as a byte array in multiple ways:</p>
 <ul>
 <li><a href="./unicode/utf-8.html">UTF-8</a></li>
 <li>UTF-16</li>
 <li>UTF-32 — naïve way to store symbols; inefficient because for say certain use cases, you'll only use about 1 byte max.</li>
 </ul>
-</div>
-</div>
+<hr />
 <p>Readings:</p>
 <ul>
 <li><a href="https://tonsky.me/blog/unicode/">Unicode</a></li>

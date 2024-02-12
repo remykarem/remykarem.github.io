@@ -178,7 +178,8 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="utf-8"><a class="header" href="#utf-8">UTF-8</a></h1>
-<p><strong>UTF-8</strong> is an encoding; a mapping of a code point to a byte array. Specifically, UTF-8 stores code points in 1 to 4 bytes.</p>
+<p><strong>UTF-8</strong> is a mapping of Unicode code point to a sequence of bytes. </p>
+<p>It is basically a way to &quot;store&quot; code points. Specifically, UTF-8 stores code points in 1 to 4 bytes.</p>
 <div id="admonition-example" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example</p>
@@ -188,6 +189,18 @@
 <p>💩 is stored as <code>f0 9f 92 a9</code>.</p>
 </div>
 </div>
+<div id="admonition-see-utf-8-values-in-macos" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>See UTF-8 values in macOS</p>
+<p><a class="admonition-anchor-link" href="#admonition-see-utf-8-values-in-macos"></a></p>
+</div>
+<div>
+<p>In macOS, you can see go to <strong>Character Viewer</strong> (Ctrl+Cmd+Space), select a symbol, right-click, then select <strong>Copy Character Info</strong>. You'll get:</p>
+<p>💩</p>
+<p>pile of poop</p>
+<p>Unicode: U+1F4A9, UTF-8: F0 9F 92 A9</p>
+</div>
+</div>
 <div id="admonition-rust" class="admonition admonish-tip">
 <div class="admonition-title">
 <p>Rust</p>
@@ -195,6 +208,7 @@
 </div>
 <div>
 <p>Rust's <code>String</code> type is guaranteed to be UTF-8 valid.</p>
+<p>See <a href="https://doc.rust-lang.org/book/ch08-02-strings.html#storing-utf-8-encoded-text-with-strings">Storing UTF-8 Encoded Text with Strings</a>.</p>
 </div>
 </div>
 

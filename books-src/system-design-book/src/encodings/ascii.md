@@ -21,8 +21,7 @@ Character set:
   | `a`    | 61  |
   | `b`    | 62  |
 
-* Control characters
+* Control characters (first 32 characters)
 
-~~~admonish note title="Storage"
+## Storage
 The character set can be encoded using a storage size of 1 byte.
-~~~
