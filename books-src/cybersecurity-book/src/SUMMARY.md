@@ -115,6 +115,7 @@
     - [DoS / DDoS](./attacks/dos-ddos.md)
     - [IDOR](./attacks/idor.md)
     - [Directory traversal](./attacks/directory-traversal.md)
+    - [Side channel attack](./attacks/side-channel-attack.md)
     - [Supply chain attack](./attacks/supply-chain-attack.md)
     - [XSS]()
     - [SQL injection]()
