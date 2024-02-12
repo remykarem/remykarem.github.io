@@ -180,16 +180,27 @@
                         <h1 id="uuid"><a class="header" href="#uuid">UUID</a></h1>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc4122">RFC 4122</a></p>
 <p>128-bit</p>
-<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Temporal</th><th>Node</th><th>Randomness</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Temporal</th><th>Node</th><th>Random</th></tr></thead><tbody>
 <tr><td>UUIDv1</td><td>Yes</td><td>Yes</td><td>?</td></tr>
 <tr><td>UUIDv2</td><td>Yes</td><td>No</td><td></td></tr>
 <tr><td>UUIDv3</td><td>No</td><td>No</td><td>?</td></tr>
-<tr><td>UUIDv4</td><td>No</td><td>No</td><td>122 bits</td></tr>
+<tr><td>UUIDv4</td><td>-</td><td>No</td><td>122</td></tr>
 <tr><td>UUIDv5</td><td>No</td><td>No</td><td>?</td></tr>
-<tr><td>UUIDv6</td><td>Yes</td><td>Yes</td><td></td></tr>
-<tr><td>UUIDv7</td><td>Yes</td><td>No</td><td>?</td></tr>
+<tr><td>UUIDv6</td><td>60</td><td>Yes</td><td>-</td></tr>
+<tr><td>UUIDv7</td><td>48</td><td>No</td><td>74</td></tr>
+<tr><td>UUIDv8</td><td>?</td><td>?</td><td></td></tr>
 </tbody></table>
 </div>
+<p>Pros:</p>
+<ul>
+<li>Decentralised generation </li>
+<li>Less guessable than sequential IDs</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Poor index locality for older versions</li>
+<li>Privacy issues (MAC address)</li>
+</ul>
 <p>References:</p>
 <ul>
 <li><a href="https://blog.scaledcode.com/blog/wild-world-unique-id/">The Wild World of Unique Identifiers (UUID, ULID, etc)</a> by Kyle Carter</li>
