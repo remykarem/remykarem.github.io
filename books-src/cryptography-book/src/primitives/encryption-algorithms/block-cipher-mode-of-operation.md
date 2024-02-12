@@ -17,8 +17,8 @@ Here are some of the different modes of operation:
 | ECB               | No          | Blocks encrypted independently       |
 | CBC               | Yes         | XOR current block with previous encrypted block |
 | CFB               | Yes         | ?                                    |
-| OFB               | Yes         | ?                                    |
-| CTR               | Yes         | ?                                    |
+| OFB               | Yes         |  Turns a block cipher into a stream cipher                                |
+| CTR               | Yes         | Turns a block cipher into a stream cipher                                   |
 
 ~~~admonish note title="Initialisation vector"
 Some modes of operation use an **IV** to ensure that the same plaintext will not always get encrypted to the same ciphertext. 
