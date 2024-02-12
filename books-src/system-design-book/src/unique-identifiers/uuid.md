@@ -16,4 +16,5 @@
   
 
 References:
-https://medium.com/geekculture/the-wild-world-of-unique-identifiers-uuid-ulid-etc-17cfb2a38fce
+* [The Wild World of Unique Identifiers (UUID, ULID, etc)](https://blog.scaledcode.com/blog/wild-world-unique-id/) by Kyle Carter
+* [Analyzing New Unique Identifier Formats (UUIDv6, UUIDv7, and UUIDv8)](https://blog.scaledcode.com/blog/analyzing-new-unique-id/) by Kyle Carter
