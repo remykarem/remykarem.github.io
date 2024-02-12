@@ -95,3 +95,8 @@ like
 AES-128-CBC
 ```
 ~~~
+
+~~~admonish question title="What happens if the block doesn't meet the required length?"
+* Turn the block cipher into a stream cipher using counter mode
+* Pad
+~~~
