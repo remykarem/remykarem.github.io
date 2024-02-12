@@ -121,7 +121,7 @@
   - [RSAES-PKCS1-v1_5](./primitives/encryption-algorithms/rsaes-pkcs1-v1_5.md)
   - [ECIES](./primitives/encryption-algorithms/ecies.md)
   - [ElGamal]()
-- [Authenticated encryption](./primitives/authenticated-encryption/index.md)
+  - [Authenticated encryption](./primitives/authenticated-encryption/index.md)
   - [AEAD](./primitives/authenticated-encryption/aead.md)
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
     - [Static RSA key exchange](./primitives/key-exchange-algorithms/static-rsa-key-exchange.md)
