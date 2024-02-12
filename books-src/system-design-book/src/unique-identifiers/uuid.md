@@ -21,8 +21,11 @@ Offers:
 * Less guessable than sequential IDs
 
 Features:
-* **Time sortable** / **sequential**
-* **Index locality**
+* **Temporal information**
+* **Sequential**
+  ~~~admonish tip title="Why sequential?"
+  Helps with data locality in the database
+  ~~~
 * Privacy issues (MAC address)
 
 References:
