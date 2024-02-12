@@ -21,7 +21,7 @@ Things to consider:
 * Less guessable than sequential IDs
 
 Features:
-* **Time sortable**
+* **Time sortable** / **sequential**
 * **Index locality**
 * Privacy issues (MAC address)
 
