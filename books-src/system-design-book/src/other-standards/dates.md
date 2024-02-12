@@ -2,11 +2,11 @@
 
 ## Unix timestamp
 
-No. of seconds elapsed since Unix epoch, i.e. 1 Jan 1970 UTC.
+aka Unix epoch time, POSIX timestamp
 
-## POSIX timestamp
+No. of seconds^ elapsed since Unix epoch, i.e. 1 Jan 1970 UTC.
 
-No. of seconds elapsed since Unix epoch, i.e. 1 Jan 1970 UTC, ignoring leap seconds (?).
+^Unix timestamp supports seconds, milliseconds, microseconds and nanoseconds.
 
 ## [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822#section-3.3)
 
