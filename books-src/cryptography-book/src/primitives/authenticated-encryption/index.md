@@ -15,3 +15,13 @@ Examples:
 * AES + CCM — includes a MAC
 * AES + EAX + OCB
 * ChaCha20 + Poly1305
+
+~~~admonish question tirle="What was it like previously?"
+In TLS, it's referred to as MAC-then-Encrypt.
+
+[Source](https://blog.cloudflare.com/padding-oracles-and-the-decline-of-cbc-mode-ciphersuites)
+~~~
+
+~~~admonish info title="In use"
+TLS 1.3 uses ChaCha20-Poly1305 and AES-GCM.
+~~~
