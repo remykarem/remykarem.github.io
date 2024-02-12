@@ -28,6 +28,10 @@ Features:
   ~~~
 * Privacy issues (MAC address)
 
+~~~admonish question title="UUIDv7's risk of collision is lower than UUIDv4?"
+A Redditor [says](https://www.reddit.com/r/programming/s/iufhhOQPAd) the risk of collision is reduced for UUIDs created close in time to each other.
+~~~
+
 References:
 * [The Wild World of Unique Identifiers (UUID, ULID, etc)](https://blog.scaledcode.com/blog/wild-world-unique-id/) by Kyle Carter
 * [Analyzing New Unique Identifier Formats (UUIDv6, UUIDv7, and UUIDv8)](https://blog.scaledcode.com/blog/analyzing-new-unique-id/) by Kyle Carter
