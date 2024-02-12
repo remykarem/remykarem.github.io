@@ -18,8 +18,10 @@
 Things to consider:
 * Decentralised generation
 * Global uniqueness
-* Time sortable
 * Less guessable than sequential IDs
+
+Features:
+* **Time sortable**
 * **Index locality**
 * Privacy issues (MAC address)
 
