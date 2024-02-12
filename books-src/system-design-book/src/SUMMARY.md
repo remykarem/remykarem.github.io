@@ -213,16 +213,19 @@
 
 # Encodings
 
-- [Character encodings]()
-  - [Unicode & UTF-8](./character-encodings/unicode-and-utf-8.md)
-  - [UTF-XX]()
-  - [ASCII]()
-  - [Windows-1252]()
-  - [ISO 8859-1]()
-- [Base64](./others/base64.md)
-- [Crockford's Base32](./others/crockfords-base32.md)
-- [DER](./others/der.md)
-- [URL encoding]()
+- [Symbol to number to binary](./encodings/index.md)
+  - [ASCII](./encodings/ascii.md)
+  - [ISO 8859](./encodings/iso-8859.md)
+  - [Unicode](./encodings/unicode.md)
+    - [UTF-8](./encodings/unicode/utf-8.md)
+  - [Windows code pages](./encodings/windows-code-pages.md)
+- [Binary to text]()
+  - [Base64](./encodings/base64.md)
+  - [Crockford's Base32](./encodings/crockfords-base32.md)
+- [Symbol to ASCII]()
+  - [URL encoding]()
+- [Arbitrary data to binary]()
+  - [DER](./encodings/der.md)
 
 ---
 
