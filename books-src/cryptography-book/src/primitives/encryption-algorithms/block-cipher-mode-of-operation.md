@@ -15,7 +15,7 @@ Here are some of the different modes of operation:
 | Mode of operation | Requires IV | Brief description                    |
 |-------------------|-------------|--------------------------------------|
 | ECB               | No          | Blocks encrypted independently       |
-| CBC               | Yes         | Each block depends on previous block |
+| CBC               | Yes         | XOR current block with previous encrypted block |
 | CFB               | Yes         | ?                                    |
 | OFB               | Yes         | ?                                    |
 | CTR               | Yes         | ?                                    |
