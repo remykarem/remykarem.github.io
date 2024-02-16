@@ -9,3 +9,13 @@ Useful links:
 * [System Design Primer](https://github.com/donnemartin/system-design-primer)
 * [https://cloudbite.attejuvonen.fi](https://cloudbite.attejuvonen.fi/)
 * [https://www.youtube.com/watch?v=Z3SYDTMP3ME](https://www.youtube.com/watch?v=Z3SYDTMP3ME)
+
+Hello[^note]
+
+hello[^note2]
+
+hellooo[^note]
+
+[^note]: Hello [https://cloudbite.attejuvonen.fi](https://cloudbite.attejuvonen.fi/)
+
+[^note1]: Hellow [https://cloudbite.attejuvonen.fi](https://cloudbite.attejuvonen.fi/)
