@@ -12,10 +12,10 @@ Useful links:
 
 Hello[^note]
 
-hello[^note2]
+hello[^notee]
 
 hellooo[^note]
 
 [^note]: Hello [https://cloudbite.attejuvonen.fi](https://cloudbite.attejuvonen.fi/)
 
-[^note1]: Hellow [https://cloudbite.attejuvonen.fi](https://cloudbite.attejuvonen.fi/)
+[^notee]: Hellow [https://cloudbite.attejuvonen.fi](https://cloudbite.attejuvonen.fi/)
