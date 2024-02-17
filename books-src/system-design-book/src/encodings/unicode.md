@@ -19,7 +19,7 @@ pile of poop
 Unicode: U+1F4A9, UTF-8: F0 9F 92 A9
 ~~~
 
-A _human-readable character_ is called a **grapheme** or a **grapheme cluster**. A grapheme can be encoded with multiple code points.
+A _human-readable character_ is called a **grapheme** or a **grapheme cluster**. A grapheme is encoded by at least one code point.
 
 ~~~admonish example title="Example of graphemes"
 The character 🤦 is made up of 1 code point: `U+1F926`.
