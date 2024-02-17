@@ -225,7 +225,14 @@
 
 ---
 
-# Other standards
+# Topics
+
+- [Soft deletion](./topics/soft-deletion.md)
+- [Storing money](./topics/storing-money.md)
+
+---
+
+# Standards
 
 - [Data URI](./other-standards/data-uri.md)
 - [Date, time](./other-standards/dates.md)
