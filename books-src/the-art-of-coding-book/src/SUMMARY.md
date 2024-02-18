@@ -106,3 +106,9 @@
 - [Enum pattern]()
 - [Early return](./early_return.md)
 - [KISS]()
+
+---
+
+# Type theory
+
+- [Algebraic data type]()
