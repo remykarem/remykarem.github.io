@@ -100,7 +100,7 @@
 - [Repository pattern]()
 - [DAO pattern]()
 - [Lazy initialisation pattern]()
-- [Design by Contract]()
+- [Design by Contract](./design-by-contract.md)
 - [Leaky abstraction]()
 - [Typestate pattern](./typestate_pattern.md)
 - [Enum pattern]()
