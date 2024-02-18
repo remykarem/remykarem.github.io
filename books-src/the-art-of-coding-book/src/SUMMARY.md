@@ -23,6 +23,7 @@
   - [MVC](./application-code-patterns/patterns/mvc.md)
   - [MVP](./application-code-patterns/patterns/mvp.md)
   - [MVT](./application-code-patterns/patterns/mvt.md)
+  - [MVU](./application-code-patterns/patterns/mvu.md)
   - [DDD](./application-code-patterns/patterns/ddd.md)
   - [3-tier](./application-code-patterns/patterns/3-tier.md)
   - [Hexagonal]()
