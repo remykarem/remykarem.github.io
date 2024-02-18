@@ -1,5 +1,7 @@
 # Design by Contract
 
+Contract programming, programming by contract
+
 ## Preconditions
 
 ~~~admonish example title="Kotlin"
