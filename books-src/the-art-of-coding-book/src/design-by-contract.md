@@ -17,4 +17,4 @@ guard
 ---
 
 References:
-[BlaAa](https://itnext.io/design-by-contract-in-rust-4cfe88b349bd)
+[Design by Contract in Rust](https://itnext.io/design-by-contract-in-rust-4cfe88b349bd)
