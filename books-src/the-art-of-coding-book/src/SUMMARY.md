@@ -107,6 +107,7 @@
 - [Early return](./early_return.md)
 - [KISS]()
 - [Domain-specific type](./domain-specific-type.md)
+- [Typealias](./typealias.md)
 
 ---
 
