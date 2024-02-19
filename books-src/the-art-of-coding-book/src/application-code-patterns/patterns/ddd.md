@@ -19,6 +19,9 @@ Apart from the above, DDD also includes
 - Aggregate — a collection of Entity and Value Objects
 - Domain Events — events that the software react and respond
 
+DDD phases:
+1. Strategic — define the large-scale structure of the system, focusing on business capabilities
+2. Tactical — create the domain model using design patterns like entity, value objects etc. 
 
 Resources:
 * [Best Practice - An Introduction To Domain-Driven Design](https://learn.microsoft.com/en-us/archive/msdn-magazine/2009/february/best-practice-an-introduction-to-domain-driven-design)
