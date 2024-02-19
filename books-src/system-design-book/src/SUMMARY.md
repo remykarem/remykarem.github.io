@@ -235,6 +235,7 @@
 # Standards
 
 - [Data URI](./other-standards/data-uri.md)
+- [API specs](./other-standards/api-specs.md)
 - [Date, time](./other-standards/dates.md)
 - [Country code](./other-standards/country-code.md)
 - [Floating point numbers](./other-standards/floating-point-numbers.md)
