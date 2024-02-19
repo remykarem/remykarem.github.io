@@ -179,6 +179,7 @@
                     <main>
                         <h1 id="ddd"><a class="header" href="#ddd">DDD</a></h1>
 <p>Domain-Driven Design</p>
+<p>by Eric Evans &quot;Domain-Driven Design: Tackling Complexity in the Heart of Software&quot;</p>
 <div class="table-wrapper"><table><thead><tr><th>Concerns</th><th>DDD</th></tr></thead><tbody>
 <tr><td><a href="../concerns/ui-rendering.html">UI rendering</a></td><td>-</td></tr>
 <tr><td><a href="../concerns/request-handling.html">Request handling</a></td><td>?</td></tr>
@@ -188,23 +189,16 @@
 </div>
 <p>Apart from the above, DDD also includes</p>
 <ul>
-<li>Ubiquitous Language</li>
-<li>Bounded Context</li>
-<li>Value Objects (e.g. <code>Money</code> instead of <code>Decimal</code>)</li>
-<li>Aggregate</li>
+<li>Entity — objects with unique identity (eg. customer)</li>
+<li>Value Objects (e.g. <code>Money</code> instead of <code>Decimal</code>, Address)</li>
+<li>Bounded Context — encapsulates its own Ubiquitous Language </li>
+<li>Aggregate — a collection of Entity and Value Objects</li>
+<li>Domain Events — events that the software react and respond</li>
 </ul>
-<div id="admonition-first-impressions" class="admonition admonish-question">
-<div class="admonition-title">
-<p>First impressions</p>
-<p><a class="admonition-anchor-link" href="#admonition-first-impressions"></a></p>
-</div>
-<div>
-<p>DDD seems to apply to application code more than to system architecture. Spring Boot also seems to use these terms.</p>
-</div>
-</div>
 <p>Resources:</p>
 <ul>
 <li><a href="https://learn.microsoft.com/en-us/archive/msdn-magazine/2009/february/best-practice-an-introduction-to-domain-driven-design">Best Practice - An Introduction To Domain-Driven Design</a></li>
+<li><a href="https://redis.com/glossary/domain-driven-design-ddd/">Redis — DDD</a></li>
 </ul>
 
                     </main>
