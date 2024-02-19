@@ -2,6 +2,8 @@
 
 Domain-Driven Design
 
+by Eric Evans "Domain-Driven Design: Tackling Complexity in the Heart of Software"
+
 | Concerns                                            | DDD                |
 | --------------------------------------------------- | ------------------ |
 | [UI rendering](../concerns/ui-rendering.md)         | -                  |
@@ -11,14 +13,13 @@ Domain-Driven Design
 
 Apart from the above, DDD also includes
 
-- Ubiquitous Language
-- Bounded Context
-- Value Objects (e.g. `Money` instead of `Decimal`)
-- Aggregate
+- Entity — objects with unique identity (eg. customer)
+- Value Objects (e.g. `Money` instead of `Decimal`, Address)
+- Bounded Context — encapsulates its own Ubiquitous Language 
+- Aggregate — a collection of Entity and Value Objects
+- Domain Events — events that the software react and respond
 
-```admonish faq title="First impressions"
-DDD seems to apply to application code more than to system architecture. Spring Boot also seems to use these terms.
-```
 
 Resources:
 * [Best Practice - An Introduction To Domain-Driven Design](https://learn.microsoft.com/en-us/archive/msdn-magazine/2009/february/best-practice-an-introduction-to-domain-driven-design)
+* [Redis — DDD](https://redis.com/glossary/domain-driven-design-ddd/)
