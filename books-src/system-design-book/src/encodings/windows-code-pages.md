@@ -1,5 +1,7 @@
 # Windows code pages
 
+aka CP-XXXX
+
 A series of character sets from Windows.
 
 Examples:
