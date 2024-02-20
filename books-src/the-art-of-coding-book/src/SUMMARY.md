@@ -20,6 +20,7 @@
 
 - [Overview](./application-code-patterns/index.md)
 - [Patterns]()
+  - [Layered architecture](./application-code-patterns/patterns/layered-architecture.md)
   - [MVC](./application-code-patterns/patterns/mvc.md)
   - [MVP](./application-code-patterns/patterns/mvp.md)
   - [MVT](./application-code-patterns/patterns/mvt.md)
