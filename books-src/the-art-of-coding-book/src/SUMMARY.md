@@ -19,6 +19,13 @@
 # Application code patterns
 
 - [Overview](./application-code-patterns/index.md)
+- [Concerns]()
+  - [UI rendering](./application-code-patterns/concerns/ui-rendering.md)
+  - [Request handling](./application-code-patterns/concerns/request-handling.md)
+  - [Business logic](./application-code-patterns/concerns/business-logic.md)
+  - [Persistence](./application-code-patterns/concerns/persistence.md)
+  - [Configuration](./application-code-patterns/concerns/configuration.md)
+  - [Integration](./application-code-patterns/concerns/integration.md)
 - [Patterns]()
   - [Layered architecture](./application-code-patterns/patterns/layered-architecture.md)
   - [MVC](./application-code-patterns/patterns/mvc.md)
@@ -28,12 +35,6 @@
   - [DDD](./application-code-patterns/patterns/ddd.md)
   - [3-tier](./application-code-patterns/patterns/3-tier.md)
   - [Hexagonal]()
-- [Concerns]()
-  - [UI rendering](./application-code-patterns/concerns/ui-rendering.md)
-  - [Request handling](./application-code-patterns/concerns/request-handling.md)
-  - [Business logic](./application-code-patterns/concerns/business-logic.md)
-  - [Persistence](./application-code-patterns/concerns/persistence.md)
-  - [Integration](./application-code-patterns/concerns/integration.md)
 
 ---
 
