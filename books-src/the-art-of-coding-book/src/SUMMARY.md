@@ -33,6 +33,7 @@
   - [Request handling](./application-code-patterns/concerns/request-handling.md)
   - [Business logic](./application-code-patterns/concerns/business-logic.md)
   - [Persistence](./application-code-patterns/concerns/persistence.md)
+  - [Integration](./application-code-patterns/concerns/integration.md)
 
 ---
 
