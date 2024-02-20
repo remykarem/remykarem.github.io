@@ -16,8 +16,10 @@ Apart from the above, DDD also includes
 - Entity — objects with unique identity (eg. customer)
 - Value Objects (e.g. `Money` instead of `Decimal`, Address)
 - Bounded Context — encapsulates its own Ubiquitous Language 
-- Aggregate — a collection of Entity and Value Objects
+- Aggregate — a collection of Entity and Value Objects. The purpose is to model transactional invariants (relationships etc.). While databases can do that, not feasible in distributed. 
 - Domain Events — events that the software react and respond
+- Domain service — domain logic
+- Application service — user authentication, sending SMS
 
 DDD phases:
 1. Strategic — define the large-scale structure of the system, focusing on business capabilities

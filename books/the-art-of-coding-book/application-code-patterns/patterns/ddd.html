@@ -192,8 +192,10 @@
 <li>Entity — objects with unique identity (eg. customer)</li>
 <li>Value Objects (e.g. <code>Money</code> instead of <code>Decimal</code>, Address)</li>
 <li>Bounded Context — encapsulates its own Ubiquitous Language </li>
-<li>Aggregate — a collection of Entity and Value Objects</li>
+<li>Aggregate — a collection of Entity and Value Objects. The purpose is to model transactional invariants (relationships etc.). While databases can do that, not feasible in distributed. </li>
 <li>Domain Events — events that the software react and respond</li>
+<li>Domain service — domain logic</li>
+<li>Application service — user authentication, sending SMS</li>
 </ul>
 <p>DDD phases:</p>
 <ol>
