@@ -187,6 +187,16 @@
 <li>
 <p><strong>No side effects</strong></p>
 <p>Calling the function does not change the state of the program <em>outside the function</em>. This includes writing to the console, reading or writing files, modifying the database. (Fierce...)</p>
+<div id="admonition-is-it-also-bad-if-its-a-private-function" class="admonition admonish-question">
+  <div class="admonition-title">
+<p>Is it also 'bad' if it's a private function?</p>
+<p><a class="admonition-anchor-link" href="#admonition-is-it-also-bad-if-its-a-private-function"></a></p>
+</div>
+  <div>
+<pre><code>  Probably, because other parts of the class might accidentally use the wrong function, resulting in unintended side effects.
+</code></pre>
+</div>
+  </div>
 </li>
 </ul>
 
