@@ -14,3 +14,6 @@ Here are the responsibilities:
 * [Caching](../strategies/caching.md)
 * [Rate limiting](../strategies/rate-limiting.md)
 * [Logging & monitoring](../strategies/logging-and-monitoring.md)
+
+Features
+* Integration with other cloud services (eg. AWS API Gateway integrates with DynamoDB, SQS)
