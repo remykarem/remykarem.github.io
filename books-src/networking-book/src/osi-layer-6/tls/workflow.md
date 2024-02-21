@@ -20,3 +20,9 @@ Uses ECDHE, DHE
 2. ServerHello
 3. Server authentication
 4. Session key
+
+~~~admonish warning
+TLS1.0 and TLS1.1 have vulnerabilities.
+
+Citation needed.
+~~~
