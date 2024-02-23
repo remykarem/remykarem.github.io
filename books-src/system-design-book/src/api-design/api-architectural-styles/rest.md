@@ -15,6 +15,6 @@ This implementations adheres to 6 REST architectural constraints:
 - Cacheability: responses must implicitly or explicitly define themselves as cacheable or non-cacheable
 - …
 
-## Idempotence
+## Idempotency
 
 Does not apply to POST.
