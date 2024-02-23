@@ -236,8 +236,12 @@
 <p>Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first</p>
 </li>
 <li>
-<p>Encryption at rest</p>
+<p>TTL</p>
 </li>
+</ul>
+<p>Cloud features</p>
+<ul>
+<li>Encryption at rest</li>
 </ul>
 <p>Benefits:</p>
 <p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between (i) the producers of the message, and (ii) the consumers of the message. </p>
@@ -283,6 +287,16 @@
 </li>
 <li>
 <p><strong>Delay queue</strong> — postpone the delivery of new messages to the queue for a period of time (why would you wanna do this...?)</p>
+<div id="admonition-use-case" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Use case</p>
+<p><a class="admonition-anchor-link" href="#admonition-use-case"></a></p>
+</div>
+<div>
+<p>If you want to trigger new events at the granularity of seconds but can only do it at minute level.</p>
+<p><a href="https://repost.aws/questions/QURl9MC_sxTVWtJsMjDvwnlA/triggering-amazon-eventbridge-schedules-in-intervals-less-then-1-minute">Triggering Amazon EventBridge schedules in intervals less then 1 minute</a></p>
+</div>
+</div>
 </li>
 </ul>
 <div id="admonition-applications" class="admonition admonish-example">
