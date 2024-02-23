@@ -35,6 +35,9 @@ Features:
 - [Rate limiting](../strategies/rate-limiting.md)
 - Housekeeping — **message retention period** is the maximum period how long a message can stay in the queue
 - Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first
+- TTL
+
+Cloud features
 - Encryption at rest
 
 Benefits:
@@ -69,6 +72,12 @@ Types of queues
 * **Work queue** or **task queue** — designed to allow _multiple workers_ to consume tasks concurrently
 * **Delay queue** — postpone the delivery of new messages to the queue for a period of time (why would you wanna do this...?)
 
+  ~~~admonish example title="Use case"
+  If you want to trigger new events at the granularity of seconds but can only do it at minute level.
+
+  [Triggering Amazon EventBridge schedules in intervals less then 1 minute](https://repost.aws/questions/QURl9MC_sxTVWtJsMjDvwnlA/triggering-amazon-eventbridge-schedules-in-intervals-less-then-1-minute)
+  ~~~
+  
 ~~~admonish example title="Applications"
 * Batch messages for future processing. [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
 * Decouple requests from intensive background work. [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
