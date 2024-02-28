@@ -37,5 +37,5 @@ Congrats, you now have $10,000 in your account.
 
 ## Mitigation
 
-* [Anti-CSRF token](./mitigation/anti-csrf-token.md)
-* [Same-Site cookie attribute](./mitigation/same-site-cookie-attribute.md)
+* [Anti-CSRF token](../mitigation/anti-csrf-token.md)
+* [Same-Site cookie attribute](../mitigation/same-site-cookie-attribute.md)
