@@ -206,6 +206,55 @@
 <p>MIME-sniffing happens (for some web browsers) to determine the content of an asset. Specific to IE and Chrome. With clever naming, a resource can be determined to be an HTML document which has malicious script.</p>
 </div>
 </div>
+<h2 id="browser-http-client-apis"><a class="header" href="#browser-http-client-apis">Browser HTTP client APIs</a></h2>
+<p>There are 2 types: synchronous and asynchronous (also called AJAX)</p>
+<ul>
+<li>
+<p><strong>Form submission</strong> — synchronous (requires the user to wait and the whole page to be reloaded to see the result of submission); traditional</p>
+<div id="admonition-note" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>The HTTP Content-Type header is usually <code>application/x-www-form-urlencoded</code> or <code>application/form-data</code>.</p>
+</div>
+</div>
+</li>
+<li>
+<p><strong>XHR</strong> — asynchronous (uses JavaScript); modern</p>
+<div id="admonition-note-1" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note-1"></a></p>
+</div>
+<div>
+<p>The HTTP Content-Type header is usually <code>application/json</code>.</p>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Fetch API</strong> — asynchronous (uses JavaScript); more modern</p>
+<div id="admonition-note-2" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note-2"></a></p>
+</div>
+<div>
+<p>The HTTP Content-Type header is usually <code>application/json</code>.</p>
+</div>
+</div>
+<div id="admonition-tip" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="#admonition-tip"></a></p>
+</div>
+<div>
+<p>Fetch API is usually categorised under &quot;XHR&quot; in the network tab. Misnomer.</p>
+</div>
+</div>
+</li>
+</ul>
 
                     </main>
 
