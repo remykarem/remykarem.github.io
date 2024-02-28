@@ -13,3 +13,5 @@ Timing attacks can be performed against regular equality operators or regular lo
   Some keywords to look for: secure, timing safe, equal, compare
 
   Taken from GitHub's [Validating webhook deliveries](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries#validating-webhook-deliveries). [Stripe](https://stripe.com/docs/webhooks#verify-manually-4) also gives a similar advice.
+
+[A beginner's guide to constant-time cryptography](https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html)
