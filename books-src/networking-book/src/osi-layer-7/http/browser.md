@@ -16,15 +16,17 @@ MIME-sniffing happens (for some web browsers) to determine the content of an ass
 
 ## HTTP client APIs
 
-There are 2 types: synchronous and asynchronous (uses JavaScript; also called AJAX)
+There are 2 types: synchronous (requires the user to wait and the whole page to be reloaded to see the result of submission) and asynchronous (uses JavaScript; also called AJAX)
 
-* **Form submission** — synchronous (requires the user to wait and the whole page to be reloaded to see the result of submission); traditional
+There are 3 APIS:
+
+* **Form submission** — synchronous; traditional
 
   ~~~admonish note
   The HTTP Content-Type header is usually `application/x-www-form-urlencoded` or `application/form-data`. 
   ~~~
   
-* **XHR** — asynchronous (uses JavaScript); modern
+* **XHR** — asynchronous; modern
 
   ~~~admonish note
   The HTTP Content-Type header is usually `application/json`. 
