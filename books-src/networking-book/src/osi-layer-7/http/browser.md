@@ -14,9 +14,9 @@ The browser is an HTTP client.
 MIME-sniffing happens (for some web browsers) to determine the content of an asset. Specific to IE and Chrome. With clever naming, a resource can be determined to be an HTML document which has malicious script.
 ~~~
 
-## Browser HTTP client APIs
+## HTTP client APIs
 
-There are 2 types: synchronous and asynchronous (also called AJAX)
+There are 2 types: synchronous and asynchronous (uses JavaScript; also called AJAX)
 
 * **Form submission** — synchronous (requires the user to wait and the whole page to be reloaded to see the result of submission); traditional
 
@@ -29,7 +29,7 @@ There are 2 types: synchronous and asynchronous (also called AJAX)
   ~~~admonish note
   The HTTP Content-Type header is usually `application/json`. 
   ~~~
-* **Fetch API** — asynchronous (uses JavaScript); more modern
+* **Fetch API** — asynchronous; more modern
 
   ~~~admonish note
   The HTTP Content-Type header is usually `application/json`. 
@@ -38,3 +38,7 @@ There are 2 types: synchronous and asynchronous (also called AJAX)
   ~~~admonish tip
   Fetch API is usually categorised under "XHR" in the network tab. Misnomer.
   ~~~
+
+## Cookies
+
+Browser automatically sends "global" cookies. 
