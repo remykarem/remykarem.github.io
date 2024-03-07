@@ -180,10 +180,6 @@
                         <h1 id="locking"><a class="header" href="#locking">Locking</a></h1>
 <ul>
 <li>
-<p><strong>Pessimistic locking</strong></p>
-<p>Assumes that conflicts are likely. Acquire lock.</p>
-</li>
-<li>
 <p><strong>Optimistic locking</strong></p>
 <p>Assumes that conflicts are rare. No locks.</p>
 <ol>
@@ -193,6 +189,19 @@
 <li>Check if the version is still the same in the database</li>
 <li>If all good, write to the database</li>
 </ol>
+<div id="admonition-note" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>More common</p>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Pessimistic locking</strong></p>
+<p>Assumes that conflicts are likely. Acquire lock (usually in the database).</p>
 </li>
 <li>
 <p><strong>2PL (2-Phase Locking)</strong></p>
