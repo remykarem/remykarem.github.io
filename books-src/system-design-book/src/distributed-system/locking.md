@@ -1,9 +1,5 @@
 # Locking
 
-* **Pessimistic locking**
-
-  Assumes that conflicts are likely. Acquire lock.
-
 * **Optimistic locking**
 
   Assumes that conflicts are rare. No locks.
@@ -13,5 +9,13 @@
   3. Process the data
   4. Check if the version is still the same in the database
   5. If all good, write to the database
+ 
+  ~~~admonish note
+  More common
+  ~~~
+
+* **Pessimistic locking**
+
+  Assumes that conflicts are likely. Acquire lock (usually in the database).
 
 * **2PL (2-Phase Locking)**
