@@ -188,9 +188,9 @@
 <p>Assumes that conflicts are rare. No locks.</p>
 <ol>
 <li>Read the data</li>
-<li>Record the identifier (timestamp etc.) associated with the data</li>
+<li>Record the version (timestamp, hash etc.) associated with the data</li>
 <li>Process the data</li>
-<li>Check if the identifier is still the same in the database</li>
+<li>Check if the version is still the same in the database</li>
 <li>If all good, write to the database</li>
 </ol>
 </li>
