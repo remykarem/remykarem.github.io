@@ -21,15 +21,18 @@ The algorithm to verify a certificate is called **certificate path validation**.
 If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate. This verification is done against the client's trust store.
 
 ~~~admonish info title="Trust stores"
-Different OSes, browsers and other applications come with their set of trusted root certificates aka **trust stores**.
+Different OSes, browsers and other applications (eg. Java, IntelliJ) come with their set of trusted root certificates aka **trust stores**.
 
-In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under **System Roots**. See [Available trusted root certificates for Apple operating systems](https://support.apple.com/en-us/HT209143).
+* macOS
 
-In macOS, there's also `/etc/ssl/cert.pem` (???)
+  In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under **System Roots**. See [Available trusted root certificates for Apple operating systems](https://support.apple.com/en-us/HT209143).
 
-The browser... not too sure... maybe it uses the OS'es trust store (?)
+  In macOS, there's also `/etc/ssl/cert.pem` (???)
 
-Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. 
+* Browser
+
+  Not too sure... maybe it uses the OS'es trust store (?)
+
 * Java — The trust store is typically found in a file name `cacerts` somewhere in the Java installation directory.
 
   ```
