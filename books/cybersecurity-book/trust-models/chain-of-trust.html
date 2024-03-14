@@ -203,12 +203,17 @@
 <p><a class="admonition-anchor-link" href="#admonition-trust-stores"></a></p>
 </div>
 <div>
-<p>Different OSes, browsers and other applications come with their set of trusted root certificates aka <strong>trust stores</strong>.</p>
+<p>Different OSes, browsers and other applications (eg. Java, IntelliJ) come with their set of trusted root certificates aka <strong>trust stores</strong>.</p>
+<ul>
+<li>
+<p>macOS</p>
 <p>In macOS, the Keychain Access app lets you see the root certificates that macOS trusts by default under <strong>System Roots</strong>. See <a href="https://support.apple.com/en-us/HT209143">Available trusted root certificates for Apple operating systems</a>.</p>
 <p>In macOS, there's also <code>/etc/ssl/cert.pem</code> (???)</p>
-<p>The browser... not too sure... maybe it uses the OS'es trust store (?)</p>
-<p>Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. </p>
-<ul>
+</li>
+<li>
+<p>Browser</p>
+<p>Not too sure... maybe it uses the OS'es trust store (?)</p>
+</li>
 <li>
 <p>Java — The trust store is typically found in a file name <code>cacerts</code> somewhere in the Java installation directory.</p>
 <pre><code>/Users/raimibinkarim/Library/Java/JavaVirtualMachines/corretto-1.8.0_402/Contents/Home/jre/bin/keytool -import -trustcacerts -alias cloudflare -keystore /Users/raimibinkarim/Library/Java/JavaVirtualMachines/corretto-1.8.0_402/Contents/Home/jre/lib/security/cacerts -file /Users/raimibinkarim/Downloads/Cloudflare_CA.crt
