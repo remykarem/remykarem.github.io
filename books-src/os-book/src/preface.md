@@ -1,5 +1,6 @@
 # Preface
 
+* [How Unix Works: Become a Better Software Engineer](https://neilkakkar.com/unix.html)
 * [IPC — Unix Domain Sockets](https://goodyduru.github.io/os/2023/10/03/ipc-unix-domain-sockets.html)
 * [IPC — Unix Signals](https://goodyduru.github.io//os/2023/10/05/ipc-unix-signals.html)
 
