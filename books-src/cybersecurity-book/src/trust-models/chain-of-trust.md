@@ -18,7 +18,7 @@ Other CAs can in turn generate certificates for other servers and other CAs and 
 
 The algorithm to verify a certificate is called **certificate path validation**.
 
-If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate. This verification is done against the client's trust store.
+If a client needs to verify a server's certificate, it can check the chain of trust up to the root. If the chain leads back to a root that the client trusts, it can trust the server's certificate. This verification is done against the client's _trust store_.
 
 ~~~admonish info title="Trust stores"
 Different OSes, browsers and other applications (eg. Java, IntelliJ) come with their set of trusted root certificates aka **trust stores**.
