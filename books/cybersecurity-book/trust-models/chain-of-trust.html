@@ -209,12 +209,19 @@
 <p>The browser... not too sure... maybe it uses the OS'es trust store (?)</p>
 <p>Some applications (eg. Java, IntelliJ) have their own trust store independent of the OS. </p>
 <ul>
-<li>Java — The trust store is typically found in a file name <code>cacerts</code> somewhere in the Java installation directory.</li>
-<li>Python
+<li>
+<p>Java — The trust store is typically found in a file name <code>cacerts</code> somewhere in the Java installation directory.</p>
+<pre><code>/Users/raimibinkarim/Library/Java/JavaVirtualMachines/corretto-1.8.0_402/Contents/Home/jre/bin/keytool -import -trustcacerts -alias cloudflare -keystore /Users/raimibinkarim/Library/Java/JavaVirtualMachines/corretto-1.8.0_402/Contents/Home/jre/lib/security/cacerts -file /Users/raimibinkarim/Downloads/Cloudflare_CA.crt
+</code></pre>
+</li>
+<li>
+<p>Python</p>
 <pre><code>python3 -c &quot;import ssl; print(ssl.get_default_verify_paths())&quot;
 </code></pre>
 </li>
-<li>OpenSSL — Usually in <code>/etc/ssl/cert.pem</code></li>
+<li>
+<p>OpenSSL — Usually in <code>/etc/ssl/cert.pem</code></p>
+</li>
 </ul>
 </div>
 </div>
