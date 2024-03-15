@@ -2,7 +2,7 @@
 
 ## Unix timestamp
 
-aka Unix epoch time, POSIX timestamp
+aka Unix time, POSIX time, Unix epoch time, POSIX timestamp
 
 No. of seconds^ elapsed since Unix epoch, i.e. 1 Jan 1970 UTC.
 
