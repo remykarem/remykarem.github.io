@@ -179,6 +179,13 @@
                     <main>
                         <h1 id="base64"><a class="header" href="#base64">Base64</a></h1>
 <p>Encodes binary to text in blocks of 6 bits</p>
+<p>There are variants to this encoding:</p>
+<ol>
+<li>Standard (<code>+</code>, <code>/</code>) or URL-safe (<code>-</code>, <code>_</code>)</li>
+<li>Padded or not padded (with <code>=</code> if needed)</li>
+</ol>
+<p>For example, JWTs are URL-safe base64 encoded with no padding.</p>
+<p>See also the <a href="https://docs.rs/base64/latest/base64/">base64 crate</a>.</p>
 
                     </main>
 
