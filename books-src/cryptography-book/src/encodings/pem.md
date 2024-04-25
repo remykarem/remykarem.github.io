@@ -1,6 +1,6 @@
 # PEM
 
-[RFC 7468](https://datatracker.ietf.org/doc/html/rfc7468)
+[RFC 1421](https://datatracker.ietf.org/doc/html/rfc1421), [RFC 7468](https://datatracker.ietf.org/doc/html/rfc7468)
 
 Common filenames: `.pem`
 
