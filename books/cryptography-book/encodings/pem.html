@@ -200,6 +200,16 @@
 <p>The PEM format solves this problem by encoding the binary data using base64. PEM also defines a one-line header, consisting of -----BEGIN, a label, and -----, and a one-line footer, consisting of -----END, a label, and -----. The label determines the type of message encoded.</p>
 </div>
 </div>
+<div id="admonition-ssh-public-key-vs-pem" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>SSH public key vs. PEM</p>
+<p><a class="admonition-anchor-link" href="#admonition-ssh-public-key-vs-pem"></a></p>
+</div>
+<div>
+<p>Technically, the SSH public key format is not a PEM (see <a href="https://datatracker.ietf.org/doc/html/rfc4716#section-3.5">here</a>).</p>
+<p>There are, however, some differences that make them look superficially similar.</p>
+</div>
+</div>
 <div id="admonition-example-1-generic-private-key" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example 1: Generic private key</p>

@@ -17,6 +17,12 @@ Because DER produces binary output, it can be challenging to transmit the result
 The PEM format solves this problem by encoding the binary data using base64. PEM also defines a one-line header, consisting of -----BEGIN, a label, and -----, and a one-line footer, consisting of -----END, a label, and -----. The label determines the type of message encoded. 
 ~~~
 
+~~~admonish warning title="SSH public key vs. PEM"
+Technically, the SSH public key format is not a PEM (see [here](https://datatracker.ietf.org/doc/html/rfc4716#section-3.5)).
+
+There are, however, some differences that make them look superficially similar.
+~~~
+
 ~~~admonish example title="Example 1: Generic private key"
 ```
 ----BEGIN PRIVATE KEY----
