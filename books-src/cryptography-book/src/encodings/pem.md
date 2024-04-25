@@ -61,13 +61,3 @@ b3Bl...
 ```
 ~~~
 
-~~~admonish example title="Example 6: SSH public key"
-[RFC 4716](https://datatracker.ietf.org/doc/html/rfc4716)
-
-```txt
----- BEGIN SSH2 PUBLIC KEY ----
-Comment: "2048-bit RSA, converted by ..."
-AAAAB...
----- END SSH2 PUBLIC KEY ----
-```
-~~~
