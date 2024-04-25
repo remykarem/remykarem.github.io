@@ -167,6 +167,7 @@
   - [OpenPGP message format](./formats/openpgp-message-format.md)
   - [OpenSSH private key](./formats/openssh-private-key.md)
   - [OpenSSH public key](./formats/openssh-public-key-format.md)
+  - [SSH2 public key (PEM-like)](./formats/ssh2-public-key-format.md)
   - [SAML token](./formats/saml-token.md)
   - [X.509](./formats/x509.md)
 - [Encodings](./encodings/index.md)
