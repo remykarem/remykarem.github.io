@@ -1,5 +1,7 @@
 # Metrics
 
+* **IOPS** — input/output per second
+
 * **Throughput** — rate of processing; the rate at which a system processes data or completes tasks
 
   TPS (transactions per second), Mbps (megabits per second)
