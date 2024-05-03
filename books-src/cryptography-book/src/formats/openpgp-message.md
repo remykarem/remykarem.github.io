@@ -3,10 +3,10 @@
 [RFC 4880](https://datatracker.ietf.org/doc/html/rfc4880)
 
 The OpenPGP message format can be used to represent:
-* PGP cryptographic objects (private key, public key)
-* PGP encryption, signatures
+* cryptographic objects (eg. private key, public key)
+* encryption, signatures
 
-~~~admonish example title="Text-encoded example"
+~~~admonish example title="OpenPGP public key"
 ```txt
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
