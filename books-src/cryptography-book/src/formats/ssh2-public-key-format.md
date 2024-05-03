@@ -10,3 +10,9 @@ AAAAB...
 ---- END SSH2 PUBLIC KEY ----
 ```
 ~~~
+
+~~~admonish warning title="Like PEM but not PEM"
+This format is not a PEM format.
+
+It also does not use DER-encoding to serialise the crytographic objects.
+~~~
