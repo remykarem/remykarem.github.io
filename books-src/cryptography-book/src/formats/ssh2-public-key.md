@@ -1,4 +1,4 @@
-# SSH2 public key format
+# SSH2 public key
 
 [RFC 4716](https://datatracker.ietf.org/doc/html/rfc4716)
 
