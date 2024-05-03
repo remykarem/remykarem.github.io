@@ -12,13 +12,13 @@ Delete all newline characters
 tr -d '\n'
 ```
 
-Replace newline character with newline character literal (`\n`)
+Replace all newline characters with a newline character literal (`\n`)
 
 ```sh
-awk '{ printf "%s\\n", $0 }'
+sed '$!s/$/\\n/g'
 ```
 
-Replace newline character literal (`\n`) with a newline character
+Replace all newline character literals (`\n`) with a newline character
 
 ```sh
 sed 's/\\n/\n/g'
