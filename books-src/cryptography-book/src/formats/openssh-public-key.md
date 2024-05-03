@@ -1,4 +1,4 @@
-# OpenSSH public key format
+# OpenSSH public key
 
 [RFC 4253](https://datatracker.ietf.org/doc/html/rfc4253)
 
