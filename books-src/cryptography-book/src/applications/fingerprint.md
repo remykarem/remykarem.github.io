@@ -19,11 +19,11 @@ You can use SSH fingerprints to compare between any two keys. A key pair should 
 ? Not sure what values these fingerprints are based on.
 
 ```bash
-ssh-keygen -l -v -E sha256 -f <filepath>
+ssh-keygen -lf <filepath>
 ```
 
 ssh-keygen can also represent keys visually:
 
 ```bash
-ssh-keygen -l -v -f <filepath>
+ssh-keygen -lvf <filepath>
 ```
