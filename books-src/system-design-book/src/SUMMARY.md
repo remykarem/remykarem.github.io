@@ -22,6 +22,7 @@
 - [Consistency](./goals/consistency.md)
 - [Atomicity]()
 - [Maintainability](./goals/maintainability.md)
+- [Adaptability](./goals/adaptability.md)
 
 ---
 
