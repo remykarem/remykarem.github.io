@@ -1,6 +1,8 @@
 # Loose coupling of services
 
-Facilitates independent [horizontal scaling](./horizontal-scaling.md) for each service
+Facilitates:
+* independent [horizontal scaling](./horizontal-scaling.md) for each service
+* independent deployment schedules
 
 ~~~admonish tip
 Microservices are _loosely coupled_ if you can change one service without requiring other services to be updated at the same time.
