@@ -105,12 +105,16 @@
 - [Lazy initialisation pattern]()
 - [Design by Contract](./design-by-contract.md)
 - [Leaky abstraction]()
-- [Typestate pattern](./typestate_pattern.md)
+- [Typestate pattern](./typestate-pattern.md)
 - [Enum pattern]()
 - [Early return](./early_return.md)
 - [KISS]()
 - [Domain-specific type](./domain-specific-type.md)
 - [Typealias](./typealias.md)
+- [Type safety](./type-safety.md)
+- [Primitive wrapper](./primitive-wrapper.md)
+- [Polymorphic type](./polymorphic-type.md)
+- [Earliest responsible moment](./earliest-responsible-moment.md)
 
 ---
 
