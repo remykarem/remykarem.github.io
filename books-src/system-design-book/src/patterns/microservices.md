@@ -3,7 +3,7 @@
 Characteristics
 
 * [Loosely coupled](../strategies/loose-coupling-of-services.md); organised by business capability
-* [Database-per-service](../data-management-patterns/database-per-service.md)
+* [Database-per-service](../data-management-patterns/database-per-service.md) [^redis]
 * Separate build for each microservice
 * Deploy into containers
 * Servers are stateless
@@ -32,3 +32,5 @@ References:
 * [microservices.io](https://microservices.io)
 * blog.bytebytego.com
 * [ggg](https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis)
+
+[^redis]: [Redis](https://redis.com/blog/implementing-designing-microservices/)
