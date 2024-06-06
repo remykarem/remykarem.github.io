@@ -27,6 +27,22 @@
 | Connection     | Keep TCP connection open      | `close`, `keep-alive` |
 | Cookie         | -                             | `user=raimi`          |
 
+~~~admonish example title="User-Agent"
+
+```text
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0
+```
+
+1. Product name
+   * `Mozilla/5.0` — convention for modern browsers to indicate they are full-featured browsers
+   * `Opera/9.80` — used by Opera browser
+   * `Mozilla/4.0` — used by older versions of Internet Explorer
+2. OS
+3. Layout engine
+4. Browser
+5. Compatibility
+~~~~
+
 ### Response headers
 
 | Header         | What it means                  | Example                         |
