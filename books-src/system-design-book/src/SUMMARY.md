@@ -152,6 +152,7 @@
 
 # Distributed system
 
+- [Number of nodes](./distributed-system/number-of-nodes.md)
 - [CAP theorem](./distributed-system/cap-theorem.md)
 - [Consistency models](./consistency-models.md)
   - [Immediate consistency]()
