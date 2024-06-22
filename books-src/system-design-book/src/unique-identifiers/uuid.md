@@ -12,7 +12,7 @@
 | UUIDv4  | -        | -    | 122    |
 | UUIDv5  | -        | -    | ?      |
 | UUIDv6  | 60       | Yes  | -      |
-| UUIDv7  | 48       | -    | 74     |
+| UUIDv7  | 48 (Unix timestamp)     | -    | 74     |
 | UUIDv8  | ?        | ?    |        |
   
 Offers:
