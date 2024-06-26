@@ -190,12 +190,24 @@
 </ul>
 <p>A PGP message contains:</p>
 <ul>
-<li>Encrypted Session Key Packet — the encrypted shared secret</li>
-<li>SEP or SEIPD — the encrypted message</li>
-<li>signature, if any</li>
+<li>
+<p>Encrypted Session Key Packet — the encrypted shared secret</p>
+</li>
+<li>
+<p>the encrypted message</p>
+<p>Types of encrypted data packet:</p>
+<ul>
+<li>SEP — Symmetrically Encrypted Data Packet</li>
+<li>SEIPD — Symmetrically Encrypted Data Integrity Protected Data Packet (it's like SEP++)</li>
+<li>AEAD</li>
 </ul>
-<p>SEP = Symmetrically Encrypted Data Packet
-SEIP = Symmetrically Encrypted Data Integrity Protected Data Packet (it's like SEP++)</p>
+</li>
+<li>
+<p>signature, if any</p>
+</li>
+</ul>
+<p>SEP = 
+SEIPD = </p>
 <div id="admonition-openpgp-public-key" class="admonition admonish-example">
 <div class="admonition-title">
 <p>OpenPGP public key</p>
@@ -214,6 +226,17 @@ tpaVjKSc4ANsaJcCuDzO+03GQqaNKUhqAP46xoS626H+p8uVyRfcxn0M1h8qSnmy
 -----END PGP PUBLIC KEY BLOCK-----
 </code></pre>
 <p>The <code>=ujb1</code> is the checksum.</p>
+</div>
+</div>
+<div id="admonition-inspecting-a-pgp-message" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Inspecting a PGP message</p>
+<p><a class="admonition-anchor-link" href="#admonition-inspecting-a-pgp-message"></a></p>
+</div>
+<div>
+<pre><code>gpg --list-packets &lt;file&gt;
+</code></pre>
+<p>Fyi this option is not in the <code>--help</code> -.-</p>
 </div>
 </div>
 
