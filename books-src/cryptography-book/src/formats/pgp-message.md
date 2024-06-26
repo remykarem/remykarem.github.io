@@ -19,9 +19,6 @@ A PGP message contains:
   
 * signature, if any
 
-SEP = 
-SEIPD = 
-
 ~~~admonish example title="OpenPGP public key"
 ```txt
 -----BEGIN PGP PUBLIC KEY BLOCK-----
