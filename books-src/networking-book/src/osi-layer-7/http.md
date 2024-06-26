@@ -18,3 +18,5 @@ HTTP/2 and earlier use TCP as its underlying transport protocol so that messages
   5. The server closes the TCP connection.
 - Persistent HTTP connections
   Because an HTTP session typically involves multiple non-persistent HTTP connections, the TCP connections which are established and torn down multiple times are inefficient. Persistent HTTP connections are developed such that the duration of the time before the server closes the connection is configurable. Hence, only 1 TCP connection is used to serve multiple requests.
+
+https://jviide.iki.fi/http-redirects
