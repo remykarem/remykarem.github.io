@@ -10,11 +10,17 @@ The PGP message format can be used to represent:
 
 A PGP message contains:
 * Encrypted Session Key Packet — the encrypted shared secret
-* SEP or SEIPD — the encrypted message
+* the encrypted message
+
+  Types of encrypted data packet:
+  * SEP — Symmetrically Encrypted Data Packet
+  * SEIPD — Symmetrically Encrypted Data Integrity Protected Data Packet (it's like SEP++)
+  * AEAD
+  
 * signature, if any
 
-SEP = Symmetrically Encrypted Data Packet
-SEIP = Symmetrically Encrypted Data Integrity Protected Data Packet (it's like SEP++)
+SEP = 
+SEIPD = 
 
 ~~~admonish example title="OpenPGP public key"
 ```txt
@@ -31,4 +37,12 @@ tpaVjKSc4ANsaJcCuDzO+03GQqaNKUhqAP46xoS626H+p8uVyRfcxn0M1h8qSnmy
 ```
 
 The `=ujb1` is the checksum.
+~~~
+
+~~~admonish tip title="Inspecting a PGP message"
+```
+gpg --list-packets <file>
+```
+
+Fyi this option is not in the `--help` -.-
 ~~~
