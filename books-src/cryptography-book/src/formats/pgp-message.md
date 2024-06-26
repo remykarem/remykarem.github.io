@@ -1,8 +1,10 @@
-# OpenPGP message
+# PGP message
+
+aka OpenPGP message
 
 [RFC 4880](https://datatracker.ietf.org/doc/html/rfc4880)
 
-The OpenPGP message format can be used to represent:
+The PGP message format can be used to represent:
 * cryptographic objects (eg. private key, public key)
 * encryption, signatures
 
