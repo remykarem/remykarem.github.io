@@ -54,6 +54,10 @@ $$
 \text{(\textbf{key}, \text{ciphertext})} \rightarrow \text{message}
 $$
 
+The shared secret isn't explicitly present in the key structure. 
+
+Instead, a unique symmetric key is generated for every message.
+
 ## Signature
 
 In addition to encryption, OpenPGP allows the sender to sign the message using the private key.
