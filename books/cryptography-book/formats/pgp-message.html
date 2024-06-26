@@ -190,10 +190,12 @@
 </ul>
 <p>A PGP message contains:</p>
 <ul>
-<li>the encrypted session key,</li>
-<li>the message (but encrypted)</li>
+<li>Encrypted Session Key Packet — the encrypted shared secret</li>
+<li>SEP or SEIPD — the encrypted message</li>
 <li>signature, if any</li>
 </ul>
+<p>SEP = Symmetrically Encrypted Data Packet
+SEIP = Symmetrically Encrypted Data Integrity Protected Data Packet (it's like SEP++)</p>
 <div id="admonition-openpgp-public-key" class="admonition admonish-example">
 <div class="admonition-title">
 <p>OpenPGP public key</p>

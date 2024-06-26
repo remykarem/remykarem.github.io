@@ -9,9 +9,12 @@ The PGP message format can be used to represent:
 * encryption, signatures
 
 A PGP message contains:
-* the encrypted session key,
-* the message (but encrypted)
+* Encrypted Session Key Packet — the encrypted shared secret
+* SEP or SEIPD — the encrypted message
 * signature, if any
+
+SEP = Symmetrically Encrypted Data Packet
+SEIP = Symmetrically Encrypted Data Integrity Protected Data Packet (it's like SEP++)
 
 ~~~admonish example title="OpenPGP public key"
 ```txt
