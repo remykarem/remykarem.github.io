@@ -8,6 +8,11 @@ The PGP message format can be used to represent:
 * cryptographic objects (eg. private key, public key)
 * encryption, signatures
 
+A PGP message contains:
+* the encrypted session key,
+* the message (but encrypted)
+* signature, if any
+
 ~~~admonish example title="OpenPGP public key"
 ```txt
 -----BEGIN PGP PUBLIC KEY BLOCK-----
