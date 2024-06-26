@@ -2,13 +2,6 @@
 
 [RFC 4880](https://datatracker.ietf.org/doc/html/rfc4880)
 
-Anatomy of a PGP key:
-* a key pair
-* a User ID
-* subkeys — secondary key pairs that can be used for signing, encryption.
-* expiration date
-* ...
-
 ~~~admonish example title="Binary"
 The Base64-encoded binary will look like this (without the newline spaces):
 
