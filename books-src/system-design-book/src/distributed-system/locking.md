@@ -1,5 +1,7 @@
 # Locking
 
+Locking helps to prevent/mitigate overwriting changes from $k$ different people, where $k$ > 1.
+
 * **Optimistic locking**
 
   Assumes that conflicts are rare. No locks.
