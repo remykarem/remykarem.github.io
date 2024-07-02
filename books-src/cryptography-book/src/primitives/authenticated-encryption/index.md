@@ -25,3 +25,6 @@ In TLS, it's referred to as MAC-then-Encrypt.
 ~~~admonish info title="In use"
 TLS 1.3 uses ChaCha20-Poly1305 and AES-GCM.
 ~~~
+
+References:
+* [Lucid Multi-Key Deputies Require Commitment](https://scottarc.blog/2022/10/17/lucid-multi-key-deputies-require-commitment/)
