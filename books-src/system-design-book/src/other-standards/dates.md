@@ -22,11 +22,11 @@ ISO 8601 and RFC 3339 are separate standards but have overlapping conventions.
 
     `2024-01-19T10:20:30-05:00`
 
-3.	Only Date:
+3.	Only Date (without any information about time zone):
 
     `2024-01-19`
 
-4.	Only Time:
+4.	Only Time (without any information about time zone):
 
     `15:20:30Z`, `01:20:30+08:00`
 
