@@ -8,6 +8,6 @@ Filename extensions: `.p7b`, `.p7`
 
 ASN.1 schema
 
-This format can store _multiple_ [X.509](./x509.md) certificates.
-
-It is also used to store encrypted data.
+This format can store
+* encrypted data
+* _multiple_ [X.509](./x509.md) certificates
