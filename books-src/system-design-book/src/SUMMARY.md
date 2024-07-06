@@ -248,6 +248,7 @@
 
 - [UUID](./unique-identifiers/uuid.md)
 - [ULID](./unique-identifiers/ulid.md)
+- [TSID](./unique-identifiers/tsid.md)
 - [GUID]()
 
 ---
