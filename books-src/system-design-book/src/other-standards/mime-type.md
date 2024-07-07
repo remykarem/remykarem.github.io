@@ -19,6 +19,8 @@ text/plain;charset=UTF-8
 ```
 
 ~~~admonish example title="Common media types"
+Typically seen in HTTP headers.
+
 * `application/octet-stream` — binary data
 *  `text/plain`
 *  `text/css`
