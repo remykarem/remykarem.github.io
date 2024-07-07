@@ -37,4 +37,4 @@ References:
 * [Analyzing New Unique Identifier Formats (UUIDv6, UUIDv7, and UUIDv8)](https://blog.scaledcode.com/blog/analyzing-new-unique-id/) by Kyle Carter
 * [UNEXPECTED DOWNSIDES OF UUID KEYS IN POSTGRESQL](https://www.cybertec-postgresql.com/en/unexpected-downsides-of-uuid-keys-in-postgresql/)
 * [UUIDv7 generator](https://uuid7.com)
-* [PostgreSQL and UUID as primary key](https://maciejwalkowiak.com/blog/postgres-uuid-primary-key/)
+* [PostgreSQL and UUID as primary key](https://maciejwalkowiak.com/blog/postgres-uuid-primary-key/) by Maciej Walkowiak
