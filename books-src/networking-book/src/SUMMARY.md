@@ -171,7 +171,6 @@
 
 # Others
 
-- [Standards](./others/standards.md)
 - [Type a URL on the browser](./others/what-happens.md)
 - [Troubleshooting](./others/troubleshooting.md)
 - [Compression]()
