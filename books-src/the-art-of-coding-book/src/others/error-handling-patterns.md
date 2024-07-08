@@ -4,7 +4,8 @@
 * Return error codes — C, Go
 * Exceptions — Java, Kotlin
 * Error callbacks — JavaScript
-* Nullable
+* Nullable — any language
+* Empty collection — any language (for functions that return a collection)
 
 https://andreabergia.com/blog/2023/05/error-handling-patterns/
 
