@@ -1,6 +1,6 @@
 # Locking
 
-Locking helps to prevent/mitigate overwriting changes from $k$ different people, where $k$ > 1.
+Locking ensures that any change that is made on a record is based on the last write.
 
 * **Optimistic locking**
 
