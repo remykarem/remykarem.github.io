@@ -183,12 +183,30 @@
 <h1 id="pgp-key"><a class="header" href="#pgp-key">PGP key</a></h1>
 <p>Anatomy of a PGP key:</p>
 <ul>
-<li>a key pair</li>
-<li>a User ID</li>
+<li>a (primary) key pair</li>
 <li>subkeys — secondary key pairs that can be used for signing, encryption.</li>
+<li>a User ID</li>
 <li>expiration date</li>
 <li>...</li>
 </ul>
+<p>Each key pair has its own key ID.</p>
+<div id="admonition-key-id" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Key ID</p>
+<p><a class="admonition-anchor-link" href="#admonition-key-id"></a></p>
+</div>
+<div>
+<p>A key ID is a fingerprint of a subkey.</p>
+<p>A key ID can be in multiple formats:</p>
+<ul>
+<li>full (fingerprint)</li>
+<li>long (truncated version of fingerprint)</li>
+<li>short (truncated version of long)</li>
+</ul>
+<pre><code>gpg --list-keys --keyid-format LONG|SHORT
+</code></pre>
+</div>
+</div>
 <p>There are usually 2 key pairs involved when you generate a &quot;PGP key pair&quot;:</p>
 <ol>
 <li>an <code>[SC]</code> key</li>
