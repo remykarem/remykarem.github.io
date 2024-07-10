@@ -76,7 +76,7 @@
   - [Dependency Inversion]()
 
 - [Composition over inheritance](./composition-over-inheritance.md)
-
+- [Telescoping constructo](./telescoping-constructor.md)
 - [Inheritance]()
 - [Polymorphism]()
 
