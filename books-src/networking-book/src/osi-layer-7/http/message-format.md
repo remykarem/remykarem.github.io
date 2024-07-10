@@ -63,6 +63,14 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, lik
 | Last-Modified  | When content was last modified | `Thu, 29 Jun 2023 15:08:47 GMT` |
 | Connection     | Keep TCP connection open?      | `close`, `keep-alive`           |
 
+### sec-fetch-* headers
+
+Provide information about the context of a fetch request.
+
+### sec-ch-* headers
+
+Client Hints, provdies additional information about the client's device and preferences to the server.
+
 ### Security headers
 
 | Header                    | What it means          | Example                                                |
