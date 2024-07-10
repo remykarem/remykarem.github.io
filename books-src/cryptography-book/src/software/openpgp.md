@@ -70,7 +70,16 @@ You can include information about which keys you trust or have signed in your pu
 
 ~~~admonish note title="Keyring"
 A collection of keys that a user has stored on their system.
+
+There are 2 types of keyrings:
+* public key ring
+* private key ring
 ~~~
+
+## Subkeys
+
+* **Enhanced security** — Subkeys can be rotated or revoked independently of the primary key, minimizing the risk if a subkey is compromised.
+* **Separation of duties** — Different subkeys can be assigned for different purposes (encryption, signing, authentication), making it easier to manage and use them securely.
 
 ---
 
