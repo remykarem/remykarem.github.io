@@ -30,7 +30,7 @@
 ~~~admonish example title="User-Agent"
 
 ```text
-Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15
 ```
 
 1. Product name
@@ -38,8 +38,17 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89
    * `Opera/9.80` — used by Opera browser
    * `Mozilla/4.0` — used by older versions of Internet Explorer
 2. OS
+   * `(Macintosh; Intel Mac OS X 10.15; rv:89.0)`
 3. Layout engine
+   * `AppleWebKit/XXX` (WebKit engine used by Chrome, Safari)
+   * `Gecko/XXX` (Gecko engine used by Firefox)
+   * `Trident/XXX` (Trident engine used by Internet Explorer)
+   * `Blink/XXX` (Blink engine used by newer versions of Chrome and Opera)
 4. Browser
+   * `Chrome/XXX`
+   * `Firefox/XXX`
+   * `Safari/XXX`
+   * `Edge/XXX`
 5. Compatibility
 ~~~~
 
