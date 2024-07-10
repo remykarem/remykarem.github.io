@@ -18,7 +18,7 @@ Questions to ask:
 * Is the error recoverable? [Rust](https://doc.rust-lang.org/book/ch09-00-error-handling.html) has some guidelines
 
 ~~~admonish note title="Result type vs. (checked) exceptions"
-The key difference is performance overhead — creating exception objects is expensive.
+The key difference is performance overhead — capturing a stack trace in JVM is expensive.
 
 [Which part of throwing an Exception is expensive?](https://stackoverflow.com/questions/36343209/which-part-of-throwing-an-exception-is-expensive)
 ~~~
