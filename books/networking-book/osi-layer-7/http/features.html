@@ -182,7 +182,7 @@
 <div class="table-wrapper"><table><thead><tr><th>Feature</th><th>HTTP/3</th><th>HTTP/2</th><th>HTTP/1.1</th><th>HTTP/1.0</th></tr></thead><tbody>
 <tr><td>Transport protocol</td><td>QUIC</td><td>TCP</td><td>TCP</td><td>TCP</td></tr>
 <tr><td>Format</td><td>Binary</td><td>Binary</td><td>Text</td><td>Text</td></tr>
-<tr><td>Concurreny</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>Multiplexing</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
 <tr><td>Server push</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
 <tr><td>Stream prioritisation</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
 <tr><td>Header compression</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
@@ -213,14 +213,19 @@
 </ul>
 </div>
 </div>
-<div id="admonition-concurrency" class="admonition admonish-question">
+<div id="admonition-multiplexing" class="admonition admonish-question">
 <div class="admonition-title">
-<p>Concurrency</p>
-<p><a class="admonition-anchor-link" href="#admonition-concurrency"></a></p>
+<p>Multiplexing</p>
+<p><a class="admonition-anchor-link" href="#admonition-multiplexing"></a></p>
 </div>
 <div>
-<p>Suppose a client has made 2 requests (&quot;streams&quot;) to the server over the same TCP connection.</p>
-<p>Instead of the server responding to stream 1 fully (all frames), then stream 2 (all frames),</p>
+<p>Multiplexing allows the client to fire off multiple requests at once on the same connection and receive the requests back in any order.</p>
+<p><img src="https://freecontent.manning.com/wp-content/uploads/HTTP-vs-with-Push-HTTP1.gif" alt="HTTP/1.1" />
+<img src="https://freecontent.manning.com/wp-content/uploads/HTTP-vs-with-Push-HTTP2.gif" alt="HTTP/2" /></p>
+<p>https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/</p>
+<p>In HTTP/1.1, requests are processed sequentially.</p>
+<p>Clients need to wait for the server's response to send another request.</p>
+<p>Without multiplexing (responds to stream 1 fully (all frames), then stream 2 (all frames)):</p>
 <pre class="mermaid">sequenceDiagram
     client -&gt;&gt; server: stream 1
     client -&gt;&gt; server: stream 2
@@ -230,7 +235,7 @@
     server -&gt;&gt; client: stream 2 frame 2
     server -&gt;&gt; client: stream 2 frame 3
 </pre>
-<p>the server can <em>interleave</em> (&quot;multiplex&quot;) the frames between different streams.</p>
+<p>With multiplexing, the server can <em>interleave</em> (&quot;multiplex&quot;) the frames between different streams.</p>
 <pre class="mermaid">sequenceDiagram
     client -&gt;&gt; server: stream 1
     client -&gt;&gt; server: stream 2
