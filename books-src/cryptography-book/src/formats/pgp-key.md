@@ -30,3 +30,6 @@ There are usually 2 key pairs involved when you generate a "PGP key pair":
 * `C` — certifying (verifying)
 * `E` — encrypting
 
+~~~admonish tip
+When creating a PGP key, you can enter the `--expert` mode to select particular EC curves for example. 
+~~~
