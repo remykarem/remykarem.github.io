@@ -179,11 +179,29 @@
                     <main>
                         <h1 id="api-performance"><a class="header" href="#api-performance">API performance</a></h1>
 <ul>
-<li>Pagination</li>
-<li>Asynchronous logging</li>
-<li>Database connection pooling</li>
-<li>Request caching</li>
-<li>Payload compression</li>
+<li>
+<p>Pagination</p>
+<ul>
+<li>Offset-based: GET /orders?offset=0&amp;limit=3</li>
+<li>Cursor-based: GET /orders?cursor=xxx</li>
+<li>Page-based: GET /items?page=2&amp;size=3</li>
+<li>Key-based: GET /items?after_id=102&amp;limit=3</li>
+<li>Time-based: GET /items?start_time=xxx&amp;end_time=yyy</li>
+</ul>
+<p>Source: blog.bytebytego.com</p>
+</li>
+<li>
+<p>Asynchronous logging</p>
+</li>
+<li>
+<p>Database connection pooling</p>
+</li>
+<li>
+<p>Request caching</p>
+</li>
+<li>
+<p>Payload compression</p>
+</li>
 </ul>
 <p><a href="https://rapidapi.com/comics/improving-api-performance">https://rapidapi.com/comics/improving-api-performance</a></p>
 
