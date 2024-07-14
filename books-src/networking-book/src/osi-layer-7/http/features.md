@@ -6,7 +6,7 @@ HTTP/2: [RFC 7540](https://tools.ietf.org/html/rfc7540)
 | ---------------------- | ------ | ------ | -------- | -------- |
 | Transport protocol     | QUIC   | TCP    | TCP      | TCP      |
 | Format                 | Binary | Binary | Text     | Text     |
-| Concurreny             | ✅     | ✅     | ❌       | ❌       |
+| Multiplexing           | ✅     | ✅     | ❌       | ❌       |
 | Server push            | ✅     | ✅     | ❌       | ❌       |
 | Stream prioritisation  | ✅     | ✅     | ❌       | ❌       |
 | Header compression     | ✅     | ✅     | ✅       | ❌       |
@@ -26,10 +26,19 @@ This reduces the overhead of setting up and tearing down connections for each in
 * TLS overhead (HTTPS)
 ```
 
-~~~admonish faq title="Concurrency"
-Suppose a client has made 2 requests ("streams") to the server over the same TCP connection.
+~~~admonish faq title="Multiplexing"
+Multiplexing allows the client to fire off multiple requests at once on the same connection and receive the requests back in any order.
 
-Instead of the server responding to stream 1 fully (all frames), then stream 2 (all frames),
+![HTTP/1.1](https://freecontent.manning.com/wp-content/uploads/HTTP-vs-with-Push-HTTP1.gif)
+![HTTP/2](https://freecontent.manning.com/wp-content/uploads/HTTP-vs-with-Push-HTTP2.gif)
+
+https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/
+
+In HTTP/1.1, requests are processed sequentially.
+
+Clients need to wait for the server's response to send another request.
+
+Without multiplexing (responds to stream 1 fully (all frames), then stream 2 (all frames)):
 
 ```mermaid
 sequenceDiagram
@@ -42,7 +51,7 @@ sequenceDiagram
     server ->> client: stream 2 frame 3
 ```
 
-the server can _interleave_ ("multiplex") the frames between different streams.
+With multiplexing, the server can _interleave_ ("multiplex") the frames between different streams.
 
 ```mermaid
 sequenceDiagram
