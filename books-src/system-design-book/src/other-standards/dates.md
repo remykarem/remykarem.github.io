@@ -32,3 +32,9 @@ ISO 8601 and RFC 3339 are separate standards but have overlapping conventions.
 
 References:
 [RFC 3339 vs. ISO 8601](https://ijmacd.github.io/rfc3339-iso8601/)
+
+## Timezone
+
+tz database aka IANA time zone database
+
+Eg. `Asia/Singapore`
