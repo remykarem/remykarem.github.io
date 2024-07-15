@@ -25,4 +25,6 @@ A common protocol that is being tunnelled is HTTPS (aka TLS tunnel):
 
 ~~~admonish note title="On using HTTP CONNECT"
 HTTP clients automatically uses the HTTP CONNECT method (transparent to user) when it detects that it is connected to a proxy server.
+
+How does it detect that it's a proxy server? idk
 ~~~
