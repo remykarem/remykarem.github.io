@@ -10,6 +10,10 @@ The key length can be one of the following (bits): **128**, **192** or **256**.
 
 AES is a bijective function — any data can encrypted, and any data can be decrypted. 
 
+~~~admonish warning
+Because any data can be decrypted, it is  incorrect to assume that just because you can decrypt some ciphertext, that it was indeed encrypted using the key you have.
+~~~
+
 The ciphertext typically includes the initialisation vector and ciphertext itself.
 
 ~~~admonish example title="Ciphertext"
