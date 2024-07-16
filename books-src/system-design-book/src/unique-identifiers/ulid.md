@@ -2,6 +2,8 @@
 
 [Universally Unique Lexicographically Sortable Identifier](https://github.com/ulid/spec)
 
+[ULID](https://ulid.page)
+
 128 bits
 
 base32-encoded
