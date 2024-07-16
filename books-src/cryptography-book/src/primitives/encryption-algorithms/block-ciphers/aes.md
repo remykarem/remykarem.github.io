@@ -4,7 +4,7 @@ Advanced Encryption Standard
 
 [FIPS 197](https://csrc.nist.gov/pubs/fips/197/final)
 
-AES is a block cipher that operates on a single **block of 128 bits**. AES does not specify how to encrypt multiple blocks of 128 bits of data. 
+AES is a block cipher that operates on **one single block of 128 bits**. AES does not specify how to encrypt multiple blocks of 128 bits of data. 
 
 It breaks the plaintext into similar size blocks.
 
@@ -16,7 +16,7 @@ AES is a bijective function — any data can encrypted, and any data can be decr
 Because any data can be decrypted, it is  incorrect to assume that just because you can decrypt some ciphertext, that it was indeed encrypted using the key you have.
 ~~~
 
-The ciphertext typically includes the initialisation vector and ciphertext itself.
+When using a block cipher, we usually want to encrypt arbitrary amounts of data. This is where modes of operation come into play.
 
 ~~~admonish example title="Ciphertext"
 
