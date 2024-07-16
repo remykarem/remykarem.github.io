@@ -39,3 +39,5 @@ CBC is prone to [Padding Oracle Attacks](../../attacks/padding-oracle-attack.md)
 * Cloudflare: [Padding oracles and the decline of CBC-mode cipher suites](https://blog.cloudflare.com/padding-oracles-and-the-decline-of-cbc-mode-ciphersuites)
 * [The Padding Oracle Attack](https://robertheaton.com/2013/07/29/padding-oracle-attack/)
 ~~~
+
+[AES-GCM and breaking it on nonce reuse](https://frereit.de/aes_gcm/)
