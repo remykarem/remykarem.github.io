@@ -183,6 +183,11 @@
 <h1 id="cryptographic-hash-functions"><a class="header" href="#cryptographic-hash-functions">Cryptographic hash functions</a></h1>
 <p>This is a <strong>deterministic operation</strong>.</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(message)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">digest</span></span></span></span></span></span></p>
+<p>These functions should be</p>
+<ul>
+<li>collision-resistant — hash(m1) ≠ hash(m2)</li>
+<li>preimage-resistant — hard to find m given hash(m)</li>
+</ul>
 <div id="admonition-file-downloads" class="admonition admonish-example">
 <div class="admonition-title">
 <p>File downloads</p>
@@ -193,6 +198,7 @@
 <p><a href="https://anaconda.org/conda-forge/boto3/files">Here</a> is an example of the usage of checksum for boto3 package which is an AWS client (click on the (i) icon).</p>
 </div>
 </div>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
