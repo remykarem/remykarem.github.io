@@ -8,6 +8,8 @@ AES is a block cipher that operates on a **block of 128 bits**. It breaks the pl
 
 The key length can be one of the following (bits): **128**, **192** or **256**.
 
+AES is a bijective function — any data can encrypted, and any data can be decrypted. 
+
 The ciphertext typically includes the initialisation vector and ciphertext itself.
 
 ~~~admonish example title="Ciphertext"
