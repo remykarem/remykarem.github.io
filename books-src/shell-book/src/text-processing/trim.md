@@ -1,5 +1,11 @@
 # Trim
 
+## Trim leading and trailing newline characters
+
+```sh
+echo "\n\nhello\n\n\n" | awk '{printf "%s",$0}'
+```
+
 ## Trim leading
 
 ```sh
