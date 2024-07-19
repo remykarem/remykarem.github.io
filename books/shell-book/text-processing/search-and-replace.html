@@ -187,6 +187,15 @@
 <p>Replace all newline characters with a newline character literal <code>\n</code> (taken from <a href="https://stackoverflow.com/a/43967678">here</a>).</p>
 <pre><code class="language-sh">sed '$!s/$/\\n/g' | tr -d '\n'
 </code></pre>
+<div id="admonition-tip" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="#admonition-tip"></a></p>
+</div>
+<div>
+<p><code>$!</code> means except for the last</p>
+</div>
+</div>
 <p>Replace all newline character literals <code>\n</code> with a newline character</p>
 <pre><code class="language-sh">sed 's/\\n/\n/g'
 </code></pre>
