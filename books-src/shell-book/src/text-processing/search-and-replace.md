@@ -18,6 +18,10 @@ Replace all newline characters with a newline character literal `\n` (taken from
 sed '$!s/$/\\n/g' | tr -d '\n'
 ```
 
+~~~admonish tip
+`$!` means except for the last
+~~~
+
 Replace all newline character literals `\n` with a newline character
 
 ```sh
