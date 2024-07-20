@@ -21,6 +21,14 @@ Use `-v` or `-vv` etc. for verbosity.
 * PuTTY (Windows, Linux)
 ~~~
 
+~~~admonish warning
+When setting up an SSH server, OpenSSH enables SFTP and SCP by default.
+
+To disable SFTP, you need to remove the SFTP `Subsystem` in the configuration.
+
+To disable SCP, idk
+~~~
+
 ~~~admonish info title="SSH versions"
 SSH-2 is the latest version.
 
