@@ -11,6 +11,16 @@ AAAAB...
 ```
 ~~~
 
+~~~admonish tip
+You can read an SSH2 key (and output in OpenSSH format) using
+
+```
+ssh-keygen -i -f somekey.ssh2
+```
+
+This would be useful if you need to calculate the fingerprint etc. 
+~~~
+
 ~~~admonish warning title="Like PEM but not PEM"
 This format is not a PEM format.
 
