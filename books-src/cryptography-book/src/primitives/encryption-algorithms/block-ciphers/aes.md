@@ -10,7 +10,7 @@ It breaks the plaintext into similar size blocks.
 
 The key length can be one of the following (bits): **128**, **192** or **256**.
 
-AES is a bijective function — any data can encrypted, and any data can be decrypted. 
+AES is a bijective function — _any_ data can encrypted, and _any_ data can be decrypted. 
 
 ~~~admonish warning
 Because any data can be decrypted, it is  incorrect to assume that just because you can decrypt some ciphertext, that it was indeed encrypted using the key you have.
