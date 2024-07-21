@@ -12,6 +12,12 @@ Examples:
 http://example.com/app/.env
 ```
 
+Spring-related
+
 ```
 http://example.com/app/application.yml
+```
+
+```
+.../swagger-ui/index.html
 ```
