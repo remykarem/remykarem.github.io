@@ -17,7 +17,7 @@ Here are some of the different modes of operation:
 | Mode of operation | Requires IV | Brief description                               |
 |-------------------|-------------|-------------------------------------------------|
 | ECB               | No          | Blocks encrypted independently                  |
-| CBC               | Yes         | XOR current block with previous encrypted block |
+| CBC               | Yes         | XOR current block with previous encrypted block. Uses PKCS#7 padding |
 | CFB               | Yes         | ?                                               |
 | OFB               | Yes         | Turns a block cipher into a stream cipher       |
 | CTR               | Yes         | Turns a block cipher into a stream cipher       |
