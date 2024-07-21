@@ -13,3 +13,5 @@ SHA-3 family ("Keccak")  | 224/256/384/512 bits | SHA3-224, SHA3-256, SHA3-384, 
 cat -n "hello" | shasum -a 256
 ```
 ~~~
+
+[SHA-256](https://sha256algorithm.com)
