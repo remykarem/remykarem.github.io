@@ -240,6 +240,7 @@
 - [API specs](./other-standards/api-specs.md)
 - [MIME type](./other-standards/mime-type.md)
 - [S/MIME type](./other-standards/s-mime-type.md)
+- [Locale](./other-standards/locale.md)
 - [Language](./other-standards/language.md)
 - [Date, time](./other-standards/dates.md)
 - [Country code](./other-standards/country-code.md)
