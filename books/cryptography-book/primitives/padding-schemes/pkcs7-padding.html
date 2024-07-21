@@ -183,6 +183,7 @@
 <h1 id="pkcs-7-padding"><a class="header" href="#pkcs-7-padding">PKCS #7 padding</a></h1>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc2315">RFC 2315</a>, PKCS #7</p>
 <p>A <em>block</em> padding scheme that pads the data with the hexadecimal value <code>xx</code> where <code>xx</code> is the number of bytes to fill up.</p>
+<p>If the length is a multiple of the size of block, we add a full block of padding (so that there's no ambiguity if the last byte is content or padding; it will always be padding). </p>
 <div id="admonition-example" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example</p>
