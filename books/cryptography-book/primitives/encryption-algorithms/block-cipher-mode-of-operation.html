@@ -188,7 +188,7 @@
 <p>Here are some of the different modes of operation:</p>
 <div class="table-wrapper"><table><thead><tr><th>Mode of operation</th><th>Requires IV</th><th>Brief description</th></tr></thead><tbody>
 <tr><td>ECB</td><td>No</td><td>Blocks encrypted independently</td></tr>
-<tr><td>CBC</td><td>Yes</td><td>XOR current block with previous encrypted block</td></tr>
+<tr><td>CBC</td><td>Yes</td><td>XOR current block with previous encrypted block. Uses PKCS#7 padding</td></tr>
 <tr><td>CFB</td><td>Yes</td><td>?</td></tr>
 <tr><td>OFB</td><td>Yes</td><td>Turns a block cipher into a stream cipher</td></tr>
 <tr><td>CTR</td><td>Yes</td><td>Turns a block cipher into a stream cipher</td></tr>
