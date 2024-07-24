@@ -1,5 +1,7 @@
 # Event-driven architecture
 
+Event-driven architectures typically rely on **events** or **triggers** that cause immediate action without polling.
+
 * Events
 * Asynchronous; non-blocking
 * Stateless
