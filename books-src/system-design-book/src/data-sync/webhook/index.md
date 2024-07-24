@@ -27,8 +27,8 @@ The webhook provider triggers the webhook. The webhook consumer listens for **we
 GitHub makes a [distinction](https://docs.github.com/en/webhooks/about-webhooks#choosing-webhooks-or-the-rest-api) between a webhook and a REST API.
 ~~~
 
-~~~admonish note title="Webhook vs. API integration"
-A webhook shouldn't be compared to an API. 
+~~~admonish note title="Webhook vs. API"
+An API is an endpoint. A webhook is an integration that requires an endpoint.
 ~~~
 
 ~~~admonish example title="Uses"
