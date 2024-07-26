@@ -84,7 +84,7 @@
 - [Padding schemes](./primitives/padding-schemes/index.md)
   - [PKCS #7 padding](./primitives/padding-schemes/pkcs7-padding.md)
   - [PKCS #5 padding](./primitives/padding-schemes/pkcs5-padding.md)
-  - [PKCS1-v1_5](./primitives/padding-schemes/PKCS1-v1_5.md)
+  - [PKCS #1 v1.5 padding](./primitives/padding-schemes/PKCS1-v1_5.md)
   - [OAEP](./primitives/padding-schemes/oaep.md)
 - [KDF](./primitives/kdf/index.md)
     - [PBKDF1](./primitives/kdf/pbkdf1.md)
