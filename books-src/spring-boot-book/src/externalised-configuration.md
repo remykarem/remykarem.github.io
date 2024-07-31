@@ -22,7 +22,6 @@ some-profile:
 ```
 
 ```kotlin
-@ConstructorBinding
 @ConfigurationProperties("some-profile")
 data class ProfileProperties(
     val name: String,
