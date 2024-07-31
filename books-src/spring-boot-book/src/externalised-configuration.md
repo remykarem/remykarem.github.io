@@ -49,7 +49,6 @@ my-hobbies:
 ```
 
 ```kotlin
-@ConstructorBinding
 @ConfigurationProperties("some-profile")
 data class MyHobbyProperties(val myHobbies: List<String>)
 ```
