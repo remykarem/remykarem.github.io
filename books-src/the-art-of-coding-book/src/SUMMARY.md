@@ -115,6 +115,7 @@
 - [Primitive wrapper](./primitive-wrapper.md)
 - [Polymorphic type](./polymorphic-type.md)
 - [Earliest responsible moment](./earliest-responsible-moment.md)
+- [Mapper](./mapper.md)
 
 ---
 
