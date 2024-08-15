@@ -1,5 +1,7 @@
 # Facade
 
+This pattern provides a simple interface to a complex _structure_. 
+
 Hide **lower-level structures** with a **higher level structure**.
 
 ~~~admonish example title="(Tyre, Tank) vs. Car"
