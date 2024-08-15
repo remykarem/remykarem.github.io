@@ -6,10 +6,14 @@ Helps with:
 - [Fault tolerance](../goals/fault-tolerance.md)
 - [Reliability](../goals/reliability.md)
 
-Backoff policies
-* Fixed backoff / constant backoff / uniform retry interval
-* Exponential backoff
-* Capped exponential backoff
+Strategies:
+* Cancel
+* Immediate retry
+* Retry after delay (backoff)
+  Backoff policies
+  * Fixed backoff / constant backoff / uniform retry interval
+  * Exponential backoff
+  * Capped exponential backoff
 
   ~~~admonish question title="Why prefer exponential backoff to fixed backoff?"
   * Reduce network congestion from older requests.
@@ -33,4 +37,5 @@ Characteristics of a policy:
 
 Readings:
 * [AWS: Timeouts, retries, and backoff with jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/)
+* [Azure: Retry](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
 

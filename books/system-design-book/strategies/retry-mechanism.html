@@ -184,16 +184,22 @@
 <li><a href="../goals/fault-tolerance.html">Fault tolerance</a></li>
 <li><a href="../goals/reliability.html">Reliability</a></li>
 </ul>
-<p>Backoff policies</p>
+<p>Strategies:</p>
 <ul>
 <li>
-<p>Fixed backoff / constant backoff / uniform retry interval</p>
+<p>Cancel</p>
 </li>
 <li>
-<p>Exponential backoff</p>
+<p>Immediate retry</p>
 </li>
 <li>
-<p>Capped exponential backoff</p>
+<p>Retry after delay (backoff)
+Backoff policies</p>
+<ul>
+<li>Fixed backoff / constant backoff / uniform retry interval</li>
+<li>Exponential backoff</li>
+<li>Capped exponential backoff</li>
+</ul>
 <div id="admonition-why-prefer-exponential-backoff-to-fixed-backoff" class="admonition admonish-question">
 <div class="admonition-title">
 <p>Why prefer exponential backoff to fixed backoff?</p>
@@ -231,6 +237,7 @@
 <p>Readings:</p>
 <ul>
 <li><a href="https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/">AWS: Timeouts, retries, and backoff with jitter</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/retry">Azure: Retry</a></li>
 </ul>
 
                     </main>
