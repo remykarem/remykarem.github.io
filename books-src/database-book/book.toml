@@ -8,7 +8,7 @@ title = "Database Book"
 [output.html]
 site-url = "/books/database-book/"
 no-section-label = true
-edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/db-book/{path}"
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/database-book/{path}"
 additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
