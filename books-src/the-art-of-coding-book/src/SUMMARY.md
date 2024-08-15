@@ -60,6 +60,7 @@
     - [Proxy]()
 
   - [Behavioural](./gang-of-four/behavioural/index.md)
+    - [Facade](./gang-of-four/behavioural/facade.md)
     - [Strategy](./gang-of-four/behavioural/strategy.md)
     - [Iterator](./gang-of-four/behavioural/iterator.md)
     - [Chain of Responsibility](./gang-of-four/behavioural/chain-of-responsibility.md)
