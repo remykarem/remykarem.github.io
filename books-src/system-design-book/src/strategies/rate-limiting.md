@@ -9,6 +9,10 @@ Algorithms
 * Sliding window
 * Token bucket
 
+~~~admonish warning
+When integrating with systems, ensure that the client respects the limits of the target server, and/or handle errors airising from limits.
+~~~
+
 Helps with:
 * [Performance](../goals/performance.md)
 * [Availability](../goals/availability.md)
