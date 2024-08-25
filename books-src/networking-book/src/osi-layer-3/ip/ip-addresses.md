@@ -18,9 +18,11 @@ ipconfig getifaddr en0
 ```
 ~~~
 
-## Common IP addresses
+~~~admonish tip title="Server IP address range"
+Servers might maintain a range of IP addresses (in case you need to filter out traffic etc.).
 
-AWS — 3.x.x.x, 13.x.x.x, 15.x.x.x, 18.x.x.x, 52.x.x.x, 54.x.x.x
+Eg. [AWS IP address ranges](https://docs.aws.amazon.com/vpc/latest/userguide/aws-ip-ranges.html)
+~~~
 
 ## The CIDR notation
 
