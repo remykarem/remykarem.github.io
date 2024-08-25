@@ -114,7 +114,7 @@
 
 # Protocols: OSI Layer 5 — Session
 
-- [SOCKS]()
+- [SOCKS](./osi-layer-6/socks/index.md)
 
 ---
 
