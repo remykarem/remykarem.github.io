@@ -18,6 +18,10 @@ ipconfig getifaddr en0
 ```
 ~~~
 
+## Common IP addresses
+
+AWS — 3.x.x.x, 13.x.x.x, 15.x.x.x, 18.x.x.x, 52.x.x.x, 54.x.x.x
+
 ## The CIDR notation
 
 The CIDR notation is used to express a range of IP addresses.
