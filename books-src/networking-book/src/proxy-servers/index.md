@@ -18,3 +18,8 @@ Environment variables: `http_proxy`, `https_proxy`.
 * HTTP — Handle HTTP traffic
 * HTTPS — Handle encrypted HTTP traffic. This uses the HTTP `CONNECT` method to establish a tunnel to the destination server.
 * SOCKS — Handle multiple protocols including any TCP and UDP traffic
+
+## Authentication
+* Basic authentication
+* Digest authentication
+* NTLM
