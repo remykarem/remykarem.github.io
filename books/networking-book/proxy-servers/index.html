@@ -180,18 +180,6 @@
                         <h1 id="proxy-servers"><a class="header" href="#proxy-servers">Proxy servers</a></h1>
 <p>A proxy server acts as an intermediary between a client and a server. It <strong>forwards</strong> client requests to the target server, and returning the server's response to the client.</p>
 <p>Additionally, it can also act as an MITM proxy that <strong>intercepts</strong> the client requests.</p>
-<div id="admonition-example" class="admonition admonish-example">
-<div class="admonition-title">
-<p>Example</p>
-<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
-</div>
-<div>
-<pre><code class="language-bash">curl --proxy &quot;http://user:pwd@127.0.0.1:1234&quot; &quot;https://httpbin.org/ip&quot;
-</code></pre>
-<p>Note that in cURL, the default proxy protocol is HTTP.</p>
-<p>Environment variables: <code>http_proxy</code>, <code>https_proxy</code>.</p>
-</div>
-</div>
 <h2 id="protocols"><a class="header" href="#protocols">Protocols</a></h2>
 <ul>
 <li>HTTP — Handle HTTP traffic</li>
@@ -204,6 +192,28 @@
 <li>Digest authentication</li>
 <li>NTLM</li>
 </ul>
+<div id="admonition-clients-need-to-know-if-theyre-connecting-via-a-proxy-server" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Clients need to know if they're connecting via a proxy server</p>
+<p><a class="admonition-anchor-link" href="#admonition-clients-need-to-know-if-theyre-connecting-via-a-proxy-server"></a></p>
+</div>
+<div>
+<p>Some clients rely on the system's proxy configuration by default (eg. browsers like Chrome).</p>
+<p>For other clients, you'll need to see its settings (eg. Postman, IntelliJ, cURL).</p>
+</div>
+</div>
+<div id="admonition-curl" class="admonition admonish-example">
+<div class="admonition-title">
+<p>cURL</p>
+<p><a class="admonition-anchor-link" href="#admonition-curl"></a></p>
+</div>
+<div>
+<pre><code class="language-bash">curl --proxy &quot;http://user:pwd@127.0.0.1:1234&quot; &quot;https://httpbin.org/ip&quot;
+</code></pre>
+<p>Note that in cURL, the default proxy protocol is HTTP.</p>
+<p>Environment variables: <code>http_proxy</code>, <code>https_proxy</code>.</p>
+</div>
+</div>
 
                     </main>
 
