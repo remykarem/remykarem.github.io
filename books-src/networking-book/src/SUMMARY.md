@@ -32,6 +32,12 @@
 
 ---
 
+# Proxy server
+
+- [Proxy servers](./proxy-servers/index.md)
+
+---
+
 # VPN
 
 - [How it works](./vpn/index.md)
