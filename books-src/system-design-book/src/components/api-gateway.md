@@ -19,4 +19,5 @@ Here are the responsibilities:
 * [Logging & monitoring](../strategies/logging-and-monitoring.md)
 
 Features
+* [Ahto-scaling](../strategies/auto-scaling.md)
 * Integration with other cloud services (eg. AWS API Gateway integrates with DynamoDB, SQS)
