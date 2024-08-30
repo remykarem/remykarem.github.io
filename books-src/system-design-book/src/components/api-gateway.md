@@ -6,13 +6,16 @@ With a single entrypoint for requests, it becomes easier to maintain a _consiste
 
 Here are the responsibilities:
 * [**Routing**](../core-functionalities/routing.md)
+
+* [**Rate limiting**](../strategies/rate-limiting.md)
+  
 * [**Authentication & authorisation**](../core-functionalities/authentication-and-authorisation.md)
 
   API Gateway can handle authentication and authorisation before the request reaches your service.
   It's easier to manage this aspect via a single entry point, rather than spread requests across many different points.
 
 * [Caching](../strategies/caching.md)
-* [Rate limiting](../strategies/rate-limiting.md)
+
 * [Logging & monitoring](../strategies/logging-and-monitoring.md)
 
 Features
