@@ -194,18 +194,18 @@
 </ul>
 <h2 id="http-headers"><a class="header" href="#http-headers">HTTP headers</a></h2>
 <h3 id="request-headers"><a class="header" href="#request-headers">Request headers</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Header</th><th>What it means</th><th>Example</th></tr></thead><tbody>
-<tr><td>Host</td><td>Domain</td><td><code>example.com</code></td></tr>
-<tr><td>User-Agent</td><td>Name of HTTP client</td><td></td></tr>
-<tr><td>Authorization</td><td>Field for authentication etc.</td><td></td></tr>
-<tr><td>Content-Type</td><td>MIME type of body</td><td><code>application/json</code></td></tr>
-<tr><td>Content-Length</td><td>Length of body in bytes</td><td><code>34</code></td></tr>
-<tr><td>Referer</td><td>???</td><td><code>http://example.com</code></td></tr>
-<tr><td>Accept</td><td>MIME type for the response</td><td><code>image/png</code></td></tr>
-<tr><td>Connection</td><td>Keep TCP connection open</td><td><code>close</code>, <code>keep-alive</code></td></tr>
-<tr><td>Cookie</td><td>-</td><td><code>user=raimi</code></td></tr>
-</tbody></table>
-</div><div id="admonition-user-agent" class="admonition admonish-example">
+<p>| Header         | What it means                 | Example               | Remarks |
+| -------------- | ----------------------------- | --------------------- |
+| Host           | Domain                        | <code>example.com</code>         | This header may be used to validate the request (eg to prevent bypassing DNS routing) |
+| User-Agent     | Name of HTTP client           |
+| Authorization  | Field for authentication etc. |
+| Content-Type   | MIME type of body             | <code>application/json</code>    |
+| Content-Length | Length of body in bytes       | <code>34</code>                  |
+| Referer        | ???                           | <code>http://example.com</code>  |
+| Accept         | MIME type for the response    | <code>image/png</code>           |
+| Connection     | Keep TCP connection open      | <code>close</code>, <code>keep-alive</code> |
+| Cookie         | -                             | <code>user=raimi</code>          |</p>
+<div id="admonition-user-agent" class="admonition admonish-example">
 <div class="admonition-title">
 <p>User-Agent</p>
 <p><a class="admonition-anchor-link" href="#admonition-user-agent"></a></p>
