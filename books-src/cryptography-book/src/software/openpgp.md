@@ -100,8 +100,10 @@ There are 2 types of keyrings:
 * GitHub: [Storing large secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#storing-large-secrets)
 ```
 
-~~~admonish question title="Why does GPG require TTY?"
-?
+~~~admonish question title="Why does GPG require TTY? What is a GPG agent?"
+A TTY is needed to prompt the user for passphrase when GPG performs signing, encrypting etc.
+
+An alternative is to use a graphical interface like Pinentry, which is part of the GPG suite.
 ~~~
 
 ```admonish warning
