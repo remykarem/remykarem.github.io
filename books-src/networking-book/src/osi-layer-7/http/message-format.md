@@ -16,7 +16,7 @@
 ### Request headers
 
 | Header         | What it means                 | Example               | Remarks |
-| -------------- | ----------------------------- | --------------------- |
+| -------------- | ----------------------------- | --------------------- |--|
 | Host           | Domain                        | `example.com`         | This header may be used to validate the request (eg to prevent bypassing DNS routing) |
 | User-Agent     | Name of HTTP client           | |
 | Authorization  | Field for authentication etc. ||
