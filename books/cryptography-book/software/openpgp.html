@@ -292,8 +292,11 @@
 <p><a class="admonition-anchor-link" href="#admonition-why-does-gpg-require-tty-what-is-a-gpg-agent"></a></p>
 </div>
 <div>
+<p>When a GPG requires a passphrase or private key, it communicates with the GPG agent.</p>
+<p>A GPG agent handles keys, caches passphrases etc.</p>
 <p>A TTY is needed to prompt the user for passphrase when GPG performs signing, encrypting etc.</p>
-<p>An alternative is to use a graphical interface like Pinentry, which is part of the GPG suite.</p>
+<p>An alternative is to use a graphical interface like Pinentry, which is part of the GPG suite. This is configured in GPG agent config.</p>
+<p>Places to configure: <code>~/.gnupg/gpg-agent.conf</code>, <code>~/.gnupg/gpg.conf</code>.</p>
 </div>
 </div>
 <div id="admonition-warning" class="admonition admonish-warning">
