@@ -101,9 +101,15 @@ There are 2 types of keyrings:
 ```
 
 ~~~admonish question title="Why does GPG require TTY? What is a GPG agent?"
+When a GPG requires a passphrase or private key, it communicates with the GPG agent.
+
+A GPG agent handles keys, caches passphrases etc.
+
 A TTY is needed to prompt the user for passphrase when GPG performs signing, encrypting etc.
 
-An alternative is to use a graphical interface like Pinentry, which is part of the GPG suite.
+An alternative is to use a graphical interface like Pinentry, which is part of the GPG suite. This is configured in GPG agent config.
+
+Places to configure: `~/.gnupg/gpg-agent.conf`, `~/.gnupg/gpg.conf`.
 ~~~
 
 ```admonish warning
