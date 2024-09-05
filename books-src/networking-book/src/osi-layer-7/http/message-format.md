@@ -10,10 +10,70 @@
 - OPTIONS
   - Identify allowed request methods (eg. GET etc.). Response contains an `Allow` header.
   - Preflighted requests in CORS
+ 
+## Common Content-Type and how they look like in the request/response
 
-## HTTP headers
+* `application/json`
 
-### Request headers
+  ```json
+  {"hello":"world"}
+  ```
+
+* `application/x-www-form-urlencoded` — key-value pairs
+
+  For
+  * name: Ali
+  * city: City hall
+ 
+  it will look like
+    
+  ```
+  name=Ali&city=City%20hall
+  ```
+  
+* `multipart/form-data; boundary=<someboundary>` — key-value pairs, can have binary
+
+  For
+  * name: Ali
+  * city: City Hall
+  * somefile: a hello.txt file
+  * somefile2: a hello.bin file
+ 
+  it will look like
+
+  ```
+  ----------------------------592480407577116170609506
+  Content-Disposition: form-data; name="name"
+  
+  ali
+  ----------------------------592480407577116170609506
+  Content-Disposition: form-data; name="city"
+  
+  City Hall
+  ----------------------------592480407577116170609506
+  Content-Disposition: form-data; name="somefile"; filename="hello.txt"
+  Content-Type: text/plain
+  
+  hello there!
+  
+  ----------------------------592480407577116170609506
+  Content-Disposition: form-data; name="somefile2"; filename="hello.bin"
+  Content-Type: application/octet-stream
+  
+  Helloo
+  
+  ----------------------------592480407577116170609506--
+  ```
+
+  where `----------------------------592480407577116170609506` is the boundary.
+
+* `application/octet-stream`
+
+  ```
+  <binary data>
+  ```
+
+## HTTP Request headers
 
 | Header         | What it means                 | Example               | Remarks |
 | -------------- | ----------------------------- | --------------------- |--|
@@ -52,7 +112,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, lik
 5. Compatibility
 ~~~~
 
-### Response headers
+## HTTP Response headers
 
 | Header         | What it means                  | Example                         |
 | -------------- | ------------------------------ | ------------------------------- |

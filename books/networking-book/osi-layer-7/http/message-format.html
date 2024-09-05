@@ -192,8 +192,65 @@
 </ul>
 </li>
 </ul>
-<h2 id="http-headers"><a class="header" href="#http-headers">HTTP headers</a></h2>
-<h3 id="request-headers"><a class="header" href="#request-headers">Request headers</a></h3>
+<h2 id="common-content-type-and-how-they-look-like-in-the-requestresponse"><a class="header" href="#common-content-type-and-how-they-look-like-in-the-requestresponse">Common Content-Type and how they look like in the request/response</a></h2>
+<ul>
+<li>
+<p><code>application/json</code></p>
+<pre><code class="language-json">{&quot;hello&quot;:&quot;world&quot;}
+</code></pre>
+</li>
+<li>
+<p><code>application/x-www-form-urlencoded</code> — key-value pairs</p>
+<p>For</p>
+<ul>
+<li>name: Ali</li>
+<li>city: City hall</li>
+</ul>
+<p>it will look like</p>
+<pre><code>name=Ali&amp;city=City%20hall
+</code></pre>
+</li>
+<li>
+<p><code>multipart/form-data; boundary=&lt;someboundary&gt;</code> — key-value pairs, can have binary</p>
+<p>For</p>
+<ul>
+<li>name: Ali</li>
+<li>city: City Hall</li>
+<li>somefile: a hello.txt file</li>
+<li>somefile2: a hello.bin file</li>
+</ul>
+<p>it will look like</p>
+<pre><code>----------------------------592480407577116170609506
+Content-Disposition: form-data; name=&quot;name&quot;
+
+ali
+----------------------------592480407577116170609506
+Content-Disposition: form-data; name=&quot;city&quot;
+
+City Hall
+----------------------------592480407577116170609506
+Content-Disposition: form-data; name=&quot;somefile&quot;; filename=&quot;hello.txt&quot;
+Content-Type: text/plain
+
+hello there!
+
+----------------------------592480407577116170609506
+Content-Disposition: form-data; name=&quot;somefile2&quot;; filename=&quot;hello.bin&quot;
+Content-Type: application/octet-stream
+
+Helloo
+
+----------------------------592480407577116170609506--
+</code></pre>
+<p>where <code>----------------------------592480407577116170609506</code> is the boundary.</p>
+</li>
+<li>
+<p><code>application/octet-stream</code></p>
+<pre><code>&lt;binary data&gt;
+</code></pre>
+</li>
+</ul>
+<h2 id="http-request-headers"><a class="header" href="#http-request-headers">HTTP Request headers</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Header</th><th>What it means</th><th>Example</th><th>Remarks</th></tr></thead><tbody>
 <tr><td>Host</td><td>Domain</td><td><code>example.com</code></td><td>This header may be used to validate the request (eg to prevent bypassing DNS routing)</td></tr>
 <tr><td>User-Agent</td><td>Name of HTTP client</td><td></td><td></td></tr>
@@ -246,7 +303,7 @@
 </ol>
 </div>
 </div>
-<h3 id="response-headers"><a class="header" href="#response-headers">Response headers</a></h3>
+<h2 id="http-response-headers"><a class="header" href="#http-response-headers">HTTP Response headers</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Header</th><th>What it means</th><th>Example</th></tr></thead><tbody>
 <tr><td>Set-Cookie</td><td>Set a cookie</td><td><code>user=raimi; HttpOnly</code></td></tr>
 <tr><td>Content-Type</td><td>MIME type of body</td><td><code>application/json</code></td></tr>
