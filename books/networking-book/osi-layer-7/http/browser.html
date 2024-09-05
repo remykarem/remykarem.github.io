@@ -258,6 +258,17 @@
 </ul>
 <h2 id="cookies"><a class="header" href="#cookies">Cookies</a></h2>
 <p>Browser automatically sends &quot;global&quot; cookies. </p>
+<p>Cookies are unique string identifiers that can be stored on the client’s browser to keep track of client’s state (for the purpose of logging in, serving customised content). They are set by the server through HTTP headers. After the cookie is set, it’s sent along with subsequent HTTP requests to the same server to allow the server to know who is contacting it.</p>
+<p>Things involved in the process of setting and using cookies: HTTP request, HTTP response, cookie file on the client’s browser and the database of cookie-user values on the server</p>
+<p>Cookie file contains:</p>
+<ul>
+<li>Website’s domain</li>
+<li>String value of cookie</li>
+<li>Date that cookie expires</li>
+</ul>
+<pre><code>Set cookie: session=44ecb091; path=/servlets
+</code></pre>
+<p>Note: 3rd party cookies are cookies set for domains that are not being visited. Blocking them is not enough due to several workarounds like respawning cookies etc.</p>
 
                     </main>
 
