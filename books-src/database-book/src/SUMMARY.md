@@ -10,6 +10,7 @@
 - [Transaction](./query/sql/transaction.md)
 - [Lock](./query/sql/lock.md)
 - [Cursor](./query/sql/cursor.md)
+- [Trigger](./query/sql/trigger.md)
 
 ---
 
