@@ -5,6 +5,14 @@
 
 ---
 
+# SQL features
+
+- [Transaction](./query/sql/transaction.md)
+- [Lock](./query/sql/lock.md)
+- [Cursor](./query/sql/cursor.md)
+
+---
+
 # Data storage
 
 - [File](./storage/data_structures/file.md)
