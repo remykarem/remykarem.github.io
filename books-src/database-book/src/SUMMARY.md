@@ -11,6 +11,7 @@
 - [Lock](./query/sql/lock.md)
 - [Cursor](./query/sql/cursor.md)
 - [Trigger](./query/sql/trigger.md)
+- [Analyse](./query/sql/analyse.md)
 
 ---
 
