@@ -5,7 +5,7 @@
 
 ---
 
-# SQL features
+# Features
 
 - [Transaction](./query/sql/transaction.md)
 - [Lock](./query/sql/lock.md)
