@@ -181,7 +181,23 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="transaction"><a class="header" href="#transaction">Transaction</a></h1>
+<div id="admonition-warning" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
+</div>
+<div>
+<p>Note that client libraries or frameworks might automatically rollback a transaction when an error occurs.</p>
+<pre><code class="language-sql">BEGIN;
+
+-- operations...
+
+COMMIT;
+</code></pre>
+</div>
+</div>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

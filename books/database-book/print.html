@@ -201,7 +201,23 @@
 <li>RAM</li>
 </ul>
 <p>The topic on storage of data is closely related to <a href="storage/../query/query_processing/access_methods.html">access methods</a> because at the end of the day, data needs to be accessed.</p>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="analyse"><a class="header" href="#analyse">Analyse</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="transaction"><a class="header" href="#transaction">Transaction</a></h1>
+<div id="admonition-warning" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="query/sql/transaction.html#admonition-warning"></a></p>
+</div>
+<div>
+<p>Note that client libraries or frameworks might automatically rollback a transaction when an error occurs.</p>
+<pre><code class="language-sql">BEGIN;
+
+-- operations...
+
+COMMIT;
+</code></pre>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="analyse"><a class="header" href="#analyse">Analyse</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="file"><a class="header" href="#file">File</a></h1>
 <p>A <strong>database file</strong> (or <strong>file</strong> or <strong>table store</strong>) is a <em>series</em> of <a href="storage/data_structures/page.html">pages</a>.</p>
 <div id="admonition-note" class="admonition admonish-note">
@@ -577,7 +593,7 @@ pin page and return address
 <li>Multi-Disk Parallelism</li>
 <li>Database Partitioning</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="transaction"><a class="header" href="#transaction">Transaction</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="transaction-1"><a class="header" href="#transaction-1">Transaction</a></h1>
 <p>A <strong>transaction</strong> is the execution of a sequence of one or more operations.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="acid"><a class="header" href="#acid">ACID</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="locking"><a class="header" href="#locking">Locking</a></h1>
