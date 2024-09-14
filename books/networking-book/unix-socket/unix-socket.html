@@ -179,6 +179,36 @@
                     <main>
                         <h1 id="unix-socket"><a class="header" href="#unix-socket">Unix socket</a></h1>
 <p>aka Unix domain socket</p>
+<div id="admonition-example-applications" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example applications</p>
+<p><a class="admonition-anchor-link" href="#admonition-example-applications"></a></p>
+</div>
+<div>
+<ul>
+<li>Docker</li>
+<li>ssh-agent</li>
+</ul>
+</div>
+</div>
+<div id="admonition-unix-socket-client" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Unix socket client</p>
+<p><a class="admonition-anchor-link" href="#admonition-unix-socket-client"></a></p>
+</div>
+<div>
+<ul>
+<li>
+<p>cURL</p>
+<pre><code class="language-sh">curl --unix-socket ~/.colima/docker.sock http://localhost/v1.41/containers/json\?all\=tru | jq
+</code></pre>
+</li>
+<li>
+<p>Low-level programming</p>
+</li>
+</ul>
+</div>
+</div>
 
                     </main>
 
