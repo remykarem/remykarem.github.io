@@ -1,5 +1,11 @@
 # Administrative
 
+See max connections
+
+```sql
+SHOW max_connections;
+```
+
 See current sessions
 
 ```sql
