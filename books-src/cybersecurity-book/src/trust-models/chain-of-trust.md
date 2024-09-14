@@ -29,6 +29,10 @@ Different OSes, browsers and other applications (eg. Java, IntelliJ) come with t
 
   In macOS, there's also `/etc/ssl/cert.pem` (???)
 
+* Linux
+
+  As an OpenSSL-compatible directory `/etc/ssl/certs` or as a bundled cert in `/etc/ssl/certs/ca-certificates.crt`.
+
 * Browser
 
   Not too sure... maybe it uses the OS'es trust store (?)
