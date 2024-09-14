@@ -13,7 +13,7 @@
 - [Cursor](./query/sql/cursor.md)
 - [Trigger](./query/sql/trigger.md)
 - [Analyse](./query/sql/analyse.md)
-- [JSON & JSONB](.query/sql/json-jsonb.md)
+- [JSON & JSONB](./query/sql/json-jsonb.md)
 
 ---
 
