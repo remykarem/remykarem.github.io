@@ -240,6 +240,9 @@ COMMIT;
 <p>JSON — like text, just that there's validation before insertion
 JSONB — optimised to access the contents etc.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="administrative"><a class="header" href="#administrative">Administrative</a></h1>
+<p>See max connections</p>
+<pre><code class="language-sql">SHOW max_connections;
+</code></pre>
 <p>See current sessions</p>
 <pre><code class="language-sql">SELECT COUNT(*) AS total_sessions
 FROM pg_stat_activity
