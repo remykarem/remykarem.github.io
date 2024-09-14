@@ -5,6 +5,7 @@ aka Unix domain socket
 ~~~admonish example title="Example applications"
 * Docker
 * ssh-agent
+* gpg-agent
 ~~~
 
 ~~~admonish example title="Unix socket client"
