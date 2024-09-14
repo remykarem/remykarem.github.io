@@ -2,6 +2,10 @@
 
 aka Unix domain socket
 
+~~~admonish note
+Unix socket is an inter-process communication rather than network communication.
+~~~
+
 ~~~admonish example title="Example applications"
 * Docker
 * ssh-agent
