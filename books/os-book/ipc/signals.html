@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>IPC - os-book</title>
+        <title>Signal - os-book</title>
 
 
         <!-- Custom HTML head -->
@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="../io.html">I/O</a></li><li class="chapter-item expanded "><div>Process abstraction</div></li><li class="chapter-item expanded "><a href="../process_memory.html">Process memory</a></li><li class="chapter-item expanded "><div>Process state</div></li><li class="chapter-item expanded "><div>Process scheduling</div></li><li class="chapter-item expanded "><div>Context switching</div></li><li class="chapter-item expanded "><a href="../threads.html">Threads</a></li><li class="chapter-item expanded "><a href="../ipc/index.html" class="active">IPC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ipc/signals.html">Signal</a></li><li class="chapter-item expanded "><a href="../ipc/unix-socket.html">Unix socket</a></li><li class="chapter-item expanded "><div>Pipe</div></li><li class="chapter-item expanded "><div>Shared memory</div></li></ol></li><li class="chapter-item expanded "><a href="../memory_management.html">Memory management</a></li><li class="chapter-item expanded "><a href="../system_calls.html">System calls</a></li><li class="chapter-item expanded "><a href="../vectorisation.html">Vectorisation</a></li><li class="chapter-item expanded "><div>User permissions</div></li><li class="chapter-item expanded "><div>File systems</div></li><li class="chapter-item expanded "><div>Control groups</div></li><li class="chapter-item expanded "><div>Namespaces</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div>Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="../file_system_management.html">File system management</a></li><li class="chapter-item expanded "><div>Disk scheduling</div></li><li class="chapter-item expanded "><a href="../shell.html">Shell</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="../io.html">I/O</a></li><li class="chapter-item expanded "><div>Process abstraction</div></li><li class="chapter-item expanded "><a href="../process_memory.html">Process memory</a></li><li class="chapter-item expanded "><div>Process state</div></li><li class="chapter-item expanded "><div>Process scheduling</div></li><li class="chapter-item expanded "><div>Context switching</div></li><li class="chapter-item expanded "><a href="../threads.html">Threads</a></li><li class="chapter-item expanded "><a href="../ipc/index.html">IPC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ipc/signals.html" class="active">Signal</a></li><li class="chapter-item expanded "><a href="../ipc/unix-socket.html">Unix socket</a></li><li class="chapter-item expanded "><div>Pipe</div></li><li class="chapter-item expanded "><div>Shared memory</div></li></ol></li><li class="chapter-item expanded "><a href="../memory_management.html">Memory management</a></li><li class="chapter-item expanded "><a href="../system_calls.html">System calls</a></li><li class="chapter-item expanded "><a href="../vectorisation.html">Vectorisation</a></li><li class="chapter-item expanded "><div>User permissions</div></li><li class="chapter-item expanded "><div>File systems</div></li><li class="chapter-item expanded "><div>Control groups</div></li><li class="chapter-item expanded "><div>Namespaces</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div>Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="../file_system_management.html">File system management</a></li><li class="chapter-item expanded "><div>Disk scheduling</div></li><li class="chapter-item expanded "><a href="../shell.html">Shell</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,7 +152,7 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/remykarem/remykarem.github.io/edit/main/books-src/os-book/src/ipc/index.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/remykarem/remykarem.github.io/edit/main/books-src/os-book/src/ipc/signals.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -181,31 +181,23 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="ipc"><a class="header" href="#ipc">IPC</a></h1>
-<p>Inter-process communication</p>
-<h2 id="socket"><a class="header" href="#socket">Socket</a></h2>
-<p>Data sent over a network interface</p>
-<h2 id="shared-memory"><a class="header" href="#shared-memory">Shared memory</a></h2>
-<h2 id="memory-mapped-file"><a class="header" href="#memory-mapped-file">Memory-mapped file</a></h2>
-<p>Memory mapping, <code>mmap</code> is a technique to map the file to a process's address space (<strong>directly into program's memory</strong>) such that the process can address the file directly and <strong>no copies are required</strong> (step 3 of file I/O).</p>
-<p>Another explanation: <code>mmap</code> maps memory pages directly to bytes on disk. </p>
-<p>When to use memory maps?</p>
-<ul>
-<li>You access data randomly</li>
-<li>You keep it around for a long time</li>
-<li>You want to share it with other processes</li>
-</ul>
-<p><a href="https://unix.stackexchange.com/a/474928/289113">https://unix.stackexchange.com/a/474928/289113</a></p>
+                        <h1 id="signals"><a class="header" href="#signals">Signals</a></h1>
+<p>A signal is an infrastructure between kernel and processes. </p>
+<p>Sending a signal is also known as kill. It is a system call that can send a signal to a process.</p>
+<p><code>man signal</code></p>
+<p><code>kill -l</code></p>
+<p><code>kill &lt;SIGNAL&gt; %&lt;job_number&gt;</code></p>
+<p>Ignorable = can be trapped</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../threads.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../ipc/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../ipc/signals.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../ipc/unix-socket.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -215,11 +207,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../threads.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../ipc/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../ipc/signals.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../ipc/unix-socket.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
