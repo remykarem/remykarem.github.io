@@ -11,12 +11,6 @@
 
 ---
 
-# Unix socket
-
-- [Unix socket](./unix-socket/unix-socket.md)
-
----
-
 # Software/hardware layers
 
 - [Application]()
