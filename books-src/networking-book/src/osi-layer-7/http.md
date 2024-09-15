@@ -8,6 +8,10 @@ HTTP/2 and earlier use TCP as its underlying transport protocol so that messages
 
 ---
 
+~~~admonish example title="Docker API"
+Docker API is like "HTTP over Unix socket".
+~~~
+
 ## Types of HTTP connections
 
 - Non-persistent HTTP connections
