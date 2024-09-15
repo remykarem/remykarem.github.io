@@ -1,4 +1,6 @@
-# Inter-process communication
+# IPC
+
+Inter-process communication
 
 ## **Signals**
 
