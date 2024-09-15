@@ -11,7 +11,7 @@
 - [Process scheduling]()
 - [Context switching]()
 - [Threads](./threads.md)
-- [Inter-process communication]()
+- [IPC](./ipc/index.md)
   - [Signal]()
   - [Pipe]()
   - [Shared memory]()
