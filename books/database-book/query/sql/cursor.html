@@ -192,6 +192,34 @@
 <p>Cursor allows you to paginate records.</p>
 </div>
 </div>
+<div id="admonition-example" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<p>Uhm idk how we can play around with this</p>
+<pre><code class="language-sql">BEGIN;
+
+-- Declare the cursor
+DECLARE my_cursor CURSOR FOR
+SELECT *
+FROM untitled_table_1
+ORDER BY id ASC;
+
+-- Fetch the first 10 rows
+FETCH 1 FROM my_cursor;
+
+-- Fetch the next 10 rows
+FETCH 10 FROM my_cursor;
+
+-- Close the cursor
+CLOSE my_cursor;
+
+END;
+</code></pre>
+</div>
+</div>
 
                     </main>
 
