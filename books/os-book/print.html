@@ -429,6 +429,37 @@ https://bernardteo.me/nus/CS2106%20Reference.pdf</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unix-socket"><a class="header" href="#unix-socket">Unix socket</a></h1>
 <p>aka Unix domain socket</p>
 <p>Unix domain socket or IPC socket is a data communications endpoint for exchanging data between processes executing on the same host OS</p>
+<div id="admonition-example-applications" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example applications</p>
+<p><a class="admonition-anchor-link" href="ipc/unix-socket.html#admonition-example-applications"></a></p>
+</div>
+<div>
+<ul>
+<li>Docker</li>
+<li>ssh-agent</li>
+<li>gpg-agent</li>
+</ul>
+</div>
+</div>
+<div id="admonition-unix-socket-client" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Unix socket client</p>
+<p><a class="admonition-anchor-link" href="ipc/unix-socket.html#admonition-unix-socket-client"></a></p>
+</div>
+<div>
+<ul>
+<li>
+<p>cURL</p>
+<pre><code class="language-sh">curl --unix-socket ~/.colima/docker.sock http://localhost/v1.41/containers/json\?all\=tru | jq
+</code></pre>
+</li>
+<li>
+<p>Low-level programming</p>
+</li>
+</ul>
+</div>
+</div>
 <p>References:</p>
 <ul>
 <li><a href="https://goodyduru.github.io/os/2023/10/03/ipc-unix-domain-sockets.html">IPC — Unix Domain Sockets</a></li>
