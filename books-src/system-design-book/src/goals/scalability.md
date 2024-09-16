@@ -39,3 +39,12 @@ How to measure scalability?
 
 * [Performance metrics](../metrics.md)
 * [Resource usage](../metrics.md)
+
+## OOM (Out of memory) issues
+* Memory leaks
+* Large data loads (loading large files, large requests, large record sets fromdatabase)
+* Heap size configuration
+* High concurrency — applications that handle anhigh number of concurrent requests can consume anlot of memory especially if each thread holds onto significant amounts if data
+* Unbounded collections
+* Improper use of cache
+* Excessive logging — logging frameworks that store memory buffers
