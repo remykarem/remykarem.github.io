@@ -1,5 +1,17 @@
 # Message format
 
+```txt
+GET /posts HTTP/1.1
+Host: example.com
+
+```
+
+which is (with the rn thing)
+
+```txt
+GET /posts HTTP/1.1\r\nHost: example.com\r\n\r\n
+```
+
 ## HTTP methods
 
 - GET
