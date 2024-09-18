@@ -24,6 +24,7 @@
 - [File systems]()
 - [Control groups]()
 - [Namespaces]()
+- [File descriptor](./file-descriptor.md)
 
 ---
 
