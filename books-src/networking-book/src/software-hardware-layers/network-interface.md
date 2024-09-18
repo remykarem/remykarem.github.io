@@ -1,4 +1,4 @@
-# Network interfaces
+# Network interface
 
 aka virtual network interfaces
 
