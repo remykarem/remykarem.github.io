@@ -23,6 +23,9 @@ We use the same `socket` syscall.
 ~~~
 
 ~~~admonish example
+
+Server ("daemon")
+
 ```python
 import socket
 import os
@@ -60,6 +63,31 @@ while True:
     
     # Close the connection
     conn.close()
+```
+
+Client:
+
+```python
+import socket
+
+# Define the Unix socket file path
+socket_file = '/tmp/unix_socket_example.sock'
+
+# Create a Unix socket
+client = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+
+# Connect to the server
+client.connect(socket_file)
+
+# Send some data to the server
+client.sendall(b'Hello from client')
+
+# Receive a response from the server
+data = client.recv(1024)
+print(f"Received: {data.decode('utf-8')}")
+
+# Close the socket
+client.close()
 ```
 ~~~
 
