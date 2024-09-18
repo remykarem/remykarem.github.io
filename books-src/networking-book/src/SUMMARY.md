@@ -19,8 +19,8 @@
   - [SOCK_DGRAM](./software-hardware-layers/socket/sock-dgram.md)
   - [SOCK_RAW](./software-hardware-layers/socket/sock-raw.md)
 - [Route table](./software-hardware-layers/route-table.md)
-- [Network interface](./software-hardware-layers/interfaces.md)
-- [Network Interface Controller](./software-hardware-layers/network-interface-card.md)
+- [Network interface](./software-hardware-layers/network-interface.md)
+- [Network Interface Controller](./software-hardware-layers/network-interface-controller.md)
 
 ---
 
