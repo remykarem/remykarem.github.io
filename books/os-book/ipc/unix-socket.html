@@ -184,6 +184,7 @@
                         <h1 id="unix-socket"><a class="header" href="#unix-socket">Unix socket</a></h1>
 <p>aka Unix domain socket</p>
 <p>Unix domain socket or IPC socket is a data communications endpoint for exchanging data between processes executing on the same host OS</p>
+<p>We use the same <code>socket</code> syscall.</p>
 <div id="admonition-example-applications" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Example applications</p>
@@ -213,6 +214,51 @@
 <p>Low-level programming</p>
 </li>
 </ul>
+</div>
+</div>
+<div id="admonition-example" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<pre><code class="language-python">import socket
+import os
+
+# Define the Unix socket file path
+socket_file = '/tmp/unix_socket_example.sock'
+
+# Make sure the socket does not already exist
+if os.path.exists(socket_file):
+    os.remove(socket_file)
+
+# Create a Unix socket
+server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+
+# Bind the socket to the file
+server.bind(socket_file)
+
+# Listen for incoming connections
+server.listen(1)
+
+print(f&quot;Server listening on {socket_file}...&quot;)
+
+while True:
+    # Accept a connection
+    conn, _ = server.accept()
+    print(&quot;Client connected&quot;)
+
+    # Receive data from the client
+    data = conn.recv(1024)
+    if data:
+        print(f&quot;Received: {data.decode('utf-8')}&quot;)
+
+        # Send a response back to the client
+        conn.sendall(b'Hello from server')
+    
+    # Close the connection
+    conn.close()
+</code></pre>
 </div>
 </div>
 <p>References:</p>
