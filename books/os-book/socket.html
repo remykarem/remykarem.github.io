@@ -258,6 +258,48 @@ hence encompassing Layer 3 (<code>SOCK_RAW</code>) and Layer 4 (<code>SOCK_STREA
 <p>However, it uses file-like semantics like file descriptors.</p>
 </div>
 </div>
+<div id="admonition-example" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<pre><code class="language-python">import socket
+
+def start_server():
+    # Create a socket object
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # Bind to localhost on port 8080
+    server_socket.bind(('localhost', 8080))
+    # Start listening for connections
+    server_socket.listen(1)
+    print(&quot;Server is listening on port 8080...&quot;)
+
+    while True:
+        # Accept a client connection
+        client_socket, addr = server_socket.accept()
+        print(f&quot;Connection from {addr} has been established.&quot;)
+        
+        # Receive data from the client
+        data = client_socket.recv(1024)
+        print(f&quot;Received data: {data.decode()}&quot;)
+
+        # Send a response back to the client
+        client_socket.sendall(b&quot;Hello from server&quot;)
+
+        # Close the client connection
+        client_socket.close()
+
+if __name__ == '__main__':
+    start_server()
+</code></pre>
+<p>Few things to take note:</p>
+<ul>
+<li>Buffer handling</li>
+<li><code>accept</code> is a syscall</li>
+</ul>
+</div>
+</div>
 
                     </main>
 

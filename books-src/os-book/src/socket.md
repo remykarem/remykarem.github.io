@@ -51,3 +51,39 @@ A socket is not a file.
 However, it uses file-like semantics like file descriptors.
 ```
 
+~~~admonish example
+```python
+import socket
+
+def start_server():
+    # Create a socket object
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # Bind to localhost on port 8080
+    server_socket.bind(('localhost', 8080))
+    # Start listening for connections
+    server_socket.listen(1)
+    print("Server is listening on port 8080...")
+
+    while True:
+        # Accept a client connection
+        client_socket, addr = server_socket.accept()
+        print(f"Connection from {addr} has been established.")
+        
+        # Receive data from the client
+        data = client_socket.recv(1024)
+        print(f"Received data: {data.decode()}")
+
+        # Send a response back to the client
+        client_socket.sendall(b"Hello from server")
+
+        # Close the client connection
+        client_socket.close()
+
+if __name__ == '__main__':
+    start_server()
+```
+
+Few things to take note:
+* Buffer handling
+* `accept` is a syscall
+~~~
