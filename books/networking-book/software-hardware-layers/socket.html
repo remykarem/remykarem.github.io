@@ -179,9 +179,8 @@
                     <main>
                         <h1 id="socket"><a class="header" href="#socket">Socket</a></h1>
 <p>aka POSIX socket, BSD socket</p>
+<p>See <a href="https://remykarem.github.io/books/os-book/socket.html">Socket</a> for more.</p>
 <p>A socket is a software object <em>provided by the OS</em> to allow applications to send and receive data across the network.</p>
-<pre><code>man 2 socket
-</code></pre>
 <div id="admonition-osi-model" class="admonition admonish-info">
 <div class="admonition-title">
 <p>OSI model</p>
@@ -197,63 +196,6 @@
 <li>network interface,
 hence encompassing Layer 3 (<code>SOCK_RAW</code>) and Layer 4 (<code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code>; TCP and UDP respectively).</li>
 </ol>
-<p>The system call allows you to:</p>
-<ul>
-<li>Create socket</li>
-<li>Bind socket to an IP address</li>
-<li>Connect socket to an IP address</li>
-<li>Write data to socket — using the routing table</li>
-<li>Read data from socket — using the destination IP address and port number from the data</li>
-</ul>
-<div id="admonition-creating-sockets-is-expensive" class="admonition admonish-warning">
-<div class="admonition-title">
-<p>Creating sockets is expensive</p>
-<p><a class="admonition-anchor-link" href="#admonition-creating-sockets-is-expensive"></a></p>
-</div>
-<div>
-<p>Expensive in terms of resource:</p>
-<ul>
-<li>Creating a socket is a <strong>system call</strong></li>
-<li>The system needs to <strong>allocate memory</strong> and file descriptors for the socket
-<ul>
-<li>Send and receive buffers (64KB-256KB)</li>
-<li>Socket structure</li>
-<li>Assigning a file descriptor (recall file desceiptors are a finite resource)</li>
-</ul>
-</li>
-<li>Establishing a network connection involves handshaking, buffer allocation and encryption</li>
-</ul>
-</div>
-</div>
-<div id="admonition-socket-vs-unix-domain-socket" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Socket vs. Unix domain socket</p>
-<p><a class="admonition-anchor-link" href="#admonition-socket-vs-unix-domain-socket"></a></p>
-</div>
-<div>
-<p>A socket is not the same as the Unix domain socket.</p>
-</div>
-</div>
-<div id="admonition-socket-vs-port" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Socket vs. port</p>
-<p><a class="admonition-anchor-link" href="#admonition-socket-vs-port"></a></p>
-</div>
-<div>
-<p>A socket is not a port.</p>
-<p>A port is another software construct defined by the OS to differentiate between different programs or processes running on the same machine.</p>
-</div>
-</div>
-<div id="admonition-socket-vs-file" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Socket vs. file</p>
-<p><a class="admonition-anchor-link" href="#admonition-socket-vs-file"></a></p>
-</div>
-<div>
-<p>A socket is not a file.</p>
-<p>However, it uses file-like semantics like file descriptors.</p>
-</div>
-</div>
 
                     </main>
 
