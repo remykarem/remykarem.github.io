@@ -92,7 +92,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="io.html">I/O</a></li><li class="chapter-item expanded "><div>Process abstraction</div></li><li class="chapter-item expanded "><a href="process_memory.html">Process memory</a></li><li class="chapter-item expanded "><div>Process state</div></li><li class="chapter-item expanded "><div>Process scheduling</div></li><li class="chapter-item expanded "><div>Context switching</div></li><li class="chapter-item expanded "><a href="threads.html">Threads</a></li><li class="chapter-item expanded "><a href="ipc/index.html">IPC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ipc/signals.html">Signal</a></li><li class="chapter-item expanded "><a href="ipc/unix-socket.html">Unix socket</a></li><li class="chapter-item expanded "><div>Pipe</div></li><li class="chapter-item expanded "><div>Shared memory</div></li></ol></li><li class="chapter-item expanded "><a href="memory_management.html">Memory management</a></li><li class="chapter-item expanded "><a href="system_calls.html">System calls</a></li><li class="chapter-item expanded "><a href="vectorisation.html">Vectorisation</a></li><li class="chapter-item expanded "><div>User permissions</div></li><li class="chapter-item expanded "><div>File systems</div></li><li class="chapter-item expanded "><div>Control groups</div></li><li class="chapter-item expanded "><div>Namespaces</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div>Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="file_system_management.html">File system management</a></li><li class="chapter-item expanded "><div>Disk scheduling</div></li><li class="chapter-item expanded "><a href="shell.html">Shell</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="io.html">I/O</a></li><li class="chapter-item expanded "><div>Process abstraction</div></li><li class="chapter-item expanded "><a href="process_memory.html">Process memory</a></li><li class="chapter-item expanded "><div>Process state</div></li><li class="chapter-item expanded "><div>Process scheduling</div></li><li class="chapter-item expanded "><div>Context switching</div></li><li class="chapter-item expanded "><a href="socket.html">Socket</a></li><li class="chapter-item expanded "><a href="threads.html">Threads</a></li><li class="chapter-item expanded "><a href="ipc/index.html">IPC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ipc/signals.html">Signal</a></li><li class="chapter-item expanded "><a href="ipc/unix-socket.html">Unix socket</a></li><li class="chapter-item expanded "><div>Pipe</div></li><li class="chapter-item expanded "><div>Shared memory</div></li></ol></li><li class="chapter-item expanded "><a href="memory_management.html">Memory management</a></li><li class="chapter-item expanded "><a href="system_calls.html">System calls</a></li><li class="chapter-item expanded "><a href="vectorisation.html">Vectorisation</a></li><li class="chapter-item expanded "><div>User permissions</div></li><li class="chapter-item expanded "><div>File systems</div></li><li class="chapter-item expanded "><div>Control groups</div></li><li class="chapter-item expanded "><div>Namespaces</div></li><li class="chapter-item expanded "><a href="file-descriptor.html">File descriptor</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div>Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="file_system_management.html">File system management</a></li><li class="chapter-item expanded "><div>Disk scheduling</div></li><li class="chapter-item expanded "><a href="shell.html">Shell</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -398,6 +398,83 @@ https://bernardteo.me/nus/CS2106%20Reference.pdf</p>
 • ECX is used as a counting variable
 • ESI and EDI are used for copying data in loops
 • (Source and Destination)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="socket"><a class="header" href="#socket">Socket</a></h1>
+<p>aka POSIX socket, BSD socket</p>
+<p>A socket is a software object <em>provided by the OS</em> to allow applications to send and receive data across the network.</p>
+<pre><code>man 2 socket
+</code></pre>
+<div id="admonition-osi-model" class="admonition admonish-info">
+<div class="admonition-title">
+<p>OSI model</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-osi-model"></a></p>
+</div>
+<div>
+<p>Sockets is OSI Layer 4 and 5.</p>
+</div>
+</div>
+<p>Sockets are an abstraction of the</p>
+<ol>
+<li>route table, and</li>
+<li>network interface,
+hence encompassing Layer 3 (<code>SOCK_RAW</code>) and Layer 4 (<code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code>; TCP and UDP respectively).</li>
+</ol>
+<p>The system call allows you to:</p>
+<ul>
+<li>Create socket</li>
+<li>Bind socket to an IP address</li>
+<li>Connect socket to an IP address</li>
+<li>Write data to socket — using the routing table</li>
+<li>Read data from socket — using the destination IP address and port number from the data</li>
+</ul>
+<div id="admonition-creating-sockets-is-expensive" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Creating sockets is expensive</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-creating-sockets-is-expensive"></a></p>
+</div>
+<div>
+<p>Expensive in terms of resource:</p>
+<ul>
+<li>Creating a socket is a <strong>system call</strong></li>
+<li>The system needs to <strong>allocate memory</strong> and file descriptors for the socket
+<ul>
+<li>Send and receive buffers (64KB-256KB)</li>
+<li>Socket structure</li>
+<li>Assigning a file descriptor (recall file desceiptors are a finite resource)</li>
+</ul>
+</li>
+<li>Establishing a network connection involves handshaking, buffer allocation and encryption</li>
+</ul>
+</div>
+</div>
+<div id="admonition-socket-vs-unix-domain-socket" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Socket vs. Unix domain socket</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-socket-vs-unix-domain-socket"></a></p>
+</div>
+<div>
+<p>A socket is not the same as the Unix domain socket.</p>
+</div>
+</div>
+<div id="admonition-socket-vs-port" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Socket vs. port</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-socket-vs-port"></a></p>
+</div>
+<div>
+<p>A socket is not a port.</p>
+<p>A port is another software construct defined by the OS to differentiate between different programs or processes running on the same machine.</p>
+</div>
+</div>
+<div id="admonition-socket-vs-file" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Socket vs. file</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-socket-vs-file"></a></p>
+</div>
+<div>
+<p>A socket is not a file.</p>
+<p>However, it uses file-like semantics like file descriptors.</p>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="threads"><a class="header" href="#threads">Threads</a></h1>
 <ul>
 <li>Useful for IO tasks</li>
@@ -563,6 +640,7 @@ int main() {
 <div style="break-before: page; page-break-before: always;"></div><h1 id="vectorisation"><a class="header" href="#vectorisation">Vectorisation</a></h1>
 <p><a href="https://cvw.cac.cornell.edu/vector/default">https://cvw.cac.cornell.edu/vector/default</a></p>
 <p><a href="https://www.reddit.com/r/rust/comments/8uccla/does_rustc_have_autovectorization/">https://www.reddit.com/r/rust/comments/8uccla/does_rustc_have_autovectorization/</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-descriptor"><a class="header" href="#file-descriptor">File descriptor</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="file-system-management"><a class="header" href="#file-system-management">File system management</a></h1>
 <p>iNodes data structure</p>
 <p>Linux FHS (Filesystem Hierarchy Standard)</p>
