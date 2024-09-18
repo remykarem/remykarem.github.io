@@ -2,7 +2,7 @@
 
 aka virtual network interfaces
 
-This is a _software_ abstraction of (but not limited to) physical network interfaces.
+This is a _software_ abstraction of (but not limited to) [network interfaces](./network-interface-controller.md).
 
 These interfaces are _logical_ interfaces: they can be linked to either physical hardware interfaces (eg. Wi-Fi, Ethernet card) or software-based interfaces (eg. VPN tunnels, loop interface).
 
