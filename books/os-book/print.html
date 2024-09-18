@@ -481,6 +481,7 @@ hence encompassing Layer 3 (<code>SOCK_RAW</code>) and Layer 4 (<code>SOCK_STREA
 <p><a class="admonition-anchor-link" href="socket.html#admonition-example"></a></p>
 </div>
 <div>
+<p>Server:</p>
 <pre><code class="language-python">import socket
 
 def start_server():
@@ -509,6 +510,20 @@ def start_server():
 
 if __name__ == '__main__':
     start_server()
+</code></pre>
+<p>Client:</p>
+<pre><code class="language-python">import socket
+
+# Create a socket object
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
+    # Connect to the server
+    client_socket.connect(('localhost', 8080))
+    # Send data to the server
+    client_socket.sendall(b'Hello, server')
+    
+    # Receive response from the server
+    response = client_socket.recv(1024)
+    print(f&quot;Received from server: {response.decode()}&quot;)
 </code></pre>
 <p>Few things to take note:</p>
 <ul>

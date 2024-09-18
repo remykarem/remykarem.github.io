@@ -52,6 +52,9 @@ However, it uses file-like semantics like file descriptors.
 ```
 
 ~~~admonish example
+
+Server:
+
 ```python
 import socket
 
@@ -81,6 +84,23 @@ def start_server():
 
 if __name__ == '__main__':
     start_server()
+```
+
+Client:
+
+```python
+import socket
+
+# Create a socket object
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
+    # Connect to the server
+    client_socket.connect(('localhost', 8080))
+    # Send data to the server
+    client_socket.sendall(b'Hello, server')
+    
+    # Receive response from the server
+    response = client_socket.recv(1024)
+    print(f"Received from server: {response.decode()}")
 ```
 
 Few things to take note:
