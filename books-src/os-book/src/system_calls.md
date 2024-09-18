@@ -1,8 +1,22 @@
 # System calls
 
+aka syscall
+
 `man -k .`  Get system calls
 
-**File descriptors and opening files**
+What happens when an application needs to perform a system call?
+1. The application issues a specific instruction (?) that causes a **context switch** from user mode to kernel mode.
+2. The application is paused. The kernel performs the requested operation.
+3. Once done, the kernel returns the result to the user application.
+4. The kernel switches back to user mode.
+
+~~~admonish warning title="Expensive"
+System calls are relatively expensive compared to regular function calls.
+
+Frequent or unnecessary system calls can slow down an application.
+~~~
+
+## File descriptors and opening files
 
 ```c
 #include <sys/types.h>

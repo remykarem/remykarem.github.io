@@ -182,8 +182,26 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="system-calls"><a class="header" href="#system-calls">System calls</a></h1>
+<p>aka syscall</p>
 <p><code>man -k .</code>  Get system calls</p>
-<p><strong>File descriptors and opening files</strong></p>
+<p>What happens when an application needs to perform a system call?</p>
+<ol>
+<li>The application issues a specific instruction (?) that causes a <strong>context switch</strong> from user mode to kernel mode.</li>
+<li>The application is paused. The kernel performs the requested operation.</li>
+<li>Once done, the kernel returns the result to the user application.</li>
+<li>The kernel switches back to user mode.</li>
+</ol>
+<div id="admonition-expensive" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Expensive</p>
+<p><a class="admonition-anchor-link" href="#admonition-expensive"></a></p>
+</div>
+<div>
+<p>System calls are relatively expensive compared to regular function calls.</p>
+<p>Frequent or unnecessary system calls can slow down an application.</p>
+</div>
+</div>
+<h2 id="file-descriptors-and-opening-files"><a class="header" href="#file-descriptors-and-opening-files">File descriptors and opening files</a></h2>
 <pre><code class="language-c">#include &lt;sys/types.h&gt;
 #include &lt;sys/stat.h&gt;
 #include &lt;fcntl.h&gt;
