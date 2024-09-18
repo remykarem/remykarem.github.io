@@ -6,6 +6,8 @@ Unix domain socket or IPC socket is a data communications endpoint for exchangin
 
 We use the same `socket` syscall.
 
+Unix sockets bypass the kernel's networking stack. 
+
 ~~~admonish example title="Example applications"
 * Docker
 * ssh-agent
