@@ -10,6 +10,7 @@
 - [Process state]()
 - [Process scheduling]()
 - [Context switching]()
+- [Socket](./socket.md)
 - [Threads](./threads.md)
 - [IPC](./ipc/index.md)
   - [Signal](./ipc/signals.md)
