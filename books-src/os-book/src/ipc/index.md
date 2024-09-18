@@ -2,10 +2,6 @@
 
 Inter-process communication
 
-## Socket
-
-Data sent over a network interface
-
 ## Shared memory
 
 ## Memory-mapped file
