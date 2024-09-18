@@ -1,5 +1,7 @@
 # Socket
 
+aka POSIX socket, BSD socket
+
 A socket is a software object _provided by the OS_ to allow applications to send and receive data across the network.
 
 ```
@@ -22,6 +24,13 @@ The system call allows you to:
 * Connect socket to an IP address
 * Write data to socket — using the routing table
 * Read data from socket — using the destination IP address and port number from the data
+
+~~~admonish warning title="Creating sockets is expensive"
+Expensive in terms of resource:
+* Creating a socket is a **system call**
+* The system needs to **allocate memory** and file descriptors for the socket
+* Establishing a network connection involves handshaking, buffer allocation and encryption
+~~~
 
 ```admonish note title="Socket vs. Unix domain socket"
 A socket is not the same as the Unix domain socket.
