@@ -2,7 +2,7 @@
 
 aka Network Interface Card, Network Adapter, hardware port, hardware interface
 
-This is a hardware component that allows a device to connect to a network. An NIC controls the interaction between hardware and wired/optical/wireless medium.
+This is a _hardware_ component that allows a device to connect to a network. An NIC controls the interaction between hardware and wired/optical/wireless medium.
 
 ~~~admonish info title="OSI model"
 NIC would map to OSI Layer 1.
