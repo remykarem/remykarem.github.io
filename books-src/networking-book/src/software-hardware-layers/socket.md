@@ -29,6 +29,9 @@ The system call allows you to:
 Expensive in terms of resource:
 * Creating a socket is a **system call**
 * The system needs to **allocate memory** and file descriptors for the socket
+  * Send and receive buffers (64KB-256KB)
+  * Socket structure
+  * Assigning a file descriptor (recall file desceiptors are a finite resource)
 * Establishing a network connection involves handshaking, buffer allocation and encryption
 ~~~
 

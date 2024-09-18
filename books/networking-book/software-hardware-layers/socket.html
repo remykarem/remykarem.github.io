@@ -214,7 +214,13 @@ hence encompassing Layer 3 (<code>SOCK_RAW</code>) and Layer 4 (<code>SOCK_STREA
 <p>Expensive in terms of resource:</p>
 <ul>
 <li>Creating a socket is a <strong>system call</strong></li>
-<li>The system needs to <strong>allocate memory</strong> and file descriptors for the socket</li>
+<li>The system needs to <strong>allocate memory</strong> and file descriptors for the socket
+<ul>
+<li>Send and receive buffers (64KB-256KB)</li>
+<li>Socket structure</li>
+<li>Assigning a file descriptor (recall file desceiptors are a finite resource)</li>
+</ul>
+</li>
 <li>Establishing a network connection involves handshaking, buffer allocation and encryption</li>
 </ul>
 </div>
