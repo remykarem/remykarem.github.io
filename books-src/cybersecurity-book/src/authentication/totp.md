@@ -11,3 +11,9 @@ The underlying cryptographic primitive used here is the **HMAC**. (Notice that t
 ```admonish note
 Because OTP relies on time, the client's device and the server should be roughly synchronised.
 ```
+
+Format (?)
+
+```
+otpauth://totp/label:name@account?secret=xxx&issuer=yyy
+```
