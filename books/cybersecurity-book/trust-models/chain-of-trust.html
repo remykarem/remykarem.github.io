@@ -253,6 +253,21 @@
 <p><a href="https://support.apple.com/en-sg/guide/keychain-access/kyca2794/mac">Determine if a certificate is valid using Keychain Access on Mac</a></p>
 </div>
 </div>
+<div id="admonition-gotcha-when-adding-certs-into-trust-store" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Gotcha when adding certs into trust store</p>
+<p><a class="admonition-anchor-link" href="#admonition-gotcha-when-adding-certs-into-trust-store"></a></p>
+</div>
+<div>
+<p>Note that you usually want to <em>add</em> a certificate to a trust store, not overwrite the entire trust store with that one certificate.</p>
+<p>Eg. in NPM/Yarn, you would run</p>
+<pre><code>export NODE_EXTRA_CA_CERTS
+</code></pre>
+<p>instead of</p>
+<pre><code>npm config set cafile &lt;cafile&gt;
+</code></pre>
+</div>
+</div>
 <div id="admonition-verify-using-openssl" class="admonition admonish-example">
 <div class="admonition-title">
 <p>Verify using OpenSSL</p>

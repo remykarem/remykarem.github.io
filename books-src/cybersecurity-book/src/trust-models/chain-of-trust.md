@@ -65,6 +65,22 @@ Go to Keychain Access. Then **Certificate Assistant** > **Evaluate**.
 [Determine if a certificate is valid using Keychain Access on Mac](https://support.apple.com/en-sg/guide/keychain-access/kyca2794/mac)
 ~~~
 
+~~~admonish warning title="Gotcha when adding certs into trust store"
+Note that you usually want to _add_ a certificate to a trust store, not overwrite the entire trust store with that one certificate.
+
+Eg. in NPM/Yarn, you would run
+
+```
+export NODE_EXTRA_CA_CERTS
+```
+
+instead of
+
+```
+npm config set cafile <cafile>
+```
+~~~
+
 ~~~admonish example title="Verify using OpenSSL"
 You can verify a certificate with
 
