@@ -15,4 +15,4 @@
     }
     ```
 
-* `RestTemplate` autoconfigures `HttpMessageConverter`s if they are dependencies
+* `RestTemplate` autoconfigures `HttpMessageConverter`s if they are dependencies eg jackson object mappers
