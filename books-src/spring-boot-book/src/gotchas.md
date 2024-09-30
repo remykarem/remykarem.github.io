@@ -14,3 +14,5 @@
     fun someFun(@RequestBody someKey: String) {
     }
     ```
+
+* `RestTemplate` autoconfigures `HttpMessageConverter`s if they are dependencies
