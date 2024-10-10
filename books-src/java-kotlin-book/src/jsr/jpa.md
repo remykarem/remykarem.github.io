@@ -23,3 +23,7 @@ Interfaces that are part of the specs:
 ```admonish note title="Connection pool management"
 Connection pool management is typically not directly handled by JPA itself but by the underlying JPA provider.
 ```
+
+~~~admonish example
+Hibernate, MyBatis, EclipseLink, JOOQ
+~~~
