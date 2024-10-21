@@ -21,3 +21,7 @@ If items can be deleted, a differential sync can become an issue.
 ~~~
 
 See StackOverflow post on [How to sync data between two detached systems using rest API?](https://softwareengineering.stackexchange.com/a/370378)
+
+## Problems
+
+* If they call us, we cannot validate the request.
