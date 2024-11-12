@@ -235,6 +235,9 @@ class SomeService(
 <h2 id="testpropertyvalues"><a class="header" href="#testpropertyvalues"><code>TestPropertyValues</code></a></h2>
 <p>Used at test time, especially when initialising application context programmatically.</p>
 <p>See StackOverflow <a href="https://stackoverflow.com/q/54718995">Appropriate usage of TestPropertyValues in Spring Boot Tests</a>.</p>
+<h2 id="dynamically-retrieving-values-given-an-applicationcontext"><a class="header" href="#dynamically-retrieving-values-given-an-applicationcontext">Dynamically retrieving values given an <code>applicationContext</code></a></h2>
+<pre><code>applicationContext.environment.getProperty(&quot;someproperty.something&quot;)
+</code></pre>
 
                     </main>
 

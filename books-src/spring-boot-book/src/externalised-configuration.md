@@ -81,3 +81,9 @@ You can use the property-placeholder syntax to inject environment variables: `${
 Used at test time, especially when initialising application context programmatically.
 
 See StackOverflow [Appropriate usage of TestPropertyValues in Spring Boot Tests](https://stackoverflow.com/q/54718995).
+
+## Dynamically retrieving values given an `applicationContext`
+
+```
+applicationContext.environment.getProperty("someproperty.something")
+```
