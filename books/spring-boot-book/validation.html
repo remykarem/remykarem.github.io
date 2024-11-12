@@ -183,7 +183,13 @@
 <p>The validation is designed to be declarative, hence the use of annotation to validate.</p>
 <h2 id="field-validation"><a class="header" href="#field-validation">Field validation</a></h2>
 <h3 id="pre-defined"><a class="header" href="#pre-defined">Pre-defined</a></h3>
-<p><code>@NotEmpty</code>, <code>@Email</code>, <code>@Positive</code></p>
+<p>Examples: <code>@NotEmpty</code>, <code>@Email</code>, <code>@Positive</code>, <code>@NotBlank</code></p>
+<p>Usage:</p>
+<pre><code class="language-kotlin">data class SomeClass(
+    @field:NotBlank
+    val name: String
+)
+</code></pre>
 <h3 id="custom"><a class="header" href="#custom">Custom</a></h3>
 <p>This uses the <code>ConstraintValidator</code> interface.</p>
 <ol>
