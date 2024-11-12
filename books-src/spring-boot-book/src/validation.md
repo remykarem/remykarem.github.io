@@ -10,7 +10,16 @@ The validation is designed to be declarative, hence the use of annotation to val
 
 ### Pre-defined
     
-`@NotEmpty`, `@Email`, `@Positive`
+Examples: `@NotEmpty`, `@Email`, `@Positive`, `@NotBlank`
+
+Usage:
+
+```kotlin
+data class SomeClass(
+    @field:NotBlank
+    val name: String
+)
+```
 
 ### Custom
 
