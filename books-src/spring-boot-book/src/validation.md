@@ -96,3 +96,8 @@ This uses the `ConstraintValidator` interface.
         val uen: String?,
     )
     ```
+
+---
+
+Reference:
+[https://docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html](Spring: Java Bean Validation)
