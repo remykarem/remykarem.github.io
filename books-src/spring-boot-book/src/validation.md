@@ -62,9 +62,9 @@ This uses the `ConstraintValidator` interface.
 2. Define the validator using `ConstraintValidator`
     
     ```kotlin
-    class UenValidator : ConstraintValidator<UenConstraint, DuplicateApplicationRequest> {
+    class UenValidator : ConstraintValidator<UenConstraint, ApplicationRequest> {
         override fun isValid(
-            request: DuplicateApplicationRequest,
+            request: ApplicationRequest,
             cxt: ConstraintValidatorContext?,
         ): Boolean {
             if (request.loginType != LoginType.CORPPASS) {
@@ -84,14 +84,9 @@ This uses the `ConstraintValidator` interface.
 
     ```kotlin
     @UenConstraint
-    data class DuplicateApplicationRequest(
-
-        @field:NotNull(message = "Request body: 'loginType' must not be null")
+    data class ApplicationRequest(
         val loginType: LoginType?,
-    
-        @field:NotBlank(message = "Request body: 'uinfin' must not be blank")
         val uinfin: String?,
-    
         val uen: String?,
     )
     ```
