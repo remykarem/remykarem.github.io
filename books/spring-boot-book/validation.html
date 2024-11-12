@@ -180,10 +180,12 @@
                         <h1 id="validation"><a class="header" href="#validation">Validation</a></h1>
 <p>These runtime validations are provided by the <code>javax</code> library.</p>
 <p>??? <code>@Validated</code>, <code>@Valid</code>, </p>
+<p>The validation is designed to be declarative, hence the use of annotation to validate.</p>
 <h2 id="field-validation"><a class="header" href="#field-validation">Field validation</a></h2>
 <h3 id="pre-defined"><a class="header" href="#pre-defined">Pre-defined</a></h3>
 <p><code>@NotEmpty</code>, <code>@Email</code>, <code>@Positive</code></p>
 <h3 id="custom"><a class="header" href="#custom">Custom</a></h3>
+<p>This uses the <code>ConstraintValidator</code> interface.</p>
 <ol>
 <li>
 <p>Define annotation.</p>
@@ -227,7 +229,22 @@ annotation class UenConstraint(
 </li>
 <li>
 <p>Define the validator using <code>ConstraintValidator</code></p>
-<pre><code class="language-kotlin">
+<pre><code class="language-kotlin">class UenValidator : ConstraintValidator&lt;UenConstraint, DuplicateApplicationRequest&gt; {
+    override fun isValid(
+        request: DuplicateApplicationRequest,
+        cxt: ConstraintValidatorContext?,
+    ): Boolean {
+        if (request.loginType != LoginType.CORPPASS) {
+            return true
+        }
+
+        if (request.uen == null) {
+            return false
+        }
+
+        return request.uen.isNotBlank()
+    }
+}
 </code></pre>
 </li>
 <li>

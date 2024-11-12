@@ -4,6 +4,8 @@ These runtime validations are provided by the `javax` library.
 
 ??? `@Validated`, `@Valid`, 
 
+The validation is designed to be declarative, hence the use of annotation to validate.
+
 ## Field validation
 
 ### Pre-defined
@@ -11,6 +13,8 @@ These runtime validations are provided by the `javax` library.
 `@NotEmpty`, `@Email`, `@Positive`
 
 ### Custom
+
+This uses the `ConstraintValidator` interface.
     
 1. Define annotation.
 
@@ -58,7 +62,22 @@ These runtime validations are provided by the `javax` library.
 2. Define the validator using `ConstraintValidator`
     
     ```kotlin
+    class UenValidator : ConstraintValidator<UenConstraint, DuplicateApplicationRequest> {
+        override fun isValid(
+            request: DuplicateApplicationRequest,
+            cxt: ConstraintValidatorContext?,
+        ): Boolean {
+            if (request.loginType != LoginType.CORPPASS) {
+                return true
+            }
     
+            if (request.uen == null) {
+                return false
+            }
+    
+            return request.uen.isNotBlank()
+        }
+    }
     ```
 
 3. Usage
@@ -77,5 +96,3 @@ These runtime validations are provided by the `javax` library.
         val uen: String?,
     )
     ```
-    
-        
