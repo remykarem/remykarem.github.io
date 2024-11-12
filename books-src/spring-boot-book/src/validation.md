@@ -85,8 +85,7 @@ This uses the `ConstraintValidator` interface.
     ```kotlin
     @UenConstraint
     data class DuplicateApplicationRequest(
-        @JsonDeserialize(using = LoginTypeDeserializer::class)
-        @JsonSerialize(using = LoginTypeSerializer::class)
+
         @field:NotNull(message = "Request body: 'loginType' must not be null")
         val loginType: LoginType?,
     
