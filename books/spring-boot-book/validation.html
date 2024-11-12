@@ -229,9 +229,9 @@ annotation class UenConstraint(
 </li>
 <li>
 <p>Define the validator using <code>ConstraintValidator</code></p>
-<pre><code class="language-kotlin">class UenValidator : ConstraintValidator&lt;UenConstraint, DuplicateApplicationRequest&gt; {
+<pre><code class="language-kotlin">class UenValidator : ConstraintValidator&lt;UenConstraint, ApplicationRequest&gt; {
     override fun isValid(
-        request: DuplicateApplicationRequest,
+        request: ApplicationRequest,
         cxt: ConstraintValidatorContext?,
     ): Boolean {
         if (request.loginType != LoginType.CORPPASS) {
@@ -250,14 +250,9 @@ annotation class UenConstraint(
 <li>
 <p>Usage</p>
 <pre><code class="language-kotlin">@UenConstraint
-data class DuplicateApplicationRequest(
-
-    @field:NotNull(message = &quot;Request body: 'loginType' must not be null&quot;)
+data class ApplicationRequest(
     val loginType: LoginType?,
-
-    @field:NotBlank(message = &quot;Request body: 'uinfin' must not be blank&quot;)
     val uinfin: String?,
-
     val uen: String?,
 )
 </code></pre>
