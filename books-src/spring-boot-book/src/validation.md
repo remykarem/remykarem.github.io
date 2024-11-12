@@ -101,4 +101,4 @@ This uses the `ConstraintValidator` interface.
 
 Reference:
 
-[https://docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html](Spring Java Bean Validation)
+[Spring Java Bean Validation](https://docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html)
