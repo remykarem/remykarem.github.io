@@ -251,8 +251,7 @@ annotation class UenConstraint(
 <p>Usage</p>
 <pre><code class="language-kotlin">@UenConstraint
 data class DuplicateApplicationRequest(
-    @JsonDeserialize(using = LoginTypeDeserializer::class)
-    @JsonSerialize(using = LoginTypeSerializer::class)
+
     @field:NotNull(message = &quot;Request body: 'loginType' must not be null&quot;)
     val loginType: LoginType?,
 
