@@ -182,7 +182,7 @@
 <p>You'll need:</p>
 <ul>
 <li>the <strong>Strategy interface</strong></li>
-<li>the <strong>concrete Strategy implementations</strong> of this interface</li>
+<li>the different <strong>concrete Strategy implementations</strong> of this interface</li>
 <li>the <strong>context class</strong> that will use the Strategies — this class's has several purposes:
 <ul>
 <li>to decouple the <em>implementation details</em> of the Strategies from the client code</li>
@@ -191,6 +191,19 @@
 </li>
 <li>the <strong>client code</strong></li>
 </ul>
+<p>You can easily add more strategies without modifying the existing classes, adhering to the open-closed principle.</p>
+<div id="admonition-examples" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Examples</p>
+<p><a class="admonition-anchor-link" href="#admonition-examples"></a></p>
+</div>
+<div>
+<ul>
+<li>Different strategies to handle the result of an HTTP response (maybe by looking at status code)</li>
+</ul>
+</div>
+</div>
+<h2 id="enum-pattern-vs-strategy-interface"><a class="header" href="#enum-pattern-vs-strategy-interface">Enum pattern vs strategy interface</a></h2>
 <div id="admonition-like-rust-enum" class="admonition admonish-warning">
 <div class="admonition-title">
 <p>Like Rust enum</p>
@@ -200,7 +213,6 @@
 <p>Looks freakishly similar to Rust's enum</p>
 </div>
 </div>
-<p>You can easily add more strategies without modifying the existing classes, adhering to the open-closed principle.</p>
 
                     </main>
 
