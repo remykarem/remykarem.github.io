@@ -81,3 +81,7 @@ fn main() {
     println!("Result: {}", result);
 }
 ```
+
+# References
+
+[Rust Unofficial: Strategy Pattern](https://rust-unofficial.github.io/patterns/patterns/behavioural/strategy.html)
