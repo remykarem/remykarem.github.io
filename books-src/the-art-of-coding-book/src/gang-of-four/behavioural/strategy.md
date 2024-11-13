@@ -52,8 +52,32 @@ You can easily add more strategies without modifying the existing classes, adher
 
 ## Enum pattern vs strategy interface
 
-~~~admonish warning title="Like Rust enum"
-Looks freakishly similar to Rust's enum
-~~~
+Perhaps for simpler strategies, an enum pattern would also work.
 
+"Simple" here could easily be quantified by number of lines of code. 
 
+Because it's an enum, there will be a lot of matching on the self object.
+
+```rust
+enum Strategy {
+    Add,
+    Subtract,
+    Multiply,
+}
+
+impl Strategy {
+    fn apply(&self, a: i32, b: i32) -> i32 {
+        match self {
+            Strategy::Add => a + b,
+            Strategy::Subtract => a - b,
+            Strategy::Multiply => a * b,
+        }
+    }
+}
+
+fn main() {
+    let strategy = Strategy::Add;
+    let result = strategy.apply(5, 3);
+    println!("Result: {}", result);
+}
+```

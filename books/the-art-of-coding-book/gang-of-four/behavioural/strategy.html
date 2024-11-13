@@ -236,15 +236,30 @@ class Subtract: Operation {
 </div>
 </div>
 <h2 id="enum-pattern-vs-strategy-interface"><a class="header" href="#enum-pattern-vs-strategy-interface">Enum pattern vs strategy interface</a></h2>
-<div id="admonition-like-rust-enum" class="admonition admonish-warning">
-<div class="admonition-title">
-<p>Like Rust enum</p>
-<p><a class="admonition-anchor-link" href="#admonition-like-rust-enum"></a></p>
-</div>
-<div>
-<p>Looks freakishly similar to Rust's enum</p>
-</div>
-</div>
+<p>Perhaps for simpler strategies, an enum pattern would also work.</p>
+<p>&quot;Simple&quot; here could easily be quantified by number of lines of code. </p>
+<p>Because it's an enum, there will be a lot of matching on the self object.</p>
+<pre><pre class="playground"><code class="language-rust">enum Strategy {
+    Add,
+    Subtract,
+    Multiply,
+}
+
+impl Strategy {
+    fn apply(&amp;self, a: i32, b: i32) -&gt; i32 {
+        match self {
+            Strategy::Add =&gt; a + b,
+            Strategy::Subtract =&gt; a - b,
+            Strategy::Multiply =&gt; a * b,
+        }
+    }
+}
+
+fn main() {
+    let strategy = Strategy::Add;
+    let result = strategy.apply(5, 3);
+    println!(&quot;Result: {}&quot;, result);
+}</code></pre></pre>
 
                     </main>
 
