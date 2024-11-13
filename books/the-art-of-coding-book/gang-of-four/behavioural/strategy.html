@@ -181,15 +181,47 @@
 <p>Used when you have different algorithms or approaches or classes or ways (known as <strong>&quot;strategies&quot;</strong>) to achieve the same operation. </p>
 <p>You'll need:</p>
 <ul>
-<li>the <strong>Strategy interface</strong></li>
-<li>the different <strong>concrete Strategy implementations</strong> of this interface</li>
-<li>the <strong>context class</strong> that will use the Strategies — this class's has several purposes:
+<li>
+<p>the <strong>Strategy interface</strong></p>
+<pre><code class="language-kotlin">interface Operation {
+  fun calculate(a: Int, b: Int): Int
+}
+</code></pre>
+</li>
+<li>
+<p>the different <strong>concrete Strategy implementations</strong> of this interface</p>
+<pre><code class="language-kotlin">class Add: Operation {
+  fun calculate(a: Int, b: Int): Int {
+    return a + b
+  }
+}
+
+class Subtract: Operation {
+  fun calculate(a: Int, b: Int): Int {
+    return a - b
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>the <strong>context class</strong> that will use the Strategies — this class's has several purposes:</p>
 <ul>
 <li>to decouple the <em>implementation details</em> of the Strategies from the client code</li>
-<li>to encapsulate the <em>strategy selection</em></li>
+<li>to encapsulate the <em>strategy selection</em>, and by extension help to choose the right strategy. </li>
 </ul>
+<pre><code class="language-kotlin">class Calculator(
+  operation: Strategy
+) {
+  fun setStrategy(strategy: Strategy)
+  fun calculate(a: Int, b: Int): Int {
+    return operation.calculate(a, b)
+  }
+}
+</code></pre>
 </li>
-<li>the <strong>client code</strong></li>
+<li>
+<p>the <strong>client code</strong></p>
+</li>
 </ul>
 <p>You can easily add more strategies without modifying the existing classes, adhering to the open-closed principle.</p>
 <div id="admonition-examples" class="admonition admonish-example">
