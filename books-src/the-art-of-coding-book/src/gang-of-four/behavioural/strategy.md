@@ -52,7 +52,7 @@ You can easily add more strategies without modifying the existing classes, adher
 
 ## Enum pattern vs strategy interface
 
-Perhaps for simpler strategies, an enum pattern would also work.
+Perhaps for simpler strategies, an enum pattern would also work. The different strategies are represented by the enum variants.
 
 "Simple" here could easily be quantified by number of lines of code. 
 
