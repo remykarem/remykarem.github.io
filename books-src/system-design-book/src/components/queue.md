@@ -89,8 +89,9 @@ Types of queues
 * to make temporary outages survivable by stashing traffic-in-transit. [On SQS by Tim Bray](https://www.tbray.org/ongoing/When/201x/2019/05/26/SQS)
 ~~~
 
-~~~admonish example
-AWS SQS
+~~~admonish note title="Best practices"
+* **Single worker** to read and delete — for simplicity (given by ChatGPT but citation needed)
+* Avoid partial failures when reading from a batch of messages
 ~~~
 
 ~~~admonish question title="When to use a FIFO queue?"
