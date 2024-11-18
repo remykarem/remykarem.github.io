@@ -1,5 +1,9 @@
 # Polling
 
+~~~admonish tip title="Perspective"
+Polling approximates an event-driven architecture (eg. webhook).
+~~~
+
 In polling, the client keeps calling the server for updates.
 
 There are 2 types of polling:
