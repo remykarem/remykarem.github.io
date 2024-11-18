@@ -324,13 +324,16 @@
 </ul>
 </div>
 </div>
-<div id="admonition-example" class="admonition admonish-example">
+<div id="admonition-best-practices" class="admonition admonish-note">
 <div class="admonition-title">
-<p>Example</p>
-<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+<p>Best practices</p>
+<p><a class="admonition-anchor-link" href="#admonition-best-practices"></a></p>
 </div>
 <div>
-<p>AWS SQS</p>
+<ul>
+<li><strong>Single worker</strong> to read and delete — for simplicity (given by ChatGPT but citation needed)</li>
+<li>Avoid partial failures when reading from a batch of messages</li>
+</ul>
 </div>
 </div>
 <div id="admonition-when-to-use-a-fifo-queue" class="admonition admonish-question">
