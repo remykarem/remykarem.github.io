@@ -34,7 +34,7 @@ Features:
 - [Batching](../strategies/batching.md)
 - [Rate limiting](../strategies/rate-limiting.md)
 - Housekeeping — **message retention period** is the maximum period how long a message can stay in the queue
-- Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first
+- Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately
 - TTL
 
 Cloud features
@@ -90,7 +90,7 @@ Types of queues
 ~~~
 
 ~~~admonish note title="Best practices"
-* **Single worker** to read and delete — for simplicity (given by ChatGPT but citation needed)
+* **Single worker** to process end-to-end of a message (reading and deleting) — for simplicity (given by ChatGPT but citation needed)
 * Avoid partial failures when reading from a batch of messages
 ~~~
 
@@ -101,6 +101,20 @@ You would use FIFO when the order of events is critical, or when duplicates cann
 
 Based on [Getting started with Amazon SQS FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
 ~~~
+
+## Patterns
+
+Reading and deleting patterns can differ by these characteristics:
+
+* No. of workers
+  * single worker
+  * multiple workers — eg. fire and forget.
+* Trigger — event-driven, or polling, or CloudWatch
+
+Some things to consider based on the patterns:
+* Rate of processing
+* Network latency
+* Error handling (if multiple workers)
 
 keywords
 inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window
