@@ -233,7 +233,7 @@
 <p>Housekeeping — <strong>message retention period</strong> is the maximum period how long a message can stay in the queue</p>
 </li>
 <li>
-<p>Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first</p>
+<p>Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately</p>
 </li>
 <li>
 <p>TTL</p>
@@ -331,7 +331,7 @@
 </div>
 <div>
 <ul>
-<li><strong>Single worker</strong> to read and delete — for simplicity (given by ChatGPT but citation needed)</li>
+<li><strong>Single worker</strong> to process end-to-end of a message (reading and deleting) — for simplicity (given by ChatGPT but citation needed)</li>
 <li>Avoid partial failures when reading from a batch of messages</li>
 </ul>
 </div>
@@ -350,6 +350,23 @@
 <p>Based on <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html">Getting started with Amazon SQS FIFO queues</a></p>
 </div>
 </div>
+<h2 id="patterns"><a class="header" href="#patterns">Patterns</a></h2>
+<p>Reading and deleting patterns can differ by these characteristics:</p>
+<ul>
+<li>No. of workers
+<ul>
+<li>single worker</li>
+<li>multiple workers — eg. fire and forget.</li>
+</ul>
+</li>
+<li>Trigger — event-driven, or polling, or CloudWatch</li>
+</ul>
+<p>Some things to consider based on the patterns:</p>
+<ul>
+<li>Rate of processing</li>
+<li>Network latency</li>
+<li>Error handling (if multiple workers)</li>
+</ul>
 <p>keywords
 inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window</p>
 
