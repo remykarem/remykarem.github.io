@@ -197,6 +197,7 @@
 <li>DLQ integration</li>
 <li>Event source mapping (from SQS etc.); batches</li>
 <li><a href="../strategies/caching.html">Caching</a> — can store static assets in <code>/tmp</code> for reuse by subsequent invocation by the same instance</li>
+<li>Concurrency limiting</li>
 </ul>
 <p>Designed for</p>
 <ul>
@@ -220,6 +221,24 @@
 <div>
 <p>Spring Cloud Function is a framework built on top of Spring Boot that abstracts over the underlying serverless compute service.</p>
 <p>It also offers local testing.</p>
+</div>
+</div>
+<div id="admonition-note" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>AWS Lambda invocations are generally cheap.</p>
+</div>
+</div>
+<div id="admonition-warning" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
+</div>
+<div>
+<p>When considering a fire-and-forget pattern, concurrency limiting has no effect because all invocations are short-lived.</p>
 </div>
 </div>
 
