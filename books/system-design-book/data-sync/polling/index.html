@@ -193,9 +193,10 @@
 <li><strong>Short polling</strong> – returns a response immediately, even if empty. $k = 0$.</li>
 <li><strong>Long polling</strong> – returns a response after a wait time period $k &gt; 0$.</li>
 </ul>
-<p>Short polling may naturally require more frequent requests to check for new messages.</p>
+<p>Short polling naturally requires more frequent requests to check for new messages.</p>
 <p>Drawbacks:</p>
 <ul>
+<li>⚠️ A long-running cron job might overlap another, resulting in concurrent processing which might have an adverse effect.</li>
 <li>Constant polling requires resources from client</li>
 </ul>
 
