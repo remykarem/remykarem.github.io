@@ -90,7 +90,7 @@ Types of queues
 ~~~
 
 ~~~admonish note title="Best practices"
-* **Single worker** to process end-to-end of a message (reading and deleting) — for simplicity (given by ChatGPT but citation needed)
+* **Single Worker Responsibility** — to process end-to-end of a message (reading and deleting) — for simplicity (given by ChatGPT but citation needed)
 * Avoid partial failures when reading from a batch of messages
 ~~~
 
