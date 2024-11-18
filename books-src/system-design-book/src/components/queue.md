@@ -112,6 +112,7 @@ Reading and deleting patterns can differ by these characteristics:
 * Trigger — event-driven, or polling, or CloudWatch
 
 Some things to consider based on the patterns:
+* Concurrent message processing — cron jobs for example, might result in concurrent processing and might not be intended
 * Rate of processing
 * Network latency
 * Error handling (if multiple workers)
