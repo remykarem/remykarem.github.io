@@ -116,6 +116,7 @@ Some things to consider based on the patterns:
 * Rate of processing
 * Network latency
 * Error handling (if multiple workers)
+* Whether duplicates might arise from the different workers (if no. of workers is more than 1)
 
 keywords
 inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window
