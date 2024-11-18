@@ -17,6 +17,7 @@ Features:
 * DLQ integration
 * Event source mapping (from SQS etc.); batches
 * [Caching](../strategies/caching.md) — can store static assets in `/tmp` for reuse by subsequent invocation by the same instance
+* Concurrency limiting
 
 Designed for
 * **event-driven** architecture — execute code in response to events
@@ -30,4 +31,12 @@ AWS Lambda
 Spring Cloud Function is a framework built on top of Spring Boot that abstracts over the underlying serverless compute service.
 
 It also offers local testing.
+~~~
+
+~~~admonish note
+AWS Lambda invocations are generally cheap.
+~~~
+
+~~~admonish warning
+When considering a fire-and-forget pattern, concurrency limiting has no effect because all invocations are short-lived.
 ~~~
