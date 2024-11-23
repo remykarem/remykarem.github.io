@@ -1,8 +1,12 @@
 # Testing
 
-* Integration test — spin up real resources, but "mock the data", mock whenever impossiblr
+* Integration test — spin up real resources, but "mock the data", mock whenever impossible
   * Spin up database
   * But mock HTTP servers
-* Unit test — spin up your program, but "mock function", the smallest testable unit of software is a function (?)
+* Unit test — Test the smallest pieces of software. Responses from external pieces are mocked. Smallest piece = function
 
-Verify that message is sent to the queue vs. message is present in the queue
+The smallest testable unit of software is a function (?)
+
+## What to verify
+
+Verify that message is sent to the queue (unit test) vs. message is present in the queue (integration test)
