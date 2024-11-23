@@ -3,9 +3,7 @@
 * Integration test — spin up real resources, but "mock the data", mock whenever impossible
   * Spin up database
   * But mock HTTP servers
-* Unit test — Test the smallest pieces of software. Responses from external pieces are mocked. Smallest piece = function
-
-The smallest testable unit of software is a function (?)
+* Unit test — Test the smallest pieces of software. Responses from external pieces are mocked. Smallest piece = function, method etc
 
 ## What to verify
 
