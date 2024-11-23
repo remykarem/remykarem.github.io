@@ -121,6 +121,7 @@
 - [API performance](./api-design/api-peformance.md)
 - [Encoding signatures](./api-design/encoding-signatures.md)
 - [Retry-safe]()
+- [Handling large payloads](./api-design/handling-large-payloads.md)
 
 ---
 
