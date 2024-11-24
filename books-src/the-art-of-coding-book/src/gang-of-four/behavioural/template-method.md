@@ -6,6 +6,7 @@ This is a skeleton method that consists of individual steps to be "filled up" by
 abstract class SomeClass {
 
   // this is the template method
+  // not to be overiddden
   fun processSomething() {
     step1()
     step2()
