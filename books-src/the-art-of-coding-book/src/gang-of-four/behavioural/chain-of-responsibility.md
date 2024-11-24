@@ -1,5 +1,7 @@
 # Chain of Responsibility
 
+An input goes through multiple methods in series.
+
 This treats an umbrella request using different specific methods, depending on the method does.
 
 Keywords: series
