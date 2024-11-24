@@ -118,7 +118,7 @@
 - [Earliest responsible moment](./earliest-responsible-moment.md)
 - [Mapper](./mapper.md)
 - [Testing](./testing.md)
-- [Serialisation/deserialisation.md](./serialisation-deserialisation.md)
+- [Serialisation/deserialisation](./serialisation-deserialisation.md)
 
 ---
 
