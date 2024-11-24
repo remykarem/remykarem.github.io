@@ -68,6 +68,7 @@
     - [Mediator](./gang-of-four/behavioural/mediator.md)
     - [Command](./gang-of-four/behavioural/command.md)
     - [State](./gang-of-four/behavioural/state.md)
+    - [Template method](./gang-of-four/behavioural/template-method.md)
 
 - [SOLID Principles]()
   - [Single Responsibility]()
