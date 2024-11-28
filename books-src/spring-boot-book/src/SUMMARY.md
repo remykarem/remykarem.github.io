@@ -18,6 +18,7 @@
 - [Annotation processing]()
 - [Swagger]()
 - [Concepts](./concepts.md)
+    - [Bean scope](./concepts/bean-scope.md)
     - [Application context](./concepts/application-context.md)
     - [Web servlet](./concepts/web-servlet.md)
     - [Filter](./concepts/filter.md)
