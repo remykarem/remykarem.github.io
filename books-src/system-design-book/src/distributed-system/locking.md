@@ -1,23 +1,27 @@
 # Locking
 
-Locking ensures that any change that is made on a record is based on the last write.
+The purpose of locking is to ensure **data consistency** and **data integrity** in a concurrent environment where multiple operations attempt to access the same data simultaneously.
 
-* **Optimistic locking**
+Locking is a means of concurrency control.
 
-  Assumes that conflicts are rare. No locks.
+The common locking mechanisms are optimistic locking and pessismistc locking.
 
-  1. Read the data
-  2. Record the version (timestamp, hash etc.) associated with the data
-  3. Process the data
-  4. Check if the version is still the same in the database
-  5. If all good, write to the database
- 
-  ~~~admonish note
-  More common
-  ~~~
+**Stale saves** or **lost updates** can happen~
 
-* **Pessimistic locking**
+|                          | Optimistic locking                          | Pessimistic locking                                            |
+|--------------------------|---------------------------------------------|----------------------------------------------------------------|
+| Use case                 | Low-conflict scenarios (hence "optimistic") | High-conflict scenarios ("pessimistic")                        |
+| Mechanism                | Versioning                                  | Database record locking                                        |
+| Stale save / lost update | Zero, because you need to validate before save | Still can happen                                            |
+| Concurrency              | Allows for high concurrency                 | Reduced concurrency because we lock records upfront            |
+| Deadlocks                | No deadlocks                                | Might lead to deadlocks                                        |
+| Resource (database)      | Low or none                                 | High, because of locks                                         |
+| Retry overhead           | Needed after conflict                       | None                                                           |
 
-  Assumes that conflicts are likely. Acquire lock (usually in the database).
+Poor concurrency control might result in data corruption.
 
-* **2PL (2-Phase Locking)**
+~~~admonish tip title="In simple terms..."
+Optimistic locking — If I'm making changes to a record, I just need to make sure that it's **based on the latest record**.
+
+Pessimistic locking — If I'm accessing a record, I wanna make sure that **no one else can accesses it until I'm done**.
+~~~
