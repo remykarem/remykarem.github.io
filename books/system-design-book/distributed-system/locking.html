@@ -184,6 +184,7 @@
 <p><strong>Stale saves</strong> or <strong>lost updates</strong> can happen~</p>
 <div class="table-wrapper"><table><thead><tr><th></th><th>Optimistic locking</th><th>Pessimistic locking</th></tr></thead><tbody>
 <tr><td>Use case</td><td>Low-conflict scenarios (hence &quot;optimistic&quot;)</td><td>High-conflict scenarios (&quot;pessimistic&quot;)</td></tr>
+<tr><td>Optimises for</td><td>High concurrency</td><td>Minimal or zero conflicts* i.e. minimal or zero concurrency</td></tr>
 <tr><td>Mechanism</td><td>Versioning</td><td>Database record locking</td></tr>
 <tr><td>Stale save / lost update</td><td>Zero, because you need to validate before save^</td><td>Still can happen</td></tr>
 <tr><td>Concurrency</td><td>Allows for high concurrency</td><td>Reduced concurrency because we lock records upfront</td></tr>
@@ -192,7 +193,8 @@
 <tr><td>Retry overhead</td><td>Needed after conflict</td><td>None</td></tr>
 </tbody></table>
 </div>
-<p>^the library that you're using would have abstracted this for you.</p>
+<p>*Encountering conflicts might be expensive in terms of user experience etc. 
+^The library that you're using would have abstracted this for you.</p>
 <p>Poor concurrency control might result in data corruption.</p>
 <div id="admonition-in-simple-terms" class="admonition admonish-tip">
 <div class="admonition-title">
