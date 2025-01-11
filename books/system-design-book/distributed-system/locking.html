@@ -178,36 +178,31 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="locking"><a class="header" href="#locking">Locking</a></h1>
-<p>Locking ensures that any change that is made on a record is based on the last write.</p>
-<ul>
-<li>
-<p><strong>Optimistic locking</strong></p>
-<p>Assumes that conflicts are rare. No locks.</p>
-<ol>
-<li>Read the data</li>
-<li>Record the version (timestamp, hash etc.) associated with the data</li>
-<li>Process the data</li>
-<li>Check if the version is still the same in the database</li>
-<li>If all good, write to the database</li>
-</ol>
-<div id="admonition-note" class="admonition admonish-note">
+<p>The purpose of locking is to ensure <strong>data consistency</strong> and <strong>data integrity</strong> in a concurrent environment where multiple operations attempt to access the same data simultaneously.</p>
+<p>Locking is a means of concurrency control.</p>
+<p>The common locking mechanisms are optimistic locking and pessismistc locking.</p>
+<p><strong>Stale saves</strong> or <strong>lost updates</strong> can happen~</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th>Optimistic locking</th><th>Pessimistic locking</th></tr></thead><tbody>
+<tr><td>Use case</td><td>Low-conflict scenarios (hence &quot;optimistic&quot;)</td><td>High-conflict scenarios (&quot;pessimistic&quot;)</td></tr>
+<tr><td>Mechanism</td><td>Versioning</td><td>Database record locking</td></tr>
+<tr><td>Stale save / lost update</td><td>Zero, because you need to validate before save</td><td>Still can happen</td></tr>
+<tr><td>Concurrency</td><td>Allows for high concurrency</td><td>Reduced concurrency because we lock records upfront</td></tr>
+<tr><td>Deadlocks</td><td>No deadlocks</td><td>Might lead to deadlocks</td></tr>
+<tr><td>Resource (database)</td><td>Low or none</td><td>High, because of locks</td></tr>
+<tr><td>Retry overhead</td><td>Needed after conflict</td><td>None</td></tr>
+</tbody></table>
+</div>
+<p>Poor concurrency control might result in data corruption.</p>
+<div id="admonition-in-simple-terms" class="admonition admonish-tip">
 <div class="admonition-title">
-<p>Note</p>
-<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+<p>In simple terms...</p>
+<p><a class="admonition-anchor-link" href="#admonition-in-simple-terms"></a></p>
 </div>
 <div>
-<p>More common</p>
+<p>Optimistic locking — If I'm making changes to a record, I just need to make sure that it's <strong>based on the latest record</strong>.</p>
+<p>Pessimistic locking — If I'm accessing a record, I wanna make sure that <strong>no one else can accesses it until I'm done</strong>.</p>
 </div>
 </div>
-</li>
-<li>
-<p><strong>Pessimistic locking</strong></p>
-<p>Assumes that conflicts are likely. Acquire lock (usually in the database).</p>
-</li>
-<li>
-<p><strong>2PL (2-Phase Locking)</strong></p>
-</li>
-</ul>
 
                     </main>
 
