@@ -12,11 +12,13 @@ The common locking mechanisms are optimistic locking and pessismistc locking.
 |--------------------------|---------------------------------------------|----------------------------------------------------------------|
 | Use case                 | Low-conflict scenarios (hence "optimistic") | High-conflict scenarios ("pessimistic")                        |
 | Mechanism                | Versioning                                  | Database record locking                                        |
-| Stale save / lost update | Zero, because you need to validate before save | Still can happen                                            |
+| Stale save / lost update | Zero, because you need to validate before save^ | Still can happen                                            |
 | Concurrency              | Allows for high concurrency                 | Reduced concurrency because we lock records upfront            |
 | Deadlocks                | No deadlocks                                | Might lead to deadlocks                                        |
 | Resource (database)      | Low or none                                 | High, because of locks                                         |
 | Retry overhead           | Needed after conflict                       | None                                                           |
+
+^the library that you're using would have abstracted this for you.
 
 Poor concurrency control might result in data corruption.
 
