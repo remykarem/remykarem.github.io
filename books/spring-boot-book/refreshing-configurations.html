@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Common starters - Spring Boot book</title>
+        <title>Refreshing configurations - Spring Boot book</title>
 
 
         <!-- Custom HTML head -->
@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded "><a href="bean-management.html">Bean management</a></li><li class="chapter-item expanded "><a href="externalised-configuration.html">Externalised configuration</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="refreshing-configurations.html">Refreshing configurations</a></li></ol></li><li class="chapter-item expanded "><a href="validation.html">Validation</a></li><li class="chapter-item expanded "><a href="serialisation.html">Serialisation</a></li><li class="chapter-item expanded "><a href="converters.html">Converters</a></li><li class="chapter-item expanded "><a href="http-client.html">HTTP client</a></li><li class="chapter-item expanded "><a href="persistence.html">Persistence</a></li><li class="chapter-item expanded "><a href="interceptors.html">Interceptors</a></li><li class="chapter-item expanded "><a href="filters.html">Filters</a></li><li class="chapter-item expanded "><a href="cron-job.html">Cron job</a></li><li class="chapter-item expanded "><div>Exception handling</div></li><li class="chapter-item expanded "><div>Caching</div></li><li class="chapter-item expanded "><a href="testing.html">Testing</a></li><li class="chapter-item expanded "><div>Annotation processing</div></li><li class="chapter-item expanded "><div>Swagger</div></li><li class="chapter-item expanded "><a href="concepts.html">Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/bean-scope.html">Bean scope</a></li><li class="chapter-item expanded "><a href="concepts/application-context.html">Application context</a></li><li class="chapter-item expanded "><a href="concepts/web-servlet.html">Web servlet</a></li><li class="chapter-item expanded "><a href="concepts/filter.html">Filter</a></li><li class="chapter-item expanded "><a href="concepts/proxying.html">Proxying</a></li></ol></li><li class="chapter-item expanded "><a href="common-starters.html" class="active">Common starters</a></li><li class="chapter-item expanded "><a href="gotchas.html">Gotchas</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Spring Security</li><li class="chapter-item expanded "><a href="spring-security/security-configuration.html">Security configuration</a></li><li class="chapter-item expanded "><a href="spring-security/architecture.html">Architecture</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded "><a href="bean-management.html">Bean management</a></li><li class="chapter-item expanded "><a href="externalised-configuration.html">Externalised configuration</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="refreshing-configurations.html" class="active">Refreshing configurations</a></li></ol></li><li class="chapter-item expanded "><a href="validation.html">Validation</a></li><li class="chapter-item expanded "><a href="serialisation.html">Serialisation</a></li><li class="chapter-item expanded "><a href="converters.html">Converters</a></li><li class="chapter-item expanded "><a href="http-client.html">HTTP client</a></li><li class="chapter-item expanded "><a href="persistence.html">Persistence</a></li><li class="chapter-item expanded "><a href="interceptors.html">Interceptors</a></li><li class="chapter-item expanded "><a href="filters.html">Filters</a></li><li class="chapter-item expanded "><a href="cron-job.html">Cron job</a></li><li class="chapter-item expanded "><div>Exception handling</div></li><li class="chapter-item expanded "><div>Caching</div></li><li class="chapter-item expanded "><a href="testing.html">Testing</a></li><li class="chapter-item expanded "><div>Annotation processing</div></li><li class="chapter-item expanded "><div>Swagger</div></li><li class="chapter-item expanded "><a href="concepts.html">Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/bean-scope.html">Bean scope</a></li><li class="chapter-item expanded "><a href="concepts/application-context.html">Application context</a></li><li class="chapter-item expanded "><a href="concepts/web-servlet.html">Web servlet</a></li><li class="chapter-item expanded "><a href="concepts/filter.html">Filter</a></li><li class="chapter-item expanded "><a href="concepts/proxying.html">Proxying</a></li></ol></li><li class="chapter-item expanded "><a href="common-starters.html">Common starters</a></li><li class="chapter-item expanded "><a href="gotchas.html">Gotchas</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Spring Security</li><li class="chapter-item expanded "><a href="spring-security/security-configuration.html">Security configuration</a></li><li class="chapter-item expanded "><a href="spring-security/architecture.html">Architecture</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -148,7 +148,7 @@
                     <h1 class="menu-title">Spring Boot book</h1>
 
                     <div class="right-buttons">
-                        <a href="https://github.com/remykarem/remykarem.github.io/edit/main/books-src/spring-boot-book/src/common-starters.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/remykarem/remykarem.github.io/edit/main/books-src/spring-boot-book/src/refreshing-configurations.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -177,26 +177,69 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="common-starters"><a class="header" href="#common-starters">Common starters</a></h1>
-<p>Contain a lot of dependencies</p>
-<div class="table-wrapper"><table><thead><tr><th>Dependency (spring-boot-starter-xxx)</th><th>Use</th></tr></thead><tbody>
-<tr><td>web</td><td>Starter for building web, including RESTful, applications using Spring MVC. Uses Tomcat as the default embedded container</td></tr>
-<tr><td>actuator</td><td>Starter for using Spring Boot’s Actuator which provides production ready features to help you monitor and manage your application</td></tr>
-<tr><td>security</td><td>Starter for using Spring Security</td></tr>
-<tr><td>validation</td><td>Starter for using Java Bean Validation with Hibernate Validator</td></tr>
-<tr><td>test</td><td>Starter for testing Spring Boot applications with libraries including JUnit Jupiter, Hamcrest and Mockito</td></tr>
-<tr><td>data-jpa</td><td>Starter for using Spring Data JPA with Hibernate</td></tr>
-</tbody></table>
+                        <h1 id="refreshing-configurations--caching-configurations"><a class="header" href="#refreshing-configurations--caching-configurations">Refreshing configurations / caching configurations</a></h1>
+<h2 id="what-happens-when-you-call-actuatorrefresh"><a class="header" href="#what-happens-when-you-call-actuatorrefresh">What happens when you call <code>/actuator/refresh</code>?</a></h2>
+<ol>
+<li>
+<p>Triggers a <code>EnvironmentChangeEvent</code>.</p>
+<p><a href="https://docs.spring.io/spring-cloud-commons/reference/spring-cloud-commons/application-context-services.html#environment-changes">Spring Cloud Commons: Environment changes</a></p>
+</li>
+<li>
+<p>The application, which listens for <code>EnvironmentChangeEvent</code>, will:</p>
+<ul>
+<li>
+<p>Refresh any classes or <code>@Bean</code> methods that are annotated with <code>@RefreshScope</code>.</p>
+</li>
+<li>
+<p><strong>Re-bind any <code>@ConfigurationProperties</code></strong></p>
+<div id="admonition-question" class="admonition admonish-question">
+<div class="admonition-title">
+<p>Question</p>
+<p><a class="admonition-anchor-link" href="#admonition-question"></a></p>
 </div>
+<div>
+<pre><code>  What about data classes?
+</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="how-does-the-caching-work"><a class="header" href="#how-does-the-caching-work">How does the caching work?</a></h2>
+<p>Refresh scope beans are lazy proxies that initialize when they are used (that is, when a method is called), and the scope acts as a cache of initialized values. To force a bean to re-initialize on the next method call, you must invalidate its cache entry. </p>
+<p><a href="https://docs.spring.io/spring-cloud-commons/reference/spring-cloud-commons/application-context-services.html#refresh-scope">Spring Cloud Commons: Refresh scope</a></p>
+<p>Refresh scope beans act as an intermediary (”<strong>proxy beans</strong>”).</p>
+<p>It checks for an (underlying) existing instance. Only when (”<strong>lazy</strong>”) there is none (due to cache invalidation), it creates and initialises a new instance.</p>
+<h2 id="what-happens-when-a-refreshscope-bean-is-first-accessed"><a class="header" href="#what-happens-when-a-refreshscope-bean-is-first-accessed">What happens when a <code>@RefreshScope</code> bean is first accessed?</a></h2>
+<ol>
+<li>The bean gets created.</li>
+<li>The bean gets cached within the refresh lifecycle (”<strong>scope</strong>”).</li>
+<li>The bean will be re-used for subsequent calls.</li>
+</ol>
+<h2 id="what-happens-when-a-refresh-event-happens"><a class="header" href="#what-happens-when-a-refresh-event-happens">What happens when a refresh event happens?</a></h2>
+<ol>
+<li>Clear the cached bean.</li>
+</ol>
+<div id="admonition-warning" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
+</div>
+<div>
+<p>Take note of stale data. Use computed property etc. instead.</p>
+</div>
+</div>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="concepts/proxying.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="externalised-configuration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="gotchas.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="validation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -206,11 +249,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="concepts/proxying.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="externalised-configuration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="gotchas.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="validation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
