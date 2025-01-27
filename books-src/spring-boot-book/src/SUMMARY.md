@@ -4,6 +4,7 @@
 
 - [Bean management](./bean-management.md)
 - [Externalised configuration](./externalised-configuration.md)
+  - [Refreshing configurations](./refreshing-configurations.md)
 - [Validation](./validation.md)
 - [Serialisation](./serialisation.md)
 - [Converters](./converters.md)
