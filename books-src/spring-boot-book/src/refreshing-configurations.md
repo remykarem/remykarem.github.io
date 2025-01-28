@@ -37,3 +37,12 @@ It checks for an (underlying) existing instance. Only when (”**lazy**”) ther
 ~~~admonish warning
 Take note of stale data. Use computed property etc. instead.
 ~~~
+
+## Theory: You don't need to put `@RefreshScope` on the class which has the configuration dependency
+
+## Theory: You should minimise annotating `@RefreshScope` whenever possible
+
+## Gotcha (as with any other caching)
+
+* Don't store refreshable configurations in instance property!
+* When inheriting from a base class, ensure that the base class does not store refreshable configurations in instance property.
