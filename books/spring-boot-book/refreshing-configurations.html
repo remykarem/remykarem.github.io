@@ -230,6 +230,13 @@
 <p>Take note of stale data. Use computed property etc. instead.</p>
 </div>
 </div>
+<h2 id="theory-you-dont-need-to-put-refreshscope-on-the-class-which-has-the-configuration-dependency"><a class="header" href="#theory-you-dont-need-to-put-refreshscope-on-the-class-which-has-the-configuration-dependency">Theory: You don't need to put <code>@RefreshScope</code> on the class which has the configuration dependency</a></h2>
+<h2 id="theory-you-should-minimise-annotating-refreshscope-whenever-possible"><a class="header" href="#theory-you-should-minimise-annotating-refreshscope-whenever-possible">Theory: You should minimise annotating <code>@RefreshScope</code> whenever possible</a></h2>
+<h2 id="gotcha-as-with-any-other-caching"><a class="header" href="#gotcha-as-with-any-other-caching">Gotcha (as with any other caching)</a></h2>
+<ul>
+<li>Don't store refreshable configurations in instance property!</li>
+<li>When inheriting from a base class, ensure that the base class does not store refreshable configurations in instance property.</li>
+</ul>
 
                     </main>
 
