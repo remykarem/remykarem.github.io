@@ -9,6 +9,7 @@ Actors:
 Purpose:
 * [Short-term FIFO message **storage**](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
+* "Routing" into groups
 
 Features:
 
