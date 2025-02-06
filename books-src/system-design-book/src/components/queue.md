@@ -33,6 +33,7 @@ Features:
 - Housekeeping — **message retention period** is the maximum period how long a message can stay in the queue
 - Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately
 - TTL
+- Deduplication — limited capability
 
 Guarantees:
 - [High availability](../goals/availability.md) — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
