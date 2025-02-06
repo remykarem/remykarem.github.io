@@ -24,7 +24,7 @@ Features:
  
   If you want to release the lock while processing, you can set the visibility timeout to 0.
     
-- [Retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
+
 - Short polling or long polling
 - Integration with DLQ
 - [Batching](../strategies/batching.md)
@@ -84,6 +84,7 @@ Types of queues
   ~~~
   
 ~~~admonish example title="Applications"
+* [Retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
 * Batch messages for future processing. [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
 * Decouple requests from intensive background work. [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
 
