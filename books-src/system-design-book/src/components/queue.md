@@ -1,5 +1,7 @@
 # Message queue
 
+Verbs: "produce" message, "consume" message
+
 Actors:
 * **Producer** — creates a message and pushes it into the queue
 * **Consumer** — reads a message and deletes it from the queue
@@ -9,13 +11,7 @@ Purpose:
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
 Features:
-- [High availability](../goals/availability.md) — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
-  * absence of message in one of the servers
-  * slightly delayed messages (mentioned in the docs)
-  * messages delivered more than once
-  * messages delivered out-of-order
-  * Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.
-  
+
 - [Locking mechanism](../distributed-system/concurrency-control.md) — Messages are locked during processing, so that multiple producers can send and multiple consumers can receive messages _at the same time_.
   
   How does it work?
@@ -36,6 +32,15 @@ Features:
 - Housekeeping — **message retention period** is the maximum period how long a message can stay in the queue
 - Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately
 - TTL
+
+Guarantees:
+- [High availability](../goals/availability.md) — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
+  * absence of message in one of the servers
+  * slightly delayed messages (mentioned in the docs)
+  * messages delivered more than once
+  * messages delivered out-of-order
+  * Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.
+  
 
 Cloud features
 - Encryption at rest
