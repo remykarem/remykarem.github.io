@@ -2,13 +2,13 @@
 
 Serverless compute service
 
+Purpose:
+* Lightweight [**compute**](../core-functionalities/compute.md)
+
 Characteristics:
 * [distributed](../strategies/distributed.md) by design
 * **stateless** — every function is processed in isolation
 * **serverless** — this means faster start time
-
-Responsibility:
-* Lightweight [**compute**](../core-functionalities/compute.md)
 
 Features:
 * [Auto-scalable](../strategies/auto-scaling.md)
