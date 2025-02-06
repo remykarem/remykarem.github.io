@@ -29,7 +29,6 @@ Features:
 - Short polling or long polling
 - Integration with DLQ
 - [Batching](../strategies/batching.md)
-- [Rate limiting](../strategies/rate-limiting.md)
 - Housekeeping — **message retention period** is the maximum period how long a message can stay in the queue
 - Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately
 - TTL
@@ -86,6 +85,7 @@ Types of queues
   ~~~
   
 ~~~admonish example title="Applications"
+* [Rate limiting](../strategies/rate-limiting.md)
 * [Retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
 * Batch messages for future processing. [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
 * Decouple requests from intensive background work. [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
