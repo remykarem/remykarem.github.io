@@ -186,7 +186,7 @@
 </ul>
 <p>Purpose:</p>
 <ul>
-<li><a href="../core-functionalities/data-storage.html">Short-term FIFO message <strong>storage</strong></a> – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. </li>
+<li><a href="../core-functionalities/data-storage.html">Short-term (limited) message <strong>storage</strong></a> </li>
 <li><a href="../core-functionalities/concurrency-control.html">Processing messages in order</a></li>
 <li>Parallel processing across logical groups</li>
 </ul>
@@ -205,6 +205,9 @@
 <li>extended to cover the time required to process a batch of messages (in long polling, especially)</li>
 </ul>
 <p>If you want to release the lock while processing, you can set the visibility timeout to 0.</p>
+</li>
+<li>
+<p>Partitioning</p>
 </li>
 <li>
 <p>Short polling or long polling</p>
