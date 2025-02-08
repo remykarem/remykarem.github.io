@@ -3,14 +3,14 @@
 Purpose:
 * [Asynchronous message **routing**](../core-functionalities/routing.md)
 
-~~~admonish example
-Amazon SNS
-~~~
-
 Features:
 * Message filtering
 * Message ordering
 * DLQ integration
+
+~~~admonish example
+Amazon SNS
+~~~
 
 Examples of subscribers are a Lambda and a queue. 
 
