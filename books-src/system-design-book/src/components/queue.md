@@ -7,7 +7,7 @@ Actors:
 * **Consumer** — reads a message and deletes it from the queue
 
 Purpose:
-* [Short-term FIFO message **storage**](../core-functionalities/data-storage.md) – Messages can usually be stored up to a number of days. Additionally, the size of the message that can be stored usually has a limit. 
+* [Short-term (limited) message **storage**](../core-functionalities/data-storage.md) 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 * Parallel processing across logical groups
 
@@ -24,8 +24,7 @@ Features:
   * extended to cover the time required to process a batch of messages (in long polling, especially)
  
   If you want to release the lock while processing, you can set the visibility timeout to 0.
-    
-
+- Partitioning
 - Short polling or long polling
 - Integration with DLQ
 - [Batching](../strategies/batching.md)
