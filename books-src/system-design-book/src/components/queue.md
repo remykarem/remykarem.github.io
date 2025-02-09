@@ -9,7 +9,6 @@ Actors:
 Purpose:
 * [Short-term (limited) message **storage**](../core-functionalities/data-storage.md) 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
-* Parallel processing across logical groups
 
 Features:
 
@@ -87,16 +86,13 @@ Types of queues
 * Decouple two services
   * Decouple requests from intensive background work. [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
   * Queues can act as buffers between 2 systems. This decouples the processing speed of the producer and the consumption rate of the downstream services. (or upstream vs. downstream)
-* [Rate limiting](../strategies/rate-limiting.md)
+  * Decouple microservices and process event-driven applications — Separate frontend from backend systems, such as in a banking application. Customers immediately get a response, but the bill payments are processed in the background. [Amazon SQS Product Page](https://aws.amazon.com/sqs/)
 * [Retry mechanism](../strategies/retry-mechanism.md), usually meant for [transient failures](../failures.md)
+* [Rate limiting](../strategies/rate-limiting.md)
+* Parallel processing across logical groups
 * Batch messages for future processing. [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html)
-
-
-* Decouple microservices and process event-driven applications — Separate frontend from backend systems, such as in a banking application. Customers immediately get a response, but the bill payments are processed in the background. [Amazon SQS Product Page](https://aws.amazon.com/sqs/)
-
-
-
 * to make temporary outages survivable by stashing traffic-in-transit. [On SQS by Tim Bray](https://www.tbray.org/ongoing/When/201x/2019/05/26/SQS)
+* Delay processing
 ~~~
 
 ~~~admonish note title="Best practices"
