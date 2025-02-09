@@ -1,5 +1,7 @@
 # Producer/Consumer
 
+There is only 1 intended recipient for every message.
+
 1. The **producer** sends a **message** to a specific location (eg. buffer or queue). 
 2. The **consumer** retrieves the message from this location.
 
