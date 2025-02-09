@@ -186,17 +186,35 @@
 <li>Fork-join model — eg. Java's ForkJoinPool, Rust <code>rayon</code></li>
 <li>Actor model — independent actors with message passing</li>
 </ul>
-<div id="admonition-whats-a-coroutine" class="admonition admonish-tip">
-<div class="admonition-title">
-<p>What's a coroutine?</p>
-<p><a class="admonition-anchor-link" href="#admonition-whats-a-coroutine"></a></p>
-</div>
-<div>
+<h2 id="coroutine"><a class="header" href="#coroutine">Coroutine</a></h2>
 <p>Coroutine = co-operative + routine</p>
 <p>In C++, a coroutine is a function that can suspend execution to be resumed later.</p>
 <p><a href="https://stackoverflow.com/questions/553704/what-is-a-coroutine">StackOverflow: What is a coroutine?</a></p>
+<p>Coroutines may or may not need a runtime.</p>
+<div id="admonition-runtime" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Runtime</p>
+<p><a class="admonition-anchor-link" href="#admonition-runtime"></a></p>
+</div>
+<div>
+<p>aka scheduler, dispatcher, executor</p>
 </div>
 </div>
+<ul>
+<li>Need runtime:
+<ul>
+<li>Rust's async functions</li>
+<li>Python's async functions</li>
+<li>Kotlin's suspend functions</li>
+</ul>
+</li>
+<li>Don't need runtime:
+<ul>
+<li>Python's generators (<code>yield</code>)</li>
+<li>Lua coroutines</li>
+</ul>
+</li>
+</ul>
 <h2 id="thread-types"><a class="header" href="#thread-types">Thread &quot;types&quot;</a></h2>
 <p>Green thread vs. OS thread</p>
 <div class="table-wrapper"><table><thead><tr><th></th><th>Green thread</th><th>OS thread</th></tr></thead><tbody>

@@ -8,13 +8,27 @@
 * Fork-join model — eg. Java's ForkJoinPool, Rust `rayon`
 * Actor model — independent actors with message passing
 
-~~~admonish tip title="What's a coroutine?"
+## Coroutine
+
 Coroutine = co-operative + routine
 
 In C++, a coroutine is a function that can suspend execution to be resumed later.
 
 [StackOverflow: What is a coroutine?](https://stackoverflow.com/questions/553704/what-is-a-coroutine)
+
+Coroutines may or may not need a runtime.
+
+~~~admonish tip title="Runtime"
+aka scheduler, dispatcher, executor
 ~~~
+
+* Need runtime:
+  * Rust's async functions
+  * Python's async functions
+  * Kotlin's suspend functions
+* Don't need runtime:
+  * Python's generators (`yield`)
+  * Lua coroutines
 
 ## Thread "types"
 
