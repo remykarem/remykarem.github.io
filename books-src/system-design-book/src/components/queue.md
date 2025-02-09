@@ -24,7 +24,7 @@ Features:
   * extended to cover the time required to process a batch of messages (in long polling, especially)
  
   If you want to release the lock while processing, you can set the visibility timeout to 0.
-- Partitioning
+- Logical grouping of messages (with order within group)
 - Short polling or long polling
 - Integration with DLQ
 - [Batching](../strategies/batching.md)
