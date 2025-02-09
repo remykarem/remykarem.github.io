@@ -178,6 +178,14 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="asynchronous-programming"><a class="header" href="#asynchronous-programming">Asynchronous programming</a></h1>
+<h2 id="models"><a class="header" href="#models">Models</a></h2>
+<ul>
+<li>Thread-based concurrency — uses OS threads</li>
+<li>Event-driven concurrency / event loop — eg. Node.js, Rust <code>tokio</code>, Python <code>asyncio</code></li>
+<li>Fork-join model — eg. Java's ForkJoinPool, Rust <code>rayon</code></li>
+<li>Coroutine-based concurrency (functions that pause and execute) — eg. Rust async/await, Kotlin's coroutines, Go's goroutines</li>
+<li>Actor model — independent actors with message passing</li>
+</ul>
 
                     </main>
 
