@@ -149,7 +149,7 @@
   - [Pub/Sub](./messaging-patterns/pub-sub.md)
   - [Fan-out](./messaging-patterns/fan-out.md)
   - [Fan-in](./messaging-patterns/fan-in.md)
-- [Type IV: Streamingness]()
+- [Type III: Streamingness]()
   - [Streaming](./messaging-patterns/streaming.md)
 
 ---
