@@ -145,11 +145,13 @@
   - [Request/Response](./messaging-patterns/request-response.md)
   - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
 - [Type II: M-to-N messaging]()
-  - [Producer/Consumer](./messaging-patterns/producer-consumer.md)
-  - [Pub/Sub](./messaging-patterns/pub-sub.md)
+  - [Point-to-point](./messaging-patterns/point-to-point.md)
   - [Fan-out](./messaging-patterns/fan-out.md)
   - [Fan-in](./messaging-patterns/fan-in.md)
-- [Type III: Streamingness]()
+- [Type III: M-to-N actors]()
+  - [Producer/Consumer](./messaging-patterns/producer-consumer.md)
+  - [Pub/Sub](./messaging-patterns/pub-sub.md)
+- [Type IV: Streamingness]()
   - [Streaming](./messaging-patterns/streaming.md)
 
 ---
