@@ -8,6 +8,7 @@
 
 - [Readability]()
 - [Maintainability]()
+- [Performance]()
 
 ## Strategies
 
@@ -126,3 +127,15 @@
 # Type theory
 
 - [Algebraic data type]()
+
+---
+
+# Optimisation
+
+- [Memory usage]()
+
+---
+
+# Asynchronous programming
+
+- [Summary]()
