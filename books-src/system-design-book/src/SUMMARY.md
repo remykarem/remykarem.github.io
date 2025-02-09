@@ -33,10 +33,10 @@
 - [Pipelining](./core-functionalities/pipelining.md)
 - [Scheduling](./core-functionalities/scheduling.md)
 - [Data storage](./core-functionalities/data-storage.md)
-- [Streaming data handling](./core-functionalities/streaming-data-handling.md)
 - [Identity hiding](./core-functionalities/identity-hiding.md)
 - [Control outgoing requests](./core-functionalities/control-outgoing-requests.md)
 - [SSL encryption & decryption](./core-functionalities/ssl-encryption-and-decryption.md)
+- [High throughput data handling](./core-functionalities/high-throughput-data-handling.md)
 - [Authentication & authorisation](./core-functionalities/authentication-and-authorisation.md)
 
 ---
