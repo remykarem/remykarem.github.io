@@ -2,16 +2,12 @@
 
 Publish/Subscribe
 
-There are _n_ recipients for every message.
-
-1. A **publisher** sends a message ("**event**") to a **channel**/**topic**.
-2. The message is distributed (via the message system) to all **subscribers** who have **registered**/**subscribed** to the respective topic
-
-This pattern allows messages to be delivered to multiple consumers. Think "broadcasting".
-
-```admonish note
-A message is consumed by _mutiple subscribers_.
-```
+Setup:
+* There are multiple **topics** or **channels**.
+* There are multiple **subscribers** for every topics.
+* **Publishers** can send a message to any topic.
+  1. A publisher sends a message to a topic.
+  2. The message is distributed to all subscribers of the respective topic.
 
 ~~~admonish note title="Pub/Sub vs Webhook"
 * **Decoupling / indirect communication** — Publisher doesn't know about subscribers (there's a message broker). For webhooks, producer needs to know the consumers URL.

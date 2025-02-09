@@ -179,21 +179,17 @@
                     <main>
                         <h1 id="pubsub"><a class="header" href="#pubsub">Pub/Sub</a></h1>
 <p>Publish/Subscribe</p>
-<p>There are <em>n</em> recipients for every message.</p>
+<p>Setup:</p>
+<ul>
+<li>There are multiple <strong>topics</strong> or <strong>channels</strong>.</li>
+<li>There are multiple <strong>subscribers</strong> for every topics.</li>
+<li><strong>Publishers</strong> can send a message to any topic.
 <ol>
-<li>A <strong>publisher</strong> sends a message (&quot;<strong>event</strong>&quot;) to a <strong>channel</strong>/<strong>topic</strong>.</li>
-<li>The message is distributed (via the message system) to all <strong>subscribers</strong> who have <strong>registered</strong>/<strong>subscribed</strong> to the respective topic</li>
+<li>A publisher sends a message to a topic.</li>
+<li>The message is distributed to all subscribers of the respective topic.</li>
 </ol>
-<p>This pattern allows messages to be delivered to multiple consumers. Think &quot;broadcasting&quot;.</p>
-<div id="admonition-note" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Note</p>
-<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
-</div>
-<div>
-<p>A message is consumed by <em>mutiple subscribers</em>.</p>
-</div>
-</div>
+</li>
+</ul>
 <div id="admonition-pubsub-vs-webhook" class="admonition admonish-note">
 <div class="admonition-title">
 <p>Pub/Sub vs Webhook</p>
