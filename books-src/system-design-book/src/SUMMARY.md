@@ -151,8 +151,6 @@
 - [Type III: M-to-N actors]()
   - [Producer/Consumer](./messaging-patterns/producer-consumer.md)
   - [Pub/Sub](./messaging-patterns/pub-sub.md)
-- [Type IV: Streamingness]()
-  - [Streaming](./messaging-patterns/streaming.md)
 
 ---
 
