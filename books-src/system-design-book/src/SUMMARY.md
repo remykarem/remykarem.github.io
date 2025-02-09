@@ -73,6 +73,7 @@
 - [Stateless service](./strategies/stateless-service.md)
 - [Loose coupling of services](./strategies/loose-coupling-of-services.md)
 - [Adding layer of abstraction](./strategies/adding-layer-of-abstraction.md)
+- [Adding buffer between services](./strategies/adding-buffer-between-services.md)
 
 ---
 
