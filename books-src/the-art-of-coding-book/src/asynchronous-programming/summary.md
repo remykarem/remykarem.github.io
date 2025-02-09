@@ -8,10 +8,12 @@
 * Fork-join model — eg. Java's ForkJoinPool, Rust `rayon`
 * Actor model — independent actors with message passing
 
-## Scheduler
-
-Scheduling strategies:
-* work-stealing
+## Scheduling strategies:
+* Event-loop
+* Cooperative
+* Preemptive
+* Work-stealing
+* Basic (?)
 
 ## Coroutine
 
