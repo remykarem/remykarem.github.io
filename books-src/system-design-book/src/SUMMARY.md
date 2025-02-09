@@ -144,7 +144,7 @@
 - [Type I: Responsiveness]()
   - [Request/Response](./messaging-patterns/request-response.md)
   - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
-- [Type II: M-to-N messaging]()
+- [Type II: M-to-N messages]()
   - [Point-to-point](./messaging-patterns/point-to-point.md)
   - [Fan-out](./messaging-patterns/fan-out.md)
   - [Fan-in](./messaging-patterns/fan-in.md)
