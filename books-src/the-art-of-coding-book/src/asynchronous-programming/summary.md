@@ -8,6 +8,11 @@
 * Fork-join model — eg. Java's ForkJoinPool, Rust `rayon`
 * Actor model — independent actors with message passing
 
+## Scheduler
+
+Scheduling strategies:
+* work-stealing
+
 ## Coroutine
 
 Coroutine = co-operative + routine
