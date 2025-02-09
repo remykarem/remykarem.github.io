@@ -186,7 +186,16 @@
 <li>Coroutine-based concurrency (functions that pause and execute) — eg. Rust async/await, Kotlin's coroutines, Go's goroutines</li>
 <li>Actor model — independent actors with message passing</li>
 </ul>
-
+<h2 id="thread-types"><a class="header" href="#thread-types">Thread &quot;types&quot;</a></h2>
+<p>Green thread vs. OS thread</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th>Green thread</th><th>OS thread</th></tr></thead><tbody>
+<tr><td>Managed by</td><td>Runtime (e.g., Go, JVM)</td><td>Operating System</td></tr>
+<tr><td>Context Switching</td><td>Fast (user-space)</td><td>Slow (kernel-space)</td></tr>
+<tr><td>Memory Usage</td><td>Low (stack size small)</td><td>High (each thread has its own large stack)</td></tr>
+<tr><td>Concurrency Level	Can spawn millions of threads</td><td>Limited by OS and system resources</td><td></td></tr>
+<tr><td>Preemption</td><td>Usually cooperative</td><td>Preemptive (scheduled by OS)</td></tr>
+</tbody></table>
+</div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
