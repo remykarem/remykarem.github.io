@@ -88,6 +88,7 @@
 - [API Gateway](./components/api-gateway.md)
 - [Forward proxy](./components/forward-proxy.md)
 - [Step Functions](./components/step-functions.md)
+- [Kafka](./components/kafka.md)
 - [Message broker](./components/message-broker.md)
 - [Event bus service](./components/event-bus-service.md)
 - [Pub/Sub messaging service](./components/pub-sub-service.md)
