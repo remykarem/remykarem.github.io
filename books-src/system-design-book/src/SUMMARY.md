@@ -146,8 +146,6 @@
   - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
 - [Type II: M-to-N messaging]()
   - [Producer/Consumer](./messaging-patterns/producer-consumer.md)
-    - [Point-to-point]()
-    - [Task queues]()
   - [Pub/Sub](./messaging-patterns/pub-sub.md)
   - [Fan-out](./messaging-patterns/fan-out.md)
   - [Fan-in](./messaging-patterns/fan-in.md)
