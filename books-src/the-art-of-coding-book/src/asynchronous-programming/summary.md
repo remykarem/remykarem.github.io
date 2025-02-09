@@ -9,7 +9,7 @@
 * Actor model — independent actors with message passing
 
 ## Scheduling strategies:
-* Event-loop
+* Event-loop — to listen for I/O readiness
 * Cooperative
 * Preemptive
 * Work-stealing
