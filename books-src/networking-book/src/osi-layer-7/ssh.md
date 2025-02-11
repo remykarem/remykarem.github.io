@@ -8,14 +8,15 @@ This protocol provides **remote shell** access to access a remote computer in a 
 
 SSH is built on top of TCP.
 
-SSH protocol is designed with _multiplexing_ in mind.
+SSH protocol is designed with _multiplexing_ in mind. This means you can open multiple sessions under an existing connection (limited to `MaxSessions`).
 
 ~~~admonish hint title="SSH across multiple OSI layers"
 SSH spans across layers 5, 6 and 7.
 ~~~
 
 ~~~admonish tip
-Use `-v` or `-vv` etc. for verbosity.
+* Use `-v` or `-vv` etc. for verbosity.
+* `man ssh_config` for list of configs
 ~~~
 
 ~~~admonish info title="SSH implementations"
