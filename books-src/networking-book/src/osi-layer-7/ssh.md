@@ -8,6 +8,8 @@ This protocol provides **remote shell** access to access a remote computer in a 
 
 SSH is built on top of TCP.
 
+SSH protocol is designed with _multiplexing_ in mind.
+
 ~~~admonish hint title="SSH across multiple OSI layers"
 SSH spans across layers 5, 6 and 7.
 ~~~
