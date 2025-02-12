@@ -178,65 +178,6 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="ssh"><a class="header" href="#ssh">SSH</a></h1>
-<p>Secure Shell</p>
-<p><a href="https://www.rfc-editor.org/rfc/rfc4253.html">RFC 4253</a></p>
-<p>This protocol provides <strong>remote shell</strong> access to access a remote computer in a secure way. The establishment of a secure communication is part of SSH (Layer 6).</p>
-<p>SSH is built on top of TCP.</p>
-<p>SSH protocol is designed with <em>multiplexing</em> in mind. This means you can open multiple sessions under an existing connection (limited to <code>MaxSessions</code>).</p>
-<div id="admonition-ssh-across-multiple-osi-layers" class="admonition admonish-tip">
-<div class="admonition-title">
-<p>SSH across multiple OSI layers</p>
-<p><a class="admonition-anchor-link" href="#admonition-ssh-across-multiple-osi-layers"></a></p>
-</div>
-<div>
-<p>SSH spans across layers 5, 6 and 7.</p>
-</div>
-</div>
-<div id="admonition-tip" class="admonition admonish-tip">
-<div class="admonition-title">
-<p>Tip</p>
-<p><a class="admonition-anchor-link" href="#admonition-tip"></a></p>
-</div>
-<div>
-<ul>
-<li>Use <code>-v</code> or <code>-vv</code> etc. for verbosity.</li>
-<li><code>man ssh_config</code> for list of configs</li>
-</ul>
-</div>
-</div>
-<div id="admonition-ssh-implementations" class="admonition admonish-info">
-<div class="admonition-title">
-<p>SSH implementations</p>
-<p><a class="admonition-anchor-link" href="#admonition-ssh-implementations"></a></p>
-</div>
-<div>
-<ul>
-<li>OpenSSH (macOS)</li>
-<li>PuTTY (Windows, Linux)</li>
-</ul>
-</div>
-</div>
-<div id="admonition-warning" class="admonition admonish-warning">
-<div class="admonition-title">
-<p>Warning</p>
-<p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
-</div>
-<div>
-<p>When setting up an SSH server, OpenSSH enables SFTP and SCP by default.</p>
-<p>To disable SFTP, you need to remove the SFTP <code>Subsystem</code> in the configuration.</p>
-<p>To disable SCP, idk</p>
-</div>
-</div>
-<div id="admonition-ssh-versions" class="admonition admonish-info">
-<div class="admonition-title">
-<p>SSH versions</p>
-<p><a class="admonition-anchor-link" href="#admonition-ssh-versions"></a></p>
-</div>
-<div>
-<p>SSH-2 is the latest version.</p>
-<p>SSH-1 is obsolete and is considered vulnerable (see wiki).</p>
-</div>
-</div>
 
                     </main>
 
