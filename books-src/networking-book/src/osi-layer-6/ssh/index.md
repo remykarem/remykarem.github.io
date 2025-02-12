@@ -7,6 +7,7 @@ SSH typically operates on top of TCP.
 In this layer, SSH provides
 * **privacy**
 * **client authentication**
+* **server authentication**
 
 thereby establishing a secure connection.
 
