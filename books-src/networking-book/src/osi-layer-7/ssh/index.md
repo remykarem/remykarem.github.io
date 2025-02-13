@@ -33,6 +33,8 @@ Configs
 * Max connections per account (user)
 * Max concurrent sessions per connection
 * Idle connection timeout
+* Client alive ttl (server setting)
+* Server alive ttl (client setting)
 
 OpenSSH-specific
 * MaxSessions — per connection
