@@ -6,6 +6,13 @@ Unix domain socket or IPC socket is a _communications endpoint_ for exchanging d
 
 A **Unix socket file** is first created.
 
+~~~admonish note title="URI scheme"
+The usual URI scheme is
+```
+unix://<fullfilepath¥
+```
+~~~
+
 We use the same `socket` syscall.
 
 Unix sockets bypass the kernel's networking stack. 
