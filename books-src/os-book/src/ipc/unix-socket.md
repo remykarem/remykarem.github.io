@@ -9,7 +9,7 @@ A **Unix socket file** is first created.
 ~~~admonish note title="URI scheme"
 The usual URI scheme is
 ```
-unix://<fullfilepath¥
+unix://<fullfilepath>
 ```
 ~~~
 
