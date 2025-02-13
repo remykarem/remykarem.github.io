@@ -9,7 +9,10 @@ TLS vs. SSH:
 |   | TLS | SSH |
 | - | --- | --- |
 | Server authentication | Yes | Yes |
-| Client authentication | mTLS | Yes |
+| Client authentication | - | Yes |
+
+* Server authentication — the server needs to prove its identity
+* Client authentication — the client needs to prove its identity
 
 ~~~admonish question title="Why no client authentication at TLS?"
 Client authentication can be handled at the application layer; common for HTTP.
