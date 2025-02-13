@@ -570,6 +570,17 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
 <p>aka Unix domain socket</p>
 <p>Unix domain socket or IPC socket is a <em>communications endpoint</em> for exchanging data between processes executing on the same host OS.</p>
 <p>A <strong>Unix socket file</strong> is first created.</p>
+<div id="admonition-uri-scheme" class="admonition admonish-note">
+<div class="admonition-title">
+<p>URI scheme</p>
+<p><a class="admonition-anchor-link" href="ipc/unix-socket.html#admonition-uri-scheme"></a></p>
+</div>
+<div>
+<p>The usual URI scheme is</p>
+<pre><code>unix://&lt;fullfilepath¥
+</code></pre>
+</div>
+</div>
 <p>We use the same <code>socket</code> syscall.</p>
 <p>Unix sockets bypass the kernel's networking stack. </p>
 <div id="admonition-example-applications" class="admonition admonish-example">
