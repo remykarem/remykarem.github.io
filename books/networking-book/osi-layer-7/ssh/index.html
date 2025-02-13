@@ -183,6 +183,35 @@
 <p>This protocol provides <strong>remote shell</strong> access to access a remote computer in a secure way. The establishment of a secure communication is part of SSH (Layer 6).</p>
 <p>SSH is built on top of TCP.</p>
 <p>SSH protocol is designed with <em>multiplexing</em> in mind. This means you can open multiple sessions under an existing connection (limited to <code>MaxSessions</code>).</p>
+<p>Multiplexing example</p>
+<pre><code>Host bastion
+  Hostname server.example.com
+  ForwardAgent yes
+  ControlPath ~/.ssh/cm-%r@%h:%p
+  ControlMaster auto
+  ControlPersist 10m
+</code></pre>
+<p>https://blog.scottlowe.org/2015/12/11/using-ssh-multiplexing/</p>
+<p>Try opening multiple tabs</p>
+<pre><code>mux_client_request_session: session request failed: Session open refused by peer
+</code></pre>
+<p>Configs</p>
+<ul>
+<li>Max connections per account (user)</li>
+<li>Max concurrent sessions per connection</li>
+<li>Idle connection timeout</li>
+</ul>
+<p>OpenSSH-specific</p>
+<ul>
+<li>MaxSessions — per connection</li>
+<li>MaxStartups x:y:z — global</li>
+<li>MaxConnectionsPerUser 
+man ssh_config
+AWS Transfer Family-specific</li>
+<li>Concurrent SFTP connections per user</li>
+<li>Connections per account
+https://docs.aws.amazon.com/general/latest/gr/transfer-service.html</li>
+</ul>
 <div id="admonition-ssh-across-multiple-osi-layers" class="admonition admonish-tip">
 <div class="admonition-title">
 <p>SSH across multiple OSI layers</p>
