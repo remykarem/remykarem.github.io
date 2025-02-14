@@ -1,5 +1,9 @@
 # Layer 4 - Transport
 
+~~~admonish note
+Note that the OS abstracts this layer from us.
+~~~
+
 What problems are we trying to solve?
 
 - Network is unreliable due to **congestion** — when more packets than the network has bandwidth for are sent through, some packets get dropped ("**lost packets**") and some get delayed ("**out-of-order**").
