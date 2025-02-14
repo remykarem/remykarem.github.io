@@ -1,3 +1,3 @@
 # Features
 
-* Multiplexing via sessions
+* Multiplexing via sessions using an existing connection
