@@ -16,5 +16,7 @@ TLS vs. SSH:
 * Client authentication — the client needs to prove its identity
 
 ~~~admonish question title="Why no client authentication at TLS?"
-Client authentication can be handled at the application layer; common for HTTP.
+HTTP applications don't always modify the server, unlike SSH (execute commands to server, upload files).
+
+When needed, client authentication can still be handled at the application layer.
 ~~~
