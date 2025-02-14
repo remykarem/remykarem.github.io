@@ -109,13 +109,13 @@
 - [TLS](./osi-layer-6/tls/index.md)
   - [Workflow](./osi-layer-6/tls/workflow.md)
   - [Setup: Client-server](./osi-layer-6/tls/setup.md)
-  - [DTLS](./osi-layer-6/tls/dtls.md)
   - [TLS cipher suite](./osi-layer-6/tls/cipher-suite.md)
   - [SSL proxying](./osi-layer-6/tls/ssl-proxying.md)
   - [SSL pinning](./osi-layer-6/tls/ssl-pinning.md)
 - [SSH](./osi-layer-6/ssh/index.md)
   - [Workflow](./osi-layer-6/ssh/workflow.md)
   - [Setup: Client-server](./osi-layer-6/ssh/setup.md)
+- [DTLS](./osi-layer-6/tls/dtls.md)
 
 ---
 
