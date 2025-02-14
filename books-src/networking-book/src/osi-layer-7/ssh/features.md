@@ -1,1 +1,3 @@
 # Features
+
+* Multiplexing via sessions
