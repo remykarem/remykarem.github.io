@@ -21,6 +21,8 @@ Therefore, the goals of Layer 4 (not guaranteed by all protocols) are:
 - **Control rate of data transmission** to prevent congestion
 - **Multiplexing and demultiplexing**
 
+  To be able to handle **multiple TCP connections at the same time**, we need multiplexing.
+  
   Transport layer labels packets with the port number of the application a message is from and the one it is addressed to. This allows the layer to multiplex and demultiplex the data. TCP and UDP implement these differently.
 
   ![TCP](./tcp1.png)
