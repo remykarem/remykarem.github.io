@@ -10,6 +10,7 @@ TLS vs. SSH:
 | - | --- | --- |
 | Server authentication | Yes | Yes |
 | Client authentication | - | Yes |
+| Trust model | Chain of trust | Manual (?) |
 
 * Server authentication — the server needs to prove its identity
 * Client authentication — the client needs to prove its identity
