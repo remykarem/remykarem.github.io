@@ -187,7 +187,10 @@
 <p><a class="admonition-anchor-link" href="#admonition-on-using-ssh"></a></p>
 </div>
 <div>
-<p>When we say &quot;SFTP uses SSH&quot;, we are saying that <em>SFTP uses the secure communication provided by SSH</em>.</p>
+<p>When we say &quot;SFTP uses SSH&quot;, we are saying that SFTP runs as a subsytem of SSH, using the underlying secure communication provided by SSH.</p>
+<p>In the SSH server config, it might look like this:</p>
+<pre><code>Subsystem sftp /usr/lib/openssh/sftp-server
+</code></pre>
 <p>SFTP doesn't use the remote shell access capabilities of SSH.</p>
 </div>
 </div>

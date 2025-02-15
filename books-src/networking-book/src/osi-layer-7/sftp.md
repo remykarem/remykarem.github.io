@@ -7,7 +7,13 @@ This protocol provides file transfer, file access and file management functional
 SFTP typically uses SSH (Layer 6) to establish a secure connection for file transfers.
 
 ~~~admonish note title="On using SSH"
-When we say "SFTP uses SSH", we are saying that _SFTP uses the secure communication provided by SSH_.
+When we say "SFTP uses SSH", we are saying that SFTP runs as a subsytem of SSH, using the underlying secure communication provided by SSH.
+
+In the SSH server config, it might look like this:
+
+```
+Subsystem sftp /usr/lib/openssh/sftp-server
+```
 
 SFTP doesn't use the remote shell access capabilities of SSH.
 ~~~
