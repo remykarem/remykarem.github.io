@@ -12,8 +12,12 @@ HTTP/2: [RFC 7540](https://tools.ietf.org/html/rfc7540)
 | Header compression     | ✅     | ✅     | ✅       | ❌       |
 | Single TCP connection^ | ✅     | ✅     | ✅       | ❌       |
 
+HTTP/2 is theoretically faster than it's predecessors.
+
 ```admonish faq title="Binary format"
-A binary protocol means that the data becomes more compact (and closer to how the data is represented in memory), hence more efficient parsing.
+In the binary protocol:
+* efficient — we know exactly how much buffer to allocate (instead of read until the next delimiter) because the protocol requires the length to read; O(1) instead of O(n)
+* compact — header names and values are compressed using HPACK
 ```
 
 ```admonish faq title="Single TCP connection"
