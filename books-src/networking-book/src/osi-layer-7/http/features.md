@@ -5,7 +5,7 @@ HTTP/2: [RFC 7540](https://tools.ietf.org/html/rfc7540)
 | Feature                | HTTP/3 | HTTP/2 | HTTP/1.1 | HTTP/1.0 |
 | ---------------------- | ------ | ------ | -------- | -------- |
 | Transport protocol     | QUIC   | TCP    | TCP      | TCP      |
-| Format                 | Binary | Binary | Text     | Text     |
+| "Format"/"encoding"    | Binary | Binary | Text     | Text     |
 | Multiplexing           | ✅     | ✅     | ❌       | ❌       |
 | Server push            | ✅     | ✅     | ❌       | ❌       |
 | Stream prioritisation  | ✅     | ✅     | ❌       | ❌       |
