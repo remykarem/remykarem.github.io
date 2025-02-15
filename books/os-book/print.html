@@ -788,6 +788,27 @@ int main() {
 <p><a href="https://cvw.cac.cornell.edu/vector/default">https://cvw.cac.cornell.edu/vector/default</a></p>
 <p><a href="https://www.reddit.com/r/rust/comments/8uccla/does_rustc_have_autovectorization/">https://www.reddit.com/r/rust/comments/8uccla/does_rustc_have_autovectorization/</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="file-descriptor"><a class="header" href="#file-descriptor">File descriptor</a></h1>
+<p>There is a limit to no. of open file descriptors the OS allows for any process.</p>
+<div id="admonition-how-to-check-limits" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>How to check limits?</p>
+<p><a class="admonition-anchor-link" href="file-descriptor.html#admonition-how-to-check-limits"></a></p>
+</div>
+<div>
+<p>Limit for the current shell:</p>
+<pre><code>ulimit -n
+</code></pre>
+<p>Check limits in macOS:</p>
+<pre><code>launchctl limit maxfiles
+</code></pre>
+<p>Check files open for a process in macOS:</p>
+<pre><code>lsof -p &lt;PID&gt;
+</code></pre>
+<p>Linux (?):</p>
+<pre><code>cat /proc/&lt;PID&gt;/limits
+</code></pre>
+</div>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="file-system-management"><a class="header" href="#file-system-management">File system management</a></h1>
 <p>iNodes data structure</p>
 <p>Linux FHS (Filesystem Hierarchy Standard)</p>
