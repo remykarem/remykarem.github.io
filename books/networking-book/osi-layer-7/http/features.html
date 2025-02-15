@@ -188,13 +188,19 @@
 <tr><td>Header compression</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
 <tr><td>Single TCP connection^</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
 </tbody></table>
-</div><div id="admonition-binary-format" class="admonition admonish-question">
+</div>
+<p>HTTP/2 is theoretically faster than it's predecessors.</p>
+<div id="admonition-binary-format" class="admonition admonish-question">
 <div class="admonition-title">
 <p>Binary format</p>
 <p><a class="admonition-anchor-link" href="#admonition-binary-format"></a></p>
 </div>
 <div>
-<p>A binary protocol means that the data becomes more compact (and closer to how the data is represented in memory), hence more efficient parsing.</p>
+<p>In the binary protocol:</p>
+<ul>
+<li>efficient — we know exactly how much buffer to allocate (instead of read until the next delimiter) because the protocol requires the length to read; O(1) instead of O(n)</li>
+<li>compact — header names and values are compressed using HPACK</li>
+</ul>
 </div>
 </div>
 <div id="admonition-single-tcp-connection" class="admonition admonish-question">
