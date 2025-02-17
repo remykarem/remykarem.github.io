@@ -130,9 +130,10 @@
 
 ---
 
-# Optimisation
+# Memory
 
 - [Memory usage]()
+- [Garbage collection](./memory/garbage-collection.md)
 
 ---
 
