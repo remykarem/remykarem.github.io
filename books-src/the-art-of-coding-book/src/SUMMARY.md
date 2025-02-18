@@ -96,7 +96,7 @@
 
 # Others
 
-- [Declarative vs. imperative]()
+- [Declarative vs. imperative](./others/declarative-imperative.md)
 - [Convention over configuration]()
 - [Error handling patterns](./others/error-handling-patterns.md)
 - [Defensive programming](./defensive-programming.md)
