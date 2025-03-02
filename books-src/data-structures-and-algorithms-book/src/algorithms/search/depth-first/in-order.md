@@ -1,5 +1,7 @@
 # In-order
 
+Start from leftmost, bottom-most first.
+
 ```mermaid
 graph TD
     X1["-"]
