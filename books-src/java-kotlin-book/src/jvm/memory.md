@@ -1,7 +1,7 @@
 # Memory
 Most JVM are 64-bit JVM, i.e. address space is 8 bytes. 
 
-Although references are represented in 64 bits (8 bytes), compressed oops is enabled by default which would be 4 bytes.
+Although references are represented in 64 bits (8 bytes), **compressed oops** is enabled by default which would be 4 bytes.
 
 ## Allocation
 
