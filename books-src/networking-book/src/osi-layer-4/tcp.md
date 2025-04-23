@@ -4,6 +4,16 @@ Transport Control Protocol
 
 TCP is a connection-oriented protocol. It is full-duplex (both hosts on a TCP connection can send messages to each other simultaneously).
 
+~~~admonish tip title="Analogy"
+* A causeway between SG and JB
+* 2-way (duplex)
+* k different lanes, where k is the no. of destinations (multiplexing)
+* The road isnt actually concrete, vehicles can drop (network failure)
+* Theres someone at both ends liaising ("reliable delivery")
+    * to keep track of what hasn’t been sent
+    * To slow down traffic if too congested
+~~~
+
 ## Reliable delivery
 
 | Goal                     | Solution                          |

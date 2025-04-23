@@ -180,6 +180,26 @@
                         <h1 id="tcp"><a class="header" href="#tcp">TCP</a></h1>
 <p>Transport Control Protocol</p>
 <p>TCP is a connection-oriented protocol. It is full-duplex (both hosts on a TCP connection can send messages to each other simultaneously).</p>
+<div id="admonition-analogy" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Analogy</p>
+<p><a class="admonition-anchor-link" href="#admonition-analogy"></a></p>
+</div>
+<div>
+<ul>
+<li>A causeway between SG and JB</li>
+<li>2-way (duplex)</li>
+<li>k different lanes, where k is the no. of destinations (multiplexing)</li>
+<li>The road isnt actually concrete, vehicles can drop (network failure)</li>
+<li>Theres someone at both ends liaising (&quot;reliable delivery&quot;)
+<ul>
+<li>to keep track of what hasn’t been sent</li>
+<li>To slow down traffic if too congested</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <h2 id="reliable-delivery"><a class="header" href="#reliable-delivery">Reliable delivery</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Goal</th><th>Solution</th></tr></thead><tbody>
 <tr><td>In-order delivery</td><td>Use sequence numbers</td></tr>

@@ -87,3 +87,9 @@
     - [Gradle]()
     - [Local repository](./local-repository.md)
 - [Optimisations](./optimisations.md)
+
+---
+
+# JVM
+
+- [Memory](./jvm/memory.md)

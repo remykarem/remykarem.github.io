@@ -2,7 +2,7 @@
 
 [https://refactoring.guru/design-patterns](https://refactoring.guru/design-patterns)
 
-## Goals
+## Goals 
 
 ### Abstraction of complexities
 

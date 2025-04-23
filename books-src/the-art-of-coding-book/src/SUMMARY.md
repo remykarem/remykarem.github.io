@@ -72,7 +72,7 @@
     - [Template method](./gang-of-four/behavioural/template-method.md)
 
 - [SOLID Principles]()
-  - [Single Responsibility]()
+  - [Single Responsibility](./solid/single-responsibility.md)
   - [Open-Closed](./solid/open-closed-principle.md)
   - [Liskov Substitution]()
   - [Interface Segregation](./solid/interface-segregation-principle.md)
