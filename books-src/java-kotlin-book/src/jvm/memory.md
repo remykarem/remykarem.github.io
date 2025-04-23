@@ -28,6 +28,16 @@ The usuals. Char is 2 bytes (cos UTF-16).
 
 #### String
 
+String object
 * ~12 bytes — header
-* 8 bytes — reference to value
-* x bytes — value itself (stored as byte array)
+* 8 bytes — reference to underlying value
+* 1 byte — encoding
+* 4 bytes — hash
+* ???
+
+Underlying value (byte array or char array)
+* ~12 bytes — header
+* x bytes — value itself, where x = 2k (char) or x = k (byte), and k is the length of the string.
+* 0-4 bytes — alignment/padding
+
+
