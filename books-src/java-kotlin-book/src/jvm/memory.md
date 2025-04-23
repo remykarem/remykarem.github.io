@@ -74,6 +74,12 @@ each boxed item
 * x bytes — value itself
 * ? bytes — padding
 
+#### MutableList / ArrayList
+
+* Initial capacity of backing array is 10.
+* Object is copied to another if capacity of backing array is full.
+* Growth factor is 1.5.
+
 ## Padding
 
 To maintain 8-byte alignment. 
