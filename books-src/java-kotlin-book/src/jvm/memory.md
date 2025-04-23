@@ -42,6 +42,8 @@ Underlying value
 * x bytes — value itself, where x = 2k (char, used in Java 8 or below) or x = k (byte; used in Java 9+), and k is the length of the string.
 * 0-7 bytes — alignment/padding
 
+Therefore, a String would roughly occupy (36 + x) bytes.
+
 ~~~admonish
 Java 8 or below uses a character array for the underlying value, whereas Java 9+ uses a byte array for the underlying value.
 
