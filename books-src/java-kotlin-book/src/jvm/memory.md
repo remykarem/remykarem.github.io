@@ -37,7 +37,14 @@ String object
 
 Underlying value (byte array or char array)
 * ~12 bytes — header
+* 4 bytes — array length
 * x bytes — value itself, where x = 2k (char) or x = k (byte), and k is the length of the string.
 * 0-4 bytes — alignment/padding
 
+## Padding
 
+???
+
+## References
+
+4 bytes with compressed oops (default). otherwise 8 bytes
