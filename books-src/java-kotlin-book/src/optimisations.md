@@ -38,6 +38,12 @@ While copying the body of an inline function, the compiler also replaces the typ
 
 https://kt.academy/article/ek-arrays
 
+Also see JVM memory.
+
+## Java 8 to Java 9+
+
+For larger strings, Java 9+ is more space efficient. 
+
 ## Sequence
 
 https://kt.academy/article/ek-sequence
