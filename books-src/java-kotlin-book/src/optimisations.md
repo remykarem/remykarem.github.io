@@ -44,6 +44,16 @@ Also see JVM memory.
 
 For larger strings, Java 9+ is more space efficient. 
 
+## StringBuilder vs. String
+
+If we're building a String a lot of times, use StringBuilder as Strings are immutable.
+
+## Pre-sizing arrays
+
+```kotlin
+val someGrowableList: MutableList<String> = ArrayList(1000)
+```
+
 ## Sequence
 
 https://kt.academy/article/ek-sequence
