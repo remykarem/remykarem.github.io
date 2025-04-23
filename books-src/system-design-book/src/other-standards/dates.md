@@ -38,3 +38,8 @@ References:
 tz database aka IANA time zone database
 
 Eg. `Asia/Singapore`
+
+~~~admonish warning
+Gotcha:
+Time zone in Singapore is different in 1945.
+~~~
