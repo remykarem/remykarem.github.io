@@ -50,6 +50,29 @@ Java 8 or below uses a character array for the underlying value, whereas Java 9+
 More savings for Java 9+ than Java 8 for larger strings because of the backing array.
 ~~~
 
+#### Primitive array
+
+eg. IntArray (Kotlin), int[] (Java)
+
+* 12 bytes — header
+* 4 bytes — count
+* x bytes — no. of items * size of each item
+* ? bytes — padding
+
+#### Object array
+
+Eg. List<T> (Kotlin), Object[] (Java)
+
+* 12 bytes — header
+* 4 bytes — count
+* x bytes — no. of items * 4 bytes (size of each item pointer)
+* ? bytes — padding
+
+each boxed item
+* 12 bytes — header
+* x bytes — value itself
+* ? bytes — padding
+
 ## Padding
 
 To maintain 8-byte alignment. 
