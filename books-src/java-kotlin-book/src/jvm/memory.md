@@ -30,7 +30,7 @@ The usuals. Char is 2 bytes (cos UTF-16).
 
 #### String
 
-String object
+Metadata
 * ~12 bytes — header
 * 4 bytes — reference to underlying value
 * 1 byte — encoding (in Java 9+)
@@ -63,6 +63,7 @@ eg. IntArray (Kotlin), int[] (Java)
 
 Eg. List<T> (Kotlin), Object[] (Java)
 
+Metadata
 * 12 bytes — header
 * 4 bytes — count
 * x bytes — no. of items * 4 bytes (size of each item pointer)
