@@ -1,0 +1,31 @@
+[book]
+authors = ["Raimi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "System Design Book"
+
+[output.html]
+site-url = "/books/system-design-book/"
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/system-design-book/{path}"
+additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
+no-section-label = true
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[output.html.print]
+enable = false
+
+[build]
+build-dir = "../../books/system-design-book/"
+
+[preprocessor]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.catppuccin]
+assets_version = "2.1.0" # DO NOT EDIT: Managed by `mdbook-catppuccin install`

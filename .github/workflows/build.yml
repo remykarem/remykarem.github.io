@@ -53,6 +53,7 @@ jobs:
         mdbook build books-src/data-structures-and-algorithms-book
         mdbook build books-src/x86-64-book
         mdbook build books-src/java-kotlin-book
+        mdbook build books-src/nutrition-workout-book
 
     # Add more build steps as needed for each book
 
