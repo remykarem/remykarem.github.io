@@ -8,11 +8,10 @@
 
 - [Protein](./nutrition/protein.md)
 - [Carbohydrates](./nutrition/carbohydrates.md)
-- [Glucose](./nutrition/glucose.md)
-- [Fructose](./nutrition/fructose.md)
-- [Sucrose](./nutrition/sucrose.md)
+    - [Glucose](./nutrition/glucose.md)
+    - [Fructose](./nutrition/fructose.md)
+    - [Sucrose](./nutrition/sucrose.md)
 - [Cholesterol](./nutrition/cholesterol.md)
-- [Glucose](./nutrition/glucose.md)
 - [Fats]()
     - [Saturated fats](./nutrition/saturated-fats.md)
     - [Unsaturated fats](./nutrition/unsaturated-fats.md)
@@ -22,10 +21,10 @@
 
 ---
 
-# Body parts
+# Biology
 
-- [Muscles]()
-- [Liver]()
-- [Pancreas]()
-- [Heart]()
+- [Muscles](./biology/muscles.md)
+- [Liver](./biology/liver.md)
+- [Pancreas](./biology/pancreas.md)
+- [Heart](./biology/heart.md)
 - [Skin]()
