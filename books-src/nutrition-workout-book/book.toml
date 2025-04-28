@@ -3,11 +3,11 @@ authors = ["Raimi"]
 language = "en"
 multilingual = false
 src = "src"
-title = "System Design Book"
+title = "Nutrition/Workout Book"
 
 [output.html]
 site-url = "/books/system-design-book/"
-edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/system-design-book/{path}"
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/nutrition-workout-book/{path}"
 additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 no-section-label = true
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
@@ -16,7 +16,7 @@ additional-js = ["mermaid.min.js", "mermaid-init.js"]
 enable = false
 
 [build]
-build-dir = "../../books/system-design-book/"
+build-dir = "../../books/nutrition-workout-book/"
 
 [preprocessor]
 
