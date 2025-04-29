@@ -24,7 +24,6 @@
 
 # Compounds II
 
-- [Insulin]()
 - [LDL]()
 - [HDL]()
 - [VLDL]()
@@ -44,3 +43,10 @@
 - [Pancreas](./biology/pancreas.md)
 - [Heart](./biology/heart.md)
 - [Skin]()
+
+# Biology: Enzymes
+
+- [Insulin]()
+
+# Biology: Hormones
+
