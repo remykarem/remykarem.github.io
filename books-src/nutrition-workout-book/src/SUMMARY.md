@@ -4,6 +4,20 @@
 
 ---
 
+# Foods
+
+- [Animals]()
+  - [Birds]()
+  - [Fish]()
+    - [Salmon]()
+    - [Oyster]()
+- [Fruits]()
+- [Vegetables]()
+- [Nuts]()
+  - [Almonds]()
+
+---
+
 # Compounds
 
 - [Protein](./nutrition/protein.md)
