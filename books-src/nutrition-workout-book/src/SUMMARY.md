@@ -1,6 +1,6 @@
 # Summary
 
-[Preface](./preface.md)
+[Preface](./SUMMARY.md)
 
 ---
 
