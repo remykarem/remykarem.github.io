@@ -46,6 +46,7 @@
 - [Liver](./biology/liver.md)
 - [Pancreas](./biology/pancreas.md)
 - [Heart](./biology/heart.md)
+- [Adipose]()
 - [Skin]()
 
 # Biology: Enzymes
@@ -55,6 +56,9 @@
 # Biology: Hormones
 
 - [Insulin]()
+- [Glucagon]()
+- [Cortisol]()
+- [Adrenaline]()
 
 # Biology: Receptors
 
