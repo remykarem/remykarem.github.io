@@ -37,12 +37,18 @@
     - [Unsaturated fats](./nutrition/unsaturated-fats.md)
     - [Trans fats](./nutrition/trans-fats.md)
     - [Polyunsaturated fats](./nutrition/polyunsaturated-fats.md)
+      - [Omega-3]()
     - [Monounsaturated fats](./nutrition/monounsaturated-fats.md)
 - [Polyphenol]()
-- [Omega-3]()
 - [Vitamin D]()
 
-# Compounds II
+# Compounds II: Metals
+
+- [Magnesium]()
+- [Calcium]()
+- [Phosphate]()
+
+# Compounds III
 
 - [LDL]()
 - [HDL]()
