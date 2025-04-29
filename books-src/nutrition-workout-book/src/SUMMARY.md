@@ -14,6 +14,7 @@
 - [Fruits]()
 - [Vegetables]()
 - [Grains]()
+  - [Rice]()
   - [Oats]()
   - [Wheat]()
   - [Barley]()
