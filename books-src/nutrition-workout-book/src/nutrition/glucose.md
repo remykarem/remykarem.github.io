@@ -11,3 +11,7 @@ Source: food (mainly), liver
 2) **Diabetes** Insulin resistance, leading to pancreas overwork, leading to damaged pancreas
 
 3) Blood vessels damage; inflammation; oxidative stress
+
+## Metabolised by
+
+Metabolised by liver and muscles
