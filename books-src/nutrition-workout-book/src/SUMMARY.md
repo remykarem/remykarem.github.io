@@ -50,9 +50,12 @@
 
 # Biology: Enzymes
 
-- [Insulin]()
 - [LPL]()
 
 # Biology: Hormones
 
+- [Insulin]()
+
 # Biology: Receptors
+
+- [Insulin receptor](./biology/receptor/insulin-receptor.md)
