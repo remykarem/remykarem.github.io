@@ -13,8 +13,14 @@
     - [Oyster]()
 - [Fruits]()
 - [Vegetables]()
+- [Grains]()
+  - [Oats]()
+  - [Wheat]()
+  - [Barley]()
 - [Nuts]()
   - [Almonds]()
+- [Legumes]()
+  - [Peanuts]()
 
 ---
 
