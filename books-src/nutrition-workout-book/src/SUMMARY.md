@@ -31,13 +31,13 @@
 
 ---
 
-# Tests
+# Medicine: Tests
 
 - [eGFR]()
 
 ---
 
-# Biology
+# Biology: Organs
 
 - [Muscles](./biology/muscles.md)
 - [Liver](./biology/liver.md)
