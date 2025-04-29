@@ -36,6 +36,10 @@
 
 ---
 
+# Biology: How
+
+- [Glucose or fat for energy](./biology/how/glucose-or-fat-for-energy.md)
+
 # Biology: Organs
 
 - [Muscles](./biology/muscles.md)
