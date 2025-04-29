@@ -4,7 +4,7 @@
 
 ---
 
-# Nutrition
+# Compounds
 
 - [Protein](./nutrition/protein.md)
 - [Carbohydrates](./nutrition/carbohydrates.md)
@@ -18,6 +18,9 @@
     - [Trans fats](./nutrition/trans-fats.md)
     - [Polyunsaturated fats](./nutrition/polyunsaturated-fats.md)
     - [Monounsaturated fats](./nutrition/monounsaturated-fats.md)
+- [Polyphenol]()
+- [Omega-3]()
+- [Vitamin D]()
 
 ---
 
