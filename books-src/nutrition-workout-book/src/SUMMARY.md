@@ -61,6 +61,7 @@
 
 # Medicine: Tests
 
+- [Statins](./medicine/statins.md)
 - [eGFR]()
 
 ---
