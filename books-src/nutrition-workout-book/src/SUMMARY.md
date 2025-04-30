@@ -22,6 +22,7 @@
   - [Almonds]()
 - [Legumes]()
   - [Peanuts]()
+- [Studies](./foods/studies.md)
 
 ---
 
