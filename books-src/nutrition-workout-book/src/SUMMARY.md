@@ -15,7 +15,7 @@
 - [Vegetables]()
 - [Grains]()
   - [Rice]()
-  - [Oats]()
+  - [Oats](./foods/oats.md)
   - [Wheat]()
   - [Barley]()
 - [Nuts]()
