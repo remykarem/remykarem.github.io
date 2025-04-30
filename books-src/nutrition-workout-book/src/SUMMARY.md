@@ -29,9 +29,11 @@
 
 - [Protein](./nutrition/protein.md)
 - [Carbohydrates](./nutrition/carbohydrates.md)
-    - [Glucose](./nutrition/glucose.md)
-    - [Fructose](./nutrition/fructose.md)
-    - [Sucrose](./nutrition/sucrose.md)
+    - [Simple sugars]()
+      - [Glucose](./nutrition/glucose.md)
+      - [Fructose](./nutrition/fructose.md)
+    - [Complex sugars]()
+      - [Sucrose](./nutrition/sucrose.md)
 - [Cholesterol](./nutrition/cholesterol.md)
 - [Fats]()
     - [Saturated fats](./nutrition/saturated-fats.md)
@@ -66,13 +68,14 @@
 # Biology: How
 
 - [Glucose or fat for energy](./biology/how/glucose-or-fat-for-energy.md)
+- [Why is having more muscle good]()
 
 # Biology: Organs
 
-- [Muscles](./biology/muscles.md)
-- [Liver](./biology/liver.md)
-- [Pancreas](./biology/pancreas.md)
-- [Heart](./biology/heart.md)
+- [Muscles](./biology/organs/muscles.md)
+- [Liver](./biology/organs/liver.md)
+- [Pancreas](./biology/organs/pancreas.md)
+- [Heart](./biology/organs/heart.md)
 - [Adipose]()
 - [Skin]()
 
