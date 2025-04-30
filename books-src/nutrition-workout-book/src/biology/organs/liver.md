@@ -1,6 +1,23 @@
 # Liver
 
-Detects and controls cholesterol levels.
+## Detoxification
+
+## Metabolism
+
+* Insulin receptor
+* Glucagon receptor
+
+## Bile production
+
+To digest fats.
+
+## Storage
+
+Glycogen, vitamins
+
+## Cholesterol management
+
+Detects and controls cholesterol levels. Has LDL receptors.
 
 Makes cholesterols.
 
@@ -18,9 +35,3 @@ which happen when there is low ATP,
 which happens when there's low blood glucose or fasting or exercise or low insulin. 
 
 Cholesterol production is highest overnight.
-
-## Stores
-
-Glycogen
-
-## Receptors
