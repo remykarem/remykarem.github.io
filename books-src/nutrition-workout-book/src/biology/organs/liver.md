@@ -17,6 +17,7 @@ which happens when AMPK is activated in liver cells,
 which happen when there is low ATP,
 which happens when there's low blood glucose or fasting or exercise or low insulin. 
 
+Cholesterol production is highest overnight.
 
 ## Stores
 
