@@ -60,9 +60,12 @@
 
 ---
 
-# Medicine: Tests
+# Medicine: Drugs
 
 - [Statins](./medicine/statins.md)
+
+# Medicine: Tests
+
 - [eGFR]()
 
 ---
@@ -96,3 +99,4 @@
 # Biology: Receptors
 
 - [Insulin receptor](./biology/receptor/insulin-receptor.md)
+- [LDL receptor](./biology/receptor/ldl-receptor.md)
