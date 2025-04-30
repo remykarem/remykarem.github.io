@@ -9,6 +9,7 @@ Makes cholesterols.
 
 VLDL eventually becomes LDL.
 
+Has an enzyme HMG CoA reductase.
 
 HDL production increases as ApoA1 increases,
 which happens when ApoA1 gene expression goes up,
