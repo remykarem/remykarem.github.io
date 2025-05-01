@@ -35,6 +35,7 @@
       - [Fructose](./nutrition/fructose.md)
     - [Complex sugars]()
       - [Sucrose](./nutrition/sucrose.md)
+      - [Beta-glucan](./nutrition/beta-glucan.md)
 - [Cholesterol](./nutrition/cholesterol.md)
 - [Fats]()
     - [Saturated fats](./nutrition/saturated-fats.md)
