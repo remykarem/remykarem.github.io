@@ -44,6 +44,8 @@
       - [Monounsaturated fats](./nutrition/monounsaturated-fats.md)
       - [Polyunsaturated fats](./nutrition/polyunsaturated-fats.md)
     - [Trans fats](./nutrition/trans-fats.md)
+      - [Monounsaturated fats]()
+      - [Polyunsaturated fats]()
 - [Polyphenol]()
 - [Vitamin D]()
 
