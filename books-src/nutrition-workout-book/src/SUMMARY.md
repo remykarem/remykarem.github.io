@@ -4,6 +4,24 @@
 
 ---
 
+# Goals
+
+
+---
+
+# Strategies
+
+- [calorie deficit]()
+- [Fasting]()
+- [Exercise]()
+- [Exercises before eating]()
+- [Protein Rich diet]()
+- [Less processed food]()
+- [Increase metabolism]()
+- [Good sleep]()
+
+---
+
 # Foods
 
 - [Animals]()
