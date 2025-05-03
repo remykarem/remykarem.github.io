@@ -36,8 +36,7 @@
   - [Oats](./foods/oats.md)
   - [Wheat]()
   - [Barley]()
-- [Nuts]()
-  - [Almonds]()
+- [Nuts](./foods/nuts.md)
 - [Legumes]()
   - [Peanuts]()
 - [Studies](./foods/studies.md)
@@ -56,7 +55,6 @@
       - [Beta-glucan](./nutrition/beta-glucan.md)
 - [Cholesterol](./nutrition/cholesterol.md)
 - [Fats]()
-  - [Saturated fats](./nutrition/saturated-fats.md)
   - [Unsaturated fats](./nutrition/unsaturated-fats.md)
     - [Cis fats]()
       - [Monounsaturated fats](./nutrition/monounsaturated-fats.md)
@@ -64,8 +62,15 @@
     - [Trans fats](./nutrition/trans-fats.md)
       - [Monounsaturated fats]()
       - [Polyunsaturated fats]()
+  - [Saturated fats](./nutrition/saturated-fats.md)
 - [Polyphenol]()
 - [Vitamin D]()
+
+# Compounds
+
+- [Triglyceride]()
+- [Fatty acid]()
+- [Glycerol]()
 
 # Compounds II: Metals
 
