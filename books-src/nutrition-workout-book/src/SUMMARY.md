@@ -43,42 +43,42 @@
 
 ---
 
-# Compounds
+# Biochemistry
 
-- [Protein](./nutrition/protein.md)
-- [Carbohydrates](./nutrition/carbohydrates.md)
+- [Protein](./biochemistry/protein.md)
+- [Carbohydrates](./biochemistry/carbohydrates.md)
     - [Simple sugars]()
-      - [Glucose](./nutrition/glucose.md)
-      - [Fructose](./nutrition/fructose.md)
+      - [Glucose](./biochemistry/glucose.md)
+      - [Fructose](./biochemistry/fructose.md)
     - [Complex sugars]()
-      - [Sucrose](./nutrition/sucrose.md)
-      - [Beta-glucan](./nutrition/beta-glucan.md)
-- [Cholesterol](./nutrition/cholesterol.md)
+      - [Sucrose](./biochemistry/sucrose.md)
+      - [Beta-glucan](./biochemistry/beta-glucan.md)
+- [Cholesterol](./biochemistry/cholesterol.md)
 - [Fats]()
-  - [Unsaturated fats](./nutrition/unsaturated-fats.md)
+  - [Unsaturated fats](./biochemistry/unsaturated-fats.md)
     - [Cis fats]()
-      - [Monounsaturated fats](./nutrition/monounsaturated-fats.md)
-      - [Polyunsaturated fats](./nutrition/polyunsaturated-fats.md)
-    - [Trans fats](./nutrition/trans-fats.md)
+      - [Monounsaturated fats](./biochemistry/monounsaturated-fats.md)
+      - [Polyunsaturated fats](./biochemistry/polyunsaturated-fats.md)
+    - [Trans fats](./biochemistry/trans-fats.md)
       - [Monounsaturated fats]()
       - [Polyunsaturated fats]()
-  - [Saturated fats](./nutrition/saturated-fats.md)
+  - [Saturated fats](./biochemistry/saturated-fats.md)
 - [Polyphenol]()
 - [Vitamin D]()
 
-# Compounds
+# Biochemistry
 
 - [Triglyceride]()
 - [Fatty acid]()
 - [Glycerol]()
 
-# Compounds II: Metals
+# Biochemistry II: Metals
 
 - [Magnesium]()
 - [Calcium]()
 - [Phosphate]()
 
-# Compounds III
+# Biochemistry III
 
 - [LDL]()
 - [HDL]()
