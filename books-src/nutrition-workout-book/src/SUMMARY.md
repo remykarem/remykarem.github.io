@@ -13,11 +13,11 @@
 
 # Strategies
 
-- [calorie deficit]()
+- [Calorie deficit]()
 - [Fasting]()
 - [Exercise]()
 - [Exercises before eating]()
-- [Protein Rich diet]()
+- [Protein-rich diet]()
 - [Less processed food]()
 - [Increase metabolism]()
 - [Good sleep]()
