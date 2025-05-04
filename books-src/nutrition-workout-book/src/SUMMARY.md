@@ -6,6 +6,8 @@
 
 # Goals
 
+- [Goals](./goals.md)
+
 
 ---
 
