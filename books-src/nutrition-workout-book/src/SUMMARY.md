@@ -32,6 +32,7 @@
 - [BMR](./nutrition/bmr.md)
 - [TEF](./nutrition/thermic-effect-of-food.md)
 - [Blood sugar crash](./nutrition/blood-sugar-crash.md)
+- [Food types](./nutrition/food-types.md)
 
 ---
 
