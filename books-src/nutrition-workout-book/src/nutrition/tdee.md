@@ -1,4 +1,11 @@
-# Calories
+# TDEE
+
+Total Daily Energy Expenditure 
+
+* BMR — 60-70%
+* NEAT — 15-30%
+* TEF — 10%
+* EAT — 5-10%
 
 | **Macronutrient** | **Calories per gram** |
 | ----------------- | --------------------- |
