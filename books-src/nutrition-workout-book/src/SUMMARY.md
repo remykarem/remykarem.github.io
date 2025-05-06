@@ -27,11 +27,11 @@
 
 # Nutrition science
 
-- [Calories](./nutrition/calories.md)
+- [TDEE](./nutrition/tdee.md)
+  - [BMR](./nutrition/bmr.md)
+  - [TEF](./nutrition/thermic-effect-of-food.md)
 - [Energy](./nutrition/energy.md)
 - [Recommended Daily Values](./nutrition/recommended-daily-values.md)
-- [BMR](./nutrition/bmr.md)
-- [TEF](./nutrition/thermic-effect-of-food.md)
 - [Blood sugar crash](./nutrition/blood-sugar-crash.md)
 - [Food types](./nutrition/food-types.md)
 
