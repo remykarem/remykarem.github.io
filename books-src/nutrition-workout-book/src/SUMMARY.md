@@ -46,7 +46,7 @@
     - [Salmon]()
     - [Oyster]()
 - [Fruits](./foods/fruits.md)
-- [Vegetables]()
+- [Vegetables](./foods/vegetables.md)
 - [Grains]()
   - [Rice]()
   - [Oats](./foods/oats.md)
@@ -81,6 +81,16 @@
   - [Saturated fats](./biochemistry/saturated-fats.md)
 - [Polyphenol]()
 - [Vitamin D]()
+- [Minerals]()
+  - [Potassium]()
+  - [Magnesium]()
+  - [Calcium]()
+  - [Phosphate]()
+  - [Iron]()
+ 
+# Properties
+
+- [Antioxidant]()
 
 # Biochemistry
 
@@ -88,12 +98,6 @@
 - [Fatty acid]()
 - [Glycerol]()
 - [Caffeine](./biochemistry/caffeine.md)
-
-# Biochemistry II: Metals
-
-- [Magnesium]()
-- [Calcium]()
-- [Phosphate]()
 
 # Biochemistry III
 
