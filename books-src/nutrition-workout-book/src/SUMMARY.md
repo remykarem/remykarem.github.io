@@ -15,7 +15,7 @@
 
 - [Calorie deficit]()
 - [Fasting]()
-- [Exercise](./workout/exercise.md)
+- [Exercise](./workout/index.md)
 - [Exercises before eating]()
 - [Protein-rich diet]()
 - [Less processed food]()
