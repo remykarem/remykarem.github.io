@@ -34,6 +34,7 @@
 - [Recommended Daily Values](./nutrition/recommended-daily-values.md)
 - [Blood sugar crash](./nutrition/blood-sugar-crash.md)
 - [Food types](./nutrition/food-types.md)
+- [Calorie density](./nutrition/calorie-density.md)
 
 ---
 
