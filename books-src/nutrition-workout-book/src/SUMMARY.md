@@ -81,7 +81,7 @@
       - [Polyunsaturated fats]()
   - [Saturated fats](./biochemistry/saturated-fats.md)
 - [Vitamins]()
-  - [Vitamin A]()
+  - [Vitamin A](./biochemistry/vitamins/vitamin-a.md)
   - [Vitamin B]()
   - [Vitamin C](./biochemistry/vitamins/vitamin-c.md)
   - [Vitamin D]()
