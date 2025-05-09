@@ -1,6 +1,6 @@
 # TDEE
 
-Total Daily Energy Expenditure 
+Total Daily Energy Expenditure; metabolism
 
 * BMR — 60-70%
 * NEAT — 15-30%
