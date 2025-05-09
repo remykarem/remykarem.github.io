@@ -18,9 +18,10 @@ Vitamin A comes in 2 main forms:
     Examples: beta-carotene
 
     Top fruit sources (orange):
-    * Sweet potatoes (2581mcg)
-    * Pumpkin
-    * Mango
+    1. Sweet potatoes (2581mcg)
+    2. Pumpkin
+    3. Cantaloupe melon (299mcg)
+    4. Mango (89mcg)
 
     Top vegetables (dark leafy greens):
     1. Spinach (943mcg)
