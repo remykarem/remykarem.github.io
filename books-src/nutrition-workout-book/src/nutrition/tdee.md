@@ -2,6 +2,8 @@
 
 Total Daily Energy Expenditure; metabolism
 
+[TDEE Calculator](https://tdeecalculator.net)
+
 * BMR — 60-70%
 * NEAT — 15-30%
 * TEF — 10%
