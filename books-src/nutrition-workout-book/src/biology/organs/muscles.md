@@ -29,4 +29,4 @@ Exercise in a fasted or low-insulin state (e.g. before breakfast or hours after 
 
 Trained muscle tissues upregulate fat oxidation.
 
-[^1]: [Effect of resistance training on resting metabolic rate and its estimation by a dual-energy X-ray absorptiometry metabolic map](https://www.nature.com/articles/ejcn2014216?utm_source=chatgpt.com)
+[^1]: [Effect of resistance training on resting metabolic rate and its estimation by a dual-energy X-ray absorptiometry metabolic map (2015)](https://www.nature.com/articles/ejcn2014216?utm_source=chatgpt.com)
