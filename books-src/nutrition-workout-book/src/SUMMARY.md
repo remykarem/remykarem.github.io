@@ -89,7 +89,7 @@
 - [Phytochemicals]()
   - [Polyphenols](./biochemistry/phytochemicals/polyphenols.md)
   - [Carotenoids]()
-  - [Sterols]()
+  - [Sterols](./biochemistry/phytochemicals/sterols.md)
 - [Minerals]()
   - [Potassium]()
   - [Magnesium]()
