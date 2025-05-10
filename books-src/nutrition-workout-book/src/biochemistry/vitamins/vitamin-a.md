@@ -1,9 +1,12 @@
 # Vitamin A
 
 Purpose:
-* supporting **vision**
+* Supports **vision**
 * healthy **immune system**
 * maintains healthy **teeth**, **skeletal** and soft tissue, **skin**
+
+Properties
+* Antioxidant
 
 Vitamin A comes in 2 main forms:
 
