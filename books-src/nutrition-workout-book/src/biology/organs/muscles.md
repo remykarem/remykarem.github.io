@@ -7,7 +7,7 @@ Muscles that sit idle store fats badly, create toxic messes, and become insulin 
 
 ## Calories burned
 
-Every kg of muscle burns 10-15 kcal per day at rest[^1]. 
+Every kg of muscle at rest burns 10-15 kcal per day[^1]. 
 
 ## Fat oxidation
 
