@@ -4,12 +4,13 @@ Total Daily Energy Expenditure; metabolism
 
 [TDEE Calculator](https://tdeecalculator.net)
 
-* BMR (60-70%)
-* NEAT (15-30%)
-* TEF (10%) — Thermic Effect of Food
+1. BMR — 60-70%
+2. NEAT (Non-Exercise Activity Thermogenesis) — 15-30%
+3. TEF (Thermic Effect of Food) — 10%
 
   Digesting and processing food
-* EAT (5-10%)
+
+4. EAT — 5-10%
 
 Energy in each macronutrient
 
