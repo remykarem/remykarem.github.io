@@ -6,6 +6,9 @@ aka ascorbic acid
 * Formation of collagen
 * important for immune system
 
+Properties:
+* Strong antioxidant in water-soluble environments
+
 Top common fruits high in Vitamin C[^source]:
 1. Guava — 273mg
 2. Papaya — 80mg
