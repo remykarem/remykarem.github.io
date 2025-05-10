@@ -2,8 +2,9 @@
 
 Purpose:
 * Supports **vision**
+* **Skin** health
 * healthy **immune system**
-* maintains healthy **teeth**, **skeletal** and soft tissue, **skin**
+* maintains healthy **teeth**, **skeletal** and soft tissue
 
 Properties
 * Antioxidant
