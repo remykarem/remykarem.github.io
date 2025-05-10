@@ -87,7 +87,7 @@
   - [Vitamin D](./biochemistry/vitamins/vitamin-d.md)
   - [Vitamin K](./biochemistry/vitamins/vitamin-k.md)
 - [Phytochemicals]()
-  - [Polyphenol]()
+  - [Polyphenols](./biochemistry/phytochemicals/polyphenols.md)
   - [Carotenoids]()
   - [Sterols]()
 - [Minerals]()
