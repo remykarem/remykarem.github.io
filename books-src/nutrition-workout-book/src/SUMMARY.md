@@ -71,7 +71,7 @@
       - [Sucrose](./biochemistry/sucrose.md)
       - [Beta-glucan](./biochemistry/beta-glucan.md)
 - [Cholesterol](./biochemistry/cholesterol.md)
-- [Fats]()
+- [Fats](./biochemistry/fats/index.md)
   - [Unsaturated fats](./biochemistry/unsaturated-fats.md)
     - [Cis fats]()
       - [Monounsaturated fats](./biochemistry/monounsaturated-fats.md)
