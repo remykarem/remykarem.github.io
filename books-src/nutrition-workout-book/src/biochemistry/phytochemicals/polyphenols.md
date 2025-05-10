@@ -1,0 +1,4 @@
+# Polyphenols
+
+Properties:
+* Antioxidant
