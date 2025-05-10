@@ -1,6 +1,6 @@
 # Fats
 
-## Recommended values (per kg of body weight)
+#### Recommended values (per kg of body weight)
 Minimum: 0.6g[^1] (to avoid hormonal and metabolic issues)
 Calorie deficit: 0.8g-1.0g[^2]
 
