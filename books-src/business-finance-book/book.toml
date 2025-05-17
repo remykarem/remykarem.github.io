@@ -3,11 +3,11 @@ authors = ["Raimi"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Nutrition/Workout Book"
+title = "Business/Finance Book"
 
 [output.html]
-site-url = "/books/nutrition-workout-book/"
-edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/nutrition-workout-book/{path}"
+site-url = "/books/business-finance-book/"
+edit-url-template = "https://github.com/remykarem/remykarem.github.io/edit/main/books-src/business-finance-book/{path}"
 additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
 no-section-label = true
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
@@ -16,7 +16,7 @@ additional-js = ["mermaid.min.js", "mermaid-init.js"]
 enable = false
 
 [build]
-build-dir = "../../books/nutrition-workout-book/"
+build-dir = "../../books/business-finance-book/"
 
 [preprocessor]
 
