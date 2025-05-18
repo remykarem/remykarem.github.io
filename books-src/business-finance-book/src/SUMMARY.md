@@ -15,13 +15,16 @@
 # Finance
 
 - [Index](./finance/index.md)
-- [Loans, debts]()
 - [Stocks](./finance/stocks.md)
 - [Fund](./finance/fund.md)
     - [Mutual fund / unit trust](./finance/unit-trust.md)
     - [ETF](./finance/etf.md)
     - [Hedge fund]()
 - [Fixed income](./finance/fixed-income.md)
+  - [Bonds]()
+  - [Treasury bills]()
+  - [Treasury notes]()
+  - [Time Deposit]()
 - [Sukuk]()
 - [Takaful]()
 - [Insurance]()
