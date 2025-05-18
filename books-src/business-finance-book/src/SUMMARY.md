@@ -9,6 +9,8 @@
 - [Ownership]()
 - [Buy/sell]()
 - [Profit & risk]()
+- [Mudarabah]()
+- [Murabahah]()
 
 ---
 
@@ -42,7 +44,7 @@
 - [Shariah laws](./shariah-laws.md)
 - [Money lending](./money-lending.md)
 - [Guaranteed returns](./shariah-laws/guaranteed-returns.md)
-- [Interest](./shariah-laws/interest.md)
+- [Riba](./shariah-laws/interest.md)
 - [Buy / sell](./shariah-laws/buy-sell.md)
 
 ---
