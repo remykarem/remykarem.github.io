@@ -13,7 +13,6 @@ Short selling can move the market.
 ~~~
 
 ~~~admonish warning title="Islamic perspective"
-* Selling what you don't own.
-* Riba.
-* Gharar.
+* [Selling what you own](../shariah-laws/selling-what-you-own.md)
+* [Overly speculative](../shariah-laws/gharar.md)
 ~~~

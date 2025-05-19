@@ -39,9 +39,12 @@
 
 ---
 
-# Trading strategy
+# Trading strategy / trading activity
 
-- [Going long]()
+- [Long-term investing]()
+- [Short-term investing]()
+- [Day trading]()
+- [Margin trading](./trading-strategy/margin-trading.md)
 - [Short selling](./trading-strategy/short-selling.md)
 - [Hedge]()
 
@@ -58,16 +61,28 @@
 
 ---
 
-# Shariah laws
+# Shariah laws / principles / fundamentals
 
-- [Shariah laws](./shariah-laws.md)
-- [Money lending](./money-lending.md)
-- [Guaranteed returns](./shariah-laws/guaranteed-returns.md)
 - [Riba](./shariah-laws/riba.md)
-- [Buy / sell](./shariah-laws/buy-sell.md)
-- [Gambling](./shariah-laws/gambling.md)
 - [Gharar](./shariah-laws/gharar.md)
-- [Real economic activity](./shariah-laws/real-economic-activity.md)
+- [Selling what you own](./shariah-laws/selling-what-you-own.md)
+- [Gambling](./shariah-laws/gambling.md)
+- [Money lending](./money-lending.md)
+- [Shariah laws](./shariah-laws.md)
+- [Guaranteed returns](./shariah-laws/guaranteed-returns.md)
+- [Halal core business]()
+
+---
+
+# Philosophy
+
+- [Contributing to the real economy / real value creation](./shariah-laws/real-economic-activity.md)
+  - [Helping the business to grow]()
+  - [Real ownership with involvement]()
+- [Creating exposure]()
+- [Sentiment exploitation]()
+- [Real risk]()
+- [Synthetic trade]()
 
 ---
 
