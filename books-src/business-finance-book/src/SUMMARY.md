@@ -39,13 +39,23 @@
 
 ---
 
+# Trading strategy
+
+- [Going long]()
+- [Short selling](./trading-strategy/short-selling.md)
+- [Hedge]()
+
+---
+
 # Shariah laws
 
 - [Shariah laws](./shariah-laws.md)
 - [Money lending](./money-lending.md)
 - [Guaranteed returns](./shariah-laws/guaranteed-returns.md)
-- [Riba](./shariah-laws/interest.md)
+- [Riba](./shariah-laws/riba.md)
 - [Buy / sell](./shariah-laws/buy-sell.md)
+- [Gambling](./shariah-laws/gambling.md)
+- [Gharar](./shariah-laws/gharar.md)
 
 ---
 
