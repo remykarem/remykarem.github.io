@@ -11,10 +11,18 @@
 - [Profit & risk]()
 - [Mudarabah]()
 - [Murabahah]()
+- [Modes of financing]()
+  - [Bank loan]()
+  - [Corporate bond]()
+  - [Sukuk]()
+  - [Joint venture (musharakah)]()
+  - [Leasing (ijara)]()
+  - [Murabaha (cost-plus sale)]()
+  - [Mudharaba (profit-sharing)]()
 
 ---
 
-# Finance
+# Finance: Secondary markets
 
 - [Index](./finance/index.md)
 - [Stocks](./finance/stocks.md)
