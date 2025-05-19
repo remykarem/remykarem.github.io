@@ -47,6 +47,17 @@
 
 ---
 
+# Trading goals
+
+- [Capital gains]()
+- [Dividend income]()
+- [Short-term profits]()
+- [Portfolio diversification]()
+- [Wealth accumulation]()
+- [Hedging]()
+
+---
+
 # Shariah laws
 
 - [Shariah laws](./shariah-laws.md)
@@ -56,6 +67,7 @@
 - [Buy / sell](./shariah-laws/buy-sell.md)
 - [Gambling](./shariah-laws/gambling.md)
 - [Gharar](./shariah-laws/gharar.md)
+- [Real economic activity](./shariah-laws/real-economic-activity.md)
 
 ---
 
