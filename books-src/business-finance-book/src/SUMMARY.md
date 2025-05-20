@@ -9,8 +9,6 @@
 - [Ownership]()
 - [Buy/sell]()
 - [Profit & risk]()
-- [Mudarabah]()
-- [Murabahah]()
 - [Modes of financing]()
   - [Bank loan]()
   - [Corporate bond]()
@@ -20,30 +18,60 @@
   - [Murabaha (cost-plus sale)]()
   - [Mudharaba (profit-sharing)]()
 
+# Trust
+
+- [Trust]()
+- [Waqf]()
+
 ---
 
-# Finance: Secondary markets
+# Finance: Primary market
 
+- [Goal](./finance/primary-market/goal.md)
+- [Activities]()
+  - [IPO]()
+  - [Private Placement]()
+  - [Rights Offering]()
+  - [Prefential Allotment]()
+  - [Bond Issuance]()
+
+# Finance: Secondary market
+
+- [Goal](./finance/secondary-market/goal.md)
 - [Index](./finance/index.md)
+
+---
+
+# Finance: Instruments
+
 - [Stocks](./finance/stocks.md)
 - [Fund](./finance/fund.md)
     - [Mutual fund / unit trust](./finance/unit-trust.md)
     - [ETF](./finance/etf.md)
+    - [REITs](./finance/reits.md)
     - [Hedge fund]()
 - [Fixed income](./finance/fixed-income.md)
   - [Bonds](./finance/fixed-income/bond.md)
   - [Treasury bills]()
   - [Treasury notes]()
-  - [Time Deposit]()
 - [Sukuk]()
+- [Currency]()
+
+# Finance: Derivatives
+
+- [Futures](./finance/derivatives/futures.md)
+- [Options]()
+
+---
+
+# Banking
+
+- [Time Deposit]()
+
+# Insurance
+
 - [Takaful]()
 - [Insurance]()
-- [Currency]()
-- [Commodities]()
-- [REITs]()
-- [Derivatives]()
-  - [Futures](./finance/derivatives/futures.md)
-  - [Options]()
 
 ---
 

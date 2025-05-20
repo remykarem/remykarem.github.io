@@ -1,5 +1,7 @@
 # Stocks
 
+Ownership of company
+
 Tradable. Price based on market price. 
 
 Trading a portion of a company that you own
