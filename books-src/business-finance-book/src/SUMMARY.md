@@ -52,15 +52,18 @@
     - [Hedge fund]()
 - [Fixed income](./finance/fixed-income.md)
   - [Bonds](./finance/fixed-income/bond.md)
+  - [Sukuk](./finance/fixed-income/sukuk.md)
   - [Treasury bills]()
   - [Treasury notes]()
-- [Sukuk]()
-- [Currency]()
 
 # Finance: Derivatives
 
 - [Futures](./finance/derivatives/futures.md)
 - [Options]()
+
+---
+
+- [Currency]()
 
 ---
 
