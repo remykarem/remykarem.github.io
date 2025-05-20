@@ -31,7 +31,7 @@
     - [ETF](./finance/etf.md)
     - [Hedge fund]()
 - [Fixed income](./finance/fixed-income.md)
-  - [Bonds]()
+  - [Bonds](./finance/fixed-income/bond.md)
   - [Treasury bills]()
   - [Treasury notes]()
   - [Time Deposit]()
