@@ -16,3 +16,12 @@ A **financial instrument** is anything (asset that holds monetary value or contr
 * Futures
 * Leveraged ETFs
 * Margin trading
+
+## Liquidity
+
+How easily an asset can be bought or sold for cash without affecting its price
+
+## Supply and demand 
+
+High demand, low supply -> higher price
+Low demand, high supply -> lower price
