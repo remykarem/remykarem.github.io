@@ -1,8 +1,8 @@
 # Bond
 
 How it works:
-* Regular payments
-* Lump sum at the end
+* Investor receives regular payments
+* Borrower receives lump sum at the end
 
 Components:
 * Face Value — Principal loan
