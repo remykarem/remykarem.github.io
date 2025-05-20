@@ -4,6 +4,7 @@ How it works:
 * Regular payments
 * Lump sum at the end
 
+Components:
 * Face Value — Principal loan
 * Coupon Rate — how much the borrower receives (per year)
 * Yield — market interest rate
