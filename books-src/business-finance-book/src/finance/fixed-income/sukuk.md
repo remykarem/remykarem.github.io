@@ -2,10 +2,15 @@
 
 A **certificate** that grants the holder a share of an **asset**, where the holder is entitled to regular cash flows based on the underlying asset's performance (rather than based on a fixed interest rate).
 
-Entities:
-* **SPV (Special Purpose Vehicle)** — owner or buyer of specific assets
-* **Originator** — Business/government
-* **Investor**
+Entities (ijara):
+* **Issuer** — Business/government
+* **Asset** — eg. airport terminal (build, lease)
+* **SPV (Special Purpose Vehicle)** — owner or buyer of specific assets; raise capital
+  * Raise funds by issuing sukuk to investors
+  * Use money to buy the asset
+  * Rent out to the govt under a contract
+  * Govt makes rental payment ("lease income") to SPV
+  * SPV to sukuk holders
 
 ~~~admonish question title="What happens when an investor buys a sukuk?"
 1. Gain partial **ownership** in the underlying asset.
