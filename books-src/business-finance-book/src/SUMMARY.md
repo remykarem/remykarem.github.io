@@ -158,6 +158,11 @@
   - [Sentiment exploitation]()
   - [Real risk]()
   - [Synthetic trade]()
+- [??]()
+  - [Growth]()
+  - [Source of income]()
+  - [Speculative trading]()
+  - [Hedging]()
 
 ---
 
