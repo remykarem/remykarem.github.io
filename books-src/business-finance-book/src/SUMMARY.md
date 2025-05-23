@@ -80,8 +80,9 @@
 
 # Forex
 
-- [Currency]()
-
+- [MAS](./mas.md)
+  - [Exchange rate management]()
+  - [Liquidity management]()
 ---
 
 # Banking
@@ -129,6 +130,7 @@
 - [Shariah laws](./shariah-laws.md)
 - [Guaranteed returns](./shariah-laws/guaranteed-returns.md)
 - [Halal core business]()
+- [Large differences]()
 
 ---
 
@@ -141,7 +143,7 @@
 
 # Philosophy / goals
 
-- [Business]
+- [Business]()
   - [Contributing to the real economy / real value creation](./shariah-laws/real-economic-activity.md)
     - [Real ownership with involvement]()
 - [Primary market]()
