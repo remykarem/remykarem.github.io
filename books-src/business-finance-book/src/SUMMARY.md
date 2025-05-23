@@ -25,43 +25,60 @@
 
 ---
 
-# Finance: Primary market
+# Investments: Primary market
 
 - [Goal](./finance/primary-market/goal.md)
 - [Activities]()
-  - [IPO]()
+  - [Offerings]()
+    - [IPO]()
+    - [Rights Offering]()
+    - [Sukuk offerings]()
   - [Private Placement]()
-  - [Rights Offering]()
-  - [Prefential Allotment]()
-  - [Bond Issuance]()
+  - [Private equity]()
+  - [Crowdfunding]()
+    - [Reward-based]()
+    - [Equity-based]()
+    - [Debt-based]()
+    - [Donation-based]()
+- [By securities]()
+  - [Stocks]()
+  - [Bonds]()
+  - [ETFs]()
 
-# Finance: Secondary market
+---
+
+# Investments: Secondary market
 
 - [Goal](./finance/secondary-market/goal.md)
 - [Index](./finance/index.md)
 
----
+# Finance: Cash instruments
 
-# Finance: Instruments
-
-- [Stocks](./finance/stocks.md)
-- [Fund](./finance/fund.md)
-    - [Mutual fund / unit trust](./finance/unit-trust.md)
-    - [ETF](./finance/etf.md)
-    - [REITs](./finance/reits.md)
-    - [Hedge fund]()
+- [Equity]()
+  - [Stocks](./finance/stocks.md)
+  - [REITs](./finance/reits.md)
 - [Fixed income](./finance/fixed-income.md)
   - [Bonds](./finance/fixed-income/bond.md)
   - [Sukuk](./finance/fixed-income/sukuk.md)
   - [Treasury bills]()
   - [Treasury notes]()
+- [Mixed]()
+  - [ETF](./finance/etf.md)
 
-# Finance: Derivatives
+# Finance: Derivative instruments
 
 - [Futures](./finance/derivatives/futures.md)
 - [Options]()
 
+# Finance: ???
+
+- [Fund](./finance/fund.md)
+- [Mutual fund / unit trust](./finance/unit-trust.md)
+- [Hedge fund]()
+
 ---
+
+# Forex
 
 - [Currency]()
 
@@ -70,6 +87,8 @@
 # Banking
 
 - [Time Deposit]()
+
+---
 
 # Insurance
 
@@ -113,15 +132,30 @@
 
 ---
 
-# Philosophy
+# Benefits
 
-- [Contributing to the real economy / real value creation](./shariah-laws/real-economic-activity.md)
+- [Liquidity]()
+- [Diversification]()
+- [Fees]()
+- [Transparency]()
+
+# Philosophy / goals
+
+- [Business]
+  - [Contributing to the real economy / real value creation](./shariah-laws/real-economic-activity.md)
+    - [Real ownership with involvement]()
+- [Primary market]()
+  - [Ownership in companies]()
+  - [Goodwill]()
   - [Helping the business to grow]()
-  - [Real ownership with involvement]()
-- [Creating exposure]()
-- [Sentiment exploitation]()
-- [Real risk]()
-- [Synthetic trade]()
+- [Secondary market]()
+  - [Liquidity]()
+  - [Transparency]()
+- [?]()
+  - [Creating exposure]()
+  - [Sentiment exploitation]()
+  - [Real risk]()
+  - [Synthetic trade]()
 
 ---
 
