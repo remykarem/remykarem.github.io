@@ -7,3 +7,9 @@
     ~~~admonish question
     Isn't this a solution to the problem arising from creating a secondary market?
     ~~~
+
+Involves:
+* Dividends or coupon profits
+* Portfolio balancing
+* Profit from price differences
+* Managing risks
