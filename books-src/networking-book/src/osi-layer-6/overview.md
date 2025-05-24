@@ -11,11 +11,11 @@ TLS vs. SSH:
 |   | TLS | SSH |
 | - | --- | --- |
 | Server authentication | Yes | Yes |
-| Client authentication | - | Yes |
+| Client authentication | mTLS | Yes |
 | Trust model | Chain of trust | Manual (?) |
 
-* Server authentication — the server needs to prove its identity
-* Client authentication — the client needs to prove its identity
+* Server authentication — the server is the one that needs to prove its identity
+* Client authentication — the client is the one that needs to prove its identity
 
 ~~~admonish question title="Why no client authentication at TLS?"
 HTTP applications don't always modify the server, unlike SSH (execute commands to server, upload files).
