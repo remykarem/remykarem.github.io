@@ -149,13 +149,15 @@
 # Philosophy / goals
 
 - [Business]()
-  - [Contributing to the real economy / real value creation](./shariah-laws/real-economic-activity.md)
+  - [Contribute to the real economy / real value creation](./shariah-laws/real-economic-activity.md)
     - [Real ownership with involvement]()
 - [Primary market]()
   - [Ownership in companies]()
+    - [Share profit/loss]()
   - [Goodwill]()
   - [Helping the business to grow]()
 - [Secondary market]()
+  - [Ownership in companies]()
   - [Liquidity]()
   - [Transparency]()
 - [?]()
