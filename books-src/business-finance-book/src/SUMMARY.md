@@ -163,7 +163,7 @@
 - [Business]()
   - [Contribute to the real economy / real value creation](./shariah-laws/real-economic-activity.md)
   - [Real ownership with involvement]()
-- [Primary market]()
+- [Primary market / fundraising]()
   - [Business]()
     - [Raise capital]()
   - [Investor]()
