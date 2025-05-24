@@ -3,7 +3,7 @@
 Excessive uncertainty
 
 ~~~admonish quote
-"The Messenger of Allah forbade the sale involving gharar (excessive uncertainty)."
-
-— Sahih Muslim 1513
+Allah's messenger forbade a transaction determined by throwing stones, and the type which involves some uncertainty.[^1]
 ~~~
+
+[^1]: [Sahih Muslim 1513](https://sunnah.com/muslim:1513)
