@@ -184,13 +184,13 @@
 <p>TLS vs. SSH:</p>
 <div class="table-wrapper"><table><thead><tr><th></th><th>TLS</th><th>SSH</th></tr></thead><tbody>
 <tr><td>Server authentication</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>Client authentication</td><td>-</td><td>Yes</td></tr>
+<tr><td>Client authentication</td><td>mTLS</td><td>Yes</td></tr>
 <tr><td>Trust model</td><td>Chain of trust</td><td>Manual (?)</td></tr>
 </tbody></table>
 </div>
 <ul>
-<li>Server authentication — the server needs to prove its identity</li>
-<li>Client authentication — the client needs to prove its identity</li>
+<li>Server authentication — the server is the one that needs to prove its identity</li>
+<li>Client authentication — the client is the one that needs to prove its identity</li>
 </ul>
 <div id="admonition-why-no-client-authentication-at-tls" class="admonition admonish-question">
 <div class="admonition-title">
