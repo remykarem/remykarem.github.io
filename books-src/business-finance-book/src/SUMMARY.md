@@ -172,6 +172,8 @@
     - [Goodwill]()
     - [Helping the business to grow]()
 - [Secondary market]()
+  - [Overall]()
+    - [Fair valuation]()
   - [Business]()
     - [??]()
   - [Investor]()
