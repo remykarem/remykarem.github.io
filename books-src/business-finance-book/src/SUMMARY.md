@@ -139,6 +139,18 @@
 
 ---
 
+# Strategies: Minimise loss
+
+- [Diversification]()
+  - [Market]()
+  - [Asset class]()
+- [Defensive assets]()
+- [Dollar-cost averaging]()
+- [Stop-loss]()
+- [Hedging]()
+
+---
+
 # Benefits
 
 - [Liquidity]()
