@@ -4,13 +4,13 @@ For this protocol to work, these things need to be set up first.
 
 ## For server authentication ("host authentication")
 
-~~~admonish note
-These keys should be automatically created when installing SSH on the server (?), so no generation is required.
-~~~
-
 A private key ("**host key**"), held by the server, is used for host authentication. It is typically stored in the server's `/etc/ssh`.
 
 The corresponding public key is shared with the client _during the initial connection_. The client then stores this key typically in `~/.ssh/known_hosts`.
+
+~~~admonish note
+These keys should be automatically created when installing SSH on the server (?), so no generation is required.
+~~~
 
 ~~~admonish info title="Host key algorithms"
 These are the algorithms that the server will advertise to the client for host authentication.
@@ -52,33 +52,23 @@ To create an account, a user account needs to be created in the Linux system its
 
 ## For client authentication
 
-A private key, held by the client, is used for authenticating with the server.
+The common client authentication methods (`AuthenticationMethods`) are:
+- Public key
 
-The corresponding public key should be shared with the server out-of-band prior to the first SSH connection. This is typically stored in `~/.ssh/authorized_keys` at the server.
+    A private key, held by the client, is used for authenticating with the server.
+    
+    The corresponding public key should be shared with the server out-of-band prior to the first SSH connection. This is typically stored in `~/.ssh/authorized_keys` at the server.
+    
+    ~~~admonish info title="Accepted public key cryptography algorithms"
+    Both the server and the client can specify the public key algorithms it accepts and is willing to use (respectively).
+    
+    This can be done via the `PubkeyAcceptedAlgorithms` configuration.
+    ~~~
+    
+- Password
+- None
 
-There is also an option to encrypt the private key at rest, which requires a passphrase.
-
-~~~admonish info title="Accepted public key cryptography algorithms"
-Both the server and the client can specify the public key algorithms it accepts and is willing to use (respectively).
-
-This can be done via the `PubkeyAcceptedAlgorithms` configuration.
-~~~
-
-~~~admonish info title="Passphrase and ssh-agent"
-`ssh-agent` is a program that assists with passphrase-protected private keys (in memory) so that the user doesn't have to type in the passphrase every time the key is needed.
-
-The `AddKeysToAgent` and `UseKeychain` SSH configs are associated with this SSH agent.
-
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
-~~~
-
-~~~admonish note title="Client authentication methods"
-- Asymmetric key pair
-- Password — the password is encrypted using the shared secret key
-- SSH certificates
-
-The client authentication can also be multi-factor. It is common to use (i) asymmetric key pair, and (ii) password.
-~~~
+which can be any combination.
 
 ~~~admonish tip title="Test connection"
 To test connection to the server, the client can do
@@ -109,3 +99,10 @@ More information can be found in
 ```
 man ssh_config
 ```
+
+## Passphrase and ssh-agent
+`ssh-agent` is a program that assists with passphrase-protected private keys (in memory) so that the user doesn't have to type in the passphrase every time the key is needed.
+
+The `AddKeysToAgent` and `UseKeychain` SSH configs are associated with this SSH agent.
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent

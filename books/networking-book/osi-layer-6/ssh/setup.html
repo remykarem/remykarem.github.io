@@ -180,6 +180,8 @@
                         <h1 id="setup"><a class="header" href="#setup">Setup</a></h1>
 <p>For this protocol to work, these things need to be set up first.</p>
 <h2 id="for-server-authentication-host-authentication"><a class="header" href="#for-server-authentication-host-authentication">For server authentication (&quot;host authentication&quot;)</a></h2>
+<p>A private key (&quot;<strong>host key</strong>&quot;), held by the server, is used for host authentication. It is typically stored in the server's <code>/etc/ssh</code>.</p>
+<p>The corresponding public key is shared with the client <em>during the initial connection</em>. The client then stores this key typically in <code>~/.ssh/known_hosts</code>.</p>
 <div id="admonition-note" class="admonition admonish-note">
 <div class="admonition-title">
 <p>Note</p>
@@ -189,8 +191,6 @@
 <p>These keys should be automatically created when installing SSH on the server (?), so no generation is required.</p>
 </div>
 </div>
-<p>A private key (&quot;<strong>host key</strong>&quot;), held by the server, is used for host authentication. It is typically stored in the server's <code>/etc/ssh</code>.</p>
-<p>The corresponding public key is shared with the client <em>during the initial connection</em>. The client then stores this key typically in <code>~/.ssh/known_hosts</code>.</p>
 <div id="admonition-host-key-algorithms" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Host key algorithms</p>
@@ -233,44 +233,32 @@
 <p>A username needs to be associated for every connection.</p>
 <p>To create an account, a user account needs to be created in the Linux system itself.</p>
 <h2 id="for-client-authentication"><a class="header" href="#for-client-authentication">For client authentication</a></h2>
+<p>The common client authentication methods (<code>AuthenticationMethods</code>) are:</p>
+<ul>
+<li>
+<p>Public key</p>
 <p>A private key, held by the client, is used for authenticating with the server.</p>
 <p>The corresponding public key should be shared with the server out-of-band prior to the first SSH connection. This is typically stored in <code>~/.ssh/authorized_keys</code> at the server.</p>
-<p>There is also an option to encrypt the private key at rest, which requires a passphrase.</p>
 <div id="admonition-accepted-public-key-cryptography-algorithms" class="admonition admonish-info">
-<div class="admonition-title">
+  <div class="admonition-title">
 <p>Accepted public key cryptography algorithms</p>
 <p><a class="admonition-anchor-link" href="#admonition-accepted-public-key-cryptography-algorithms"></a></p>
 </div>
-<div>
-<p>Both the server and the client can specify the public key algorithms it accepts and is willing to use (respectively).</p>
+  <div>
+<pre><code>  Both the server and the client can specify the public key algorithms it accepts and is willing to use (respectively).
+</code></pre>
 <p>This can be done via the <code>PubkeyAcceptedAlgorithms</code> configuration.</p>
 </div>
-</div>
-<div id="admonition-passphrase-and-ssh-agent" class="admonition admonish-info">
-<div class="admonition-title">
-<p>Passphrase and ssh-agent</p>
-<p><a class="admonition-anchor-link" href="#admonition-passphrase-and-ssh-agent"></a></p>
-</div>
-<div>
-<p><code>ssh-agent</code> is a program that assists with passphrase-protected private keys (in memory) so that the user doesn't have to type in the passphrase every time the key is needed.</p>
-<p>The <code>AddKeysToAgent</code> and <code>UseKeychain</code> SSH configs are associated with this SSH agent.</p>
-<p>https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent</p>
-</div>
-</div>
-<div id="admonition-client-authentication-methods" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Client authentication methods</p>
-<p><a class="admonition-anchor-link" href="#admonition-client-authentication-methods"></a></p>
-</div>
-<div>
-<ul>
-<li>Asymmetric key pair</li>
-<li>Password — the password is encrypted using the shared secret key</li>
-<li>SSH certificates</li>
+  </div>
+</li>
+<li>
+<p>Password</p>
+</li>
+<li>
+<p>None</p>
+</li>
 </ul>
-<p>The client authentication can also be multi-factor. It is common to use (i) asymmetric key pair, and (ii) password.</p>
-</div>
-</div>
+<p>which can be any combination.</p>
 <div id="admonition-test-connection" class="admonition admonish-tip">
 <div class="admonition-title">
 <p>Test connection</p>
@@ -295,6 +283,10 @@
 <p>More information can be found in</p>
 <pre><code>man ssh_config
 </code></pre>
+<h2 id="passphrase-and-ssh-agent"><a class="header" href="#passphrase-and-ssh-agent">Passphrase and ssh-agent</a></h2>
+<p><code>ssh-agent</code> is a program that assists with passphrase-protected private keys (in memory) so that the user doesn't have to type in the passphrase every time the key is needed.</p>
+<p>The <code>AddKeysToAgent</code> and <code>UseKeychain</code> SSH configs are associated with this SSH agent.</p>
+<p>https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent</p>
 
                     </main>
 
