@@ -41,6 +41,7 @@
 # Foods
 
 - [Measurements](./foods/measurements.md)
+- [Superfoods](./foods/superfoods.md)
 - [Animals]()
   - [Birds]()
   - [Fish]()
@@ -85,6 +86,7 @@
   - [Vitamin B]()
   - [Vitamin C](./biochemistry/vitamins/vitamin-c.md)
   - [Vitamin D](./biochemistry/vitamins/vitamin-d.md)
+  - [Vitamin E](./biochemistry/vitamins/vitamin-e.md)
   - [Vitamin K](./biochemistry/vitamins/vitamin-k.md)
 - [Phytochemicals]()
   - [Polyphenols](./biochemistry/phytochemicals/polyphenols.md)
