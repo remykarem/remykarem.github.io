@@ -18,10 +18,21 @@
   - [Murabaha (cost-plus sale)]()
   - [Mudharaba (profit-sharing)]()
 
-# Trust
+---
 
-- [Trust]()
-- [Waqf]()
+# Direct ownership
+
+- [Company]()
+- [Asset: Real estate]()
+- [Asset: Gold & precious metals]()
+
+---
+
+# Indirect ownership: Investment vehicles
+
+- [REIT]()
+- [ETF]()
+- [Mutual fund]()
 
 ---
 
@@ -51,6 +62,8 @@
 
 - [Goal](./finance/secondary-market/goal.md)
 - [Index](./finance/index.md)
+
+---
 
 # Finance: Cash instruments
 
@@ -178,7 +191,7 @@
     - [??]()
   - [Investor]()
     - [Ownership in companies]()
-    - [Liquidity]()
+    - [Liquidity & flexibility]()
     - [Transparency]()
 - [?]()
   - [Minimise loss]()
