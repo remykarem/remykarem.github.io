@@ -6,8 +6,8 @@ An ETF is a pooled investment vehicle. It consists of _k_ shares, where each sha
 
 ~~~admonish info title="Why are ETFs created in the first place?"
 * To match the **performance** of indexes, because indexes usually include strong companies
-* **Lower cost** — cheaper to manage compared to mutual funds; passively managed
-* **To minimise risk** — via diversification; mutual funds too
+* **Lower cost** — cheaper to manage compared to mutual funds and DIY
+* **To minimise risk** — via diversification (usually includes 100s of shares); mutual funds too
 ~~~
 
 ~~~admonish question title="How is this different from doing it yourself?"
