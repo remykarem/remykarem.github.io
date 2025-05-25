@@ -10,6 +10,10 @@ An ETF is a pooled investment vehicle. It consists of _k_ shares, where each sha
 * **To minimise risk** — via diversification (usually includes 100s of shares); mutual funds too
 ~~~
 
+~~~admonish question title="Is the price of an ETF share proportional to the value of its underlying allocations?"
+Yes, naturally incline towards the value via arbitrage.
+~~~
+
 ~~~admonish question title="How is this different from doing it yourself?"
 ???
 ~~~
