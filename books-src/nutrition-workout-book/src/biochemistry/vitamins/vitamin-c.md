@@ -10,11 +10,18 @@ Properties:
 * Strong antioxidant in water-soluble environments
 
 Top common fruits high in Vitamin C[^source]:
-1. Guava — 273mg
-2. Papaya — 80mg
-3. Strawberry — 65mg
-4. Lemon — 53mg
-5. Orange — 50mg
-6. Mango — 39mg
+1. **Guava** — 228mg
+2. Gold **kiwi** — 105mg
+3. Kiwi — 93mg
+4. Papaya — 80mg
+5. Strawberry — 59mg
+6. Lemon — 53mg
+7. Orange — 53mg
+8. Rock melon — 37mg
+9. Mango — 36mg
+10. Blueberry — 10mg
+11. Avocado — 9mg
+12. Apple — 5mg
+13. Raspberry — 0mg
 
-[^source]: Adapted from [Fruits rich in vitamin C: top 15 immune boosters](https://plantura.garden/uk/green-living/nutrition/vitamin-c-fruits)
+[^source]: Google via USDA
