@@ -68,7 +68,7 @@ The common client authentication methods (`AuthenticationMethods`) are:
 - Password
 - None
 
-which can be any combination.
+which can be more than 1 combination to achieve multi-factor authentication.
 
 ~~~admonish tip title="Test connection"
 To test connection to the server, the client can do
