@@ -93,6 +93,7 @@
 
 - [AUM]()
 - [Expense]()
+- [NAV](./report/nav.md)
 
 ---
 
