@@ -23,15 +23,15 @@
 # Direct ownership
 
 - [Company]()
-- [Asset: Real estate]()
-- [Asset: Gold & precious metals]()
+- [Asset]()
+- [Commodity]()
 
 ---
 
 # Indirect ownership: Investment vehicles
 
-- [REIT]()
 - [ETF]()
+- [REIT]()
 - [Mutual fund]()
 
 ---
@@ -45,6 +45,7 @@
     - [Rights Offering]()
     - [Sukuk offerings]()
   - [Private Placement]()
+  - [Direct offerings]()
   - [Private equity]()
   - [Crowdfunding]()
     - [Reward-based]()
