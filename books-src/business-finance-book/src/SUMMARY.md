@@ -20,6 +20,13 @@
 
 ---
 
+# Investment goals
+
+- [Ownership]()
+- [Market speculation]()
+
+---
+
 # Direct ownership
 
 - [Company]()
