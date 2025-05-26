@@ -23,7 +23,10 @@
 # Direct ownership
 
 - [Company]()
+  - [Equity]()
 - [Asset]()
+  - [Sukuk]()
+  - [REIT]()
 - [Commodity]()
 
 ---
@@ -31,7 +34,6 @@
 # Indirect ownership: Investment vehicles
 
 - [ETF]()
-- [REIT]()
 - [Mutual fund]()
 
 ---
