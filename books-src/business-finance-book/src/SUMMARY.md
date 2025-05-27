@@ -22,7 +22,7 @@
 
 # Investment goals: Profiting from
 
-- [Ownership]()
+- [Value appreciation]()
 - [Dividends]()
 - [Market fluctuations]()
 - [Interest]()
@@ -128,6 +128,15 @@
 - [Insurance]()
 
 ---
+
+# Speculative strategies
+
+- [Day trading]()
+- [Options trading]()
+- [Arbitrage]()
+- [Trend following]()
+
+--- 
 
 # Trading strategy / trading activity
 
