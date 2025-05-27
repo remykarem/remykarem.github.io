@@ -20,11 +20,10 @@
 
 ---
 
-# Investment goals
+# Investment goals: Profiting from
 
 - [Ownership]()
 - [Dividends]()
-- [Price]()
 - [Market fluctuations]()
 - [Interest]()
 
