@@ -2,4 +2,4 @@
 
 Net Asset Value
 
-(total assets - total liabilities) / total outstanding units
+$NAV = \frac{total assets - total liabilities}{ total outstanding units}$
