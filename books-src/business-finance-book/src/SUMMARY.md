@@ -23,8 +23,9 @@
 # Investment goals
 
 - [Ownership]()
-  - [Dividends]()
-- [Market speculation]()
+- [Dividends]()
+- [Price]()
+- [Market fluctuations]()
 - [Interest]()
 
 ---
