@@ -22,8 +22,9 @@
 
 # Investment goals: Profiting from
 
-- [Value appreciation]()
+- [Dividends]()
 - [Productive assets]()
+- [Value appreciation]()
 - [Market fluctuations]()
 - [Interest]()
 
