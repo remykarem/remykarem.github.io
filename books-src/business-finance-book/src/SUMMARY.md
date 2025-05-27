@@ -24,6 +24,7 @@
 
 - [Ownership]()
 - [Market speculation]()
+- [Interest]()
 
 ---
 
