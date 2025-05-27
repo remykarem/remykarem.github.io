@@ -23,6 +23,7 @@
 # Investment goals
 
 - [Ownership]()
+  - [Dividends]()
 - [Market speculation]()
 - [Interest]()
 
