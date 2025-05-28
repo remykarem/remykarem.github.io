@@ -211,6 +211,19 @@
 <p>See the <code>openssl-pkeyutl</code> docs (OpenSSL 3.0) <a href="https://www.openssl.org/docs/man3.0/man1/openssl-pkeyutl.html">here</a>. Note that <code>rsautl</code> is deprecated.</p>
 </div>
 </div>
+<div id="admonition-why-is-rsa-slow" class="admonition admonish-question">
+<div class="admonition-title">
+<p>Why is RSA slow?</p>
+<p><a class="admonition-anchor-link" href="#admonition-why-is-rsa-slow"></a></p>
+</div>
+<div>
+<ul>
+<li>Plaintext needs to be converted to numbers.</li>
+<li>Numbers undergo large arithmetic operations (modular exponentiation).</li>
+</ul>
+</div>
+</div>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
