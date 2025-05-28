@@ -38,11 +38,13 @@ Using a separate interface for the VPN allows for more precise control over netw
 
    Different protocols encrypt the data differently.
 
-2. **Server decrypts data**
+   Some VPN protocols like OpenVPN **encrypt the entire packet**, then wraps it in a new one.
+
+3. **Server decrypts data**
 
    The server receives the encrypted data and decrypts it.
 
-3. **Server forwards packets if needed**
+4. **Server forwards packets if needed**
 
    The VPN server checks its own routing table to determine whether the packet should be forwarded.
 
