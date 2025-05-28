@@ -19,4 +19,5 @@ See the `openssl-pkeyutl` docs (OpenSSL 3.0) [here](https://www.openssl.org/docs
 ~~~admonish question title="Why is RSA slow?"
 * Plaintext needs to be converted to numbers.
 * Numbers undergo large arithmetic operations (modular exponentiation).
+* Involves 2048/4096/8192 bits. AES involves 128/256/512 bits at a time.
 ~~~
