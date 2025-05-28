@@ -15,3 +15,8 @@ Native encryption is deterministic
 ~~~admonish example title="OpenSSL"
 See the `openssl-pkeyutl` docs (OpenSSL 3.0) [here](https://www.openssl.org/docs/man3.0/man1/openssl-pkeyutl.html). Note that `rsautl` is deprecated.
 ~~~
+
+~~~admonish question title="Why is RSA slow?"
+* Plaintext needs to be converted to numbers.
+* Numbers undergo large arithmetic operations (modular exponentiation).
+~~~
