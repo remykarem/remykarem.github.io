@@ -25,3 +25,12 @@ How easily an asset can be bought or sold for cash without affecting its price
 
 High demand, low supply -> higher price
 Low demand, high supply -> lower price
+
+## Expense ratio
+
+Annual fee that funds charge nvestors to cover operating expenses. 
+
+## AUM
+
+Assets Under Management. The total market value of all the investments that a fund manages.
+
