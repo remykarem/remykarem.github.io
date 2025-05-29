@@ -2,6 +2,8 @@
 
 Source of energy
 
+Raw starch is made of amylose and amylopectin.
+
 Properties:
 * Digestible
 
@@ -19,4 +21,9 @@ Types:
     * RS1 — whole or partially milled (?) grains, seeds, legumes
     * RS2 — raw potatoes, green bananas
     * RS3 — cooked then cooled starchy foods
+
+      ~~~admonish question title="Why?"
+      Gelatinisation and retrogradation.
+      ~~~
+      
     * RS4 — ...
