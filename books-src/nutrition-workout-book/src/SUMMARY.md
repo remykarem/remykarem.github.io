@@ -99,6 +99,7 @@
   - [Calcium]()
   - [Phosphate]()
   - [Iron]()
+  - [Zinc](./minerals/zinc.md)
  
 # Properties
 
