@@ -47,5 +47,14 @@ Examples:
 
 ## Insoluble fiber
 
+Adds bulk to the stool, and helps food pass more quickly theough the stomach and intestines. 
+
 Properties:
+* Insoluble — doesn't dissolve in water, but absorbs water and swells. 
 * Less fermentable
+
+Some sources of food high in insoluble fiber:
+* Brown rice
+* Almonds
+* Sunflower seeds
+* Mostly in fruit skins — apple peels, grape skins
