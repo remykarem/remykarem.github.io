@@ -85,6 +85,7 @@
 - [Vitamins]()
   - [Vitamin A](./biochemistry/vitamins/vitamin-a.md)
   - [Vitamin B]()
+    - [Vitamin B7 (Biotin)](./biochemistry/vitamins/vitamin-b7.md)
   - [Vitamin C](./biochemistry/vitamins/vitamin-c.md)
   - [Vitamin D](./biochemistry/vitamins/vitamin-d.md)
   - [Vitamin E](./biochemistry/vitamins/vitamin-e.md)
@@ -99,7 +100,7 @@
   - [Calcium]()
   - [Phosphate]()
   - [Iron]()
-  - [Zinc](./minerals/zinc.md)
+  - [Zinc](./biochemistry/minerals/zinc.md)
  
 # Properties
 
