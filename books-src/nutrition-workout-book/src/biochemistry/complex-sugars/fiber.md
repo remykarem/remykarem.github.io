@@ -58,3 +58,12 @@ Some sources of food high in insoluble fiber:
 * Almonds
 * Sunflower seeds
 * Mostly in fruit skins — apple peels, grape skins
+
+~~~admonish question="Brown rice cs. white rice"
+
+|  | Brown rice | White rice | 
+| - | - | - |
+| Fiber | High | Low |
+| Satiety | High | Low |
+| Energy | Lower | Higher |
+~~~
