@@ -131,6 +131,7 @@
     - [DHE](primitives/key-exchange-algorithms/dhe.md)
     - [ECDH](./primitives/key-exchange-algorithms/ecdh.md)
     - [ECDHE](./primitives/key-exchange-algorithms/ecdhe.md)
+    - [X25519](./primitives/key-exchange-algorithms/x25519.md)
 - [KEM](./primitives/kem/index.md)
   - [Kyber](./primitives/kem/kyber.md)
 - [HPKE](./primitives/hpke.md)
