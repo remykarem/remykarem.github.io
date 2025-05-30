@@ -183,8 +183,17 @@
 <h1 id="aes"><a class="header" href="#aes">AES</a></h1>
 <p>Advanced Encryption Standard</p>
 <p><a href="https://csrc.nist.gov/pubs/fips/197/final">FIPS 197</a></p>
-<p>AES is a block cipher that operates on <strong>one single block of 128 bits</strong>. AES does not specify how to encrypt multiple blocks of 128 bits of data. </p>
-<p>It breaks the plaintext into similar size blocks.</p>
+<p>AES is a block cipher that operates on <strong>one single block of 128 bits</strong>. </p>
+<div id="admonition-arbitrary-length" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Arbitrary length</p>
+<p><a class="admonition-anchor-link" href="#admonition-arbitrary-length"></a></p>
+</div>
+<div>
+<p>Like any other block cipher, AES does not specify how to encrypt multiple blocks of 128 bits of data.</p>
+<p>That's what mode of operation does. The plaintext has to be broken into similar size blocks.</p>
+</div>
+</div>
 <p>The key length can be one of the following (bits): <strong>128</strong>, <strong>192</strong> or <strong>256</strong>.</p>
 <p>AES is a bijective function — <em>any</em> data can encrypted, and <em>any</em> data can be decrypted. </p>
 <div id="admonition-warning" class="admonition admonish-warning">
