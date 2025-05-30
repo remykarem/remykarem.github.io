@@ -1,5 +1,9 @@
 # Superfoods
 
+~~~admonish warning
+This is a marketing term for foods that pack a variety of nutrients.
+~~~
+
 ## Fruits & vegetables
 
 * Blueberries
