@@ -1,5 +1,7 @@
 # Key exchange
 
+aka key agreement
+
 In key exchange protocols, _both parties_ contribute to the negotiation of a [shared secret](../../cryptographic-keys/shared-secret.md).
 
 This shared secret can be used for encryption, typically [block ciphers](../encryption-algorithms/block-ciphers/index.md) or stream ciphers.
