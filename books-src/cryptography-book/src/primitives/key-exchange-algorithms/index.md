@@ -6,6 +6,12 @@ This shared secret can be used for encryption, typically [block ciphers](../encr
 
 In a key exchange algorithm, each party must have a private and public key respectively.
 
+~~~admonish hint title="Analogy: Key exchange vs. shared secret"
+In shared secret, in order to exchange messages in the regular "channel", both parties need to meet somewhere first to exchange the shared secret.
+
+In key exchange, you don't have to.
+~~~
+
 ~~~admonish hint title="Raw shared secret and KDF"
 In practise, the raw shared secret that is generated is not used for encryption.
 
