@@ -25,13 +25,15 @@ While there is **risk**, **uncertainty** and **hope for profit**, gambling is a 
 
 ## Chance vs gambling
 
-It's not about the use of dice per se. because drawing lots was a thing previously and was practiced. 
+It's not about anything that involves chance or the use of dice per se. because drawing lots was a thing previously and was practiced. 
 
 ~~~admonish example title="Lucky draw"
 Paying to enter a lucky draw is similar to gambling.
 ~~~
 
 ## Competition vs gambling
+
+It's not about anything that has a winner and loser.
 
 There is no [monetary] competition except in archery, camel racing, or horse racing.
 
