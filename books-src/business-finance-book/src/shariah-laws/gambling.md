@@ -23,6 +23,10 @@ From ChatGPT, Sahih Bukhari
 
 While there is **risk**, **uncertainty** and **hope for profit**, gambling is a zero-sum game.
 
+## Money stake
+
+Zero-sum ness
+
 ## Chance, skill, control of outcome
 
 It's not about anything that involves chance or the use of dice per se. because drawing lots was a thing previously and was practiced. 
