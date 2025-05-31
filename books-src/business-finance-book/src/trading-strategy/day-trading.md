@@ -24,4 +24,8 @@ Charactertistics:
             * How to determine? Time in the market
     * Depends if zero-sum
         * My profit is someone elses loss
-* Guessing some value 
+* Guessing some value
+
+
+
+Short term price swings dont create value. Instead, they redistribute money ("zero-sum"). 
