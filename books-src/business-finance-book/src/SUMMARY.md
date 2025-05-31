@@ -139,11 +139,11 @@
 
 --- 
 
-# Trading strategy / trading activity
+# Trading activities
 
 - [Long-term investing]()
 - [Short-term investing]()
-- [Day trading]()
+- [Day trading](./trading-strategy/day-trading.md)
 - [Margin trading](./trading-strategy/margin-trading.md)
 - [Short selling](./trading-strategy/short-selling.md)
 - [Hedge]()
