@@ -216,6 +216,7 @@
     - [Ownership in companies]()
     - [Liquidity & flexibility]()
     - [Transparency]()
+- [Value vs. sentiment]()
 - [?]()
   - [Minimise loss]()
   - [Creating exposure]()
