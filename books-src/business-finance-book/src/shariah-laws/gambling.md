@@ -5,7 +5,7 @@
 From chatgpt, (Qur’an 5:90)
 
 What's the essence of gambling?
-* Money/assets at stake
+* **Money/assets** at stake
 * Use of randomness
 * A few win, many lose
 
