@@ -1,7 +1,8 @@
 # Gambling
 
 "O you who believe! Intoxicants, gambling (maysir), sacrificing to stones, and divining arrows are an abomination of Satan’s handiwork. Avoid it so that you may succeed."
-(Qur’an 5:90)
+
+From chatgpt, (Qur’an 5:90)
 
 What's the essence of gambling?
 * Money/assets at stake
@@ -17,7 +18,7 @@ Moral harm:
 ~~~admonish note
 Whoever says to another: ‘Come, let us gamble,’ must give charity.
 
-Sahih Bukhari
+From ChatGPT, Sahih Bukhari
 ~~~
 
 While there is **risk**, **uncertainty** and **hope for profit**, gambling is a zero-sum game.
@@ -29,3 +30,10 @@ It's not about the use of dice per se. because drawing lots was a thing previous
 ~~~admonish example title="Lucky draw"
 Paying to enter a lucky draw is similar to gambling.
 ~~~
+
+## Competition vs gambling
+
+There is no [monetary] competition except in archery, camel racing, or horse racing.
+
+From chatgpt
+— Sunan Abu Dawood 2574, Sahih by al-Albani
