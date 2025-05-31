@@ -7,6 +7,11 @@ What's the essence of gambling?
 * Money/assets at stake
 * Use of randomness
 * A few win, many lose
+Moral harm:
+* Unjust gain
+* Exploitation
+* Addiction
+* Reliance on luck
 
 ~~~admonish note
 Whoever says to another: ‘Come, let us gamble,’ must give charity.
