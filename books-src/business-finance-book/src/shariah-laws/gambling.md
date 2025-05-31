@@ -7,6 +7,7 @@ What's the essence of gambling?
 * Money/assets at stake
 * Use of randomness
 * A few win, many lose
+
 Moral harm:
 * Unjust gain
 * Exploitation
