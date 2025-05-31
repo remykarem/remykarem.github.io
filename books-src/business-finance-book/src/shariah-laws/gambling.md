@@ -43,3 +43,8 @@ There is no [monetary] competition except in archery, camel racing, or horse rac
 
 From chatgpt
 — Sunan Abu Dawood 2574, Sahih by al-Albani
+
+
+~~~admonish note title="Me on day trading"
+I am buying a lot of shares today, then I'll sell my shares the second i see the price is climbing so that I can profit a lot.
+~~~
