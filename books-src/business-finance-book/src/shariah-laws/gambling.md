@@ -23,7 +23,7 @@ From ChatGPT, Sahih Bukhari
 
 While there is **risk**, **uncertainty** and **hope for profit**, gambling is a zero-sum game.
 
-## Chance vs gambling
+## Chance, skill, control of outcome
 
 It's not about anything that involves chance or the use of dice per se. because drawing lots was a thing previously and was practiced. 
 
@@ -31,7 +31,7 @@ It's not about anything that involves chance or the use of dice per se. because 
 Paying to enter a lucky draw is similar to gambling.
 ~~~
 
-## Competition vs gambling
+## Winning or losing
 
 It's not about anything that has a winner and loser.
 
