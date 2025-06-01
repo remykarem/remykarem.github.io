@@ -145,6 +145,11 @@
 
 - [eGFR]()
 
+# Medicine: Conditions
+
+- [Diabetes]()
+- [Kidney disease]()
+
 ---
 
 # Biology: How
