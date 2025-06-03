@@ -8,6 +8,17 @@ The recommended dietary cholesterol intake is 300mg/day. For those with high blo
 
 Found in: Animal products. Chicken liver, oyster, egg yolk, sotong, crab, prawn, chicken breast, snapper
 
+~~~admonish note title="Cholesterol digestion"
+1. Cholesterol
+2. Micelles (small intestine)
+3. Chylomicrons (bloodstream)
+4. Chylomicron remnants; cholesterol is concentrated (bloodstream)
+
+which are then taken up by the liver.
+
+Cholesterol remains chemically intact.
+~~~
+
 ~~~admonish note title="Dietry cholesterol effect on blood cholesterol"
 For many people, dietary cholesterol has a modest effect on blood cholesterol.
 
