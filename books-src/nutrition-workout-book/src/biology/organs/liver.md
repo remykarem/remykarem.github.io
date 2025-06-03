@@ -7,13 +7,13 @@
 * Insulin receptor
 * Glucagon receptor
 
-## Bile production
+## Bile acid production
 
-To digest fats.
+To digest fats. Converted from cholesterol. 
 
 ## Storage
 
-Glycogen, vitamins
+Glycogen, vitamins, cholesteryl esters
 
 ## Cholesterol management
 
@@ -22,9 +22,7 @@ Detects and controls cholesterol levels. Has LDL receptors.
 Makes cholesterols.
 
 * HDL — as ApoA1 protein
-* VLDL — packages excess triglycerides _and_ cholesterol from what it made or food. Shipped to the rest if the body. 
-
-VLDL eventually becomes LDL.
+* VLDL — The liver packages excess triglycerides _and_ cholesterol from what it made or food. Shipped to the rest of the body. As VLDL loses triglycerides, it eventually becomes LDL.
 
 Has an enzyme HMG CoA reductase.
 
