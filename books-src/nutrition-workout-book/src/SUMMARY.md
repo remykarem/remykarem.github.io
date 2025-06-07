@@ -154,6 +154,7 @@
 - [Kidney disease]()
   - [Acute kidney disease]()
   - [Chronic kidney disease](./medical-conditions/chronic-kidney-disease.md)
+- [High blood cholesterol](./medical-conditions/high-blood-cholesterol.md)
 
 ---
 
