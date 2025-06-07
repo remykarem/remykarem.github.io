@@ -149,7 +149,8 @@
 
 - [Diabetes]()
   - [Type I]()
-  - [Type II]()
+  - [Type II](./medical-conditions/diabetes/type-ii.md)
+- [High blood pressure]()
 - [Kidney disease]()
   - [Acute kidney disease]()
   - [Chronic kidney disease](./medical-conditions/chronic-kidney-disease.md)
