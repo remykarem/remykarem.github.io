@@ -1,5 +1,11 @@
 # Liver
 
+## Storage
+
+Glycogen, vitamins, cholesteryl esters
+
+Excess glucose is stored as glycogen. But the liver only stores up to about 100g of glycogen. After that, the liver converts glucose into fatty acids ("**lipogenesis**"). This may be stored in the liver, or get sent out into the blood as triglycerides.
+
 ## Detoxification
 
 ## Metabolism
@@ -10,10 +16,6 @@
 ## Bile acid production
 
 To digest fats. Converted from cholesterol. 
-
-## Storage
-
-Glycogen, vitamins, cholesteryl esters
 
 ## Cholesterol management
 
