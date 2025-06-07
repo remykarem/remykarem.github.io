@@ -143,6 +143,7 @@
 
 # Medicine: Tests
 
+- [HbA1c]()
 - [eGFR]()
 
 # Medicine: Conditions
