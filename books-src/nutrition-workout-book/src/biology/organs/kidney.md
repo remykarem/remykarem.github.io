@@ -12,3 +12,7 @@ Functions:
 * Regulate **blood pressure**
 
   Manage fluid levels
+
+* Produce **EPO** (erythropoietin)
+
+  A hormone that stimulates red blood cell production. 
