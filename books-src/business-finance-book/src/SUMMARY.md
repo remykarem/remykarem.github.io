@@ -48,6 +48,12 @@
 
 ---
 
+# No ownership
+
+- [Waqf](./waqf.md)
+
+---
+
 # Investments: Primary market
 
 - [Goal](./finance/primary-market/goal.md)
