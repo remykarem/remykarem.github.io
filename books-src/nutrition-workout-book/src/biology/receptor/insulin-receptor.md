@@ -10,3 +10,7 @@ Most active and critical in:
 Other cells:
 * Brain
 * Kidney
+
+## What caused this pathway be dysfunctional?
+
+* Too much fat inside cells
