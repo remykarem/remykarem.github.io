@@ -148,7 +148,11 @@
 # Medicine: Conditions
 
 - [Diabetes]()
+  - [Type I]()
+  - [Type II]()
 - [Kidney disease]()
+  - [Acute kidney disease]()
+  - [Chronic kidney disease](./medical-conditions/chronic-kidney-disease.md)
 
 ---
 
