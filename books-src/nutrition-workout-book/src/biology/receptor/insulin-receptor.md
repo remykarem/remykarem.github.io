@@ -13,4 +13,4 @@ Other cells:
 
 ## What caused this pathway be dysfunctional?
 
-* Too much fat inside cells
+* Too much ectopic fat inside cells
