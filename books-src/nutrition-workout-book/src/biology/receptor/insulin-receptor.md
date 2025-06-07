@@ -1,5 +1,7 @@
 # Insulin receptor
 
+When insulin binds to the receptor, it triggers a cascade of signals inside the cell to **open up glucose channels** to let sugar in.
+
 Most active and critical in:
 * Muscle cells
 * Fat cells
