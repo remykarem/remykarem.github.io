@@ -159,6 +159,7 @@
 
 # Biology: Organs
 
+- [Kidney](./biology/organs/kidney.md)
 - [Muscles](./biology/organs/muscles.md)
 - [Liver](./biology/organs/liver.md)
 - [Pancreas](./biology/organs/pancreas.md)
