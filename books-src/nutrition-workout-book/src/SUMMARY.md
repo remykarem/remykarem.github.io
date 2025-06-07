@@ -148,6 +148,7 @@
 # Medicine: Conditions
 
 - [Diabetes]()
+  - [Early insulin resistance]()
   - [Type I]()
   - [Type II](./medical-conditions/diabetes/type-ii.md)
 - [High blood pressure]()
