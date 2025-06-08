@@ -1,23 +1,25 @@
 # Liver
 
-## Storage
+## Functions
+
+### Storage
 
 Glycogen, vitamins, cholesteryl esters
 
 Excess glucose is stored as glycogen. But the liver only stores up to about 100g of glycogen. After that, the liver converts glucose into fatty acids ("**lipogenesis**"). This may be stored in the liver, or get sent out into the blood as triglycerides.
 
-## Detoxification
+### Detoxification
 
-## Metabolism
+### Metabolism
 
 * Insulin receptor
 * Glucagon receptor
 
-## Bile acid production
+### Bile acid production
 
 To digest fats. Converted from cholesterol. 
 
-## Cholesterol management
+### Cholesterol management
 
 Detects and controls cholesterol levels. Has LDL receptors.
 
