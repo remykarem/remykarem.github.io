@@ -32,6 +32,10 @@ Bile acids is used to digest fats. Converted from cholesterol via an enzyme.
 
 Some cholesterol is secreted into bile directly, which will get removed from the body.
 
+### Cholesterol production
+
+The liver packages some triglycerides _and_ cholesterol into VLDL. Shipped to the rest of the body to transport fat and cholesterol to tissues. As VLDL loses triglycerides, it eventually becomes LDL.
+
 ### Cholesterol management
 
 Detects and controls cholesterol levels. Has LDL receptors.
@@ -39,7 +43,6 @@ Detects and controls cholesterol levels. Has LDL receptors.
 Makes cholesterols.
 
 * HDL — as ApoA1 protein
-* VLDL — The liver packages excess triglycerides _and_ cholesterol from what it made or food. Shipped to the rest of the body to transport fat and cholesterol to tissues. As VLDL loses triglycerides, it eventually becomes LDL.
 
 Has an enzyme HMG CoA reductase.
 
