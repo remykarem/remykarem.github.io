@@ -4,6 +4,8 @@
 
 - [Insulin receptor]()
 - [Glucagon receptor]()
+- [LDL Receptor]()
+- [LDL Receptor-Related Protein 1 (LRP1)]()
 
 ## Functions
 
