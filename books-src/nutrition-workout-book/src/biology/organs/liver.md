@@ -1,7 +1,5 @@
 # Liver
 
-Has an enzyme HMG CoA reductase.
-
 Cholesterol production is highest overnight.
 
 ## Receptors
@@ -10,6 +8,7 @@ Cholesterol production is highest overnight.
 - [Glucagon receptor]()
 - [LDL Receptor]()
 - [LDL Receptor-Related Protein 1 (LRP1)]()
+- [SR-BI]()
 
 ## Functions
 
@@ -31,6 +30,10 @@ Cholesterol can also be stored. They are esterified into cholesteryl esters.
 ### Bile acid production
 
 Bile acids is used to digest fats. Converted from cholesterol via an enzyme. 
+
+### Cholesterol production
+
+Has an enzyme HMG CoA reductase required for melavonate pathway.
 
 ### Cholesterol elimination
 
