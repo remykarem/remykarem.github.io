@@ -1,6 +1,9 @@
 # Kidney
 
-Functions:
+## Receptors
+
+## Functions
+
 * Filter **waste product**
 
   Remove urea, creatinine, toxins from the blood
