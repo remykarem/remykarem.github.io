@@ -1,5 +1,10 @@
 # Liver
 
+## Receptors
+
+- [Insulin receptor]()
+- [Glucagon receptor]()
+
 ## Functions
 
 ### Storage
