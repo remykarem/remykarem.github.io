@@ -177,6 +177,11 @@
 - [Adrenaline](./biology/hormone/adrenaline.md)
 - [Ghrelin](./biology/hormone/ghrelin.md)
 
+# Biology: In circulation
+
+- [VLDL]()
+- [Chylomicrons]()
+
 # Biology: Organs
 
 - [Muscles](./biology/organs/muscles.md)
