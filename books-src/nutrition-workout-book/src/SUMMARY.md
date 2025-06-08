@@ -186,9 +186,9 @@
 # Biology: Organs
 
 - [Muscles](./biology/organs/muscles.md)
-- [Kidney](./biology/organs/kidney.md)
 - [Liver](./biology/organs/liver.md)
 - [Pancreas](./biology/organs/pancreas.md)
+- [Kidney](./biology/organs/kidney.md)
 - [Heart](./biology/organs/heart.md)
 - [Fat](./biology/organs/fat.md)
 - [Skin]()
