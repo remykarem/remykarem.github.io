@@ -1,5 +1,10 @@
 # Liver
 
+Has an enzyme HMG CoA reductase.
+
+Cholesterol production is highest overnight.
+
+
 ## Receptors
 
 - [Insulin receptor]()
@@ -46,12 +51,3 @@ HDL production increases as ApoA1 increases,
 * which happen when there is low ATP,
 * which happens when there's low blood glucose or fasting or exercise or low insulin. 
 
-### Cholesterol management
-
-Detects and controls cholesterol levels. Has LDL receptors.
-
-Makes cholesterols.
-
-Has an enzyme HMG CoA reductase.
-
-Cholesterol production is highest overnight.
