@@ -4,7 +4,6 @@ Has an enzyme HMG CoA reductase.
 
 Cholesterol production is highest overnight.
 
-
 ## Receptors
 
 - [Insulin receptor]()
@@ -39,15 +38,31 @@ Some cholesterol is secreted into bile directly, which will get removed from the
 
 ### VLDL production
 
-The liver packages some triglycerides _and_ cholesterol into VLDL. Shipped to the rest of the body to transport fat and cholesterol to tissues. As VLDL loses triglycerides, it eventually becomes LDL.
+The liver packages
+* triglycerides — from excess glucose and free fatty acids
+* cholesterol 
+
+into VLDL, which is released into the bloodstream.
 
 ### HDL production
 
 The liver synthesises _nascent HDL_ which consists of Apolipoprotein A-I (ApoA-I) and phospholipids, and very little cholesterol.
 
-HDL production increases as ApoA1 increases,
+HDL production increases 
+* as ApoA1 increases (rate-limiter),
 * which happens when ApoA1 gene expression goes up,
 * which happens when AMPK is activated in liver cells,
 * which happen when there is low ATP,
 * which happens when there's low blood glucose or fasting or exercise or low insulin. 
 
+---
+
+## PPAR-α
+
+Peroxisome Proliferator-Activated Receptor Alpha; a nuclear receptor in liver cells
+
+PPAR-α increases the transcription of genes involved in lipid metabolism, including apoA-I.
+
+~~~admonish tip title="Ligands"
+MUFAs & PUFAs can bind to PPAR-α; activation is stronger with PUFAs.
+~~~
