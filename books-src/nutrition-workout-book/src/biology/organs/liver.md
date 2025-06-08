@@ -32,7 +32,7 @@ Bile acids is used to digest fats. Converted from cholesterol via an enzyme.
 
 Some cholesterol is secreted into bile directly, which will get removed from the body.
 
-### Cholesterol production
+### VLDL production
 
 The liver packages some triglycerides _and_ cholesterol into VLDL. Shipped to the rest of the body to transport fat and cholesterol to tissues. As VLDL loses triglycerides, it eventually becomes LDL.
 
