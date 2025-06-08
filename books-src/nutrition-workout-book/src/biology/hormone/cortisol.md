@@ -1,6 +1,6 @@
 # Cortisol
 
-Stress hormone
+Stress hormone; steroid hormone
 
 * Keeps you awake
 * Increases blood glucose level

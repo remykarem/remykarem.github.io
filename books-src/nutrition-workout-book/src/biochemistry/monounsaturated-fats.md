@@ -17,3 +17,19 @@ Can lower LDL and raise HDL
 Fatty acids:
 * Oleic acid — avocado, olive oil, nuts
 * Palmitoleic acid — walnut
+
+--- 
+
+Top foods:
+
+* Oils
+    * Sunflower oil (75g)
+    * Olive oil (73g)
+* Nuts
+    * Macadamia (59g)
+    * Hazelnet (50g)
+    * Almonds (32g oleic acid)
+    * Pistachios (24g)
+    * Cashews (24g)
+* Fruits
+    * Avocado (15g)
