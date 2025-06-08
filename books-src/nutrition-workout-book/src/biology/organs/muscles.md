@@ -9,8 +9,9 @@ Muscle tissue is the most efficient and the largest site of glucose uptake in th
 
 ## Functions
 
-Muscles that exercise often become better at handling fats — they store a little, burn a lot, and stay insulin sensitive.
-Muscles that sit idle store fats badly, create toxic messes, and become insulin resistant.
+### Metabolism
+
+Glucose
 
 ### Muscle contraction
 
