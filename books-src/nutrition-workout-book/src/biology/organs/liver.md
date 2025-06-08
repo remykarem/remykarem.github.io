@@ -36,20 +36,22 @@ Some cholesterol is secreted into bile directly, which will get removed from the
 
 The liver packages some triglycerides _and_ cholesterol into VLDL. Shipped to the rest of the body to transport fat and cholesterol to tissues. As VLDL loses triglycerides, it eventually becomes LDL.
 
-### Cholesterol management
+### HDL production
 
-Detects and controls cholesterol levels. Has LDL receptors.
-
-Makes cholesterols.
-
-* HDL — as ApoA1 protein
-
-Has an enzyme HMG CoA reductase.
+The liver synthesises _nascent HDL_ which consists of Apolipoprotein A-I (ApoA-I) and phospholipids, and very little cholesterol.
 
 HDL production increases as ApoA1 increases,
 * which happens when ApoA1 gene expression goes up,
 * which happens when AMPK is activated in liver cells,
 * which happen when there is low ATP,
 * which happens when there's low blood glucose or fasting or exercise or low insulin. 
+
+### Cholesterol management
+
+Detects and controls cholesterol levels. Has LDL receptors.
+
+Makes cholesterols.
+
+Has an enzyme HMG CoA reductase.
 
 Cholesterol production is highest overnight.
