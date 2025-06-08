@@ -165,16 +165,6 @@
 - [Glucose or fat for energy](./biology/how/glucose-or-fat-for-energy.md)
 - [Why is having more muscle good]()
 
-# Biology: Organs
-
-- [Kidney](./biology/organs/kidney.md)
-- [Muscles](./biology/organs/muscles.md)
-- [Liver](./biology/organs/liver.md)
-- [Pancreas](./biology/organs/pancreas.md)
-- [Heart](./biology/organs/heart.md)
-- [Adipose]()
-- [Skin]()
-
 # Biology: Enzymes
 
 - [LPL]()
@@ -186,6 +176,16 @@
 - [Cortisol](./biology/hormone/cortisol.md)
 - [Adrenaline](./biology/hormone/adrenaline.md)
 - [Ghrelin](./biology/hormone/ghrelin.md)
+
+# Biology: Organs
+
+- [Muscles](./biology/organs/muscles.md)
+- [Kidney](./biology/organs/kidney.md)
+- [Liver](./biology/organs/liver.md)
+- [Pancreas](./biology/organs/pancreas.md)
+- [Heart](./biology/organs/heart.md)
+- [Adipose]()
+- [Skin]()
 
 # Biology: Receptors
 
