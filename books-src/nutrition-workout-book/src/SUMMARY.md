@@ -190,7 +190,7 @@
 - [Liver](./biology/organs/liver.md)
 - [Pancreas](./biology/organs/pancreas.md)
 - [Heart](./biology/organs/heart.md)
-- [Adipose]()
+- [Fat](./biology/organs/fat.md)
 - [Skin]()
 
 # Biology: Receptors
