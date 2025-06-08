@@ -33,7 +33,7 @@ Bile acids is used to digest fats. Converted from cholesterol via an enzyme.
 
 ### Cholesterol production
 
-Has an enzyme HMG CoA reductase required for melavonate pathway.
+Has an enzyme HMG CoA reductase required for mevalonate pathway.
 
 ### Cholesterol elimination
 
