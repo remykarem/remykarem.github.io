@@ -179,8 +179,9 @@
 
 # Biology: In circulation
 
-- [VLDL]()
-- [Chylomicrons]()
+- [VLDL](./biology/circulation/vldl.md)
+- [HDL](./biology/circulation/hdl.md)
+- [Chylomicrons](./biology/circulation/chylomicrons.md)
 
 # Biology: Organs
 
