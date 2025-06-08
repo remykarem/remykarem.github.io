@@ -2,18 +2,24 @@
 
 Muscle tissue is the most efficient and the largest site of glucose uptake in the body.
 
+## Receptors
+
+- [Insulin receptor]()
+
+## Functions
+
 Muscles that exercise often become better at handling fats — they store a little, burn a lot, and stay insulin sensitive.
 Muscles that sit idle store fats badly, create toxic messes, and become insulin resistant.
 
-## Muscle contraction
+### Muscle contraction
 
 Muscle contraction trigger a signal that causes GLUT4 transporters to move to the surface of the cell (to take in glucose) _without requiring insulin_.
 
-## Calories burned
+### Calories burned
 
 Every kg of muscle at rest burns 10-15 kcal per day[^1]. 
 
-## Fat oxidation
+### Fat oxidation
 
 Fatty acids are broken down to produce energy (ATP), primarily during aerobic activity.
 
@@ -29,7 +35,7 @@ Insulin suppresses LPL activity.
 Exercise in a fasted or low-insulin state (e.g. before breakfast or hours after eating) helps your muscles use more fat.
 ~~~
 
-## Trained muscles
+### Trained muscles
 
 Trained muscle tissues upregulate fat oxidation.
 
