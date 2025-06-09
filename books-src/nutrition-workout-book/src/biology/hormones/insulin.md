@@ -4,6 +4,7 @@ Insulin has different effects for different organs.
 
 | Organ | ⬆️ Increase | ⬇️ Decrease | ❌ Inhibits |
 |-------|----------|----------|----------|
-| Muscles | Glucose uptake, glycogen synthesis and storage | - |
-| Fats | Glucose uptake, triglyceride synthesis and storage | Fat breakdown |
-| Liver | Glucose uptake, glycogen synthesis and storage | - | Gluconeogenesis, glycogenolysis |
+| Muscles | Glucose uptake, glycogenesis and storage | - |
+| Fats | Glucose uptake, triglyceride synthesis and storage | Lipolysis |
+| Liver | Glucose uptake, glycogenesis and storage | - | Gluconeogenesis, glycogenolysis |
+| Brain | Regulates appetite | - | - |
