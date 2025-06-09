@@ -110,6 +110,7 @@
   - [Polyphenols](./biochemistry/phytochemicals/polyphenols.md)
   - [Carotenoids]()
   - [Sterols](./biochemistry/phytochemicals/sterols.md)
+- [Purines](./biochemistry/purines.md)
 - [Minerals]()
   - [Potassium]()
   - [Magnesium]()
@@ -152,6 +153,7 @@
   - [Chronic kidney disease](./medical-conditions/chronic-kidney-disease.md)
 - [High blood cholesterol](./medical-conditions/high-blood-cholesterol.md)
 - [Fatty liver disease](./medical-conditions/fatty-liver-disease.md)
+- [Gout](./medical-conditions/gout.md)
 
 ---
 
@@ -171,6 +173,9 @@
 - [LPL](./biology/circulation/lpl.md)
 - [Free fatty acids]()
 - [Glycerol]()
+- [Haemoglobin]()
+  - [HbA1c]()
+- [Uric acid](./biology/circulation/uric-acid.md)
 
 # Biology: Organs
 
