@@ -157,6 +157,7 @@
   - [Acute kidney disease]()
   - [Chronic kidney disease](./medical-conditions/chronic-kidney-disease.md)
 - [High blood cholesterol](./medical-conditions/high-blood-cholesterol.md)
+- [Fatty liver disease](./medical-conditions/fatty-liver-disease.md)
 
 ---
 
@@ -188,9 +189,9 @@
 - [Muscles](./biology/organs/muscles.md)
 - [Liver](./biology/organs/liver.md)
 - [Pancreas](./biology/organs/pancreas.md)
+- [Fat](./biology/organs/fat.md)
 - [Kidney](./biology/organs/kidney.md)
 - [Heart](./biology/organs/heart.md)
-- [Fat](./biology/organs/fat.md)
 - [Skin]()
 
 # Biology: Metabolism
