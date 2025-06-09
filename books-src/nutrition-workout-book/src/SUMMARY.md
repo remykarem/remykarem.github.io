@@ -124,16 +124,10 @@
 
 # Biochemistry
 
-- [Triglyceride]()
-- [Fatty acid]()
+- [Triglyceride](./biochemistry/triglyceride.md)
+- [Fatty acid](./biochemistry/fatty-acid.md)
 - [Glycerol]()
 - [Caffeine](./biochemistry/caffeine.md)
-
-# Biochemistry III
-
-- [LDL]()
-- [HDL]()
-- [VLDL]()
 
 ---
 
@@ -191,6 +185,4 @@
 # Biology: Metabolism
 
 - [Glucose metabolism](./biology/metabolism/glucose-metabolism.md)
-- [Fat metabolism]()
-- [LDL receptor](./biology/metabolism/ldl-receptor.md)
 - [Adenosine receptor](./biology/metabolism/adenosine-receptor.md)
