@@ -2,10 +2,10 @@
 
 Insulin has different effects for different organs.
 
-| Organ | ⬆️ Increase | ⬇️ Decrease | ❌ Inhibits |
-|-------|----------|----------|----------|
-| 💪🏼 Muscles | Glucose uptake, glycogenesis and storage | - |
-| 🍗 Fats | Glucose uptake, triglyceride synthesis and storage | Lipolysis |
-| 🏭 Liver | Glucose uptake, glycogenesis and storage, de novo lipogenesis | - | Gluconeogenesis, glycogenolysis |
-| 🧠 Brain | Regulates appetite | - | - |
-| 🍠 Pancreas | (Internal feedback) | - | - |
+| Organ | Effect| ⬆️ Increase | ⬇️ Decrease | ❌ Inhibits |
+|-------|-|----------|----------|----------|
+| 💪🏼 Muscles |-| Glucose uptake, glycogenesis and storage | - |
+| 🍗 Fats | -|Glucose uptake, triglyceride synthesis and storage | Lipolysis |
+| 🏭 Liver | -| Glucose uptake, glycogenesis and storage, de novo lipogenesis | - | Gluconeogenesis, glycogenolysis |
+| 🧠 Brain | -| Regulates appetite | - | - |
+| 🍠 Pancreas | -| (Internal feedback) | - | - |
