@@ -1,4 +1,4 @@
-# Insulin receptor
+# Glucose metabolism
 
 When insulin binds to the receptor, it triggers a cascade of signals inside the cell to **open up glucose channels** to let sugar in.
 
