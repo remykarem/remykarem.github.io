@@ -8,7 +8,7 @@
 
 * Filter **waste product**
 
-  Remove urea, creatinine, toxins from the blood
+  Remove urea (uric acid) (around 70% of urea is removed from the body), creatinine, toxins from the blood.
 
 * Maintain **fluid & electrolyte** balance
 
