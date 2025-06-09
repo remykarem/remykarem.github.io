@@ -171,11 +171,11 @@
 
 # Biology: Hormones
 
-- [Insulin]()
+- [Insulin](./biology/hormones/insulin.md)
 - [Glucagon]()
-- [Cortisol](./biology/hormone/cortisol.md)
-- [Adrenaline](./biology/hormone/adrenaline.md)
-- [Ghrelin](./biology/hormone/ghrelin.md)
+- [Cortisol](./biology/hormones/cortisol.md)
+- [Adrenaline](./biology/hormones/adrenaline.md)
+- [Ghrelin](./biology/hormones/ghrelin.md)
 
 # Biology: In circulation
 
@@ -193,8 +193,9 @@
 - [Fat](./biology/organs/fat.md)
 - [Skin]()
 
-# Biology: Receptors
+# Biology: Metabolism
 
-- [Insulin receptor](./biology/receptor/insulin-receptor.md)
-- [LDL receptor](./biology/receptor/ldl-receptor.md)
-- [Adenosine receptor](./biology/receptor/adenosine-receptor.md)
+- [Glucose metabolism](./biology/metabolism/glucose-metabolism.md)
+- [Fat metabolism]()
+- [LDL receptor](./biology/metabolism/ldl-receptor.md)
+- [Adenosine receptor](./biology/metabolism/adenosine-receptor.md)
