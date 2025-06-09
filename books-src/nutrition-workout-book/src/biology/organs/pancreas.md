@@ -1,11 +1,7 @@
 # Pancreas
 
-## Receptors
-
-Beta cells
-* [Glucose transporters]()
-
-Alpha cells
-* [Insulin receptors]()
-
 ## Functions
+
+Beta cells detect high blood glucose and release [insulin](../hormones/insulin.md).
+
+Alpha cells detect low blood glucose and release [glucagon](../hormones/glucagon.md).
