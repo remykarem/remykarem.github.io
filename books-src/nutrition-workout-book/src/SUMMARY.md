@@ -161,15 +161,6 @@
 
 ---
 
-# Biology: How
-
-- [Glucose or fat for energy](./biology/how/glucose-or-fat-for-energy.md)
-- [Why is having more muscle good]()
-
-# Biology: Enzymes
-
-- [LPL]()
-
 # Biology: Hormones
 
 - [Insulin](./biology/hormones/insulin.md)
@@ -183,6 +174,9 @@
 - [VLDL](./biology/circulation/vldl.md)
 - [HDL](./biology/circulation/hdl.md)
 - [Chylomicrons](./biology/circulation/chylomicrons.md)
+- [LPL](./biology/circulation/lpl.md)
+- [Free fatty acids]()
+- [Glycerol]()
 
 # Biology: Organs
 
