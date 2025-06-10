@@ -80,6 +80,7 @@
 # Biochemistry
 
 - [Protein](./biochemistry/protein.md)
+    - [Amino acid](./biochemistry/amino-acid.md)
 - [Carbohydrates](./biochemistry/carbohydrates.md)
     - [Simple sugars]()
       - [Glucose](./biochemistry/glucose.md)
