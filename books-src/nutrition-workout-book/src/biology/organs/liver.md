@@ -2,7 +2,9 @@
 
 Cholesterol production is highest overnight.
 
-## Receptors
+## Structure
+
+### Receptors
 
 - [Insulin receptor]()
 - [Glucagon receptor]()
