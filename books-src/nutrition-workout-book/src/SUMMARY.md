@@ -175,7 +175,7 @@
 - [HDL](./biology/circulation/hdl.md)
 - [Chylomicrons](./biology/circulation/chylomicrons.md)
 - [LPL](./biology/circulation/lpl.md)
-- [Free fatty acids](./biology/circulation/free-fatty-acid.md)
+- [Free fatty acids](./biology/circulation/ffa.md)
 - [Glycerol]()
 - [Haemoglobin]()
   - [HbA1c]()
