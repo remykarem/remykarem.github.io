@@ -20,7 +20,7 @@ Excess glucose is stored as glycogen. But the liver only stores up to about 100g
 
 Cholesterol can also be stored. They are esterified into cholesteryl esters.
 
-~~~adminish tip="How long can it last?"
+~~~admonish tip="How long can it last?"
 Glycogen storage can last for about 12-18h of fasting.
 
 Source: [NCBI](https://www.ncbi.nlm.nih.gov/books/NBK549820/#:~:text=However%2C%20after%20approximately%2012%20to,Go%20to:)
