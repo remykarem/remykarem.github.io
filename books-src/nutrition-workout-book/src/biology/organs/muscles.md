@@ -2,7 +2,9 @@
 
 Muscle tissue is the most efficient and the largest site of glucose uptake in the body.
 
-## Receptors
+## Structure
+
+### Receptors
 
 - [Insulin receptor]()
 - [IGF-1 receptors]()
