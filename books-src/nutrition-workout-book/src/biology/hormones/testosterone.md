@@ -2,4 +2,10 @@
 
 Released during natural sleep and training.
 
-Increases protein synthesis and muscle mass.
+| Organ | ⬆️ Increase | ⬇️ Decrease | ❌ Inhibits |
+|-------|----------|----------|----------|
+| 💪🏼 Muscles| ? | ? | ? |
+| 🦴 Bones |? | ? | ? |
+| 🥜 Testes |? | ? | ? |
+| 😊 Skin | ? | ? | ? |
+| 🧠 Brain | ? | ? | ? |
