@@ -1,5 +1,7 @@
 # Insulin
 
+Released by pancreas on increase in blood glucose.
+
 Insulin has different effects for different organs.
 
 | Organ | Effect| ⬆️ Increase | ⬇️ Decrease | ❌ Inhibits |
