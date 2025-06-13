@@ -162,9 +162,9 @@
 
 - [Insulin](./biology/hormones/insulin.md)
 - [Glucagon](./biology/hormones/glucagon.md)
-- [Testosterone]()
-- [Growth hormone]()
-- [IGF-1]()
+- [Testosterone](./biology/hormones/testosterone.md)
+- [Growth hormone](./biology/hormones/growth-hormone.md)
+- [IGF-1](./biology/hormones/igf-1.md)
 - [Cortisol](./biology/hormones/cortisol.md)
 - [Adrenaline](./biology/hormones/adrenaline.md)
 - [Ghrelin](./biology/hormones/ghrelin.md)
