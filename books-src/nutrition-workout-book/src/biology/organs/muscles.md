@@ -15,6 +15,10 @@ Muscle tissue is the most efficient and the largest site of glucose uptake in th
 
 Every kg of muscle at rest burns 10-15 kcal per day[^1]. 
 
+### Insulin pathway
+
+...
+
 ### Muscle contraction
 
 Muscle contraction trigger a signal that causes GLUT4 transporters to move to the surface of the cell (to take in glucose) _without requiring insulin_.
