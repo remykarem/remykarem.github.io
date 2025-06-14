@@ -158,6 +158,19 @@
 
 ---
 
+# Biology: Stimulus
+
+- [Blood]()
+    - [Increase in blood glucose]()
+    - [Decrease in blood glucose]()
+    - [Lactate buildup ]()
+- [Neural signals]()
+    - [Muscle tension]()
+    - [Blood pressure]()
+    - [Heart rate]()
+    - [Muscle contraction]()
+- [Sleep]()
+
 # Biology: Hormones
 
 - [Insulin](./biology/hormones/insulin.md)
