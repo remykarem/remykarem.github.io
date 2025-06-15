@@ -181,6 +181,8 @@
 - [Cortisol](./biology/hormones/cortisol.md)
 - [Adrenaline](./biology/hormones/adrenaline.md)
 - [Ghrelin](./biology/hormones/ghrelin.md)
+- [Seratonin](./biology/hormones/seratonin.md)
+- [Melatonin](./biology/hormones/melatonin.md)
 
 # Biology: In circulation
 
