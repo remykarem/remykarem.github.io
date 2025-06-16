@@ -20,6 +20,8 @@ Every kg of muscle at rest burns 10-15 kcal per day[^1].
 * Increase in **glucose** uptake — due to increase in GLUT4 transporter activity
 * Increase in **amino acid** uptake — due to increase in amino acid transporter activity
 
+### mTOR pathway
+
 ### Muscle contraction
 
 Muscle contraction trigger a signal that causes GLUT4 transporters to move to the surface of the cell (to take in glucose) _without requiring insulin_.
