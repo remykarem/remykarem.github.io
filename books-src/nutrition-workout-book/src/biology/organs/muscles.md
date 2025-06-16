@@ -9,6 +9,8 @@ Muscle tissue is the most efficient and the largest site of glucose uptake in th
 - [Insulin receptor]()
 - [IGF-1 receptors]()
 
+High activity of BCAT and BCKDH[^bcaa]
+
 ## Functions
 
 ### Metabolism
@@ -47,3 +49,4 @@ Exercise in a fasted or low-insulin state (e.g. before breakfast or hours after 
 Trained muscle tissues upregulate fat oxidation.
 
 [^1]: [Effect of resistance training on resting metabolic rate and its estimation by a dual-energy X-ray absorptiometry metabolic map (2015)](https://www.nature.com/articles/ejcn2014216?utm_source=chatgpt.com)
+[^bcaa]: [The role of BCAA metabolism in metabolic health and disease](https://pmc.ncbi.nlm.nih.gov/articles/PMC11297153/#:~:text=Skeletal%20muscle%20and%20liver,needs%20during%20BCKA%20catabolism11.)
