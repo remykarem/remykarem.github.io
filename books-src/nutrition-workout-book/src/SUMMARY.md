@@ -204,7 +204,7 @@
 - [Fat](./biology/organs/fat.md)
 - [Kidney](./biology/organs/kidney.md)
 - [Heart](./biology/organs/heart.md)
-- [Skin]()
+- [Skin](./biology/organs/skin.md)
 - [Brain](./biology/organs/brain.md)
 
 # Biology: Metabolism
