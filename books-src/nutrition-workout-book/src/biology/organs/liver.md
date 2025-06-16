@@ -37,7 +37,7 @@ Source: [NCBI](https://www.ncbi.nlm.nih.gov/books/NBK549820/#:~:text=However%2C%
 
 ### Bile acid production
 
-Bile acids is used to digest fats. Converted from cholesterol via an enzyme. 
+Bile acids is used to digest fats. Converted from **cholesterol** via an enzyme. 
 
 ### Cholesterol production
 
@@ -45,7 +45,7 @@ Has an enzyme HMG CoA reductase required for mevalonate pathway.
 
 ### Cholesterol elimination
 
-Some cholesterol is secreted into bile directly, which will get removed from the body.
+Some **cholesterol** is secreted into bile directly, which will get removed from the body.
 
 ### VLDL production
 
