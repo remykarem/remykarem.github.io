@@ -2,7 +2,7 @@
 
 Very Low-Density Lipoprotein
 
-Precursor: ApoB-100
+Key structural protein: ApoB-100
 
 Lipoprotein lipase (LPL) on capillaries, especially in adipose and muscle tissue, hydrolyse the triglycerides. THe fatty acids go into tissues for storage or energy.
 
