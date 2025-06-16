@@ -6,6 +6,8 @@ Can lower LDL and raise HDL
 
 Fatty fish (salmon, mackerel, trout), walnuts, tofu
 
+Polyunsaturated fatty acids inhibit HMG-CoA reductase activity[^hmgcoareductase]
+
 ~~~admonish tip title="Omega-k"
 Omega-k refers to the position of the first double bond at the kth carbon.
 ~~~
@@ -34,3 +36,5 @@ Foods high in PUFA
     * Flaxseeds (23g)
     * Chiaseeds (18g)
     * Tofu (2g)
+
+[^hmgcoareductase]: [Essential fatty acids as possible mediators of the actions of statins](https://pubmed.ncbi.nlm.nih.gov/11487306/#:~:text=Similarly%20to%20statins%2C%20polyunsaturated%20fatty,inhibit%20HMG%2DCoA%20reductase%20activity.)
