@@ -17,7 +17,8 @@ Every kg of muscle at rest burns 10-15 kcal per day[^1].
 
 ### Insulin pathway
 
-...
+* Increase in **glucose** uptake — due to increase in GLUT4 transporter activity
+* Increase in **amino acid** uptake — due to increase in amino acid transporter activity
 
 ### Muscle contraction
 
