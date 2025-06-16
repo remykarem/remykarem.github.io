@@ -2,6 +2,8 @@
 
 High-Density Lipoprotein
 
+Precursor: ApoA1
+
 * The ApoA1
   * Binds to ABCA1 transporter of cells, which will trigger movement of cholesterol from cell to HDL
   * Activates LCAT, which converts cholesterol into cholesteryl ester (more hydrophobic), which will result move the cholesterol to the core of the HDL particle
