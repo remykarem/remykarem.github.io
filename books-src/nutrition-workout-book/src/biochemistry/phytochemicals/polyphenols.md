@@ -14,17 +14,21 @@ Types:
 Properties:
 * Antioxidant
 
-Examples:
+## Flavonoids
 
 | Polyphenol       | Class               | Main Food Sources                    |
 | ---------------- | ------------------- | ------------------------------------------ |
-| Chlorogenic acid | Phenolic acid       | **Coffee**, apples, pears, **blueberries** |
+| Anthocyanins     | Flavonoid               | **Berries**, red cabbage, black rice, grapes; found in many red, purple and blue |
 | Catechins (EGCG) | Flavanol            | **Green tea**, cocoa, apples                 |
+| Kaempferol       | Flavonol                | Kale, spinach, **tea**, broccoli,  **honey**             |
+
+## Phenolic acid
+
+| Polyphenol       | Class               | Main Food Sources                    |
+| ---------------- | ------------------- | ------------------------------------------ |
+| Curcumin         | Curcuminoid             | **Turmeric**                                 |
+| Chlorogenic acid | Phenolic acid       | **Coffee**, apples, pears, **blueberries** |
 | Quercetin        | Flavonol                | Onions, apples, **berries**, **leafy greens**, **honey**    |
 | Resveratrol      | Stilbene                | Red wine, grapes, peanuts                |
 | Ellagic acid     | Phenolic acid           | **Strawberries**, **raspberries**, pomegranates  |
-| Curcumin         | Curcuminoid             | **Turmeric**                                 |
-| Anthocyanins     | Flavonoid               | **Berries**, red cabbage, black rice, grapes; found in many red, purple and blue |
-| Hesperidin       | Flavanone               | Citrus fruits (especially oranges)       |
-| Kaempferol       | Flavonol                | Kale, spinach, **tea**, broccoli,  **honey**             |
 | Luteolin         | Flavone                 | Parsley, thyme, celery, green peppers, **honey**    |
