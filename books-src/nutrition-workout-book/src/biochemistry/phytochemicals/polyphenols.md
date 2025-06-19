@@ -1,5 +1,10 @@
 # Polyphenols
 
+![Example of a polyphenol](https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Tannic_acid.svg/580px-Tannic_acid.svg.png)
+
+Characteristics:
+* Multiple "benzene"-ish
+
 Types:
 * Flavonoids
 * Phenolic acids
