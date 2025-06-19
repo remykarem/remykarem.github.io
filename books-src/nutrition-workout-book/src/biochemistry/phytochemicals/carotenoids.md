@@ -9,3 +9,11 @@ Characteristics:
 
 Properties:
 * Anti-oxidant
+
+| Carotenoid | Examples                                 |
+| -------------- | -------------------------------------------- |
+| β-Carotene   | Carrots, sweet potatoes, spinach, kale       |
+| α-Carotene     | Carrots, pumpkin, winter squash              |
+| Lutein         | Kale, spinach, corn, **egg yolk**                |
+| Zeaxanthin     | Corn, orange peppers, **egg yolk**, goji berries |
+| Lycopene       | Tomatoes, watermelon, pink grapefruit        |
