@@ -5,6 +5,7 @@ aka MUFA
 "Mono" refers to one single double bond. Low melting point. Triglycerides containing 1 unsaturated fatty acid, which is almost always oleic acid.
 
 ![Oleic acid](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Oleic-acid-skeletal.svg/500px-Oleic-acid-skeletal.svg.png)
+![Oleic acid](https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Oleic-acid-3D-vdW.png/500px-Oleic-acid-3D-vdW.png)
 
 15-20% of daily calories (or 33-44g)
 
