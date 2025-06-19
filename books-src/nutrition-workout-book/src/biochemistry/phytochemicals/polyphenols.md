@@ -20,8 +20,9 @@ Most abundant and widely studied.
 
 * Anthocyanins — **berries**, red cabbage, black rice, grapes; found in many red, purple and blue
 * Flavanones — **citrus fruits**
-* Flavan-3-ols — **tea**, cocoa, apples
-* Flavonols — kale, spinach, **tea**, broccoli, **honey**, **leafy greens**
+* Flavonols 
+  * Catechin — **green tea**, cocoa, apples
+  * Quercetin — kale, spinach, broccoli, **honey**, **leafy greens**, **berries**
 * Isoflavones — **soybeans**
 
 ## Phenolic acid
