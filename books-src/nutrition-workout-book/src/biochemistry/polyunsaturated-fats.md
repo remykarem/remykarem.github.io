@@ -1,5 +1,8 @@
 # Polyunsaturated fats
 
+![ALA](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ALAnumbering.svg/500px-ALAnumbering.svg.png)
+![ALA](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Linolenic-acid-3D-vdW.png/500px-Linolenic-acid-3D-vdW.png)
+
 "Poly" refers to the multiple double bonds.
 
 Can lower LDL and raise HDL
