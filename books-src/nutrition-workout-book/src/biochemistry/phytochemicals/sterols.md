@@ -1,6 +1,4 @@
-# Sterols
-
-aka phytosterols
+# Phytosterols
 
 Functions:
 * Block the absorption of cholesterol in the human gut
