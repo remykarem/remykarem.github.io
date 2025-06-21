@@ -102,6 +102,7 @@
 - [Vitamins]()
   - [Vitamin A](./biochemistry/vitamins/vitamin-a.md)
   - [Vitamin B]()
+    - [Vitamin B3 (Niacinamide)](./biochemistry/vitamins/vitamin-b3.md)
     - [Vitamin B7 (Biotin)](./biochemistry/vitamins/vitamin-b7.md)
   - [Vitamin C](./biochemistry/vitamins/vitamin-c.md)
   - [Vitamin D](./biochemistry/vitamins/vitamin-d.md)
@@ -111,7 +112,7 @@
   - [Polyphenols](./biochemistry/phytochemicals/polyphenols.md)
   - [Carotenoids](./biochemistry/phytochemicals/carotenoids.md)
   - [Terpenoids]()
-  - [Sterols](./biochemistry/phytochemicals/sterols.md)
+  - [Phytosterols](./biochemistry/phytochemicals/sterols.md)
 - [Purines](./biochemistry/purines.md)
 - [Minerals]()
   - [Potassium]()
@@ -172,10 +173,9 @@
     - [Decrease in blood glucose]()
     - [Lactate buildup ]()
 - [Neural signals]()
-    - [Muscle tension]()
+    - [Muscle contraction, tension](./neural-signals/muscle-contraction.md)
     - [Blood pressure]()
     - [Heart rate]()
-    - [Muscle contraction]()
 - [Sleep](./biology/stimuli/sleep.md)
 
 # Biology: Hormones
