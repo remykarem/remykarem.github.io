@@ -152,6 +152,10 @@
 
 # Medicine: Conditions
 
+- [Skin]()
+  - [Whitehead / blackhead](./medical-conditions/skin/whitehead-blackhead.md)
+  - [Pimple](./medical-conditions/skin/pimple.md)
+  - [Acne](./medical-conditions/skin/acne.md)
 - [Diabetes]()
   - [Early insulin resistance]()
   - [Type I]()
