@@ -132,6 +132,12 @@
 - [Glycerol]()
 - [Caffeine](./biochemistry/caffeine.md)
 
+# Skincare
+
+- [Humectants]()
+- [Occlusives]()
+- [Emollients]()
+
 ---
 
 # Medicine: Drugs
