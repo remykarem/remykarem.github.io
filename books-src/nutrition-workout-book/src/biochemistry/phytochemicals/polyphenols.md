@@ -29,6 +29,10 @@ Most abundant and widely studied.
 
 Examples: **berries**, **coffee**, **tea**
 
+* Gingerol — **ginger**
+* Shogaol — **ginger**
+
+
 ## Stillbene
 
 * Resveratrol  — red wine, grapes, peanuts
