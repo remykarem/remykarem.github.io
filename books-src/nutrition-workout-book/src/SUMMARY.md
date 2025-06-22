@@ -139,7 +139,7 @@
 - [BHA](./chemistry/bha.md)
 - [Humectants](./chemistry/humectants.md)
 - [Occlusives]()
-- [Emollients]()
+- [Ceramides](./chemistry/ceramides.md)
 
 ---
 
