@@ -18,10 +18,14 @@ Properties of salicylic acid:
   * **enhances absorption** of moisturiser
 * anti-inflammatory
 
-~~~admonish tip title="Exfoliant properties"
+~~~admonish tip title="Skincare property: exfoliant"
 BHA is commonly used as an exfoliant because of these properties.
 
 Salicylic acid is the most commonly used BHA.
+~~~
+
+~~~admonish tip title="Skincare property: clears pores"
+Because of its lipophilic property to penetrate _deep_ into pores. 
 ~~~
 
 Glossary:
