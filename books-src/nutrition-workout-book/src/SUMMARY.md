@@ -135,6 +135,8 @@
 
 # Skincare
 
+- [AHA]()
+- [BHA](./chemistry/bha.md)
 - [Humectants]()
 - [Occlusives]()
 - [Emollients]()
