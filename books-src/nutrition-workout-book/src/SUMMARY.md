@@ -135,6 +135,7 @@
 
 # Skincare
 
+- [Overview](./skincare/index.md)
 - [AHA]()
 - [BHA](./chemistry/bha.md)
 - [Humectants](./chemistry/humectants.md)
@@ -213,11 +214,11 @@
 
 - [Muscles](./biology/organs/muscles.md)
 - [Liver](./biology/organs/liver.md)
+- [Skin](./biology/organs/skin.md)
 - [Pancreas](./biology/organs/pancreas.md)
 - [Fat](./biology/organs/fat.md)
 - [Kidney](./biology/organs/kidney.md)
 - [Heart](./biology/organs/heart.md)
-- [Skin](./biology/organs/skin.md)
 - [Brain](./biology/organs/brain.md)
 
 # Biology: Metabolism
