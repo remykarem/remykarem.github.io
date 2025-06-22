@@ -6,19 +6,21 @@ beta-hydroxy acid
 
 eg. salicylic acid
 
-Properties of salicylic acid
+Properties of salicylic acid:
+* mildly acidic
+  * **denatures proteins** in corneodesmosomes 
+  * **denatures keratin**
 * oil-soluble
   * **penetrates deep** into pores
   * **dissolves sebum**
-  * breaks down intercellular lipids that hold dead skin cells (corneocytes) together
-* mildly acidic
-  * **denatures proteins** in corneodesmosomes 
-  * denatures keratin proteins
-* anti-inflammatory (salicylic acid)
+  * breaks down intercellular lipids that hold corneocytes together
 * mild humectant
   * **enhances absorption** of moisturiser
+* anti-inflammatory
 
-Indirectly target desmosomes.
+Glossary:
+* desmosomes — mechanical adhesion between living keratinocytes
 * corneodesmosomes — adhesion between corneocytes
 * keratin — fibrous protein
 * keratinocytes — produces keratin
+* corneocytes — dead skin cells
