@@ -11,8 +11,8 @@ Properties of salicylic acid:
   * **denatures proteins** in corneodesmosomes 
   * **denatures keratin**
 * oil-soluble
-  * **penetrates deep** into pores
   * **dissolves sebum**
+  * **penetrates deep** into pores and lipid-rich areas
   * breaks down intercellular lipids that hold corneocytes together
 * mild humectant
   * **enhances absorption** of moisturiser
