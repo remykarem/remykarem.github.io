@@ -10,6 +10,10 @@ Hyaluronan:
 Hyaluronic acid:
 * Has multiple hydrophilic groups like hydroxyl (-OH), carboxyl (-COOH) and amide (-CONH2) groups
 
+~~~admonish warning title="Skincare property: moisturise"
+Retains moisture
+~~~
+
 ~~~admonish warning title="May dry the skin!"
 If:
 * No occlussive
