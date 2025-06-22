@@ -137,7 +137,7 @@
 
 - [AHA]()
 - [BHA](./chemistry/bha.md)
-- [Humectants]()
+- [Humectants](./chemistry/humectants.md)
 - [Occlusives]()
 - [Emollients]()
 
