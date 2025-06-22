@@ -18,6 +18,12 @@ Properties of salicylic acid:
   * **enhances absorption** of moisturiser
 * anti-inflammatory
 
+~~~admonish tip title="Exfoliant properties"
+BHA is commonly used as an exfoliant because of these properties.
+
+Salicylic acid is the most commonly used BHA.
+~~~
+
 Glossary:
 * desmosomes — mechanical adhesion between living keratinocytes
 * corneodesmosomes — adhesion between corneocytes
