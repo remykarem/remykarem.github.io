@@ -1,6 +1,6 @@
 # Skincare
 
-| Layer | BHA | Moisturizer | Retinol | Ceramides | Occlusives |
+| Layer | BHA | Humectants | Retinoids | Ceramides | Occlusives |
 | --- | --- | --- | --- | --- | --- |
 | Pores | ✅ | ❌ | ❌ | ❌ | ❌ |
 | Epidermis: Stratum corneum  | ✅ | x | ❌ (Passes through) | ✅ | ✅ |
