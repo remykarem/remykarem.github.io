@@ -19,11 +19,17 @@ Omega-k refers to the position of the first double bond at the kth carbon.
 
 ### Oxidation
 
+PUFA + O2 -> Oxidised PUFA + lipid peroxides
+
 PUFAs are sensitive to heat, light, and oxygen.
 
 ### Polymerisation
 
+Oxidised PUFA -> Polymer
+
 ### Isomerisation
+
+Cis PUFA -> Trans PUFA
 
 ### Hydrolysis
 
