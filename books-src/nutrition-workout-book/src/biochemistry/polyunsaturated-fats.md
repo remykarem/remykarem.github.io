@@ -15,9 +15,22 @@ Polyunsaturated fatty acids inhibit HMG-CoA reductase activity[^hmgcoareductase]
 Omega-k refers to the position of the first double bond at the kth carbon.
 ~~~
 
+## Chemical processes
+
+### Oxidation
+
+PUFAs are sensitive to heat, light, and oxygen.
+
+### Polymerisation
+
+### Isomerisation
+
+### Hydrolysis
+
+
 ## Common PUFAs
 
-* Omega-3
+* Omega-3 — 3-6 double bonds
 
     * ALA (plant-based)
     * DHA (animal-based)
@@ -25,7 +38,7 @@ Omega-k refers to the position of the first double bond at the kth carbon.
 
 * Omega-6
 
-    * Linoleic acid
+    * Linoleic acid — 2 double bonds
 
 ## Top foods
 
@@ -38,6 +51,10 @@ Omega-k refers to the position of the first double bond at the kth carbon.
     * Flaxseeds (29g) — mostly linoleic acid
     * Sunflower seeds (23g) — mostly linoleic acid
     * Tofu (2g)
+* Oils — linoleic acid
+  * **Sunflower oil**
+  * **Corn oil**
+  * **other vegetable oils**
 * Animals
     * Salmon (2g) — mostly EPA/DHA
     * Mackerel (2g) — mostly EPA/DHA
