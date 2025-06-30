@@ -8,4 +8,4 @@ Examples of each nut and what they're rich in
 * Raisins — Natural sugar
 * Figs — Natural sugar
 * Walnuts — polyunsaturated fat (Omega-3 ALA)
-* Macadamia — Fats, calorie dense
+* Macadamia — Monounsaturated fats (high), calorie dense
