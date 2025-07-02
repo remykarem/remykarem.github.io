@@ -17,3 +17,9 @@ Why is refining oils not so great?
 * May contain **oxidised PUFAs**
 * Strips natural nutrients
 * May contain residual solvents
+
+~~~admonish warning
+10 minutes of deep frying reduces concentration of linoleic acid by 20%, indicating heavy oxidation.
+
+In reused frying oils, oxidation products can rise by 200–300% compared to fresh oil.
+~~~
