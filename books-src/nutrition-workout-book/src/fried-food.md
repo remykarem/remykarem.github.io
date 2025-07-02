@@ -6,11 +6,11 @@ Why is fried food so bad?
 * **Unhealthy fats** — refining oils
 
 How is oil refined?
-* Extract (high heat)
+* Extract (high heat, oxygen)
 * Degum (?)
 * Neutralise
 * Bleach — to remove colour
-* Deodorise
+* Deodorise — high heat
 * Hydrogenate — increase shelf life
 
 Why is refining oils not so great?
