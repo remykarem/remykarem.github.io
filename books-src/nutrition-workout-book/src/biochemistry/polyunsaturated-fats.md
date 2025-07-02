@@ -45,6 +45,7 @@ Cis PUFA -> Trans PUFA
 
 ### Hydrolysis
 
+PUFA + water + heat -> FFAs + glycerol
 
 ## Common PUFAs
 
