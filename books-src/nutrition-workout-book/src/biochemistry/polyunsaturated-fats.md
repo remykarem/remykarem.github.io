@@ -19,9 +19,11 @@ Omega-k refers to the position of the first double bond at the kth carbon.
 
 ### Oxidation
 
+PUFAs are sensitive to heat, light, and oxygen.
+
 PUFA + O2 -> Oxidised PUFA + lipid peroxides
 
-PUFAs are sensitive to heat, light, and oxygen.
+Oxidized PUFAs contain harmful lipid peroxides, aldehydes (like 4-HNE, MDA), and free radicals.
 
 ### Polymerisation
 
