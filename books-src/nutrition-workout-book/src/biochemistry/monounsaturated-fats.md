@@ -11,6 +11,12 @@ aka MUFA
 
 Can lower LDL and raise HDL
 
+## Chemical reactions
+
+### Oxidation
+
+More stable at high heat compared to PUFA.
+
 ## Common MUFAs
 
 * Oleic acid — Omega-9
