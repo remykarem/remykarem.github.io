@@ -26,7 +26,9 @@ PUFA + O2 -> Oxidised PUFA + lipid peroxides
 Oxidized PUFAs contain harmful lipid peroxides, aldehydes (like 4-HNE, MDA), and free radicals.
 
 ~~~admonish warning title= "Insulin resistance"
-Lipid peroxides can impair insulin pathways in muscle and liver cells. 
+Lipid peroxides can generate ROS upon degradation.
+
+ROS impairs insulin pathways in muscle and liver cells. 
 ~~~
 
 ~~~admonish warning title="Genotoxic, cytotoxic"
