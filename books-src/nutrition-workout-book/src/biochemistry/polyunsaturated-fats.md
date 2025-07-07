@@ -25,6 +25,10 @@ PUFA + O2 -> Oxidised PUFA + lipid peroxides
 
 Oxidized PUFAs contain harmful lipid peroxides, aldehydes (like 4-HNE, MDA), and free radicals.
 
+~~~admonish tip title="Vitamin E in foods"
+Vitamin E, found in almonds and walnuts etc. acts as a potent antioxidant that protect the PUFA from oxidation.
+~~~
+
 ~~~admonish warning title= "Insulin resistance"
 Lipid peroxides can generate ROS upon degradation.
 
@@ -65,6 +69,7 @@ PUFA + water + heat -> FFAs + glycerol
     * **Walnuts** (47g) — mostly ALA
     * Pecans (21g) — mostly linoleic acid
     * **Almonds** (12g) — mostly linoleic acid
+
 * Seeds
     * **Chia seeds** (31g) — mostly ALA
     * Flaxseeds (29g) — mostly linoleic acid
