@@ -23,6 +23,7 @@
 - [Good sleep]()
 - [Foods that make you full]()
 - [Fried food](./fried-food.md)
+- [Grilling vs frying](./grilling-vs-frying.md)
 
 ---
 

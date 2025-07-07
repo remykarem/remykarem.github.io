@@ -39,6 +39,7 @@ More stable at high heat compared to PUFA.
 * Oils
     * **Olive oil** (75g) — mostly oleic acid
     * Sunflower oil (75g)
+    * **Canola oil** — mostly monounsaturated fats
 * Fruits
     * **Avocado** (10g) — mostly oleic acid
 * Seeds
