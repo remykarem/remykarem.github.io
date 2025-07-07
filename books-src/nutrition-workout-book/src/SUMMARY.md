@@ -22,7 +22,7 @@
 - [Increase metabolism]()
 - [Good sleep]()
 - [Foods that make you full]()
-- [Fried food]()
+- [Fried food](./fried-food.md)
 
 ---
 
