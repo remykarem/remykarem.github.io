@@ -3,7 +3,7 @@
 Why is fried food so bad?
 
 * **High calories** — Because of oil absorption especially with batter
-* **Unhealthy fats** — refining oils
+* **Unhealthy fats** — _refined_ oils
 
 How is oil refined?
 * Extract (high heat, oxygen)
