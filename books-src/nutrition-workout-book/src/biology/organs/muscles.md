@@ -26,7 +26,13 @@ Every kg of muscle at rest burns 10-15 kcal per day[^1].
 
 ### Muscle contraction
 
-Muscle contraction trigger a signal that causes GLUT4 transporters to move to the surface of the cell (to take in glucose) _without requiring insulin_.
+The action of muscle fibers shortening (concentric), lengthening (eccentric, highest tension, eg. lowering weight) or static (isometric).
+
+Hormones: 
+* testosterone — particularly when combined with volume or mechanical overload
+* GH, IGF-1 — activated by repeated or intense contractions
+
+Muscle contraction triggers a signal that causes GLUT4 transporters to move to the surface of the cell (to take in glucose) _without requiring insulin_.
 
 ### Fat oxidation
 
