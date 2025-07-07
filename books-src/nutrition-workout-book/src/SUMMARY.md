@@ -140,11 +140,17 @@
 # Skincare
 
 - [Overview](./skincare/index.md)
-- [AHA]()
-- [BHA](./chemistry/bha.md)
-- [Humectants](./chemistry/humectants.md)
-- [Occlusives]()
-- [Ceramides](./chemistry/ceramides.md)
+- [Active ingredients]()
+  - [AHA]()
+  - [BHA](./chemistry/bha.md)
+  - [Humectants](./chemistry/humectants.md)
+  - [Occlusives]()
+  - [Ceramides](./chemistry/ceramides.md)
+  - [Retinoids](./chemistry/retinoids.md)
+- [Formulations]()
+  - [Toner]()
+  - [Serum]()
+  - [Moisturiser]()
 
 ---
 
