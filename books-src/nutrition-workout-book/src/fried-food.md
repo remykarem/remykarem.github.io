@@ -2,8 +2,8 @@
 
 Why is fried food so bad?
 
+* **Fat oxidation** — _refined_ oils
 * **High calories** — Because of oil absorption especially with batter
-* **Unhealthy fats** — _refined_ oils
 
 How is oil refined?
 * Extract (high heat, oxygen)
@@ -15,7 +15,7 @@ How is oil refined?
 
 Why is refining oils not so great?
 * May contain **oxidised PUFAs**
-* Strips natural nutrients
+* Strips natural **antioxidants** like Vitamin E
 * May contain residual solvents
 
 ~~~admonish warning
