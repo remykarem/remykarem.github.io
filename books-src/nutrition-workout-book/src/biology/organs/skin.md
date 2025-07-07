@@ -6,15 +6,23 @@
 
 ## Structure & function
 
-* Epidermis
-* Dermis
-  * Blood vessels
-  * Hair follicles
-  * Sweat glands
-  * Nerves
-  * Connective tissue
-* Hypodermis
+### Epidermis
+
+* Melanocytes — produces melanin (triggered by UV radiation, inflammation etc.). Melanin is needed for UV protection and has antioxidant effect
+
+### Dermis
+* Blood vessels
+* Hair follicles
+* Sweat glands
+* Nerves
+* Connective tissue
+* Fibroblasts — produces collagen
+* Collagen — maintains firmness, provides elasticity, keeps skin hydrated and plump
+
+### Hypodermis
   * Fat cells
   * Connective tissue
+
+### Below the skin
 
 Below the skin is the muscle tissue.

@@ -2,16 +2,23 @@
 
 A class of compounds derived from Vitamin A.
 
-* Stimulates **collagen** production — binds to retinoic acid receptors in skin cells and increase type I collagen synthesis
-* Reduces enzymes called MMPS that degrade collagen
-* Reduce melanin synthesis
+* Stimulates **collagen** production — binds to retinoic acid receptors in skin cells
+    * Turn on genes involved in collagen synthesis
+    * Inhibit enzymes called MMPS that degrade collagen
+* May reduce melanin synthesis
+
+    ~~~admonish warning
+    This will increase skin's UV sensitivity.
+    ~~~
 
 Active forms:
 * **Retinoic acid**
 
     Retinyl palmitate -> Retinol -> Retinaldehyde (retinal) -> Retinoic acid
 
-* **Adapelene**
+* **Adapelene** — not a direct Vitamin A analog
+
+    Binds to fewer receptors than retinoic acid does
 
 Examples:
 | Ingredient        | Potency         | Rx/OTC | Best For                         | Remarks |
