@@ -25,6 +25,7 @@
 - [Fried food](./fried-food.md)
 - [Grilling vs frying](./grilling-vs-frying.md)
 - [Smoking](./smoking.md)
+- [Sweating](./sweating.md)
 
 ---
 
