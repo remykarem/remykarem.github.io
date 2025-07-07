@@ -11,7 +11,7 @@
 
 ---
 
-# Strategies
+# Notes
 
 - [Calorie deficit]()
 - [Fasting]()
@@ -24,6 +24,7 @@
 - [Foods that make you full]()
 - [Fried food](./fried-food.md)
 - [Grilling vs frying](./grilling-vs-frying.md)
+- [Smoking](./smoking.md)
 
 ---
 
@@ -172,6 +173,10 @@
 - [High blood cholesterol](./medical-conditions/high-blood-cholesterol.md)
 - [Fatty liver disease](./medical-conditions/fatty-liver-disease.md)
 - [Gout](./medical-conditions/gout.md)
+
+# Medicine: State
+
+- [Oxidative stress](./states/oxidative-stress.md)
 
 ---
 
