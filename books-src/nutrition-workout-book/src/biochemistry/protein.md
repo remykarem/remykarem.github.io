@@ -21,6 +21,8 @@ Muscle growth
     * Sunflower seeds (21g)
     * Flaxseeds (18g)
     * **Chia seeds** (17g)
+* Dairy
+    * **Cottage cheese** (12g)
 * Vegetables
     * Edamame (8g)
     * Spinach (5g)
