@@ -10,6 +10,7 @@ Muscle growth
 
 * Meats
     * **Chicken breast** (30g)
+    * **Raw salmon** (20g)
 * Nuts
     * Peanuts (26g)
     * **Almonds** (20g)
@@ -25,5 +26,7 @@ Muscle growth
     * Spinach (5g)
     * Kale (4g)
 * Legumes
-    * **Soybeans** (17g)
+    * Tempeh (19g)
+    * Soybeans (17g)
+    * **Tau Kwa** (13g)
     * Lentils (10g)
