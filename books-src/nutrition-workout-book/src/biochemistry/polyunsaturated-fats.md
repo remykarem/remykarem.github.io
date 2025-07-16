@@ -77,8 +77,11 @@ PUFA + water + heat -> FFAs + glycerol
   * **Canola oil** — mostly 
   * **other vegetable oils**
 * Animals
+    * Mackerel (4g) — mostly EPA/DHA
     * **Salmon** (2g) — mostly EPA/DHA
-    * Mackerel (2g) — mostly EPA/DHA
+    * Herring (2g) — mostly EPA/DHA
+    * Tuna (1.2g) — mostly EPA/DHA
+    * Oysters (0.6g) — mostly EPA/DHA
     * Egg (1g) — mostly linoleic acid
 
 ## Biology
