@@ -72,14 +72,14 @@ PUFA + water + heat -> FFAs + glycerol
     * **Chia seeds** (31g) — mostly ALA
     * Flaxseeds (29g) — mostly linoleic acid
     * Sunflower seeds (23g) — mostly linoleic acid
-    * Tofu (2g)
+    * **Tofu** (2g)
 * Oils — linoleic acid
   * **Sunflower oil** (230°C)
   * **Corn oil**
   * **Canola oil** — mostly 
   * **other vegetable oils**
 * Animals
-    * Salmon (2g) — mostly EPA/DHA
+    * **Salmon** (2g) — mostly EPA/DHA
     * Mackerel (2g) — mostly EPA/DHA
     * Egg (1g) — mostly linoleic acid
 
