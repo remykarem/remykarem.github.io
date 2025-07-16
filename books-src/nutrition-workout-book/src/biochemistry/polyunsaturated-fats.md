@@ -85,4 +85,10 @@ PUFA + water + heat -> FFAs + glycerol
     * Mackerel (2g) — mostly EPA/DHA
     * Egg (1g) — mostly linoleic acid
 
+## Biology
+
+PUFAs are essential fatty acids — the body can't make them on its own.
+
+Found in high amounts in the brain.
+
 [^hmgcoareductase]: [Essential fatty acids as possible mediators of the actions of statins](https://pubmed.ncbi.nlm.nih.gov/11487306/#:~:text=Similarly%20to%20statins%2C%20polyunsaturated%20fatty,inhibit%20HMG%2DCoA%20reductase%20activity.)
