@@ -7,10 +7,6 @@ PUFA
 
 "Poly" refers to the multiple double bonds.
 
-Can lower LDL and raise HDL
-
-Polyunsaturated fatty acids inhibit HMG-CoA reductase activity[^hmgcoareductase]
-
 ~~~admonish tip title="Omega-k"
 Omega-k refers to the position of the first double bond at the kth carbon.
 ~~~
@@ -90,5 +86,10 @@ PUFA + water + heat -> FFAs + glycerol
 PUFAs are essential fatty acids — the body can't make them on its own.
 
 Found in high amounts in the brain.
+
+Can lower LDL and raise HDL
+
+Polyunsaturated fatty acids inhibit HMG-CoA reductase activity[^hmgcoareductase]
+
 
 [^hmgcoareductase]: [Essential fatty acids as possible mediators of the actions of statins](https://pubmed.ncbi.nlm.nih.gov/11487306/#:~:text=Similarly%20to%20statins%2C%20polyunsaturated%20fatty,inhibit%20HMG%2DCoA%20reductase%20activity.)
