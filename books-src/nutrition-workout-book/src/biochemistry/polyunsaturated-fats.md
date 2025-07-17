@@ -71,6 +71,8 @@ PUFA + water + heat -> FFAs + glycerol
     * Flaxseeds (29g) — mostly linoleic acid
     * Sunflower seeds (23g) — mostly linoleic acid
     * **Tofu** (2g)
+* Beans
+    * **Soybeans** (0.6g) — ALA
 * Oils — linoleic acid
   * **Sunflower oil** (230°C)
   * **Corn oil**
