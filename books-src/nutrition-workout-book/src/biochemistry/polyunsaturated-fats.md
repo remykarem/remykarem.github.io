@@ -86,6 +86,16 @@ PUFA + water + heat -> FFAs + glycerol
     * Oysters (0.6g) — mostly EPA/DHA
     * Egg (1g) — mostly linoleic acid
 
+~~~admonish warning title="Imbalance in Omega-6:Omega-3"
+Modern diets shift the balanc of Omega-6:Omega-3 from
+
+~4:1
+
+to
+
+20:1
+~~~
+
 ## Biology
 
 PUFAs are essential fatty acids — the body can't make them on its own.
@@ -99,10 +109,5 @@ Roles
 
 Found in high amounts in the brain.
 
-Pathways
-* **HMG-CoA reductase** — PUFAs inhibit HMG CoA reductase[^hmgcoareductase]; reduce cholesterol production
-* **SREBP & LXR** — more LDL receptors; lower LDL
+See pathways in [liver](../biology/organs/liver.md).
 
-
-
-[^hmgcoareductase]: [Essential fatty acids as possible mediators of the actions of statins](https://pubmed.ncbi.nlm.nih.gov/11487306/#:~:text=Similarly%20to%20statins%2C%20polyunsaturated%20fatty,inhibit%20HMG%2DCoA%20reductase%20activity.)
