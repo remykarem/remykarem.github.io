@@ -90,11 +90,19 @@ PUFA + water + heat -> FFAs + glycerol
 
 PUFAs are essential fatty acids — the body can't make them on its own.
 
+Roles
+* **Cell membrane structure**
+* **Precursors to signalling molecules**
+    * Omega-3 — anti-inflammatory or resolving molecules
+    * Omega-6 — pro-inflammatory eicosanoids
+* Energy source
+
 Found in high amounts in the brain.
 
-Can lower LDL and raise HDL
+Pathways
+* **HMG-CoA reductase** — PUFAs inhibit HMG CoA reductase[^hmgcoareductase]; reduce cholesterol production
+* **SREBP & LXR** — more LDL receptors; lower LDL
 
-Polyunsaturated fatty acids inhibit HMG-CoA reductase activity[^hmgcoareductase]
 
 
 [^hmgcoareductase]: [Essential fatty acids as possible mediators of the actions of statins](https://pubmed.ncbi.nlm.nih.gov/11487306/#:~:text=Similarly%20to%20statins%2C%20polyunsaturated%20fatty,inhibit%20HMG%2DCoA%20reductase%20activity.)

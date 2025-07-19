@@ -68,12 +68,20 @@ HDL production increases
 
 ---
 
-## PPAR-α
+## Pathways
 
-Peroxisome Proliferator-Activated Receptor Alpha; a nuclear receptor in liver cells
+### SREBP-2
 
-PPAR-α increases the transcription of genes involved in lipid metabolism, including apoA-I.
+Transcription factor
 
-~~~admonish tip title="Ligands"
-MUFAs & PUFAs can bind to PPAR-α; activation is stronger with PUFAs.
-~~~
+* Suppressed by PUFAs
+* Increase LDL Receptor expression
+* which promotes clearance of LDL from the blood
+
+### PPAR-α
+
+Transcription factor
+
+* Activated by **MUFAs** & **PUFAs**, among other ligands
+* Increases the transcription of genes involved in lipid metabolism, including apoA-I.
+* Leads to **reduced VLDL secretion**, among others

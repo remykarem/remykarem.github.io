@@ -15,6 +15,7 @@ Muscle growth
     * Peanuts (26g)
     * **Almonds** (20g)
     * Pistachios (20g)
+    * Pinenuts (16g)
 * Seeds
     * Hemp seeds (32g)
     * Pumpkin seeds (30g)
