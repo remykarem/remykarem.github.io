@@ -55,4 +55,4 @@ Roles
     * Omega-6 — pro-inflammatory eicosanoids
 * Energy source
 
-Can lower LDL and raise HDL
+See pathways in liver.

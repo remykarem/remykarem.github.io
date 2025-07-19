@@ -78,6 +78,8 @@ Transcription factor
 * Increase LDL Receptor expression
 * which promotes clearance of LDL from the blood
 
+PUFAs & statins[^hmgcoareductase]
+
 ### PPAR-α
 
 Transcription factor
@@ -85,3 +87,5 @@ Transcription factor
 * Activated by **MUFAs** & **PUFAs**, among other ligands
 * Increases the transcription of genes involved in lipid metabolism, including apoA-I.
 * Leads to **reduced VLDL secretion**, among others
+
+[^hmgcoareductase]: [Essential fatty acids as possible mediators of the actions of statins](https://pubmed.ncbi.nlm.nih.gov/11487306/#:~:text=Similarly%20to%20statins%2C%20polyunsaturated%20fatty,inhibit%20HMG%2DCoA%20reductase%20activity.)

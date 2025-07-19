@@ -194,6 +194,11 @@
     - [Heart rate]()
 - [Sleep](./biology/stimuli/sleep.md)
 
+# Biology: Inflammation
+
+- [Inflammation](./biology/inflammation/index.md)
+- [Molecules](./biology/inflammation/molecules.md)
+
 # Biology: Hormones
 
 - [Insulin](./biology/hormones/insulin.md)
