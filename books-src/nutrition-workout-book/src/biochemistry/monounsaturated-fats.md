@@ -7,9 +7,6 @@ aka MUFA
 ![Oleic acid](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Oleic-acid-skeletal.svg/500px-Oleic-acid-skeletal.svg.png)
 ![Oleic acid](https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Oleic-acid-3D-vdW.png/500px-Oleic-acid-3D-vdW.png)
 
-15-20% of daily calories (or 33-44g)
-
-Can lower LDL and raise HDL
 
 ## Chemical reactions
 
@@ -29,6 +26,8 @@ More stable at high heat compared to PUFA.
 
 ## Top foods
 
+15-20% of daily calories (or 33-44g)
+
 * Nuts
     * Macadamia (60g) — mostly oleic acid and palmitoleic acid
     * Hazelnut (45g) — mostly oleic acid
@@ -46,3 +45,14 @@ More stable at high heat compared to PUFA.
     * **Chia seeds** (7g) — mostly oleic acid
     * Flax seeds (5g) — mostly oleic acid
     * Quinoa (2g) — mostly oleic acid
+
+## Biology
+
+Roles
+* **Cell membrane structure**
+* **Precursors to signalling molecules**
+    * Omega-3 — anti-inflammatory or resolving molecules
+    * Omega-6 — pro-inflammatory eicosanoids
+* Energy source
+
+Can lower LDL and raise HDL

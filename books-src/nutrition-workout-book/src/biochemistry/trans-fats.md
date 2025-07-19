@@ -2,6 +2,14 @@
 
 Mostly exist in processed foods
 
+## Top foods
+
+
+
+## Biology
+
+
+
 * **Reduces expressed of LDL receptors**
   1. Lowers the expression of LDL receptor genes in the liver
   2. Decrease in LDL receptors
