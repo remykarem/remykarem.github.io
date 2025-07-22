@@ -70,8 +70,6 @@
       - [Monounsaturated fats](./biochemistry/monounsaturated-fats.md)
       - [Polyunsaturated fats](./biochemistry/polyunsaturated-fats.md)
     - [Trans fats](./biochemistry/trans-fats.md)
-      - [Monounsaturated fats]()
-      - [Polyunsaturated fats]()
   - [Saturated fats](./biochemistry/saturated-fats.md)
 - [Protein](./biochemistry/protein.md)
     - [Amino acid](./biochemistry/amino-acid.md)
