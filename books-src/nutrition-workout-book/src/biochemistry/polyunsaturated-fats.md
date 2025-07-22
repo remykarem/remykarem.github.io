@@ -57,34 +57,34 @@ PUFA + water + heat -> FFAs + glycerol
 
 * Omega-6
 
-    * Linoleic acid — 2 double bonds
+    * LA (Linoleic acid) — 2 double bonds
 
 ## Top foods
 
 * Nuts
     * **Walnuts** (47g) — mostly ALA
-    * Pecans (21g) — mostly linoleic acid
-    * **Almonds** (12g) — mostly linoleic acid
+    * Pecans (21g) — mostly LA
+    * **Almonds** (12g) — mostly LA
 
 * Seeds
     * **Chia seeds** (31g) — mostly ALA
-    * Flaxseeds (29g) — mostly linoleic acid
-    * Sunflower seeds (23g) — mostly linoleic acid
+    * Flaxseeds (29g) — mostly LA
+    * Sunflower seeds (23g) — mostly LA
     * **Tofu** (2g)
 * Beans
     * **Soybeans** (0.6g) — ALA
-* Oils — linoleic acid
+* Oils — LA
   * **Sunflower oil** (230°C)
   * **Corn oil**
   * **Canola oil** — mostly 
   * **other vegetable oils**
 * Animals
-    * Mackerel (4g) — mostly EPA/DHA
+    * **Mackerel** (4g) — mostly EPA/DHA
     * **Salmon** (2g) — mostly EPA/DHA
     * Herring (2g) — mostly EPA/DHA
     * Tuna (1.2g) — mostly EPA/DHA
     * Oysters (0.6g) — mostly EPA/DHA
-    * Egg (1g) — mostly linoleic acid
+    * Egg (1g) — mostly LA
 
 ~~~admonish warning title="Imbalance in Omega-6:Omega-3"
 Modern diets shift the balanc of Omega-6:Omega-3 from
@@ -110,4 +110,3 @@ Roles
 Found in high amounts in the brain.
 
 See pathways in [liver](../biology/organs/liver.md).
-

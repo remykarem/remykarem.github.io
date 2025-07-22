@@ -29,7 +29,7 @@ More stable at high heat compared to PUFA.
 15-20% of daily calories (or 33-44g)
 
 * Nuts
-    * Macadamia (60g) — mostly oleic acid and palmitoleic acid
+    * **Macadamia** (60g) — mostly oleic acid and palmitoleic acid
     * Hazelnut (45g) — mostly oleic acid
     * **Almonds** (30g) — mostly oleic acid
     * Pistachios (24g) — mostly oleic acid
@@ -47,6 +47,8 @@ More stable at high heat compared to PUFA.
     * Quinoa (2g) — mostly oleic acid
 
 ## Biology
+
+Omega-7 & Omega-9 aren't essential fatty acids.
 
 Roles
 * **Cell membrane structure**
