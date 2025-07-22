@@ -39,26 +39,21 @@
 - [Blood sugar crash](./nutrition/blood-sugar-crash.md)
 - [Food types](./nutrition/food-types.md)
 - [Calorie density](./nutrition/calorie-density.md)
+- [Studies](./foods/studies.md)
+- [Measurements](./foods/measurements.md)
 
 ---
 
 # Foods
 
-- [Measurements](./foods/measurements.md)
 - [Superfoods](./foods/superfoods.md)
 - [Animals]()
 - [Fruits](./foods/fruits.md)
 - [Greens](./foods/vegetables.md)
-- [Grains]()
-  - [Rice]()
-  - [Oats](./foods/oats.md)
-  - [Wheat]()
-  - [Barley]()
+- [Grains](./foods/grains.md)
 - [Nuts](./foods/nuts.md)
 - [Oils](./foods/oils.md)
 - [Legumes]()
-  - [Peanuts]()
-- [Studies](./foods/studies.md)
 
 ---
 

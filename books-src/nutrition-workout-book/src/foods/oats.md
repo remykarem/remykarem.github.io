@@ -1,3 +1,0 @@
-# Oats
-
-Contains beta-glucan
