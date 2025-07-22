@@ -44,16 +44,21 @@
 
 ---
 
-# Foods
+# Foods / taxonomy
 
 - [Superfoods](./foods/superfoods.md)
 - [Animals]()
+- [Seafood](./foods/seafood.md)
 - [Fruits](./foods/fruits.md)
 - [Greens](./foods/vegetables.md)
 - [Grains](./foods/grains.md)
 - [Nuts](./foods/nuts.md)
+- [Beans](./foods/beans.md)
+- [Seeds](./foods/seeds.md)
 - [Oils](./foods/oils.md)
+- [Fungus](./foods/fungus.md)
 - [Legumes]()
+- [Others](./foods/others.md)
 
 ---
 
