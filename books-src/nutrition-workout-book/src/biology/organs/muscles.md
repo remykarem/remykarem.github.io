@@ -15,7 +15,7 @@ High activity of BCAT and BCKDH[^bcaa]
 
 ### Metabolism
 
-Every kg of muscle at rest burns 10-15 kcal per day[^1]. 
+10-15 kcal per kg per day (at rest)[^1]. 
 
 ### Insulin pathway
 
