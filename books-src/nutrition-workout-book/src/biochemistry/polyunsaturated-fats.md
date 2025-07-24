@@ -11,42 +11,6 @@ PUFA
 Omega-k refers to the position of the first double bond at the kth carbon.
 ~~~
 
-## Chemical processes
-
-### Oxidation
-
-PUFAs are sensitive to heat, light, and oxygen.
-
-PUFA + O2 -> Oxidised PUFA + lipid peroxides
-
-Oxidized PUFAs contain harmful lipid peroxides, aldehydes (like 4-HNE, MDA), and free radicals.
-
-~~~admonish tip title="Vitamin E in foods"
-Vitamin E, found in almonds and walnuts etc. acts as a potent antioxidant that protect the PUFA from oxidation.
-~~~
-
-~~~admonish warning title= "Insulin resistance"
-Lipid peroxides can generate ROS upon degradation.
-
-ROS impairs insulin pathways in muscle and liver cells. 
-~~~
-
-~~~admonish warning title="Genotoxic, cytotoxic"
-4-HNE and MDA can form adducts with DNA and proteins, which may lead to mutations, cell dysfunction, and even cancer in the long term .
-~~~
-
-### Polymerisation
-
-Oxidised PUFA -> Polymer
-
-### Isomerisation
-
-Cis PUFA -> Trans PUFA
-
-### Hydrolysis
-
-PUFA + water + heat -> FFAs + glycerol
-
 ## Common PUFAs
 
 * Omega-3 — 3-6 double bonds
