@@ -49,6 +49,8 @@ Omega-k refers to the position of the first double bond at the kth carbon.
     * Tuna (1.2g) — mostly EPA/DHA
     * Oysters (0.6g) — mostly EPA/DHA
     * Egg (1g) — mostly LA
+ 
+Source: [Omega 3 Fatty acid content in fish](https://seafood.oregonstate.edu/sites/agscid7/files/snic/omega-3-content-in-fish.pdf)
 
 ~~~admonish warning title="Imbalance in Omega-6:Omega-3"
 Modern diets shift the balanc of Omega-6:Omega-3 from
