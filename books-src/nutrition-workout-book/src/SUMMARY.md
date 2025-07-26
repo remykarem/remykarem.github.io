@@ -26,6 +26,7 @@
 - [Grilling vs frying](./grilling-vs-frying.md)
 - [Smoking](./smoking.md)
 - [Sweating](./sweating.md)
+- [The more energy you use, the more energy you have](./energy.md)
 
 ---
 
