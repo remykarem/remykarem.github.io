@@ -9,4 +9,4 @@
 
 Low Vitamin D is directly linked to testosterone[^lowtestosterone]
 
-[low testosterone]: @michaeldean2.0 ig 
+[lowtestosterone]: @michaeldean2.0 ig 
