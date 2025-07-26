@@ -6,6 +6,8 @@
 
 Heart rate zone
 
+LISS cardio — low intensity steady state
+
 ## Resistance training
 
 Lifting weights
