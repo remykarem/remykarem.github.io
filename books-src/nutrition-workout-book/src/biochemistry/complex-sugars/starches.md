@@ -27,3 +27,10 @@ Types:
       ~~~
       
     * RS4 — ...
+
+## Food sources
+
+* Grains
+  * White rice — GI 73
+  * Wheat
+  * Flour (wheat) — GI 83
