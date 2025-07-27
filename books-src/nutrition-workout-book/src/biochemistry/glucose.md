@@ -3,10 +3,12 @@
 ## Food sources
 
 * Grains
-  * White rice — high GI
+  * White rice — GI 73
+  * Wheat
+  * Flour (wheat) — GI 83
 * Starches
 * Fruits
-* Honey
+* Honey — GI 35-75
 
 ## Biology
 
