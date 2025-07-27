@@ -32,6 +32,7 @@ Types:
 
 * Grains
   * Brown rice — GI 60
-  * White rice — GI 73
+    * White rice — GI 73
   * Wheat
-  * Flour (wheat) — GI 83
+    * Flour (wheat) — GI 83
+    * Bread — GI 70
