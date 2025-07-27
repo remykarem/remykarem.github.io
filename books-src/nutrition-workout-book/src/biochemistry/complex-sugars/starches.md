@@ -30,6 +30,11 @@ Types:
 
 ## Food sources
 
+* Fruits
+  * Banana — GI 30-35
+* Tubers
+  * Potato —
+  * Sweet potato
 * Grains
   * Brown rice — GI 60
     * White rice — GI 73
