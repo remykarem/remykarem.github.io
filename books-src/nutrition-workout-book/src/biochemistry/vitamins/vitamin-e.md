@@ -6,16 +6,23 @@ Properties:
 * Fat-soluble
 * Antioxidant
 
+Kinds:
+* alpha-tocopherol
+* gamma-tocopherol
+
 ## Food source
 
-1. Wheat germ oil — 149mg
-2. Sunflower seeds — 35mg
-3. **Almonds** — 26mg
-4. Hazelnuts — 15mg
-5. Sunflower oil — 41mg
-6. Pine nuts — 9mg
-7. **Avocado** — 2mg
-8. Peanut butter — 7mg
-9. Spinach — 2mg
+
+Fruits
+* **Avocado** — 2mg
+Greens
+* Spinach — 2mg
+Nuts
+* Pine nuts — 9mg
+* **Walnuts** — gamma-tocopherol
+* **Almonds** — alpha-tocopherol
+* Hazelnuts — 15mg
+Seeds, oils
+* Sunflower seeds — 35mg
 
 Source: ChatGPT
