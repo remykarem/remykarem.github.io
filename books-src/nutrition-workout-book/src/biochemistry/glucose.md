@@ -2,10 +2,6 @@
 
 ## Food sources
 
-* Grains
-  * White rice — GI 73
-  * Wheat
-  * Flour (wheat) — GI 83
 * Starches
 * Fruits
 * Honey — GI 35-75
