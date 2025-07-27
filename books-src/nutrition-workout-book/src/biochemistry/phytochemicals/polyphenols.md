@@ -18,11 +18,27 @@ Properties:
 
 Most abundant and widely studied. 
 
-* Anthocyanins — **berries**, red cabbage, black rice, grapes; found in many red, purple and blue
+* Anthocyanins — found in many red, purple and blue
+ * **berries**
+ * red cabbage
+ * black rice
+ * grapes 
 * Flavanones — **citrus fruits**
 * Flavonols 
-  * Catechin — **green tea**, cocoa, apples
-  * Quercetin — kale, spinach, broccoli, **honey**, **leafy greens**, **berries**
+  * Catechin
+    * **green tea**
+    * **cocoa**
+    * apples
+    * **walnuts**
+    * **almonds**
+  * Quercetin
+    * kale
+    * spinach
+    * broccoli
+    * **honey**
+    * **leafy greens**
+    * **berries**
+    * **almonds**
 * Isoflavones — **soybeans**
 
 ## Phenolic acid
@@ -31,7 +47,9 @@ Examples: **berries**, **coffee**, **tea**
 
 * Gingerol — **ginger**
 * Shogaol — **ginger**
-
+* Gallic acid — **walnuts**
+* Caffeic acid — **coffee**, **walnuts**, **almonds**
+* Vanillic acid — **walnuts**
 
 ## Stillbene
 
