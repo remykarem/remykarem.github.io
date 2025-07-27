@@ -9,9 +9,7 @@
 
 PUFAs are sensitive to heat, light, and oxygen.
 
-PUFA + O2 -> Oxidised PUFA + lipid peroxides
-
-Oxidized PUFAs contain harmful lipid peroxides, aldehydes (like 4-HNE, MDA), and free radicals.
+PUFA + O2 -> Oxidised PUFA + lipid peroxides + aldehydes (like 4-HNE, MDA) + free radicals
 
 ~~~admonish tip title="Vitamin E in foods"
 Vitamin E, found in almonds and walnuts etc. acts as a potent antioxidant that protect the PUFA from oxidation.
