@@ -2,9 +2,10 @@
 
 ## Food sources
 
-* Starches
 * Fruits
 * Honey — GI 35-75
+* Processed
+  * Table sugar (from sugar cane, sugar beet)
 
 ## Biology
 
