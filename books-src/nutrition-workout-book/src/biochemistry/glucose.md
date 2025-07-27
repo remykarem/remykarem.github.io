@@ -2,6 +2,8 @@
 
 ## Food sources
 
+* Grains
+  * White rice — high GI
 * Starches
 * Fruits
 * Honey
