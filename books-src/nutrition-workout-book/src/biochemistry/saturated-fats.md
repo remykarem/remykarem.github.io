@@ -22,6 +22,18 @@ Others:
 * Tallow
 * Lard
 
+* Chicken (without skin):
+  1. Wing (2.1g)
+  2. Thigh (1.3g)
+  3. Drumstick (1g)
+  4. Breast (0.4g)
+* Beef:
+  1. Ribeye (9g)
+  2. Short rib (8g)
+  3. Tenderloin (4g)
+  4. Sirloin (3g)
+  5. Eye of round, top round, bottom round (1.5g)
+
 ## Biology
 
 Increase LDL
