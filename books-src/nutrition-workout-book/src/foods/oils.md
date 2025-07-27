@@ -1,4 +1,4 @@
 # Oils
 
-* Avocado oil — 271°C smoke point
-* Extra virgin olive oil — 191°C smoke point
+* Avocado oil — 250°C smoke point
+* Extra virgin olive oil — 190°C smoke point
