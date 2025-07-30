@@ -48,7 +48,7 @@
 # Foods / taxonomy
 
 - [Superfoods](./foods/superfoods.md)
-- [Animals]()
+- [Meat](./foods/meat.md)
 - [Seafood](./foods/seafood.md)
 - [Fruits](./foods/fruits.md)
 - [Greens](./foods/vegetables.md)
@@ -59,6 +59,8 @@
 - [Oils](./foods/oils.md)
 - [Fungus](./foods/fungus.md)
 - [Legumes]()
+- [Pastries](./foods/pastries.md)
+- [Sauces](./foods/sauces.md)
 - [Others](./foods/others.md)
 
 ---
@@ -88,6 +90,7 @@
   - [Vitamin B]()
     - [Vitamin B3 (Niacinamide)](./biochemistry/vitamins/vitamin-b3.md)
     - [Vitamin B7 (Biotin)](./biochemistry/vitamins/vitamin-b7.md)
+    - [Vitamin B12](./biochemistry/vitamins/vitamin-b12.md)
   - [Vitamin C](./biochemistry/vitamins/vitamin-c.md)
   - [Vitamin D](./biochemistry/vitamins/vitamin-d.md)
   - [Vitamin E](./biochemistry/vitamins/vitamin-e.md)
