@@ -97,14 +97,15 @@
   - [Carotenoids](./biochemistry/phytochemicals/carotenoids.md)
   - [Terpenoids]()
   - [Phytosterols](./biochemistry/phytochemicals/sterols.md)
+- [Micronutrients](./biochemistry/micronutrients/index.md)
+  - [Manganese](./biochemistry/micronutrients/manganese.md)
+  - [Potassium](./biochemistry/micronutrients/potassium.md)
+  - [Magnesium](./biochemistry/micronutrients/magnesium.md)
+  - [Calcium](./biochemistry/micronutrients/calcium.md)
+  - [Phosphate](./biochemistry/micronutrients/phosphate.md)
+  - [Iron](./biochemistry/micronutrients/iron.md)
+  - [Zinc](./biochemistry/micronutrients/zinc.md)
 - [Purines](./biochemistry/purines.md)
-- [Minerals]()
-  - [Potassium]()
-  - [Magnesium]()
-  - [Calcium]()
-  - [Phosphate]()
-  - [Iron]()
-  - [Zinc](./biochemistry/minerals/zinc.md)
  
 # Properties
 
