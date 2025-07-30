@@ -2,6 +2,7 @@
 
 * Salmon 
     * 200˚C, 15mins
+* King Mackerel — 200˚C, 15mins
 
 | Item | Amount | Calories | Protein | Fat | Carbs | Remarks |
 |---|---|---|---|---|---|---|
