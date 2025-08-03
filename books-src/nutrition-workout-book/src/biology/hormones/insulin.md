@@ -4,8 +4,6 @@
 
 Released by pancreas on increase in blood glucose. Protein also has similar effect (but not to a great extent?)
 
-Insulin has different effects for different organs.
-
 | Organ | Effect| ⬆️ Increase | ⬇️ Decrease | ❌ Inhibits |
 |-------|-|----------|----------|----------|
 | 💪🏼 Muscles |-| Glucose uptake, glycogenesis and storage, amino acid uptake | LPL expression |  - |
