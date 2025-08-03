@@ -18,7 +18,7 @@
 - [Exercise](./workout/index.md)
 - [Exercises before eating]()
 - [Protein-rich diet]()
-- [Less processed food]()
+- [Processed food](./processed-foods.md)
 - [Increase metabolism]()
 - [Good sleep]()
 - [Foods that make you full]()
@@ -61,6 +61,9 @@
 - [Legumes]()
 - [Pastries](./foods/pastries.md)
 - [Sauces](./foods/sauces.md)
+- [Sweeteners](./foods/sweeteners.md)
+- [Food colourings](./foods/food-colourings.md)
+- [Preservatives](./foods/preservatives.md)
 - [Others](./foods/others.md)
 
 ---
@@ -109,6 +112,7 @@
   - [Iron](./biochemistry/micronutrients/iron.md)
   - [Zinc](./biochemistry/micronutrients/zinc.md)
 - [Purines](./biochemistry/purines.md)
+- [Live culture](./biochemistry/live-culture.md)
  
 # Properties
 
