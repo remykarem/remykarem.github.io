@@ -12,6 +12,8 @@ Total, Sugars, Dietary Fibre, Starch
   * Wheat
     * Wholemeal pasta^ — 28g, -, 4g
     * Regular pasta^ — 30g, -, 2g
+* Tubers
+  * Potstoes — 77 cals
 * Fruits
   * Banana — ?, 12g, 2.5g, 8g
   * Strawberries — 7.7g, 5g, 2g, -
