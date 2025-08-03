@@ -7,7 +7,7 @@ Broken down into simple sugars like glucose.
 Total, Sugars, Dietary Fibre, Starch
 
 * Grains
-  * Brown rice — 23g, 0.5g, 1.8g
+  * Brown rice — 111 cals, 23g, 0.5g, 1.8g
   * White rice — 28g, 0.1g, 0.4g
   * Wheat
     * Wholemeal pasta^ — 28g, -, 4g
