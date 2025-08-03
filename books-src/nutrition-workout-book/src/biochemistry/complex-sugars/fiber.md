@@ -53,11 +53,28 @@ Properties:
 * Insoluble — doesn't dissolve in water, but absorbs water and swells. 
 * Less fermentable
 
-Some sources of food high in insoluble fiber:
-* Brown rice
-* Almonds
-* Sunflower seeds
-* Mostly in fruit skins — apple peels, grape skins
+## Food sources
+
+* Greens
+  * **Kale** (4.1g)
+  * Brussel sprouts (3.8g)
+* Fruits
+  * **Raspberries** (6.5g)
+  * Blackberries (5.3g)
+  * Pears (3.1g)
+* Grains
+  * **Oats** (10.6g)
+  * ...
+  * Black beans (8.7g)
+  * Barley (4.5g)
+  * **Brown rice** (2g)
+* Nuts
+  * **Chia seeds** (34g)
+  * Flaxseeds (27g)
+  * **Almonds** (12g)
+  * Pistachios (10g)
+  * Hazelnut (9.7g)
+
 
 ~~~admonish question="Brown rice cs. white rice"
 
