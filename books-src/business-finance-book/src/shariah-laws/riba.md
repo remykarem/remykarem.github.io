@@ -2,22 +2,35 @@
 
 It becomes riba only if you are effectively giving the buyer a cash advance (i.e. a loan of money) and then demanding back more money as “interest.”
 
+~~~admonish note title="Ribawi items"
+Ribawi items are gold, silver and food.
 
+Fiat money can be considered ribawi item based on some scholarly opinions.
+~~~
 
-
-## Riba al-fadhl
+## Riba al-fadhl[^2]
 
 ربى الفضل
 
-Unequal exchange of similar items
+Exchange of similar items but differ in weight, volume, number or length.
 
-## Riba al-nasiah
+Applies to ribawi items.
 
-## Riba al-yad
+## Riba al-nasiah[^2]
+
+Exchange of similar items but one of the items will be _owed_ at a later stipulated time.
+
+Applies to ribawi items.
+
+## Riba al-yad[^2]
+
+Exchange of similar items, but there is a _delay in taking possession_ of one of the itmes before leaving the place of sale (even though no delay was stipulated).
+
+Applies to ribawi items.
 
 ## Riba qardh
 
-Allah has permitted trade and forbidden riba (interest)[^1]
+Riba is forbidden[^1]
 
 Agreeing to a riba in contract is problematic because you are implicated. borrower, lender, writer, witnesses[^3]
 
@@ -35,9 +48,8 @@ Whether flat fee or a percentage of the principal loan
 ~~~
 
 
-[^1]: Surah Al-Baqarah 2:275
+[^1]: Allah permitted commerce, and He prohibited usury. (Surah Al-Baqarah 2:275)
 
 [^2]: Gold for gold, silver for silver, wheat for wheat, barley for barley, dates for dates, salt for salt — equal for equal, same for same, hand to hand. If they differ, then sell as you wish, provided it is hand to hand. (Sahih Muslim 1587, also in Bukhari)
 
-[^3]: The Messenger of Allah cursed the one who consumes riba, the one who pays it, the one who records it, and the two witnesses to it, and he said: They are all the same.
-Sahih Muslim, Hadith 1598
+[^3]: The Messenger of Allah cursed the one who consumes riba, the one who pays it, the one who records it, and the two witnesses to it, and he said: They are all the same. (Sahih Muslim, Hadith 1598)
