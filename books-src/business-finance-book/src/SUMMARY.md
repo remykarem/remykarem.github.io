@@ -169,10 +169,11 @@
 
 # Shariah laws / principles / fundamentals
 
+- [Sales transaction](./shariah-laws/sales-transaction.md)
 - [Riba](./shariah-laws/riba.md)
 - [Gharar](./shariah-laws/gharar.md)
-- [Selling what you own](./shariah-laws/selling-what-you-own.md)
 - [Gambling](./shariah-laws/gambling.md)
+- [Selling what you own](./shariah-laws/selling-what-you-own.md)
 - [Money lending](./money-lending.md)
 - [Shariah laws](./shariah-laws.md)
 - [Guaranteed returns](./shariah-laws/guaranteed-returns.md)
