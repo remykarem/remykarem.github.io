@@ -7,7 +7,11 @@ It becomes riba only if you are effectively giving the buyer a cash advance (i.e
 
 ## Riba al-fadhl
 
-## Riba al-nasai
+ربى الفضل
+
+Unequal exchange of similar items
+
+## Riba al-nasiah
 
 ## Riba al-yad
 
