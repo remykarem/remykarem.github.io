@@ -1,12 +1,15 @@
 # Riba
 
-It becomes riba only if you are effectively giving the buyer a cash advance (i.e. a loan of money) and then demanding back more money as “interest.”
+Usury is haram[^1][^3].
 
 ~~~admonish note title="Ribawi items"
 Ribawi items are gold, silver and food.
 
 Fiat money can be considered ribawi item based on some scholarly opinions.
 ~~~
+
+## Riba al-qardh
+
 
 ## Riba al-fadhl[^2]
 
@@ -27,12 +30,6 @@ Applies to ribawi items.
 Exchange of similar items, but there is a _delay in taking possession_ of one of the itmes before leaving the place of sale (even though no delay was stipulated).
 
 Applies to ribawi items.
-
-## Riba qardh
-
-Riba is forbidden[^1]
-
-Agreeing to a riba in contract is problematic because you are implicated. borrower, lender, writer, witnesses[^3]
 
 ### Late payment fee
 
