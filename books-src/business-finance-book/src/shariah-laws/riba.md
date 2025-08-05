@@ -21,7 +21,7 @@ Applies to ribawi items.
 
 ## Riba al-nasiah
 
-ربا السيئة
+ربا النسيئة
 
 Exchange of similar items but one of the items will be _owed_ at a later stipulated time.[^3]
 
