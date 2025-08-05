@@ -2,9 +2,8 @@
 
 It becomes riba only if you are effectively giving the buyer a cash advance (i.e. a loan of money) and then demanding back more money as “interest.”
 
-Allah has permitted trade and forbidden riba (interest)[^1]
 
-Agreeing to a riba in contract is problematic because you are implicated. borrower, lender, writer, witnesses[^3]
+
 
 ## Riba al-fadhl
 
@@ -13,6 +12,10 @@ Agreeing to a riba in contract is problematic because you are implicated. borrow
 ## Riba al-yad
 
 ## Riba qardh
+
+Allah has permitted trade and forbidden riba (interest)[^1]
+
+Agreeing to a riba in contract is problematic because you are implicated. borrower, lender, writer, witnesses[^3]
 
 ## Late payment fee
 
