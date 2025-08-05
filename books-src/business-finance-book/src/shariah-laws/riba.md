@@ -17,7 +17,7 @@ Allah has permitted trade and forbidden riba (interest)[^1]
 
 Agreeing to a riba in contract is problematic because you are implicated. borrower, lender, writer, witnesses[^3]
 
-## Late payment fee
+### Late payment fee
 
 riba an-nasi’ah
 
