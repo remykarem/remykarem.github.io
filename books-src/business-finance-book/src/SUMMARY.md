@@ -169,6 +169,7 @@
 
 # Shariah laws / principles / fundamentals
 
+- [Income](./shariah-laws/income.md)
 - [Sales transaction](./shariah-laws/sales-transaction.md)
 - [Riba](./shariah-laws/riba.md)
 - [Gharar](./shariah-laws/gharar.md)
