@@ -29,3 +29,7 @@
     Not things that are debted to the transactors
 
 * Objects are known in their entity, quantity and qualities
+
+~~~admonish question
+Source?
+~~~
