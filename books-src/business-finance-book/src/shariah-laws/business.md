@@ -2,7 +2,6 @@
 
 Requirements:
 * Knowledge[^knowledge]
-* Act justly
 * Honesty[^honesty]
 * Responsibility[^amanah]
 * Transparency[^transparency]
