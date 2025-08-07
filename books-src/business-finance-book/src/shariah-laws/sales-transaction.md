@@ -12,11 +12,11 @@
 
   * (Selling what you don't own)[^whatyoudontown]
 
-     subject to the authority of the transactors
+  * subject to the authority of the transactors
 
     Not things that are debted to the transactors
 
-     known in their entity, quantity and qualities
+  * known in their entity, quantity and qualities
 
   * Pure or capable of being purified 
 
