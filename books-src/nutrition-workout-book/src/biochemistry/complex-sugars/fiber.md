@@ -25,25 +25,11 @@ Soluble fibers are generally considered prebiotic because they promote the growt
 
 Examples:
 
-* Beta-glucan — prebiotic; mild potency
-
-    ~~~admonish tip title="Cholesterol lowering"
-    Amount recommended for cholesterol lowering effect is at least 3g a day.[^quaker]
-
-    [^quaker]: Quaker oatmeal packaging
-
-    Richest sources of beta-glucan:
-    * oats
-    * barley
-    * mushrooms (especially shiitake)
-    ~~~
+* Beta-glucan — prebiotic; mild potency; has cholesterol-lowering effect[^quaker]
 
 * Pectin
-    Examples: apples, citrus fruits
 
 * Inulin — potent prebiotic
-
-    Examples: onions, garlic
 
 * Fructooligosaccharides (FOS) — potent prebiotic
 * Galactooligosaccharides (GOS) — potent prebiotic
@@ -51,12 +37,17 @@ Examples:
 
 ### Food sources
 
+* Fruits
+  * Citrus fruits — pectin
+  * Apples — pectin
 * Greens
   * **Garlic** — inulin
   * Onions — inulin
 * Grains
   * **Oats** — beta-glucan
-  * 
+  * Barley
+* Fungi
+  * Shiitake — beta-glucan
 
 ## Insoluble fiber
 
@@ -97,3 +88,6 @@ Properties:
 | Satiety | High | Low |
 | Energy | Lower | Higher |
 ~~~
+
+[^quaker]: Amount recommended for cholesterol lowering effect is at least 3g a day. (Source: Quaker oatmeal packaging)
+
