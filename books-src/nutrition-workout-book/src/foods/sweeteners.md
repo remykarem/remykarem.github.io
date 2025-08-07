@@ -4,7 +4,7 @@ Artificial sweeteners (0 cal):
 * Aspartame — diet sodas, gum, yogurt
 * Sucralose
 * Saccharin
-* Ace-K
+* Acesulfame-K
 * Neotame
 * Advantame
 
