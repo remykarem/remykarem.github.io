@@ -25,29 +25,37 @@ Soluble fibers are generally considered prebiotic because they promote the growt
 
 Examples:
 
-* Beta-glucan — prebiotic; mild potency; has cholesterol-lowering effect[^quaker]
-
-* Pectin
-
 * Inulin — potent prebiotic
 
-* Fructooligosaccharides (FOS) — potent prebiotic
-* Galactooligosaccharides (GOS) — potent prebiotic
+* Fructooligosaccharides (FOS) — potent prebiotic; food sources often overlap with inulin
+ 
+* Galactooligosaccharides (GOS) — potent prebiotic; may cause bloatedness
 
+* Beta-glucan — prebiotic; mild potency; has cholesterol-lowering effect[^quaker]
+
+* Pectin — mild potency prebiotic; some bacteria can ferment; helps with stool consistency
+
+* Psyllium — pporly fermented
 
 ### Food sources
 
 * Fruits
+  * Banana — FOS, inulin (underripe)
   * Citrus fruits — pectin
   * Apples — pectin
 * Greens
-  * **Garlic** — inulin
-  * Onions — inulin
+  * **Garlic** — inulin, FOS
+  * Onions — inulin, FOS
+  * Asparagus — inulin
 * Grains
   * **Oats** — beta-glucan
   * Barley
 * Fungi
-  * Shiitake — beta-glucan
+  * Mushrooms — beta-glucan
+* Nuts/beans
+  * Chickpeas — GOS
+  * Kidney beans — GOS
+  * Lentils
 
 ## Insoluble fiber
 
