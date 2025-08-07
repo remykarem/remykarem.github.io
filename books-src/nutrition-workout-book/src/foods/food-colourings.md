@@ -1,3 +1,3 @@
 # Food colourings
 
-Tartrazine
+* Yellow — Tartrazine (E102)
