@@ -8,6 +8,19 @@
 * Verbal agreement
 
 ## Conditions
+
+* Something capable of obtaining
+
+    NOt like selling birds. 
+
+* (Selling what you don't own)[^whatyoudontown]
+
+* Objects are subject to the authority of the transactors
+
+    Not things that are debted to the transactors
+
+* Objects are known in their entity, quantity and qualities
+
 * Pure or capable of being purified 
 
     Not things like pork
@@ -20,16 +33,12 @@
 
     Not things like weaponry for aggressors
 
-* Something capable of obtaining
-
-    NOt like selling birds
-
-* Objects are subject to the authority of the transactors
-
-    Not things that are debted to the transactors
-
-* Objects are known in their entity, quantity and qualities
-
 ~~~admonish question
-Source?
+* clear ownership?
+* Full payment or clear terms?
+* Source?
 ~~~
+
+[^whatyoudontown]: Do not sell what you do not possess.
+لا تبع ما ليس عندك
+Sunan Abu Dawud 3503, authenticated sahih by al-Albani

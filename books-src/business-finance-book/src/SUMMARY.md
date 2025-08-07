@@ -167,7 +167,7 @@
 
 ---
 
-# Shariah laws / principles / fundamentals
+# Principles
 
 - [Income](./shariah-laws/income.md)
 - [Sales transaction](./shariah-laws/sales-transaction.md)
@@ -176,8 +176,6 @@
 - [Riba](./shariah-laws/riba.md)
 - [Gharar](./shariah-laws/gharar.md)
 - [Gambling](./shariah-laws/gambling.md)
-- [Selling what you own](./shariah-laws/selling-what-you-own.md)
-- [Shariah laws](./shariah-laws.md)
 - [Guaranteed returns](./shariah-laws/guaranteed-returns.md)
 - [Large differences]()
 
