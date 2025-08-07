@@ -25,7 +25,7 @@ Soluble fibers are generally considered prebiotic because they promote the growt
 
 Examples:
 
-* Beta-glucan
+* Beta-glucan — prebiotic; mild potency
 
     ~~~admonish tip title="Cholesterol lowering"
     Amount recommended for cholesterol lowering effect is at least 3g a day.[^quaker]
@@ -41,9 +41,22 @@ Examples:
 * Pectin
     Examples: apples, citrus fruits
 
-* Inulin
+* Inulin — potent prebiotic
 
     Examples: onions, garlic
+
+* Fructooligosaccharides (FOS) — potent prebiotic
+* Galactooligosaccharides (GOS) — potent prebiotic
+
+
+### Food sources
+
+* Greens
+  * **Garlic** — inulin
+  * Onions — inulin
+* Grains
+  * **Oats** — beta-glucan
+  * 
 
 ## Insoluble fiber
 
