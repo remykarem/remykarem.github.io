@@ -43,6 +43,7 @@ Examples:
   * Banana — FOS, inulin (underripe)
   * Citrus fruits — pectin
   * Apples — pectin
+  * Kiwi — pectin
 * Greens
   * **Garlic** — inulin, FOS
   * Onions — inulin, FOS
