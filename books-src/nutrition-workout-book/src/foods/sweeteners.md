@@ -12,6 +12,7 @@ Natural sweeteners:
 * Honey (300 cal)
 * Maple syrup (260 cal)
 * Stevia (0 cal)
+* Barley malt syrup
 
 Sugar alcohols:
 * Sorbitol (260 cal)
