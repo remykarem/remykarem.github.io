@@ -56,6 +56,7 @@ Examples:
 * Nuts/beans
   * Chickpeas — GOS
   * Kidney beans — GOS
+  * **Soybeans**
   * Lentils
 
 ## Insoluble fiber
