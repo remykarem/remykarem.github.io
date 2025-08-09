@@ -64,6 +64,7 @@
 - [Sweeteners](./foods/sweeteners.md)
 - [Food colourings](./foods/food-colourings.md)
 - [Preservatives](./foods/preservatives.md)
+- [Emulsifiers](./foods/emulsifiers.md)
 - [Others](./foods/others.md)
 
 ---
