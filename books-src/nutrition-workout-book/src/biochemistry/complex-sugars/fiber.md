@@ -47,7 +47,7 @@ Examples:
 * Greens
   * **Garlic** — inulin, FOS
   * Onions — inulin, FOS
-  * Asparagus — inulin
+  * Asparagus — inulin, FOS
 * Grains
   * **Oats** — beta-glucan
   * Barley
