@@ -11,10 +11,11 @@
   - [Income](./principles/income.md)
   - [Business](./principles/business.md)
     - [Sales transaction](./principles/sales-transaction.md)
+      - [Riba]()
       - [Gharar](./principles/gharar.md)
   - [Money lending](./money-lending.md)
+    - [Riba](./principles/riba.md)
   - [Gambling](./principles/gambling.md)
-- [Riba](./principles/riba.md)
 - [Guaranteed returns](./principles/guaranteed-returns.md)
 
 ---
