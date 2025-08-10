@@ -6,6 +6,7 @@
 
 # Principles
 
+- [Permissibility](./principles/permissibility.md)
 - [Wealth](./principles/wealth.md)
 - [Income](./principles/income.md)
 - [Business](./principles/business.md)
@@ -15,7 +16,6 @@
 - [Riba](./principles/riba.md)
 - [Gambling](./principles/gambling.md)
 - [Guaranteed returns](./principles/guaranteed-returns.md)
-- [Large differences]()
 
 ---
 
