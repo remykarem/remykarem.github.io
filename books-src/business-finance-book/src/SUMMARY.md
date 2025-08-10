@@ -4,6 +4,20 @@
 
 ---
 
+# Principles
+
+- [Income](./shariah-laws/income.md)
+- [Sales transaction](./shariah-laws/sales-transaction.md)
+- [Business](./shariah-laws/business.md)
+- [Money lending](./money-lending.md)
+- [Riba](./shariah-laws/riba.md)
+- [Gharar](./shariah-laws/gharar.md)
+- [Gambling](./shariah-laws/gambling.md)
+- [Guaranteed returns](./shariah-laws/guaranteed-returns.md)
+- [Large differences]()
+
+---
+
 # Business
 
 - [Ownership]()
@@ -164,20 +178,6 @@
 - [Portfolio diversification]()
 - [Wealth accumulation]()
 - [Hedging]()
-
----
-
-# Principles
-
-- [Income](./shariah-laws/income.md)
-- [Sales transaction](./shariah-laws/sales-transaction.md)
-- [Business](./shariah-laws/business.md)
-- [Money lending](./money-lending.md)
-- [Riba](./shariah-laws/riba.md)
-- [Gharar](./shariah-laws/gharar.md)
-- [Gambling](./shariah-laws/gambling.md)
-- [Guaranteed returns](./shariah-laws/guaranteed-returns.md)
-- [Large differences]()
 
 ---
 
