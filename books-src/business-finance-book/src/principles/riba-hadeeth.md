@@ -20,6 +20,10 @@ Fiat money is considered ribawi item based on some scholarly opinions.
 
     Exchange of similar items, but there is a _delay in taking possession_ of one of the itmes before leaving the place of sale (even though no delay was stipulated).[^3]
 
+~~~admonish note
+This pertains to forex.
+~~~
+
 ---
 
 [^1]: Allah permitted commerce, and He prohibited usury. (Surah Al-Baqarah 2:275)
