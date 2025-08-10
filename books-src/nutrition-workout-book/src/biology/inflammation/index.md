@@ -1,12 +1,18 @@
 # Inflammation
 
-* Acute — caused by injury, infection, irritants
-* Chronic — ongoing low-level irritants, poor lifestyle, autoimmune issues
+## Acute inflammation
+
+caused by injury, infection, irritants
 
 Examples:
 * **Muscle repair after exercise** → Microtears trigger a mild inflammatory response to build stronger muscle.
 * **Clearing dead cells** → The immune system uses inflammation to remove old or damaged cells.
 * Barrier maintenance 
+
+## Chronic low-grade inflammation
+
+ongoing low-level irritants, poor lifestyle, autoimmune issues
+
 
 Diet-related:
 * **Blood sugar spike**
