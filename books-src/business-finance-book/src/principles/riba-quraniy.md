@@ -1,4 +1,4 @@
-# Riba
+# Riba in loans
 
 Riba al-qardh
 
