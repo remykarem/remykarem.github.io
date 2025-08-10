@@ -8,9 +8,6 @@ Ribawi items are gold, silver and food.
 Fiat money can be considered ribawi item based on some scholarly opinions.
 ~~~
 
-## Riba al-qardh
-
-
 ## Riba al-fadhl
 
 ربا الفضل
