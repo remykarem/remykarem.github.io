@@ -8,11 +8,11 @@
 
 - [Wealth](./principles/wealth.md)
 - [Income](./principles/income.md)
-- [Sales transaction](./principles/sales-transaction.md)
 - [Business](./principles/business.md)
+  - [Sales transaction](./principles/sales-transaction.md)
+    - [Gharar](./principles/gharar.md)
 - [Money lending](./money-lending.md)
 - [Riba](./principles/riba.md)
-- [Gharar](./principles/gharar.md)
 - [Gambling](./principles/gambling.md)
 - [Guaranteed returns](./principles/guaranteed-returns.md)
 - [Large differences]()

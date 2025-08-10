@@ -1,6 +1,15 @@
 # Sales transaction
 
+~~~admonish note title="Linguistic definition"
+Exchanging one property to another property
+~~~
+
+~~~admonish note title="Fiqh definition"
+Transferring permanent ownership for something else considered to be licit wealth
+~~~
+
 ## Integrals of sale
+
 * Seller
 * Buyer
 * Payment
