@@ -6,14 +6,15 @@
 
 # Principles
 
-- [Income](./shariah-laws/income.md)
-- [Sales transaction](./shariah-laws/sales-transaction.md)
-- [Business](./shariah-laws/business.md)
+- [Wealth](./principles/wealth.md)
+- [Income](./principles/income.md)
+- [Sales transaction](./principles/sales-transaction.md)
+- [Business](./principles/business.md)
 - [Money lending](./money-lending.md)
-- [Riba](./shariah-laws/riba.md)
-- [Gharar](./shariah-laws/gharar.md)
-- [Gambling](./shariah-laws/gambling.md)
-- [Guaranteed returns](./shariah-laws/guaranteed-returns.md)
+- [Riba](./principles/riba.md)
+- [Gharar](./principles/gharar.md)
+- [Gambling](./principles/gambling.md)
+- [Guaranteed returns](./principles/guaranteed-returns.md)
 - [Large differences]()
 
 ---
