@@ -39,6 +39,7 @@ Applies to ribawi items.
 
 * Riba is only twice the amount and above based on 3:130?
 
+---
 
 [^1]: Allah permitted commerce, and He prohibited usury. (Surah Al-Baqarah 2:275)
 

@@ -45,6 +45,8 @@ Transferring permanent ownership for something else considered to be licit wealt
 * Source?
 ~~~
 
+---
+
 [^whatyoudontown]: Do not sell what you do not possess.
 لا تبع ما ليس عندك
 (Sunan Abu Dawud 3503, authenticated sahih by al-Albani)

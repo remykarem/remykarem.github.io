@@ -12,4 +12,6 @@
 
 Borrowing money is not wrong[^angelspray].
 
+---
+
 [^angelspray]: THose who borrow money with the intention to pay it back, Allah will send angels to him protecting him and pryaing for him until he pays it back.
