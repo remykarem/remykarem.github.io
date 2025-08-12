@@ -2,6 +2,8 @@
 
 Riba al-qardh
 
+Excess compensation in a loan
+
 Usury is haram[^1] [^2] and involvement in it is complicit[^3].
 
 ~~~admonish note title="Pre-Islamic Arabic"
@@ -11,6 +13,17 @@ If the borrower was unable to repay the principal and the interest on time, the 
 
 Riba in its historical context involved doubling and redoubling debts on borrowers who were unable to repay.[^lecturenotes1] This is mentioned in the Quran[^doubling].
 ~~~
+
+## Bank deposits with interests
+
+Not permissible (majority)
+* **Increase and benefit** — "Every loan that brings benefit is usury."[^benefit]
+* **Closing the door to harm**[^blocking]
+
+Permissible (3 views)
+1. **Exorbitance** — Only if exorbitant and excessive, based on[^doubling].
+2. **Consumption vs. productive loans** — Interest charged on loans used for investment or economic growth is not exploitative, unlike consumption loans[^consumption].
+3. **Financier-recipient vs lender-borrower** — Bank deposits are a new form of financial contract, not akin to personal loans. 
 
 ---
 
@@ -23,3 +36,9 @@ Riba in its historical context involved doubling and redoubling debts on borrowe
 [^lecturenotes1]: Based on lecture notes.
 
 [^doubling]: O you who have believed, do not consume usury, doubled and multiplied, but fear Allah that you may be successful.
+
+[^benefit]: Sayings of early Islamic scholars or jurists
+
+[^blocking]: Sadd al-dharai3, a key concept in Islamic jurisprudence
+
+[^consumption]: Based on a prominent Islamic modernist
