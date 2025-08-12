@@ -6,7 +6,7 @@
 
 # Principles
 
-- [Permissibility](./principles/permissibility.md)
+- [Permissibility, opinions](./principles/permissibility.md)
 - [Wealth](./principles/wealth.md)
   - [Money](./principles/money.md)
   - [Income](./principles/income.md)

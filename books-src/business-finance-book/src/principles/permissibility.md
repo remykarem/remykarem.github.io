@@ -13,6 +13,7 @@ Why understand different opinions?
 Questions
 * Is it about can or cannot?
 * No one knows the truth
+* Can I have my own take on it?
 
 Methodology:
 1. Quran
