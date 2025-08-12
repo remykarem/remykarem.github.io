@@ -37,10 +37,10 @@ Permissible (3 views)
 
 [^lecturenotes1]: Based on lecture notes.
 
-[^doubling]: O you who have believed, do not consume usury, doubled and multiplied, but fear Allah that you may be successful.
-
 [^benefit]: Classical Islamic legal maxim
 
 [^blocking]: Sadd al-dharai3, a key concept in Islamic jurisprudence
+
+[^doubling]: O you who have believed, do not consume usury, doubled and multiplied, but fear Allah that you may be successful.
 
 [^consumption]: Based on a prominent Islamic modernist
