@@ -12,6 +12,13 @@ Why understand different opinions?
 
 Questions
 * Is it about can or cannot?
+* No one knows the truth
+
+Methodology:
+1. Quran
+2. Hadeeth
+3. Consensus of scholars
+4. Logical reasoning
 
 ---
 
