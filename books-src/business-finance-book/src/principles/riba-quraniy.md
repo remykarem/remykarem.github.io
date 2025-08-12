@@ -4,7 +4,7 @@ Riba al-qardh
 
 Excess compensation in a loan
 
-Usury is haram[^1] [^2] and involvement in it is complicit[^3].
+Usury is haram[^1] [^2] and involvement in it is complicit[^3]. It is one of the major sins.
 
 ~~~admonish note title="Pre-Islamic Arabic"
 In pre-Islamic Arabia, riba al-qardh was a common practice where lender would exploit borrowers by c harging exorbitant interest on loans.[^lecturenotes1]
