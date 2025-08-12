@@ -1,6 +1,6 @@
 # Riba in trade
 
-Usury is haram[^1] and involvement in it is complicit[^2].
+Usury is haram[^1] and involvement in it is complicit[^2]. It is one of the major sins.
 
 ~~~admonish note title="Ribawi items"
 Ribawi items are gold, silver and food.
