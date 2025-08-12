@@ -39,7 +39,7 @@ Permissible (3 views)
 
 [^doubling]: O you who have believed, do not consume usury, doubled and multiplied, but fear Allah that you may be successful.
 
-[^benefit]: Sayings of early Islamic scholars or jurists
+[^benefit]: Classical Islamic legal maxim
 
 [^blocking]: Sadd al-dharai3, a key concept in Islamic jurisprudence
 
