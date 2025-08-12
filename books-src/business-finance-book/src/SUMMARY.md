@@ -8,6 +8,7 @@
 
 - [Permissibility](./principles/permissibility.md)
 - [Wealth](./principles/wealth.md)
+  - [Money](./principles/money.md)
   - [Income](./principles/income.md)
   - [Business / trade](./principles/business.md)
     - [Riba](./principles/riba-hadeeth.md)

@@ -1,6 +1,17 @@
-# Permissibility
+# Fiqh, opinions
 
 The default ruling (agreed upon majority of scholars) is permissibility[^subjected] [^silent].
+
+* Make a stand
+* If you haven't made a stand, look at how it is beneficial
+* Bring ease, not hardship
+
+Why understand different opinions?
+* Empathy
+* Avoid getting manipulated by people
+
+Questions
+* Is it about can or cannot?
 
 ---
 
