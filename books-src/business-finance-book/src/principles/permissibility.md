@@ -21,6 +21,10 @@ Methodology:
 3. Consensus of scholars
 4. Logical reasoning
 
+Others
+* Guidance, not judgement
+* Fiqh is to solve problem, not judge
+
 ---
 
 [^subjected]: Have you not seen that Allah has subjected to you whatever is in the heavens and whatever is in the earth? (Quran Luqman:20)

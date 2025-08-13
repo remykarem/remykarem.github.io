@@ -4,18 +4,26 @@
 
 ---
 
-# Principles
+# Philosophy
+
+- [Wealth](./principles/wealth.md)
+
+---
+
+# Issues
 
 - [Permissibility, opinions](./principles/permissibility.md)
-- [Wealth](./principles/wealth.md)
-  - [Money](./principles/money.md)
-  - [Income](./principles/income.md)
-  - [Business / trade](./principles/business.md)
-    - [Riba](./principles/riba-hadeeth.md)
-    - [Gharar](./principles/gharar.md)
-  - [Loans](./money-lending.md)
-    - [Riba](./principles/riba-quraniy.md)
-  - [Gambling](./principles/gambling.md)
+- [Money](./principles/money.md)
+- [Income](./principles/income.md)
+- [Business / trade](./principles/business.md)
+  - [Riba](./principles/riba-hadeeth.md)
+  - [Gharar](./principles/gharar.md)
+- [Loans](./money-lending.md)
+  - [Riba](./principles/riba-quraniy.md)
+- [Gambling](./principles/gambling.md)
+- [Insurance](./principles/insurance.md)
+- [Takaful](./principles/takaful.md)
+- [Investment](./principles/investment.md)
 - [Guaranteed returns](./principles/guaranteed-returns.md)
 
 ---
