@@ -28,7 +28,7 @@ Transferring permanent ownership for something else considered to be licit wealt
 * Payment
 * Verbal agreement
 * Item being sold
-  * capable of obtaining
+  * Capable of obtaining
 
     NOt like selling birds. 
 
@@ -38,7 +38,7 @@ Transferring permanent ownership for something else considered to be licit wealt
 
     Not things that are debted to the transactors
 
-  * known in their entity, quantity and qualities
+  * Known in their entity, quantity and qualities
 
   * Pure or capable of being purified 
 
