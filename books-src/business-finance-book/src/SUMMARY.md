@@ -26,29 +26,30 @@
 - [Investment](./principles/investment.md)
 - [Gambling](./principles/gambling.md)
 - [Blood money](./principles/blood-money.md)
-- [Contracts]()
-  - [Binding promise](./principles/binding-promise.md)
+- [Contracts](./principles/binding-promise.md)
+
+---
+
+- [Permissibility, opinions](./principles/permissibility.md)
 
 ---
 
 # Fiqh issues (so-how-should-you-deal-with)
 
-- [Permissibility, opinions](./principles/permissibility.md)
-
 - [Income]()
   - [Questionnable income](./issues/income.md)
-
 - [Loans]()
   - [Conventional loans](./issues/loans.md)
-
 - [Transactions]()
   - [Fiat money](./principles/money.md)
   - [Currency exchange](./issues/forex.md)
   - [Purchase to order](./issues/purchase-to-order.md)
   - [Insurance](./issues/insurance.md)
-
 - [Investment](./issues/investment.md)
   - [Guaranteed returns](./principles/guaranteed-returns.md)
+  - [Day trading](./principles/day-trading.md)
+- [Others]()
+  - [Lucky draw](./issues/lucky-draw.md)
 
 ---
 
