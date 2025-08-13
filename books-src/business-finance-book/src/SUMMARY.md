@@ -20,7 +20,7 @@
 - [Loans](./money-lending.md)
   - [Riba (loans)](./principles/riba-quraniy.md)
 - [Trade](./principles/trade.md)
-- [Transaction](./principles/transaction.md)
+- [Transactions](./principles/transaction.md)
   - [Riba (transactions)](./principles/riba-hadeeth.md)
   - [Gharar](./principles/gharar.md)
 - [Gambling](./principles/gambling.md)
@@ -39,14 +39,14 @@
 - [Loans]()
   - [Conventional loans](./issues/loans.md)
 
-- [Transaction]()
+- [Transactions]()
   - [Fiat money](./principles/money.md)
   - [Currency exchange](./issues/forex.md)
   - [Purchase to order](./issues/purchase-to-order.md)
   - [Insurance](./issues/insurance.md)
 
 - [Investment](./principles/investment.md)
-- [Guaranteed returns](./principles/guaranteed-returns.md)
+  - [Guaranteed returns](./principles/guaranteed-returns.md)
 
 ---
 

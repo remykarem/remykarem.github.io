@@ -1,4 +1,4 @@
-# Loans
+# Conventional loans
 
 ~~~admonish question title="Bank deposits with interests"
 
