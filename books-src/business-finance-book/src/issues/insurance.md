@@ -16,15 +16,15 @@ Debatable because:
 Majority: **Impermissible**
 
 Impermissible:
-* Existence of gharar
-* Existence of maisir
-* Uncertain source of money
+* Existence of gharar (based on qiyas)
+* Existence of maisir (based on qiyas)
+* Uncertain source of money — payouts come from a pool of money with different unknown sources
 
 Permissible:
-* Blood money
-* Binding promise
-* Legal transaction
-* Not a gamble
+* Blood money — transfer of risk from family to insurer
+* Binding promise 
+* Legal transaction; no gharar — to guarantee safety (?)
+* Not a gamble (?)
 ~~~
 
 ~~~admonish question title="Ruling for whole life insurance"
@@ -37,3 +37,4 @@ Impermissible:
 Permissible:
 * Interest is not considered riba
 ~~~
+

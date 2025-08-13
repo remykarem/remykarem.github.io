@@ -23,6 +23,8 @@
 - [Riba (transactions)](./principles/riba-hadeeth.md)
 - [Gharar](./principles/gharar.md)
 - [Gambling](./principles/gambling.md)
+- [Blood money](./principles/blood-money.md)
+- [Binding promise](./principles/binding-promise.md)
 
 ---
 

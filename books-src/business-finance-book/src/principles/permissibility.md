@@ -19,7 +19,7 @@ Methodology:
 1. Quran
 2. Hadeeth
 3. Consensus of scholars
-4. Logical reasoning
+4. Logical reasoning (qiyas)
 
 Others
 * Guidance, not judgement
