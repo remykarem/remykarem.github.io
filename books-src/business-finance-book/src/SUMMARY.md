@@ -33,14 +33,13 @@
 - [Questionnable income](./issues/income.md)
 
 - [Loans](./issues/loans.md)
-- [Forex](./issues/forex.md)
+- [Currency exchange](./issues/forex.md)
 
-- [Business / trade](./issues/business.md)
-- [Takaful](./principles/takaful.md)
-- [Investment](./principles/investment.md)
+- [Insurance](./principles/insurance.md)
+
 - [Guaranteed returns](./principles/guaranteed-returns.md)
-- [Transaction]()
-  - [Insurance](./principles/insurance.md)
+- [Investment](./principles/investment.md)
+- [Takaful](./principles/takaful.md)
 
 ---
 
