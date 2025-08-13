@@ -4,14 +4,14 @@
 
 ---
 
-# Philosophy (Why should I do it?)
+# Philosophy (why-should-you)
 
 - [Wealth](./principles/wealth.md)
 - [Income](./philosophy/income.md)
 
 ---
 
-# Shariah (Can I do it?; Guidelines)
+# Shariah (you-should; you-should-nots)
 
 - [Income](./principles/income.md)
 - [Loans](./money-lending.md)
@@ -22,14 +22,14 @@
 
 ---
 
-# Fiqh issues (How do we tackle it?)
+# Fiqh issues (so-how-should-you)
 
 - [Permissibility, opinions](./principles/permissibility.md)
 - [Fiat money](./principles/money.md)
 - [Questionnable income](./issues/income.md)
 
-- [Forex](./issues/forex.md)
 - [Loans](./issues/loans.md)
+- [Forex](./issues/forex.md)
 
 - [Business / trade](./principles/business.md)
 - [Takaful](./principles/takaful.md)
