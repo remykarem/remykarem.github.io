@@ -6,14 +6,18 @@
 
 # Philosophy (why-should-you)
 
-- [Wealth](./principles/wealth.md)
+- [Wealth](./philosophy/wealth.md)
 - [Income](./philosophy/income.md)
+- [Trade](./philosophy/trade.md)
 
 ---
 
 # Shariah (you-should; you-should-nots)
 
+- [Wealth]()
 - [Income](./principles/income.md)
+- [Trade](./principles/trade.md)
+- [Transaction](./principles/transaction.md)
 - [Loans](./money-lending.md)
 - [Riba (loans)](./principles/riba-quraniy.md)
 - [Riba (transactions)](./principles/riba-hadeeth.md)
@@ -31,7 +35,7 @@
 - [Loans](./issues/loans.md)
 - [Forex](./issues/forex.md)
 
-- [Business / trade](./principles/business.md)
+- [Business / trade](./issues/business.md)
 - [Takaful](./principles/takaful.md)
 - [Investment](./principles/investment.md)
 - [Guaranteed returns](./principles/guaranteed-returns.md)
