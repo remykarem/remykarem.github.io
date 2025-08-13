@@ -8,6 +8,7 @@
 
 - [Wealth](./philosophy/wealth.md)
 - [Income](./philosophy/income.md)
+- [Loans]()
 - [Trade](./philosophy/trade.md)
 
 ---
@@ -16,12 +17,12 @@
 
 - [Wealth]()
 - [Income](./principles/income.md)
+- [Loans](./money-lending.md)
+  - [Riba (loans)](./principles/riba-quraniy.md)
 - [Trade](./principles/trade.md)
 - [Transaction](./principles/transaction.md)
   - [Riba (transactions)](./principles/riba-hadeeth.md)
   - [Gharar](./principles/gharar.md)
-- [Loans](./money-lending.md)
-  - [Riba (loans)](./principles/riba-quraniy.md)
 - [Gambling](./principles/gambling.md)
 - [Blood money](./principles/blood-money.md)
 - [Binding promise](./principles/binding-promise.md)
@@ -32,16 +33,20 @@
 
 - [Permissibility, opinions](./principles/permissibility.md)
 - [Fiat money](./principles/money.md)
-- [Questionnable income](./issues/income.md)
 
-- [Loans](./issues/loans.md)
-- [Currency exchange](./issues/forex.md)
+- [Income]()
+  - [Questionnable income](./issues/income.md)
 
-- [Insurance](./issues/insurance.md)
+- [Loans]()
+  - [Conventional loans](./issues/loans.md)
 
-- [Guaranteed returns](./principles/guaranteed-returns.md)
+- [Transaction]()
+  - [Currency exchange](./issues/forex.md)
+  - [Purchase to order](./issues/purchase-to-order.md)
+  - [Insurance](./issues/insurance.md)
+
 - [Investment](./principles/investment.md)
-- [Takaful](./principles/takaful.md)
+- [Guaranteed returns](./principles/guaranteed-returns.md)
 
 ---
 
