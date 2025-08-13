@@ -17,9 +17,12 @@ Put your money in your hand, not your heart.[^moneyinhand]
 Islam encourages
 * balanced spending[^balanced]
 * entrusting your finances to the right people[^entrust]
-* planning for dependents[^dependents]
 
-# On growing money
+## On planning for dependents
+
+Planning for dependents[^dependents]
+
+## On growing money
 
 Salman Al-farisi divides his wealth into 3 parts, one of it is investments.[^salmanalfarisi]
 
