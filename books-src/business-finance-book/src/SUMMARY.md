@@ -4,7 +4,7 @@
 
 ---
 
-# Philosophy (why-should-you)
+# Philosophy (why-would-you-want-to)
 
 - [Wealth](./philosophy/wealth.md)
 - [Income](./philosophy/income.md)
