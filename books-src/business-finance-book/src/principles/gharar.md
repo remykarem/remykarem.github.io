@@ -13,10 +13,6 @@ Gharar in a transaction is prohibited[^ghararevidence1] [^ghararevidence2] [^gha
 
 However, _some_ gharar is permissible[^ghararevidence4].
 
-~~~admonish question title="Purchase to order"
-While there exists uncertainty in a purchase-to-order, it is permissible based on a hadeeth[^ghararevidence4].
-~~~
-
 ---
 
 [^ghararevidence1]: Do not consume your property wrongfully, nor use it to bribe judges, intending sinfully and knowingly to consume parts of other people's property. (Quran Al-Baqarah:188)
