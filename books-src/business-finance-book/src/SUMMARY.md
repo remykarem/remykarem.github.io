@@ -23,6 +23,7 @@
 - [Transactions](./principles/transaction.md)
   - [Riba (transactions)](./principles/riba-hadeeth.md)
   - [Gharar](./principles/gharar.md)
+- [Investment](./principles/investment.md)
 - [Gambling](./principles/gambling.md)
 - [Blood money](./principles/blood-money.md)
 - [Contracts]()
@@ -46,7 +47,7 @@
   - [Purchase to order](./issues/purchase-to-order.md)
   - [Insurance](./issues/insurance.md)
 
-- [Investment](./principles/investment.md)
+- [Investment](./issues/investment.md)
   - [Guaranteed returns](./principles/guaranteed-returns.md)
 
 ---

@@ -38,6 +38,10 @@ Permissible:
 * Interest is not considered riba[^fatwa]
 ~~~
 
+~~~admonish question title="Ruling for investment-linked insurance"
+???
+~~~
+
 ---
 
 [^fatwa]: Based on lecture notes, this opinion is held by the Egyptian council of Fatwa and several scholars from Egypt and Yemen.
