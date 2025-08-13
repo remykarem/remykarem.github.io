@@ -7,19 +7,18 @@
 # Philosophy (Why should I do it?)
 
 - [Wealth](./principles/wealth.md)
-- [Income](./principles/income.md)
+- [Income](./philosophy/income.md)
 
 ---
 
-# Shariah (Can I do it?)
+# Shariah (Can I do it?; Guidelines)
 
-- [Riba]()
-- [Riba](./principles/riba-hadeeth.md)
-- [Riba](./principles/riba-quraniy.md)
-- [Gharar]()
-- [Gambling]()
-- [Gambling](./principles/gambling.md)
 - [Income](./principles/income.md)
+- [Loans](./money-lending.md)
+- [Riba (loans)](./principles/riba-quraniy.md)
+- [Riba (transactions)](./principles/riba-hadeeth.md)
+- [Gharar](./principles/gharar.md)
+- [Gambling](./principles/gambling.md)
 
 ---
 
@@ -27,10 +26,12 @@
 
 - [Permissibility, opinions](./principles/permissibility.md)
 - [Fiat money](./principles/money.md)
-- [Income](./principles/income.md)
+- [Questionnable income](./issues/income.md)
+
+- [Forex](./issues/forex.md)
+- [Loans](./issues/loans.md)
+
 - [Business / trade](./principles/business.md)
-  - [Gharar](./principles/gharar.md)
-- [Loans](./money-lending.md)
 - [Takaful](./principles/takaful.md)
 - [Investment](./principles/investment.md)
 - [Guaranteed returns](./principles/guaranteed-returns.md)
