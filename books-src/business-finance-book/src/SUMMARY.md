@@ -26,7 +26,7 @@
 
 ---
 
-# Fiqh issues (so-how-should-you)
+# Fiqh issues (so-how-should-you-deal-with)
 
 - [Permissibility, opinions](./principles/permissibility.md)
 - [Fiat money](./principles/money.md)
@@ -35,7 +35,7 @@
 - [Loans](./issues/loans.md)
 - [Currency exchange](./issues/forex.md)
 
-- [Insurance](./principles/insurance.md)
+- [Insurance](./issues/insurance.md)
 
 - [Guaranteed returns](./principles/guaranteed-returns.md)
 - [Investment](./principles/investment.md)

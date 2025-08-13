@@ -24,6 +24,7 @@ Methodology:
 Others
 * Guidance, not judgement
 * Fiqh is to solve problem, not judge
+* Need
 
 ---
 
