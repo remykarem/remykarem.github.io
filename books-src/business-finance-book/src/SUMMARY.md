@@ -32,7 +32,6 @@
 # Fiqh issues (so-how-should-you-deal-with)
 
 - [Permissibility, opinions](./principles/permissibility.md)
-- [Fiat money](./principles/money.md)
 
 - [Income]()
   - [Questionnable income](./issues/income.md)
@@ -41,6 +40,7 @@
   - [Conventional loans](./issues/loans.md)
 
 - [Transaction]()
+  - [Fiat money](./principles/money.md)
   - [Currency exchange](./issues/forex.md)
   - [Purchase to order](./issues/purchase-to-order.md)
   - [Insurance](./issues/insurance.md)
