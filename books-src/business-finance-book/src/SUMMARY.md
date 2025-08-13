@@ -8,12 +8,12 @@
 
 - [Wealth](./philosophy/wealth.md)
 - [Income](./philosophy/income.md)
-- [Loans]()
+- [Loans](./philosophy/loans.md)
 - [Trade](./philosophy/trade.md)
 
 ---
 
-# Shariah (you-should; you-should-nots)
+# Shariah (you-should; you-should-nots; obligation; guideline; prohibition)
 
 - [Wealth]()
 - [Income](./principles/income.md)
