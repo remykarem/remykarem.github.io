@@ -13,6 +13,12 @@ Permissible (3 views)
 
 ~~~
 
+~~~admonish question title="Credit card"
+
+Can be treated the same as bank deposits with interests.
+
+~~~
+
 --- 
 
 [^benefit]: Classical Islamic legal maxim

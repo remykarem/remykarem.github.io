@@ -1,6 +1,4 @@
-# Money
-
-## Fiat money
+# Fiat money
 
 Fiat money has value because governments declare them legal tender[^legal tender].
 

@@ -2,23 +2,31 @@
 
 Usury is haram[^1] and involvement in it is complicit[^2]. It is one of the major sins.[^majorsins]
 
+Riba in transactions occurs for exchange of _similar_ ribawi items.
+
 ~~~admonish note title="Ribawi items"
 Ribawi items are gold, silver and food.
 
 Fiat money is considered ribawi item based on some scholarly opinions.
 ~~~
 
-* **Riba al-fadhl** ربا الفضل
+* **Riba al-fadhl** (excess)
+
+    ربا الفضل
 
     Exchange of similar items but differ in weight, volume, number or length.[^3]
 
-* **Riba al-nasiah** ربا النسيئة
+* **Riba al-nasiah** (delayed settlement)
+
+    ربا النسيئة
 
     Exchange of similar items but one of the items will be _owed_ at a later stipulated time.[^3]
 
-* **Riba al-yad** ربا اليد
+* **Riba al-yad**
 
-    Exchange of similar items, but there is a _delay in taking possession_ of one of the itmes before leaving the place of sale (even though no delay was stipulated).[^3]
+    ربا اليد
+
+    Exchange of similar items, but there is a _delay in taking possession_ of one of the items before leaving the place of sale (even though no delay was stipulated).[^3]
 
 ---
 
