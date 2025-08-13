@@ -1,9 +1,9 @@
 # Insurance
 
 Different types:
-* Whole life insurance
-* Term insurance
-* Investment-linked policy
+* Term insurance — designed to be **pure protection**
+* Whole life insurance — designed to include savings / investments
+* Investment-linked policy — designed to include savings / investments
 
 Product depends on:
 * Coverage duration
