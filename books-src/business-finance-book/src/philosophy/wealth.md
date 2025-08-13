@@ -6,12 +6,22 @@ Being wealthy[^companions] has its virtues[^grace] [^confirmed] and accountabili
 
 If given a choice, the wealthier option is probably a better one[^upperhand].
 
+To be a strong Muslim.[^strongmuslim]
+
+## On greed
+
+Put your money in your hand, not your heart.[^moneyinhand]
+
 ## On managing finances well
 
 Islam encourages
 * balanced spending[^balanced]
 * entrusting your finances to the right people[^entrust]
 * planning for dependents[^dependents]
+
+# On growing money
+
+Salman Al-farisi divides his wealth into 3 parts, one of it is investments.[^salmanalfarisi]
 
 ---
 
@@ -27,9 +37,15 @@ Islam encourages
 
 [^upperhand]: The upper hand is better than the lower one.
 
+[^strongmuslim]: Strong Muslim vs. weak Muslim hadeeth.
+
+[^moneyinhand]: citation needed
+
 [^balanced]: They are those who spend neither wastefully nor stingily, but moderately in between.
 
 [^entrust]: Do not entrust the incapable among your dependants with your wealth which Allah has made a means of support for you, but feed and clothe from it, and speak to them kindly. (Quran Al-Nisa:5)
 
 [^dependents]: It is better for you to leave your heirs wealthy than to leave them poor, begging from people.
 (Bukhari, Muslim)
+
+[^salmanalfarisi]: citation needed

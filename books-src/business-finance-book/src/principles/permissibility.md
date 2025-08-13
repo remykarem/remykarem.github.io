@@ -25,6 +25,9 @@ Others
 * Guidance, not judgement
 * Fiqh is to solve problem, not judge
 * Need
+* Some good in difference in opinion
+* Not about choosing the easiest, but choosing something that depends on you
+* Anything that it’s too restrictive, relax, anything too relax, restrict
 
 ---
 

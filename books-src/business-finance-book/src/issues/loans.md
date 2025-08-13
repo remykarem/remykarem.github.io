@@ -25,6 +25,6 @@ Can be treated the same as bank deposits with interests.
 
 [^blocking]: Sadd al-dharai3, a key concept in Islamic jurisprudence
 
-[^doubling]: O you who have believed, do not consume usury, doubled and multiplied, but fear Allah that you may be successful.
+[^doubling]: O you who have believed, do not consume usury, doubled and multiplied, but fear Allah that you may be successful. (Quran Ali Imran:130)
 
-[^consumption]: Based on a prominent Islamic modernist
+[^consumption]: Based on a prominent Islamic modernist. Productive loans help you to move on with life.
