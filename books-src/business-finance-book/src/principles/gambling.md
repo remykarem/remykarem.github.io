@@ -1,23 +1,13 @@
 # Gambling
 
+Gambling is haram[^gambling]. Suggesting it requires purification[^purify].
+
 Characteristics:
 * **Money/assets** at stake
 * Outcome depends on luck
 * Zero-sum nature
 * Lack of certainty (gharar)
 * No real economic value added
-
-~~~admonish quote
-"O you who believe! Intoxicants, gambling (maysir), sacrificing to stones, and divining arrows are an abomination of Satan’s handiwork. Avoid it so that you may succeed."
-
-From chatgpt, (Qur’an 5:90)
-~~~
-
-~~~admonish note
-Whoever says to another: ‘Come, let us gamble,’ must give charity.
-
-From ChatGPT, Sahih Bukhari
-~~~
 
 ## Money stake
 
@@ -44,3 +34,9 @@ From chatgpt
 ~~~admonish note title="Me on day trading"
 I am buying a lot of shares today, then I'll sell my shares the second i see the price is climbing so that I can profit a lot.
 ~~~
+
+---
+
+[^gambling]: "O you who believe! Intoxicants, gambling (maysir), sacrificing to stones, and divining arrows are an abomination of Satan’s handiwork. Avoid it so that you may succeed." (Quran Al-Maedah:90)
+
+[^purify]: Whoever says to another: ‘Come, let us gamble,’ must give charity.
