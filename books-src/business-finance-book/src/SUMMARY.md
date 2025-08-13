@@ -179,7 +179,7 @@
 # Insurance
 
 - [Takaful]()
-- [Insurance]()
+- [Insurance](./insurance/index.md)
 
 ---
 
