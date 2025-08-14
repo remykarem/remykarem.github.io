@@ -1,5 +1,7 @@
 # Loans
 
+#### On lending people money
+
 Ihsan[^ihsan]
 
 It will be a plus for the borrower to return a little more[^returnmore].
