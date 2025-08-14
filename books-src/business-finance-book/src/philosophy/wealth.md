@@ -2,27 +2,31 @@
 
 ## On being wealthy
 
-Being wealthy[^companions] has its virtues[^grace] [^confirmed] and accountability[^reckoning1] [^reckoning2].
+It's okay to be wealthy[^companions] [^confirmed].
 
-If given a choice, the wealthier option is probably a better one[^upperhand].
+In fact, being wealthy has its virtues[^grace], but that comes with accountability[^reckoning1] [^reckoning2].
 
-To be a strong Muslim.[^strongmuslim]
+If given a choice, being wealthy could be a better option[^upperhand].
 
-## On greed
+It makes you a strong Muslim[^strongmuslim] financially.
 
-Put your money in your hand, not your heart.[^moneyinhand]
+### On greed for wealth
 
-## On managing finances well
+Having more wealth is usually associated with greed. But if you put your money in your hand, not your heart[^moneyinhand], then you have greater control.
 
-Islam encourages
-* balanced spending[^balanced]
-* entrusting your finances to the right people[^entrust]
+### On managing finances well
 
-## On planning for dependents
+We're encouraged to maintain:
+* a balanced spending[^balanced], and
+* entrust our finances to the right people[^entrust].
 
-Planning for dependents[^dependents]
+### On legacy planning
 
-## On growing money
+We're also encouraged to plan the finances for dependents and for our death[^dependents].
+
+### On growing money
+
+If a lot of money that we have is just getting "taxed", then it might be good to invest it instead.[^reducedwealth]
 
 Salman Al-farisi divides his wealth into 3 parts, one of it is investments.[^salmanalfarisi]
 
@@ -30,9 +34,9 @@ Salman Al-farisi divides his wealth into 3 parts, one of it is investments.[^sal
 
 [^companions]: Examples of wealthy companions: Khadijah bte Khuwallid, Abu Bakar As-Siddiq, Umar ibn Al-Khattab, Uthman ibn Affan
 
-[^grace]: The poor amongst the Muslims who migrated from Makkah to Madinah came to the Prophet pbuh and said "O Messenger of Allah! The possessors of great wealth have obtained the highest ranks in Paradise and the lasting bliss." (Because of their acts of worship, charity and alms-giving). The Prophet pbuh said: This is Allah's grace which He gives to whom He wishes."
-
 [^confirmed]: One of the wealthiest businessmen in his era, Abdul Rahman bin Auf, was given the news of being one of the ten companions who are confirmed to enter Paradise.
+
+[^grace]: The poor amongst the Muslims who migrated from Makkah to Madinah came to the Prophet pbuh and said "O Messenger of Allah! The possessors of great wealth have obtained the highest ranks in Paradise and the lasting bliss." (Because of their acts of worship, charity and alms-giving). The Prophet pbuh said: This is Allah's grace which He gives to whom He wishes."
 
 [^reckoning1]: I stood at the gate of Paradise and saw that majority of the people who had entered were poor people, while the rich were forbidden (to e nter with the poor, because they were waiting for the reckoning of their accounts).
 
@@ -42,13 +46,14 @@ Salman Al-farisi divides his wealth into 3 parts, one of it is investments.[^sal
 
 [^strongmuslim]: Strong Muslim vs. weak Muslim hadeeth.
 
-[^moneyinhand]: citation needed
+[^moneyinhand]: “When there is money in your hand and not in your heart, it will not harm you even if it is plentiful. And when it is in your heart, it will harm you even if there is none in your hands.” — Imam Ibn al-Qayyim al-Jawziyyah
 
 [^balanced]: They are those who spend neither wastefully nor stingily, but moderately in between.
 
 [^entrust]: Do not entrust the incapable among your dependants with your wealth which Allah has made a means of support for you, but feed and clothe from it, and speak to them kindly. (Quran Al-Nisa:5)
 
-[^dependents]: It is better for you to leave your heirs wealthy than to leave them poor, begging from people.
-(Bukhari, Muslim)
+[^dependents]: It is better for you to leave your heirs wealthy than to leave them poor, begging from people. (Bukhari, Muslim)
+
+[^reducedwealth]: Let it be known that whoever becomes a custodian for the wealth of an orphan, it is upon him to trade the wealth as to avoid the hwealth to be reduced by the paying of Zakat.
 
 [^salmanalfarisi]: citation needed
