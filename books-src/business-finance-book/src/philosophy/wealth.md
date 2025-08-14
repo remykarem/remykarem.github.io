@@ -1,30 +1,30 @@
 # Wealth
 
-## On being wealthy
+#### On being wealthy
 
 It's okay to be wealthy[^companions] [^confirmed].
 
-In fact, being wealthy has its virtues[^grace], but that comes with accountability[^reckoning1] [^reckoning2].
+In fact, being wealthy is a grace[^grace] and opens doors to many opportunities for good deeds[^grace], but that comes with accountability[^reckoning1] [^reckoning2].
 
 If given a choice, being wealthy could be a better option[^upperhand].
 
 It makes you a strong Muslim[^strongmuslim] financially.
 
-### On greed for wealth
+#### On greed for wealth
 
 Having more wealth is usually associated with greed. But if you put your money in your hand, not your heart[^moneyinhand], then you have greater control.
 
-### On managing finances well
+#### On managing finances well
 
 We're encouraged to maintain:
 * a balanced spending[^balanced], and
 * entrust our finances to the right people[^entrust].
 
-### On legacy planning
+#### On legacy planning
 
 We're also encouraged to plan the finances for dependents and for our death[^dependents].
 
-### On growing money
+#### On growing money
 
 If a lot of money that we have is just getting "taxed", then it might be good to invest it instead.[^reducedwealth]
 

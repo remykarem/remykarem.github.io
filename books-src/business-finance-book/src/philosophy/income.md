@@ -1,5 +1,7 @@
 # Income
 
+#### On earning your own income
+
 There is virtue in earning a living through one's own labour (as opposed to receiving it).[^firewood] [^ownhand]
 
 ---
