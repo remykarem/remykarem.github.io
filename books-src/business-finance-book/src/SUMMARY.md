@@ -10,6 +10,7 @@
 - [Income](./philosophy/income.md)
 - [Loans](./philosophy/loans.md)
 - [Trade](./philosophy/trade.md)
+- [Real economic activity](./philosophy/real-economic-activity.md)
 
 ---
 
