@@ -1,3 +1,0 @@
-# Day trading
-
-???
