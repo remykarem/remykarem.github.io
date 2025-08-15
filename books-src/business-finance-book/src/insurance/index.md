@@ -14,9 +14,9 @@ Product depends on:
 
 ~~~admonish tip title="Where does the premium go to?"
 * Insurance coverage itself
-* Reserve — for the insurer to invest
+* Reserve — for the insurer to invest (not applicable to term insurance)
 
-The reserve grows over time, either at a guaranteed rate or based on market performance.
+  The reserve grows over time, either at a guaranteed rate or based on market performance.
 ~~~
 
 Purpose:
