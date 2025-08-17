@@ -54,7 +54,7 @@
   - [Insurance](./issues/insurance.md)
   - [NFT]()
 - [Investment](./issues/investment.md)
-  - [Guaranteed returns](./issues/guaranteed-returns.md)
+  - [Guaranteed returns](./issues/investment/guaranteed-returns.md)
   - [Day trading](./issues/day-trading.md)
 - [Others]()
   - [Lucky draw](./issues/lucky-draw.md)
