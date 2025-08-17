@@ -18,7 +18,7 @@
 
 - [Oppression]()
 - [Contracts](./principles/binding-promise.md)
-  - [Trustee](./principles/savings.md)
+- [Wadiah](./principles/savings.md)
 - [Income](./principles/income.md)
 - [Loans](./principles/money-lending.md)
   - [Riba (loans)](./principles/riba-quraniy.md)
