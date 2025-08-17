@@ -52,6 +52,7 @@
   - [Fiat money](./issues/money.md)
   - [Currency exchange](./issues/forex.md)
   - [Purchase to order](./issues/purchase-to-order.md)
+  - [Installments]()
   - [Insurance](./issues/insurance.md)
   - [Counterfeit goods & services](./issues/counterfeit-goods-and-services.md)
   - [Cryptocurrency]()
@@ -66,10 +67,11 @@
 
 # Concepts
 
-- [Murabaha (cost-plus sale)]()
+- [Murabaha (cost-plus sale)](./concepts/murabaha.md)
 - [Leasing]()
 - [Ijara]()
 - [Bank loan]()
+- [Mudharaba (profit-sharing)]()
 
 ---
 
