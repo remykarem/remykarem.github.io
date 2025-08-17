@@ -8,10 +8,6 @@ Takaful is a _donation_ rather than a buy-sell transaction.
 It controls where the money and claims come from.
 ~~~
 
-Debatable because:
-* Gharar
-* Not because of riba al-fadhl?
-
 ~~~admonish question title="Ruling for term insurance"
 Majority: **Impermissible**
 
