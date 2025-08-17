@@ -11,6 +11,7 @@
 - [Loans](./philosophy/loans.md)
 - [Trade](./philosophy/trade.md)
 - [Real economic activity](./philosophy/real-economic-activity.md)
+- [Money doesn't make money](./philosophy/money-doesnt-make-money.md)
 
 ---
 
@@ -18,9 +19,9 @@
 
 - [Oppression]()
 - [Contracts](./principles/binding-promise.md)
+- [Income](./principles/income.md)
 - [Deposits]()
   - [Wadiah](./principles/savings.md)
-- [Income](./principles/income.md)
 - [Loans](./principles/money-lending.md)
   - [Riba (loans)](./principles/riba-quraniy.md)
 - [Trade](./principles/trade.md)
@@ -54,7 +55,7 @@
   - [Insurance](./issues/insurance.md)
   - [NFT]()
 - [Investment](./issues/investment.md)
-  - [Guaranteed returns](./issues/investment/guaranteed-returns.md)
+  - [Fixed guaranteed returns](./issues/investment/guaranteed-returns.md)
   - [Day trading](./issues/day-trading.md)
 - [Others]()
   - [Lucky draw](./issues/lucky-draw.md)
