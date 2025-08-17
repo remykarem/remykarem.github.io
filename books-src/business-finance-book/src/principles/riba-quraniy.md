@@ -1,6 +1,6 @@
 # Riba in loans
 
-Riba al-qardh
+Riba al-qardh / riba al-nasiah
 
 Excess compensation in a loan
 
