@@ -16,9 +16,9 @@ Permissible (3 views)
 ~~~admonish tip title="My take"
 Bank deposits nowadays don't function as deposits per se. 
 
-They're not really "borrowing money" from you, because imo we're the one initiating it.
+They're not really "borrowing money" from you, because imo we're the one initiating it. But in conventional finance, it's legally a loan. The bank guarantees (i) the principle and (ii) the interest. If I take this view, then imo it's permissible.
 
-They should be treated as "investments" because it is common knowledge that banks use the money for other purposes.
+They should be treated as "investments" because it is common knowledge that banks use the money for other purposes. Is Islamic Banking, savings accounts are usually structured as profit-sharing agreement (mudharaba).
 ~~~
 
 --- 
