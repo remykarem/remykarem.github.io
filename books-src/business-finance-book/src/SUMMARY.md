@@ -16,7 +16,6 @@
 
 # Shariah (you-should; you-should-nots; obligation; guideline; prohibition)
 
-- [Wealth]()
 - [Income](./principles/income.md)
 - [Loans](./principles/money-lending.md)
   - [Riba (loans)](./principles/riba-quraniy.md)
@@ -59,8 +58,6 @@
 # Business
 
 - [Ownership]()
-- [Buy/sell]()
-- [Profit & risk]()
 - [Modes of financing]()
   - [Bank loan]()
   - [Corporate bond]()
@@ -173,12 +170,6 @@
 - [MAS](./mas.md)
   - [Exchange rate management]()
   - [Liquidity management]()
----
-
-# Banking
-
-- [Time Deposit]()
-
 ---
 
 # Insurance
