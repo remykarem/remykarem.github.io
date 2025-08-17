@@ -16,6 +16,9 @@
 
 # Shariah (you-should; you-should-nots; obligation; guideline; prohibition)
 
+- [Oppression]()
+- [Contracts](./principles/binding-promise.md)
+- [Savings](./principles/savings.md)
 - [Income](./principles/income.md)
 - [Loans](./principles/money-lending.md)
   - [Riba (loans)](./principles/riba-quraniy.md)
@@ -26,7 +29,6 @@
 - [Investment](./principles/investment.md)
 - [Gambling](./principles/gambling.md)
 - [Blood money](./principles/blood-money.md)
-- [Contracts](./principles/binding-promise.md)
 
 ---
 
@@ -38,9 +40,11 @@
 
 - [Income]()
   - [Questionnable income](./issues/income.md)
+- [Savings]()
+  - [Conventional savings account]()
 - [Loans]()
-  - [Conventional savings accounts]()
   - [Conventional loans](./issues/loans.md)
+  - [Credit cards](./issues/credit-cards.md)
 - [Transactions]()
   - [Fiat money](./issues/money.md)
   - [Cryptocurrency]()
