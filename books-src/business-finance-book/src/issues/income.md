@@ -10,6 +10,10 @@ Permissible:
 
 ~~~
 
+~~~admonish tip title="My take"
+Permissible. Might be biased because I'm an example.
+~~~
+
 ---
 
 [^injustice]: (Quran Al-Baqarah:279)

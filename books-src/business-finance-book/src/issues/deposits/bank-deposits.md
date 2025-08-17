@@ -13,6 +13,14 @@ Permissible (3 views)
 
 ~~~
 
+~~~admonish tip title="My take"
+Bank deposits nowadays don't function as deposits per se. 
+
+They're not really "borrowing money" from you, because imo we're the one initiating it.
+
+They should be treated as "investments" because it is common knowledge that banks use the money for other purposes.
+~~~
+
 --- 
 
 [^benefit]: Classical Islamic legal maxim

@@ -29,6 +29,9 @@ Others
 * Not about choosing the easiest, but choosing something that depends on you
 * Anything that it’s too restrictive, relax, anything too relax, restrict
 
+Never:
+* Say exclusively that someone's action (even yours) is haram.
+
 ---
 
 [^subjected]: Have you not seen that Allah has subjected to you whatever is in the heavens and whatever is in the earth? (Quran Luqman:20)

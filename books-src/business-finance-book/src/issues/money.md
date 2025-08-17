@@ -5,8 +5,17 @@ Fiat money has value because governments declare them legal tender[^legal tender
 ~~~admonish question="Can monetary value be extended to paper money?"
 
 Majority: **yes**
-Minorty: cannot be extended
 
+Minority: cannot be extended
+
+~~~
+
+~~~admonish tip title="My take"
+Fiat money to me has monetary value.
+
+The monetary value of something is subjective, even gold.
+
+But it is also authoritative, depending on where you live. You basically can't choose whether it has value or not. You live in a country that accepts printable paper money to have monetary value, you go with it.
 ~~~
 
 ---

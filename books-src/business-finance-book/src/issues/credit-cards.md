@@ -1,7 +1,7 @@
 # Credit cards
 
-~~~admonish question title="Credit card"
+~~~admonish tip title="My take"
+The late payment fees are usually exploitative.
 
-Can be treated the same as bank deposits with interests.
-
+Hence not permissible.
 ~~~
