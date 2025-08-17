@@ -39,6 +39,7 @@
 - [Income]()
   - [Questionnable income](./issues/income.md)
 - [Loans]()
+  - [Conventional savings accounts]()
   - [Conventional loans](./issues/loans.md)
 - [Transactions]()
   - [Fiat money](./issues/money.md)
@@ -55,28 +56,31 @@
 
 ---
 
-# Business
+# Concepts
 
-- [Ownership]()
-- [Modes of financing]()
-  - [Bank loan]()
-  - [Corporate bond]()
-  - [Sukuk]()
-  - [Joint venture (musharakah)]()
-  - [Leasing (ijara)]()
-  - [Murabaha (cost-plus sale)]()
-  - [Mudharaba (profit-sharing)]()
+- [Murabaha (cost-plus sale)]()
+- [Leasing]()
+- [Ijara]()
+- [Bank loan]()
 
 ---
 
-# Investment goals: Profiting from
+# Commodities
 
-- [Dividends]()
-- [Productive assets]()
-- [Value appreciation]()
-- [Market fluctuations]()
-- [Interest]()
+- [???]()
 
+# Business
+
+- [Ownership]()
+  - [Equity]()
+- [Partnership]()
+  - [Limited partnership]()
+  - [Joint venture (musharakah)]()
+  - [Mudharaba (profit-sharing)]()
+
+# Property
+
+- [???]()
 ---
 
 # Direct ownership
@@ -88,14 +92,10 @@
   - [REIT]()
 - [Commodity]()
 
----
-
 # Indirect ownership: Investment vehicles
 
 - [ETF]()
 - [Mutual fund]()
-
----
 
 # No ownership
 
@@ -103,7 +103,7 @@
 
 ---
 
-# Investments: Primary market
+# Primary market
 
 - [Goal](./finance/primary-market/goal.md)
 - [Activities]()
@@ -124,9 +124,7 @@
   - [Bonds]()
   - [ETFs]()
 
----
-
-# Investments: Secondary market
+# Secondary market
 
 - [Goal](./finance/secondary-market/goal.md)
 - [Index](./finance/index.md)
@@ -187,6 +185,17 @@
 - [Trend following]()
 
 --- 
+
+# Investment goals: Profiting from
+
+- [Dividends]()
+- [Productive assets]()
+- [Value appreciation]()
+- [Market fluctuations]()
+- [Interest]()
+
+---
+
 
 # Trading activities
 
