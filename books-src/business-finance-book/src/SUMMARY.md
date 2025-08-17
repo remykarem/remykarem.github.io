@@ -53,6 +53,7 @@
   - [Currency exchange](./issues/forex.md)
   - [Purchase to order](./issues/purchase-to-order.md)
   - [Insurance](./issues/insurance.md)
+  - [Counterfeit goods & services](./issues/counterfeit-goods-and-services.md)
   - [Cryptocurrency]()
   - [NFT]()
 - [Investment](./issues/investment.md)
