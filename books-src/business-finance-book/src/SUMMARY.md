@@ -40,8 +40,8 @@
 
 - [Income]()
   - [Questionnable income](./issues/income.md)
-- [Savings]()
-  - [Conventional savings account]()
+- [Deposits]()
+  - [Conventional bank deposits](./issues/deposits/bank-deposits.md)
 - [Loans]()
   - [Conventional loans](./issues/loans.md)
   - [Credit cards](./issues/credit-cards.md)
