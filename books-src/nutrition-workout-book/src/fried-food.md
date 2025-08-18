@@ -3,9 +3,10 @@
 Why is fried food so bad?
 
 * **Fat oxidation** — lipid peroxides, aldehydes, trans fat can increase oxidative stress
-* **Easily high calories** — Because of oil absorption especially with batter
+* **Calorie dense** — Because of oil absorption especially with batter
 * **Advanced Glycation End Products** — Frying causes proteins and sugars in food to react, forming AGEs.
 * Low in nutrients (because of refined oil) — decrease in neutralisation of ROS
+* **Reuse** — oil in deep fried foods are usually reused, increase fat oxidation
 
 How is oil refined?
 * Extract (high heat, oxygen)
