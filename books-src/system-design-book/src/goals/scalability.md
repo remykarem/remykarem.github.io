@@ -21,11 +21,17 @@ Scaling up and down dynamically
 
 **Improving scalability**
 
-- Profiling
-- Caching
+Services
+- Caching layer
+- Load balancing
+- Asynchronous processing / queues — offloading heavy or long-running tasks
+- Horizontal scaling
+- Microservices / modular architecture
 - CDN
-- Data compression
-- Avoid unnecessary client-server requests
+
+Application
+- Data structure optimisation etc.
+- Database sharding
 
 **Testing scalability**
 
