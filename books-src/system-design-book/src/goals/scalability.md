@@ -19,12 +19,12 @@ Types of scaling:
 
 Scaling up and down dynamically
 
-**Improving scalability**
+**Strategies to improve scalability**
 
 Services
 - Caching layer
 - Load balancing
-- Asynchronous processing / queues — offloading heavy or long-running tasks
+- Asynchronous processing / queues / batch jobs — offloading heavy or long-running tasks
 - Horizontal scaling
 - Microservices / modular architecture
 - CDN
