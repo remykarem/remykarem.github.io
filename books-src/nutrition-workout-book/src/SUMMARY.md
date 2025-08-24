@@ -94,6 +94,7 @@
   - [Vitamin B]()
     - [Vitamin B3 (Niacinamide)](./biochemistry/vitamins/vitamin-b3.md)
     - [Vitamin B7 (Biotin)](./biochemistry/vitamins/vitamin-b7.md)
+    - [Vitamin B9 (Folate)](./biochemistry/vitamins/vitamin-b9.md)
     - [Vitamin B12](./biochemistry/vitamins/vitamin-b12.md)
   - [Vitamin C](./biochemistry/vitamins/vitamin-c.md)
   - [Vitamin D](./biochemistry/vitamins/vitamin-d.md)
@@ -117,7 +118,8 @@
  
 # Properties
 
-- [Antioxidant]()
+- [Antinutrient](./biochemistry/antinutrients.md)
+- [Antioxidants]()
 
 # Biochemistry
 
@@ -150,6 +152,11 @@
   - [Moisturiser]()
 
 ---
+
+# Nutrition: Ratios and scores
+
+- [Ratios](./nutrition/ratios-scores/ratios.md)
+- [Scores](./nutrition/ratios-scores/scores.md)
 
 # Medicine: Drugs
 
