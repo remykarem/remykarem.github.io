@@ -18,3 +18,48 @@ ORAC (Oxygen Radical Absorbance Capacity)
 12. **Mango** (ripe, yellow-flesh) – 1,500–2,000
 
 *usually preserved fruits
+
+### Immune health
+
+* Folate
+* B12
+* Vitamin A
+* Copper
+* Zinc
+* Vitamin D
+* Vitamin C
+* Omega-3
+* Omega-6
+
+### Antioxidants
+
+* Vitamin C
+* Vitamin E
+* Beta-carotene
+* Vitamin B2
+* Copper
+* Zinc
+* Manganese
+* Selenium
+
+### Bone health
+
+* Calcium
+* Phosphorous
+* Magnesium
+* Vitamin D
+* Vitamin K
+* Manganese
+* Potassium
+
+### Metabolism support
+
+* B1
+* B2
+* B3
+* B5
+* B6
+* Choline
+* Iron
+* Magnesium
+* Manganese
