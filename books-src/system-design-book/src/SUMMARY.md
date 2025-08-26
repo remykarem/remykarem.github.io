@@ -114,7 +114,7 @@
 
 # API design
 
-- [API architectural styles](./api-design/api-architectural-styles/index.md)
+- [API designs](./api-design/api-architectural-styles/index.md)
   - [REST](./api-design/api-architectural-styles/rest.md)
   - [GraphQL](./api-design/api-architectural-styles/graphql.md)
   - [gRPC](./api-design/api-architectural-styles/grpc.md)
