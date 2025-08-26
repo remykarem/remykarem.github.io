@@ -10,8 +10,11 @@ Saturated fats should come less than 10% of daily calorie intake.
 
 Found typically in animal products and tropical plant oils
 
-* **Palmitic acid** — meat, dairy, palm oil, butter
-* **Stearic acid** — meat, dairy, chocolate
+* **Palmitic acid** — meat, dairy, palm oil, butter, cocoa butter
+* **Stearic acid** — meat, dairy, cocoa butter
+
+  The body converts it into oleic acid
+  
 * Lauric acid — coconut oil
 * MCTs — coconut oil
 * Fully hydrogenated oils — Processed foods, shelf-stable baked goods
