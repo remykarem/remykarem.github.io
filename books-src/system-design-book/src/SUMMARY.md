@@ -261,11 +261,13 @@
 
 ---
 
-# Interface description languages
+# Interface description languages / schema types
 
-- [Protobuf](./others/protobuf.md)
-- [ASN.1](./others/asn1.md)
+- [Data class/struct definitions]()
 - [JSON schema](./others/json-schema.md)
+- [GraphQL schema](./others/sdl.md)
+- [ASN.1](./others/asn1.md)
+- [Protobuf](./others/protobuf.md)
 - [Apache Thrift]()
 
 ---
