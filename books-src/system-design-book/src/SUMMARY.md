@@ -11,6 +11,15 @@
 
 ---
 
+# Design principles
+
+- [Idempotency](./design-principles/idempotency.md)
+- [Data locality](./design-principles/data-locality.md)
+- [Efficient use of resources](./design-principles/efficient-use-of-resources.md)
+- [Single source of truth](./design-principles/single-source-of-truth.md)
+
+---
+
 # Goals
 
 - [Scalability](./goals/scalability.md)
@@ -179,15 +188,6 @@
   - [Microservices](./patterns/microservices.md)
   - [Service-oriented architecture]()
   - [Layered]()
-
----
-
-# Design principles
-
-- [Idempotency](./design-principles/idempotency.md)
-- [Data locality](./design-principles/data-locality.md)
-- [Efficient use of resources](./design-principles/efficient-use-of-resources.md)
-- [Single source of truth](./design-principles/single-source-of-truth.md)
 
 ---
 
