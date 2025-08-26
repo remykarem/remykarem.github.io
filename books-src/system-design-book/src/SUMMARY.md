@@ -263,12 +263,11 @@
 
 # Interface description languages / schema types
 
-- [Data class/struct definitions]()
+- [Data class/struct definition]()
 - [JSON schema](./others/json-schema.md)
 - [GraphQL schema](./others/sdl.md)
-- [ASN.1](./others/asn1.md)
-- [Protobuf](./others/protobuf.md)
-- [Apache Thrift]()
+- [ASN.1 definition](./others/asn1.md)
+- [Protobuf definition](./others/protobuf.md)
 
 ---
 
