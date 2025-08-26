@@ -1,28 +1,46 @@
-# SDL
+# GraphQL schema
 
-Schema Definition Language, used in GraphQL
+aka Schema Definition Language, used in GraphQL
 
-Example:
+Example schema:
 
-```
-schema {
-  query: Query
-}
-
-type Author {
-  authorName: String
-  Books: [Book]
-}
-
+```graphql
+# Define a "Book" type
 type Book {
-  bookName: String
-  Authors: [Author]
+  id: ID!
+  title: String!
+  author: String!
 }
 
+# Root Query type
 type Query {
-  getAuthor(authorName: String): Author
-  getBook(bookName: String): Book
+  books: [Book!]!      # Returns a list of books
+  book(id: ID!): Book  # Returns a single book by ID
 }
 ```
 
-Source: https://docs.aws.amazon.com/appsync/latest/devguide/designing-your-schema.html
+Example query:
+
+```graphql
+# Fetch all books (id, title, author)
+query {
+  books {
+    id
+    title
+    author
+  }
+}
+```
+
+Example result:
+
+```json
+{
+  "data": {
+    "books": [
+      { "id": "1", "title": "1984", "author": "George Orwell" },
+      { "id": "2", "title": "Brave New World", "author": "Aldous Huxley" }
+    ]
+  }
+}
+```

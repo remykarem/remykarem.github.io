@@ -29,4 +29,3 @@ into binary (not real):
 ```
 
 Examples adapted from https://protobuf.dev.
-
