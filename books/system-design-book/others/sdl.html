@@ -177,29 +177,42 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="sdl"><a class="header" href="#sdl">SDL</a></h1>
-<p>Schema Definition Language, used in GraphQL</p>
-<p>Example:</p>
-<pre><code>schema {
-  query: Query
-}
-
-type Author {
-  authorName: String
-  Books: [Book]
-}
-
+                        <h1 id="graphql-schema"><a class="header" href="#graphql-schema">GraphQL schema</a></h1>
+<p>aka Schema Definition Language, used in GraphQL</p>
+<p>Example schema:</p>
+<pre><code class="language-graphql"># Define a &quot;Book&quot; type
 type Book {
-  bookName: String
-  Authors: [Author]
+  id: ID!
+  title: String!
+  author: String!
 }
 
+# Root Query type
 type Query {
-  getAuthor(authorName: String): Author
-  getBook(bookName: String): Book
+  books: [Book!]!      # Returns a list of books
+  book(id: ID!): Book  # Returns a single book by ID
 }
 </code></pre>
-<p>Source: https://docs.aws.amazon.com/appsync/latest/devguide/designing-your-schema.html</p>
+<p>Example query:</p>
+<pre><code class="language-graphql"># Fetch all books (id, title, author)
+query {
+  books {
+    id
+    title
+    author
+  }
+}
+</code></pre>
+<p>Example result:</p>
+<pre><code class="language-json">{
+  &quot;data&quot;: {
+    &quot;books&quot;: [
+      { &quot;id&quot;: &quot;1&quot;, &quot;title&quot;: &quot;1984&quot;, &quot;author&quot;: &quot;George Orwell&quot; },
+      { &quot;id&quot;: &quot;2&quot;, &quot;title&quot;: &quot;Brave New World&quot;, &quot;author&quot;: &quot;Aldous Huxley&quot; }
+    ]
+  }
+}
+</code></pre>
 
                     </main>
 

@@ -2,7 +2,7 @@
 
 [X.680](http://www.itu.int/rec/T-REC-X.680/en) (ASN.1), [X.690](https://www.itu.int/rec/T-REC-X.690/en) (Encoding rules)
 
-With an **ASN.1 specification**
+Example ASN.1 specification:
 
 ```asn1
 FooProtocol DEFINITIONS ::= BEGIN
@@ -20,20 +20,23 @@ FooProtocol DEFINITIONS ::= BEGIN
 END
 ```
 
-you can serialise the data for a certain `trackingNumber` 5 and `question` "Anybody there?" using an **encoding method** like DER into binary:
+Corresponding example of data in binary:
 
 ```
 30 13 02 01 05 16 0e 41 6e 79 62 6f 64 79 20 74 68 65 72 65 3f
 ```
 
-Here are some encoding methods:
-* BER (to binary)
+which is the serialised data (in this case DER-encoded) for trackingNumber `05` and question `"Anybody there?"`.
+
+## Encoding methods
+
 * DER (to binary)
+* BER (to binary)
 * PER (to binary)
 * XER (to XML)
 * JER (to JSON)
 
-## Encoding: DER
+### DER
 
 The DER encoding method follows a **type**-**length**-**value** syntax.
 

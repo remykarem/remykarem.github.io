@@ -179,7 +179,7 @@
                     <main>
                         <h1 id="asn1"><a class="header" href="#asn1">ASN.1</a></h1>
 <p><a href="http://www.itu.int/rec/T-REC-X.680/en">X.680</a> (ASN.1), <a href="https://www.itu.int/rec/T-REC-X.690/en">X.690</a> (Encoding rules)</p>
-<p>With an <strong>ASN.1 specification</strong></p>
+<p>Example ASN.1 specification:</p>
 <pre><code class="language-asn1">FooProtocol DEFINITIONS ::= BEGIN
 
     FooQuestion ::= SEQUENCE {
@@ -194,18 +194,19 @@
 
 END
 </code></pre>
-<p>you can serialise the data for a certain <code>trackingNumber</code> 5 and <code>question</code> &quot;Anybody there?&quot; using an <strong>encoding method</strong> like DER into binary:</p>
+<p>Corresponding example of data in binary:</p>
 <pre><code>30 13 02 01 05 16 0e 41 6e 79 62 6f 64 79 20 74 68 65 72 65 3f
 </code></pre>
-<p>Here are some encoding methods:</p>
+<p>which is the serialised data (in this case DER-encoded) for trackingNumber <code>05</code> and question <code>&quot;Anybody there?&quot;</code>.</p>
+<h2 id="encoding-methods"><a class="header" href="#encoding-methods">Encoding methods</a></h2>
 <ul>
-<li>BER (to binary)</li>
 <li>DER (to binary)</li>
+<li>BER (to binary)</li>
 <li>PER (to binary)</li>
 <li>XER (to XML)</li>
 <li>JER (to JSON)</li>
 </ul>
-<h2 id="encoding-der"><a class="header" href="#encoding-der">Encoding: DER</a></h2>
+<h3 id="der"><a class="header" href="#der">DER</a></h3>
 <p>The DER encoding method follows a <strong>type</strong>-<strong>length</strong>-<strong>value</strong> syntax.</p>
 <ul>
 <li><strong>type</strong>: can be primitive or constructed</li>
