@@ -1,5 +1,7 @@
 # JSON schema
 
+Example:
+
 ~~~json
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
@@ -17,3 +19,12 @@
     "required": ["name"]
 }
 ~~~
+
+Example JSON:
+
+```json
+{
+  "name": "Alice",
+  "age": 30
+}
+```
