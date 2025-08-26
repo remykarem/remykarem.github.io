@@ -112,22 +112,6 @@
 
 ---
 
-# API design
-
-- [API designs](./api-design/api-architectural-styles/index.md)
-  - [REST](./api-design/api-architectural-styles/rest.md)
-  - [GraphQL](./api-design/api-architectural-styles/graphql.md)
-  - [gRPC](./api-design/api-architectural-styles/grpc.md)
-  - [SOAP](./api-design/api-architectural-styles/soap.md)
-- [API versioning](./api-design/versioning.md)
-- [Batch processing](./api-design/batch-processing.md)
-- [API performance](./api-design/api-peformance.md)
-- [Encoding signatures](./api-design/encoding-signatures.md)
-- [Retry-safe]()
-- [Handling large payloads](./api-design/handling-large-payloads.md)
-
----
-
 # Data sync / getting new data patterns
 
 - [Polling](./data-sync/polling/index.md)
@@ -210,6 +194,22 @@
 # Deployment strategies
 
 - [Deployment strategies](./others/deployment-strategies.md)
+
+---
+
+# API design
+
+- [API designs](./api-design/api-architectural-styles/index.md)
+  - [REST](./api-design/api-architectural-styles/rest.md)
+  - [GraphQL](./api-design/api-architectural-styles/graphql.md)
+  - [gRPC](./api-design/api-architectural-styles/grpc.md)
+  - [SOAP](./api-design/api-architectural-styles/soap.md)
+- [API versioning](./api-design/versioning.md)
+- [Batch processing](./api-design/batch-processing.md)
+- [API performance](./api-design/api-peformance.md)
+- [Encoding signatures](./api-design/encoding-signatures.md)
+- [Retry-safe]()
+- [Handling large payloads](./api-design/handling-large-payloads.md)
 
 ---
 
