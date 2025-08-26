@@ -2,9 +2,9 @@
 
 aka Translation Layer
 
-This layer is responsible for converting the data. "Converting" here usually means **encryption**.
+This layer is responsible for converting the data. "Converting" here usually means _encryption_.
 
-This layer helps with establishing a secure channel.
+The purpose of this layer is to **establish a secure channel***.
 
 TLS vs. SSH:
 
