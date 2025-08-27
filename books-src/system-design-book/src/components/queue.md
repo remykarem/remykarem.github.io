@@ -2,6 +2,10 @@
 
 Verbs: "produce" message, "consume" message
 
+~~~admonish note title="Pattern"
+Point-to-point
+~~~
+
 Purpose:
 * [Short-term (limited) message **storage**](../core-functionalities/data-storage.md) 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
