@@ -101,7 +101,7 @@
 - [Step Functions](./components/step-functions.md)
 - [Load balancer](./components/reverse-proxy.md)
 - [Event bus service](./components/event-bus-service.md)
-- [Pub/Sub messaging service](./components/pub-sub-service.md)
+- [Notification service](./components/pub-sub-service.md)
 
 ---
 
