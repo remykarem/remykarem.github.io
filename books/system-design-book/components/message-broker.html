@@ -179,11 +179,50 @@
                     <main>
                         <h1 id="event-stream"><a class="header" href="#event-stream">Event stream</a></h1>
 <p>aka message broker (?)</p>
+<div id="admonition-pattern" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Pattern</p>
+<p><a class="admonition-anchor-link" href="#admonition-pattern"></a></p>
+</div>
+<div>
+<p>This is a Pub/Sub service.</p>
+</div>
+</div>
 <p>Purposes:</p>
 <ul>
 <li><a href="../core-functionalities/data-storage.html">Message <strong>storage</strong> (FIFO)</a></li>
 <li><a href="../core-functionalities/routing.html"><strong>Routing</strong> of messages</a></li>
 <li>Message transformation</li>
+<li>Multiple subscribers (&quot;pub/sub&quot;)</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Messages / events are <strong>ordered</strong> by <em>shard</em> or <em>partition</em></li>
+<li>Replay messages</li>
+<li>Longer retention period (than message queue)</li>
+</ul>
+<p>Best for:</p>
+<ul>
+<li>
+<p>Logs</p>
+</li>
+<li>
+<p>Real-time streaming pipelines</p>
+</li>
+<li>
+<p>Analytics</p>
+</li>
+<li>
+<p>Complex streaming with joins &amp; state — An event might need to be processed with other events</p>
+<ul>
+<li>Stream–stream join (orders ↔ payments) with a sliding time window.</li>
+<li>Stream–table joins (enrich with customer_risk, check inventory).</li>
+<li>Stateful aggregations (rolling per-customer spend in last 24h).</li>
+<li>De-dup and out-of-order handling (watermarks/grace period).</li>
+<li>Repartitioning by keys to co-locate state.</li>
+<li>Exactly-once processing to avoid double-emitting shipments.</li>
+</ul>
+</li>
 </ul>
 <div id="admonition-example" class="admonition admonish-example">
 <div class="admonition-title">
@@ -191,16 +230,7 @@
 <p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
 </div>
 <div>
-<p>Apache Kafka, RabbitMQ.</p>
-</div>
-</div>
-<div id="admonition-note" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Note</p>
-<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
-</div>
-<div>
-<p>Amazon SNS is not a message broker.</p>
+<p>AWS Kinesis Data Streams, Apache Kafka, RabbitMQ.</p>
 </div>
 </div>
 
