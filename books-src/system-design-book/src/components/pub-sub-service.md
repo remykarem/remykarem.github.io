@@ -1,7 +1,11 @@
-# Pub/Sub messaging service
+# Pub/sub messaging service
 
 Purpose:
 * [Asynchronous message **routing**](../core-functionalities/routing.md)
+
+~~~admonish tip
+Such a service (eg. SNS) is like an event stream / Kakfa but wiht zero complex transformation capabilities.
+~~~
 
 Features:
 * Message filtering
