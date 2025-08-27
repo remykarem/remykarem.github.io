@@ -9,6 +9,7 @@ Point-to-point
 Purpose:
 * [Short-term (limited) message **storage**](../core-functionalities/data-storage.md) 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
+* Limited to one consumer at a time ("point-to-point")
 * Adding a [**layer of abstraction**](../strategies/adding-layer-of-abstraction.md) between (i) the producers of the message, and (ii) the consumers of the message. 
 
   The layer of abstraction allows the producer to produce messages _at its own pace_, and the consumers can similarly process messages _at their own pace_. The introduction of a queue therefore provides a _buffer_, allowing for differences in consumption rates and production rates. This _facilitates_ [scalability](../goals/scalability.md).

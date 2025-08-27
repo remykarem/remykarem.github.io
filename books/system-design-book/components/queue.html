@@ -197,6 +197,9 @@
 <p><a href="../core-functionalities/concurrency-control.html">Processing messages in order</a></p>
 </li>
 <li>
+<p>Limited to one consumer at a time (&quot;point-to-point&quot;)</p>
+</li>
+<li>
 <p>Adding a <a href="../strategies/adding-layer-of-abstraction.html"><strong>layer of abstraction</strong></a> between (i) the producers of the message, and (ii) the consumers of the message. </p>
 <p>The layer of abstraction allows the producer to produce messages <em>at its own pace</em>, and the consumers can similarly process messages <em>at their own pace</em>. The introduction of a queue therefore provides a <em>buffer</em>, allowing for differences in consumption rates and production rates. This <em>facilitates</em> <a href="../goals/scalability.html">scalability</a>.</p>
 </li>
