@@ -277,6 +277,20 @@
 </ul>
 </li>
 </ul>
+<div id="admonition-when-to-use-a-fifo-queue" class="admonition admonish-question">
+<div class="admonition-title">
+<p>When to use a FIFO queue?</p>
+<p><a class="admonition-anchor-link" href="#admonition-when-to-use-a-fifo-queue"></a></p>
+</div>
+<div>
+<p>You would use FIFO when the order of events is critical, or when duplicates cannot be tolerated:</p>
+<ul>
+<li>Integrating with a third-party systems where events need to be processed in order</li>
+<li>E-commerce order management system where order is critical</li>
+</ul>
+<p>Based on <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html">Getting started with Amazon SQS FIFO queues</a></p>
+</div>
+</div>
 <h2 id="types-of-queues-by-use-case"><a class="header" href="#types-of-queues-by-use-case">Types of queues by use case</a></h2>
 <ul>
 <li>
@@ -347,20 +361,6 @@
 </ul>
 </div>
 </div>
-<div id="admonition-when-to-use-a-fifo-queue" class="admonition admonish-question">
-<div class="admonition-title">
-<p>When to use a FIFO queue?</p>
-<p><a class="admonition-anchor-link" href="#admonition-when-to-use-a-fifo-queue"></a></p>
-</div>
-<div>
-<p>You would use FIFO when the order of events is critical, or when duplicates cannot be tolerated:</p>
-<ul>
-<li>Integrating with a third-party systems where events need to be processed in order</li>
-<li>E-commerce order management system where order is critical</li>
-</ul>
-<p>Based on <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html">Getting started with Amazon SQS FIFO queues</a></p>
-</div>
-</div>
 <h2 id="patterns"><a class="header" href="#patterns">Patterns</a></h2>
 <p>Reading and deleting patterns can differ by these characteristics:</p>
 <ul>
@@ -380,8 +380,8 @@
 <li>Error handling (if multiple workers)</li>
 <li>Whether duplicates might arise from the different workers (if no. of workers is more than 1)</li>
 </ul>
-<p>keywords
-inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window</p>
+<p>keywords:</p>
+<p>inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window</p>
 
                     </main>
 
