@@ -181,8 +181,16 @@
 <p>Verbs: &quot;produce&quot; message, &quot;consume&quot; message</p>
 <p>Purpose:</p>
 <ul>
-<li><a href="../core-functionalities/data-storage.html">Short-term (limited) message <strong>storage</strong></a> </li>
-<li><a href="../core-functionalities/concurrency-control.html">Processing messages in order</a></li>
+<li>
+<p><a href="../core-functionalities/data-storage.html">Short-term (limited) message <strong>storage</strong></a> </p>
+</li>
+<li>
+<p><a href="../core-functionalities/concurrency-control.html">Processing messages in order</a></p>
+</li>
+<li>
+<p>Adding a <a href="../strategies/adding-layer-of-abstraction.html"><strong>layer of abstraction</strong></a> between (i) the producers of the message, and (ii) the consumers of the message. </p>
+<p>The layer of abstraction allows the producer to produce messages <em>at its own pace</em>, and the consumers can similarly process messages <em>at their own pace</em>. The introduction of a queue therefore provides a <em>buffer</em>, allowing for differences in consumption rates and production rates. This <em>facilitates</em> <a href="../goals/scalability.html">scalability</a>.</p>
+</li>
 </ul>
 <p>Actors:</p>
 <ul>
@@ -252,11 +260,6 @@
 </ul>
 </li>
 </ul>
-<p>Benefits:</p>
-<p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between (i) the producers of the message, and (ii) the consumers of the message. </p>
-<p>This layer of abstraction allows the producer to produce messages <em>at its own pace</em>, and the consumer can similarly process messages <em>at its own pace</em>.</p>
-<p>The introduction of a queue therefore provides a <strong>buffer</strong>, allowing for differences in consumption rates and production rates.</p>
-<p>This <em>facilitates</em> <a href="../goals/scalability.html">scalability</a>.</p>
 <h2 id="types-of-queues"><a class="header" href="#types-of-queues">Types of queues</a></h2>
 <ul>
 <li><strong>Standard queue</strong> is designed to prioritise higher throughput. This means:
