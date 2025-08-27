@@ -179,20 +179,22 @@
                     <main>
                         <h1 id="idempotency"><a class="header" href="#idempotency">Idempotency</a></h1>
 <p>An idempotent application is not adversely affected if the <em>same</em> message or request is processed more than once.</p>
-<p>Useful in systems where a request might be repeated (eg. in distributed queues)</p>
-<div id="admonition-idempotency-key" class="admonition admonish-tip">
+<p>Useful in systems where a request might be repeated (eg. in distributed queues).</p>
+<p>This is usually implemented using <strong>idempotency keys</strong>. Idempotency keys are used to prevent performing the same transaction more than once.</p>
+<div id="admonition-real-life-examples" class="admonition admonish-example">
 <div class="admonition-title">
-<p>Idempotency key</p>
-<p><a class="admonition-anchor-link" href="#admonition-idempotency-key"></a></p>
+<p>Real-life examples</p>
+<p><a class="admonition-anchor-link" href="#admonition-real-life-examples"></a></p>
 </div>
 <div>
-<p>Idempotency keys are used to prevent performing the same transaction more than once.</p>
 <p>Stripe<sup class="footnote-reference"><a href="#stripe">1</a></sup> and PayPal<sup class="footnote-reference"><a href="#paypal">2</a></sup> use them.</p>
 </div>
 </div>
 <div class="footnote-definition" id="stripe"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://stripe.com/docs/api/idempotent_requests">https://stripe.com/docs/api/idempotent_requests</a>
-<sup class="footnote-reference"><a href="#paypal">2</a></sup>: <a href="https://developer.paypal.com/reference/guidelines/idempotency/">https://developer.paypal.com/reference/guidelines/idempotency/</a></p>
+<p><a href="https://stripe.com/docs/api/idempotent_requests">https://stripe.com/docs/api/idempotent_requests</a></p>
+</div>
+<div class="footnote-definition" id="paypal"><sup class="footnote-definition-label">2</sup>
+<p><a href="https://developer.paypal.com/reference/guidelines/idempotency/">https://developer.paypal.com/reference/guidelines/idempotency/</a></p>
 </div>
 
                     </main>
