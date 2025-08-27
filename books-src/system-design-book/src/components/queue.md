@@ -35,7 +35,13 @@ Features:
 - [Batching](../strategies/batching.md)
 - Housekeeping — _message retention period_ is the maximum period how long a message can stay in the queue
 - TTL
-- Deduplication — limited capability
+- Automatic generation of "idempotency key" (Content-based deduplication window)
+
+  ~~~admonish question title="When would you use this?"
+  * Producers retrying their message (due to timeouts etc.)
+  * Producers don't generate idempotency key.
+  ~~~
+
 - Encryption at rest
 
 Guarantees:

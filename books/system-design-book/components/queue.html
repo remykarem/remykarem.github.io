@@ -242,7 +242,19 @@
 <p>TTL</p>
 </li>
 <li>
-<p>Deduplication — limited capability</p>
+<p>Automatic generation of &quot;idempotency key&quot; (Content-based deduplication window)</p>
+<div id="admonition-when-would-you-use-this" class="admonition admonish-question">
+<div class="admonition-title">
+<p>When would you use this?</p>
+<p><a class="admonition-anchor-link" href="#admonition-when-would-you-use-this"></a></p>
+</div>
+<div>
+<ul>
+<li>Producers retrying their message (due to timeouts etc.)</li>
+<li>Producers don't generate idempotency key.</li>
+</ul>
+</div>
+</div>
 </li>
 <li>
 <p>Encryption at rest</p>
