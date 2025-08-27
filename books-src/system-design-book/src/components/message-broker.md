@@ -1,8 +1,6 @@
-# Message broker
+# Event stream
 
-aka pub/sub service
-
-A message broker is a [message queue](./queue.md)++.
+aka message broker (?)
 
 Purposes:
 * [Message **storage** (FIFO)](../core-functionalities/data-storage.md)
