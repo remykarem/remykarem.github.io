@@ -5,6 +5,9 @@ Verbs: "produce" message, "consume" message
 Purpose:
 * [Short-term (limited) message **storage**](../core-functionalities/data-storage.md) 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
+* Adding a [**layer of abstraction**](../strategies/adding-layer-of-abstraction.md) between (i) the producers of the message, and (ii) the consumers of the message. 
+
+  The layer of abstraction allows the producer to produce messages _at its own pace_, and the consumers can similarly process messages _at their own pace_. The introduction of a queue therefore provides a _buffer_, allowing for differences in consumption rates and production rates. This _facilitates_ [scalability](../goals/scalability.md).
 
 Actors:
 * **Producer** — creates a message and pushes it into the queue
@@ -42,16 +45,6 @@ Guarantees:
   * messages delivered more than once
   * messages delivered out-of-order
   * Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.
-  
-Benefits:
-
-When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between (i) the producers of the message, and (ii) the consumers of the message. 
-
-This layer of abstraction allows the producer to produce messages _at its own pace_, and the consumer can similarly process messages _at its own pace_.
-
-The introduction of a queue therefore provides a **buffer**, allowing for differences in consumption rates and production rates.
-
-This _facilitates_ [scalability](../goals/scalability.md).
 
 ## Types of queues
 
