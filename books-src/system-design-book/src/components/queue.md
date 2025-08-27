@@ -56,6 +56,14 @@ Guarantees:
   * Strict FIFO
   * Every message is processed only once
   * High throughput (lower than that of Standard queue)
+ 
+~~~admonish question title="When to use a FIFO queue?"
+You would use FIFO when the order of events is critical, or when duplicates cannot be tolerated:
+* Integrating with a third-party systems where events need to be processed in order
+* E-commerce order management system where order is critical
+
+Based on [Getting started with Amazon SQS FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
+~~~
 
 ## Types of queues by use case
 
@@ -97,14 +105,6 @@ Guarantees:
 * Avoid partial failures when reading from a batch of messages
 ~~~
 
-~~~admonish question title="When to use a FIFO queue?"
-You would use FIFO when the order of events is critical, or when duplicates cannot be tolerated:
-* Integrating with a third-party systems where events need to be processed in order
-* E-commerce order management system where order is critical
-
-Based on [Getting started with Amazon SQS FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
-~~~
-
 ## Patterns
 
 Reading and deleting patterns can differ by these characteristics:
@@ -121,5 +121,6 @@ Some things to consider based on the patterns:
 * Error handling (if multiple workers)
 * Whether duplicates might arise from the different workers (if no. of workers is more than 1)
 
-keywords
+keywords:
+
 inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window
