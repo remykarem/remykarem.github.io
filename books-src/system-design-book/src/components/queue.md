@@ -2,19 +2,19 @@
 
 Verbs: "produce" message, "consume" message
 
-Actors:
-* **Producer** — creates a message and pushes it into the queue
-* **Consumer** — reads a message and deletes it from the queue
-
 Purpose:
 * [Short-term (limited) message **storage**](../core-functionalities/data-storage.md) 
 * [Processing messages in order](../core-functionalities/concurrency-control.md)
 
+Actors:
+* **Producer** — creates a message and pushes it into the queue
+* **Consumer** — reads a message and deletes it from the queue
+
 Features:
 
-- [Locking mechanism](../distributed-system/concurrency-control.md) — Messages are locked during processing, so that multiple producers can send and multiple consumers can receive messages _at the same time_.
-  
-  How does it work?
+- [Locking mechanism](../distributed-system/concurrency-control.md) — Messages are locked during processing, so that multiple producers can send and multiple consumers can receive messages _at the same time_. This helps with concurreny control.
+
+  ~~~admonish question title="How does it work?"
   1. When a consumer receives a message, the message becomes _temporarily hidden_ from other consumers.
   2. The consumer has to process it within a period of time k, then it becomes visible to consumers again. This is the **visibility timeout** period.
 
@@ -23,14 +23,17 @@ Features:
   * extended to cover the time required to process a batch of messages (in long polling, especially)
  
   If you want to release the lock while processing, you can set the visibility timeout to 0.
+  ~~~
+
+- Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately
 - Logical grouping of messages (with order within group)
 - Short polling or long polling
 - Integration with DLQ
 - [Batching](../strategies/batching.md)
-- Housekeeping — **message retention period** is the maximum period how long a message can stay in the queue
-- Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately
+- Housekeeping — _message retention period_ is the maximum period how long a message can stay in the queue
 - TTL
 - Deduplication — limited capability
+- Encryption at rest
 
 Guarantees:
 - [High availability](../goals/availability.md) — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
@@ -40,10 +43,6 @@ Guarantees:
   * messages delivered out-of-order
   * Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.
   
-
-Cloud features
-- Encryption at rest
-
 Benefits:
 
 When you introduce a queue with a web server, we are [adding a layer of abstraction](../strategies/adding-layer-of-abstraction.md) between (i) the producers of the message, and (ii) the consumers of the message. 
@@ -54,7 +53,7 @@ The introduction of a queue therefore provides a **buffer**, allowing for differ
 
 This _facilitates_ [scalability](../goals/scalability.md).
 
-Types of queues
+## Types of queues
 
 * **Standard queue** is designed to prioritise higher throughput. This means:
   * Not a strict FIFO ("Best-Effort Ordering")
@@ -64,7 +63,13 @@ Types of queues
   * Strict FIFO
   * Every message is processed only once
   * High throughput (lower than that of Standard queue)
+
+## Types of queues by use case
+
+* **Work queue** or **task queue** — designed to allow _multiple workers_ to consume tasks concurrently
+
 * **DLQ** — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully. Used for [manual intervention](../strategies/manual-intervention.md).
+
 * **Poison message queue** — a qurue that stores poison messages
 
   ~~~admonish note title="Poison message"
@@ -73,7 +78,6 @@ Types of queues
   AWS recommends such messages to be pushed to DLQ.
   ~~~
 
-* **Work queue** or **task queue** — designed to allow _multiple workers_ to consume tasks concurrently
 * **Delay queue** — postpone the delivery of new messages to the queue for a period of time (why would you wanna do this...?)
 
   ~~~admonish example title="Use case"

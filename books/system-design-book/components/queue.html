@@ -179,21 +179,26 @@
                     <main>
                         <h1 id="message-queue"><a class="header" href="#message-queue">Message queue</a></h1>
 <p>Verbs: &quot;produce&quot; message, &quot;consume&quot; message</p>
-<p>Actors:</p>
-<ul>
-<li><strong>Producer</strong> — creates a message and pushes it into the queue</li>
-<li><strong>Consumer</strong> — reads a message and deletes it from the queue</li>
-</ul>
 <p>Purpose:</p>
 <ul>
 <li><a href="../core-functionalities/data-storage.html">Short-term (limited) message <strong>storage</strong></a> </li>
 <li><a href="../core-functionalities/concurrency-control.html">Processing messages in order</a></li>
 </ul>
+<p>Actors:</p>
+<ul>
+<li><strong>Producer</strong> — creates a message and pushes it into the queue</li>
+<li><strong>Consumer</strong> — reads a message and deletes it from the queue</li>
+</ul>
 <p>Features:</p>
 <ul>
 <li>
-<p><a href="../distributed-system/concurrency-control.html">Locking mechanism</a> — Messages are locked during processing, so that multiple producers can send and multiple consumers can receive messages <em>at the same time</em>.</p>
+<p><a href="../distributed-system/concurrency-control.html">Locking mechanism</a> — Messages are locked during processing, so that multiple producers can send and multiple consumers can receive messages <em>at the same time</em>. This helps with concurreny control.</p>
+<div id="admonition-how-does-it-work" class="admonition admonish-question">
+<div class="admonition-title">
 <p>How does it work?</p>
+<p><a class="admonition-anchor-link" href="#admonition-how-does-it-work"></a></p>
+</div>
+<div>
 <ol>
 <li>When a consumer receives a message, the message becomes <em>temporarily hidden</em> from other consumers.</li>
 <li>The consumer has to process it within a period of time k, then it becomes visible to consumers again. This is the <strong>visibility timeout</strong> period.</li>
@@ -204,6 +209,11 @@
 <li>extended to cover the time required to process a batch of messages (in long polling, especially)</li>
 </ul>
 <p>If you want to release the lock while processing, you can set the visibility timeout to 0.</p>
+</div>
+</div>
+</li>
+<li>
+<p>Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately</p>
 </li>
 <li>
 <p>Logical grouping of messages (with order within group)</p>
@@ -218,16 +228,16 @@
 <p><a href="../strategies/batching.html">Batching</a></p>
 </li>
 <li>
-<p>Housekeeping — <strong>message retention period</strong> is the maximum period how long a message can stay in the queue</p>
-</li>
-<li>
-<p>Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately</p>
+<p>Housekeeping — <em>message retention period</em> is the maximum period how long a message can stay in the queue</p>
 </li>
 <li>
 <p>TTL</p>
 </li>
 <li>
 <p>Deduplication — limited capability</p>
+</li>
+<li>
+<p>Encryption at rest</p>
 </li>
 </ul>
 <p>Guarantees:</p>
@@ -242,32 +252,32 @@
 </ul>
 </li>
 </ul>
-<p>Cloud features</p>
-<ul>
-<li>Encryption at rest</li>
-</ul>
 <p>Benefits:</p>
 <p>When you introduce a queue with a web server, we are <a href="../strategies/adding-layer-of-abstraction.html">adding a layer of abstraction</a> between (i) the producers of the message, and (ii) the consumers of the message. </p>
 <p>This layer of abstraction allows the producer to produce messages <em>at its own pace</em>, and the consumer can similarly process messages <em>at its own pace</em>.</p>
 <p>The introduction of a queue therefore provides a <strong>buffer</strong>, allowing for differences in consumption rates and production rates.</p>
 <p>This <em>facilitates</em> <a href="../goals/scalability.html">scalability</a>.</p>
-<p>Types of queues</p>
+<h2 id="types-of-queues"><a class="header" href="#types-of-queues">Types of queues</a></h2>
 <ul>
-<li>
-<p><strong>Standard queue</strong> is designed to prioritise higher throughput. This means:</p>
+<li><strong>Standard queue</strong> is designed to prioritise higher throughput. This means:
 <ul>
 <li>Not a strict FIFO (&quot;Best-Effort Ordering&quot;)</li>
 <li>Every message might be processed more than once</li>
 <li>Unlimited throughput</li>
 </ul>
 </li>
-<li>
-<p><strong>FIFO queue</strong> is designed to prioritise:</p>
+<li><strong>FIFO queue</strong> is designed to prioritise:
 <ul>
 <li>Strict FIFO</li>
 <li>Every message is processed only once</li>
 <li>High throughput (lower than that of Standard queue)</li>
 </ul>
+</li>
+</ul>
+<h2 id="types-of-queues-by-use-case"><a class="header" href="#types-of-queues-by-use-case">Types of queues by use case</a></h2>
+<ul>
+<li>
+<p><strong>Work queue</strong> or <strong>task queue</strong> — designed to allow <em>multiple workers</em> to consume tasks concurrently</p>
 </li>
 <li>
 <p><strong>DLQ</strong> — Dead Letter Queue. A queue that stores messages that couldn't be processed successfully. Used for <a href="../strategies/manual-intervention.html">manual intervention</a>.</p>
@@ -284,9 +294,6 @@
 <p>AWS recommends such messages to be pushed to DLQ.</p>
 </div>
 </div>
-</li>
-<li>
-<p><strong>Work queue</strong> or <strong>task queue</strong> — designed to allow <em>multiple workers</em> to consume tasks concurrently</p>
 </li>
 <li>
 <p><strong>Delay queue</strong> — postpone the delivery of new messages to the queue for a period of time (why would you wanna do this...?)</p>
