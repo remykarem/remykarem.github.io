@@ -28,6 +28,7 @@ Muscle growth
     * Edamame (8g)
     * Spinach (5g)
     * Kale (4g)
+    * **Broccoli** (3g)
 * Legumes
     * Tempeh (19g)
     * Soybeans (17g)
