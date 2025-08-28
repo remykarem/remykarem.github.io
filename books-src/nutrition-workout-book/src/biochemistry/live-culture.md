@@ -7,14 +7,14 @@ Examples: lactic acid bacteria, Rhizopus fungi
 Label: "live culture", "active culture", "unpasteurised"
 
 * Dairy
-  * Yogurt
+  * **Yogurt**
 * Greens
-  * Kimchi
+  * **Kimchi**
   * Sauerkraut
   * Pickles
 * Grains / beans
   * Miso
-  * Tempeh
+  * **Tempeh**
 * Others
   * Kombucha
   * Yakult
