@@ -19,10 +19,9 @@ Properties:
 Most abundant and widely studied. 
 
 * Anthocyanins — found in many red, purple and blue
- * **berries**
- * red cabbage
- * black rice
- * grapes 
+  * **berries**
+  * red cabbage
+  * grapes 
 * Flavanones — **citrus fruits**
 * Flavonols 
   * Catechin
@@ -34,12 +33,13 @@ Most abundant and widely studied.
   * Quercetin
     * kale
     * spinach
-    * broccoli
+    * **broccoli**
     * **honey**
     * **leafy greens**
     * **berries**
     * **almonds**
-* Isoflavones — **soybeans**
+* Isoflavones
+  * **soybeans**
 
 ## Phenolic acid
 
