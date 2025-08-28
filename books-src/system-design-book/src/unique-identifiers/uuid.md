@@ -19,6 +19,7 @@ Offers:
 * Decentralised generation
 * Global uniqueness
 * Less guessable than sequential IDs
+* Lexicographic sorting (for UUIDv7)
 
 Features:
 * **Temporal information**
