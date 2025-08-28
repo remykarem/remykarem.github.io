@@ -6,7 +6,7 @@ JSON Web Token
 
 A JWT is a dot-separated Base64-URL-safe-encoded JSON representation of **signature**, **claims** (eg. who you claim to be), **ciphertext**, and other metadata.
 
-A JWT can either be a:
+A JWT can follow either structure:
 * JWS
 * JWE
 
@@ -16,7 +16,7 @@ This token is normally used in HTTP requests under the Authorization header.
 
 [RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) (JSON Web Signature)
 
-A JWS token consists of:
+A JWS token consists of 3 parts:
 * header
 * payload
 * signature
@@ -46,10 +46,10 @@ The [jwt.io](https://jwt.io) playground generates signatures i.e. JWS tokens.
 
 [RFC 7516](https://datatracker.ietf.org/doc/html/rfc7516) (JSON Web Encryption)
 
-A JWE token consists of
-* header
-* key (encrypted) — this key is used to encrypt the payloads, which is the purpose of JWEs
+A JWE token consists of 5 parts:
+* header — algorithm, etc.
+* CEK (encrypted) — depending on the algorithm, this key is used to decrypt the payloads
 * initialisation vector
-* ciphertext
+* ciphertext — the encrypted payload
 * signature
 
