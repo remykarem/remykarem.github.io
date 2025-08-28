@@ -184,7 +184,7 @@
 <p><a href="https://datatracker.ietf.org/doc/html/rfc7519">RFC 7519</a></p>
 <p>JSON Web Token</p>
 <p>A JWT is a dot-separated Base64-URL-safe-encoded JSON representation of <strong>signature</strong>, <strong>claims</strong> (eg. who you claim to be), <strong>ciphertext</strong>, and other metadata.</p>
-<p>A JWT can either be a:</p>
+<p>A JWT can follow either structure:</p>
 <ul>
 <li>JWS</li>
 <li>JWE</li>
@@ -192,7 +192,7 @@
 <p>This token is normally used in HTTP requests under the Authorization header.</p>
 <h2 id="jws"><a class="header" href="#jws">JWS</a></h2>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc7515">RFC 7515</a> (JSON Web Signature)</p>
-<p>A JWS token consists of:</p>
+<p>A JWS token consists of 3 parts:</p>
 <ul>
 <li>header</li>
 <li>payload</li>
@@ -232,12 +232,12 @@ SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 </div>
 <h2 id="jwe"><a class="header" href="#jwe">JWE</a></h2>
 <p><a href="https://datatracker.ietf.org/doc/html/rfc7516">RFC 7516</a> (JSON Web Encryption)</p>
-<p>A JWE token consists of</p>
+<p>A JWE token consists of 5 parts:</p>
 <ul>
-<li>header</li>
-<li>key (encrypted) — this key is used to encrypt the payloads, which is the purpose of JWEs</li>
+<li>header — algorithm, etc.</li>
+<li>CEK (encrypted) — depending on the algorithm, this key is used to decrypt the payloads</li>
 <li>initialisation vector</li>
-<li>ciphertext</li>
+<li>ciphertext — the encrypted payload</li>
 <li>signature</li>
 </ul>
 
