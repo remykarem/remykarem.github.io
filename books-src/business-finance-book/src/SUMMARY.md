@@ -12,6 +12,10 @@
 - [Trade](./philosophy/trade.md)
 - [Real economic activity](./philosophy/real-economic-activity.md)
 - [Money doesn't make money](./philosophy/money-doesnt-make-money.md)
+- [Moderation in spending]()
+- [Exploitation]()
+- [Greed]()
+- [Err on the side of caution, taqwa]()
 
 ---
 
