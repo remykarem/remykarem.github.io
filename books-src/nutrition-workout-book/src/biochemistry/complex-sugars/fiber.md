@@ -46,7 +46,7 @@ Examples:
   * Kiwi — pectin
 * Greens
   * **Garlic** — inulin, FOS
-  * Onions — inulin, FOS
+  * **Onions** — inulin, FOS
   * Asparagus — inulin, FOS
 * Grains
   * **Oats** — beta-glucan
