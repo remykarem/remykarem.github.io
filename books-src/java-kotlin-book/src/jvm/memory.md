@@ -4,10 +4,8 @@ Most JVM are 64-bit JVM, i.e. address space is 8 bytes.
 Although references are represented in 64 bits (8 bytes), **compressed oops** is enabled by default which would be 4 bytes.
 
 ```admonish tip title="Memory location"
-Use `System.identityHashCode(obj)` to get the memory location of the object (subjected to change because of GC).
+Use `System.identityHashCode(obj)` to get a hash that _approximates_ the memory location of the object (subjected to change because of GC).
 ```
-
-
 
 ## Allocation
 
@@ -21,7 +19,7 @@ Use `System.identityHashCode(obj)` to get the memory location of the object (sub
 
 * String pool
 * Boxed primitives
-* Class instances eg. custom classes, String, List
+* Class instances eg. custom classes, `String`, `List`, `Integer`
 
 ~~~admonish tip title="Interning"
 Case 1:
@@ -41,6 +39,12 @@ String username = new String("Tom");
 
 * `"Tom"` is interned.
 * A new `String` object is created on the heap, pointing to the interned `"Tom"` instance.
+~~~
+
+~~~admonish tip title="Object caching"
+Values in the range -128..127 are cached when `Integer` is used.
+
+Similarly, `Byte`, `Short`, `Long`, `Character`, `Boolean` all cache small common values.
 ~~~
 
 ## Pass by value vs. reference
