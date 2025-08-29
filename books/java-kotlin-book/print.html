@@ -294,7 +294,9 @@ preserves order of elements insertion</li>
 <p>State cannot be modified after it is created. </p>
 <ul>
 <li><code>String</code></li>
+<li>Other primitives</li>
 </ul>
+<p>This means that copying (say via  these objects is cheap, because JVM copies the <em>reference</em> only (because there's no risk that the instance could be modified after creation).</p>
 <div id="admonition-warning" class="admonition admonish-warning">
 <div class="admonition-title">
 <p>Warning</p>
