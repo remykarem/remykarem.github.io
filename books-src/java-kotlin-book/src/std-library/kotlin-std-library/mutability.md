@@ -5,6 +5,9 @@
 State cannot be modified after it is created. 
 
 * `String`
+* Other primitives
+
+This means that copying (say via  these objects is cheap, because JVM copies the _reference_ only (because there's no risk that the instance could be modified after creation).
 
 ~~~admonish warning
 `List` is not actually immutable. Rather, it is compile-time read-only.
