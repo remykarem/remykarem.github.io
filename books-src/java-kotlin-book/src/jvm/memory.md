@@ -3,16 +3,51 @@ Most JVM are 64-bit JVM, i.e. address space is 8 bytes.
 
 Although references are represented in 64 bits (8 bytes), **compressed oops** is enabled by default which would be 4 bytes.
 
+```admonish tip title="Memory location"
+Use `System.identityHashCode(obj)` to get the memory location of the object (subjected to change because of GC).
+```
+
+
+
 ## Allocation
 
 ### Stack-allocated
+
 * Primitives (not boxed)
 * Value types
 * Local variables (value itself or reference)
 
 ### Heap-allocated
+
+* String pool
 * Boxed primitives
 * Class instances eg. custom classes, String, List
+
+~~~admonish tip title="Interning"
+Case 1:
+
+```java
+String username = "Tom";
+```
+
+* `"Tom"` is interned.
+* `username` points to the interned string object (like Rust's `&str`)
+
+Case 2:
+
+```java
+String username = new String("Tom");
+```
+
+* `"Tom"` is interned.
+* A new `String` object is created on the heap, pointing to the interned `"Tom"` instance.
+~~~
+
+## Pass by value vs. reference
+
+* Stack-allocated — copies as value
+* Heap-allocated — copies the reference of value
+
 
 ## Size
 
