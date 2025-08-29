@@ -13,6 +13,7 @@
     - [Types](./std-library/kotlin-std-library/types.md)
     - [Collections](./std-library/kotlin-std-library/collections.md)
     - [Mutability](./std-library/kotlin-std-library/mutability.md)
+    - [copy](./std-library/kotlin-std-library/copy.md)
     - [Scope functions](./std-library/kotlin-std-library/scope-functions.md)
     - [use](./std-library/kotlin-std-library/use.md)
     - [Preconditions]()
