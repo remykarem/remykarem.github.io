@@ -2054,7 +2054,7 @@ fun main() {
 <p><a class="admonition-anchor-link" href="jvm/memory.html#admonition-memory-location"></a></p>
 </div>
 <div>
-<p>Use <code>System.identityHashCode(obj)</code> to get the memory location of the object (subjected to change because of GC).</p>
+<p>Use <code>System.identityHashCode(obj)</code> to get a hash that <em>approximates</em> the memory location of the object (subjected to change because of GC).</p>
 </div>
 </div>
 <h2 id="allocation"><a class="header" href="#allocation">Allocation</a></h2>
@@ -2068,7 +2068,7 @@ fun main() {
 <ul>
 <li>String pool</li>
 <li>Boxed primitives</li>
-<li>Class instances eg. custom classes, String, List</li>
+<li>Class instances eg. custom classes, <code>String</code>, <code>List</code>, <code>Integer</code></li>
 </ul>
 <div id="admonition-interning" class="admonition admonish-tip">
 <div class="admonition-title">
@@ -2090,6 +2090,16 @@ fun main() {
 <li><code>&quot;Tom&quot;</code> is interned.</li>
 <li>A new <code>String</code> object is created on the heap, pointing to the interned <code>&quot;Tom&quot;</code> instance.</li>
 </ul>
+</div>
+</div>
+<div id="admonition-object-caching" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Object caching</p>
+<p><a class="admonition-anchor-link" href="jvm/memory.html#admonition-object-caching"></a></p>
+</div>
+<div>
+<p>Values in the range -128..127 are cached when <code>Integer</code> is used.</p>
+<p>Similarly, <code>Byte</code>, <code>Short</code>, <code>Long</code>, <code>Character</code>, <code>Boolean</code> all cache small common values.</p>
 </div>
 </div>
 <h2 id="pass-by-value-vs-reference"><a class="header" href="#pass-by-value-vs-reference">Pass by value vs. reference</a></h2>
