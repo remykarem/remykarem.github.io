@@ -155,10 +155,66 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="types"><a class="header" href="#types">Types</a></h1>
-<h2 id="primitive-type"><a class="header" href="#primitive-type">Primitive type</a></h2>
-<p><code>int</code></p>
-<h2 id="boxed-type"><a class="header" href="#boxed-type">Boxed type</a></h2>
-<p><code>java.lang.Integer</code></p>
+<ul>
+<li>Primitive type
+<ul>
+<li><code>int</code></li>
+<li><code>byte</code></li>
+<li><code>short</code></li>
+<li><code>long</code></li>
+<li><code>float</code></li>
+<li><code>double</code></li>
+<li><code>char</code></li>
+<li><code>boolean</code></li>
+</ul>
+</li>
+<li>Reference type
+<ul>
+<li>Classes — <code>String</code>, <code>Integer</code>, custom classes</li>
+<li>Interfaces</li>
+<li>Arrays</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+<div id="admonition-interning" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Interning</p>
+<p><a class="admonition-anchor-link" href="#admonition-interning"></a></p>
+</div>
+<div>
+<p>Case 1:</p>
+<pre><code class="language-java">String username = &quot;Tom&quot;;
+</code></pre>
+<ul>
+<li><code>&quot;Tom&quot;</code> is interned.</li>
+<li><code>username</code> points to the interned string object (like Rust's <code>&amp;str</code>)</li>
+</ul>
+<p>Case 2:</p>
+<pre><code class="language-java">String username = new String(&quot;Tom&quot;);
+</code></pre>
+<ul>
+<li><code>&quot;Tom&quot;</code> is interned.</li>
+<li>A new <code>String</code> object is created on the heap, pointing to the interned <code>&quot;Tom&quot;</code> instance.</li>
+</ul>
+</div>
+</div>
+<h2 id="memory"><a class="header" href="#memory">Memory</a></h2>
+<p>String pool is stored in the regular heap.</p>
+<h2 id="passing-around"><a class="header" href="#passing-around">Passing around</a></h2>
+<ul>
+<li>Stack-allocated — copies as value</li>
+<li>Heap-allocated — copies the reference of value</li>
+</ul>
+<div id="admonition-memory-location" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Memory location</p>
+<p><a class="admonition-anchor-link" href="#admonition-memory-location"></a></p>
+</div>
+<div>
+<p>Use <code>System.identityHashCode(obj)</code> to get the memory location of the object (subjected to change because of GC).</p>
+</div>
+</div>
 
                     </main>
 
