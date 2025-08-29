@@ -59,7 +59,9 @@
 # Java
 
 - [Standard library](./std-library/java-std-library/index.md)
+    -  [Memory](./std-library/java-std-library/memory.md)
     -  [Types](./std-library/java-std-library/types.md)
+    -  [Copy](./std-library/java-std-library/copy.md)
 - [Record]()
 - [Reflection](./reflection/java.md)
 
