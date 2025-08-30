@@ -119,8 +119,13 @@
 - [Polymorphic type](./polymorphic-type.md)
 - [Earliest responsible moment](./earliest-responsible-moment.md)
 - [Mapper](./mapper.md)
-- [Testing](./testing.md)
 - [Serialisation/deserialisation](./serialisation-deserialisation.md)
+
+---
+
+# Testing
+
+- [Testing](./testing.md)
 
 ---
 
