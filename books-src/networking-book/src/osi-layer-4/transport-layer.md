@@ -4,6 +4,14 @@
 Note that the OS abstracts this layer from us.
 ~~~
 
+~~~admonish tip title="Analogy"
+Which "parcel delivery service".
+
+Maybe some services require that you acknowledge that you receive and if you don't, the service will keep asking if you received.
+
+Maybe some services require the deliverers to take a picture and make sure the parcel is still intact once it reaches the destination. 
+~~~
+
 What problems are we trying to solve?
 
 - Network is unreliable due to **congestion** — when more packets than the network has bandwidth for are sent through, some packets get dropped ("**lost packets**") and some get delayed ("**out-of-order**").
