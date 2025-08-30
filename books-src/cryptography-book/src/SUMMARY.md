@@ -117,7 +117,7 @@
  
 # Encryption algorithms
 
-- [Encryption algorithms](./primitives/encryption-algorithms/index.md)
+- [**Encryption algorithms**](./primitives/encryption-algorithms/index.md)
 - [Block ciphers](./primitives/encryption-algorithms/block-ciphers/index.md)
   - [AES](./primitives/encryption-algorithms/block-ciphers/aes.md)
   - [DES](./primitives/encryption-algorithms/block-ciphers/des.md)
