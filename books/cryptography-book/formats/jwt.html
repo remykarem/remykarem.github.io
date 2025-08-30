@@ -234,7 +234,12 @@ SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 <p><a href="https://datatracker.ietf.org/doc/html/rfc7516">RFC 7516</a> (JSON Web Encryption)</p>
 <p>A JWE token consists of 5 parts:</p>
 <ul>
-<li>header — algorithm, etc.</li>
+<li>header
+<ul>
+<li>algorithm — eg. RSA-OAEP, ECDH-ES, RSA1_5</li>
+<li>...</li>
+</ul>
+</li>
 <li>CEK (encrypted) — depending on the algorithm, this key is used to decrypt the payloads</li>
 <li>initialisation vector</li>
 <li>ciphertext — the encrypted payload</li>
