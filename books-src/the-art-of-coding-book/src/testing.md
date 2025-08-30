@@ -8,3 +8,9 @@
 ## What to verify
 
 Verify that message is sent to the queue (unit test) vs. message is present in the queue (integration test)
+
+## Test doubles
+
+* Mock
+* Spy — partial mock; lets you invoke real methods, while mocking others
+* Stub
