@@ -47,7 +47,9 @@ The [jwt.io](https://jwt.io) playground generates signatures i.e. JWS tokens.
 [RFC 7516](https://datatracker.ietf.org/doc/html/rfc7516) (JSON Web Encryption)
 
 A JWE token consists of 5 parts:
-* header — algorithm, etc.
+* header
+  * algorithm — eg. RSA-OAEP, ECDH-ES, RSA1_5
+  * ...
 * CEK (encrypted) — depending on the algorithm, this key is used to decrypt the payloads
 * initialisation vector
 * ciphertext — the encrypted payload
