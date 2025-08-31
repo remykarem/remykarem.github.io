@@ -1,5 +1,15 @@
 # SQL vs. NoSQL
 
+Factors
+* Throughput
+* Relationships
+* Data types
+* Transactions & integrity
+
+~~~admonish tip title="Postgres benchmarking"
+Use `pgbench`
+~~~
+
 When to pick SQL?
 
 - **When you need to store a lot of relationships**
