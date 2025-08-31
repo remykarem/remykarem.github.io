@@ -95,7 +95,7 @@
 - [Lambda](./components/serverless-compute-service.md)
 - [Compute]()
 - [Database](./components/database.md)
-- [API Gateway](./components/api-gateway.md)
+- [API gateway](./components/api-gateway.md)
 - [Event stream](./components/message-broker.md)
 - [Forward proxy](./components/forward-proxy.md)
 - [Step Functions](./components/step-functions.md)

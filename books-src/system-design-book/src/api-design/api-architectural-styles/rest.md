@@ -23,7 +23,7 @@ Does not apply to POST.
 
 It almost impossible to always modelling APIs as _resources_ only, for the sake of it. 
 
-Modeelling as non-resource operations is inevitable. Here are some cases:
+Modelling as non-resource operations is inevitable. Here are some cases:
 
 * **Commands (non-resource operations)**
     * `POST /password/reset`
@@ -41,4 +41,4 @@ Some factors to consider:
 
 Forcing them into pure REST might confuse more than it helps.
 
-Most real-world APIs are a _hybrid_ — largely RESTful, but with RPC-ish exceptions where it makes sense.
+**Most real-world APIs are a _hybrid_** — largely RESTful, but with RPC-ish exceptions where it makes sense.

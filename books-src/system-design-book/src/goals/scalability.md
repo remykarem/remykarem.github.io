@@ -10,10 +10,12 @@ We can put a price tag to the resource, and optimise towards reducing the cost.
 Any unused resources count towards the cost.
 ~~~
 
-Types of scaling:
+General strategies:
 
+- Offload heavy work
+- Smoothing resource usage (eg. doing things off-peak)
+- Horizontal scaling / scaling out: add more hardware / add more workers ("concurrency")
 - Vertical scaling / scaling up: improve hardware
-- Horizontal scaling / scaling out: add more hardware
 
 **Cloud elasticity**
 
@@ -21,7 +23,7 @@ Scaling up and down dynamically
 
 **Strategies to improve scalability**
 
-Services
+Inter-service
 - Caching layer
 - Load balancing
 - Asynchronous processing / queues / batch jobs — offloading heavy or long-running tasks
@@ -29,7 +31,7 @@ Services
 - Microservices / modular architecture
 - CDN
 
-Application
+Service itself
 - Data structure optimisation etc.
 - Database sharding
 

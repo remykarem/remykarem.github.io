@@ -85,6 +85,13 @@
 
 ---
 
+# Frontend patterns
+
+- [Container and presentation]()
+- [Component composition]()
+
+---
+
 # Functional programming "patterns"
 
 - [Immutability](./functional-programming/immutability.md)
