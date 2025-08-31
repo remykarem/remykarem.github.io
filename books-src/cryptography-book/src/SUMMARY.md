@@ -22,43 +22,6 @@
 
 ---
 
-# Measure
-
-- [Entropy](./measure/entropy.md)
-- [Key strength](./measure/key-strength.md)
-
----
-
-# Cryptographic keys
-
-- [Password / passphrase](./cryptographic-keys/password-passphrase.md)
-- [Shared secret](./cryptographic-keys/shared-secret.md)
-- [Private-public key pair](./cryptographic-keys/private-public-key-pair.md)
-- [DEK](./cryptographic-keys/dek.md)
-- [KEK](./cryptographic-keys/kek.md)
-- [Security tokens](./cryptographic-keys/security-tokens.md)
-
----
-
-# Cryptosystems
-
-- [ECC](./cryptosystems/ecc/index.md)
-  - [Curve25519](./cryptosystems/ecc/curve25519.md)
-  - [Ed25519](./cryptosystems/ecc/ed25519.md)
-  - [P-256 / secp256r1 / prime256v1](./cryptosystems/ecc/p-256.md)
-  - [P-384](./cryptosystems/ecc/p-384.md)
-  - [secp256k1]()
-- [IFC](./cryptosystems/ifc/index.md)
-  - [RSA](./cryptosystems/ifc/rsa/index.md)
-- [FFC]()
-  - [DH]()
-  - [DSA](./cryptosystems/ffc/dsa.md)
-- [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography/index.md)
-- [???]()
-  - [ElGamal]()
-
----
-
 # Software
 
 - [OpenPGP](./software/openpgp.md)
@@ -66,6 +29,53 @@
 - [age](./software/age.md)
 
 ---
+
+# Measure
+
+- [Entropy](./measure/entropy.md)
+- [Key strength](./measure/key-strength.md)
+
+---
+
+# Digital signature algorithms
+
+- [Digital signature algorithms](./primitives/digital-signature-algorithms/index.md)
+- [RSASSA-PKCS1-v1_5](./primitives/digital-signature-algorithms/rsassa-pkcs1-v1_5.md)
+- [RSASSA-PSS](./primitives/digital-signature-algorithms/rsassa-pss.md)
+- [ECDSA](./primitives/digital-signature-algorithms/ecdsa.md)
+- [EdDSA](./primitives/digital-signature-algorithms/eddsa.md)
+- [CRYSTALS-Dilithium](./primitives/digital-signature-algorithms/crystals-dilithium.md)
+- [Schnorr](./primitives/digital-signature-algorithms/schnorr.md)
+- [ElGamal]()
+- [DSA]()
+ 
+# Encryption algorithms
+
+- [Encryption algorithms](./primitives/encryption-algorithms/index.md)
+- [Block ciphers](./primitives/encryption-algorithms/block-ciphers/index.md)
+  - [AES](./primitives/encryption-algorithms/block-ciphers/aes.md)
+  - [DES](./primitives/encryption-algorithms/block-ciphers/des.md)
+  - [3DES](./primitives/encryption-algorithms/block-ciphers/3des.md)
+  - [Blowfish]()
+  - [Twofish]()
+  - [RC2]()
+  - [RC5]()
+  - [RC6]()
+  - [CAST]()
+  - [Camellia]()
+- [Block cipher mode of operation](./primitives/encryption-algorithms/block-cipher-mode-of-operation.md)
+- [Stream ciphers]()
+  - [ChaCha20](./primitives/encryption-algorithms/stream-ciphers/chacha20.md)
+  - [RC4](./primitives/encryption-algorithms/stream-ciphers/rc4.md)
+  - [Salsa20](./primitives/encryption-algorithms/stream-ciphers/salsa20.md)
+  - [XSalsa20](./primitives/encryption-algorithms/stream-ciphers/xsalsa20.md)
+- [RSAES-OAEP](./primitives/encryption-algorithms/rsa.md)
+- [RSAES-PKCS1-v1_5](./primitives/encryption-algorithms/rsaes-pkcs1-v1_5.md)
+- [ECDH-ES]()
+- [ECIES](./primitives/encryption-algorithms/ecies.md)
+- [ElGamal]()
+- [Authenticated encryption](./primitives/authenticated-encryption/index.md)
+- [AEAD](./primitives/authenticated-encryption/aead.md)
 
 # Algorithms, primitives
 
@@ -103,45 +113,35 @@
   - [Kyber](./primitives/kem/kyber.md)
 - [HPKE](./primitives/hpke.md)
 
-# Digital signature algorithms
+---
 
-- [Digital signature algorithms](./primitives/digital-signature-algorithms/index.md)
-- [RSASSA-PKCS1-v1_5](./primitives/digital-signature-algorithms/rsassa-pkcs1-v1_5.md)
-- [RSASSA-PSS](./primitives/digital-signature-algorithms/rsassa-pss.md)
-- [ECDSA](./primitives/digital-signature-algorithms/ecdsa.md)
-- [EdDSA](./primitives/digital-signature-algorithms/eddsa.md)
-- [CRYSTALS-Dilithium](./primitives/digital-signature-algorithms/crystals-dilithium.md)
-- [ElGamal]()
-- [Schnorr](./primitives/digital-signature-algorithms/schnorr.md)
-- [DSA]()
- 
-# Encryption algorithms
+# Cryptosystems
 
-- [**Encryption algorithms**](./primitives/encryption-algorithms/index.md)
-- [Block ciphers](./primitives/encryption-algorithms/block-ciphers/index.md)
-  - [AES](./primitives/encryption-algorithms/block-ciphers/aes.md)
-  - [DES](./primitives/encryption-algorithms/block-ciphers/des.md)
-  - [3DES](./primitives/encryption-algorithms/block-ciphers/3des.md)
-  - [Blowfish]()
-  - [Twofish]()
-  - [RC2]()
-  - [RC5]()
-  - [RC6]()
-  - [CAST]()
-  - [Camellia]()
-- [Block cipher mode of operation](./primitives/encryption-algorithms/block-cipher-mode-of-operation.md)
-- [Stream ciphers]()
-  - [ChaCha20](./primitives/encryption-algorithms/stream-ciphers/chacha20.md)
-  - [RC4](./primitives/encryption-algorithms/stream-ciphers/rc4.md)
-  - [Salsa20](./primitives/encryption-algorithms/stream-ciphers/salsa20.md)
-  - [XSalsa20](./primitives/encryption-algorithms/stream-ciphers/xsalsa20.md)
-- [RSAES-OAEP](./primitives/encryption-algorithms/rsa.md)
-- [RSAES-PKCS1-v1_5](./primitives/encryption-algorithms/rsaes-pkcs1-v1_5.md)
-- [ECDH-ES]()
-- [ECIES](./primitives/encryption-algorithms/ecies.md)
-- [ElGamal]()
-- [Authenticated encryption](./primitives/authenticated-encryption/index.md)
-- [AEAD](./primitives/authenticated-encryption/aead.md)
+- [ECC](./cryptosystems/ecc/index.md)
+  - [Curve25519](./cryptosystems/ecc/curve25519.md)
+  - [Ed25519](./cryptosystems/ecc/ed25519.md)
+  - [P-256 / secp256r1 / prime256v1](./cryptosystems/ecc/p-256.md)
+  - [P-384](./cryptosystems/ecc/p-384.md)
+  - [secp256k1]()
+- [IFC](./cryptosystems/ifc/index.md)
+  - [RSA](./cryptosystems/ifc/rsa/index.md)
+- [FFC]()
+  - [DH]()
+  - [DSA](./cryptosystems/ffc/dsa.md)
+- [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography/index.md)
+- [???]()
+  - [ElGamal]()
+
+---
+
+# Cryptographic keys
+
+- [Password / passphrase](./cryptographic-keys/password-passphrase.md)
+- [Shared secret](./cryptographic-keys/shared-secret.md)
+- [Private-public key pair](./cryptographic-keys/private-public-key-pair.md)
+- [DEK](./cryptographic-keys/dek.md)
+- [KEK](./cryptographic-keys/kek.md)
+- [Security tokens](./cryptographic-keys/security-tokens.md)
 
 ---
 
