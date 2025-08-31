@@ -62,22 +62,23 @@
   - [XSalsa20](./primitives/encryption-algorithms/stream-ciphers/xsalsa20.md)
 - [ElGamal]()
 
-# Key derivation algorithms
+# Key exchange algorithms
 
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
-- [Random]()
-- [DH](./primitives/key-exchange-algorithms/dh.md)
-- [DHE](primitives/key-exchange-algorithms/dhe.md)
-- [ECDH](./primitives/key-exchange-algorithms/ecdh.md)
-- [ECDHE](./primitives/key-exchange-algorithms/ecdhe.md)
-- [X25519](./primitives/key-exchange-algorithms/x25519.md)
-- [ECIES](./primitives/encryption-algorithms/ecies.md)
+- [One party]()
+  - [Random + RSA]()
+    - [Static RSA key exchange](./primitives/key-exchange-algorithms/static-rsa-key-exchange.md)
+- [Joint]()
+  - [Classic DH]()
+    - [DH](./primitives/key-exchange-algorithms/dh.md)
+    - [DHE](primitives/key-exchange-algorithms/dhe.md)
+  - [EC-based]()
+    - [ECDH](./primitives/key-exchange-algorithms/ecdh.md)
+    - [ECDHE](./primitives/key-exchange-algorithms/ecdhe.md)
+    - [X25519](./primitives/key-exchange-algorithms/x25519.md)
+    - [ECIES](./primitives/encryption-algorithms/ecies.md)
 
-# Key exchange "ways"
-
-- [Static RSA key exchange](./primitives/key-exchange-algorithms/static-rsa-key-exchange.md)
-
-# Algorithms, primitives
+# Primitives
 
 - [Cryptographic hash functions](./primitives/cryptographic-hash-functions/index.md)
     - [MD2]()
