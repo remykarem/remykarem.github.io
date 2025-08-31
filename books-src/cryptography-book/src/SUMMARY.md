@@ -69,13 +69,14 @@
   - [RC4](./primitives/encryption-algorithms/stream-ciphers/rc4.md)
   - [Salsa20](./primitives/encryption-algorithms/stream-ciphers/salsa20.md)
   - [XSalsa20](./primitives/encryption-algorithms/stream-ciphers/xsalsa20.md)
-- [RSAES-OAEP](./primitives/encryption-algorithms/rsa.md)
+- [RSAES-OAEP](./primitives/encryption-algorithms/rsa-oaep.md)
 - [RSAES-PKCS1-v1_5](./primitives/encryption-algorithms/rsaes-pkcs1-v1_5.md)
+- [Native RSA](./primitives/encryption-algorithms/native-rsa.md)
 - [ECDH-ES]()
 - [ECIES](./primitives/encryption-algorithms/ecies.md)
-- [ElGamal]()
 - [Authenticated encryption](./primitives/authenticated-encryption/index.md)
 - [AEAD](./primitives/authenticated-encryption/aead.md)
+- [ElGamal]()
 
 # Algorithms, primitives
 
