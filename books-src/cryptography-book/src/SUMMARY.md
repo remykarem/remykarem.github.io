@@ -30,13 +30,6 @@
 
 ---
 
-# Measure
-
-- [Entropy](./measure/entropy.md)
-- [Key strength](./measure/key-strength.md)
-
----
-
 # Digital signature algorithms
 
 - [Digital signature algorithms](./primitives/digital-signature-algorithms/index.md)
@@ -52,6 +45,10 @@
 # Encryption algorithms
 
 - [Encryption algorithms](./primitives/encryption-algorithms/index.md)
+- [RSAES-OAEP](./primitives/encryption-algorithms/rsa-oaep.md)
+- [RSAES-PKCS1-v1_5](./primitives/encryption-algorithms/rsaes-pkcs1-v1_5.md)
+- [Native RSA](./primitives/encryption-algorithms/native-rsa.md)
+- [ECDH-ES]()
 - [Block ciphers](./primitives/encryption-algorithms/block-ciphers/index.md)
   - [AES](./primitives/encryption-algorithms/block-ciphers/aes.md)
   - [DES](./primitives/encryption-algorithms/block-ciphers/des.md)
@@ -64,19 +61,15 @@
   - [CAST]()
   - [Camellia]()
 - [Block cipher mode of operation](./primitives/encryption-algorithms/block-cipher-mode-of-operation.md)
+- [ECIES](./primitives/encryption-algorithms/ecies.md)
+- [Authenticated encryption](./primitives/authenticated-encryption/index.md)
+- [AEAD](./primitives/authenticated-encryption/aead.md)
+- [ElGamal]()
 - [Stream ciphers]()
   - [ChaCha20](./primitives/encryption-algorithms/stream-ciphers/chacha20.md)
   - [RC4](./primitives/encryption-algorithms/stream-ciphers/rc4.md)
   - [Salsa20](./primitives/encryption-algorithms/stream-ciphers/salsa20.md)
   - [XSalsa20](./primitives/encryption-algorithms/stream-ciphers/xsalsa20.md)
-- [RSAES-OAEP](./primitives/encryption-algorithms/rsa-oaep.md)
-- [RSAES-PKCS1-v1_5](./primitives/encryption-algorithms/rsaes-pkcs1-v1_5.md)
-- [Native RSA](./primitives/encryption-algorithms/native-rsa.md)
-- [ECDH-ES]()
-- [ECIES](./primitives/encryption-algorithms/ecies.md)
-- [Authenticated encryption](./primitives/authenticated-encryption/index.md)
-- [AEAD](./primitives/authenticated-encryption/aead.md)
-- [ElGamal]()
 
 # Algorithms, primitives
 
@@ -137,12 +130,13 @@
 
 # Cryptographic keys
 
-- [Password / passphrase](./cryptographic-keys/password-passphrase.md)
 - [Shared secret](./cryptographic-keys/shared-secret.md)
 - [Private-public key pair](./cryptographic-keys/private-public-key-pair.md)
 - [DEK](./cryptographic-keys/dek.md)
+- [CEK](./cryptographic-keys/cek.md)
 - [KEK](./cryptographic-keys/kek.md)
 - [Security tokens](./cryptographic-keys/security-tokens.md)
+- [Password / passphrase](./cryptographic-keys/password-passphrase.md)
 
 ---
 
@@ -187,6 +181,13 @@
   - [DER](./encodings/der.md)
   - [OpenPGP: ASCII armor & binary](./encodings/openpgp.md)
 - [Standards](./standards.md)
+
+---
+
+# Measure
+
+- [Entropy](./measure/entropy.md)
+- [Key strength](./measure/key-strength.md)
 
 ---
 
