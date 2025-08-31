@@ -2,6 +2,10 @@
 
 Having only one instance of a class.
 
+~~~admonish example title="Spring Boot"
+By default, Spring beans are singletons within the application context.
+~~~
+
 ~~~admonish example title="Kotlin"
 ```kotlin
 object SomeSingleton { }

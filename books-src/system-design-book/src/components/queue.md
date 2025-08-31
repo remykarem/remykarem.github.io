@@ -20,6 +20,8 @@ Actors:
 
 Features:
 
+- [Extremely scalable](../goals/scalability.md) — Unlimited throughput[^unlimitedthroughput]
+
 - [Locking mechanism](../distributed-system/concurrency-control.md) — Messages are locked during processing, so that multiple producers can send and multiple consumers can receive messages _at the same time_. This helps with concurreny control.
 
   ~~~admonish question title="How does it work?"
@@ -135,3 +137,7 @@ Some things to consider based on the patterns:
 keywords:
 
 inflight — Messages are considered to be in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window
+
+---
+
+[^unlimitedthroughput]: [Amazon SQS queue types](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-queue-types.html?utm_source=chatgpt.com)

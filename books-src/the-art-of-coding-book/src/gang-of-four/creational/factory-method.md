@@ -2,6 +2,10 @@
 
 A special function or method that creates instances.
 
+~~~admonish example title="Spring Boot"
+`@Bean`-annotated methods (in `@Configuration` classes) are factory methods for Spring beans.
+~~~
+
 ~~~admonish example title="Rust"
 Idiomatic in Rust.
 

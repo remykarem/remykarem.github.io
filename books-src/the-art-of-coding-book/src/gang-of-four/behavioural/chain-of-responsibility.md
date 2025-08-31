@@ -14,7 +14,7 @@ This is an example of the Chain of Responsibility pattern beacuase it allows the
 A common idiom is
 
 ```kotlin
-chain.doFilter
+chain.doFilter()
 ```
 ~~~
 
