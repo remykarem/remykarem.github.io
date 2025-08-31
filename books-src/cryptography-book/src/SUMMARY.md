@@ -10,7 +10,7 @@
 - [Non-repudiation](./goals/non-repudiation.md)
 - [Integrity](./goals/integrity.md)
 - [Confidentiality](./goals/confidentiality.md)
-- [Forward secrecy](./goals/forward-secrecy.md)
+  - [Forward secrecy](./goals/forward-secrecy.md)
 - [Anonymity and privacy]()
 - [Performance](./goals/performance.md)
 - [Portability](./goals/portability.md)
