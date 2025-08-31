@@ -78,6 +78,7 @@
   - [EC-based]()
     - [ECDH](./primitives/key-exchange-algorithms/ecdh.md)
     - [ECDHE](./primitives/key-exchange-algorithms/ecdhe.md)
+    - [ECDH-ES](./primitives/key-exchange-algorithms/ecdh-es.md)
     - [X25519](./primitives/key-exchange-algorithms/x25519.md)
     - [ECIES](./primitives/encryption-algorithms/ecies.md)
 
