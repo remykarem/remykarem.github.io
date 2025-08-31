@@ -1,13 +1,43 @@
 # Adapter
 
-Changing an object to fit to an existing implementation.
+Use cases:
+* Letting 2 incompatible _types_ talk to each other.
+* Changing an object to fit to an existing implementation.
+
+~~~admonish example title="Spring Boot"
+
+* Custom Converter:
+
+    ```kotlin
+    @Component
+    class StringToLocalDateConverter : Converter<String, LocalDate> {
+        override fun convert(source: String): LocalDate =
+            LocalDate.parse(source, DateTimeFormatter.ISO_DATE)
+    }
+    ```
+
+* HttpMessageConverter (built-in)
+~~~
+
+~~~admonish example title="Mapper"
+If your classes are "mapper" classes or classes that convert from one type to another, they are implementing the Adapter pattern.
+
+```kotlin
+interface ModelMapper<T, U> {
+    fun from(from: T): U
+}
+```
+~~~
+
+~~~admonish example title="Rust's From and Into"
+Rust has `From<T>` and conversely `Into<U>` to allow types to be converted to each other 😍
+~~~
 
 ~~~admonish example title="UDP"
 **Given that we have** a method or an object (“**adapter client**”) expects another object to have a `write` method.
 
 ```python
 def log(message, destination):
-	destination.write(f"{message}")
 ```
 
 **We want** to write a message to a UDP socket using this.

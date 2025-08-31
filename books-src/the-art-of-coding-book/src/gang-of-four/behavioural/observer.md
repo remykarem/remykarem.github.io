@@ -4,6 +4,12 @@ One-to-many
 
 Usages: event handling, async programming
 
+~~~admonish example title="Spring Boot"
+Spring Boot has a built-in event system.
+
+* `@EventListener`
+~~~
+
 ~~~admonish example title="Angular.js"
 - Subject
     - observers: List<Observer>
