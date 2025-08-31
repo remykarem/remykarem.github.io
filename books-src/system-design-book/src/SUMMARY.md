@@ -167,6 +167,10 @@
 - [Concurrency control](./distributed-system/concurrency-control.md)
   - [Resolving write conflicts](./distributed-system/resolving-write-conflicts.md)
   - [Locking](./distributed-system/locking.md)
+- [Partitioning](./distributed-system/partitioning.md)
+- [Sharding](./distributed-system/sharding.md)
+- [Sparse indexing](./distributed-system/sparse-indexing.md)
+- [Atomic vs. partial updates]()
 
 ---
 
