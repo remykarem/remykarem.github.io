@@ -1,6 +1,6 @@
 # Block ciphers
 
-A **deterministic** encryption algorithm operating on a _block_.
+A **deterministic** encryption algorithm operating on a _block_. It offers [confidentiality](../../goals/confidentiality.md).
 
 ```admonish note title="Definition"
 A **block** is a fixed-length group of bits.
