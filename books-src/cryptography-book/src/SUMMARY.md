@@ -33,11 +33,14 @@
 # Digital signature algorithms
 
 - [Digital signature algorithms](./primitives/digital-signature-algorithms/index.md)
-- [RSASSA-PKCS1-v1_5](./primitives/digital-signature-algorithms/rsassa-pkcs1-v1_5.md)
-- [RSASSA-PSS](./primitives/digital-signature-algorithms/rsassa-pss.md)
-- [ECDSA](./primitives/digital-signature-algorithms/ecdsa.md)
-- [EdDSA](./primitives/digital-signature-algorithms/eddsa.md)
-- [CRYSTALS-Dilithium](./primitives/digital-signature-algorithms/crystals-dilithium.md)
+- [EC]()
+  - [ECDSA](./primitives/digital-signature-algorithms/ecdsa.md)
+  - [EdDSA](./primitives/digital-signature-algorithms/eddsa.md)
+- [RSA]()
+  - [RSASSA-PKCS1-v1_5](./primitives/digital-signature-algorithms/rsassa-pkcs1-v1_5.md)
+  - [RSASSA-PSS](./primitives/digital-signature-algorithms/rsassa-pss.md)
+- [Lattice-based]()
+  - [CRYSTALS-Dilithium](./primitives/digital-signature-algorithms/crystals-dilithium.md)
 - [Schnorr](./primitives/digital-signature-algorithms/schnorr.md)
 - [ElGamal]()
 - [DSA]()
@@ -111,20 +114,20 @@
 
 # Cryptosystems
 
-- [ECC](./cryptosystems/ecc/index.md)
+- [Elliptic Curve](./cryptosystems/ecc/index.md)
   - [Curve25519](./cryptosystems/ecc/curve25519.md)
   - [Ed25519](./cryptosystems/ecc/ed25519.md)
   - [P-256 / secp256r1 / prime256v1](./cryptosystems/ecc/p-256.md)
   - [P-384](./cryptosystems/ecc/p-384.md)
   - [secp256k1]()
-- [IFC](./cryptosystems/ifc/index.md)
+- [Integer factorisation](./cryptosystems/ifc/index.md)
   - [RSA](./cryptosystems/ifc/rsa/index.md)
-- [FFC]()
+- [Finite field]()
   - [DH]()
   - [DSA](./cryptosystems/ffc/dsa.md)
+  - [Elgamal (OG)]()
+  - [Schnorr (OG)]()
 - [Lattice-based cryptography](./cryptosystems/lattice-based-cryptography/index.md)
-- [???]()
-  - [ElGamal]()
 
 ---
 
