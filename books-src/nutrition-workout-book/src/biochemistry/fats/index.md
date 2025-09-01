@@ -7,22 +7,31 @@
 ## Food sources (of fats)
 
 * Fruits
-  * Avocado — 64% oleic, 13% palmitic
+  * Avocado — 64% OA, 13% PA
 * Meat
-  * Chicken — 40% oleic, 22% palmitic, 20% linoleic
-  * Beef — 40% oleic, 25% palmitic, 18% stearic
-  * Mutton — 40% oleic, 25% palmitic, 20% stearic
+  * Chicken with skin — 40% OA, 20% PA, 20% LA
+  * Chicken without skin — 35% OA, 20% PA, 20% LA
+  * Beef — 40% OA, 25% PA, 18% SA
+  * Mutton — 40% OA, 25% PA, 20% SA
 * Seafood
-  * Salmon — 30% oleic, 15% palmitic, 15% EPA + DHA
-  * Sardine — 25% oleic, 15% palmitic, 15% EPA + DHA
+  * Salmon — 30% OA, 15% PA, 15% EPA + DHA
+  * Sardine — 25% OA, 15% PA, 15% EPA + DHA
 * Nuts
-  * Walnuts — 51% linoleic, 15% oleic, 10% ALA
+  * Walnuts — 50% LA, 15% OA, 10% ALA
+  * Peanuts — 45% OA, 30% LA, 8% PA
+  * Almonds — 60% OA, 20% LA, 5% PA
 * Seeds
-  * Sunflower — 65% linoleic, 25% oleic, 5% palmitic 
+  * Sunflower — 65% LA, 25% OA, 5% PA 
 * Others
-  * Olive oil — 75% oleic, 15% palmitic, 10% linoleic
-  * Cocoa butter — 35% stearic, 35% oleic, 25% palmitic
-  * Eggs — 38% oleic, 27% palmitic, 16% linoleic, 9% stearic
+  * Olive oil — 75% OA, 15% PA, 10% LA
+  * Coconut oil — 45% lauric, 15% myristic, 8% PA
+  * Cocoa butter — 35% SA, 35% OA, 25% PA
+  * Eggs — 38% OA, 27% PA, 16% LA, 9% SA
+
+OA — oleic acid
+PA — palmitic acid
+LA — linoleic acid
+SA — stearic acid
 
 ---
 
