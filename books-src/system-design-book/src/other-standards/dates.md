@@ -35,6 +35,10 @@ References:
 
 ## Timezone
 
+~~~admonish tip title="Instant"
+Java uses the term `instant` to indicate a particular moment in time in the world.
+~~~
+
 tz database aka IANA time zone database
 
 Eg. `Asia/Singapore`
