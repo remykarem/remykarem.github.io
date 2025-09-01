@@ -30,9 +30,9 @@
  
 Legend
 * OA — oleic acid (mufa)
-* PA — palmitic acid (pufa)
 * LA — linoleic acid (pufa)
-* SA — stearic acid (saturates)
+* PA — palmitic acid (saturated fat)
+* SA — stearic acid (saturated fat)
 
 ---
 
