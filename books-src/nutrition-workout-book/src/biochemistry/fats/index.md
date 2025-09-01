@@ -27,11 +27,12 @@
   * Coconut oil — 45% lauric, 15% myristic, 8% PA
   * Cocoa butter — 35% SA, 35% OA, 25% PA
   * Eggs — 38% OA, 27% PA, 16% LA, 9% SA
-
-OA — oleic acid
-PA — palmitic acid
-LA — linoleic acid
-SA — stearic acid
+ 
+Legend
+* OA — oleic acid (mufa)
+* PA — palmitic acid (pufa)
+* LA — linoleic acid (pufa)
+* SA — stearic acid (saturates)
 
 ---
 
