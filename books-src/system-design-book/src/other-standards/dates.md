@@ -14,19 +14,23 @@ No. of seconds^ elapsed since Unix epoch, i.e. 1 Jan 1970 UTC.
 ISO 8601 and RFC 3339 are separate standards but have overlapping conventions.
 ```
 
-1.	Date and Time in UTC (Coordinated Universal Time):
+1.	Date and Time in UTC:
 
     `2024-01-19T15:20:30Z`, `2024-01-19T15:20:30.123Z` (fractional)
 
-2.	Date and Time with an Offset from UTC:
+2.  Local datetime
+
+   `2024-01-19T15:20:30`
+
+3.	Date and Time with an Offset from UTC:
 
     `2024-01-19T10:20:30-05:00`
 
-3.	Only Date (without any information about time zone):
+4.	Only Date (without any information about time zone):
 
     `2024-01-19`
 
-4.	Only Time (without any information about time zone):
+5.	Only Time (without any information about time zone):
 
     `15:20:30Z`, `01:20:30+08:00`
 
