@@ -18,6 +18,10 @@
 - [Efficient use of resources](./design-principles/efficient-use-of-resources.md)
 - [Single source of truth](./design-principles/single-source-of-truth.md)
 
+# Guarantees
+
+- [Uniqueness](./guarantees/uniqueness.md)
+
 ---
 
 # Goals
