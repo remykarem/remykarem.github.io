@@ -189,6 +189,25 @@ interface SomeRepository : JpaRepository&lt;MyEntity, Long&gt; {
 
 </code></pre>
 <p>findBy_ might throw if return more than 1; will return null if empty</p>
+<h2 id="connection-session"><a class="header" href="#connection-session">Connection, session</a></h2>
+<p>A Hibernate session (or anything that implements JPA EntityManager) is responsible for </p>
+<ul>
+<li>tracking entities</li>
+<li>lazily loading associations when you access them</li>
+<li>flushing changes to the DB</li>
+</ul>
+<div id="admonition-gotcha-proxy-leak" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Gotcha: Proxy leak</p>
+<p><a class="admonition-anchor-link" href="#admonition-gotcha-proxy-leak"></a></p>
+</div>
+<div>
+<p>accessing a lazy proxy after session is closed</p>
+<p>This happens if the access happens outside an <code>@Transaction</code></p>
+<pre><code class="language-txt">could not initialize proxy
+</code></pre>
+</div>
+</div>
 <h2 id="test"><a class="header" href="#test">Test</a></h2>
 <p><code>@Transactional</code> for code and tests.</p>
 <p><code>@DatabaseSetups</code> for clean inserts, fixtures etc.</p>
