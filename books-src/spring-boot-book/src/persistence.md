@@ -1,5 +1,7 @@
 # Persistence
 
+Spring Boot provides page-based pagination out of the boxxx
+
 
 `@Entity`
 
