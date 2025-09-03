@@ -182,11 +182,28 @@
 <li>
 <p>Pagination</p>
 <ul>
-<li>Offset-based: GET /orders?offset=0&amp;limit=3</li>
-<li>Cursor-based: GET /orders?cursor=xxx</li>
-<li>Page-based: GET /items?page=2&amp;size=3</li>
-<li>Key-based: GET /items?after_id=102&amp;limit=3</li>
-<li>Time-based: GET /items?start_time=xxx&amp;end_time=yyy</li>
+<li>
+<p>Cursor-based: GET /orders?cursor=xxx</p>
+</li>
+<li>
+<p>Page-based: GET /items?page=2&amp;size=3</p>
+<div id="admonition-page-or-offset" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Page or offset</p>
+<p><a class="admonition-anchor-link" href="#admonition-page-or-offset"></a></p>
+</div>
+<div>
+<pre><code>&quot;Page&quot; is a client-facing abstraction whereas &quot;offset&quot; is the actual SQL mechanism.
+</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Key-based: GET /items?after_id=102&amp;limit=3</p>
+</li>
+<li>
+<p>Time-based: GET /items?start_time=xxx&amp;end_time=yyy</p>
+</li>
 </ul>
 <p>Source: blog.bytebytego.com</p>
 </li>
