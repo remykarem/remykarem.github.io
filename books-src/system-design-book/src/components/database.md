@@ -4,7 +4,7 @@ Purpose:
 * [Data storage](../core-functionalities/data-storage.md)
 
 Features:
-* TTL (eg Redis)
+* TTL (eg Redis, Dynamo DB)
 
 Non-features:
 * [Locking](../distributed-system/concurrency-control.md) (unlike in queue)
