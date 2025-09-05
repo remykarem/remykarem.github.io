@@ -9,6 +9,10 @@ Algorithms
 * Sliding window
 * Token bucket
 
+~~~admonish tip title="HTTP status code 429"
+HTTP has a status code 429: Too Many Requests
+~~~
+
 ~~~admonish warning
 When integrating with systems, ensure that the client respects the limits of the target server, and/or handle errors airising from limits.
 ~~~
