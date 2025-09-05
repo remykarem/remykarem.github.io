@@ -71,6 +71,7 @@
   - [Sharding]()
 - [Auto-scaling](./strategies/auto-scaling.md)
 - [Rate limiting](./strategies/rate-limiting.md)
+- [Throttling](./strategies/throttling.md)
 - [Load balancing](./strategies/load-balancing.md)
 - [Coupling, isolation]()
 - [Logging & monitoring](./strategies/logging-and-monitoring.md)
