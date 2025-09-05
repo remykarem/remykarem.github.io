@@ -1,8 +1,10 @@
 # Rate limiting
 
-aka throttling
-
 Control the rate at which requests are made to prevent abuse or overload.
+
+~~~admonish note title="Rate limiting vs. throttling"
+Rate limiting usually refers to _server-side_ enforcing.
+~~~
 
 Algorithms
 * Fixed window
