@@ -56,12 +56,6 @@
 
 ---
 
-# Ideal state
-
-- [Redundancy](./strategies/redundancy.md)
-
----
-
 # Strategies
 
 - [Caching](./strategies/caching.md)
@@ -82,6 +76,7 @@
 - [Retry mechanism](./strategies/retry-mechanism.md)
 - [Circuit breaker pattern]()
 - [Fallback pattern]()
+- [Redundancy](./strategies/redundancy.md)
 - [Manual intervention](./strategies/manual-intervention.md)
 
 # Strategies II

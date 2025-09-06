@@ -5,6 +5,7 @@ Purpose:
 
 Features:
 * TTL (eg Redis, Dynamo DB)
+* ACID (SQL databases, DynamoDB)
 
 Non-features:
 * [Locking](../distributed-system/concurrency-control.md) (unlike in queue)
