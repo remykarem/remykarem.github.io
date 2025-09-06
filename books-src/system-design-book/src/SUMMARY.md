@@ -125,16 +125,6 @@
 
 ---
 
-# Data sync / getting new data patterns
-
-- [Polling](./data-sync/polling/index.md)
-  - [Event-based](./data-sync/polling/event-based.md)
-  - [Differential sync](./data-sync/polling/differential-sync.md)
-- [Webhook](./data-sync/webhook/index.md)
-- [Webhook vs. polling](./data-sync/webhook-vs-polling.md)
-
----
-
 # Messaging patterns
 
 - [Overview](./messaging-patterns/overview.md)
@@ -169,13 +159,18 @@
   - [Weak consistency]()
 - [Distributed database]()
   - [SQL vs. NoSQL](./sql-vs-nosql.md)
-- [Concurrency control](./distributed-system/concurrency-control.md)
-  - [Resolving write conflicts](./distributed-system/resolving-write-conflicts.md)
-  - [Locking](./distributed-system/locking.md)
 - [Partitioning](./distributed-system/partitioning.md)
 - [Sharding](./distributed-system/sharding.md)
 - [Sparse indexing](./distributed-system/sparse-indexing.md)
 - [Atomic vs. partial updates]()
+
+---
+
+# Concurrency
+
+- [Concurrency control](./distributed-system/concurrency-control.md)
+  - [Resolving write conflicts](./distributed-system/resolving-write-conflicts.md)
+  - [Locking](./distributed-system/locking.md)
 
 ---
 
@@ -196,6 +191,16 @@
   - [Microservices](./patterns/microservices.md)
   - [Service-oriented architecture]()
   - [Layered]()
+
+---
+
+# Domain: Data sync / getting new data patterns
+
+- [Polling](./data-sync/polling/index.md)
+  - [Event-based](./data-sync/polling/event-based.md)
+  - [Differential sync](./data-sync/polling/differential-sync.md)
+- [Webhook](./data-sync/webhook/index.md)
+- [Webhook vs. polling](./data-sync/webhook-vs-polling.md)
 
 ---
 
