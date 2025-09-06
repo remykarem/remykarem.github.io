@@ -33,7 +33,7 @@
 - [Fault tolerance?](./goals/fault-tolerance.md)
   - [Partition tolerance](./goals/partition-tolerance.md)
 - [Consistency](./goals/consistency.md)
-- [Atomicity]()
+- [Atomicity](./goals/atomicity.md)
 - [Integrity](./goals/integrity.md)
 - [Durability](./goals/durability.md)
 - [Maintainability](./goals/maintainability.md)
