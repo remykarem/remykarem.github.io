@@ -34,6 +34,8 @@
   - [Partition tolerance](./goals/partition-tolerance.md)
 - [Consistency](./goals/consistency.md)
 - [Atomicity]()
+- [Integrity](./goals/integrity.md)
+- [Durability](./goals/durability.md)
 - [Maintainability](./goals/maintainability.md)
 - [Adaptability](./goals/adaptability.md)
 
