@@ -35,6 +35,7 @@
 - [Consistency](./goals/consistency.md)
 - [Atomicity](./goals/atomicity.md)
 - [Integrity](./goals/integrity.md)
+- [Isolation](./goals/isolation.md)
 - [Durability](./goals/durability.md)
 - [Maintainability](./goals/maintainability.md)
 - [Adaptability](./goals/adaptability.md)
