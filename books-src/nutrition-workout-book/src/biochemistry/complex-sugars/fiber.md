@@ -70,8 +70,11 @@ Properties:
 ## Food sources
 
 * Greens
-  * **Kale** (4.1g)
-  * Brussel sprouts (3.8g)
+  * **Kale** (2.8g)
+  * **Romaine lettuce** (1.4g)
+  * Cabbage (1.3g)
+  * **Iceberg lettuce** (0.8g)
+  * **Butterhead lettuce** (0.7g)
 * Fruits
   * **Raspberries** (6.5g)
   * Blackberries (5.3g)
