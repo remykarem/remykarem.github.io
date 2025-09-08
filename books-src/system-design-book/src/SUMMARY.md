@@ -39,6 +39,7 @@
 - [Durability](./goals/durability.md)
 - [Maintainability](./goals/maintainability.md)
 - [Adaptability](./goals/adaptability.md)
+- [Recoverability](./goals/recovery.md)
 
 ---
 
