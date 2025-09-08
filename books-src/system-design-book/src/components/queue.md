@@ -35,8 +35,14 @@ Features:
   If you want to release the lock while processing, you can set the visibility timeout to 0.
   ~~~
 
+- [Noisy neighbour impact mitigation](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fair-queues.html) for multi-tenancy
 - Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately
 - Logical grouping of messages (with order within group)
+
+  ~~~admonish tip title="Partition"
+  AWS SQS FIFO uses [partitioning](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/high-throughput-fifo.html#partitions-and-data-distribution).
+  ~~~
+
 - Short polling or long polling
 - Integration with DLQ
 - [Batching](../strategies/batching.md)

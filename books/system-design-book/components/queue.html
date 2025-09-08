@@ -236,10 +236,22 @@
 </div>
 </li>
 <li>
+<p><a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fair-queues.html">Noisy neighbour impact mitigation</a> for multi-tenancy</p>
+</li>
+<li>
 <p>Initial invisibility period / delivery delay — possibly used in situations where a system needs to 'stabilise' first, or when used in a retry queue where retries should not happen immediately</p>
 </li>
 <li>
 <p>Logical grouping of messages (with order within group)</p>
+<div id="admonition-partition" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Partition</p>
+<p><a class="admonition-anchor-link" href="#admonition-partition"></a></p>
+</div>
+<div>
+<p>AWS SQS FIFO uses <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/high-throughput-fifo.html#partitions-and-data-distribution">partitioning</a>.</p>
+</div>
+</div>
 </li>
 <li>
 <p>Short polling or long polling</p>
