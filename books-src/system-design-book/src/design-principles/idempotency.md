@@ -6,8 +6,10 @@ Useful in systems where a request might be repeated (eg. in distributed queues, 
 
 This is usually implemented using **idempotency keys**. Idempotency keys are used to prevent performing the same transaction more than once.
 
-~~~admonish example title="Real-life examples"
-Stripe[^stripe] and PayPal[^paypal] use them.
+~~~admonish example title="Real-life examples & idempotency guarantees"
+* Stripe[^stripe] — 24h
+* PayPal[^paypal]
+* SQS FIFO — 5mins
 ~~~
 
 [^stripe]: [https://stripe.com/docs/api/idempotent_requests](https://stripe.com/docs/api/idempotent_requests)
