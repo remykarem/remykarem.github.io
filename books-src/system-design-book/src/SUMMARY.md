@@ -31,6 +31,7 @@
 - [Performance](./goals/performance.md)
 - [Reliability](./goals/reliability.md)
 - [Fault tolerance?](./goals/fault-tolerance.md)
+  - [Recoverability](./goals/recovery.md)
   - [Partition tolerance](./goals/partition-tolerance.md)
 - [Consistency](./goals/consistency.md)
 - [Atomicity](./goals/atomicity.md)
@@ -39,7 +40,6 @@
 - [Durability](./goals/durability.md)
 - [Maintainability](./goals/maintainability.md)
 - [Adaptability](./goals/adaptability.md)
-- [Recoverability](./goals/recovery.md)
 
 ---
 
