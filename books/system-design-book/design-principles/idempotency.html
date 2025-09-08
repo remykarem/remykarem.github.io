@@ -181,13 +181,17 @@
 <p>An idempotent application is not adversely affected if the <em>same</em> message or request is processed more than once.</p>
 <p>Useful in systems where a request might be repeated (eg. in distributed queues, retrying failed HTTP requests) or for highly concurrent applications. </p>
 <p>This is usually implemented using <strong>idempotency keys</strong>. Idempotency keys are used to prevent performing the same transaction more than once.</p>
-<div id="admonition-real-life-examples" class="admonition admonish-example">
+<div id="admonition-real-life-examples--idempotency-guarantees" class="admonition admonish-example">
 <div class="admonition-title">
-<p>Real-life examples</p>
-<p><a class="admonition-anchor-link" href="#admonition-real-life-examples"></a></p>
+<p>Real-life examples &amp; idempotency guarantees</p>
+<p><a class="admonition-anchor-link" href="#admonition-real-life-examples--idempotency-guarantees"></a></p>
 </div>
 <div>
-<p>Stripe<sup class="footnote-reference"><a href="#stripe">1</a></sup> and PayPal<sup class="footnote-reference"><a href="#paypal">2</a></sup> use them.</p>
+<ul>
+<li>Stripe<sup class="footnote-reference"><a href="#stripe">1</a></sup> — 24h</li>
+<li>PayPal<sup class="footnote-reference"><a href="#paypal">2</a></sup></li>
+<li>SQS FIFO — 5mins</li>
+</ul>
 </div>
 </div>
 <div class="footnote-definition" id="stripe"><sup class="footnote-definition-label">1</sup>
