@@ -182,18 +182,20 @@
 <p>In asynchronous processing, poor concurrency control might lead to a race condition.</p>
 <p>Some strategies:</p>
 <ul>
-<li>Idempotency</li>
+<li>Idempotency, deduplication</li>
 <li>Concurrency control
 <ul>
 <li>Optimistic vs pessimisstic locking</li>
 </ul>
 </li>
+<li>Transactional boundaries
+<ul>
+<li>Single-call atomicity</li>
+<li>2PC, sagas</li>
+</ul>
+</li>
 <li>Request serialisation</li>
-<li>Transactional boundaries</li>
-<li>Timestamps, versioning</li>
-<li>Locking mechanism</li>
-<li>Deduplication</li>
-<li>Verification step</li>
+<li>Scoped mutations — focus on editing on thing at a time</li>
 </ul>
 
                     </main>
