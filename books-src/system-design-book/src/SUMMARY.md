@@ -90,6 +90,7 @@
 
 # Strategies III: Concurrency & parallelism
 
+- [Concurrent processing]()
 - [Concurrency control](./distributed-system/concurrency-control.md)
   - [Resolving write conflicts](./distributed-system/resolving-write-conflicts.md)
   - [Locking](./distributed-system/locking.md)
