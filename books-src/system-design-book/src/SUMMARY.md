@@ -88,6 +88,12 @@
 - [Adding layer of abstraction](./strategies/adding-layer-of-abstraction.md)
 - [Adding buffer between services](./strategies/adding-buffer-between-services.md)
 
+# Strategies III: Concurrency & parallelism
+
+- [Concurrency control](./distributed-system/concurrency-control.md)
+  - [Resolving write conflicts](./distributed-system/resolving-write-conflicts.md)
+  - [Locking](./distributed-system/locking.md)
+
 ---
 
 # Components / Resources
@@ -162,14 +168,6 @@
 - [Sharding](./distributed-system/sharding.md)
 - [Sparse indexing](./distributed-system/sparse-indexing.md)
 - [Atomic vs. partial updates]()
-
----
-
-# Concurrency
-
-- [Concurrency control](./distributed-system/concurrency-control.md)
-  - [Resolving write conflicts](./distributed-system/resolving-write-conflicts.md)
-  - [Locking](./distributed-system/locking.md)
 
 ---
 
