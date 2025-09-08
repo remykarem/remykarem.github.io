@@ -3,5 +3,5 @@
 Strategies:
 * Range partitioning — rows split by value ranges
 * List partitioning — rows split by discrete values
-* Hash partitioning — rows assigned by hash of a key
+* Hash partitioning — rows assigned by hash of a key (eg. AWS SQS FIFO)
 * ...
