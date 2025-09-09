@@ -12,4 +12,8 @@ Having or not having a database.
 https://www.seangoedecke.com/good-system-design/
 ~~~
 
-Facilitates [horizontal scaling](./horizontal-scaling.md), helps with [recoverability](../goals/recoverability.md)
+Facilitates [horizontal scaling](./horizontal-scaling.md), helps with [recoverability](../goals/recoverability.md)[^stateless]
+
+---
+
+[^stateless]: [Good System Design](https://www.seangoedecke.com/good-system-design/)
