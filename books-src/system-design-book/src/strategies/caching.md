@@ -4,6 +4,10 @@
 
 "**Backend storage**", "**cache**"
 
+~~~admonish tip title="Use case"
+Good for read-heavy workloads.
+~~~
+
 Common caching strategies / consistency strategies:
 
 * Write-Through Cache — write to both backend storage annd cache

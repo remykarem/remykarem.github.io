@@ -2,6 +2,8 @@
 
 The ability of a system to **adapt to increased or decreased workloads** without sacrificing performance or (**resource**) efficiency.
 
+This include **spikes** in traffic.
+
 ~~~admonish note
 The keyword here is resource efficiency.
 
