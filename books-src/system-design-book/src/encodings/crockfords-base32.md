@@ -14,8 +14,12 @@ Characters:
 * 0-9 (10 in total)
 * A-Z except I, L, O and U (22 in total)
 
-  ~~~admonish question
-  The exclusion of I, L and O avoids confusion with the digits 0 and 1.
+~~~admonish question
+The exclusion of I, L and O avoids confusion with the digits 0 and 1.
 
-  U is excluded to avoid accidental obscenity.
-  ~~~
+U is excluded to avoid accidental obscenity.
+~~~
+
+~~~admonish example title="Usage"
+Base32 is used in geohash
+~~~

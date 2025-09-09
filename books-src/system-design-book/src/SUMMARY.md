@@ -67,14 +67,16 @@
 - [Distributed](./strategies/distributed.md)
   - [Replication](./strategies/replication.md)
   - [Sharding]()
+- [Backpressure](./strategies/backpressure.md)
+  - [Buffering](./strategies/adding-buffer-between-services.md)
+  - [Rate limiting](./strategies/rate-limiting.md)
+  - [Vertical scaling](./strategies/vertical-scaling.md)
+  - [Horizontal scaling](./strategies/horizontal-scaling.md)
 - [Auto-scaling](./strategies/auto-scaling.md)
-- [Rate limiting](./strategies/rate-limiting.md)
 - [Throttling](./strategies/throttling.md)
 - [Load balancing](./strategies/load-balancing.md)
 - [Coupling, isolation]()
 - [Logging & monitoring](./strategies/logging-and-monitoring.md)
-- [Vertical scaling](./strategies/vertical-scaling.md)
-- [Horizontal scaling](./strategies/horizontal-scaling.md)
 - [Retry mechanism](./strategies/retry-mechanism.md)
 - [Circuit breaker pattern]()
 - [Fallback pattern]()
@@ -86,7 +88,6 @@
 - [Stateless service](./strategies/stateless-service.md)
 - [Loose coupling of services](./strategies/loose-coupling-of-services.md)
 - [Adding layer of abstraction](./strategies/adding-layer-of-abstraction.md)
-- [Adding buffer between services](./strategies/adding-buffer-between-services.md)
 
 # Strategies III: Concurrency & parallelism
 
@@ -94,6 +95,7 @@
 - [Concurrency control](./distributed-system/concurrency-control.md)
   - [Resolving write conflicts](./distributed-system/resolving-write-conflicts.md)
   - [Locking](./distributed-system/locking.md)
+  - [Reserved concurrency]()
 - [Noisy-neighbour]()
 
 ---

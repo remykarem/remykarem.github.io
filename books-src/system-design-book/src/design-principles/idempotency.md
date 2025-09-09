@@ -6,6 +6,10 @@ Useful in systems where a request might be repeated (eg. in distributed queues, 
 
 This is usually implemented using **idempotency keys**. Idempotency keys are used to prevent performing the same transaction more than once.
 
+~~~admonish tip title="SQS FIFO deduplication"
+Treat the 5-min window as a safety net, not your primary idempotency guarantee.
+~~~
+
 ~~~admonish example title="Real-life examples & idempotency guarantees"
 * Stripe[^stripe] — 24h
 * PayPal[^paypal]
