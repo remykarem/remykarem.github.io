@@ -2,6 +2,8 @@
 
 A special function or method that creates instances.
 
+It's a common pattern for parsing/deserialisation to be in a factory method. Eg. datetime parsing, IP address parsing
+
 ~~~admonish example title="Spring Boot"
 `@Bean`-annotated methods (in `@Configuration` classes) are factory methods for Spring beans.
 ~~~
