@@ -13,3 +13,13 @@ Any request (read or write) received by a non-failing node in a system must resu
 ~~~
 
 _Single point of failure_ is directly tied to poor availability. 
+
+## Metrics
+
+* Number of 9's
+
+  * 99% — 2h
+  * 99.9% — 10mins
+  * 99.99% — 1min
+
+  (per week)
