@@ -11,3 +11,5 @@ High availability is the ability of the system to stay online despite having fai
 **CAP theorem definition**
 
 Any request (read or write) received by a non-failing node in a system must result in a response.
+
+_Single point of failure_ is directly tied to poor availability. 
