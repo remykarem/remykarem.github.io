@@ -233,8 +233,29 @@
 </ul>
 <h2 id="metrics"><a class="header" href="#metrics">Metrics</a></h2>
 <ul>
-<li>QPS (Queries per second)</li>
+<li>Throughput
+<ul>
+<li>Queries — QPS (Queries per second) / RPS (requests per second)</li>
+<li>Data — MB/s, rows/s, events/s</li>
 </ul>
+</li>
+<li>Latency — usually measured in percentiles:
+<ul>
+<li>p50 — 50% of users</li>
+<li>p95 — 95% of users</li>
+</ul>
+</li>
+<li>Resource — CPU, memory, I/O</li>
+</ul>
+<div id="admonition-example" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<p>“System handles 20k QPS with p95 latency under 200 ms.”</p>
+</div>
+</div>
 <h2 id="oom-out-of-memory-issues"><a class="header" href="#oom-out-of-memory-issues">OOM (Out of memory) issues</a></h2>
 <ul>
 <li>Memory leaks</li>

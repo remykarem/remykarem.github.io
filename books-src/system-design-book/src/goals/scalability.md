@@ -52,7 +52,17 @@ How to measure scalability?
 
 ## Metrics
 
-* QPS (Queries per second)
+* Throughput
+  * Queries — QPS (Queries per second) / RPS (requests per second)
+  * Data — MB/s, rows/s, events/s
+* Latency — usually measured in percentiles:
+  * p50 — 50% of users
+  * p95 — 95% of users
+* Resource — CPU, memory, I/O
+
+~~~admonish example
+“System handles 20k QPS with p95 latency under 200 ms.”
+~~~
 
 ## OOM (Out of memory) issues
 * Memory leaks
