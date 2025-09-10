@@ -2,7 +2,9 @@
 
 Having similar nodes run the workload together
 
-Fault tolerance can achieve high availability.
+Helps with
+* [availability](../goals/availability.md)
+* [scalability](../goals/scalability.md)
 
 * Master-slave replication: 1 master node for writes, multiple slaves for reads (aka primary-secondary)
 
