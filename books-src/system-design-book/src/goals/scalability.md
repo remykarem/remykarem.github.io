@@ -50,6 +50,10 @@ How to measure scalability?
 * [Performance metrics](../metrics.md)
 * [Resource usage](../metrics.md)
 
+## Metrics
+
+* QPS (Queries per second)
+
 ## OOM (Out of memory) issues
 * Memory leaks
 * Large data loads (loading large files, large requests, large record sets fromdatabase)
