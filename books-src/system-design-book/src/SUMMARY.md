@@ -56,6 +56,7 @@
 - [Compute](./core-functionalities/compute.md)
 - [Pipelining](./core-functionalities/pipelining.md)
 - [Scheduling](./core-functionalities/scheduling.md)
+- [Static hosting]()
 - [State / statelessness/ Data storage](./core-functionalities/data-storage.md)
 - [Identity hiding](./core-functionalities/identity-hiding.md)
 - [Control outgoing requests](./core-functionalities/control-outgoing-requests.md)
