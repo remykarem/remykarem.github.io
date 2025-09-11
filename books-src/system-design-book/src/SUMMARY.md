@@ -162,6 +162,7 @@
     - [Locks and distributed lock manager]()
     - [Consistent hashing]()
     - [Gossip protocols]()
+  - [Strong consistency](./distributed-system/consistency-models/strong-consistency.md)
   - [Eventual consistency]()
     - [BASE]()
   - [Eventual consistency]()
