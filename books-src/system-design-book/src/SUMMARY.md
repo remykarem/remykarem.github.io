@@ -24,6 +24,11 @@
 - [Exactly-once processing](./guarantees/exactly-once-processing.md)
 - [In-order processing]()
 
+# Mitigations
+
+- [Noisy neighbour]()
+- [Race condition]()
+
 ---
 
 # Goals
