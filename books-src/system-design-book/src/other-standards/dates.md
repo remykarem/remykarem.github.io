@@ -37,6 +37,10 @@ ISO 8601 and RFC 3339 are separate standards but have overlapping conventions.
 References:
 [RFC 3339 vs. ISO 8601](https://ijmacd.github.io/rfc3339-iso8601/)
 
+~~~admonish example title="Real world"
+AWS DynamoDB[^dynamodb] recommends using ISO 8601 for datetime.
+~~~
+
 ## Timezone
 
 ~~~admonish tip title="Instant"
@@ -51,3 +55,7 @@ Eg. `Asia/Singapore`
 Gotcha:
 Time zone in Singapore is different in 1945.
 ~~~
+
+---
+
+[^dynamodb]: [AWS DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.NamingRulesDataTypes.html)
