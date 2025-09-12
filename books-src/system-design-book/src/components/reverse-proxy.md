@@ -8,3 +8,7 @@ A **reverse proxy** is commonly used for:
 * [Caching](../strategies/caching.md)
 * [SSL termination](../core-functionalities/ssl-encryption-and-decryption.md) for backend servers
 * Serve static content via [caching](../strategies/caching.md)
+
+~~~admonish warning title="Traffic spike"
+Load balancers _distribute_ the traffic but it can't handle traffic spikes.
+~~~
