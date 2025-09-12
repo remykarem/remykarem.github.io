@@ -54,6 +54,7 @@
 # Core functionalities
 
 - [Routing](./core-functionalities/routing.md)
+  - [Load balancing](./core-functionalities/load-balancing.md)
 - [Compute](./core-functionalities/compute.md)
 - [Pipelining](./core-functionalities/pipelining.md)
 - [Scheduling](./core-functionalities/scheduling.md)
