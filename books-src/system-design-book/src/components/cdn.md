@@ -12,5 +12,5 @@ Responsibilties:
 AWS CloudFront
 ~~~
 
-Features:
-* Distributed
+Design:
+* [Distributed](../strategies/distributed.md)
