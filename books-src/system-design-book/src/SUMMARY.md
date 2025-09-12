@@ -21,7 +21,7 @@
 # Guarantees
 
 - [Uniqueness](./guarantees/uniqueness.md)
-- [Exactly-once processing](./guarantees/exactly-once-processing.md)
+- [Delivery](./guarantees/exactly-once-processing.md)
 - [In-order processing]()
 
 # Mitigations
