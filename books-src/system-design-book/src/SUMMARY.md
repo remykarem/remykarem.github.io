@@ -23,6 +23,7 @@
 - [Uniqueness](./guarantees/uniqueness.md)
 - [Delivery](./guarantees/exactly-once-processing.md)
 - [In-order]()
+- [Zero duplication]()
 
 # Mitigations
 
