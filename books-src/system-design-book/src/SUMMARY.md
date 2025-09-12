@@ -232,6 +232,7 @@
 - [Encoding signatures](./api-design/encoding-signatures.md)
 - [Retry-safe]()
 - [Handling large payloads](./api-design/handling-large-payloads.md)
+- [Retention period](./api-design/retention-period.md)
 
 ---
 
