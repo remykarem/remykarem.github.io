@@ -16,3 +16,6 @@ When making decisions, consider
 Cost can mean:
 * Story points
 * Money
+
+Company blogs:
+* [Instagram](https://engineering.fb.com/tag/instagram/)

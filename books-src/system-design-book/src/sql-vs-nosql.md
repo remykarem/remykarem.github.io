@@ -55,6 +55,11 @@ Note that some distributed databases offer relational data support and therefore
 
 ### Scalability
 
-SQL databases are typically sccaled vertically by increasing the horsepower of the machine (CPU, RAM, SSD).
+SQL databases are typically scaled vertically by increasing the horsepower of the machine (CPU, RAM, SSD).
 
 NoSQL are _designed_ to scale horizontally.
+
+---
+
+Reads:
+* [JUST USE POSTGRES FOR EVERYTHING](https://www.amazingcto.com/postgres-for-everything/)

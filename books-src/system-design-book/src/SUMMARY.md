@@ -32,15 +32,22 @@
 
 ---
 
-# Goals
+# Goals I
+
+- [Resilience]()
+
+# Goals II
 
 - [Scalability](./goals/scalability.md)
-- [Availability](./goals/availability.md)
-- [Performance](./goals/performance.md)
-- [Reliability](./goals/reliability.md)
+- [High availability](./goals/availability.md)
 - [Fault tolerance?](./goals/fault-tolerance.md)
   - [Recoverability](./goals/recovery.md)
   - [Partition tolerance](./goals/partition-tolerance.md)
+- [Reliability](./goals/reliability.md)
+
+# Goals III
+
+- [Performance](./goals/performance.md)
 - [Consistency](./goals/consistency.md)
 - [Atomicity](./goals/atomicity.md)
 - [Integrity](./goals/integrity.md)
@@ -72,10 +79,11 @@
 # Strategies
 
 - [Caching](./strategies/caching.md)
-- [Failover](./strategies/failover.md)
 - [Timeout](./strategies/timeout.md)
 - [Batching](./strategies/batching.md)
 - [Distributed](./strategies/distributed.md)
+  - [Redundancy](./strategies/redundancy.md)
+    - [Failover](./strategies/failover.md)
   - [Replication](./strategies/replication.md)
   - [Sharding]()
 - [Backpressure](./strategies/backpressure.md)
@@ -91,7 +99,6 @@
 - [Retry mechanism](./strategies/retry-mechanism.md)
 - [Circuit breaker pattern]()
 - [Fallback pattern]()
-- [Redundancy](./strategies/redundancy.md)
 - [Manual intervention](./strategies/manual-intervention.md)
 
 # Strategies II
@@ -177,6 +184,7 @@
 - [Partitioning](./distributed-system/partitioning.md)
 - [Sharding](./distributed-system/sharding.md)
 - [Sparse indexing](./distributed-system/sparse-indexing.md)
+- [Functional indexing](./distributed-system/functional-indexing.md)
 - [Atomic vs. partial updates]()
 
 ---

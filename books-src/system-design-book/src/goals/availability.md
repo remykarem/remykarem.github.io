@@ -1,6 +1,11 @@
 # Availability
 
-~~~admonish note title="Generic definition"
+**AWS definition**
+
+Availability = percentage of uptime[^aws]
+
+**Generic definition**
+
 The ability of a system to remain operational and accessible, even in the face of failures or other disruptions.
 ~~~
 
@@ -23,3 +28,16 @@ _Single point of failure_ is directly tied to poor availability.
   * 99.99% — 1min
 
   (per week)
+
+~~~admonish tip title="High availability vs. fault tolerance"
+High availability aims to **minimise downtime**.
+
+Fault tolerance ensures continuous operation with **no disruption** to users.
+
+Based on Couchbase blog[^couchbase].
+~~~
+
+---
+
+[^aws]: [Availability and Beyond: Understanding and Improving the Resilience of Distributed Systems on AWS](https://docs.aws.amazon.com/whitepapers/latest/availability-and-beyond-improving-resilience/understanding-availability.html)
+[^couchbase]: [High Availability vs. Fault Tolerance: Key Differences](https://www.couchbase.com/blog/high-availability-vs-fault-tolerance/)

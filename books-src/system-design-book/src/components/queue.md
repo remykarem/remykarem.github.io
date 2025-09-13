@@ -1,4 +1,4 @@
-# Message queue
+# Queue
 
 Verbs: "produce" message, "consume" message
 
@@ -17,6 +17,9 @@ Purpose:
 Actors:
 * **Producer** — creates a message and pushes it into the queue
 * **Consumer** — reads a message and deletes it from the queue
+
+Design:
+- [Distributed](../strategies/distributed.md) — In Amazon SQS, messages are copied on multiple servers for redundancy.
 
 Features:
 
@@ -56,14 +59,6 @@ Features:
   ~~~
 
 - Encryption at rest
-
-Guarantees:
-- [High availability](../goals/availability.md) — In Amazon SQS, messages are copied on multiple servers for redundancy and high availability. This [distributed](../strategies/distributed.md) nature results in:
-  * absence of message in one of the servers
-  * slightly delayed messages (mentioned in the docs)
-  * messages delivered more than once
-  * messages delivered out-of-order
-  * Message deduplication (FIFO queue) — In FIFO queues, there is a 5-min deduplication window. (This feature helps to prevent accidental duplication while allowing for intentional re-sending of messages when necessary.
 
 ## Types of queues
 
