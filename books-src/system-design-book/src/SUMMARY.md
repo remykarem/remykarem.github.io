@@ -18,12 +18,22 @@
 - [Efficient use of resources](./design-principles/efficient-use-of-resources.md)
 - [Single source of truth](./design-principles/single-source-of-truth.md)
 
-# Guarantees
+# Guarantees / semantics / models
 
 - [Uniqueness](./guarantees/uniqueness.md)
 - [Delivery](./guarantees/exactly-once-processing.md)
 - [Ordering](./guarantees/ordering.md)
 - [Zero duplication]()
+- [Consistency](./consistency-models.md)
+  - [Immediate consistency](./distributed-system/consistency-models/immediate-consistency.md)
+  - [Strong consistency](./distributed-system/consistency-models/strong-consistency.md)
+  - [Eventual consistency]()
+    - [BASE]()
+  - [Weak consistency]()
+
+# Theorems
+
+- [CAP theorem](./distributed-system/cap-theorem.md)
 
 # Mitigations
 
@@ -40,7 +50,7 @@
 
 - [Scalability](./goals/scalability.md)
 - [High availability](./goals/availability.md)
-- [Fault tolerance?](./goals/fault-tolerance.md)
+- [Fault tolerance](./goals/fault-tolerance.md)
   - [Recoverability](./goals/recovery.md)
   - [Partition tolerance](./goals/partition-tolerance.md)
 - [Reliability](./goals/reliability.md)
@@ -171,14 +181,6 @@
 # Distributed system
 
 - [Number of nodes](./distributed-system/number-of-nodes.md)
-- [CAP theorem](./distributed-system/cap-theorem.md)
-- [Consistency models](./consistency-models.md)
-  - [Immediate consistency](./distributed-system/consistency-models/immediate-consistency.md)
-  - [Strong consistency](./distributed-system/consistency-models/strong-consistency.md)
-  - [Eventual consistency]()
-    - [BASE]()
-  - [Eventual consistency]()
-  - [Weak consistency]()
 - [Distributed database]()
   - [SQL vs. NoSQL](./sql-vs-nosql.md)
 - [Partitioning](./distributed-system/partitioning.md)
