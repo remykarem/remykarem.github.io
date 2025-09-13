@@ -4,9 +4,11 @@ Purpose:
 * [Data storage](../core-functionalities/data-storage.md)
 
 Features:
-* TTL (eg Redis, AWS DynamoDB)
-* Transactional (SQL databases, AWS DynamoDB)
-* Strongly consistent (DynamoDB)
+* TTL deletion (eg Redis, AWS DynamoDB)
+* TTL archival
+* Consistency models
+ * Transactional (SQL databases, AWS DynamoDB)
+  * Strongly consistent (DynamoDB)
 * CDC (DynamoDB)
 * Caching service (AWS DynamoDB)
 * Integration with REST APIs (AWS DynamoDB via API Gateway)
