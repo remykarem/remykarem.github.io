@@ -11,3 +11,8 @@ Strategies:
 - [Locks and distributed lock manager]()
 - [Consistent hashing]()
 - [Gossip protocols]()
+
+~~~admonish example title="Examples"
+* SQL
+* DynamoDB
+~~~
