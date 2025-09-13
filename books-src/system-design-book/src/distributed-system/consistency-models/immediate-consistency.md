@@ -1,5 +1,7 @@
 # Immediate consistency
 
+aka transactional
+
 Guarantees:
 - [ACID](./distributed-system/consistency-models/immediate-consistency/acid.md)
 
