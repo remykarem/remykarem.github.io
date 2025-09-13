@@ -5,8 +5,9 @@ Purpose:
 
 Features:
 * TTL (eg Redis, AWS DynamoDB)
-* ACID (SQL databases, AWS DynamoDB)
-* CDC (AWS DynamoDB)
+* Transactional (SQL databases, AWS DynamoDB)
+* Strongly consistent (DynamoDB)
+* CDC (DynamoDB)
 * Caching service (AWS DynamoDB)
 * Integration with REST APIs (AWS DynamoDB via API Gateway)
 * Analytics (AWS DynamoDB via S3)
