@@ -135,6 +135,7 @@
 - [Queue](./components/queue.md)
 - [Lambda](./components/serverless-compute-service.md)
 - [Compute]()
+- [Analytics]()
 - [Database](./components/database.md)
 - [API gateway](./components/api-gateway.md)
 - [Event stream](./components/message-broker.md)
