@@ -26,7 +26,7 @@
 - [Consistency](./consistency-models.md)
   - [Immediate consistency](./distributed-system/consistency-models/immediate-consistency.md)
   - [Strong consistency](./distributed-system/consistency-models/strong-consistency.md)
-  - [Eventual consistency]()
+  - [Eventual consistency](./distributed-system/consistency-models/eventual-consistency.md)
     - [BASE]()
   - [Weak consistency]()
 
