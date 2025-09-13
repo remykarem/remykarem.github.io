@@ -60,3 +60,15 @@ Set cookie: session=44ecb091; path=/servlets
 ```
 
 Note: 3rd party cookies are cookies set for domains that are not being visited. Blocking them is not enough due to several workarounds like respawning cookies etc.
+
+## Basic authentication
+
+By default, when the browser receives
+
+```text
+HTTP/1.1 401 Unauthorized
+WWW-Authenticate: Basic realm="Restricted"
+Content-Length: 0
+```
+
+it will display a modal prompting for username and password.
