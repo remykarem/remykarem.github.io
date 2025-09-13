@@ -1,7 +1,9 @@
 # Fault tolerance
 
+Fault tolerance is the ability to withstand subsystem failure and maintain availability.[^aws]
+
 A fault-tolerant system is equipped to _handle_ and _recover_ faults.
 
-To achieve this, the entire massive service is architecturally broken down into smaller loosely coupled services called the microservices.
+---
 
-Fault tolerance can achieve high availability.
+[^aws]: [Availability and Beyond: Understanding and Improving the Resilience of Distributed Systems on AWS](https://docs.aws.amazon.com/whitepapers/latest/availability-and-beyond-improving-resilience/fault-tolerance-and-fault-isolation.html)

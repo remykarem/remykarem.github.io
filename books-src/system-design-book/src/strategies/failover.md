@@ -1,7 +1,5 @@
 # Failover
 
-aka backup
+Failover is the process of switching to a redundant system when a primary system fails.
 
-A failover is when a system automatically switches to a standby component after the active component fails.
-
-This improves [availability](../goals/availability.md).
+Helps with [availability](../goals/availability.md).
