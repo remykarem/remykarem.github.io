@@ -1,3 +1,3 @@
 # Strong consistency
 
-* [Raft protocol](https://thesecretlivesofdata.com/raft/)
+* [Raft protocol visualisation](https://thesecretlivesofdata.com/raft/)
