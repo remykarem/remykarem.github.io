@@ -8,7 +8,6 @@
 * 48 bits — UNIX timestamp (ms)
 * 80 bits — randomness
 
-~~~admonish example
 ```
  01AN4Z07BY      79KA1307SR9X4MV3
 
