@@ -21,7 +21,6 @@
 # Guarantees / semantics / models
 
 - [Uniqueness](./guarantees/uniqueness.md)
-- [Duplication]()
 - [Delivery](./guarantees/exactly-once-processing.md)
 - [Ordering](./guarantees/ordering.md)
 - [Consistency](./consistency-models.md)
