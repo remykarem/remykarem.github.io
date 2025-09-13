@@ -126,6 +126,7 @@
 - [Polymorphic type](./polymorphic-type.md)
 - [Earliest responsible moment](./earliest-responsible-moment.md)
 - [Serialisation/deserialisation](./serialisation-deserialisation.md)
+- [Type-driven design](./type-driven-design.md)
 
 ---
 

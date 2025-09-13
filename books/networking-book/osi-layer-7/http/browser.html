@@ -269,6 +269,13 @@
 <pre><code>Set cookie: session=44ecb091; path=/servlets
 </code></pre>
 <p>Note: 3rd party cookies are cookies set for domains that are not being visited. Blocking them is not enough due to several workarounds like respawning cookies etc.</p>
+<h2 id="basic-authentication"><a class="header" href="#basic-authentication">Basic authentication</a></h2>
+<p>By default, when the browser receives</p>
+<pre><code class="language-text">HTTP/1.1 401 Unauthorized
+WWW-Authenticate: Basic realm=&quot;Restricted&quot;
+Content-Length: 0
+</code></pre>
+<p>it will display a modal prompting for username and password.</p>
 
                     </main>
 

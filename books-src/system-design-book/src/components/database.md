@@ -4,8 +4,12 @@ Purpose:
 * [Data storage](../core-functionalities/data-storage.md)
 
 Features:
-* TTL (eg Redis, Dynamo DB)
-* ACID (SQL databases, DynamoDB)
+* TTL (eg Redis, AWS DynamoDB)
+* ACID (SQL databases, AWS DynamoDB)
+* CDC (AWS DynamoDB)
+* Caching service (AWS DynamoDB)
+* Integration with REST APIs (AWS DynamoDB via API Gateway)
+* Analytics (AWS DynamoDB via S3)
 
 Non-features:
 * [Locking](../distributed-system/concurrency-control.md) (unlike in queue)

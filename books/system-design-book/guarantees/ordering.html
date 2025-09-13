@@ -184,6 +184,19 @@
 <li>Per-aggregate FIFO</li>
 <li>Business-defined</li>
 </ul>
+<div id="admonition-fifo-queue-with-dlq" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>FIFO queue with DLQ</p>
+<p><a class="admonition-anchor-link" href="#admonition-fifo-queue-with-dlq"></a></p>
+</div>
+<div>
+<p>Note that using a FIFO queue with a DLQ <strong>can break ordering</strong> if a poison message is moved to DLQ.<sup class="footnote-reference"><a href="#so">1</a></sup></p>
+</div>
+</div>
+<hr />
+<div class="footnote-definition" id="so"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://stackoverflow.com/questions/72499693/aws-fifo-sqs-how-does-sqs-maintain-ordering-in-a-group-when-a-message-is-stuck">AWS FIFO SQS: How does SQS maintain ordering in a group when a message is stuck in DLQ?</a></p>
+</div>
 
                     </main>
 
