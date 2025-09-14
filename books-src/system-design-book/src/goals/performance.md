@@ -1,3 +1,3 @@
 # Performance
 
-The ability of a system to respond quickly and efficiently to requests, and to handle high volumes of traffic.
+The ability of a system to deliver **low-latency response** to respond to high-traffic queries.
