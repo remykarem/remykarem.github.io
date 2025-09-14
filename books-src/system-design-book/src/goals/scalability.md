@@ -1,8 +1,11 @@
 # Scalability
 
-The ability of a system to **adapt to increased or decreased workloads** without sacrificing performance or (**resource**) efficiency.
+The ability of a system to:
 
-This include **spikes** in traffic.
+* **adapt to increased or decreased workloads**, and 
+* **handle spikes in traffic**
+
+without sacrificing **performance** or (**resource**) efficiency.
 
 ~~~admonish note
 The keyword here is resource efficiency.
@@ -26,6 +29,7 @@ Scaling up and down dynamically
 **Strategies to improve scalability**
 
 Inter-service
+
 - Caching layer
 - Load balancing
 - Asynchronous processing / queues / batch jobs — offloading heavy or long-running tasks
@@ -34,12 +38,14 @@ Inter-service
 - CDN
 
 Service itself
+
 - Data structure optimisation etc.
 - Database sharding
 
 **Testing scalability**
 
-Run load (no. of users, transactions, data volume) & stress tests on the system by simulating concurrent traffic. This helps to identify bottlenecks.
+Run load (no. of users, transactions, data volume) & stress tests on the system by simulating concurrent traffic. This
+helps to identify bottlenecks.
 
 ~~~admonish warning title="Scalability mismatches"
 When part of the system is more scalable than the downstream services.
@@ -53,11 +59,11 @@ How to measure scalability?
 ## Metrics
 
 * Throughput
-  * Queries — QPS (Queries per second) / RPS (requests per second)
-  * Data — MB/s, rows/s, events/s
+    * Queries — QPS (Queries per second) / RPS (requests per second)
+    * Data — MB/s, rows/s, events/s
 * Latency — usually measured in percentiles:
-  * p50 — 50% of users
-  * p95 — 95% of users
+    * p50 — 50% of users
+    * p95 — 95% of users
 * Resource — CPU, memory, I/O
 
 ~~~admonish example
@@ -65,10 +71,12 @@ How to measure scalability?
 ~~~
 
 ## OOM (Out of memory) issues
+
 * Memory leaks
 * Large data loads (loading large files, large requests, large record sets fromdatabase)
 * Heap size configuration
-* High concurrency — applications that handle anhigh number of concurrent requests can consume anlot of memory especially if each thread holds onto significant amounts if data
+* High concurrency — applications that handle anhigh number of concurrent requests can consume anlot of memory
+  especially if each thread holds onto significant amounts if data
 * Unbounded collections
 * Improper use of cache
 * Excessive logging — logging frameworks that store memory buffers

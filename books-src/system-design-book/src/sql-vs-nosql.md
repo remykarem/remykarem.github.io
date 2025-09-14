@@ -6,23 +6,30 @@ most easily achievable with a _single server_.
 NoSQL databases are designed with _scalability_ in mind. This means data lives in _multiple servers_.
 
 The question of SQL vs. NoSQL really boils down to whether you require:
-* **low-latency response** (to respond to high-traffic queries), and
-* **immediate consistency**.
+* [high performance](./goals/performance.md), and
+* [immediate consistency](./goals/consistency.md).
 
 ---
 
-| Thing                | SQL                                            | NoSQL                                        |
+## Patterns, designs
+
+|                      | SQL                                            | NoSQL                                        |
 |----------------------|------------------------------------------------|----------------------------------------------|
 | Design               | 1 server                                       | Multiple servers                             |
 | Data structure       | Relation data, JOINs, referential integrity    | -                                            |
 | \-> Storage          | Lower storage (because of reduced duplication) | Possible duplication                         |
+| \-> Table design     | Multiple tables                                | Single-table design                          |
 | Consistency          | Immediate consistency (ACID)                   | Mainly eventual consistency                  |
 | Schema               | Schema-on-write (validated on write)           | Schema-on-read (schema is validated on read) |
 | Scalability          | Typically vertical scaling^                    | Horizontal scaling                           |
-| Programmer's concern | Reduce I/O (via proper indexing)               | Data locality (via proper indexing)          |
-
+| Goal                 | Minimise page reads                            | Minimise cross-partition I/O                 |
+| Programmer's concern | - (database optimiser does this)               | Data locality (via proper indexing)          |
+| Lookups / index      | Equality-based and range-based (B-tree)        | Hash-based (mainly), range-based             |
 
 ^by increasing the horsepower of the machine (CPU, RAM, SSD).
+
+No matter whether it’s SQL or NoSQL, the slowest and most expensive part is almost always I/O 
+(disk reads/writes, network hops between nodes).
 
 ---
 

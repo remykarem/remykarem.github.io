@@ -44,6 +44,7 @@
 # Goals I
 
 - [Resilience]()
+- [Performance](./goals/performance.md)
 
 # Goals II
 
@@ -56,7 +57,6 @@
 
 # Goals III
 
-- [Performance](./goals/performance.md)
 - [Consistency](./goals/consistency.md)
 - [Atomicity](./goals/atomicity.md)
 - [Integrity](./goals/integrity.md)
@@ -178,9 +178,19 @@
 
 ---
 
-# SQL vs. NoSQL
+# Database
 
 - [SQL vs. NoSQL](./sql-vs-nosql.md)
+- [Optimisations]()
+  - [Sparse indexing](./distributed-system/sparse-indexing.md)
+  - [Functional indexing](./distributed-system/functional-indexing.md)
+  - [Atomic vs. partial updates]()
+  - [Full scans]()
+  - [Vertical partitioning]()
+  - [Write sharding]()
+  - [Random page reads / scans across partitions]()
+
+---
 
 # Managed vs. hosted
 
@@ -191,9 +201,6 @@
 - [Number of nodes](./distributed-system/number-of-nodes.md)
 - [Partitioning](./distributed-system/partitioning.md)
 - [Sharding](./distributed-system/sharding.md)
-- [Sparse indexing](./distributed-system/sparse-indexing.md)
-- [Functional indexing](./distributed-system/functional-indexing.md)
-- [Atomic vs. partial updates]()
 
 ---
 
