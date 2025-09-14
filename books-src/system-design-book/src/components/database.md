@@ -16,6 +16,7 @@ Features:
 * Caching service (DynamoDB)
 * Integration with REST APIs (DynamoDB via API Gateway)
 * Analytics (DynamoDB via S3)
+* Backup (DynamoDB)
 
 Non-features:
 * [Locking](../distributed-system/concurrency-control.md) (unlike in queue)

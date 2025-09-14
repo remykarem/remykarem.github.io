@@ -178,11 +178,17 @@
 
 ---
 
+# SQL vs. NoSQL
+
+- [SQL vs. NoSQL](./sql-vs-nosql.md)
+
+# Managed vs. hosted
+
+- [Managed vs. hosted](./managed-vs-hosted.md)
+
 # Distributed system
 
 - [Number of nodes](./distributed-system/number-of-nodes.md)
-- [Distributed database]()
-  - [SQL vs. NoSQL](./sql-vs-nosql.md)
 - [Partitioning](./distributed-system/partitioning.md)
 - [Sharding](./distributed-system/sharding.md)
 - [Sparse indexing](./distributed-system/sparse-indexing.md)

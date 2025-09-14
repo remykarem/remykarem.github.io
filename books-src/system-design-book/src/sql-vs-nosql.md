@@ -1,63 +1,58 @@
 # SQL vs. NoSQL
 
-Factors
-* Throughput
-* Relationships
-* Data types
-* Transactions & integrity
+SQL databases are designed for _referential data_ and _referential integrity_ ("consistency"), 
+most easily achievable with a _single server_.
 
-~~~admonish tip title="Postgres benchmarking"
-Use `pgbench`
-~~~
+NoSQL databases are designed with _scalability_ in mind. This means data lives in _multiple servers_.
 
-When to pick SQL?
+The question of SQL vs. NoSQL really boils down to whether you require:
+* **low-latency response** (to respond to high-traffic queries), and
+* **immediate consistency**.
 
-- **When you need to store a lot of relationships**
-- When you need to be consistent
+---
 
-When to pick NoSQL?
+| Thing                | SQL                                            | NoSQL                                        |
+|----------------------|------------------------------------------------|----------------------------------------------|
+| Design               | 1 server                                       | Multiple servers                             |
+| Data structure       | Relation data, JOINs, referential integrity    | -                                            |
+| \-> Storage          | Lower storage (because of reduced duplication) | Possible duplication                         |
+| Consistency          | Immediate consistency (ACID)                   | Mainly eventual consistency                  |
+| Schema               | Schema-on-write (validated on write)           | Schema-on-read (schema is validated on read) |
+| Scalability          | Typically vertical scaling^                    | Horizontal scaling                           |
+| Programmer's concern | Reduce I/O (via proper indexing)               | Data locality (via proper indexing)          |
 
-- When you need to handle a lot of read write operations; O(1)
-- When you are not sure with data modelling
 
-~~~admonish note title="schema-on-read, schema-on-write"
-In SQL, schema is validated on write. Akin to statically typed languages.
-
-in NoS, schema is validated on read, akin to dynamically typed languages.
-~~~
+^by increasing the horsepower of the machine (CPU, RAM, SSD).
 
 ---
 
 My summary:
 
-When choosing a database, one important consideration is the underlying data structure — particularly if there's a need to store a lot of **relational data**. Relational data requires maintaining relationships and integrity rules among tables, often necessitating **ACID** guarantees.
+When choosing a database, one important consideration is the underlying data structure — particularly if there's a 
+need to store a lot of relational data. Relational data requires maintaining relationships and integrity rules 
+among tables, often necessitating **ACID** guarantees.
 
-ACID guarantees are _more easily achievable_ with a **single-server system** due to lack of **network latency**, and no requirement to ensure **data consistency across multiple nodes**.
-
-**SQL databases** are _designed_ with relational data in mind, offering robust support for complex joins and otherr relational operations, thereby ensuring data integrity.
+ACID guarantees are _more easily achievable_ with a single-server system due to the absence of any network latency, 
+and no requirement to ensure data consistency across multiple nodes.
 
 However, not all applications demand strict relational data structures or full ACID compliance. 
 
 Furthermore, there are applications that need to handle a large volume of data or high traffic.
 
-For these applications, a distributed system ("**NoSQL database**") might be more suitable. Why?
+For these applications, a distributed system (NoSQL database) might be more suitable. Why?
 
 Distributed systems can:
 * **handle concurrent requests**. Why? To handle a lot of requests.
-* **maintain high availability** — some services ("business requirement") require _continuous operation_; downtime can lead to significant losses
+* **maintain high availability** — some services ("business requirement") require _continuous operation_; downtime can 
+* lead to significant losses
 * **handle large amounts of data** beyond the capacity of a single server
 
-According to the **CAP theorem**, in the event of a network partition in a distributed system — a situation that distributed systems must be prepared for — the system must trade-off between **consistency** or **availability**. However, the extent of this trade-off varies among different systems. Many modern databases offer a tuneable balance.
+According to the **CAP theorem**, in the event of a network partition in a distributed system — a situation that 
+distributed systems must be prepared for — the system must trade-off between **consistency** or **availability**. 
+However, the extent of this trade-off varies among different systems. Many modern databases offer a tuneable balance.
 
-Note that some distributed databases offer relational data support and therefore ACID (to different extents): MongoDB, Couchbase, and Amazon DynamoDB.
-
----
-
-### Scalability
-
-SQL databases are typically scaled vertically by increasing the horsepower of the machine (CPU, RAM, SSD).
-
-NoSQL are _designed_ to scale horizontally.
+Note that some distributed databases offer relational data support and therefore ACID (to different extents): MongoDB, 
+Couchbase, and Amazon DynamoDB.
 
 ---
 
