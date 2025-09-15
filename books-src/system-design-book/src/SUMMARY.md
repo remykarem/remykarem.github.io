@@ -134,19 +134,21 @@
 
 - [CDN](./components/cdn.md)
 - [Cache]()
-- [Queue](./components/queue.md)
 - [Lambda](./components/serverless-compute-service.md)
 - [Firewall]()
 - [Database](./components/database.md)
 - [Analytics]()
 - [API gateway](./components/api-gateway.md)
-- [Forward proxy](./components/forward-proxy.md)
 - [Load balancer](./components/reverse-proxy.md)
+- [Forward proxy](./components/forward-proxy.md)
 - [Step Functions](./components/step-functions.md)
 - [Compute service](./components/compute-service.md)
 - [Event bus service](./components/event-bus-service.md)
 - [Notification service](./components/pub-sub-service.md)
-- [Event streaming service](./components/message-broker.md)
+- [Queue-based](./components/queue-based.md)
+  - [Queue](./components/queue.md)
+  - [Message broker](components/message-broker.md)
+  - [Event streaming platform](components/event-streaming-platform.md)
 
 # Database
 
@@ -186,11 +188,10 @@
   - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
 - [Type II: M-to-N messages]()
   - [Point-to-point](./messaging-patterns/point-to-point.md)
+  - [Pub/Sub](./messaging-patterns/pub-sub.md)
+- [Type III]()
   - [Fan-out](./messaging-patterns/fan-out.md)
   - [Fan-in](./messaging-patterns/fan-in.md)
-- [Type III: M-to-N actors]()
-  - [Producer/Consumer](./messaging-patterns/producer-consumer.md)
-  - [Pub/Sub](./messaging-patterns/pub-sub.md)
 
 ---
 
@@ -204,6 +205,7 @@
 
 - [Request-driven]()
 - [Event-driven architecture](./patterns/event-driven-architecture.md)
+  - [Event]() 
   - [Event processing](./patterns/event-processing.md)
   - [Change data capture](./patterns/change-data-capture.md)
 

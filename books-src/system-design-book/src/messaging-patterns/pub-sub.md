@@ -4,7 +4,7 @@ Publish/Subscribe
 
 Setup:
 * There are multiple **topics** or **channels**.
-* There are multiple **subscribers** for every topics.
+* There are multiple **subscribers** for every topic.
 * **Publishers** can send a message to any topic.
   1. A publisher sends a message to a topic.
   2. The message is distributed to all subscribers of the respective topic.
