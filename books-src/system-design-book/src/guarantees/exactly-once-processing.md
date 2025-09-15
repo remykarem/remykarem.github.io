@@ -1,5 +1,5 @@
 # Delivery
 
-* Exactly-once processing
+* At-most-once delivery
 * Exactly-once delivery
 * At-least-once delivery
