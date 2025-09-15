@@ -75,6 +75,8 @@
     - [Bucket sort]()
 - [Merge]()
 - [Path finding](./algorithms/path-finding/index.md)
+- [Hashing techniques]()
+  - [Consistent hashing](./algorithms/hashing/consistent-hashing.md)
 
 ---
 
