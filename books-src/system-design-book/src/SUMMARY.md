@@ -128,7 +128,7 @@
 - [Distributed system](./distributed-system/distributed-system.md)
 - [Replication](./strategies/replication.md)
 - [Partitioning](./distributed-system/partitioning.md)
-- [Sharding](./distributed-system/sharding.md)
+  - [Sharding](./distributed-system/sharding.md)
 
 ---
 
@@ -149,6 +149,18 @@
 - [Load balancer](./components/reverse-proxy.md)
 - [Event bus service](./components/event-bus-service.md)
 - [Notification service](./components/pub-sub-service.md)
+
+# Database
+
+- [SQL vs. NoSQL](./sql-vs-nosql.md)
+- [Optimisations]()
+  - [Sparse indexing](./distributed-system/sparse-indexing.md)
+  - [Functional indexing](./distributed-system/functional-indexing.md)
+  - [Atomic vs. partial updates]()
+  - [Full scans]()
+  - [Vertical partitioning]()
+  - [Write sharding]()
+  - [Random page reads / scans across partitions]()
 
 ---
 
@@ -180,20 +192,6 @@
 - [Type III: M-to-N actors]()
   - [Producer/Consumer](./messaging-patterns/producer-consumer.md)
   - [Pub/Sub](./messaging-patterns/pub-sub.md)
-
----
-
-# Database
-
-- [SQL vs. NoSQL](./sql-vs-nosql.md)
-- [Optimisations]()
-  - [Sparse indexing](./distributed-system/sparse-indexing.md)
-  - [Functional indexing](./distributed-system/functional-indexing.md)
-  - [Atomic vs. partial updates]()
-  - [Full scans]()
-  - [Vertical partitioning]()
-  - [Write sharding]()
-  - [Random page reads / scans across partitions]()
 
 ---
 

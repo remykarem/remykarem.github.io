@@ -13,18 +13,18 @@ The question of SQL vs. NoSQL really boils down to whether you require:
 
 ## Patterns, designs
 
-|                      | SQL                                            | NoSQL                                        |
-|----------------------|------------------------------------------------|----------------------------------------------|
-| Design               | 1 server                                       | Multiple servers                             |
-| Data structure       | Relation data, JOINs, referential integrity    | -                                            |
-| \-> Storage          | Lower storage (because of reduced duplication) | Possible duplication                         |
-| \-> Table design     | Multiple tables                                | Single-table design                          |
-| Consistency          | Immediate consistency (ACID)                   | Mainly eventual consistency                  |
-| Schema               | Schema-on-write (validated on write)           | Schema-on-read (schema is validated on read) |
-| Scalability          | Typically vertical scaling^                    | Horizontal scaling                           |
-| Goal                 | Minimise page reads                            | Minimise cross-partition I/O                 |
-| Programmer's concern | - (database optimiser does this)               | Data locality (via proper indexing)          |
-| Lookups / index      | Equality-based and range-based (B-tree)        | Hash-based (mainly), range-based             |
+|                      | SQL                                                                                              | NoSQL                                                  |
+|----------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| Design               | 1 server                                                                                         | Multiple servers                                       |
+| Data structure       | Relation data, JOINs, referential integrity                                                      | -                                                      |
+| \-> Storage          | Lower storage (because of reduced duplication)                                                   | Possible duplication                                   |
+| \-> Table design     | Multiple tables                                                                                  | Single-table design                                    |
+| Consistency          | Immediate consistency (ACID)                                                                     | Mainly eventual consistency                            |
+| Schema               | Schema-on-write (validated on write)                                                             | Schema-on-read (schema is validated on read)           |
+| Scalability          | [Vertical scaling](./strategies/vertical-scaling.md), [replication](./strategies/replication.md) | [Horizontal scaling](./strategies/vertical-scaling.md) |
+| Goal                 | Minimise page reads                                                                              | Minimise cross-partition I/O                           |
+| Programmer's concern | - (database optimiser does this)                                                                 | Data locality (via proper indexing)                    |
+| Lookups / index      | Equality-based and range-based (B-tree)                                                          | Hash-based (mainly), range-based                       |
 
 No matter whether it’s SQL or NoSQL, the slowest and most expensive part is almost always I/O 
 (disk reads/writes, network hops between nodes).
