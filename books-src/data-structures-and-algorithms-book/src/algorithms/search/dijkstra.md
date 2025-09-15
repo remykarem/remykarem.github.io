@@ -6,6 +6,6 @@ DFS + Min. priority queue.
 Shortest path algorithm
 ```
 
-At every node, visit the shortest path to the next node (read: greedy) until you reach the end node.
+At every node, go right in (read: depth-first) to the next node with the **lowest cost** (read: greedy).
 
 ![Dijkstra's algorithm](https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Dijkstra_Animation.gif/220px-Dijkstra_Animation.gif)
