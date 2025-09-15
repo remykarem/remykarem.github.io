@@ -98,15 +98,13 @@
   - [Buffering](./strategies/adding-buffer-between-services.md)
   - [Rate limiting](./strategies/rate-limiting.md)
   - [Vertical scaling](./strategies/vertical-scaling.md)
-- [Auto-scaling](./strategies/auto-scaling.md)
 - [Throttling](./strategies/throttling.md)
+- [Auto-scaling](./strategies/auto-scaling.md)
 - [Load balancing](./strategies/load-balancing.md)
-- [Coupling, isolation]()
-- [Logging & monitoring](./strategies/logging-and-monitoring.md)
 - [Retry mechanism](./strategies/retry-mechanism.md)
-- [Circuit breaker pattern]()
-- [Fallback pattern]()
+- [Coupling, isolation]()
 - [Manual intervention](./strategies/manual-intervention.md)
+- [Logging & monitoring](./strategies/logging-and-monitoring.md)
 
 # Strategies II
 
@@ -136,19 +134,19 @@
 
 - [CDN](./components/cdn.md)
 - [Cache]()
-- [Firewall]()
 - [Queue](./components/queue.md)
 - [Lambda](./components/serverless-compute-service.md)
-- [Compute]()
-- [Analytics]()
+- [Firewall]()
 - [Database](./components/database.md)
+- [Analytics]()
 - [API gateway](./components/api-gateway.md)
-- [Event stream](./components/message-broker.md)
 - [Forward proxy](./components/forward-proxy.md)
-- [Step Functions](./components/step-functions.md)
 - [Load balancer](./components/reverse-proxy.md)
+- [Step Functions](./components/step-functions.md)
+- [Compute service](./components/compute-service.md)
 - [Event bus service](./components/event-bus-service.md)
 - [Notification service](./components/pub-sub-service.md)
+- [Event streaming service](./components/message-broker.md)
 
 # Database
 

@@ -1,6 +1,7 @@
-# Reverse proxy (load balancer)
+# Load balancer
 
-A **reverse proxy** is commonly used for:
+Responsibilities:
+
 * [**Load balancing**](../strategies/load-balancing.md)
 * [**Identity hiding**](../core-functionalities/identity-hiding.md) of the backend servers
 * [Routing](../core-functionalities/routing.md)
