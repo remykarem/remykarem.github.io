@@ -1,4 +1,4 @@
-# Preface
+# Data structures & algorithms book
 
 - Best case: Ω
 - Average case:
