@@ -158,6 +158,7 @@
   - [Full scans]()
   - [Vertical partitioning]()
   - [Write sharding]()
+  - [Distribute queries]()
   - [Random page reads / scans across partitions]()
 
 ---
