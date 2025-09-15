@@ -93,22 +93,18 @@
 - [Distributed](./strategies/distributed.md)
   - [Redundancy](./strategies/redundancy.md)
     - [Failover](./strategies/failover.md)
-  - [Replication](./strategies/replication.md)
-  - [Sharding]()
+  - [Horizontal scaling](./strategies/horizontal-scaling.md)
 - [Backpressure](./strategies/backpressure.md)
   - [Buffering](./strategies/adding-buffer-between-services.md)
   - [Rate limiting](./strategies/rate-limiting.md)
   - [Vertical scaling](./strategies/vertical-scaling.md)
-  - [Horizontal scaling](./strategies/horizontal-scaling.md)
-- [Auto-scaling](./strategies/auto-scaling.md)
 - [Throttling](./strategies/throttling.md)
+- [Auto-scaling](./strategies/auto-scaling.md)
 - [Load balancing](./strategies/load-balancing.md)
-- [Coupling, isolation]()
-- [Logging & monitoring](./strategies/logging-and-monitoring.md)
 - [Retry mechanism](./strategies/retry-mechanism.md)
-- [Circuit breaker pattern]()
-- [Fallback pattern]()
+- [Coupling, isolation]()
 - [Manual intervention](./strategies/manual-intervention.md)
+- [Logging & monitoring](./strategies/logging-and-monitoring.md)
 
 # Strategies II
 
@@ -125,25 +121,44 @@
   - [Reserved concurrency]()
 - [Noisy-neighbour]()
 
+# Distributed system
+
+- [Distributed system](./distributed-system/distributed-system.md)
+- [Replication](./strategies/replication.md)
+- [Partitioning](./distributed-system/partitioning.md)
+  - [Sharding](./distributed-system/sharding.md)
+
 ---
 
 # Components / Resources
 
 - [CDN](./components/cdn.md)
 - [Cache]()
-- [Firewall]()
 - [Queue](./components/queue.md)
 - [Lambda](./components/serverless-compute-service.md)
-- [Compute]()
-- [Analytics]()
+- [Firewall]()
 - [Database](./components/database.md)
+- [Analytics]()
 - [API gateway](./components/api-gateway.md)
-- [Event stream](./components/message-broker.md)
 - [Forward proxy](./components/forward-proxy.md)
-- [Step Functions](./components/step-functions.md)
 - [Load balancer](./components/reverse-proxy.md)
+- [Step Functions](./components/step-functions.md)
+- [Compute service](./components/compute-service.md)
 - [Event bus service](./components/event-bus-service.md)
 - [Notification service](./components/pub-sub-service.md)
+- [Event streaming service](./components/message-broker.md)
+
+# Database
+
+- [SQL vs. NoSQL](./sql-vs-nosql.md)
+- [Optimisations]()
+  - [Sparse indexing](./distributed-system/sparse-indexing.md)
+  - [Functional indexing](./distributed-system/functional-indexing.md)
+  - [Atomic vs. partial updates]()
+  - [Full scans]()
+  - [Vertical partitioning]()
+  - [Write sharding]()
+  - [Random page reads / scans across partitions]()
 
 ---
 
@@ -178,29 +193,9 @@
 
 ---
 
-# Database
-
-- [SQL vs. NoSQL](./sql-vs-nosql.md)
-- [Optimisations]()
-  - [Sparse indexing](./distributed-system/sparse-indexing.md)
-  - [Functional indexing](./distributed-system/functional-indexing.md)
-  - [Atomic vs. partial updates]()
-  - [Full scans]()
-  - [Vertical partitioning]()
-  - [Write sharding]()
-  - [Random page reads / scans across partitions]()
-
----
-
 # Managed vs. hosted
 
 - [Managed vs. hosted](./managed-vs-hosted.md)
-
-# Distributed system
-
-- [Number of nodes](./distributed-system/number-of-nodes.md)
-- [Partitioning](./distributed-system/partitioning.md)
-- [Sharding](./distributed-system/sharding.md)
 
 ---
 
