@@ -1,5 +1,8 @@
 # Communication models
 
+1. The **producer** sends a **message** to a specific location (eg. buffer or queue).
+2. The **consumer** retrieves the message from this location.
+
 A communication model describes the way that different components in a system communicate with each other to exchange information and data. Examples of communication models include request-response, publish-subscribe, and event-driven.
 
 Besides "communication model," the concept can also be referred to as:
