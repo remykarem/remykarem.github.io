@@ -93,13 +93,11 @@
 - [Distributed](./strategies/distributed.md)
   - [Redundancy](./strategies/redundancy.md)
     - [Failover](./strategies/failover.md)
-  - [Replication](./strategies/replication.md)
-  - [Sharding]()
+  - [Horizontal scaling](./strategies/horizontal-scaling.md)
 - [Backpressure](./strategies/backpressure.md)
   - [Buffering](./strategies/adding-buffer-between-services.md)
   - [Rate limiting](./strategies/rate-limiting.md)
   - [Vertical scaling](./strategies/vertical-scaling.md)
-  - [Horizontal scaling](./strategies/horizontal-scaling.md)
 - [Auto-scaling](./strategies/auto-scaling.md)
 - [Throttling](./strategies/throttling.md)
 - [Load balancing](./strategies/load-balancing.md)
@@ -124,6 +122,13 @@
   - [Locking](./distributed-system/locking.md)
   - [Reserved concurrency]()
 - [Noisy-neighbour]()
+
+# Distributed system
+
+- [Distributed system](./distributed-system/distributed-system.md)
+- [Replication](./strategies/replication.md)
+- [Partitioning](./distributed-system/partitioning.md)
+- [Sharding](./distributed-system/sharding.md)
 
 ---
 
@@ -195,12 +200,6 @@
 # Managed vs. hosted
 
 - [Managed vs. hosted](./managed-vs-hosted.md)
-
-# Distributed system
-
-- [Number of nodes](./distributed-system/number-of-nodes.md)
-- [Partitioning](./distributed-system/partitioning.md)
-- [Sharding](./distributed-system/sharding.md)
 
 ---
 

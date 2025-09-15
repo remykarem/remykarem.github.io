@@ -1,6 +1,6 @@
 # Replication
 
-Having similar nodes run the workload together. Used in database terms.
+Having _similar_ nodes run the workload together. Used in database terms.
 
 Helps with
 * [availability](../goals/availability.md)

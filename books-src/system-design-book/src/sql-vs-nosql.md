@@ -26,8 +26,6 @@ The question of SQL vs. NoSQL really boils down to whether you require:
 | Programmer's concern | - (database optimiser does this)               | Data locality (via proper indexing)          |
 | Lookups / index      | Equality-based and range-based (B-tree)        | Hash-based (mainly), range-based             |
 
-^by increasing the horsepower of the machine (CPU, RAM, SSD).
-
 No matter whether it’s SQL or NoSQL, the slowest and most expensive part is almost always I/O 
 (disk reads/writes, network hops between nodes).
 
