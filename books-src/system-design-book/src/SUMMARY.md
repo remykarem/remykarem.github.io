@@ -186,7 +186,7 @@
 - [Type I: Responsiveness]()
   - [Request/Response](./messaging-patterns/request-response.md)
   - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
-- [Type II: M-to-N messages]()
+- [Type II: Consumers per message]()
   - [Point-to-point](./messaging-patterns/point-to-point.md)
   - [Pub/Sub](./messaging-patterns/pub-sub.md)
 - [Type III]()
