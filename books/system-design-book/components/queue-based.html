@@ -182,11 +182,15 @@
 <tr><td><strong>Ease of use</strong></td><td>Easiest (fire-and-forget, no scaling worries)</td><td>Easy (DLQ, retries, simple scale)</td><td>Moderate (shards, scaling, retention)</td><td>Harder (ops heavy, but most powerful)</td></tr>
 <tr><td><strong>Use Cases</strong></td><td>Broadcast notifications, fan-out to Lambdas/SQS, SMS/email/mobile push</td><td>Async job queues, decoupling microservices, task/workflow buffering</td><td>Real-time analytics, log ingestion, IoT events, multi-consumer pipelines</td><td>Enterprise event backbone, stateful streaming joins, fraud detection, ML pipelines</td></tr>
 </tbody></table>
-</div><div class="table-wrapper"><table><thead><tr><th>Feature</th><th>SNS</th><th>SQS</th><th>SQS FIFO</th><th>RabbitMQ</th><th>Kafka</th><th>Kinesis</th></tr></thead><tbody>
+</div>
+<h2 id="my-understanding"><a class="header" href="#my-understanding">My understanding...</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Feature</th><th>SNS</th><th>SQS</th><th>SQS FIFO</th><th>RabbitMQ</th><th>Kafka</th><th>Kinesis</th></tr></thead><tbody>
 <tr><td>Type</td><td>?</td><td>Queue</td><td>Queue</td><td>Queue</td><td>Log-based</td><td>Log-based</td></tr>
 <tr><td>Delivery</td><td>Push</td><td>Pull</td><td>Pull</td><td>?</td><td>Pull</td><td>High?</td></tr>
 <tr><td>1 ch, p2p</td><td></td><td>✅</td><td>✅</td><td>?</td><td>✅</td><td>?</td></tr>
 <tr><td>1 ch, fanout</td><td>✅</td><td></td><td></td><td>?</td><td>✅</td><td>?</td></tr>
+<tr><td>&quot;Lanes&quot;</td><td>-</td><td></td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>Topics</td><td>-</td><td></td><td></td><td>✅</td><td>✅</td><td>✅</td></tr>
 <tr><td>Multiple ch, p2p</td><td></td><td></td><td>✅</td><td>?</td><td>✅</td><td>?</td></tr>
 <tr><td>Multiple ch, fanout</td><td>✅</td><td></td><td></td><td>?</td><td>✅</td><td>?</td></tr>
 <tr><td>Ordering</td><td></td><td></td><td>✅(per messageGroupId)</td><td>?</td><td>✅ (per partition)</td><td>✅ (per shard)</td></tr>
@@ -195,9 +199,11 @@
 <tr><td>Routing</td><td></td><td></td><td></td><td>✅</td><td></td><td></td></tr>
 <tr><td>Store durably</td><td>Ephemeral</td><td>14 days</td><td>14 days</td><td>?</td><td>Configurable</td><td>Configurable</td></tr>
 <tr><td>Throughput</td><td>?</td><td>High</td><td>Low</td><td>?</td><td>High?</td><td>High?</td></tr>
+<tr><td>Fairness</td><td>-</td><td>✅</td><td>-</td><td>✅</td><td>?</td><td>?</td></tr>
 </tbody></table>
 </div>
 <p>Having multiple channels allows <em>parallel processing</em>.</p>
+<p>Others: Fluvio, NATS</p>
 
                     </main>
 
