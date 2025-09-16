@@ -153,15 +153,7 @@
 # Database
 
 - [SQL vs. NoSQL](./sql-vs-nosql.md)
-- [Optimisations]()
-  - [Sparse indexing](./distributed-system/sparse-indexing.md)
-  - [Functional indexing](./distributed-system/functional-indexing.md)
-  - [Atomic vs. partial updates]()
-  - [Full scans]()
-  - [Vertical partitioning]()
-  - [Write sharding]()
-  - [Distribute queries]()
-  - [Random page reads / scans across partitions]()
+- [Optimisations](./database/optimisations.md)
 
 ---
 

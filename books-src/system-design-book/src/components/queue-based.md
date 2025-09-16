@@ -1,15 +1,23 @@
 # Queue-based
 
-Difference between SNS, SQS and Kinesis
-
 | Feature         | **SNS**                                                                | **SQS**                                                             | **Kinesis**                                                              | **Kafka (MSK)**                                                                    |
 |-----------------|------------------------------------------------------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| **Type**        | Push pub/sub (fan-out)                                                 | Queue (point-to-point)                                              | Log-based pub/sub (stream)                                               | Log-based pub/sub (stream)                                                         |
-| **Fan-out**     | ✅ Yes (push to many)                                                   | ❌ No (one consumer “wins”)                                          | ✅ Yes (many consumers read)                                              | ✅ Yes (consumer groups)                                                            |
-| **Delivery**    | Push (fire-and-forget)                                                 | Pull, one consumer per message                                      | Pull, each consumer group reads independently                            | Pull, consumer groups                                                              |
-| **Retention**   | None (ephemeral)                                                       | Up to 14 days                                                       | 24h → 365 days                                                           | Configurable (hours → forever)                                                     |
-| **Replay**      | ❌ No                                                                   | ❌ No                                                                | ✅ Yes (within retention)                                                 | ✅ Yes (within retention)                                                           |
-| **Ordering**    | ❌ None (FIFO topics optional, limited)                                 | FIFO queues (low throughput)                                        | Ordered per shard                                                        | Ordered per partition                                                              |
-| **Processing**  | None (just push)                                                       | None (just queue)                                                   | Basic stream transforms (via KDA/Flink)                                  | Rich stream processing (Kafka Streams/Flink)                                       |
 | **Ease of use** | Easiest (fire-and-forget, no scaling worries)                          | Easy (DLQ, retries, simple scale)                                   | Moderate (shards, scaling, retention)                                    | Harder (ops heavy, but most powerful)                                              |
 | **Use Cases**   | Broadcast notifications, fan-out to Lambdas/SQS, SMS/email/mobile push | Async job queues, decoupling microservices, task/workflow buffering | Real-time analytics, log ingestion, IoT events, multi-consumer pipelines | Enterprise event backbone, stateful streaming joins, fraud detection, ML pipelines |
+
+| Feature             | SNS       | SQS     | SQS FIFO              | RabbitMQ | Kafka             | Kinesis       |
+|---------------------|-----------|---------|-----------------------|----------|-------------------|---------------|
+| Type                | ?         | Queue   | Queue                 | Queue    | Log-based         | Log-based     |
+| Delivery            | Push      | Pull    | Pull                  | ?        | Pull              | High?         |
+| 1 ch, p2p           |           | ✅       | ✅                     | ?        | ✅                 | ?             |
+| 1 ch, fanout        | ✅         |         |                       | ?        | ✅                 | ?             |
+| Multiple ch, p2p    |           |         | ✅                     | ?        | ✅                 | ?             |
+| Multiple ch, fanout | ✅         |         |                       | ?        | ✅                 | ?             |
+| Ordering            |           |         | ✅(per messageGroupId) | ?        | ✅ (per partition) | ✅ (per shard) |
+| Processing          |           |         |                       | ?        | ✅                 | Basic         |
+| Replay              |           |         |                       |          | ✅                 |               |
+| Routing             |           |         |                       | ✅        |                   |               |
+| Store durably       | Ephemeral | 14 days | 14 days               | ?        | Configurable      | Configurable  |
+| Throughput          | ?         | High    | Low                   | ?        | High?             | High?         |
+
+Having multiple channels allows _parallel processing_.
