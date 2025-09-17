@@ -130,7 +130,7 @@
 
 ---
 
-# Components / Resources
+# Components
 
 - [CDN](./components/cdn.md)
 - [Cache]()
@@ -141,14 +141,28 @@
 - [API gateway](./components/api-gateway.md)
 - [Load balancer](./components/reverse-proxy.md)
 - [Forward proxy](./components/forward-proxy.md)
-- [Step Functions](./components/step-functions.md)
 - [Compute service](./components/compute-service.md)
-- [Event bus service](./components/event-bus-service.md)
-- [Notification service](./components/pub-sub-service.md)
-- [Queue-based](./components/queue-based.md)
+- [Messaging](./components/queue-based.md)
+  - [Step Functions](./components/step-functions.md)
+  - [Event bus service](./components/event-bus-service.md)
+  - [Notification service](./components/pub-sub-service.md)
   - [Queue](./components/queue.md)
   - [Message broker](components/message-broker.md)
   - [Event streaming platform](components/event-streaming-platform.md)
+
+# Messaging patterns
+
+- [Overview](./messaging-patterns/overview.md)
+- [Type I]()
+  - [Request/Reply](./messaging-patterns/request-response.md)
+  - [Push/Pull]()
+  - [Pub/Sub](./messaging-patterns/pub-sub.md)
+    - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
+- [Type II]()
+  - [Point-to-point](./messaging-patterns/point-to-point.md)
+  - [Fan-out](./messaging-patterns/fan-out.md)
+
+---
 
 # Database
 
@@ -169,21 +183,6 @@
   - [CQRS](./data-management-patterns/cqrs.md)
 - [Creational: Storing data]()
   - [Event sourcing](./data-management-patterns/event-sourcing.md)
-
----
-
-# Messaging patterns
-
-- [Overview](./messaging-patterns/overview.md)
-- [Type I: Responsiveness]()
-  - [Request/Response](./messaging-patterns/request-response.md)
-  - [Fire and Forget](./messaging-patterns/fire-and-forget.md)
-- [Type II: Consumers per message]()
-  - [Point-to-point](./messaging-patterns/point-to-point.md)
-  - [Pub/Sub](./messaging-patterns/pub-sub.md)
-- [Type III]()
-  - [Fan-out](./messaging-patterns/fan-out.md)
-  - [Fan-in](./messaging-patterns/fan-in.md)
 
 ---
 
@@ -235,7 +234,7 @@
 - [API designs](./api-design/api-architectural-styles/index.md)
   - [REST](./api-design/api-architectural-styles/rest.md)
   - [GraphQL](./api-design/api-architectural-styles/graphql.md)
-  - [gRPC](./api-design/api-architectural-styles/grpc.md)
+  - [RPC](./api-design/api-architectural-styles/grpc.md)
   - [SOAP](./api-design/api-architectural-styles/soap.md)
 - [API versioning](./api-design/versioning.md)
 - [Interaction patterns](./api-design/interaction-patterns.md)
