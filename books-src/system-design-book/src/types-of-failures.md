@@ -5,6 +5,7 @@
   - Resource contention (eg. CPU momentarily over-utilised)
   - Software glitches – temporary issues (non-critical process crash that resolves quickly)
   - Intermittent hardware issues
+- Persistent failures — eg. software bug, poison message
 - Partial failure
 
   When a part of the system fails but still having the system run correctly. In this case, a percentage of requests succeeds
