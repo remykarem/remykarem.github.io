@@ -28,3 +28,4 @@ Features
 * Firewall integration
 * Simple validation
 * Simple data transformation
+* SDK generation
