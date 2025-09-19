@@ -27,4 +27,4 @@
 
 Having multiple channels allows _parallel processing_.
 
-Others: Fluvio, NATS
+Others: Fluvio, NATS, Pulsar
