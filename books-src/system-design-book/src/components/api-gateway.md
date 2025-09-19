@@ -14,6 +14,10 @@ Here are the responsibilities:
   API Gateway can handle authentication and authorisation before the request reaches your service.
   It's easier to manage this aspect via a single entry point, rather than spread requests across many different points.
 
+* TLS features
+  * SSL termination
+  * mTLS
+
 * [Caching](../strategies/caching.md)
 
 * [Logging & monitoring](../strategies/logging-and-monitoring.md)
