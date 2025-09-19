@@ -185,24 +185,22 @@
 </div>
 <h2 id="my-understanding"><a class="header" href="#my-understanding">My understanding...</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Feature</th><th>SNS</th><th>SQS</th><th>SQS FIFO</th><th>RabbitMQ</th><th>Kafka</th><th>Kinesis</th></tr></thead><tbody>
-<tr><td>Type</td><td>?</td><td>Queue</td><td>Queue</td><td>Queue</td><td>Log-based</td><td>Log-based</td></tr>
+<tr><td>Type I</td><td>?</td><td>Queue</td><td>Queue</td><td>Queue</td><td>Log-based</td><td>Log-based</td></tr>
+<tr><td>Store durably^</td><td>Ephemeral</td><td>14 days</td><td>14 days</td><td>?</td><td>Configurable</td><td>Configurable</td></tr>
+<tr><td>Replay^</td><td></td><td></td><td></td><td></td><td>✅</td><td></td></tr>
 <tr><td>Delivery</td><td>Push</td><td>Pull</td><td>Pull</td><td>?</td><td>Pull</td><td>High?</td></tr>
-<tr><td>1 ch, p2p</td><td></td><td>✅</td><td>✅</td><td>?</td><td>✅</td><td>?</td></tr>
-<tr><td>1 ch, fanout</td><td>✅</td><td></td><td></td><td>?</td><td>✅</td><td>?</td></tr>
+<tr><td>P2P / fanout</td><td>Fanout</td><td>Point-to-point</td><td>Point-to-point</td><td>?</td><td>Fanout</td><td>Fanout</td></tr>
 <tr><td>&quot;Lanes&quot;</td><td>-</td><td></td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
 <tr><td>Topics</td><td>-</td><td></td><td></td><td>✅</td><td>✅</td><td>✅</td></tr>
-<tr><td>Multiple ch, p2p</td><td></td><td></td><td>✅</td><td>?</td><td>✅</td><td>?</td></tr>
-<tr><td>Multiple ch, fanout</td><td>✅</td><td></td><td></td><td>?</td><td>✅</td><td>?</td></tr>
-<tr><td>Ordering</td><td></td><td></td><td>✅(per messageGroupId)</td><td>?</td><td>✅ (per partition)</td><td>✅ (per shard)</td></tr>
+<tr><td>Ordering</td><td></td><td></td><td>✅ (per message group)</td><td>?</td><td>✅ (per partition)</td><td>✅ (per shard)</td></tr>
 <tr><td>Processing</td><td></td><td></td><td></td><td>?</td><td>✅</td><td>Basic</td></tr>
-<tr><td>Replay</td><td></td><td></td><td></td><td></td><td>✅</td><td></td></tr>
 <tr><td>Routing</td><td></td><td></td><td></td><td>✅</td><td></td><td></td></tr>
-<tr><td>Store durably</td><td>Ephemeral</td><td>14 days</td><td>14 days</td><td>?</td><td>Configurable</td><td>Configurable</td></tr>
 <tr><td>Throughput</td><td>?</td><td>High</td><td>Low</td><td>?</td><td>High?</td><td>High?</td></tr>
 <tr><td>Fairness</td><td>-</td><td>✅</td><td>-</td><td>✅</td><td>?</td><td>?</td></tr>
 </tbody></table>
 </div>
 <p>Having multiple channels allows <em>parallel processing</em>.</p>
+<p>^by virtue of Type I</p>
 <p>Others: Fluvio, NATS, Pulsar</p>
 
                     </main>

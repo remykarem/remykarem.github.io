@@ -9,22 +9,21 @@
 
 | Feature             | SNS       | SQS     | SQS FIFO              | RabbitMQ | Kafka             | Kinesis       |
 |---------------------|-----------|---------|-----------------------|----------|-------------------|---------------|
-| Type                | ?         | Queue   | Queue                 | Queue    | Log-based         | Log-based     |
+| Type I              | ?         | Queue   | Queue                 | Queue    | Log-based         | Log-based     |
+| Store durably^      | Ephemeral | 14 days | 14 days               | ?        | Configurable      | Configurable  |
+| Replay^             |           |         |                       |          | ✅                |               |
 | Delivery            | Push      | Pull    | Pull                  | ?        | Pull              | High?         |
-| 1 ch, p2p           |           | ✅       | ✅                     | ?        | ✅                 | ?             |
-| 1 ch, fanout        | ✅         |         |                       | ?        | ✅                 | ?             |
+| P2P / fanout        | Fanout     | Point-to-point | Point-to-point | ?        | Fanout           | Fanout        |
 | "Lanes"             | -         |         | ✅                     | ✅        | ✅                 | ✅             |
 | Topics              | -         |         |                       | ✅        | ✅                 | ✅             |
-| Multiple ch, p2p    |           |         | ✅                     | ?        | ✅                 | ?             |
-| Multiple ch, fanout | ✅         |         |                       | ?        | ✅                 | ?             |
-| Ordering            |           |         | ✅(per messageGroupId) | ?        | ✅ (per partition) | ✅ (per shard) |
+| Ordering            |           |         | ✅ (per message group) | ?        | ✅ (per partition) | ✅ (per shard) |
 | Processing          |           |         |                       | ?        | ✅                 | Basic         |
-| Replay              |           |         |                       |          | ✅                 |               |
 | Routing             |           |         |                       | ✅        |                   |               |
-| Store durably       | Ephemeral | 14 days | 14 days               | ?        | Configurable      | Configurable  |
 | Throughput          | ?         | High    | Low                   | ?        | High?             | High?         |
 | Fairness            | -         | ✅       | -                     | ✅        | ?                 | ?             |
 
 Having multiple channels allows _parallel processing_.
+
+^by virtue of Type I
 
 Others: Fluvio, NATS, Pulsar
