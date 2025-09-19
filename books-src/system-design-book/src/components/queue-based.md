@@ -11,19 +11,25 @@
 |---------------------|-----------|---------|-----------------------|----------|-------------------|---------------|
 | Type I              | ?         | Queue   | Queue                 | Queue    | Log-based         | Log-based     |
 | Store durably^      | Ephemeral | 14 days | 14 days               | ?        | Configurable      | Configurable  |
-| Replay^             |           |         |                       |          | ✅                |               |
 | Delivery            | Push      | Pull    | Pull                  | ?        | Pull              | High?         |
 | P2P / fanout        | Fanout     | Point-to-point | Point-to-point | ?        | Fanout           | Fanout        |
-| "Lanes"             | -         |         | ✅                     | ✅        | ✅                 | ✅             |
-| Topics              | -         |         |                       | ✅        | ✅                 | ✅             |
+| "Topics"             | -         |         | ✅                     | ✅      | ✅                 | ✅             |
 | Ordering            |           |         | ✅ (per message group) | ?        | ✅ (per partition) | ✅ (per shard) |
 | Processing          |           |         |                       | ?        | ✅                 | Basic         |
 | Routing             |           |         |                       | ✅        |                   |               |
 | Throughput          | ?         | High    | Low                   | ?        | High?             | High?         |
 | Fairness            | -         | ✅       | -                     | ✅        | ?                 | ?             |
+| Managed^^           | ✅        | ✅      | ✅                   |           |                   | ✅            |
+| Deduplication       | ?        | ✅      | ✅                   |  ? think yes         |                    | ?            |
 
-Having multiple channels allows _parallel processing_.
 
-^by virtue of Type I
+Notes:
+* by virtue of Type I
+  * Replayability for log-based systems
+* by virtue of managed service
+  * No partition management required
+* by virtue of multiple "topics":
+  * allows _parallel processing_
+
 
 Others: Fluvio, NATS, Pulsar
