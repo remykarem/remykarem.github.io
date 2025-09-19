@@ -21,3 +21,4 @@ Here are the responsibilities:
 Features
 * [Auto-scaling](../strategies/auto-scaling.md)
 * Integration with other cloud services (eg. AWS API Gateway integrates with DynamoDB, SQS)
+* Firewall integration
