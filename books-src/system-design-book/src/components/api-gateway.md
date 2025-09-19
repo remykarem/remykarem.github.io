@@ -27,3 +27,4 @@ Features
 * Integration with other cloud services (eg. AWS API Gateway integrates with DynamoDB, SQS)
 * Firewall integration
 * Simple validation
+* Simple data transformation
