@@ -7,20 +7,20 @@
 
 ## My understanding...
 
-| Feature             | SNS       | SQS     | SQS FIFO              | RabbitMQ | Kafka             | Kinesis       |
-|---------------------|-----------|---------|-----------------------|----------|-------------------|---------------|
-| Type I              | ?         | Queue   | Queue                 | Queue    | Log-based         | Log-based     |
-| Store durably^      | Ephemeral | 14 days | 14 days               | ?        | Configurable      | Configurable  |
-| Delivery            | Push      | Pull    | Pull                  | ?        | Pull              | High?         |
-| P2P / fanout        | Fanout     | Point-to-point | Point-to-point | ?        | Fanout           | Fanout        |
-| "Topics"             | -         |         | ✅                     | ✅      | ✅                 | ✅             |
-| Ordering            |           |         | ✅ (per message group) | ?        | ✅ (per partition) | ✅ (per shard) |
-| Processing          |           |         |                       | ?        | ✅                 | Basic         |
-| Routing             |           |         |                       | ✅        |                   |               |
-| Throughput          | ?         | High    | Low                   | ?        | High?             | High?         |
-| Fairness            | -         | ✅       | -                     | ✅        | ?                 | ?             |
-| Managed^^           | ✅        | ✅      | ✅                   |           |                   | ✅            |
-| Deduplication       | ?        | ✅      | ✅                   |  ? think yes         |                    | ?            |
+| Feature        | SNS       | SQS     | SQS FIFO              | Kafka            | SNS + SQS       | RabbitMQ | Kinesis       |
+|----------------|-----------|---------|-----------------------|------------------|-----------------|----------|---------------|
+| Type I         | ?         | Queue   | Queue                 | Log-based        | Queue           | Queue    | Log-based     |
+| Store durably^ | Ephemeral | 14 days | 14 days               | Configurable     | 14 days         | ?        | Configurable  |
+| Consumer       | Push      | Pull    | Pull                  | Pull             | Pull            | ?        | High?         |
+| P2P / fanout   | Fanout     | Point-to-point | Point-to-point | Fanout           | Point-to-point  | ?        | Fanout        |
+| "Topics"       | -         |         | ✅                     | ✅                | ✅               | ✅      | ✅             |
+| Ordering       |           |         | ✅ (per message group) | ✅ (per partition) | ✅ (FIFO)        | ?        | ✅ (per shard) |
+| Processing     |           |         |                       | ✅                | ✅ (EventBridge) | ?        | Basic         |
+| Routing        |           |         |                       | ❌                 | ✅ (EventBridge) | ✅        |               |
+| Throughput     | ?         | High    | Low                   | High             | Mid             | ?        | High?         |
+| Fairness       | -         | ✅       | -                     | ?                | ✅ (non fifo)    | ✅        | ?             |
+| Managed^^      | ✅        | ✅      | ✅                   |                  |                 |           | ✅            |
+| Deduplication  | ?        | ✅      | ✅                   |                   |                 |  ? think yes         | ?            |
 
 
 Notes:
