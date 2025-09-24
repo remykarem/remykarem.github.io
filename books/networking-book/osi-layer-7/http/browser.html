@@ -179,6 +179,10 @@
                     <main>
                         <h1 id="browser"><a class="header" href="#browser">Browser</a></h1>
 <p>The browser is an HTTP client.</p>
+<ul>
+<li>For any HTTP calls to that domain, the browser automatically attaches any cookies bounded to a domain</li>
+<li>HTTP is stateless, but some applications want to have state, so they use cookies (because cookies ‘persist between calls’ ish)</li>
+</ul>
 <div id="admonition-assets" class="admonition admonish-note">
 <div class="admonition-title">
 <p>Assets</p>
@@ -276,6 +280,228 @@ WWW-Authenticate: Basic realm=&quot;Restricted&quot;
 Content-Length: 0
 </code></pre>
 <p>it will display a modal prompting for username and password.</p>
+<h1 id="xmlhttprequest"><a class="header" href="#xmlhttprequest">XMLHttpRequest</a></h1>
+<ul>
+<li><code>open(method: string, url: string, async: boolean, ...)</code></li>
+<li><code>send()</code></li>
+<li>—</li>
+<li><code>onreadystatechange</code></li>
+<li><code>readyState</code></li>
+<li>—</li>
+<li><code>responseText</code></li>
+<li><code>responseXML</code></li>
+<li><code>status</code></li>
+<li><code>statusText</code></li>
+</ul>
+<pre><code class="language-jsx">let req = new XMLHttpRequest();
+req.open('GET', '/my/url', true);
+req.send();
+</code></pre>
+<pre><code class="language-jsx">var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
+    // Success!
+    var data = JSON.parse(this.response);
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+</code></pre>
+<pre><code class="language-jsx">var request = new XMLHttpRequest();
+request.open('POST', '/my/url', true);
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+request.send(data);
+</code></pre>
+<pre><code class="language-jsx">var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
+    // Success!
+    var resp = this.response;
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+</code></pre>
+<h1 id="fetch-api"><a class="header" href="#fetch-api">Fetch API</a></h1>
+<pre><code class="language-jsx">fetch(url)
+	.then(resp =&gt; resp.json())
+	.then(data =&gt; console.log(data)); // you can assign here
+
+</code></pre>
+<h1 id="dom-api"><a class="header" href="#dom-api">DOM API</a></h1>
+<p>Document Object Model</p>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7d722410-6eb6-4685-98d9-99425c509bc2/Untitled.png" alt="https://gabrieltanner.org/blog/javascript-dom-introduction" /></p>
+<p>https://gabrieltanner.org/blog/javascript-dom-introduction</p>
+<pre><code class="language-jsx">document.getElementById(&quot;header-title&quot;);
+document.getElementsByClassName(&quot;list-items&quot;);
+document.getElementsByTagName(&quot;li&quot;);
+
+document.querySelector(&quot;#header-title&quot;);
+document.querySelector(&quot;.list-items&quot;);
+document.querySelector(&quot;li&quot;);
+</code></pre>
+<pre><code class="language-jsx">document.createElement(&quot;div&quot;);
+var newContent = document.createTextNode(&quot;Hello World!&quot;); 
+div.appendChild(newContent);
+document.body.insertBefore(div, currentDiv);
+</code></pre>
+<p><strong><code>Element</code></strong></p>
+<p>(html attributes)</p>
+<ul>
+<li><code>innerHtml</code></li>
+<li><code>innerText</code></li>
+<li><code>src</code></li>
+<li><code>style</code></li>
+<li><code>tagName</code> (in caps)</li>
+</ul>
+<p>(accessing nodes)</p>
+<ul>
+<li><code>parentNode</code></li>
+<li><code>childNodes</code></li>
+<li><code>firstChild</code></li>
+<li><code>lastChild</code></li>
+<li><code>nextSibling</code></li>
+</ul>
+<p>(add nodes)</p>
+<ul>
+<li><code>insertBefore</code></li>
+</ul>
+<p>(remove)</p>
+<ul>
+<li><code>remove</code> (this)</li>
+<li><code>removeChild</code></li>
+</ul>
+<p>(event listeners)</p>
+<ul>
+<li>
+<p><code>addEventListener</code></p>
+<pre><code class="language-jsx">htmlElement.addEventListener('click', () =&gt; { console.log('sdfv) })
+</code></pre>
+<p>events:</p>
+<ul>
+<li>click</li>
+<li>dblclick</li>
+</ul>
+</li>
+<li>
+<p><code>removeEventListener</code></p>
+</li>
+</ul>
+<h1 id="indexeddb"><a class="header" href="#indexeddb">IndexedDB</a></h1>
+<h1 id="web-speech-api"><a class="header" href="#web-speech-api">Web Speech API</a></h1>
+<p>https://www.google.com/intl/en/chrome/demos/speech.html</p>
+<h1 id="httpswwwmoesifcomblogtechnicalcorsauthoritative-guide-to-cors-cross-origin-resource-sharing-for-rest-apis"><a class="header" href="#httpswwwmoesifcomblogtechnicalcorsauthoritative-guide-to-cors-cross-origin-resource-sharing-for-rest-apis">https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/</a></h1>
+<ul>
+<li>SOP &amp; CORS only applies to browser!</li>
+</ul>
+<h1 id="origin"><a class="header" href="#origin">Origin</a></h1>
+<p>Origin = protocol + host/domain + port ≈ url</p>
+<h1 id="same-origin-policy"><a class="header" href="#same-origin-policy">Same-origin policy</a></h1>
+<p>A <strong>browser</strong> security policy that restricts on-page scripts from accessing or posting data to resources (&quot;resource sharing&quot;) from a different origin other than the current page's origin (&quot;cross-origin&quot;).</p>
+<aside>
+💡 Note that resources like third-party libraries and images etc. are fine because **they are linked from the document source**.
+</aside>
+<p>One method of accessing cross-origin resources is CORS.</p>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/267d8765-6379-44fc-b800-33ef4268fcc9/Untitled.png" alt="Untitled" /></p>
+<ul>
+<li>
+<p>Code</p>
+<pre><code class="language-bash">st=&gt;start: Start
+
+simpleRequest0=&gt;operation: GET
+/endpoint
+simpleRequest=&gt;operation: GET
+/endpoint
+simpleRequest2=&gt;operation: GET
+/endpoint
+preflightedRequest=&gt;operation: OPTIONS
+/endpoint
+corsReject=&gt;operation: CORS reject
+noop=&gt;operation: .
+
+sameOrigin=&gt;condition: Same origin?
+embedding=&gt;condition: Cross-origin 
+embedding?
+&lt;img&gt; &lt;video&gt;
+write=&gt;condition: Cross-origin 
+write?
+isSimpleVerb=&gt;condition: GET/POST/
+HEAD?
+isSimpleContentType=&gt;condition: application/
+   x-www-form-urlencoded
+multipart/form-data
+text/plain?
+hasNoExtraHeaders=&gt;condition: No extra headers?
+optionsOk=&gt;condition: Check response
+access-control-
+allow-[methods,
+origin,credentials]
+
+st-&gt;sameOrigin
+sameOrigin(yes)-&gt;simpleRequest0
+sameOrigin(no)-&gt;embedding
+embedding(yes)-&gt;simpleRequest
+embedding(no)-&gt;write
+write(yes)-&gt;isSimpleVerb
+write(no)-&gt;corsReject
+isSimpleVerb(yes)-&gt;isSimpleContentType
+isSimpleContentType(yes)-&gt;hasNoExtraHeaders
+
+isSimpleVerb(no@no; preflighted)-&gt;preflightedRequest
+isSimpleContentType(no@no; preflighted)-&gt;preflightedRequest
+hasNoExtraHeaders(no@no; preflighted)-&gt;preflightedRequest
+
+preflightedRequest-&gt;optionsOk
+optionsOk(yes@ok)-&gt;simpleRequest2
+optionsOk(no@violated)-&gt;corsReject
+
+hasNoExtraHeaders(yes@yes; simple)-&gt;noop-&gt;simpleRequest2
+</code></pre>
+</li>
+</ul>
+<h1 id="cors"><a class="header" href="#cors">CORS</a></h1>
+<p>Cross-origin resource sharing</p>
+<p>For a successful cross-origin resource sharing,</p>
+<ol>
+<li>
+<p>Proper response headers from the server</p>
+<pre><code class="language-bash">Access-Control-Allow-Origin: *
+</code></pre>
+</li>
+<li>
+<p>Proper request headers from the client</p>
+</li>
+</ol>
+<p>A CORS preflight request is a CORS request that checks to see if the CORS protocol is understood and server is aware using specific methods and headers. It is an <code>OPTIONS</code> request.</p>
+<p>Request:</p>
+<pre><code>Access-Control-Request-Method: **GET** (the actual request is a GET)
+Access-Control-Request-Headers: ...
+Origin: ...
+</code></pre>
+<p>Response:</p>
+<pre><code>Access-Control-Allow-Origin: ...
+Access-Control-Allow-Methods: ...
+Access-Control-Allow-Headers: ...
+Access-Control-Max-Age: ...
+</code></pre>
 
                     </main>
 
