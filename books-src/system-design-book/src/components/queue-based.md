@@ -1,5 +1,7 @@
 # Queue-based
 
+Adding new consumers with Kafka is so easy.
+
 | Feature         | **SNS**                                                                | **SQS**                                                             | **Kinesis**                                                              | **Kafka (MSK)**                                                                    |
 |-----------------|------------------------------------------------------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | **Ease of use** | Easiest (fire-and-forget, no scaling worries)                          | Easy (DLQ, retries, simple scale)                                   | Moderate (shards, scaling, retention)                                    | Harder (ops heavy, but most powerful)                                              |
