@@ -178,7 +178,14 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="types-of-consumers"><a class="header" href="#types-of-consumers">Types of consumers</a></h1>
-
+<div class="table-wrapper"><table><thead><tr><th></th><th>Daemon / Always-on</th><th>Scheduled job</th></tr></thead><tbody>
+<tr><td>Resource footprint</td><td>High</td><td>Low</td></tr>
+<tr><td>Stateful possibilities</td><td>Can maintain caches etc.</td><td>-</td></tr>
+<tr><td>Operational overhead</td><td>High; need monitoring, crash recovery</td><td>Low</td></tr>
+<tr><td>Scalability</td><td>Can scale horizontally</td><td>Harder to auto-scale</td></tr>
+<tr><td>Double-processing pitall</td><td>Nope</td><td>Yes</td></tr>
+</tbody></table>
+</div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
