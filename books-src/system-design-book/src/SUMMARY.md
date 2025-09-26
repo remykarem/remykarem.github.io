@@ -161,6 +161,10 @@
 - [Type II]()
   - [Point-to-point](./messaging-patterns/point-to-point.md)
   - [Fan-out](./messaging-patterns/fan-out.md)
+ 
+# Consumer kinds
+
+- [Types of consumers](./types-of-consumers.md)
 
 ---
 
