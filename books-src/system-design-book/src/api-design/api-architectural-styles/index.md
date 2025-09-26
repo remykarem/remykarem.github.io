@@ -28,3 +28,8 @@ All these designs are commonly built on top of HTTP.
 | Statefulness      | Stateless                     | ?                         | ?                                 | ?    |
 
 ![Comparison](https://content.altexsoft.com/media/2020/05/word-image-53.png.webp)
+
+---
+
+Articles
+* [Good API design](https://www.seangoedecke.com/good-api-design/)
