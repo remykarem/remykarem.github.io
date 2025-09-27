@@ -11,3 +11,8 @@
 * Always-on consumers: Kafka/SQS daemons, HTTP servers (API endpoints, webhooks)
 * Scheduled consumers: Cron/batch jobs
 * Ephemeral consumers: Lambdas
+
+Multiple consumer patterns:
+* 1 process; concurrency standard library
+* 1 process; sdk-specific library
+* k processes
