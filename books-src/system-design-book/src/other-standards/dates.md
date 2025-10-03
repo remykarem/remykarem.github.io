@@ -20,17 +20,21 @@ ISO 8601 and RFC 3339 are separate standards but have overlapping conventions.
 
 2.  Local datetime
 
-   `2024-01-19T15:20:30`
+    `2024-01-19T15:20:30`
 
-3.	Date and Time with an Offset from UTC:
+3.  With time zone
+
+    `2025-10-02+08:00`
+
+5.	Date and Time with an Offset from UTC:
 
     `2024-01-19T10:20:30-05:00`
 
-4.	Only Date (without any information about time zone):
+6.	Only Date (without any information about time zone):
 
     `2024-01-19`
 
-5.	Only Time (without any information about time zone):
+7.	Only Time (without any information about time zone):
 
     `15:20:30Z`, `01:20:30+08:00`
 
