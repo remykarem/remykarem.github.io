@@ -179,6 +179,34 @@
                     <main>
                         <h1 id="storing-money"><a class="header" href="#storing-money">Storing money</a></h1>
 <p>Banker's rounding</p>
+<div id="admonition-whats-the-underlying-problem" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>What's the underlying problem?</p>
+<p><a class="admonition-anchor-link" href="#admonition-whats-the-underlying-problem"></a></p>
+</div>
+<div>
+<p>Decimal fractions cannot be represented exactly using IEEE 754.</p>
+<p>Floats cannot exactly represent many decimal fractions (e.g., 0.1 + 0.2 != 0.3)</p>
+<p>This introduces rounding errors, which are dangerous for money.</p>
+</div>
+</div>
+<p>Use either <strong>string</strong> or <strong>integer</strong> (in cents) to represent amount.</p>
+<p>Because in JSON there's no &quot;integer&quot; type, <strong>string</strong> is the best way to represent amount.</p>
+<p>Using this representation minimises precision loss at every step of the way:</p>
+<ol>
+<li>Serialisation</li>
+<li>Deserialisation</li>
+<li>Database</li>
+</ol>
+<div id="admonition-example" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<p><a href="https://docs.stripe.com/api/prices">Stripe Prices API</a></p>
+</div>
+</div>
 
                     </main>
 
