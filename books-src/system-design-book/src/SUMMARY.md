@@ -168,6 +168,10 @@
 
 - [Types of consumers](./types-of-consumers.md)
 
+# Topics
+
+- [Self-contained message](./topics/self-contained-message.md)
+
 ---
 
 # Database
