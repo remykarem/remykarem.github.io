@@ -58,11 +58,11 @@
 # Goals III
 
 - [Consistency](./goals/consistency.md)
+- [Maintainability](./goals/maintainability.md)
 - [Atomicity](./goals/atomicity.md)
 - [Integrity](./goals/integrity.md)
 - [Isolation](./goals/isolation.md)
 - [Durability](./goals/durability.md)
-- [Maintainability](./goals/maintainability.md)
 - [Adaptability](./goals/adaptability.md)
 - [Traceability]()
 
@@ -80,7 +80,6 @@
 - [Identity hiding](./core-functionalities/identity-hiding.md)
 - [Control outgoing requests](./core-functionalities/control-outgoing-requests.md)
 - [SSL encryption & decryption](./core-functionalities/ssl-encryption-and-decryption.md)
-- [High throughput data handling](./core-functionalities/high-throughput-data-handling.md)
 - [Authentication & authorisation](./core-functionalities/authentication-and-authorisation.md)
 
 ---
@@ -161,6 +160,9 @@
 - [Type II]()
   - [Point-to-point](./messaging-patterns/point-to-point.md)
   - [Fan-out](./messaging-patterns/fan-out.md)
+- [Type III: Messaging models](./messaging-patterns/messaging-models.md)
+  - [Queueing]()
+  - [Pub/Sub]()
  
 # Consumer kinds
 
@@ -306,6 +308,7 @@
 - [GraphQL schema](./others/sdl.md)
 - [ASN.1 definition](./others/asn1.md)
 - [Protobuf definition](./others/protobuf.md)
+- [Apache Avro](./others/apache-avro.md)
 
 ---
 
