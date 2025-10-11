@@ -27,7 +27,7 @@ Features:
   ~~~admonish question title="Why do we want sequential?"
   Helps with data locality in the database
   ~~~
-* Privacy issues (MAC address)
+* Privacy issues (e.g., UUIDv1 reveals MAC address information, leading to potential privacy concerns.)
 
 ~~~admonish question title="UUIDv7's risk of collision is lower than UUIDv4?"
 A Redditor [says](https://www.reddit.com/r/programming/s/iufhhOQPAd) the risk of collision is reduced for UUIDs created close in time to each other.
