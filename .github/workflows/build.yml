@@ -16,47 +16,66 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Setup mdBook
-      uses: peaceiris/actions-mdbook@v1
-      with:
-        mdbook-version: '0.4.36'
-
-    - name: Download mdbook preprocessors
-      run: |
-        curl -O -L https://github.com/tommilligan/mdbook-admonish/releases/download/v1.15.0/mdbook-admonish-v1.15.0-x86_64-unknown-linux-musl.tar.gz
-        tar xvzf mdbook-admonish-v1.15.0-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
-        curl -O -L https://github.com/lzanini/mdbook-katex/releases/download/v0.5.9/mdbook-katex-v0.5.9-x86_64-unknown-linux-musl.tar.gz
-        tar xvzf mdbook-katex-v0.5.9-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
-        curl -O -L https://github.com/badboy/mdbook-mermaid/releases/download/v0.13.0/mdbook-mermaid-v0.13.0-x86_64-unknown-linux-musl.tar.gz
-        tar xvzf mdbook-mermaid-v0.13.0-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
-        rm mdbook-*
-
-    - name: Build books
-      run: |
-        mdbook build books-src/ai-planning-book
-        mdbook build books-src/ai-book
-        mdbook build books-src/agi-book
-        mdbook build books-src/stats-book
-        mdbook build books-src/number-theory-book
-        mdbook build books-src/system-design-book
-        mdbook build books-src/spring-boot-book
-        mdbook build books-src/database-book
-        mdbook build books-src/cybersecurity-book
-        mdbook build books-src/swift-book
-        mdbook build books-src/the-art-of-coding-book
-        mdbook build books-src/rust-book
-        mdbook build books-src/c-book
-        mdbook build books-src/shell-book
-        mdbook build books-src/networking-book
-        mdbook build books-src/cryptography-book
-        mdbook build books-src/os-book
-        mdbook build books-src/data-structures-and-algorithms-book
-        mdbook build books-src/x86-64-book
-        mdbook build books-src/java-kotlin-book
-        mdbook build books-src/nutrition-workout-book
-        mdbook build books-src/business-finance-book
+#    - name: Setup mdBook
+#      uses: peaceiris/actions-mdbook@v1
+#      with:
+#        mdbook-version: '0.4.36'
+#
+#    - name: Download mdbook preprocessors
+#      run: |
+#        curl -O -L https://github.com/tommilligan/mdbook-admonish/releases/download/v1.15.0/mdbook-admonish-v1.15.0-x86_64-unknown-linux-musl.tar.gz
+#        tar xvzf mdbook-admonish-v1.15.0-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
+#        curl -O -L https://github.com/lzanini/mdbook-katex/releases/download/v0.5.9/mdbook-katex-v0.5.9-x86_64-unknown-linux-musl.tar.gz
+#        tar xvzf mdbook-katex-v0.5.9-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
+#        curl -O -L https://github.com/badboy/mdbook-mermaid/releases/download/v0.13.0/mdbook-mermaid-v0.13.0-x86_64-unknown-linux-musl.tar.gz
+#        tar xvzf mdbook-mermaid-v0.13.0-x86_64-unknown-linux-musl.tar.gz -C ~/.cargo/bin
+#        rm mdbook-*
+#
+#    - name: Build books
+#      run: |
+#        mdbook build books-src/ai-planning-book
+#        mdbook build books-src/ai-book
+#        mdbook build books-src/agi-book
+#        mdbook build books-src/stats-book
+#        mdbook build books-src/number-theory-book
+#        mdbook build books-src/system-design-book
+#        mdbook build books-src/spring-boot-book
+#        mdbook build books-src/database-book
+#        mdbook build books-src/cybersecurity-book
+#        mdbook build books-src/swift-book
+#        mdbook build books-src/the-art-of-coding-book
+#        mdbook build books-src/rust-book
+#        mdbook build books-src/c-book
+#        mdbook build books-src/shell-book
+#        mdbook build books-src/networking-book
+#        mdbook build books-src/cryptography-book
+#        mdbook build books-src/os-book
+#        mdbook build books-src/data-structures-and-algorithms-book
+#        mdbook build books-src/x86-64-book
+#        mdbook build books-src/java-kotlin-book
+#        mdbook build books-src/nutrition-workout-book
+#        mdbook build books-src/business-finance-book
 
     # Add more build steps as needed for each book
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - name: Install dependencies
+      working-directory: ./halal-establishments-src
+      run: npm install
+
+    - name: Build project
+      working-directory: ./halal-establishments-src
+      run: npm run build
+
+    - name: Copy build output to /halal-establishments
+      run: |
+        rm -rf ./halal-establishments
+        mkdir -p ./halal-establishments
+        cp -r ./halal-establishments-src/dist/* ./halal-establishments/
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
