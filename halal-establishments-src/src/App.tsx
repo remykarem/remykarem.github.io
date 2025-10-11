@@ -56,14 +56,14 @@ function App() {
     <div className="mx-auto max-w-5xl p-6">
       <header className="sticky top-0 z-10 mb-6 rounded-2xl border border-gray-200 bg-white/80 p-4 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <h1 className="text-3xl font-bold tracking-tight">Halal Establishments</h1>
-        <p className="mt-1 text-sm text-gray-600">Search by name/address or sort by postal code.</p>
+        <p className="mt-1 text-sm text-gray-600">Search by Halal-certified establishments by name/address or sort by postal code.</p>
         <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
           <SearchBar value={query} onChange={setQuery} onSubmit={submitSearch} />
-          <Filters
-            category1={filters.category1}
-            category2={filters.category2}
-            onToggle={toggleFilter}
-          />
+          {/*<Filters*/}
+          {/*  category1={filters.category1}*/}
+          {/*  category2={filters.category2}*/}
+          {/*  onToggle={toggleFilter}*/}
+          {/*/>*/}
         </div>
       </header>
 
