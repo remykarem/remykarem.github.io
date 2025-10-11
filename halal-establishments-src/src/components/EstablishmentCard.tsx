@@ -20,8 +20,7 @@ export default function EstablishmentCard({ item }: Props) {
           <div className="mt-2 text-xs text-gray-500">{item.scheme}</div>
         </div>
       </div>
-      <div className="mt-3 flex items-center justify-between text-xs text-gray-500">
-        <span>#{item.number}</span>
+      <div className="mt-0 flex items-center justify-between text-xs text-gray-500">
         {item.distanceKm !== undefined && (
           <span className="rounded-full bg-blue-50 px-2 py-1 text-blue-700">
             {item.distanceKm.toFixed(1)} km
