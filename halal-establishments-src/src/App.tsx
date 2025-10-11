@@ -10,6 +10,7 @@ function App() {
   const [items, setItems] = useState<Establishment[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -36,6 +37,26 @@ function App() {
     };
   }, []);
 
+  const handleGetLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setUserLocation({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          });
+          alert(`Location retrieved: ${position.coords.latitude}, ${position.coords.longitude}`);
+        },
+        (error) => {
+          console.error("Error fetching location:", error.message);
+          alert("Unable to retrieve location.");
+        }
+      );
+    } else {
+      alert("Geolocation is not supported by your browser.");
+    }
+  };
+
   const {
     query,
     setQuery,
@@ -53,35 +74,35 @@ function App() {
     <div className="mx-auto max-w-5xl p-6">
       <header className="sticky top-0 z-10 mb-6 rounded-2xl border border-gray-200 bg-white/80 p-4 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <h1 className="text-3xl font-bold tracking-tight">Halal Establishments</h1>
-        <p className="mt-1 text-sm text-gray-600">Search Halal-certified establishments by name/address or sort by postal code.</p>
+        <p className="mt-1 text-sm text-gray-600">
+          Search Halal-certified establishments by name/address or sort by postal code.
+        </p>
         <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
           <SearchBar value={query} onChange={setQuery} onSubmit={submitSearch} />
-          {/*<Filters*/}
-          {/*  category1={filters.category1}*/}
-          {/*  category2={filters.category2}*/}
-          {/*  onToggle={toggleFilter}*/}
-          {/*/>*/}
+          <button
+            onClick={handleGetLocation}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            Get My Location
+          </button>
         </div>
       </header>
 
-
       {loading && <div className="text-gray-600">Loading establishments…</div>}
-      {loadError && (
-        <div className="text-red-600">Error: {loadError}</div>
-      )}
+      {loadError && <div className="text-red-600">Error: {loadError}</div>}
 
       {!loading && !loadError && (
         <>
           <div className="mb-2 flex items-center justify-between text-sm text-gray-600">
             <span>{total} results</span>
-            <span className="italic text-gray-500">{isSearching ? 'Working…' : label}</span>
+            <span className="italic text-gray-500">{isSearching ? "Working…" : label}</span>
           </div>
           {total === 0 ? (
             <div className="text-gray-600">No results found.</div>
           ) : (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {pageItems.map((e) => (
-                <EstablishmentCard key={e.id+e.postal} item={e} />
+                <EstablishmentCard key={e.id + e.postal} item={e} />
               ))}
             </div>
           )}
