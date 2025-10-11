@@ -60,7 +60,7 @@ export function useSearch(items: Establishment[]) {
     const maybe = strat.run(q, filtered, {});
     if (maybe instanceof Promise) {
       setIsSearching(true);
-      setLabel(`Sorting by distance from postal ${q}`);
+      setLabel(`Sorting by distance from postal code ${q}`);
       maybe.then((res) => {
         if (!active) return;
         setSearched(res);
