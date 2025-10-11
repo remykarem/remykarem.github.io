@@ -84,7 +84,7 @@ function App() {
           ) : (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {pageItems.map((e) => (
-                <EstablishmentCard key={e.id} item={e} />
+                <EstablishmentCard key={e.id+e.postal} item={e} />
               ))}
             </div>
           )}

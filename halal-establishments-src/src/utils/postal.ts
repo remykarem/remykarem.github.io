@@ -7,7 +7,7 @@ async function loadPostalData(): Promise<Map<string, LatLng>> {
   if (postalData) return postalData;
   
   try {
-    const response = await fetch('/SG_postal.csv');
+    const response = await fetch('./SG_postal.csv');
     const csvText = await response.text();
     const lines = csvText.split('\n').slice(1); // Skip header
     
