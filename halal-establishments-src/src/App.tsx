@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar';
-import Filters from './components/Filters';
 import EstablishmentCard from './components/EstablishmentCard';
 import Pagination from './components/Pagination';
 import type {Establishment} from './types';
@@ -40,8 +39,6 @@ function App() {
   const {
     query,
     setQuery,
-    filters,
-    toggleFilter,
     page,
     total,
     totalPages,
