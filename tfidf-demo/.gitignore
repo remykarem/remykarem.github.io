@@ -1,6 +1,0 @@
-yarn.lock
-.babelrc
-*/node_modules
-package-lock.json
-.vscode
-.DS_Store
