@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <title>Books</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        transition: background-color 0.5s ease, color 0.5s ease; /* smooth transition between themes */
+    }
+
+    .light-theme {
+        background-color: #ffffff;
+        color: #333333;
+    }
+
+    .dark-theme {
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    .light-theme a {
+        color: #000000;
+    }
+
+    .light-theme a:visited {
+        color: #800080;
+    }
+
+    .light-theme a:hover {
+        color: #FF0000;
+    }
+
+    .dark-theme a {
+        color: #ffffff;
+    }
+
+    .dark-theme a:visited {
+        color: #888888;
+    }
+
+    .dark-theme a:hover {
+        color: #dddddd;
+    }
+    </style>
+</head>
+
+<body>
+    <button id="theme-switcher">Switch Theme</button>
+
+    <p>Hi there! Just plain ol' HTML here. These are my own notes on various subjects:</p>
+
+    <p>Nutrition & workout</p>
+    <ul>
+        <li><a href="nutrition-workout-book">Nutrition Book</a></li>
+    </ul>
+
+    <p>Business & Finance</p>
+    <ul>
+        <li><a href="business-finance-book">Business & Finance Book</a></li>
+    </ul>
+    
+    <p>AI/ML/Stats</p>
+    <ul>
+        <li><a href="ai-book">AI Book</a></li>
+        <li><a href="ai-planning-book">AI Planning Book</a></li>
+        <li><a href="stats-book">Stats Book</a></li>
+        <li><a href="agi-book">AGI Book</a></li>
+    </ul>
+
+    <p>CS</p>
+    <ul>
+        <li><a href="system-design-book">System Design Book</a></li>
+        <li><a href="spring-boot-book">Spring Boot Book</a></li>
+        <li><a href="database-book">Database Book</a></li>
+        <li><a href="cybersecurity-book">Cybersecurity Book</a></li>
+        <li><a href="networking-book">Networking Book</a></li>
+        <li><a href="cryptography-book">Cryptography Book</a></li>
+        <li><a href="os-book">OS Book</a></li>
+        <li><a href="data-structures-and-algorithms-book">Data Structures and Algorithms Book</a></li>
+        <li><a href="x86-64-book">x86-64 Book</a></li>
+    </ul>
+
+    <p>Math</p>
+    <ul>
+        <li><a href="number-theory-book">Number Theory Book</a></li>
+    </ul>
+
+    <p>Languages</p>
+    <ul>
+        <li><a href="shell-book">Shell Book</a></li>
+        <li><a href="c-book">C Book</a></li>
+        <li><a href="rust-book">Rust Book</a></li>
+        <li><a href="java-kotlin-book">Java/Kotlin Book</a></li>
+        <li><a href="swift-book">Swift Book</a></li>
+    </ul>
+
+    <p>Art of Coding</p>
+    <ul>
+        <li><a href="the-art-of-coding-book">The Art of Coding Book</a></li>
+    </ul>
+
+    <script>
+        let themeSwitcher = document.getElementById('theme-switcher')
+        themeSwitcher.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+        });
+        
+        let currentTime = new Date();
+        let currentHour = currentTime.getHours();
+
+        if (currentHour >= 19) {
+            themeSwitcher.click();
+            console.log("It's after 7 PM");
+        } else {
+            console.log("It's before 7 PM");
+        }
+    </script>
+</body>
+
+</html>

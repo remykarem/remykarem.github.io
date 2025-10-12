@@ -1,0 +1,591 @@
+<!DOCTYPE HTML>
+<html lang="en" class="frappé" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>x86-64 Book</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./mdbook-admonish.css">
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "frappé";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('frappé')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="instructions.html">Instructions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="simd-instructions.html">SIMD instructions</a></li></ol></li><li class="chapter-item expanded "><a href="registers.html">Registers</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Assembly</li><li class="chapter-item expanded "><a href="syntax.html">Syntax</a></li><li class="chapter-item expanded "><a href="anatomy.html">Anatomy</a></li><li class="chapter-item expanded "><a href="hello-world.html">Hello world</a></li><li class="chapter-item expanded "><a href="syscall.html">syscall</a></li><li class="chapter-item expanded "><a href="equ.html">equ</a></li><li class="chapter-item expanded "><a href="inc-and-labels.html">inc and labels</a></li><li class="chapter-item expanded "><a href="jmp-and-cmp.html">jmp and cmp</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">x86-64 Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/remykarem/remykarem.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="preface"><a class="header" href="#preface">Preface</a></h1>
+<p><code>run.sh</code>:</p>
+<pre><code class="language-bash">nasm -f macho64 $1.asm &amp;&amp; \
+
+ld -L /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib \
+  -lSystem \
+  -macosx_version_min 10.12 \
+  -no_pie \
+  $1.o &amp;&amp; \
+
+./a.out
+</code></pre>
+<p>Run with</p>
+<pre><code class="language-bash">./run.sh 02-syscall
+</code></pre>
+<p>Others:</p>
+<p>Registers for syscall arguments: rdi, rsi, rdx, rcx, r8, r9
+https://en.wikipedia.org/wiki/X86_calling_conventions#x86-64_Calling_Conventions</p>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<p>https://cs.lmu.edu/~ray/notes/nasmtutorial/
+https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="instructions"><a class="header" href="#instructions">Instructions</a></h1>
+<p>https://www.cs.virginia.edu/~evans/cs216/guides/x86.html</p>
+<pre><code>**Registers**
+----------------------------------------
+| register 1 | register 2 | register 3 |
+----------------------------------------
+
+**Memory**
+               --------------
+Address 0x1070 | &lt;contents&gt; |
+Address 0x1071 | &lt;contents&gt; |
+Address 0x1072 | &lt;contents&gt; |
+Address 0x1073 | &lt;contents&gt; |
+               --------------
+</code></pre>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td>Register</td><td>EAX, AX, EBP</td><td><reg></td></tr>
+<tr><td>Constant</td><td>0x13</td><td><const></td></tr>
+<tr><td>Memory address</td><td>[eax], [var+4], dword ptr [eax+ebx]</td><td><mem></td></tr>
+</tbody></table>
+</div>
+<p><code>var</code> — location ~ &amp;var</p>
+<p><code>[var]</code> — value at location var ~ *var</p>
+<p><code>mov</code></p>
+<p><code>push &lt;operand&gt;</code></p>
+<ol>
+<li>Decrements ESP by 4 (stack grows from high address to low address)</li>
+<li><operand> goes into ESP </li>
+<li></li>
+</ol>
+<pre><code class="language-x86asm">push S    push Source onto stack
+mov  D,S  move Source to Destination
+pop  D    pop top of stack into Destination
+push
+xorl A,B  zeroing
+leaq S,D  load effective address; load address of S in D
+</code></pre>
+<p>inc
+dec
+neg
+not</p>
+<pre><code class="language-x86asm">pushq %rbp
+= subq $8, %rsp
+mov %rbp, (%rsp)
+</code></pre>
+<p>https://stackoverflow.com/questions/4584089/what-is-the-function-of-the-push-pop-instructions-used-on-registers-in-x86-ass</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="simd-instructions"><a class="header" href="#simd-instructions">SIMD instructions</a></h1>
+<p><a href="https://software.intel.com/sites/landingpage/IntrinsicsGuide/#techs=AVX2&amp;text=vpadd">https://software.intel.com/sites/landingpage/IntrinsicsGuide/</a></p>
+<p>Intel vector instruction sets</p>
+<p><img src="./intel-instructions.png" alt="Intel instructions" /></p>
+<p>Data types</p>
+<p><em>mm&lt;output-<code>data-type</code>&gt;</em>&lt;<code>op</code>&gt;&lt;<code>suffix</code>&gt;_&lt;<code>prefix</code>&gt;&lt;<code>data-type</code>&gt;</p>
+<p>https://software.intel.com/content/www/us/en/develop/documentation/cpp-compiler-developer-guide-and-reference/top/compiler-reference/intrinsics/naming-and-usage-syntax.html</p>
+<p><code>&lt;suffix&gt;</code></p>
+<ul>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+<li>u (unaligned)</li>
+<li>1 (?)</li>
+<li>zero (clear)</li>
+<li>r (reversed)</li>
+<li>l (memory)</li>
+</ul>
+<p><code>&lt;prefix&gt;</code></p>
+<ul>
+<li>p (packed i.e. vector)</li>
+<li>s (scalar)</li>
+</ul>
+<p><code>data-type</code></p>
+<ul>
+<li>__m128</li>
+<li>__m256</li>
+<li>__m512</li>
+<li>__m128d</li>
+<li>__m256d</li>
+<li>__m512d</li>
+<li>__m128i</li>
+<li>__m256i</li>
+<li>__m512i</li>
+</ul>
+<p>__m128 = a register that can take 4 floats (32)</p>
+<p>__m128d = a register that can take 2 doubles (64)</p>
+<p>__m128i = a register that can take 4 ints (32)</p>
+<p>__m256 = a register that can take 8 floats (32)</p>
+<p>__m256d = a register that can take 4 doubles (64)</p>
+<p>__m256i = a register that can take 8 ints (32)</p>
+<p>__m512 = a register that can take 16 floats (32)</p>
+<p>__m512d = a register that can take 8 doubles (64)</p>
+<p>__m512i = a register that can take 16 ints (32)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="registers"><a class="header" href="#registers">Registers</a></h1>
+<p>Internal memory storage location. Nearly all computer load data from main memory into registers in order to perform computations</p>
+<ul>
+<li>General register
+<ul>
+<li>Data register</li>
+<li>Pointer register</li>
+<li>Index register</li>
+</ul>
+</li>
+<li>Control register</li>
+<li>Segment register</li>
+</ul>
+<p>Operands can be</p>
+<ul>
+<li>Immediate values eg. `` <code>$0x5</code></li>
+<li>Registers eg. <code>%eax</code></li>
+<li>Memory address eg.  <code>%rbp</code></li>
+<li>Labels (?)</li>
+</ul>
+<pre><code>	 8   4    2   1
+%rax %eax %ax %al  accumulator
+%rbx %ebx %bx %bl  base
+%rcx %ecx %cx %cl  counter
+%rdx %edx %dx %dl  data
+</code></pre>
+<pre><code class="language-python">%rsi %esi %si %sil   source idx. function param
+%rdi %edi %di %dil   dest idx. function param
+</code></pre>
+<pre><code class="language-python">%rbp %eax %ax %al base pointer
+%rsp %eax %ax %al stack pointer
+</code></pre>
+<pre><code class="language-wasm">%r8 %eax %ax %al function param
+%r9 %eax %ax %al function param
+</code></pre>
+<pre><code class="language-wasm">%r10 %eax %ax %al
+%r11 %eax %ax %al
+</code></pre>
+<pre><code class="language-wasm">%r12 %eax %ax %al
+%r13 %eax %ax %al
+%r14 %eax %ax %al
+%r15 %eax %ax %al
+</code></pre>
+<p>Other registers</p>
+<pre><code>%rip instruction pointer
+</code></pre>
+<p>Note: %rbp always has a higher value than %rsp because the stack starts at a high memory address and grows downwards.</p>
+<pre><code class="language-wasm">Suffixes for instructions
+b = byte = 8 bits
+w = word = 16 bits = 1 byte
+l = long = 32 bits = 4 bytes
+q = quadword = 64 bits = 8 bytes
+t = ten bytes = 80 bits = 80 bytes
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="syntax"><a class="header" href="#syntax">Syntax</a></h1>
+<h2 id="instruction"><a class="header" href="#instruction">Instruction</a></h2>
+<p>Move value 4 to register rax</p>
+<p>Intel</p>
+<pre><code class="language-x86asm">mov rax, 4   
+</code></pre>
+<p>AT&amp;T</p>
+<pre><code class="language-armasm">mov $4, %rax
+</code></pre>
+<h2 id="referencing"><a class="header" href="#referencing">Referencing</a></h2>
+<p>Memory address</p>
+<p>Intel</p>
+<pre><code class="language-x86asm">rax
+</code></pre>
+<p>AT&amp;T</p>
+<pre><code class="language-armasm">%rax
+</code></pre>
+<h2 id="dereferencing"><a class="header" href="#dereferencing">Dereferencing</a></h2>
+<p>Value at memory address</p>
+<p>Intel</p>
+<pre><code class="language-x86asm">[rax]
+</code></pre>
+<p>AT&amp;T</p>
+<pre><code class="language-armasm">(%rax)
+</code></pre>
+<h2 id="addressing-memory"><a class="header" href="#addressing-memory">Addressing memory</a></h2>
+<pre><code class="language-x86asm">mov eax, [ebx]    ; move the 4 bytes in memory at address contained in EBX 
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="anatomy-of-assembly-program"><a class="header" href="#anatomy-of-assembly-program">Anatomy of assembly program</a></h1>
+<ul>
+<li>Text section: program</li>
+<li>Data section: declare constants and data which won’t change at runtime.</li>
+<li>Bss section: for variables not yet declared</li>
+</ul>
+<p>Assembly statements
+⁃	executable instructions/ instructions: tell the processor what to do. Each instruction generates one machine language instruction
+⁃	assembler directives or pseudo-ops
+⁃	macros: text substitution mechanism</p>
+<p><img src="./anatomy.png" alt="Anatomy" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world"><a class="header" href="#hello-world">Hello world</a></h1>
+<pre><code class="language-x86asm">; Registers for syscall arguments: rdi, rsi, rdx, rcx, r8, r9
+; https://en.wikipedia.org/wiki/X86_calling_conventions#x86-64_Calling_Conventions
+
+    global    _main
+
+    section   .text                 ; program
+_main:    
+    mov     rax, 0x02000004         ; system call for write
+    mov     rdi, 1                  ; arg1 - 1 = stdout
+    mov     rsi, message            ; arg2 - address of string to output
+    mov     rdx, 13                 ; arg3 - number of bytes
+    syscall                         ; invoke operating system
+
+    mov     rax, 0x02000001         ; system call for exit
+    mov     rdi, 0                  ; arg1 - exit code 0
+    syscall                         ; invoke operating system
+
+    section   .data
+message:  
+    db      &quot;Hello, World&quot;, 0       ; 0 represents the newline at the end
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="syscall"><a class="header" href="#syscall">syscall</a></h1>
+<pre><code class="language-x86asm">    global    _main
+
+    section   .text                 ; program
+_main:    
+    mov       rax, 0x02000003       ; system call for read
+    mov       rdi, 0                ; arg1 - 0 = stdin
+    mov       rsi, num1             ; arg2 - address of string to output
+    mov       rdx, 4                ; arg3 - number of bytes
+    syscall                         ; invoke
+
+    mov       rax, 0x02000004       ; system call for write
+    mov       rdi, 1                ; arg1 - 1 = stdout
+                                    ; arg2 - address of string to output
+    mov       rdx, 4                ; arg3 - number of bytes
+    syscall                         ; invoke
+
+    mov       rax, 0x02000001       ; system call for exit
+    mov       rdi, 0                ; arg1 - exit code 0
+    syscall                         ; invoke
+
+    section   .data
+message:  
+    db        &quot;Hello, World&quot;, 0     ; 0 represents \0
+
+    section .bss
+	
+    num1 resb 4                     ; reserve 4 bytes
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="equ"><a class="header" href="#equ">equ</a></h1>
+<pre><code class="language-x86asm">SYS_READ equ 0x02000003
+SYS_WRITE equ 0x02000004
+SYS_EXIT equ 0x02000001
+
+    global    _main
+
+    section   .text                 ; program
+_main:    
+    mov       rax, SYS_READ       ; system call for read
+    mov       rdi, 0                ; arg1 - 0 = stdin
+    mov       rsi, num1             ; arg2 - address of string to output
+    mov       rdx, 4                ; arg3 - number of bytes
+    syscall                         ; invoke
+
+    mov       rax, SYS_WRITE       ; system call for write
+    mov       rdi, 1                ; arg1 - 1 = stdout
+                                    ; arg2 - address of string to output
+    mov       rdx, 4                ; arg3 - number of bytes
+    syscall                         ; invoke
+
+    mov       rax, SYS_EXIT       ; system call for exit
+    mov       rdi, 0                ; arg1 - exit code 0
+    syscall                         ; invoke
+
+    section   .data
+message:  
+    db        &quot;Hello, World&quot;, 0     ; 0 represents \0
+
+    section .bss
+	
+    num1 resb 4                     ; reserve 4 bytes
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="inc-and-labels"><a class="header" href="#inc-and-labels">inc and labels</a></h1>
+<pre><code class="language-x86asm">          global    _main
+          section   .text
+_main:
+          mov       rdx, output             ; rdx holds address of next byte to write
+firststar:
+          mov       word [rdx], '*'         ; write single star
+          inc       rdx                     ; advance pointer to next cell to write
+secondstar:
+          mov       word [rdx], '*'         ; write single star
+          inc       rdx                     ; advance pointer to next cell to write
+thirdstar:
+          mov       byte [rdx], '*'         ; write single star
+          inc       rdx                     ; advance pointer to next cell to write
+fourstar:
+          mov       byte [rdx], '*'         ; write single star
+          inc       rdx                     ; advance pointer to next cell to write
+newline:
+          mov       byte [rdx], 10          ; new line
+          inc       rdx                     ; advance pointer to next cell to write
+done:
+          mov       rax, 0x02000004         
+          mov       rdi, 1                  
+          mov       rsi, output             
+          mov       rdx, dataSize           
+          syscall                           
+
+          mov       rax, 0x02000001         ; system call for exit
+          xor       rdi, rdi                ; exit code 0
+          syscall                           ; invoke operating system to exit
+
+          section   .bss
+dataSize  equ       5
+output:   resb      dataSize
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="jmp-and-cmp"><a class="header" href="#jmp-and-cmp">jmp and cmp</a></h1>
+<pre><code class="language-x86asm">          global    _main
+          section   .text
+_main:
+          mov       rdx, output             ; rdx holds address of next byte to write
+          mov       r8, 0                   ; r8 holds the number of stars
+writeStar:
+          mov       byte [rdx], '*'         ; write single star
+          inc       rdx                     ; advance pointer to next cell to write
+          inc       r8                      ; increment number of stars
+          cmp       r8, stars               ; is the number of stars equals what we want?
+          jne       writeStar               ; if not, go back to the beginning
+newline:
+          mov       byte [rdx], 10          ; new line
+          inc       rdx                     ; advance pointer to next cell to write
+done:
+          mov       rax, 0x02000004         
+          mov       rdi, 1                  
+          mov       rsi, output             
+          mov       rdx, dataSize           
+          syscall                           
+
+          mov       rax, 0x02000001         ; system call for exit
+          xor       rdi, rdi                ; exit code 0
+          syscall                           ; invoke operating system to exit
+
+          section   .bss
+stars     equ       4
+dataSize  equ       5
+output:   resb      dataSize
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+        <script>
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

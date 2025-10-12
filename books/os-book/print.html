@@ -1,0 +1,976 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>os-book</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./mdbook-admonish.css">
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">Preface</a></li><li class="chapter-item expanded affix "><li class="part-title">Virtualisation</li><li class="chapter-item expanded "><a href="io.html">I/O</a></li><li class="chapter-item expanded "><a href="networking-stack.html">Networking stack</a></li><li class="chapter-item expanded "><div>Process abstraction</div></li><li class="chapter-item expanded "><a href="process_memory.html">Process memory</a></li><li class="chapter-item expanded "><div>Process state</div></li><li class="chapter-item expanded "><div>Process scheduling</div></li><li class="chapter-item expanded "><div>Context switching</div></li><li class="chapter-item expanded "><a href="socket.html">Socket</a></li><li class="chapter-item expanded "><a href="threads.html">Threads</a></li><li class="chapter-item expanded "><a href="ipc/index.html">IPC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ipc/signals.html">Signal</a></li><li class="chapter-item expanded "><a href="ipc/unix-socket.html">Unix socket</a></li><li class="chapter-item expanded "><div>Pipe</div></li><li class="chapter-item expanded "><div>Shared memory</div></li></ol></li><li class="chapter-item expanded "><a href="memory_management.html">Memory management</a></li><li class="chapter-item expanded "><a href="system_calls.html">System calls</a></li><li class="chapter-item expanded "><a href="vectorisation.html">Vectorisation</a></li><li class="chapter-item expanded "><div>User permissions</div></li><li class="chapter-item expanded "><div>File systems</div></li><li class="chapter-item expanded "><div>Control groups</div></li><li class="chapter-item expanded "><div>Namespaces</div></li><li class="chapter-item expanded "><a href="file-descriptor.html">File descriptor</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Concurrency</li><li class="chapter-item expanded "><div>Synchronisation</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Persistence</li><li class="chapter-item expanded "><a href="file_system_management.html">File system management</a></li><li class="chapter-item expanded "><div>Disk scheduling</div></li><li class="chapter-item expanded "><a href="shell.html">Shell</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">os-book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="preface"><a class="header" href="#preface">Preface</a></h1>
+<ul>
+<li><a href="https://plbrault.github.io/youre-the-os/">You're the OS!</a></li>
+<li><a href="https://neilkakkar.com/unix.html">How Unix Works: Become a Better Software Engineer</a></li>
+<li><a href="https://goodyduru.github.io//os/2023/10/05/ipc-unix-signals.html">IPC — Unix Signals</a></li>
+</ul>
+<p>An operating system is a system software that manages computer hardware, software resources, and provides common services</p>
+<p>Everything is either a file or a process.</p>
+<p>Programs can run simultaneously.</p>
+<p>But since each program is going to need some memory, and we can’t lose that data when we switch to another program, what the OS does is to allocate a bunch of memory addresses to each program.</p>
+<p>If a program asks for more memory, the new blocks of memory allocated may not be sequential. This can be confusing for programmers to keep track of, so OS virtualises memory locations, using <strong>virtual memory</strong>.</p>
+<p>With virtual memory, programs can assume their memory always starts at address 0x00. Virtual memory also helps in <strong>memory protection</strong>, where a program will not have memory access to another program.</p>
+<p><strong>OSes</strong></p>
+<ul>
+<li>Unix-like
+<ul>
+<li>Linux distributions
+<ul>
+<li>Red Hat Enterprise Linux</li>
+<li>Fedora</li>
+<li>Debian
+<ul>
+<li>Buster, aka Debian 10, 50MB</li>
+<li>Stretch, aka Debian 9, 40MB</li>
+<li>Jessie, aka Debian 8</li>
+</ul>
+</li>
+<li>Alpine Linux, 5MB</li>
+<li>Ubuntu (based on Debian), 25MB
+<ul>
+<li>16.04 LTS (Xenial Xerus)</li>
+<li>18.04 LTS (Bionic Beaver)</li>
+<li>19.10 (Eoan Ermine)wik</li>
+<li>20.04 LTS (Focal Fossa)</li>
+<li>20.10 (Groovy Gorilla)</li>
+</ul>
+</li>
+<li>Arch Linux</li>
+</ul>
+</li>
+<li>macOS (previously Darwin)</li>
+<li>BSD
+<ul>
+<li>NetBSD</li>
+<li>FreeBSD</li>
+<li>OpenBSD</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>MS-DOS</li>
+</ul>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<p>https://jiayushe.github.io/teaching/2021-spring-cs2106
+https://bernardteo.me/nus/CS2106%20Reference.pdf</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="io"><a class="header" href="#io">I/O</a></h1>
+<p>There is a buffer for output so the actual writing of file may not happen untill we close the file</p>
+<h1 id="file-io"><a class="header" href="#file-io">File I/O</a></h1>
+<p>What happens when you <code>read()</code> a file?</p>
+<ol>
+<li>Transfer control to the kernel using system call</li>
+<li>Interact with the physical disk where the file resides</li>
+<li>Copy the data into different buffers between user space and kernel space</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="networking-stack"><a class="header" href="#networking-stack">Networking stack</a></h1>
+<p>The networking stack is part of the kernel.</p>
+<p>Roles:</p>
+<ul>
+<li>Packet handling</li>
+<li>Routing and addressing</li>
+<li>Error handling</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="process-memory"><a class="header" href="#process-memory">Process memory</a></h1>
+<h2 id="windows-os"><a class="header" href="#windows-os">Windows OS</a></h2>
+<p><strong>## Windows OS</strong></p>
+<ul>
+<li>
+<p>PE file format - format for all executables</p>
+</li>
+<li>
+<p>Header</p>
+</li>
+<li>
+<p>Import</p>
+</li>
+<li>
+<p>Export</p>
+</li>
+<li>
+<p>Timestamp</p>
+</li>
+<li>
+<p>Sections</p>
+</li>
+<li>
+<p><code>.text</code></p>
+</li>
+<li>
+<p><code>.rdata</code></p>
+</li>
+<li>
+<p><code>.data</code></p>
+</li>
+<li>
+<p><code>.rsrc</code></p>
+</li>
+</ul>
+<h2 id="data-representation"><a class="header" href="#data-representation">Data representation</a></h2>
+<ul>
+<li>Intel CPUs: least significant address (&quot;endian&quot;) is put a lower address (&quot;little&quot;). This is called <strong>little endian</strong>.</li>
+</ul>
+<p>For example, the data <code>0x4f9c3d</code> is represented as such:</p>
+<pre><code class="language-txt">address data
+
+   0x11
+   0x10
+   0x09
+   0x08 4f
+   0x07 9c
+   0x06 3d
+   0x05
+   0x04
+   0x03
+   0x02
+   0x01
+</code></pre>
+<h2 id="process-memory-layout"><a class="header" href="#process-memory-layout">Process memory layout</a></h2>
+<pre><code>+----------------------------------+
+| text                             |  &lt;- low address
++----------------------------------+
+| Initialised data segment         |
++----------------------------------+
+| Uninitialised data segment (BSS) |
++----------------------------------+
+|                                  |
+| Heap                             |
+|                                  |
++----------------------------------+
+|                                  |
+| (Unused memory)                  |
+|                                  |
++----------------------------------+
+|                                  |
+| Stack                            | 
+|                                  | &lt;- high address
++----------------------------------+
+</code></pre>
+<div id="admonition-note" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="process_memory.html#admonition-note"></a></p>
+</div>
+<div>
+<p>When people say stack grows &quot;downwards&quot;, it means that the stack grows towards <em>lower</em> memory address. It does not correspond to a physical direction.</p>
+<p>In Intel systems, stacks grow downwards.</p>
+<p>Note that these are conventions; actual layout varies depending on the OS.</p>
+</div>
+</div>
+<p>Stack:</p>
+<pre><code>+----------------------+
+| Current stack frame  | &lt;- low address
++----------------------+
+| Stack frame          |
++----------------------+
+| Stack frame          | &lt;- high address
++----------------------+
+</code></pre>
+<p>Stack frame:</p>
+<pre><code>+-------------------+
+| Local variable n  | &lt;- low address
++-------------------+
+| ...               |
++-------------------+
+| Local variable 2  |
++-------------------+
+| Local variable 1  |
++-------------------+
+| Old ebp           |
++-------------------+
+| Return address    |
++-------------------+
+| Argument 1        |
++-------------------+
+| Argument 2        |
++-------------------+
+| Argument 3        |
++-------------------+
+| ...               |
++-------------------+
+| Argument n        | &lt;- high address
++-------------------+
+</code></pre>
+<ul>
+<li>text</li>
+<li>initialised data</li>
+<li>uninitialised data</li>
+<li>stack
+<ul>
+<li>a stack frame is added whenever a function is called</li>
+</ul>
+</li>
+<li>heap</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture">von Neumann architecture</a>.</p>
+<pre><code>1. caller (in caller)
+	 a. save registers
+	 b. push parameters on stack
+	 c. push return address on stack
+
+2. callee (in function prolog) 
+	 a. push rbp
+	 b. mov rbp;rsp
+	 c. sub rsp,0x10
+
+3. callee (in function epilog)
+   a. add rsp,0x10
+   b. pop rbp
+   c. ret
+
+4. caller (after return)
+</code></pre>
+<p>EAX used in multiplication and division
+• EBP and ESP are used for tracking the stack
+• EAX is used to store the return value for call
+• ECX is used as a counting variable
+• ESI and EDI are used for copying data in loops
+• (Source and Destination)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="socket"><a class="header" href="#socket">Socket</a></h1>
+<p>aka POSIX socket, BSD socket</p>
+<p>A socket is a software object <em>provided by the OS</em> to allow applications to send and receive data across the network.</p>
+<pre><code>man 2 socket
+</code></pre>
+<div id="admonition-osi-model" class="admonition admonish-info">
+<div class="admonition-title">
+<p>OSI model</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-osi-model"></a></p>
+</div>
+<div>
+<p>Sockets is OSI Layer 4 and 5.</p>
+</div>
+</div>
+<p>Sockets are an abstraction of the</p>
+<ol>
+<li>route table, and</li>
+<li>network interface,
+hence encompassing Layer 3 (<code>SOCK_RAW</code>) and Layer 4 (<code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code>; TCP and UDP respectively).</li>
+</ol>
+<p>The system call allows you to:</p>
+<ul>
+<li>Create socket</li>
+<li>Bind socket to an IP address</li>
+<li>Connect socket to an IP address</li>
+<li>Write data to socket — using the routing table</li>
+<li>Read data from socket — using the destination IP address and port number from the data</li>
+</ul>
+<div id="admonition-creating-sockets-is-expensive" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Creating sockets is expensive</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-creating-sockets-is-expensive"></a></p>
+</div>
+<div>
+<p>Expensive in terms of resource:</p>
+<ul>
+<li>Creating a socket is a <strong>system call</strong></li>
+<li>The system needs to <strong>allocate memory</strong> and file descriptors for the socket
+<ul>
+<li>Send and receive buffers (64KB-256KB)</li>
+<li>Socket structure</li>
+<li>Assigning a file descriptor (recall file desceiptors are a finite resource)</li>
+</ul>
+</li>
+<li>Establishing a network connection involves handshaking, buffer allocation and encryption</li>
+</ul>
+</div>
+</div>
+<div id="admonition-socket-vs-unix-domain-socket" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Socket vs. Unix domain socket</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-socket-vs-unix-domain-socket"></a></p>
+</div>
+<div>
+<p>A socket is not the same as the Unix domain socket.</p>
+</div>
+</div>
+<div id="admonition-socket-vs-port" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Socket vs. port</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-socket-vs-port"></a></p>
+</div>
+<div>
+<p>A socket is not a port.</p>
+<p>A port is another software construct defined by the OS to differentiate between different programs or processes running on the same machine.</p>
+</div>
+</div>
+<div id="admonition-socket-vs-file" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Socket vs. file</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-socket-vs-file"></a></p>
+</div>
+<div>
+<p>A socket is not a file.</p>
+<p>However, it uses file-like semantics like file descriptors.</p>
+</div>
+</div>
+<div id="admonition-example" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="socket.html#admonition-example"></a></p>
+</div>
+<div>
+<p>Server:</p>
+<pre><code class="language-python">import socket
+
+def start_server():
+    # Create a socket object
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # Bind to localhost on port 8080
+    server_socket.bind(('localhost', 8080))
+    # Start listening for connections
+    server_socket.listen(1)
+    print(&quot;Server is listening on port 8080...&quot;)
+
+    while True:
+        # Accept a client connection
+        client_socket, addr = server_socket.accept()
+        print(f&quot;Connection from {addr} has been established.&quot;)
+        
+        # Receive data from the client
+        data = client_socket.recv(1024)
+        print(f&quot;Received data: {data.decode()}&quot;)
+
+        # Send a response back to the client
+        client_socket.sendall(b&quot;Hello from server&quot;)
+
+        # Close the client connection
+        client_socket.close()
+
+if __name__ == '__main__':
+    start_server()
+</code></pre>
+<p>Client:</p>
+<pre><code class="language-python">import socket
+
+# Create a socket object
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
+    # Connect to the server
+    client_socket.connect(('localhost', 8080))
+    # Send data to the server
+    client_socket.sendall(b'Hello, server')
+    
+    # Receive response from the server
+    response = client_socket.recv(1024)
+    print(f&quot;Received from server: {response.decode()}&quot;)
+</code></pre>
+<p>Few things to take note:</p>
+<ul>
+<li>Buffer handling</li>
+<li><code>accept</code> is a syscall</li>
+</ul>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="threads"><a class="header" href="#threads">Threads</a></h1>
+<ul>
+<li>Useful for IO tasks</li>
+<li>Two threads cannot execute code simultaneously</li>
+<li>Sharing info between threads is faster as they share the same memory space</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ipc"><a class="header" href="#ipc">IPC</a></h1>
+<p>Inter-process communication</p>
+<h2 id="shared-memory"><a class="header" href="#shared-memory">Shared memory</a></h2>
+<h2 id="memory-mapped-file"><a class="header" href="#memory-mapped-file">Memory-mapped file</a></h2>
+<p>Memory mapping, <code>mmap</code> is a technique to map the file to a process's address space (<strong>directly into program's memory</strong>) such that the process can address the file directly and <strong>no copies are required</strong> (step 3 of file I/O).</p>
+<p>Another explanation: <code>mmap</code> maps memory pages directly to bytes on disk. </p>
+<p>When to use memory maps?</p>
+<ul>
+<li>You access data randomly</li>
+<li>You keep it around for a long time</li>
+<li>You want to share it with other processes</li>
+</ul>
+<p><a href="https://unix.stackexchange.com/a/474928/289113">https://unix.stackexchange.com/a/474928/289113</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="signals"><a class="header" href="#signals">Signals</a></h1>
+<p>A signal is an infrastructure between kernel and processes. </p>
+<p>Sending a signal is also known as kill. It is a system call that can send a signal to a process.</p>
+<p><code>man signal</code></p>
+<p><code>kill -l</code></p>
+<p><code>kill &lt;SIGNAL&gt; %&lt;job_number&gt;</code></p>
+<p>Ignorable = can be trapped</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unix-socket"><a class="header" href="#unix-socket">Unix socket</a></h1>
+<p>aka Unix domain socket</p>
+<p>Unix domain socket or IPC socket is a <em>communications endpoint</em> for exchanging data between processes executing on the same host OS.</p>
+<p>A <strong>Unix socket file</strong> is first created.</p>
+<div id="admonition-uri-scheme" class="admonition admonish-note">
+<div class="admonition-title">
+<p>URI scheme</p>
+<p><a class="admonition-anchor-link" href="ipc/unix-socket.html#admonition-uri-scheme"></a></p>
+</div>
+<div>
+<p>The usual URI scheme is</p>
+<pre><code>unix://&lt;fullfilepath&gt;
+</code></pre>
+</div>
+</div>
+<p>We use the same <code>socket</code> syscall.</p>
+<p>Unix sockets bypass the kernel's networking stack. </p>
+<div id="admonition-example-applications" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example applications</p>
+<p><a class="admonition-anchor-link" href="ipc/unix-socket.html#admonition-example-applications"></a></p>
+</div>
+<div>
+<ul>
+<li>Docker</li>
+<li>ssh-agent</li>
+<li>gpg-agent</li>
+</ul>
+</div>
+</div>
+<div id="admonition-unix-socket-client" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Unix socket client</p>
+<p><a class="admonition-anchor-link" href="ipc/unix-socket.html#admonition-unix-socket-client"></a></p>
+</div>
+<div>
+<ul>
+<li>
+<p>cURL</p>
+<pre><code class="language-sh">curl --unix-socket ~/.colima/docker.sock http://localhost/v1.41/containers/json\?all\=tru | jq
+</code></pre>
+</li>
+<li>
+<p>Low-level programming</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="admonition-example" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="ipc/unix-socket.html#admonition-example"></a></p>
+</div>
+<div>
+<p>Server (&quot;daemon&quot;)</p>
+<pre><code class="language-python">import socket
+import os
+
+# Define the Unix socket file path
+socket_file = '/tmp/unix_socket_example.sock'
+
+# Make sure the socket does not already exist
+if os.path.exists(socket_file):
+    os.remove(socket_file)
+
+# Create a Unix socket
+server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+
+# Bind the socket to the file
+server.bind(socket_file)
+
+# Listen for incoming connections
+server.listen(1)
+
+print(f&quot;Server listening on {socket_file}...&quot;)
+
+while True:
+    # Accept a connection
+    conn, _ = server.accept()
+    print(&quot;Client connected&quot;)
+
+    # Receive data from the client
+    data = conn.recv(1024)
+    if data:
+        print(f&quot;Received: {data.decode('utf-8')}&quot;)
+
+        # Send a response back to the client
+        conn.sendall(b'Hello from server')
+    
+    # Close the connection
+    conn.close()
+</code></pre>
+<p>Client:</p>
+<pre><code class="language-python">import socket
+
+# Define the Unix socket file path
+socket_file = '/tmp/unix_socket_example.sock'
+
+# Create a Unix socket
+client = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+
+# Connect to the server
+client.connect(socket_file)
+
+# Send some data to the server
+client.sendall(b'Hello from client')
+
+# Receive a response from the server
+data = client.recv(1024)
+print(f&quot;Received: {data.decode('utf-8')}&quot;)
+
+# Close the socket
+client.close()
+</code></pre>
+</div>
+</div>
+<p>References:</p>
+<ul>
+<li><a href="https://goodyduru.github.io/os/2023/10/03/ipc-unix-domain-sockets.html">IPC — Unix Domain Sockets</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="memory-management"><a class="header" href="#memory-management">Memory management</a></h1>
+<p><strong>Dynamic memory allocation</strong></p>
+<p>allocate and deallocate objects</p>
+<p><strong>Garbage collection</strong></p>
+<p>mutator and collector</p>
+<ul>
+<li>Mark-sweep collection</li>
+<li>Mark compact collection</li>
+<li>Copying collection</li>
+<li>Reference counting</li>
+</ul>
+<p>Demand paging</p>
+<p><a href="https://stackoverflow.com/questions/8506865/when-a-binary-file-runs-does-it-copy-its-entire-binary-data-into-memory-at-once">When a binary file runs, does it copy its entire binary data into memory at once?</a></p>
+<p>Page fault and memory swap</p>
+<p><a href="https://scoutapm.com/blog/understanding-page-faults-and-memory-swap-in-outs-when-should-you-worry">Understanding page faults and memory swap-in/outs: when should you worry?</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="system-calls"><a class="header" href="#system-calls">System calls</a></h1>
+<p>aka syscall</p>
+<p><code>man -k .</code>  Get system calls</p>
+<p>What happens when an application needs to perform a system call?</p>
+<ol>
+<li>The application issues a specific instruction (?) that causes a <strong>context switch</strong> from user mode to kernel mode.</li>
+<li>The application is paused. The kernel performs the requested operation.</li>
+<li>Once done, the kernel returns the result to the user application.</li>
+<li>The kernel switches back to user mode.</li>
+</ol>
+<div id="admonition-expensive" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Expensive</p>
+<p><a class="admonition-anchor-link" href="system_calls.html#admonition-expensive"></a></p>
+</div>
+<div>
+<p>System calls are relatively expensive compared to regular function calls.</p>
+<p>Frequent or unnecessary system calls can slow down an application.</p>
+</div>
+</div>
+<h2 id="file-descriptors-and-opening-files"><a class="header" href="#file-descriptors-and-opening-files">File descriptors and opening files</a></h2>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+
+int main() {
+
+  int fd;
+  struct stat file_stat;
+  const char *filename = &quot;hello.txt&quot;;
+
+  // Open the file
+  fd = open(filename, O_RDONLY);
+  if (fd &lt; 0) {
+    perror(&quot;c1&quot;);
+    return 1;
+  }
+
+  // File attributes
+  if (stat(filename, &amp;file_stat) == -1) {
+      perror(&quot;stat&quot;);
+      return 1;
+  }
+  printf(&quot;File: %s\n&quot;, filename);
+  printf(&quot;Size: %lld bytes\n&quot;, (long long) file_stat.st_size);
+  printf(&quot;Permissions: %o\n&quot;, file_stat.st_mode &amp; 0777);
+  printf(&quot;Owner ID: %d\n&quot;, file_stat.st_uid);
+  printf(&quot;Group ID: %d\n&quot;, file_stat.st_gid);
+
+  // Close the file
+  if (close(fd) == -1) {
+    perror(&quot;Error closing the file&quot;);
+    return 2;
+  }
+
+  return 0;  
+}
+</code></pre>
+<h2 id="files"><a class="header" href="#files">Files</a></h2>
+<ul>
+<li><code>open</code></li>
+<li><code>close</code></li>
+<li><code>read</code></li>
+<li><code>write</code></li>
+<li><code>execve</code></li>
+</ul>
+<h2 id="networking"><a class="header" href="#networking">Networking</a></h2>
+<ul>
+<li><code>connect</code></li>
+<li><code>send</code></li>
+<li><code>recv</code></li>
+<li><code>sendto</code></li>
+<li><code>recvfrom</code></li>
+</ul>
+<h1 id="abi-system-calls-reference"><a class="header" href="#abi-system-calls-reference">ABI: System calls reference</a></h1>
+<ul>
+<li>macOS: https://opensource.apple.com/source/xnu/xnu-1504.3.12/bsd/kern/syscalls.master</li>
+<li><code>man 2 syscall</code></li>
+<li></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vectorisation"><a class="header" href="#vectorisation">Vectorisation</a></h1>
+<p><a href="https://cvw.cac.cornell.edu/vector/default">https://cvw.cac.cornell.edu/vector/default</a></p>
+<p><a href="https://www.reddit.com/r/rust/comments/8uccla/does_rustc_have_autovectorization/">https://www.reddit.com/r/rust/comments/8uccla/does_rustc_have_autovectorization/</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-descriptor"><a class="header" href="#file-descriptor">File descriptor</a></h1>
+<p>There is a limit to no. of open file descriptors the OS allows for any process.</p>
+<div id="admonition-how-to-check-limits" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>How to check limits?</p>
+<p><a class="admonition-anchor-link" href="file-descriptor.html#admonition-how-to-check-limits"></a></p>
+</div>
+<div>
+<p>Limit for the current shell:</p>
+<pre><code>ulimit -n
+</code></pre>
+<p>Check limits in macOS:</p>
+<pre><code>launchctl limit maxfiles
+</code></pre>
+<p>Check files open for a process in macOS:</p>
+<pre><code>lsof -p &lt;PID&gt;
+</code></pre>
+<p>Linux (?):</p>
+<pre><code>cat /proc/&lt;PID&gt;/limits
+</code></pre>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-system-management"><a class="header" href="#file-system-management">File system management</a></h1>
+<p>iNodes data structure</p>
+<p>Linux FHS (Filesystem Hierarchy Standard)</p>
+<p><code>/</code>:</p>
+<div class="table-wrapper"><table><thead><tr><th>Folder</th><th></th><th></th><th>Examples</th></tr></thead><tbody>
+<tr><td><code>bin</code></td><td>Basic shell commands</td><td>User</td><td><code>ls</code></td></tr>
+<tr><td><code>sbin</code></td><td>System binaries</td><td>Admin</td><td><code>ifconfig</code>, <code>md5</code></td></tr>
+<tr><td><code>lib</code></td><td>Source code for binaries</td><td>User</td><td>(not in macOS)</td></tr>
+<tr><td><code>etc</code></td><td>Configs</td><td>Admin</td><td><code>passwd</code>, <code>hosts</code></td></tr>
+<tr><td><code>dev</code></td><td>Device files</td><td></td><td><code>stdout</code>, <code>ttys002</code></td></tr>
+<tr><td><code>home</code></td><td>User data</td><td>User</td><td>(not in macOS)</td></tr>
+<tr><td><code>opt</code></td><td>Optional software</td><td>User</td><td><code>gradle</code></td></tr>
+<tr><td><code>tmp</code></td><td>Temp files</td><td>Applications</td><td></td></tr>
+<tr><td><code>var</code></td><td>Runtime info like logging</td><td>Applications</td><td></td></tr>
+<tr><td><code>proc</code></td><td>Process and kernel files</td><td>?</td><td><code>lscpu</code></td></tr>
+</tbody></table>
+</div>
+<p><code>/usr</code>:</p>
+<div class="table-wrapper"><table><thead><tr><th>Folder</th><th></th><th></th><th>Examples</th></tr></thead><tbody>
+<tr><td><code>bin</code></td><td>Binaries</td><td>User</td><td><code>gcc</code></td></tr>
+<tr><td><code>sbin</code></td><td>Binaries</td><td>Admin</td><td></td></tr>
+<tr><td><code>lib</code></td><td>System libraries</td><td>?</td><td></td></tr>
+<tr><td><code>share</code></td><td>Docs</td><td>User</td><td></td></tr>
+</tbody></table>
+</div>
+<p><code>/usr/local</code>:</p>
+<div class="table-wrapper"><table><thead><tr><th>Folder</th><th></th><th></th><th>Examples</th></tr></thead><tbody>
+<tr><td><code>bin</code></td><td>Binaries</td><td>User</td><td><code>node</code>, <code>python3</code></td></tr>
+<tr><td><code>opt</code></td><td>Binaries</td><td>User</td><td><code>nasm</code>, <code>openssl</code></td></tr>
+<tr><td><code>lib</code></td><td>Libraries</td><td>User</td><td><code>libopencv_text.dylib</code></td></tr>
+<tr><td><code>include</code></td><td>Header files</td><td>User</td><td></td></tr>
+<tr><td><code>sbin</code></td><td>System binaries</td><td>Admin</td><td></td></tr>
+<tr><td><code>Frameworks</code></td><td>?</td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<p>macOS:</p>
+<div class="table-wrapper"><table><thead><tr><th>Hi</th></tr></thead><tbody>
+<tr><td><code>Applications</code></td></tr>
+<tr><td><code>Library</code></td></tr>
+<tr><td><code>System</code></td></tr>
+<tr><td><code>Users</code></td></tr>
+<tr><td><code>Volume</code></td></tr>
+</tbody></table>
+</div>
+<p>Home directory:</p>
+<div class="table-wrapper"><table><thead><tr><th>Folder</th><th></th><th></th><th>Examples</th></tr></thead><tbody>
+<tr><td><code>Applications</code></td><td></td><td></td><td></td></tr>
+<tr><td><code>Desktop</code></td><td></td><td></td><td></td></tr>
+<tr><td><code>.config</code></td><td></td><td></td><td></td></tr>
+</tbody></table>
+</div><div id="admonition-note" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="file_system_management.html#admonition-note"></a></p>
+</div>
+<div>
+<ul>
+<li><code>etc</code> probably stands for &quot;everything to configure&quot;</li>
+<li>Files in <code>tmp</code> are emptied when restarted</li>
+</ul>
+</div>
+</div>
+<p>a file is a stream of data</p>
+<p>The OS provides 3 files that are always open to every running process:</p>
+<ul>
+<li>stdin (standard input)</li>
+<li>stdout (standard output)</li>
+<li>stderr (standard error)</li>
+</ul>
+<p>Another file that is open:</p>
+<p>tele typewriter aka tty.</p>
+<pre><code class="language-bash">$ tty
+/dev/ttys001
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="shell"><a class="header" href="#shell">Shell</a></h1>
+<p>Every terminal you open gets assigned a new file via <code>tty</code>.</p>
+<p>tty is a file</p>
+<p>Every time you write a command on the terminal, the shell creates a duplicate process (via <code>fork()</code>).</p>
+<p><strong>Shell:</strong> a user interface to send commands to OS. “Shell” because it is the outermost layer around the OS’s “kernel.”</p>
+<ul>
+<li>CLI shells
+<ul>
+<li>Unix shells
+<ul>
+<li>Bourne Shell (sh)</li>
+<li>Bourne-Again Shell (bash)</li>
+<li>Z Shell (zsh)</li>
+<li>Xonsh</li>
+</ul>
+</li>
+<li>Windows shells
+<ul>
+<li>CMD</li>
+<li>PowerShell</li>
+<li>Windows subsystem for Linux (WSL)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>GUI shells</li>
+</ul>
+<p><strong>Terminal emulator / terminal</strong>: a graphical application to access shell</p>
+<ul>
+<li>macOS terminals
+<ul>
+<li>Terminal</li>
+<li>iTerm2</li>
+<li>Hyper</li>
+</ul>
+</li>
+<li>Windows terminals
+<ul>
+<li>Command Prompt</li>
+<li>Cygwin</li>
+<li>Windows Terminal</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

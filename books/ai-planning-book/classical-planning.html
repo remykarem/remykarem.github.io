@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html lang="en" class="frappé" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Classical planning - AI Planning Book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./mdbook-admonish.css">
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "frappé";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('frappé')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="terminologies.html">Terminologies</a></li><li class="chapter-item expanded "><a href="representations.html">Representations</a></li><li class="chapter-item expanded "><a href="knowledge-base.html">Knowledge base</a></li><li class="chapter-item expanded "><a href="problem.html">Problem</a></li><li class="chapter-item expanded "><a href="resources.html">Resources</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="simple-planning.html">Simple planning</a></li><li class="chapter-item expanded "><a href="classical-planning.html" class="active">Classical planning</a></li><li class="chapter-item expanded "><a href="planning-in-a-stochastic-environment.html">Planning in a stochastic environment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="value-iteration.html">Value iteration</a></li><li class="chapter-item expanded "><a href="policy-iteration.html">Policy iteration</a></li><li class="chapter-item expanded "><a href="gpi.html">GPI</a></li><li class="chapter-item expanded "><a href="mcts.html">Online search: MCTS</a></li></ol></li><li class="chapter-item expanded "><a href="learning-to-plan-in-a-stochastic-environment.html">Learning to plan in a stochastic environment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="learning-the-q-function.html">Learning the Q-function</a></li><li><ol class="section"><li class="chapter-item expanded "><div>MC learning</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="direct-utility-estimation.html">Direct utility estimation</a></li><li class="chapter-item expanded "><a href="mc-control-with-gpi.html">MC control with GPI</a></li><li class="chapter-item expanded "><a href="glie-epsilon-greedy-mc-control.html">GLIE epsilon-greedy MC control</a></li></ol></li><li class="chapter-item expanded "><a href="td-learning.html">TD learning</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sarsa.html">SARSA</a></li><li class="chapter-item expanded "><a href="q-learning.html">Q-learning</a></li><li class="chapter-item expanded "><a href="deep-q-learning.html">Deep Q-learning</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="learning-the-policy.html">Learning the policy</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="policy-gradient.html">Policy gradient</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="reinforce.html">REINFORCE</a></li><li class="chapter-item expanded "><a href="reinforce-with-baseline.html">REINFORCE with baseline</a></li><li class="chapter-item expanded "><a href="actor-critic.html">Actor critic</a></li><li class="chapter-item expanded "><a href="trpo.html">TRPO</a></li><li class="chapter-item expanded "><a href="ppo.html">PPO</a></li><li class="chapter-item expanded "><a href="imitation-learning.html">Imitation learning</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="learning-the-transition-model.html">Learning the transition model</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="adp.html">ADP</a></li></ol></li><li class="chapter-item expanded "><a href="learning-from-feedback.html">Learning from feedback</a></li></ol></li><li class="chapter-item expanded "><a href="planning-in-a-stochastic-environment-with-partial-observability.html">Planning in a stochastic environment with partial observability</a></li><li class="chapter-item expanded "><a href="planning-in-a-multi-agent-environment.html">Planning in a multi-agent environment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="single-move-games.html">Single-move / simultaneous games</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2-player-non-zero-sum-games.html">2-player non-zero-sum games</a></li><li class="chapter-item expanded "><a href="2-player-zero-sum-games.html">2-player zero-sum games</a></li><li class="chapter-item expanded "><a href="other-games.html">Other games</a></li></ol></li><li class="chapter-item expanded "><a href="sequential-games.html">Sequential games</a></li><li class="chapter-item expanded "><a href="repeated-games.html">Repeated games</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">Reinforcement learning</li><li class="chapter-item expanded "><a href="multi-armed-bandit-problem.html">Multi-armed bandit problem</a></li><li class="chapter-item expanded "><a href="characteristics-of-learning.html">Characteristics of learning</a></li><li class="chapter-item expanded "><a href="on-vs-off-policy-learning.html">On-policy vs. off-policy learning</a></li><li class="chapter-item expanded "><a href="exploration-algorithms.html">Exploration algorithms</a></li><li class="chapter-item expanded "><a href="deadly-triad.html">Deadly triad</a></li><li class="chapter-item expanded "><a href="function-approximation.html">Function approximation</a></li><li class="chapter-item expanded "><a href="applications.html">Applications</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="decision-theory.html">Decision theory</a></li><li class="chapter-item expanded "><a href="principal-of-optimality.html">Principal of optimality</a></li><li class="chapter-item expanded "><a href="counting.html">Counting</a></li><li class="chapter-item expanded "><a href="mdp.html">MDP</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AI Planning Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/remykarem/remykarem.github.io/edit/main/books-src/ai-planning-book/src/classical-planning.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="classical-planning-uaing-state-space-search"><a class="header" href="#classical-planning-uaing-state-space-search">Classical planning (uaing state-space search)</a></h1>
+<!-- toc -->
+<hr />
+<p>Classical planning agents represent states and their transitions using a factored representation. </p>
+<p>AIAMA calls these agents as &quot;planning agents.&quot;</p>
+<p>A <strong>state</strong> is represented using a set of <strong>state variables</strong> or <strong>fluents</strong>. eg. </p>
+<pre><code>{
+    At(plane1, time1) = True,
+    At(plane2, time2 = True,
+    At(plane1, time2 = True
+}
+</code></pre>
+<p>Planning becomes a state-space search. Note that states are transformed via operators (actions). </p>
+<h2 id="languages"><a class="header" href="#languages">Languages</a></h2>
+<p>Languages used in classical planning:</p>
+<ul>
+<li>
+<p>PDDL</p>
+<p>Domain</p>
+<blockquote>
+<p>💡 &quot;Plan once, run everywhere&quot;.  A domain is a greater problem, defining the 'world'. In this world, you define entities (&quot;types&quot;) like places, vehicles, general objects. You also define yes/no statements (&quot;predicates&quot;) in combination with the instances of the types. Lastly, you define the things that you can do (&quot;actions&quot;) that can be taken in this world.</p>
+</blockquote>
+<ul>
+<li>
+<p>Requirements</p>
+<pre><code>(:requirements :strips :typing)
+</code></pre>
+</li>
+<li>
+<p>Types</p>
+<pre><code>(:types city place physobj - object
+          package vehicle - physobj
+          truck airplane - vehicle
+          airport location - place
+)
+</code></pre>
+</li>
+<li>
+<p>Predicates</p>
+<pre><code>(:predicates (in-city ?loc - place ?city - city)
+	     (at ?obj - physobj ?loc - place)
+	     (in ?pkg - package ?veh - vehicle))
+</code></pre>
+</li>
+<li>
+<p>Actions</p>
+<pre><code>(:action load-airplane
+   :parameters (?pkg - package ?airplane - airplane ?loc - place)
+   :precondition (and (at ?pkg ?loc) (at ?airplane ?loc))
+   :effect (and (not (at ?pkg ?loc)) (in ?pkg ?airplane))
+)
+
+(:action unload-truck
+   :parameters (?pkg - package ?truck - truck ?loc - place)
+   :precondition (and (at ?truck ?loc) (in ?pkg ?truck))
+   :effect (and (not (in ?pkg ?truck)) (at ?pkg ?loc))
+)
+</code></pre>
+</li>
+</ul>
+<p>Problem</p>
+<blockquote>
+<p>💡 A problem is a real problem to solve. A real problem is defined by its goal (&quot;goal&quot;) and how things are looking currently (&quot;initial state&quot;). You also specify instances of the types (&quot;objects&quot;) like &quot;London&quot; if the type is <em>location</em>.</p>
+</blockquote>
+<ul>
+<li>
+<p>Goal</p>
+<pre><code>(:goal (and (at p1 north) 
+            (at p2 south))
+)
+</code></pre>
+</li>
+<li>
+<p>Initial state</p>
+<p>Ground predicates that are positive only</p>
+<pre><code>(:init (in-city cdg paris)
+       (in-city lhr london)
+       (in-city north paris)
+       (in-city south paris)
+       (at plane lhr)
+       (at truck cdg)
+       (at p1 lhr)
+       (at p2 lhr)
+  )
+</code></pre>
+</li>
+<li>
+<p>Objects</p>
+<pre><code>(:objects plane - airplane
+          truck - truck
+          cdg lhr - airport
+          south north - location
+          paris london - city
+          p1 p2 - package)
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>STRIPS</p>
+<ul>
+<li>
+<p>Actions in a state</p>
+<pre><code>Action(Load(c,p,a)
+	Precond: At(c,a) ∧ At(p,a)
+	Effect: ¬At(c,a) ∧ ... )
+</code></pre>
+</li>
+<li>
+<p>Initial state</p>
+<pre><code>Init(At(...) ∧ Heigh(...))
+</code></pre>
+</li>
+<li>
+<p>Goal</p>
+<pre><code>Goal(At(...) ∧ Heigh(...))
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>SATS</p>
+<ul>
+<li>
+<p>Propositionalise the actions</p>
+</li>
+<li>
+<p>Initial state</p>
+<p>Instead of</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">SFO</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mclose">)</span></span></span></span></span></p>
+<p>assert <em>every</em> fluent.</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.02778em;">sser</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">SFO</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">¬</span><span class="mord mathnormal">A</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">¬</span><span class="mord mathnormal">A</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">SFO</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span></p>
+</li>
+<li>
+<p>Propositionalise the goal</p>
+</li>
+<li>
+<p>Add successor-state axioms</p>
+</li>
+<li>
+<p>Add precondition axioms</p>
+</li>
+<li>
+<p>Add action exclusion axioms</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Why is dropping negative effects (in preconditions) better?</strong>
+It becomes easier to achieve all goal literals because preconditions are easier to meet. It becomes a relaxes problem because a plan in the original problem is also a valid plan in the transformed problem.</p>
+</blockquote>
+<p>ADD list and DEL list</p>
+<p><img src="./classical-planning-1.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79f8d982-d1f8-4a74-b268-da2c7b9dcc93/Untitled.png" /></p>
+<p><strong>Heuristics</strong></p>
+<ul>
+<li>Ignore delete lists</li>
+<li>Ignore preconditions</li>
+<li>Decompose problem into subproblems</li>
+</ul>
+<p>How to reformulate problem</p>
+<ol>
+<li>Create the new type if needed. Eg. <code>time</code>.</li>
+<li>Add predicate to indicate where we are in wrt to the new type. Eg. <code>at_time(t1)</code>. Add predicate to move between the objects (that will always be true). Eg. <code>time_next(t1 t2)</code>.</li>
+<li>Update actions to include these. </li>
+<li>Create the objects if they don’t already exist. Eg. <code>t1 t2 t3 - time</code>.</li>
+<li>Update the initial state to include rules to guide the planner how to navigate in the search space. Eg. <code>time_next(t1 t2) time_next(t2 t3)</code></li>
+</ol>
+<h2 id="algorithms"><a class="header" href="#algorithms">Algorithms</a></h2>
+<h3 id="forward-search"><a class="header" href="#forward-search">Forward search</a></h3>
+<p>AKA forward state-space search</p>
+<p>Examples: <a href="http://www.fast-downward.org/">Fast Downward</a></p>
+<h3 id="backward-search"><a class="header" href="#backward-search">Backward search</a></h3>
+<p>AKA backward relevant-states search</p>
+<p>&quot;Regression&quot;</p>
+<p>Only consider actions that are relevant to the goal  or current state.</p>
+<p>To regress from goal <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span></span></span></span> to a description <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9463em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span>,</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9963em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8019em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.02778em;">DD</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∪</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">reco</span><span class="mord mathnormal">n</span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">)</span></span></span></span></span></p>
+<h3 id="boolean-satisfiability"><a class="header" href="#boolean-satisfiability">Boolean satisfiability</a></h3>
+<p>NP-complete algorithm</p>
+<p>At time step 1, set a set of boolean variables. Through axioms (if the set of bools is like this then go this, else go there), you move to the next step. Repeat until you have all True. The plan is the different sets of bools for each time step. The solution is setting the right actions.</p>
+<h3 id="graphplan"><a class="header" href="#graphplan">Graphplan</a></h3>
+<p>This uses a planning graph data structure. It works only for <em>propositional planning problems</em> (no variables, only literals).</p>
+<p>Like the normal graph but include mutually exclusive actions and propositions. Then start searching from the goal. </p>
+<ul>
+<li>Heuristics that can be derived from planning graph:
+<ul>
+<li>1 goal
+<ul>
+<li>Cost of achieving any goal literal (can be estimated from the level in which it first appears)</li>
+</ul>
+</li>
+<li>Conjunction of goals
+<ul>
+<li>Max-level (take the max of the levels of the goals)</li>
+<li>Level sum (take the sum of the levels of the goals). Can be inadmissible.</li>
+<li>Set level</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="simple-planning.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="planning-in-a-stochastic-environment.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="simple-planning.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="planning-in-a-stochastic-environment.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>
