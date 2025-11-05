@@ -10,41 +10,12 @@
 Note that OpenSSL 3.x refers to PKCS #1 keys as `traditional`. See `man openssl-genrsa`.
 ```
 
-Generate private key in PKCS #8 format. `genpkey` is obsolete. Use `gen*`.
-
-```bash
-openssl genrsa -out secret.pem 2048
-```
-
-Output DER format and base64-encode it.
-
-```bash
-openssl rsa -in secret.pem -outform der -out secret.der
-base64 -i secret.der
-```
-
-Output public key from a private key.
-
-```bash
-openssl rsa -in secret.pem -pubout -out secret.pem.pub
-```
-
-Convert format
-
-```bash
-openssl pkcs12 -export -inkey secret.pem -in cert.pem -out cert.pfx
-```
+### RSA PKCS #1
 
 🙄 Convert from PKCS #1 to PKCS #8 private key:
 
 ```bash
 openssl pkcs8 -topk8 -inform pem -in secret_pkcs1.pem -outform pem -nocrypt -out secret_pkcs8.pem
-```
-
-🙄 Convert from PKCS #8 to PKCS #1 private key:
-
-```bash
-openssl rsa -in private_pkcs8.pem -out private_pkcs1.pem
 ```
 
 🙄 Convert from PKCS #1 opento PKCS #8 public key:
@@ -53,17 +24,45 @@ openssl rsa -in private_pkcs8.pem -out private_pkcs1.pem
 openssl rsa -RSAPublicKey_in -in public_pkcs1.pem -pubout -out public_pkcs8.pem
 ```
 
+### RSA PKCS #8
+
+Generate private key in PKCS #8 format. `genpkey` is obsolete. Use `gen*`.
+
+```bash
+openssl genrsa -out secret.pem 2048
+```
+
+🙄 Convert from PKCS #8 to PKCS #1 private key:
+
+```bash
+openssl rsa -in private_pkcs8.pem -out private_pkcs1.pem
+```
+
 🙄 Convert from PKCS #8 to PKCS #1 public key:
 
 ```bash
 openssl rsa -pubin -in public_pkcs8.pem -RSAPublicKey_out -out public_pkcs1.pem
 ```
 
+Output public key from a private key.
+
+```bash
+openssl rsa -in secret.pem -pubout -out secret.pem.pub
+```
+
+### Others
+
 🙄 Convert from PEM to DER for PKCS #1 private key:
 
 ```bash
 openssl rsa -in secret.pem -outform der -out secret.der -traditional
 base64 -i secret.der
+```
+
+Convert format
+
+```bash
+openssl pkcs12 -export -inkey secret.pem -in cert.pem -out cert.pfx
 ```
 
 Other tools include `openssl-pkcs8` and `openssl pkey`.
