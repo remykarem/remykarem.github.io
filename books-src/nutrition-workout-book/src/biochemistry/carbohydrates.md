@@ -1,5 +1,7 @@
 # Carbohydrates
 
+Recommended 130g per day
+
 Broken down into simple sugars like glucose. 
 
 ## Food sources
