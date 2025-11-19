@@ -1,5 +1,7 @@
 # Chain of Responsibility
 
+aka pipeline pattern
+
 An input goes through multiple methods in series.
 
 This treats an umbrella request using different specific methods, depending on the method does.
