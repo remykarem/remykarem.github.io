@@ -115,6 +115,7 @@
 
 # Others
 
+- [Context object pattern](./others/context-object-pattern.md)
 - [Declarative vs. imperative](./others/declarative-imperative.md)
 - [Convention over configuration]()
 - [Error handling patterns](./others/error-handling-patterns.md)

@@ -1,0 +1,1 @@
+# Context object pattern
