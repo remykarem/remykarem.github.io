@@ -115,6 +115,7 @@
 
 # Others
 
+- [Linear](./others/linear.md)
 - [Business logic error vs. technical error](./others/business-error-technical-error.md)
 - [Context object pattern](./others/context-object-pattern.md)
 - [Declarative vs. imperative](./others/declarative-imperative.md)
