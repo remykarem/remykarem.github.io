@@ -73,6 +73,7 @@
     - [Facade](./gang-of-four/structural/facade.md)
 
   - [Behavioural](./gang-of-four/behavioural/index.md)
+    - [Orchestrator](./behavioural/orchestrator.md)
     - [Template method](./gang-of-four/behavioural/template-method.md)
     - [Chain of Responsibility](./gang-of-four/behavioural/chain-of-responsibility.md)
     - [Strategy](./gang-of-four/behavioural/strategy.md)
