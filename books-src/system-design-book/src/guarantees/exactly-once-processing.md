@@ -1,4 +1,4 @@
-# Delivery
+# Delivery semantics
 
 * At-most-once delivery
 * Exactly-once delivery
