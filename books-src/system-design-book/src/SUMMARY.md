@@ -22,7 +22,7 @@
 # Guarantees / semantics / models
 
 - [Uniqueness](./guarantees/uniqueness.md)
-- [Delivery](./guarantees/exactly-once-processing.md)
+- [Delivery semantics](./guarantees/exactly-once-processing.md)
 - [Order semantics](./guarantees/ordering.md)
 - [Consistency](./consistency-models.md)
   - [Immediate consistency](./distributed-system/consistency-models/immediate-consistency.md)
