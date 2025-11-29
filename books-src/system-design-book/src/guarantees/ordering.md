@@ -1,4 +1,4 @@
-# Ordering
+# Order semantics
 
 * Best-effort
 * Global FIFO
