@@ -17,12 +17,13 @@
 - [Data locality](./design-principles/data-locality.md)
 - [Efficient use of resources](./design-principles/efficient-use-of-resources.md)
 - [Single source of truth](./design-principles/single-source-of-truth.md)
+- [Business context locality](./design-principles/business-context-locality.md)
 
 # Guarantees / semantics / models
 
 - [Uniqueness](./guarantees/uniqueness.md)
 - [Delivery](./guarantees/exactly-once-processing.md)
-- [Ordering](./guarantees/ordering.md)
+- [Order semantics](./guarantees/ordering.md)
 - [Consistency](./consistency-models.md)
   - [Immediate consistency](./distributed-system/consistency-models/immediate-consistency.md)
   - [Strong consistency](./distributed-system/consistency-models/strong-consistency.md)
