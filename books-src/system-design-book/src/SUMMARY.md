@@ -281,6 +281,8 @@
 
 - [Soft deletion](./topics/soft-deletion.md)
 - [Storing money](./topics/storing-money.md)
+- [Stale write & lost update](./topics/stale-write-lost-update.md)
+- [Outbox pattern](./topics/outbox-pattern.md)
 
 ---
 
