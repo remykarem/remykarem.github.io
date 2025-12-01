@@ -15,5 +15,9 @@ Setup:
 * **Many-to-many vs. point-to-point communication** — one message can be received by many subscribers. For webhooks, a message is meant for a consumer.
 ~~~
 
+~~~admonish tip
+ If you need to "route" messages, it might also be a sign of the pub-sub pattern
+~~~
+
 Examples of AWS services:
 * SNS
