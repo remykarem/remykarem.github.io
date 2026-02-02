@@ -102,6 +102,7 @@
 
 - [Error boundary](./error-patterns/error-boundary.md)
 - [Error handling patterns](./others/error-handling-patterns.md)
+- [Bubble or handle](./error-patterns/bubble-or-handle.md)
 
 ---
 
