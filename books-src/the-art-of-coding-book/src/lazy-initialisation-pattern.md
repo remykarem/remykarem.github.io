@@ -1,0 +1,1 @@
+# Lazy initialisation pattern
