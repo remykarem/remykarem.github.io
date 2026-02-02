@@ -98,6 +98,13 @@
 
 ---
 
+# Error patterns
+
+- [Error boundary](./error-patterns/error-boundary.md)
+- [Error handling patterns](./others/error-handling-patterns.md)
+
+---
+
 # Frontend patterns
 
 - [Container and presentation]()
@@ -121,7 +128,6 @@
 - [Context object pattern](./others/context-object-pattern.md)
 - [Declarative vs. imperative](./others/declarative-imperative.md)
 - [Convention over configuration]()
-- [Error handling patterns](./others/error-handling-patterns.md)
 - [Defensive programming](./defensive-programming.md)
 - [RAII](./creational/raii.md)
 - [Dependency injection](./creational/dependency-injection.md)
