@@ -186,6 +186,7 @@
 - [High blood cholesterol](./medical-conditions/high-blood-cholesterol.md)
 - [Fatty liver disease](./medical-conditions/fatty-liver-disease.md)
 - [Gout](./medical-conditions/gout.md)
+- [Heart disease](./medical-conditions/heart-disease.md)
 
 # Medicine: State
 
