@@ -8,6 +8,7 @@
 
 - [Readability]()
 - [Maintainability]()
+- [Predictability]()
 - [Performance]()
 
 ## Strategies
