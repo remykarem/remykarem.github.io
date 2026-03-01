@@ -6,25 +6,22 @@ Saturated fats should come less than 10% of daily calorie intake.
 [Healthhub: How to Eat Right to Feel Right](https://www.healthhub.sg/live-healthy/dietary_guidelines_adults)
 ~~~
 
-## Food sources
+## Saturated fatty acids
 
 Found typically in animal products and tropical plant oils
 
-* **Palmitic acid** — meat, dairy, palm oil, butter, cocoa butter
-* Myristic acid — nutmeg, palm oil, coconut oil, and dairy fat
-* **Stearic acid** — meat, dairy, cocoa butter
+* **Palmitic acid** — meat, dairy, palm oil, butter, cocoa butter, ghee, lard, tallow
+* **Myristic acid** — nutmeg, palm oil, coconut oil, and dairy fat
+* **Stearic acid** — meat, dairy, cocoa butter, dark chocolate, tallow
 
   The body converts it into oleic acid
   
-* Lauric acid — coconut oil
+* **Lauric acid** — coconut oil
 * MCTs — coconut oil
 * Fully hydrogenated oils — Processed foods, shelf-stable baked goods
 * Interesterified fats — Margarine, shortening, baked goods
 
-Others:
-* Ghee
-* Tallow
-* Lard
+## Food sources
 
 * Chicken (without skin):
   1. Wing (2.1g)
@@ -41,5 +38,6 @@ Others:
 ## Biology
 
 * Palmitic acid, myristic acid and lauric acid raise your cholesterol[^only3]
+* Lauric acid —  a large portion of its effect is on HDL rather than LDL[^only3]
 
 [^only3]: [Only 3 saturated fats raise your cholesterol](https://www.empirical.health/blog/saturated-fats-cholesterol-heart-disease/)
