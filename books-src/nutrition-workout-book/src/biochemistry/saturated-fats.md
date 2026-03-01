@@ -11,6 +11,7 @@ Saturated fats should come less than 10% of daily calorie intake.
 Found typically in animal products and tropical plant oils
 
 * **Palmitic acid** — meat, dairy, palm oil, butter, cocoa butter
+* Myristic acid — nutmeg, palm oil, coconut oil, and dairy fat
 * **Stearic acid** — meat, dairy, cocoa butter
 
   The body converts it into oleic acid
@@ -39,4 +40,6 @@ Others:
 
 ## Biology
 
-Increase LDL
+* Palmitic acid, myristic acid and lauric acid raise your cholesterol[^only3]
+
+[^only3]: [Only 3 saturated fats raise your cholesterol](https://www.empirical.health/blog/saturated-fats-cholesterol-heart-disease/)
