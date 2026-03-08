@@ -181,6 +181,26 @@
                     <main>
                         <h1 id="idor"><a class="header" href="#idor">IDOR</a></h1>
 <p>Insecure direct object referencing</p>
+<p>This happens when an application</p>
+<ul>
+<li>exposes internal implementation objects (eg. application ID, customer ID), AND</li>
+<li>does not verify if the request is <strong>authorised to access</strong></li>
+</ul>
+<div id="admonition-what-about-uuids" class="admonition admonish-question">
+<div class="admonition-title">
+<p>What about UUIDs?</p>
+<p><a class="admonition-anchor-link" href="#admonition-what-about-uuids"></a></p>
+</div>
+<div>
+<p>UUIDs provide <em>obscurity</em>, not security.</p>
+<p>An attacker can still get a valid UUID via other means like</p>
+<ul>
+<li>enumeration</li>
+<li>leakage</li>
+<li>other users sharing them</li>
+</ul>
+</div>
+</div>
 <p>Example:</p>
 <p>https://insecure-website.com/customer_account?customer_number=132355</p>
 
