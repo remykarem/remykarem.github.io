@@ -178,10 +178,22 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="concepts"><a class="header" href="#concepts">Concepts</a></h1>
-<h2 id="origin--site"><a class="header" href="#origin--site">Origin / site</a></h2>
-<p>Origin = scheme + host + port</p>
-<p>Origin = protocol + host/domain + port ≈ url</p>
+<h2 id="origin"><a class="header" href="#origin">Origin</a></h2>
+<p>scheme + host + port</p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Age</th><th>Same/diff</th></tr></thead><tbody>
+<tr><td>https://a.example.com</td><td>https://a.example.com</td><td>✅</td></tr>
+<tr><td>https://a.example.com</td><td>https://b.example.com</td><td>Diff</td></tr>
+<tr><td>https://a.example.com:8080</td><td>https://a.example.com:443</td><td>❌</td></tr>
+</tbody></table>
+</div>
+<h2 id="site"><a class="header" href="#site">Site</a></h2>
 <p>Site = scheme + registrable domain</p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Age</th><th>Same/diff</th></tr></thead><tbody>
+<tr><td>https://a.example.com</td><td>https://a.example.com</td><td>✅</td></tr>
+<tr><td>https://a.example.com</td><td>https://b.example.com</td><td>✅</td></tr>
+<tr><td>https://a.example.com:8080</td><td>https://a.example.com:443</td><td>✅</td></tr>
+</tbody></table>
+</div>
 <h2 id="state"><a class="header" href="#state">State</a></h2>
 <ul>
 <li>Stateless</li>
