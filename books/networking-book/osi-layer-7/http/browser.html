@@ -227,7 +227,7 @@
 </div>
 </li>
 <li>
-<p><strong>XHR</strong> — asynchronous; modern</p>
+<p><strong>XHR</strong> (XMLHttpRequest) — asynchronous; modern</p>
 <div id="admonition-note-1" class="admonition admonish-note">
 <div class="admonition-title">
 <p>Note</p>
@@ -237,9 +237,64 @@
 <p>The HTTP Content-Type header is usually <code>application/json</code>.</p>
 </div>
 </div>
+<pre><code class="language-js"></code></pre>
 </li>
+</ul>
+<p>let req = new XMLHttpRequest();
+req.open('GET', '/my/url', true);
+req.send();</p>
+<pre><code>
+```js
+var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
+    // Success!
+    var data = JSON.parse(this.response);
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+</code></pre>
+<pre><code class="language-js">var request = new XMLHttpRequest();
+request.open('POST', '/my/url', true);
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+request.send(data);
+</code></pre>
+<pre><code class="language-js">var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
+    // Success!
+    var resp = this.response;
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+</code></pre>
+<ul>
 <li>
 <p><strong>Fetch API</strong> — asynchronous; more modern</p>
+<pre><code class="language-js">fetch(url)
+  .then(resp =&gt; resp.json())
+  .then(data =&gt; console.log(data)); // you can assign here
+</code></pre>
 <div id="admonition-note-2" class="admonition admonish-note">
 <div class="admonition-title">
 <p>Note</p>
@@ -280,73 +335,7 @@ WWW-Authenticate: Basic realm=&quot;Restricted&quot;
 Content-Length: 0
 </code></pre>
 <p>it will display a modal prompting for username and password.</p>
-<h1 id="xmlhttprequest"><a class="header" href="#xmlhttprequest">XMLHttpRequest</a></h1>
-<ul>
-<li><code>open(method: string, url: string, async: boolean, ...)</code></li>
-<li><code>send()</code></li>
-<li>—</li>
-<li><code>onreadystatechange</code></li>
-<li><code>readyState</code></li>
-<li>—</li>
-<li><code>responseText</code></li>
-<li><code>responseXML</code></li>
-<li><code>status</code></li>
-<li><code>statusText</code></li>
-</ul>
-<pre><code class="language-jsx">let req = new XMLHttpRequest();
-req.open('GET', '/my/url', true);
-req.send();
-</code></pre>
-<pre><code class="language-jsx">var request = new XMLHttpRequest();
-request.open('GET', '/my/url', true);
-
-request.onload = function() {
-  if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
-    // Success!
-    var data = JSON.parse(this.response);
-  } else {
-    // We reached our target server, but it returned an error
-
-  }
-};
-
-request.onerror = function() {
-  // There was a connection error of some sort
-};
-
-request.send();
-</code></pre>
-<pre><code class="language-jsx">var request = new XMLHttpRequest();
-request.open('POST', '/my/url', true);
-request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-request.send(data);
-</code></pre>
-<pre><code class="language-jsx">var request = new XMLHttpRequest();
-request.open('GET', '/my/url', true);
-
-request.onload = function() {
-  if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
-    // Success!
-    var resp = this.response;
-  } else {
-    // We reached our target server, but it returned an error
-
-  }
-};
-
-request.onerror = function() {
-  // There was a connection error of some sort
-};
-
-request.send();
-</code></pre>
-<h1 id="fetch-api"><a class="header" href="#fetch-api">Fetch API</a></h1>
-<pre><code class="language-jsx">fetch(url)
-	.then(resp =&gt; resp.json())
-	.then(data =&gt; console.log(data)); // you can assign here
-
-</code></pre>
-<h1 id="dom-api"><a class="header" href="#dom-api">DOM API</a></h1>
+<h2 id="dom-api"><a class="header" href="#dom-api">DOM API</a></h2>
 <p>Document Object Model</p>
 <p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7d722410-6eb6-4685-98d9-99425c509bc2/Untitled.png" alt="https://gabrieltanner.org/blog/javascript-dom-introduction" /></p>
 <p>https://gabrieltanner.org/blog/javascript-dom-introduction</p>
@@ -405,16 +394,15 @@ document.body.insertBefore(div, currentDiv);
 <p><code>removeEventListener</code></p>
 </li>
 </ul>
-<h1 id="indexeddb"><a class="header" href="#indexeddb">IndexedDB</a></h1>
-<h1 id="web-speech-api"><a class="header" href="#web-speech-api">Web Speech API</a></h1>
+<h2 id="indexeddb"><a class="header" href="#indexeddb">IndexedDB</a></h2>
+<h2 id="web-speech-api"><a class="header" href="#web-speech-api">Web Speech API</a></h2>
 <p>https://www.google.com/intl/en/chrome/demos/speech.html</p>
-<h1 id="httpswwwmoesifcomblogtechnicalcorsauthoritative-guide-to-cors-cross-origin-resource-sharing-for-rest-apis"><a class="header" href="#httpswwwmoesifcomblogtechnicalcorsauthoritative-guide-to-cors-cross-origin-resource-sharing-for-rest-apis">https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/</a></h1>
+<h2 id="cors"><a class="header" href="#cors">CORS</a></h2>
+<p>https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/</p>
 <ul>
 <li>SOP &amp; CORS only applies to browser!</li>
 </ul>
-<h1 id="origin"><a class="header" href="#origin">Origin</a></h1>
-<p>Origin = protocol + host/domain + port ≈ url</p>
-<h1 id="same-origin-policy"><a class="header" href="#same-origin-policy">Same-origin policy</a></h1>
+<h2 id="same-origin-policy"><a class="header" href="#same-origin-policy">Same-origin policy</a></h2>
 <p>A <strong>browser</strong> security policy that restricts on-page scripts from accessing or posting data to resources (&quot;resource sharing&quot;) from a different origin other than the current page's origin (&quot;cross-origin&quot;).</p>
 <aside>
 💡 Note that resources like third-party libraries and images etc. are fine because **they are linked from the document source**.
@@ -477,7 +465,7 @@ hasNoExtraHeaders(yes@yes; simple)-&gt;noop-&gt;simpleRequest2
 </code></pre>
 </li>
 </ul>
-<h1 id="cors"><a class="header" href="#cors">CORS</a></h1>
+<h2 id="cors-1"><a class="header" href="#cors-1">CORS</a></h2>
 <p>Cross-origin resource sharing</p>
 <p>For a successful cross-origin resource sharing,</p>
 <ol>
