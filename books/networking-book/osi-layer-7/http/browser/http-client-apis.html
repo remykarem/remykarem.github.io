@@ -178,6 +178,106 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="http-client-apis"><a class="header" href="#http-client-apis">HTTP client APIs</a></h1>
+<p>There are 2 types: synchronous (requires the user to wait and the whole page to be reloaded to see the result of submission) and asynchronous (uses JavaScript; also called AJAX)</p>
+<p>There are 3 APIS:</p>
+<ul>
+<li>Form submission</li>
+<li>XHR</li>
+<li>Fetch</li>
+</ul>
+<h2 id="form-submission"><a class="header" href="#form-submission">Form submission</a></h2>
+<p>synchronous; traditional</p>
+<div id="admonition-note" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>The HTTP Content-Type header is usually <code>application/x-www-form-urlencoded</code> or <code>application/form-data</code>.</p>
+</div>
+</div>
+<h2 id="xhr"><a class="header" href="#xhr">XHR</a></h2>
+<p>(XMLHttpRequest) — asynchronous; modern</p>
+<div id="admonition-note-1" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note-1"></a></p>
+</div>
+<div>
+<p>The HTTP Content-Type header is usually <code>application/json</code>.</p>
+</div>
+</div>
+<pre><code class="language-js">let req = new XMLHttpRequest();
+req.open('GET', '/my/url', true);
+req.send();
+</code></pre>
+<pre><code class="language-js">var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
+    // Success!
+    var data = JSON.parse(this.response);
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+</code></pre>
+<pre><code class="language-js">var request = new XMLHttpRequest();
+request.open('POST', '/my/url', true);
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+request.send(data);
+</code></pre>
+<pre><code class="language-js">var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (this.status &gt;= 200 &amp;&amp; this.status &lt; 400) {
+    // Success!
+    var resp = this.response;
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+</code></pre>
+<h2 id="fetch-api"><a class="header" href="#fetch-api">Fetch API</a></h2>
+<p>asynchronous; more modern</p>
+<pre><code class="language-js">fetch(url)
+	.then(resp =&gt; resp.json())
+	.then(data =&gt; console.log(data)); // you can assign here
+</code></pre>
+<div id="admonition-note-2" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note-2"></a></p>
+</div>
+<div>
+<p>The HTTP Content-Type header is usually <code>application/json</code>.</p>
+</div>
+</div>
+<div id="admonition-tip" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="#admonition-tip"></a></p>
+</div>
+<div>
+<p>Fetch API is usually categorised under &quot;XHR&quot; in the network tab. Misnomer.</p>
+</div>
+</div>
 
                     </main>
 
