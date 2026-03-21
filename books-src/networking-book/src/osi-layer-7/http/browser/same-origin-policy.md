@@ -1,8 +1,9 @@
 # Same-origin policy
 
 A browser security policy where
-* cross-origin reads are typically disallowed
-* cross-origin writes are typically allowed
+* ❌ cross-origin reads are typically disallowed
+* ✅ cross-origin embeddings are typically allowed
+* ✅ cross-origin writes are typically allowed
 
   ~~~admonish warning
   This is exploitable!
