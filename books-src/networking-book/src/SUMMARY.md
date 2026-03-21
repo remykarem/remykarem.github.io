@@ -72,6 +72,7 @@
   - [Workflow]()
   - [Message format](./osi-layer-7/http/message-format.md)
   - [Features](./osi-layer-7/http/features.md)
+  - [Concepts](./osi-layer-7/http/concepts.md)
   - [HTTP tunnel](./osi-layer-7/http/tunnel.md)
   - [Browser](./osi-layer-7/http/browser.md)
   - [HTTPS](./osi-layer-7/https.md)
