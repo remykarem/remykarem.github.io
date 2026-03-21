@@ -75,6 +75,8 @@
   - [Concepts](./osi-layer-7/http/concepts.md)
   - [HTTP tunnel](./osi-layer-7/http/tunnel.md)
   - [Browser](./osi-layer-7/http/browser.md)
+    - [HTTP client APIs](./osi-layer-7/http/browser/http-client-apis.md)
+    - [Same-origin policy](./osi-layer-7/http/browser/same-origin-policy.md)
   - [HTTPS](./osi-layer-7/https.md)
 - [SSH](./osi-layer-7/ssh/index.md)
   - [Features](./osi-layer-7/ssh/features.md)
