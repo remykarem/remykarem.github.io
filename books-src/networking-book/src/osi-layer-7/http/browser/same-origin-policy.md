@@ -1,10 +1,12 @@
 # Same-origin policy
 
-A browser security policy
+A browser security policy where
+* cross-origin reads are typically disallowed
+* cross-origin writes are typically allowed
 
-This policy restricts
-* **cross-origin** (from a different origin other than the current page's origin)
-* **resource sharing** (on-page scripts from accessing or posting data to resources)
+  ~~~admonish warning
+  This is exploitable!
+  ~~~
 
 
 ~~~admonish note~~~
