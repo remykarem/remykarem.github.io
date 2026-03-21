@@ -1,9 +1,12 @@
 # Cookies
 
-- For any HTTP calls to that domain, the browser automatically attaches any cookies bounded to a domain
-- HTTP is stateless, but some applications want to have state, so they use cookies (because cookies ‘persist between calls’ ish)
+HTTP is stateless, but some applications want to have state, so they use cookies (because cookies ‘persist between calls’ ish)
 
-Browser automatically sends "global" cookies. 
+For any HTTP calls to that domain, the browser automatically attaches any cookies bounded to a domain
+
+~~~admonish warning
+This is exploitable.
+~~~
 
 Cookies are unique string identifiers that can be stored on the client’s browser to keep track of client’s state (for the purpose of logging in, serving customised content). They are set by the server through HTTP headers. After the cookie is set, it’s sent along with subsequent HTTP requests to the same server to allow the server to know who is contacting it.
 
