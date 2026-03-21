@@ -79,6 +79,7 @@
     - [Same-origin policy](./osi-layer-7/http/browser/same-origin-policy.md)
     - [CORS](./osi-layer-7/http/browser/cors.md)
     - [Cookies](./osi-layer-7/http/browser/cookies.md)
+    - [Authentication](./osi-layer-7/http/browser/authentication.md)
   - [HTTPS](./osi-layer-7/https.md)
 - [SSH](./osi-layer-7/ssh/index.md)
   - [Features](./osi-layer-7/ssh/features.md)
