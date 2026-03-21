@@ -4,6 +4,8 @@ Cross-Site Request Forgery
 
 CSRF exploits the fact that a **cookie**, saved in the **browser** (read: not the browser tab), is **automatically** sent together with subsequent requests to the server.
 
+The cookie usually contains user's authentication. 
+
 ```admonish note
 CSRF attacks commonly occur within the context of a **web browser**, since it automatically handles cookies.
 
