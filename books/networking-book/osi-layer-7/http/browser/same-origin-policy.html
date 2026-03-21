@@ -178,10 +178,33 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="same-origin-policy"><a class="header" href="#same-origin-policy">Same-origin policy</a></h1>
-<p>A <strong>browser</strong> security policy that restricts on-page scripts from accessing or posting data to resources (&quot;resource sharing&quot;) from a different origin other than the current page's origin (&quot;cross-origin&quot;).</p>
-<aside>
-💡 Note that resources like third-party libraries and images etc. are fine because **they are linked from the document source**.
-</aside>
+<p>A browser security policy</p>
+<p>This policy restricts</p>
+<ul>
+<li><strong>cross-origin</strong> (from a different origin other than the current page's origin)</li>
+<li><strong>resource sharing</strong> (on-page scripts from accessing or posting data to resources)</li>
+</ul>
+<div id="admonition-error-rendering-admonishment" class="admonition admonish-bug">
+<div class="admonition-title">
+<p>Error rendering admonishment</p>
+<p><a class="admonition-anchor-link" href="#admonition-error-rendering-admonishment"></a></p>
+</div>
+<div>
+<p>Failed with:</p>
+<pre><code class="language-log">TOML parsing error: TOML parse error at line 1, column 5
+  |
+1 | note~~~
+  |     ^
+expected `.`, `=`
+
+</code></pre>
+<p>Original markdown input:</p>
+<pre><code class="language-markdown">~~~admonish note~~~
+Resources like third-party libraries and images etc. are fine because **they are linked from the document source**.
+~~~
+</code></pre>
+</div>
+</div>
 <p>One method of accessing cross-origin resources is CORS.</p>
 <p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/267d8765-6379-44fc-b800-33ef4268fcc9/Untitled.png" alt="Untitled" /></p>
 <ul>

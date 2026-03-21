@@ -1,11 +1,15 @@
 # Same-origin policy
 
-A **browser** security policy that restricts on-page scripts from accessing or posting data to resources ("resource sharing") from a different origin other than the current page's origin ("cross-origin").
+A browser security policy
 
-<aside>
-💡 Note that resources like third-party libraries and images etc. are fine because **they are linked from the document source**.
+This policy restricts
+* **cross-origin** (from a different origin other than the current page's origin)
+* **resource sharing** (on-page scripts from accessing or posting data to resources)
 
-</aside>
+
+~~~admonish note~~~
+Resources like third-party libraries and images etc. are fine because **they are linked from the document source**.
+~~~
 
 One method of accessing cross-origin resources is CORS.
 
