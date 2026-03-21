@@ -6,6 +6,9 @@ CSRF exploits the fact that a **cookie**, saved in the **browser** (read: not th
 
 The cookie usually contains user's authentication. 
 
+[OWASP: CSRF](https://owasp.org/www-community/attacks/csrf)
+[OWASP Cheatsheet: CSRF](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+
 ```admonish note
 CSRF attacks commonly occur within the context of a **web browser**, since it automatically handles cookies.
 
