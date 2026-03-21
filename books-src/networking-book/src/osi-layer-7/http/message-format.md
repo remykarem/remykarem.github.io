@@ -23,7 +23,22 @@ GET /posts HTTP/1.1\r\nHost: example.com\r\n\r\n
   - Identify allowed request methods (eg. GET etc.). Response contains an `Allow` header.
   - Preflighted requests in CORS
  
-## Common Content-Type and how they look like in the request/response
+## HTTP Request headers
+
+| Header         | What it means                 | Example               | Remarks |
+| -------------- | ----------------------------- | --------------------- |--|
+| Host           | Domain                        | `example.com`         | This header may be used to validate the request (eg to prevent bypassing DNS routing) |
+| User-Agent     | Name of HTTP client           | |
+| Authorization  | Field for authentication etc. ||
+| Content-Type   | MIME type of body             | `application/json`    ||
+| Content-Length | Length of body in bytes       | `34`                  ||
+| Referer        | ???                           | `http://example.com`  ||
+| Accept         | MIME type for the response    | `image/png`           ||
+| Connection     | Keep TCP connection open      | `close`, `keep-alive` ||
+| Cookie         | -                             | `user=raimi`          ||
+
+~~~admonish example title="Content-Type"
+## Common content types
 
 * `application/json`
 
@@ -85,19 +100,7 @@ GET /posts HTTP/1.1\r\nHost: example.com\r\n\r\n
   <binary data>
   ```
 
-## HTTP Request headers
-
-| Header         | What it means                 | Example               | Remarks |
-| -------------- | ----------------------------- | --------------------- |--|
-| Host           | Domain                        | `example.com`         | This header may be used to validate the request (eg to prevent bypassing DNS routing) |
-| User-Agent     | Name of HTTP client           | |
-| Authorization  | Field for authentication etc. ||
-| Content-Type   | MIME type of body             | `application/json`    ||
-| Content-Length | Length of body in bytes       | `34`                  ||
-| Referer        | ???                           | `http://example.com`  ||
-| Accept         | MIME type for the response    | `image/png`           ||
-| Connection     | Keep TCP connection open      | `close`, `keep-alive` ||
-| Cookie         | -                             | `user=raimi`          ||
+~~~
 
 ~~~admonish example title="User-Agent"
 
