@@ -16,6 +16,9 @@ However, it is not restricted to browsers; any client that performs automatic co
 ```
 
 ```admonish example title="Example attack 1"
+**Goal**
+
+As an attacker, the goal is to trigger a _state change_.
 
 **What you know**
 
