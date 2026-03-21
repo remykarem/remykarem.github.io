@@ -14,20 +14,6 @@ The browser is an HTTP client.
 MIME-sniffing happens (for some web browsers) to determine the content of an asset. Specific to IE and Chrome. With clever naming, a resource can be determined to be an HTML document which has malicious script.
 ~~~
 
-
-## Basic authentication
-
-By default, when the browser receives
-
-```text
-HTTP/1.1 401 Unauthorized
-WWW-Authenticate: Basic realm="Restricted"
-Content-Length: 0
-```
-
-it will display a modal prompting for username and password.
-
-
 ## DOM API
 
 Document Object Model
