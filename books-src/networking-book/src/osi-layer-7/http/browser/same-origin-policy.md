@@ -3,7 +3,7 @@
 A browser security policy where
 * ❌ cross-origin reads are typically disallowed
 * ✅ cross-origin embeddings are typically allowed:
-  * `<script src="..."></script>"
+  * `<script src="..."></script>`
       ~~~admonish warning
       This is exploitable!
       ~~~
