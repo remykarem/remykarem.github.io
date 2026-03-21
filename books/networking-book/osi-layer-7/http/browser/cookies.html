@@ -178,11 +178,17 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="cookies"><a class="header" href="#cookies">Cookies</a></h1>
-<ul>
-<li>For any HTTP calls to that domain, the browser automatically attaches any cookies bounded to a domain</li>
-<li>HTTP is stateless, but some applications want to have state, so they use cookies (because cookies ‘persist between calls’ ish)</li>
-</ul>
-<p>Browser automatically sends &quot;global&quot; cookies. </p>
+<p>HTTP is stateless, but some applications want to have state, so they use cookies (because cookies ‘persist between calls’ ish)</p>
+<p>For any HTTP calls to that domain, the browser automatically attaches any cookies bounded to a domain</p>
+<div id="admonition-warning" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
+</div>
+<div>
+<p>This is exploitable.</p>
+</div>
+</div>
 <p>Cookies are unique string identifiers that can be stored on the client’s browser to keep track of client’s state (for the purpose of logging in, serving customised content). They are set by the server through HTTP headers. After the cookie is set, it’s sent along with subsequent HTTP requests to the same server to allow the server to know who is contacting it.</p>
 <p>Things involved in the process of setting and using cookies: HTTP request, HTTP response, cookie file on the client’s browser and the database of cookie-user values on the server</p>
 <p>Cookie file contains:</p>
