@@ -184,14 +184,32 @@
 <p>❌ cross-origin reads are typically disallowed</p>
 </li>
 <li>
-<p>✅ cross-origin embeddings are typically allowed</p>
+<p>✅ cross-origin embeddings are typically allowed:</p>
+<ul>
+<li>
+<p>`<script src="..."></script>&quot;</p>
+<div id="admonition-warning" class="admonition admonish-warning">
+  <div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
+</div>
+  <div>
+<pre><code>    This is exploitable!
+</code></pre>
+</div>
+  </div>
+</li>
+<li>
+<p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;…&quot;&gt;</code></p>
+</li>
+</ul>
 </li>
 <li>
 <p>✅ cross-origin writes are typically allowed</p>
-<div id="admonition-warning" class="admonition admonish-warning">
+<div id="admonition-warning-1" class="admonition admonish-warning">
 <div class="admonition-title">
 <p>Warning</p>
-<p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
+<p><a class="admonition-anchor-link" href="#admonition-warning-1"></a></p>
 </div>
 <div>
 <p>This is exploitable!</p>
@@ -208,6 +226,7 @@
 <p>Resources like third-party libraries and images etc. are fine because <strong>they are linked from the document source</strong>.</p>
 </div>
 </div>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy">Mozilla</a></p>
 <p>One method of accessing cross-origin resources is CORS.</p>
 <p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/267d8765-6379-44fc-b800-33ef4268fcc9/Untitled.png" alt="Untitled" /></p>
 <ul>
