@@ -29,12 +29,75 @@ There are 3 APIS:
   The HTTP Content-Type header is usually `application/x-www-form-urlencoded` or `application/form-data`. 
   ~~~
   
-* **XHR** — asynchronous; modern
+* **XHR** (XMLHttpRequest) — asynchronous; modern
 
   ~~~admonish note
   The HTTP Content-Type header is usually `application/json`. 
   ~~~
+
+  ```js
+let req = new XMLHttpRequest();
+req.open('GET', '/my/url', true);
+req.send();
+```
+
+```js
+var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (this.status >= 200 && this.status < 400) {
+    // Success!
+    var data = JSON.parse(this.response);
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+```
+
+```js
+var request = new XMLHttpRequest();
+request.open('POST', '/my/url', true);
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+request.send(data);
+```
+
+```js
+var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (this.status >= 200 && this.status < 400) {
+    // Success!
+    var resp = this.response;
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+```
+
+
 * **Fetch API** — asynchronous; more modern
+
+  ```js
+  fetch(url)
+	.then(resp => resp.json())
+	.then(data => console.log(data)); // you can assign here
+  ```
 
   ~~~admonish note
   The HTTP Content-Type header is usually `application/json`. 
@@ -76,84 +139,9 @@ Content-Length: 0
 
 it will display a modal prompting for username and password.
 
-# XMLHttpRequest
 
-- `open(method: string, url: string, async: boolean, ...)`
-- `send()`
-- —
-- `onreadystatechange`
-- `readyState`
-- —
-- `responseText`
-- `responseXML`
-- `status`
-- `statusText`
 
-```jsx
-let req = new XMLHttpRequest();
-req.open('GET', '/my/url', true);
-req.send();
-```
-
-```jsx
-var request = new XMLHttpRequest();
-request.open('GET', '/my/url', true);
-
-request.onload = function() {
-  if (this.status >= 200 && this.status < 400) {
-    // Success!
-    var data = JSON.parse(this.response);
-  } else {
-    // We reached our target server, but it returned an error
-
-  }
-};
-
-request.onerror = function() {
-  // There was a connection error of some sort
-};
-
-request.send();
-```
-
-```jsx
-var request = new XMLHttpRequest();
-request.open('POST', '/my/url', true);
-request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-request.send(data);
-```
-
-```jsx
-var request = new XMLHttpRequest();
-request.open('GET', '/my/url', true);
-
-request.onload = function() {
-  if (this.status >= 200 && this.status < 400) {
-    // Success!
-    var resp = this.response;
-  } else {
-    // We reached our target server, but it returned an error
-
-  }
-};
-
-request.onerror = function() {
-  // There was a connection error of some sort
-};
-
-request.send();
-```
-
-# Fetch API
-
-```jsx
-fetch(url)
-	.then(resp => resp.json())
-	.then(data => console.log(data)); // you can assign here
-
-```
-
-# DOM API
+## DOM API
 
 Document Object Model
 
@@ -219,21 +207,19 @@ document.body.insertBefore(div, currentDiv);
   - dblclick
 - `removeEventListener`
 
-# IndexedDB
+## IndexedDB
 
-# Web Speech API
+## Web Speech API
 
 https://www.google.com/intl/en/chrome/demos/speech.html
 
-# https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/
+## CORS
+
+https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/
 
 - SOP & CORS only applies to browser!
 
-# Origin
-
-Origin = protocol + host/domain + port ≈ url
-
-# Same-origin policy
+## Same-origin policy
 
 A **browser** security policy that restricts on-page scripts from accessing or posting data to resources ("resource sharing") from a different origin other than the current page's origin ("cross-origin").
 
@@ -302,7 +288,7 @@ One method of accessing cross-origin resources is CORS.
     ```
 
 
-# CORS
+## CORS
 
 Cross-origin resource sharing
 
