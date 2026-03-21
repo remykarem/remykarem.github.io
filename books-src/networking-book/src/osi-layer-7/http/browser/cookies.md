@@ -6,19 +6,23 @@ HTTP is stateless, but some applications want to have state, so they use cookies
 
 Cookies are unique string identifiers that can be stored on the client’s browser to keep track of client’s state (for the purpose of logging in, serving customised content). 
 
+**Cookie data**
+
+* custom key and custom value
+* `Expiry`
+* `SameSite` — whether cookie can be sent with cross-origin requests
+* etc
+
 **Setting cookies**
 
 They are set by the server through HTTP headers. 
 
+~~~admonish example 
 ```
-Set cookie: session=44ecb091; path=/servlets
+Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT;
+Secure; HttpOnly; Path=/docs
 ```
-
-**Cookie data**
-
-- Website’s domain
-- String value of cookie
-- Date that cookie expires
+~~~
 
 **Request**
 

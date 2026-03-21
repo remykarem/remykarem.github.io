@@ -181,16 +181,26 @@
 <p><strong>Background</strong></p>
 <p>HTTP is stateless, but some applications want to have state, so they use cookies (because cookies ‘persist between calls’ ish)</p>
 <p>Cookies are unique string identifiers that can be stored on the client’s browser to keep track of client’s state (for the purpose of logging in, serving customised content). </p>
-<p><strong>Setting cookies</strong></p>
-<p>They are set by the server through HTTP headers. </p>
-<pre><code>Set cookie: session=44ecb091; path=/servlets
-</code></pre>
 <p><strong>Cookie data</strong></p>
 <ul>
-<li>Website’s domain</li>
-<li>String value of cookie</li>
-<li>Date that cookie expires</li>
+<li>custom key and custom value</li>
+<li><code>Expiry</code></li>
+<li><code>SameSite</code> — whether cookie can be sent with cross-origin requests</li>
+<li>etc</li>
 </ul>
+<p><strong>Setting cookies</strong></p>
+<p>They are set by the server through HTTP headers. </p>
+<div id="admonition-example" class="admonition admonish-example">
+<div class="admonition-title">
+<p>Example</p>
+<p><a class="admonition-anchor-link" href="#admonition-example"></a></p>
+</div>
+<div>
+<pre><code>Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT;
+Secure; HttpOnly; Path=/docs
+</code></pre>
+</div>
+</div>
 <p><strong>Request</strong></p>
 <p>For any HTTP calls to that domain, the browser automatically attaches any cookies bounded to a domain</p>
 <div id="admonition-warning" class="admonition admonish-warning">
