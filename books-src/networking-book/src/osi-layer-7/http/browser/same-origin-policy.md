@@ -10,7 +10,7 @@ A browser security policy where
   ~~~
 
 
-~~~admonish note~~~
+~~~admonish note
 Resources like third-party libraries and images etc. are fine because **they are linked from the document source**.
 ~~~
 
