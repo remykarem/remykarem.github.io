@@ -1,1 +1,5 @@
-# Anti-CSRF token
+# CSRF token
+
+* Synchronizer token
+  * Session-based
+  * Request-based
