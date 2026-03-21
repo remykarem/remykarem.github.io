@@ -228,63 +228,6 @@
 </div>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy">Mozilla</a></p>
 <p>One method of accessing cross-origin resources is CORS.</p>
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/267d8765-6379-44fc-b800-33ef4268fcc9/Untitled.png" alt="Untitled" /></p>
-<ul>
-<li>
-<p>Code</p>
-<pre><code class="language-bash">st=&gt;start: Start
-
-simpleRequest0=&gt;operation: GET
-/endpoint
-simpleRequest=&gt;operation: GET
-/endpoint
-simpleRequest2=&gt;operation: GET
-/endpoint
-preflightedRequest=&gt;operation: OPTIONS
-/endpoint
-corsReject=&gt;operation: CORS reject
-noop=&gt;operation: .
-
-sameOrigin=&gt;condition: Same origin?
-embedding=&gt;condition: Cross-origin 
-embedding?
-&lt;img&gt; &lt;video&gt;
-write=&gt;condition: Cross-origin 
-write?
-isSimpleVerb=&gt;condition: GET/POST/
-HEAD?
-isSimpleContentType=&gt;condition: application/
-   x-www-form-urlencoded
-multipart/form-data
-text/plain?
-hasNoExtraHeaders=&gt;condition: No extra headers?
-optionsOk=&gt;condition: Check response
-access-control-
-allow-[methods,
-origin,credentials]
-
-st-&gt;sameOrigin
-sameOrigin(yes)-&gt;simpleRequest0
-sameOrigin(no)-&gt;embedding
-embedding(yes)-&gt;simpleRequest
-embedding(no)-&gt;write
-write(yes)-&gt;isSimpleVerb
-write(no)-&gt;corsReject
-isSimpleVerb(yes)-&gt;isSimpleContentType
-isSimpleContentType(yes)-&gt;hasNoExtraHeaders
-
-isSimpleVerb(no@no; preflighted)-&gt;preflightedRequest
-isSimpleContentType(no@no; preflighted)-&gt;preflightedRequest
-hasNoExtraHeaders(no@no; preflighted)-&gt;preflightedRequest
-
-preflightedRequest-&gt;optionsOk
-optionsOk(yes@ok)-&gt;simpleRequest2
-optionsOk(no@violated)-&gt;corsReject
-
-hasNoExtraHeaders(yes@yes; simple)-&gt;noop-&gt;simpleRequest2
-</code></pre>
-</li>
-</ul>
 
                     </main>
 
