@@ -178,7 +178,8 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="same-origin-policy"><a class="header" href="#same-origin-policy">Same-origin policy</a></h1>
-<p>A browser security policy where</p>
+<p>A browser security policy</p>
+<p><strong>Network access</strong></p>
 <ul>
 <li>
 <p>❌ cross-origin reads are typically disallowed</p>
@@ -217,15 +218,11 @@
 </div>
 </li>
 </ul>
-<div id="admonition-note" class="admonition admonish-note">
-<div class="admonition-title">
-<p>Note</p>
-<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
-</div>
-<div>
-<p>Resources like third-party libraries and images etc. are fine because <strong>they are linked from the document source</strong>.</p>
-</div>
-</div>
+<p><strong>Data storage access</strong></p>
+<ul>
+<li>Cookie sent with request — depends on <code>SameSite</code> attribute</li>
+<li>IndexedDB — ❌ no cross-origin reads or writes from JavaScript</li>
+</ul>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy">Mozilla</a></p>
 <p>One method of accessing cross-origin resources is CORS.</p>
 
