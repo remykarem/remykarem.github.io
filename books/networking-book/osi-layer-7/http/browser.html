@@ -214,38 +214,39 @@
 <p>There are 2 types: synchronous (requires the user to wait and the whole page to be reloaded to see the result of submission) and asynchronous (uses JavaScript; also called AJAX)</p>
 <p>There are 3 APIS:</p>
 <ul>
-<li>
-<p><strong>Form submission</strong> — synchronous; traditional</p>
+<li>Form submission</li>
+<li>XHR</li>
+<li>Fetch</li>
+</ul>
+<h3 id="form-submission"><a class="header" href="#form-submission">Form submission</a></h3>
+<p>synchronous; traditional</p>
 <div id="admonition-note" class="admonition admonish-note">
-<div class="admonition-title">
+  <div class="admonition-title">
 <p>Note</p>
 <p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
 </div>
-<div>
-<p>The HTTP Content-Type header is usually <code>application/x-www-form-urlencoded</code> or <code>application/form-data</code>.</p>
+  <div>
+<pre><code>The HTTP Content-Type header is usually `application/x-www-form-urlencoded` or `application/form-data`.
+</code></pre>
 </div>
-</div>
-</li>
-<li>
-<p><strong>XHR</strong> (XMLHttpRequest) — asynchronous; modern</p>
+  </div>
+<h3 id="xhr"><a class="header" href="#xhr">XHR</a></h3>
+<p>(XMLHttpRequest) — asynchronous; modern</p>
 <div id="admonition-note-1" class="admonition admonish-note">
-<div class="admonition-title">
+  <div class="admonition-title">
 <p>Note</p>
 <p><a class="admonition-anchor-link" href="#admonition-note-1"></a></p>
 </div>
-<div>
-<p>The HTTP Content-Type header is usually <code>application/json</code>.</p>
+  <div>
+<pre><code>The HTTP Content-Type header is usually `application/json`.
+</code></pre>
 </div>
-</div>
-<pre><code class="language-js"></code></pre>
-</li>
-</ul>
-<p>let req = new XMLHttpRequest();
+  </div>
+<pre><code class="language-js">let req = new XMLHttpRequest();
 req.open('GET', '/my/url', true);
-req.send();</p>
-<pre><code>
-```js
-var request = new XMLHttpRequest();
+req.send();
+</code></pre>
+<pre><code class="language-js">var request = new XMLHttpRequest();
 request.open('GET', '/my/url', true);
 
 request.onload = function() {
@@ -288,33 +289,32 @@ request.onerror = function() {
 
 request.send();
 </code></pre>
-<ul>
-<li>
-<p><strong>Fetch API</strong> — asynchronous; more modern</p>
+<h3 id="fetch-api"><a class="header" href="#fetch-api">Fetch API</a></h3>
+<p>asynchronous; more modern</p>
 <pre><code class="language-js">fetch(url)
   .then(resp =&gt; resp.json())
   .then(data =&gt; console.log(data)); // you can assign here
 </code></pre>
 <div id="admonition-note-2" class="admonition admonish-note">
-<div class="admonition-title">
+  <div class="admonition-title">
 <p>Note</p>
 <p><a class="admonition-anchor-link" href="#admonition-note-2"></a></p>
 </div>
-<div>
-<p>The HTTP Content-Type header is usually <code>application/json</code>.</p>
+  <div>
+<pre><code>The HTTP Content-Type header is usually `application/json`.
+</code></pre>
 </div>
-</div>
+  </div>
 <div id="admonition-tip" class="admonition admonish-tip">
-<div class="admonition-title">
+  <div class="admonition-title">
 <p>Tip</p>
 <p><a class="admonition-anchor-link" href="#admonition-tip"></a></p>
 </div>
-<div>
-<p>Fetch API is usually categorised under &quot;XHR&quot; in the network tab. Misnomer.</p>
+  <div>
+<pre><code>Fetch API is usually categorised under &quot;XHR&quot; in the network tab. Misnomer.
+</code></pre>
 </div>
-</div>
-</li>
-</ul>
+  </div>
 <h2 id="cookies"><a class="header" href="#cookies">Cookies</a></h2>
 <p>Browser automatically sends &quot;global&quot; cookies. </p>
 <p>Cookies are unique string identifiers that can be stored on the client’s browser to keep track of client’s state (for the purpose of logging in, serving customised content). They are set by the server through HTTP headers. After the cookie is set, it’s sent along with subsequent HTTP requests to the same server to allow the server to know who is contacting it.</p>
