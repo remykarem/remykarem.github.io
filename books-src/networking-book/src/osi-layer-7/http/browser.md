@@ -30,19 +30,19 @@ There are 3 APIS:
 
 synchronous; traditional
 
-  ~~~admonish note
-  The HTTP Content-Type header is usually `application/x-www-form-urlencoded` or `application/form-data`. 
-  ~~~
+~~~admonish note
+The HTTP Content-Type header is usually `application/x-www-form-urlencoded` or `application/form-data`. 
+~~~
   
 ### XHR
 
 (XMLHttpRequest) — asynchronous; modern
 
-  ~~~admonish note
-  The HTTP Content-Type header is usually `application/json`. 
-  ~~~
+~~~admonish note
+The HTTP Content-Type header is usually `application/json`. 
+~~~
 
-  ```js
+```js
 let req = new XMLHttpRequest();
 req.open('GET', '/my/url', true);
 req.send();
@@ -102,19 +102,19 @@ request.send();
 
 asynchronous; more modern
 
-  ```js
-  fetch(url)
+```js
+fetch(url)
 	.then(resp => resp.json())
 	.then(data => console.log(data)); // you can assign here
-  ```
+```
 
-  ~~~admonish note
-  The HTTP Content-Type header is usually `application/json`. 
-  ~~~
+~~~admonish note
+The HTTP Content-Type header is usually `application/json`. 
+~~~
 
-  ~~~admonish tip
-  Fetch API is usually categorised under "XHR" in the network tab. Misnomer.
-  ~~~
+~~~admonish tip
+Fetch API is usually categorised under "XHR" in the network tab. Misnomer.
+~~~
 
 ## Cookies
 
@@ -147,7 +147,6 @@ Content-Length: 0
 ```
 
 it will display a modal prompting for username and password.
-
 
 
 ## DOM API
@@ -222,12 +221,6 @@ document.body.insertBefore(div, currentDiv);
 
 https://www.google.com/intl/en/chrome/demos/speech.html
 
-## CORS
-
-https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/
-
-- SOP & CORS only applies to browser!
-
 ## Same-origin policy
 
 A **browser** security policy that restricts on-page scripts from accessing or posting data to resources ("resource sharing") from a different origin other than the current page's origin ("cross-origin").
@@ -298,6 +291,11 @@ One method of accessing cross-origin resources is CORS.
 
 
 ## CORS
+
+https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/
+
+- SOP & CORS only applies to browser!
+
 
 Cross-origin resource sharing
 
