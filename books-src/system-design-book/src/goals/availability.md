@@ -1,5 +1,11 @@
 # Availability
 
+Availability is a measurable output of reliability and resilience.
+
+$$Availability = \frac{MTBF}{MTBF+MTTR}$$
+
+Reliability affects $MTBF$. Resilience affects $MTTR$.
+
 **AWS definition**
 
 Availability = percentage of uptime[^aws]
@@ -7,7 +13,6 @@ Availability = percentage of uptime[^aws]
 **Generic definition**
 
 The ability of a system to remain operational and accessible, even in the face of failures or other disruptions.
-~~~
 
 ~~~admonish note title="Definition 2"
 High availability is the ability of the system to stay online despite having failures at the infrastructural level in real-time.

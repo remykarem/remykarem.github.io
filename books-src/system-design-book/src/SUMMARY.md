@@ -45,17 +45,18 @@
 
 # Goals I
 
-- [Resilience]()
-- [Performance](./goals/performance.md)
-
-# Goals II
-
-- [Scalability](./goals/scalability.md)
-- [High availability](./goals/availability.md)
-- [Fault tolerance](./goals/fault-tolerance.md)
-  - [Recoverability](./goals/recovery.md)
-  - [Partition tolerance](./goals/partition-tolerance.md)
 - [Reliability](./goals/reliability.md)
+- [Resilience](./goals/resilience.md)
+  - [Scalability](./goals/scalability.md)
+  - [Fault tolerance](./goals/fault-tolerance.md)
+    - [Recoverability](./goals/recovery.md)
+    - [Partition tolerance](./goals/partition-tolerance.md)
+- [Performance](./goals/performance.md)
+- [Fairness](./goals/fairness.md)
+
+## Goals II
+
+- [High availability](./goals/availability.md)
 
 # Goals III
 
