@@ -284,6 +284,7 @@
 - [Storing money](./topics/storing-money.md)
 - [Stale write & lost update](./topics/stale-write-lost-update.md)
 - [Outbox pattern](./topics/outbox-pattern.md)
+- [Data classification boundary](./topics/data-classification-boundary.md)
 
 ---
 
