@@ -2,12 +2,18 @@
 
 Cross-Site Request Forgery
 
-CSRF exploits the fact that a **cookie**, saved in the **browser** (read: not the browser tab), is **automatically** sent together with subsequent requests to the server.
+CSRF exploits:
+1. that a user is already **authenticated** to a Site A,
 
-The cookie usually contains user's authentication. 
+    ~~~admonish note title="Vectors"
+    Some vectors include:
+    * cookies
+    * HTTP basic/digest authentication (credentials cached by browser)
+    ~~~
 
-[OWASP: CSRF](https://owasp.org/www-community/attacks/csrf)
-[OWASP Cheatsheet: CSRF](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+2. that the browser (read: not the browser tab) has **weak Same-Origin Policy** which allows Site B to make a call to Site A,
+3. that a **cookie** is **automatically** sent with calls made from any tab.
+
 
 ```admonish note
 CSRF attacks commonly occur within the context of a **web browser**, since it automatically handles cookies.
@@ -47,3 +53,9 @@ Congrats, you now have $10,000 in your account.
 
 * [Anti-CSRF token](../mitigation/anti-csrf-token.md)
 * [Same-Site cookie attribute](../mitigation/same-site-cookie-attribute.md)
+
+## Resources
+
+* [OWASP: CSRF](https://owasp.org/www-community/attacks/csrf)
+* [OWASP Cheatsheet: CSRF](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+* [Web Security 101: An Interactive Cross-Site Request Forgery (CSRF) Demo](https://victorzhou.com/blog/csrf/)

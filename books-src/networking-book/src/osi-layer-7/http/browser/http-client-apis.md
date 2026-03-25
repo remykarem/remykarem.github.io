@@ -3,18 +3,20 @@
 There are 2 types: synchronous (requires the user to wait and the whole page to be reloaded to see the result of submission) and asynchronous (uses JavaScript; also called AJAX)
 
 There are 3 APIS:
-* Form submission
+* Fetch API
 * XHR
-* Fetch
+* HTML Form submission
 
-## Form submission
+## Fetch API
 
-synchronous; traditional
+asynchronous; more modern
 
-~~~admonish note
-The HTTP Content-Type header is usually `application/x-www-form-urlencoded` or `application/form-data`. 
-~~~
-  
+```js
+fetch(url)
+	.then(resp => resp.json())
+	.then(data => console.log(data)); // you can assign here
+```
+
 ## XHR
 
 (XMLHttpRequest) — asynchronous; modern
@@ -78,16 +80,14 @@ request.onerror = function() {
 request.send();
 ```
 
+## HTML Form submission
 
-## Fetch API
+synchronous; traditional
 
-asynchronous; more modern
-
-```js
-fetch(url)
-	.then(resp => resp.json())
-	.then(data => console.log(data)); // you can assign here
-```
+~~~admonish note
+The HTTP Content-Type header is usually `application/x-www-form-urlencoded` or `application/form-data`. 
+~~~
+  
 
 ~~~admonish note
 The HTTP Content-Type header is usually `application/json`. 
