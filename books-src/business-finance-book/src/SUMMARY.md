@@ -72,10 +72,10 @@
 # Concepts
 
 - [Murabaha (cost-plus sale)](./concepts/murabaha.md)
+- [Mudharaba (profit-sharing)](./concepts/mudharaba.md)
 - [Leasing]()
 - [Ijara]()
 - [Bank loan]()
-- [Mudharaba (profit-sharing)]()
 
 ---
 
