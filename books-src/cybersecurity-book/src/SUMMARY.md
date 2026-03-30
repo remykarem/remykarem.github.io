@@ -129,5 +129,7 @@
 - [Mitigation](./mitigation.md)
     - [CSRF token](./mitigation/anti-csrf-token.md)
     - [Same-Site cookie attribute](./mitigation/same-site-cookie-attribute.md)
+    - [Capturing user intent](./mitigation/capturing-user-intent.md)
+    - [Signed request](./mitigation/signed-request.md)
     - [Rate-limiting]()
     - [Sanitise]()
