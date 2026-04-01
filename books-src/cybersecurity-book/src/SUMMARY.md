@@ -113,6 +113,7 @@
 - [Attacks]()
     - [Confused Deputy Problem](./attacks/confused-deputy-problem.md)
     - [CSRF](./attacks/csrf.md)
+    - [SSRF](./attacks/ssrf.md)
     - [IDOR](./attacks/idor.md)
     - [DoS / DDoS](./attacks/dos-ddos.md)
     - [Directory traversal](./attacks/directory-traversal.md)
