@@ -75,6 +75,10 @@
 - [Efficient-Markets Hypothesis](./economics/efficient-markets-hypothesis.md)
 - [Rentier income](./rentier-income.md)
 - [Wealth inequality](./wealth-inequality.md)
+- [Financialisation](./financialisation.md)
+- [Secondary market as an end](./secondary-market-as-an-end.md)
+- [Use value vs. exchange value](./use-value-vs-exchange-value.md)
+- [Personal finance goal: Wealth stability vs. wealth accumulation](./personal-finance-goal.md)
 
 ---
 
