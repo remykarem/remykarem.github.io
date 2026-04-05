@@ -69,6 +69,15 @@
 
 ---
 
+# Theories / concepts / analogies / ideas
+
+- [Beauty contest analogy](./beauty-contest-analogy.md)
+- [Efficient-Markets Hypothesis](./economics/efficient-markets-hypothesis.md)
+- [Rentier income](./rentier-income.md)
+- [Wealth inequality](./wealth-inequality.md)
+
+---
+
 # Concepts
 
 - [Murabaha (cost-plus sale)](./concepts/murabaha.md)
@@ -200,13 +209,15 @@
 
 --- 
 
-# Investment goals: Profiting from
+# Investment objectives
 
-- [Dividends]()
-- [Productive assets]()
-- [Value appreciation]()
-- [Market fluctuations]()
-- [Interest]()
+- [Productive returns]()
+  - [Dividends]()
+  - [Income]()
+  - [Interest]()
+- [Positional returns]()
+  - [Capital appreciation]()
+  - [Market fluctuations]()
 
 ---
 
