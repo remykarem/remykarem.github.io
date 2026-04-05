@@ -225,7 +225,6 @@
 
 ---
 
-
 # Trading activities
 
 - [Long-term investing]()
@@ -234,17 +233,6 @@
 - [Margin trading](./trading-strategy/margin-trading.md)
 - [Short selling](./trading-strategy/short-selling.md)
 - [Hedge]()
-
----
-
-# Trading goals
-
-- [Capital gains]()
-- [Dividend income]()
-- [Short-term profits]()
-- [Portfolio diversification]()
-- [Wealth accumulation]()
-- [Hedging]()
 
 ---
 
@@ -259,13 +247,6 @@
 - [Hedging]()
 
 ---
-
-# Benefits
-
-- [Liquidity]()
-- [Diversification]()
-- [Fees]()
-- [Transparency]()
 
 # Philosophy / goals
 
