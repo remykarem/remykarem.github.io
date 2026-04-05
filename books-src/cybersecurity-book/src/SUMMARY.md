@@ -10,6 +10,10 @@
 - [Compartmentalisation]()
 - [Reduce blast radius](./reduce-blast-radius.md)
 
+# Non-goals
+
+- [Obscurity](./obscurity.md)
+
 # Trust models
 
 - [Chain of Trust](./trust-models/chain-of-trust.md)
