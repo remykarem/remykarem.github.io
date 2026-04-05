@@ -134,22 +134,8 @@
 
 - [Goal](./finance/primary-market/goal.md)
 - [Activities]()
-  - [Offerings]()
-    - [IPO]()
-    - [Rights Offering]()
-    - [Sukuk offerings]()
-  - [Private Placement]()
-  - [Direct offerings]()
-  - [Private equity]()
-  - [Crowdfunding]()
-    - [Reward-based]()
-    - [Equity-based]()
-    - [Debt-based]()
-    - [Donation-based]()
-- [By securities]()
-  - [Stocks]()
-  - [Bonds]()
-  - [ETFs]()
+  - [Private market]()
+  - [Public market]()
 
 # Secondary market
 
