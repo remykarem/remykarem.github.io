@@ -79,6 +79,7 @@
 - [Secondary market as an end](./secondary-market-as-an-end.md)
 - [Use value vs. exchange value](./use-value-vs-exchange-value.md)
 - [Personal finance goal: Wealth stability vs. wealth accumulation](./personal-finance-goal.md)
+- [Georgist economics](./georgist-economics.md)
 
 ---
 
