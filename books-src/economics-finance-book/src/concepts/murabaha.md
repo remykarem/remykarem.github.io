@@ -2,6 +2,8 @@
 
 Cost-plus sale
 
+~asset-backed lending
+
 Suppose I want to buy a car at $20,000.
 1. The bank _buys_ the car from the dealer for $20,000.
 2. The bank _sells_ it to you for $23,000, disclosing the $3000 profit the bank will be making.
