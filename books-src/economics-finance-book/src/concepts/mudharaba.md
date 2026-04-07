@@ -1,5 +1,7 @@
 # Mudharaba
 
+aka venture capital
+
 Profit-sharing arrangement between
 * investor (provides capital)
 * entrepreneur (provides expertise)
