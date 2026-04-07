@@ -87,6 +87,7 @@
 
 - [Murabaha (cost-plus sale)](./concepts/murabaha.md)
 - [Mudharaba (profit-sharing)](./concepts/mudharaba.md)
+- [Musharaka](./concepts/musharaka.md)
 - [Leasing]()
 - [Ijara]()
 - [Bank loan]()
