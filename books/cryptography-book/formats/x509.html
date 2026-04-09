@@ -183,7 +183,12 @@
 <h1 id="x509"><a class="header" href="#x509">X.509</a></h1>
 <p><a href="https://www.itu.int/rec/T-REC-X.509/en">X.509</a>, <a href="https://datatracker.ietf.org/doc/html/rfc5280">RFC 5280</a></p>
 <p>ASN.1 schema</p>
-<p>Common filename extensions: <code>.crt</code>, <code>.cert</code>, <code>.pem</code></p>
+<p>Common filename extensions: <code>.crt</code>, <code>.cert</code>, <code>.pem</code>, <code>.ca-bundle</code></p>
+<p>Can be stored as:</p>
+<ul>
+<li>1 certs — PEM, DER</li>
+<li>Multiple certs — multiple PEM in 1 file, P7B, P7</li>
+</ul>
 <p>Standard format for public key certificates.</p>
 <p>The purpose of a certificate is to show that the holder of the certificate is &quot;verified&quot; by a CA.</p>
 <p>The information includes:</p>
