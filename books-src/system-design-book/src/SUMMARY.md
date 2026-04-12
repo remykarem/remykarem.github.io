@@ -209,6 +209,7 @@
 
 - [Static-Site Generator](./frontend/static-site-generator.md)
 - [Server-Side Rendering](./frontend/server-side-rendering.md)
+- [Server-rendered / multi-page application](./frontend/server-rendered.md)
 - [Single Page Application](./frontend/single-page-application.md)
 
 ---
