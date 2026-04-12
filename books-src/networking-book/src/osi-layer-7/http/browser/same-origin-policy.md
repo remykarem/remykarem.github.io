@@ -1,6 +1,6 @@
 # Same-origin policy
 
-A browser security policy
+A browser security policy, SOP
 
 **Network access**
 * ❌ cross-origin reads are typically disallowed
