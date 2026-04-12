@@ -205,6 +205,14 @@
 
 ---
 
+# Frontend
+
+- [Static-Site Generator](./frontend/static-site-generator.md)
+- [Server-Side Rendering](./frontend/server-side-rendering.md)
+- [Single Page Application](./frontend/single-page-application.md)
+
+---
+
 # ???
 
 - [Request-driven]()
