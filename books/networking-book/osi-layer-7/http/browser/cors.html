@@ -194,7 +194,13 @@
 <p>Proper request headers from the client</p>
 </li>
 </ol>
+<h2 id="preflight-request"><a class="header" href="#preflight-request">Preflight request</a></h2>
 <p>A CORS preflight request is a CORS request that checks to see if the CORS protocol is understood and server is aware using specific methods and headers. It is an <code>OPTIONS</code> request.</p>
+<p>Preflight request is <strong>only applicable for &quot;non-simple&quot; requests</strong> like </p>
+<ul>
+<li>PUT/DELETE/PATCH methods</li>
+<li>Headers with Authorization and Content-Type application/json</li>
+</ul>
 <p>Request:</p>
 <pre><code>Access-Control-Request-Method: **GET** (the actual request is a GET)
 Access-Control-Request-Headers: ...

@@ -17,7 +17,13 @@ For a successful cross-origin resource sharing,
 
 2. Proper request headers from the client
 
+## Preflight request
+
 A CORS preflight request is a CORS request that checks to see if the CORS protocol is understood and server is aware using specific methods and headers. It is an `OPTIONS` request.
+
+Preflight request is **only applicable for "non-simple" requests** like 
+* PUT/DELETE/PATCH methods
+* Headers with Authorization and Content-Type application/json
 
 Request:
 
