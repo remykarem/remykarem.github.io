@@ -158,6 +158,8 @@
 # Testing
 
 - [Testing](./testing.md)
+- [Property-based testing](./property-based-testing.md)
+- [Example-based testing](./example-based-testing.md)
 
 ---
 
