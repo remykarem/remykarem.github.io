@@ -2,6 +2,7 @@
 
 - [Basic](./basic.md)
 - [Probability theory](./probability-theory.md)
+- [Birthday paradox](./birthday-paradox.md)
 - [Statistical inference]()
 - [Probability distributions](./probability-distributions.md)
   - [Bernoulli](./bernoulli.md)
