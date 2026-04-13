@@ -17,7 +17,7 @@
   
 Offers:
 * Decentralised generation
-* Global uniqueness
+* Global [uniqueness](./guarantees/uniqueness.md)
 * Less guessable than sequential IDs
 * Lexicographic sorting (for UUIDv7)
 
