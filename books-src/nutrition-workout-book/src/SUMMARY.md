@@ -13,6 +13,7 @@
 
 # Notes
 
+- [Why you need carbs pre and post workout](./carbs-pre-post-workout.md)
 - [Calorie deficit]()
 - [Fried food](./fried-food.md)
 - [Processed food](./processed-foods.md)
