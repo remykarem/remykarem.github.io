@@ -13,6 +13,7 @@
 # Non-goals
 
 - [Obscurity](./obscurity.md)
+- [Obscurity](./obscurity.md)
 
 # Trust models
 

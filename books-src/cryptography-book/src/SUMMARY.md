@@ -156,6 +156,7 @@
 - [Claims]()
 - [Initialisation vector]()
 - [Digital certificates](./applications/digital-certificate.md)
+  - [SSL certificate](./applications/ssl.md)
 - [Fingerprints](./applications/fingerprint.md)
 
 ---
