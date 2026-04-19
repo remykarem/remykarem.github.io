@@ -155,16 +155,10 @@
 - [Mixed]()
   - [ETF](./finance/etf.md)
 
-# Finance: Derivative instruments
-
-- [Futures](./finance/derivatives/futures.md)
-- [Options]()
-
 # Finance: ???
 
 - [Fund](./finance/fund.md)
 - [Mutual fund / unit trust](./finance/unit-trust.md)
-- [Hedge fund]()
 
 # Financial report
 
@@ -177,8 +171,7 @@
 # Forex
 
 - [MAS](./mas.md)
-  - [Exchange rate management]()
-  - [Liquidity management]()
+
 ---
 
 # Insurance
@@ -196,18 +189,6 @@
 - [Margin trading](./trading-strategy/margin-trading.md)
 - [Short selling](./trading-strategy/short-selling.md)
 - [Hedge]()
-
----
-
-# Strategies: Minimise loss
-
-- [Diversification]()
-  - [Market]()
-  - [Asset class]()
-- [Defensive assets]()
-- [Dollar-cost averaging]()
-- [Stop-loss]()
-- [Hedging]()
 
 ---
 
