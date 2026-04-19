@@ -94,10 +94,6 @@
 
 ---
 
-# Commodities
-
-- [???]()
-
 # Business
 
 - [Ownership]()
@@ -192,27 +188,6 @@
 
 ---
 
-# Speculative strategies
-
-- [Day trading]()
-- [Options trading]()
-- [Arbitrage]()
-- [Trend following]()
-
---- 
-
-# Investment objectives
-
-- [Productive returns]()
-  - [Dividends]()
-  - [Income]()
-  - [Interest]()
-- [Positional returns]()
-  - [Capital appreciation]()
-  - [Market fluctuations]()
-
----
-
 # Trading activities
 
 - [Long-term investing]()
@@ -258,18 +233,7 @@
     - [Ownership in companies]()
     - [Liquidity & flexibility]()
     - [Transparency]()
-- [Value vs. sentiment]()
-- [?]()
-  - [Minimise loss]()
-  - [Creating exposure]()
-  - [Sentiment exploitation]()
-  - [Real risk]()
-  - [Synthetic trade]()
-- [??]()
-  - [Growth]()
-  - [Source of income]()
-  - [Speculative trading]()
-  - [Hedging]()
+
 
 ---
 
