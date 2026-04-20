@@ -1,1 +1,0 @@
-# Beauty contest analogy
