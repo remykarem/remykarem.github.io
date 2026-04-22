@@ -2,7 +2,12 @@
 
 aka digital signature schemes, signature schemes
 
-Digital signatures offer [authenticity](../../goals/authenticity.md) and [non-repudiation](../../goals/non-repudiation.md). They typically involve a private-public key pair.
+Digital signatures offer:
+* [authenticity](../../goals/authenticity.md)
+* [non-repudiation](../../goals/non-repudiation.md), and
+* [integrity](../../goals/integrity.md).
+
+They typically involve a private-public key pair.
 
 You typically _sign a message_ with a private key:
 
