@@ -182,7 +182,13 @@
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="digital-signature-algorithms"><a class="header" href="#digital-signature-algorithms">Digital signature algorithms</a></h1>
 <p>aka digital signature schemes, signature schemes</p>
-<p>Digital signatures offer <a href="../../goals/authenticity.html">authenticity</a> and <a href="../../goals/non-repudiation.html">non-repudiation</a>. They typically involve a private-public key pair.</p>
+<p>Digital signatures offer:</p>
+<ul>
+<li><a href="../../goals/authenticity.html">authenticity</a></li>
+<li><a href="../../goals/non-repudiation.html">non-repudiation</a>, and</li>
+<li><a href="../../goals/integrity.html">integrity</a>.</li>
+</ul>
+<p>They typically involve a private-public key pair.</p>
 <p>You typically <em>sign a message</em> with a private key:</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord text"><span class="mord">message, privatekey</span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8623em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">signature</span></span></span></span></span></span></p>
 <p>and <em>verify a signature</em> with a public key:</p>
