@@ -40,6 +40,8 @@
   - [RSASSA-PKCS1-v1_5](./primitives/digital-signature-algorithms/rsassa-pkcs1-v1_5.md)
   - [RSASSA-PSS](./primitives/digital-signature-algorithms/rsassa-pss.md)
 - [Lattice-based]()
+  - [ML-DSA](./primitives/digital-signature-algorithms/ml-dsa.md)
+  - [SLH-DSA](./primitives/digital-signature-algorithms/slh-dsa.md)
   - [CRYSTALS-Dilithium](./primitives/digital-signature-algorithms/crystals-dilithium.md)
 - [Schnorr](./primitives/digital-signature-algorithms/schnorr.md)
 - [ElGamal]()
