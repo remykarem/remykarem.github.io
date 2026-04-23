@@ -23,6 +23,10 @@
 - [Trust On First Use]()
 - [Direct trust]()
 
+# Outcome
+
+- [Remediation vs. mitigation](./remediation-vs-mitigation.md)
+
 ---
 
 # Confidentiality
