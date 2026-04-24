@@ -184,6 +184,7 @@
 <li>Static: manually compute routes</li>
 <li>Dynamic</li>
 </ul>
+<p>Every router decrements the IP packet's TTL. After decrementing, if t TTL=0, the router drops the packet and send back an ICMP &quot;Time Exceeded&quot; to the sender.</p>
 <h2 id="nat"><a class="header" href="#nat">NAT</a></h2>
 <p>Network Address Translation</p>
 <p>A NAT allows all of the hosts of a router share one or a few public IPv4 addresses (usually between private and public). This is to deal with shortage of IPv4 addresses. What it does is to modify the IP addresses in the IP header.</p>

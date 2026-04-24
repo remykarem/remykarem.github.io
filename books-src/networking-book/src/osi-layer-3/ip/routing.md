@@ -7,6 +7,8 @@ Routing protocols
 - Static: manually compute routes
 - Dynamic
 
+Every router decrements the IP packet's TTL. After decrementing, if t TTL=0, the router drops the packet and send back an ICMP "Time Exceeded" to the sender.
+
 ## NAT
 
 Network Address Translation
