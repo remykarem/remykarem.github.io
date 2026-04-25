@@ -1,3 +1,3 @@
 # Integrity
 
-The property of the information that guarantees it is _not altered_.
+The property of the information that guarantees it is _not tampered or altered_.
