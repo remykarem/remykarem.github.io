@@ -15,3 +15,5 @@ cat -n "hello" | shasum -a 256
 ~~~
 
 [SHA-256](https://sha256algorithm.com)
+
+[SHA-256 is quantum-safe](https://words.filippo.io/128-bits/)
