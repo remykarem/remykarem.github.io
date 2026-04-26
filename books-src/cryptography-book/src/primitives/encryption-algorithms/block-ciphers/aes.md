@@ -20,6 +20,12 @@ AES is a bijective function — _any_ data can encrypted, and _any_ data can be 
 Because any data can be decrypted, it is  incorrect to assume that just because you can decrypt some ciphertext, that it was indeed encrypted using the key you have.
 ~~~
 
+~~~admonish title="Post-quantum safe"
+Post quantum cryptography is not a threat to 128 bits (and above).
+
+[QUANTUM COMPUTERS ARE NOT A THREAT TO 128-BIT SYMMETRIC KEYS](https://words.filippo.io/128-bits/)
+~~~
+
 When using a block cipher, we usually want to encrypt arbitrary amounts of data. This is where modes of operation come into play.
 
 ~~~admonish example title="Ciphertext"
