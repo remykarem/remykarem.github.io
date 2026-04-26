@@ -134,6 +134,12 @@
 
 ---
 
+# Notable algorithms
+
+- [Schor's quantum algorithm](./schors-algorithms.md)
+
+---
+
 # Cryptographic keys
 
 - [Shared secret](./cryptographic-keys/shared-secret.md)
