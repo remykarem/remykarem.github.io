@@ -1,4 +1,4 @@
-# Digital signature algorithms
+# Signature algorithms
 
 aka digital signature schemes, signature schemes
 

@@ -30,9 +30,9 @@
 
 ---
 
-# Digital signature algorithms
+# Signature algorithms
 
-- [Digital signature algorithms](./primitives/digital-signature-algorithms/index.md)
+- [Signature algorithms](./primitives/digital-signature-algorithms/index.md)
 - [EC]()
   - [ECDSA](./primitives/digital-signature-algorithms/ecdsa.md)
   - [EdDSA](./primitives/digital-signature-algorithms/eddsa.md)
@@ -67,7 +67,7 @@
   - [XSalsa20](./primitives/encryption-algorithms/stream-ciphers/xsalsa20.md)
 - [ElGamal]()
 
-# Key exchange algorithms
+# Key exchange / key agreement algorithms
 
 - [Key exchange algorithms](./primitives/key-exchange-algorithms/index.md)
 - [One party]()
