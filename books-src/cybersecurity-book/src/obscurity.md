@@ -4,3 +4,5 @@
 
 * UUID
 * ...
+
+[Security Through Obscurity Is NOT Bad](https://mobeigi.com/blog/security/security-through-obscurity-is-not-bad/)
