@@ -190,6 +190,124 @@
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="classes-of-problems"><a class="header" href="#classes-of-problems">Classes of problems</a></h1>
 <p>Decision problem: a problem with a yes or no answer.</p>
+<hr />
+<div class="table-wrapper"><table><thead><tr><th></th><th>Time complexity</th><th>Verification complexity</th><th>Example</th></tr></thead><tbody>
+<tr><td>P problems</td><td>Polynomial^</td><td>Polynomial</td><td></td></tr>
+<tr><td>NP problems</td><td>?</td><td>Polynomial</td><td>Sudoku</td></tr>
+</tbody></table>
+</div>
+<p>polynomial = can be done by computer</p>
+<h2 id="definitions"><a class="header" href="#definitions">Definitions</a></h2>
+<p>A problem is “complete” for a <em>class</em> if it is the <strong>hardest</strong> possible member of that class, it represents the entire class.</p>
+<ul>
+<li>Polynomial</li>
+</ul>
+<p>In the context of P and NP, both problems are <strong>decision problems</strong>. </p>
+<h2 id="analogy"><a class="header" href="#analogy">Analogy</a></h2>
+<p><strong>Problem</strong> = how to open a locked room</p>
+<p><strong>solution</strong> = key</p>
+<p><strong>solving</strong> (time complexity) = find/create the key. if key need many people to work on it still okay (polynomial). if key need like a company or what then </p>
+<p><strong>verifying</strong> (verify complexity) = ensure the key can open the room</p>
+<ul>
+<li>involves carrying the key to the room (maybe it’s a big key). if weight of key is m kg, and i need k people to carry, it’s linear. if i need k^2 people it’s polynomial</li>
+</ul>
+<h2 id="np-complete-problems"><a class="header" href="#np-complete-problems">NP-complete problems</a></h2>
+<p>A problem X (in NP) is NP-complete if every problem in NP <strong>reduces</strong> to X.</p>
+<p>the reducability property is probably owed to two problems being <em>mathematically</em> linked.</p>
+<div id="admonition-error-rendering-admonishment" class="admonition admonish-bug">
+<div class="admonition-title">
+<p>Error rendering admonishment</p>
+<p><a class="admonition-anchor-link" href="#admonition-error-rendering-admonishment"></a></p>
+</div>
+<div>
+<p>Failed with:</p>
+<pre><code class="language-log">TOML parsing error: TOML parse error at line 1, column 5
+  |
+1 | tip 
+  |     ^
+expected `.`, `=`
+
+</code></pre>
+<p>Original markdown input:</p>
+<pre><code class="language-markdown">~~~admonish tip title=”Analogy”
+
+Imagine a building with 100 locked rooms. 
+
+Problem = how can I open a locked room
+
+Solution = key
+
+Solving = finding the key to this room
+
+Verifying = try to open the door using the key
+
+There are 100 problems.
+
+Now, I can try to solve all the 100 problems.
+
+But if I can open a *special* room (which has keys to some other rooms), then solving the problem of that room itself is an NP-complete problem.
+
+Now, there can be several of these special rooms, then
+
+NP-complete problem = how can I open a special locked room
+
+solving an NP-complete problem = Finding its key
+
+~~~
+</code></pre>
+</div>
+</div>
+<div id="admonition-error-rendering-admonishment-1" class="admonition admonish-bug">
+<div class="admonition-title">
+<p>Error rendering admonishment</p>
+<p><a class="admonition-anchor-link" href="#admonition-error-rendering-admonishment-1"></a></p>
+</div>
+<div>
+<p>Failed with:</p>
+<pre><code class="language-log">TOML parsing error: TOML parse error at line 1, column 5
+  |
+1 | tip 
+  |     ^
+expected `.`, `=`
+
+</code></pre>
+<p>Original markdown input:</p>
+<pre><code class="language-markdown">~~~admonish tip title=“Mental model”
+
+Identifying a problem as similar to another (already solved problem) has its benefits in real life. You might have already solved it. 
+
+Two problems can be the same problem in disguised because one can be **reduced** to another. 
+
+~~~
+</code></pre>
+</div>
+</div>
+<h2 id="np-hard"><a class="header" href="#np-hard">NP-hard</a></h2>
+<ul>
+<li>Might be outside NP</li>
+<li>Every NP</li>
+</ul>
+<div id="admonition-note" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>There is a special room that might be <strong>outside the building</strong>. That has keys to some rooms. </p>
+<p>NP-hard problem = how can i open this room</p>
+<p>Solving = find the key. Might be hard cos key could be anywhere</p>
+<p>Verify = try the key</p>
+</div>
+</div>
+<h2 id="p--np"><a class="header" href="#p--np">P = NP</a></h2>
+<p>Is solving always as easy as verifying?</p>
+<p>If trying a key is fast, is finding also as fast?</p>
+<hr />
+<p>Problems:</p>
+<ul>
+<li>Solvable in polynomial time</li>
+<li>Not solvable in polynomial time</li>
+</ul>
 <h1 id="p"><a class="header" href="#p"><strong>P</strong></a></h1>
 <p><strong>polynomial time</strong></p>
 <p>Class of problems that can be solved by an algorithm in polynomial time</p>
@@ -205,7 +323,7 @@
 <p>A class of computational problems where an effifecint algorithm solution has yet to be found</p>
 </li>
 </ul>
-<h1 id="np-hard"><a class="header" href="#np-hard"><strong>NP-hard</strong></a></h1>
+<h1 id="np-hard-1"><a class="header" href="#np-hard-1"><strong>NP-hard</strong></a></h1>
 <p>There exists no polynomial time algorithm to verify a solution to such problems. Eg. chess</p>
 <div class="table-wrapper"><table><thead><tr><th>Problem</th><th>Verifiable in P time</th><th>Solvable in P time</th></tr></thead><tbody>
 <tr><td>P</td><td>✅</td><td>✅</td></tr>
