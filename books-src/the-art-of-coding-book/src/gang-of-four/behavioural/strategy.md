@@ -2,6 +2,9 @@
 
 Used when you have different algorithms or approaches or classes or ways (known as **"strategies"**) to achieve the same operation. 
 
+When you ask questions like:
+* what should this class do at runtime?
+
 Typically, this involves selecting ONE strategy _at runtime_ to perform a task.
 
 You'll need:
