@@ -8,6 +8,7 @@ Responsibilities:
 * **[Serve static content](../core-functionalities/static-hosting.md) via** [**caching**](../strategies/caching.md)
 
 Features:
+* TLS provisioning
 * Integration with origin server (eg. AWS CloudFront; AWS S3, API Gateway)
 * Lightweight [authentication](../core-functionalities/authentication.md)
 * Lightweight request/response transformation/manipulation/validation
