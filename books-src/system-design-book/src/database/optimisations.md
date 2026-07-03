@@ -1,5 +1,11 @@
 # Optimisations
 
+### 0. Access pattern
+
+Understand the current (or impending) access patterns before assessing what indices to use.
+
+This is because indices, while cheap for reads, aren't cheap for writes.
+
 ### 1. Sparse indexing / partial indexing
 
 * SQL
