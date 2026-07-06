@@ -7,3 +7,5 @@ co-location, locality, locality of reference, cohesion
 related code / data should live near each other
 
 usually the result of encapsulation
+
+data that changes together belongs together
