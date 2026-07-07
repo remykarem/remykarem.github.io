@@ -1,6 +1,6 @@
 # Isolation
 
-ensures correctness in concurrent transactions
+ensures correctness in _concurrent_ transactions
 
 This refers to the behaviour of transactions when they are executed _concurrently_.
 
