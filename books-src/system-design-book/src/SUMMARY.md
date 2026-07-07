@@ -62,10 +62,11 @@
 
 - [Consistency](./goals/consistency.md)
 - [Maintainability](./goals/maintainability.md)
-- [Atomicity](./goals/atomicity.md)
-- [Integrity](./goals/integrity.md)
-- [Isolation](./goals/isolation.md)
-- [Durability](./goals/durability.md)
+- [Transactional behaviour](./goals/transactional-behaviour.md)
+  - [Atomicity](./goals/atomicity.md)
+  - [Integrity](./goals/integrity.md)
+  - [Isolation](./goals/isolation.md)
+  - [Durability](./goals/durability.md)
 - [Adaptability](./goals/adaptability.md)
 - [Traceability]()
 
