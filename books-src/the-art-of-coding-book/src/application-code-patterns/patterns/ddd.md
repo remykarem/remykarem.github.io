@@ -28,3 +28,7 @@ DDD phases:
 Resources:
 * [Best Practice - An Introduction To Domain-Driven Design](https://learn.microsoft.com/en-us/archive/msdn-magazine/2009/february/best-practice-an-introduction-to-domain-driven-design)
 * [Redis — DDD](https://redis.com/glossary/domain-driven-design-ddd/)
+
+---
+
+Anti-Corruption Layer: translation between two bounded contexts
