@@ -125,6 +125,7 @@
 
 # Others
 
+- [Boundary](./others/boundary.md)
 - [Memoization](./others/memoization.md)
 - [Principle of locality](./others/locality.md)
 - [Linear](./others/linear.md)
