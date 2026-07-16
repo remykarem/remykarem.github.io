@@ -120,6 +120,7 @@
 
 - [Links](./links.md)
 - [Attacks]()
+    - [Server-side template injection](./attacks/server-side-template-injection.md)
     - [Confused Deputy Problem](./attacks/confused-deputy-problem.md)
     - [CSRF](./attacks/csrf.md)
     - [SSRF](./attacks/ssrf.md)
