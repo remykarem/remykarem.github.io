@@ -7,6 +7,7 @@ Vocabulary
 * Latent bug
 * resource Interface symmetry in API design, CRUD symmetry
 * Resource discoverability
+* Improve access to resource
 
 ---
 
