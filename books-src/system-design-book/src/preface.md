@@ -1,5 +1,11 @@
 # Preface
 
+Vocabulary
+* Principle
+* Semantics of X — rules governing X, what is **guaranteed**, what is **not guaranteed**
+
+---
+
 [AWS Docs GPT](https://docsgpt.antimetal.com)
 
 Useful links:
@@ -19,3 +25,5 @@ Cost can mean:
 
 Company blogs:
 * [Instagram](https://engineering.fb.com/tag/instagram/)
+
+
