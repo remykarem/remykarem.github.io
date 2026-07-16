@@ -5,6 +5,8 @@ Vocabulary
 * Semantics of X — rules governing X, what is **guaranteed**, what is **not guaranteed**
 * Regression — a previously acceptable behaviour has gotten worse
 * Latent bug
+* Interface symmetry in API design, CRUD symmetry
+* Resource discoverability
 
 ---
 
