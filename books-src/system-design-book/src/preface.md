@@ -4,6 +4,7 @@ Vocabulary
 * Principle
 * Semantics of X — rules governing X, what is **guaranteed**, what is **not guaranteed**
 * Regression — a previously acceptable behaviour has gotten worse
+* Latent bug
 
 ---
 
