@@ -68,7 +68,7 @@
   - [Isolation](./goals/isolation.md)
   - [Durability](./goals/durability.md)
 - [Adaptability](./goals/adaptability.md)
-- [Traceability]()
+- [Traceability](./goals/traceability.md)
 
 ---
 
@@ -259,14 +259,17 @@
   - [GraphQL](./api-design/api-architectural-styles/graphql.md)
   - [RPC](./api-design/api-architectural-styles/grpc.md)
   - [SOAP](./api-design/api-architectural-styles/soap.md)
-- [API versioning](./api-design/versioning.md)
-- [Interaction patterns](./api-design/interaction-patterns.md)
+- [Principles & goals?](./api-design/principles.md)
+- [Strategies]()
+  - [API pagination](./api-design/api-pagination.md)
+  - [Retry-safe / idempotency](./api-design/retry-safe-idempotency.md)
+  - [API versioning](./api-design/versioning.md)
+  - [Handling large payloads](./api-design/handling-large-payloads.md)
 - [Batch processing](./api-design/batch-processing.md)
-- [API performance](./api-design/api-peformance.md)
 - [Encoding signatures](./api-design/encoding-signatures.md)
-- [Retry-safe]()
-- [Handling large payloads](./api-design/handling-large-payloads.md)
 - [Retention period](./api-design/retention-period.md)
+- [Interaction patterns](./api-design/interaction-patterns.md)
+- [API performance](./api-design/api-peformance.md)
 
 ---
 

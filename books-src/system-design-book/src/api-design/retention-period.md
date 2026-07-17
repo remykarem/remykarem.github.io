@@ -1,7 +1,5 @@
 # Retention period
 
-# Retention period
-
 Stripe Events are queryable withon 30 days[^stripe]
 
 ---
