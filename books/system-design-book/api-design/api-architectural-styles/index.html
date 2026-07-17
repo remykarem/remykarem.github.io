@@ -188,9 +188,9 @@
 <p>How to expose your data to the clients?</p>
 <p>How do services communicate each other in terms of:</p>
 <ul>
-<li>Interface — resources vs. procedure</li>
-<li>data format — JSON, binary</li>
+<li>Interface — resources vs. procedure (operation)</li>
 <li>schema definitions</li>
+<li>data format — JSON, binary</li>
 <li>state management</li>
 <li>communication protocol</li>
 <li>patterns of interaction</li>
@@ -208,9 +208,9 @@
 </div>
 <div class="table-wrapper"><table><thead><tr><th></th><th>REST</th><th>GraphQL</th><th>RPC</th><th>SOAP</th></tr></thead><tbody>
 <tr><td>Interface</td><td>Resource-oriented</td><td>Hybrid</td><td>Procedure-oriented</td><td></td></tr>
-<tr><td>Data format</td><td>JSON, HTML, etc.; text</td><td>Graph-like language; text</td><td>Protobuf, JSON, XML; text &amp; binary</td><td>XML</td></tr>
 <tr><td>Schema</td><td>(Verb, resource, JSON schema)</td><td>GraphQL</td><td>Function signature</td><td>?</td></tr>
 <tr><td>Schema definition</td><td>Server</td><td>Client</td><td>Server</td><td>?</td></tr>
+<tr><td>Data format</td><td>JSON, HTML, etc.; text</td><td>Graph-like language; text</td><td>Protobuf, JSON, XML; text &amp; binary</td><td>XML</td></tr>
 <tr><td>Messaging pattern</td><td>Request/Response</td><td>Request/Response, Pub/Sub</td><td>Request/Response, Streaming</td><td>?</td></tr>
 <tr><td>Statefulness</td><td>Stateless</td><td>?</td><td>?</td><td>?</td></tr>
 </tbody></table>

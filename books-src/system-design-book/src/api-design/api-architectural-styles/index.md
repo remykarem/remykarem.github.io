@@ -6,9 +6,9 @@ aka API architectural styles
 How to expose your data to the clients?
 
 How do services communicate each other in terms of:
-- Interface — resources vs. procedure
-- data format — JSON, binary
+- Interface — resources vs. procedure (operation)
 - schema definitions
+- data format — JSON, binary
 - state management
 - communication protocol
 - patterns of interaction
@@ -21,9 +21,9 @@ All these designs are commonly built on top of HTTP.
 |                   | REST                          | GraphQL                   | RPC                               | SOAP |
 | ----------------- |-------------------------------|---------------------------|-----------------------------------| ---- |
 | Interface         | Resource-oriented             | Hybrid                    | Procedure-oriented                |   |
-| Data format       | JSON, HTML, etc.; text        | Graph-like language; text | Protobuf, JSON, XML; text & binary | XML  |
 | Schema            | (Verb, resource, JSON schema) | GraphQL                   | Function signature                | ?    |
 | Schema definition | Server                        | Client                    | Server                            | ?    |
+| Data format       | JSON, HTML, etc.; text        | Graph-like language; text | Protobuf, JSON, XML; text & binary | XML  |
 | Messaging pattern | Request/Response              | Request/Response, Pub/Sub | Request/Response, Streaming       | ?    |
 | Statefulness      | Stateless                     | ?                         | ?                                 | ?    |
 
