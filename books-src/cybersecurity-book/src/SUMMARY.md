@@ -29,6 +29,12 @@
 
 ---
 
+# Threat model
+
+- [Threat model](./threat-model.md)
+
+---
+
 # Static analysis
 - [Static analysis](./static-analysis.md)
 - [Taint analysis](./taint-analysis.md)
