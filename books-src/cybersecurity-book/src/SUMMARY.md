@@ -128,10 +128,10 @@
 
 - [CVE](./cve.md)
 
-# Attacks
+# Exploits
 
 - [Links](./links.md)
-- [Attacks]()
+- [Exploits]()
     - [Server-side template injection](./attacks/server-side-template-injection.md)
     - [Confused Deputy Problem](./attacks/confused-deputy-problem.md)
     - [CSRF](./attacks/csrf.md)
@@ -142,6 +142,7 @@
     - [Side channel attack](./attacks/side-channel-attack.md)
     - [Supply chain attack](./attacks/supply-chain-attack.md)
     - [XSS]()
+    - [Lateral movement](./attacks/lateral-movement.md)
     - [SQL injection]()
     - [Command injection]()
     - [Logs]()
