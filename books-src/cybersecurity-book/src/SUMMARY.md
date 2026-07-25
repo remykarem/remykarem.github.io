@@ -141,7 +141,7 @@
     - [Directory traversal](./attacks/directory-traversal.md)
     - [Side channel attack](./attacks/side-channel-attack.md)
     - [Supply chain attack](./attacks/supply-chain-attack.md)
-    - [XSS]()
+    - [XSS](./attacks/xss.md)
     - [Lateral movement](./attacks/lateral-movement.md)
     - [SQL injection]()
     - [Command injection]()
