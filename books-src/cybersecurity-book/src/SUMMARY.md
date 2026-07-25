@@ -132,6 +132,8 @@
 
 - [Links](./links.md)
 - [Exploits]()
+    - [Credential bypass](./attacks/credential-bypass.md)
+    - [Authorisation bypass](./attacks/authorisation-bypass.md)
     - [XSS](./attacks/xss.md)
     - [Lateral movement](./attacks/lateral-movement.md)
     - [Server-side template injection](./attacks/server-side-template-injection.md)
