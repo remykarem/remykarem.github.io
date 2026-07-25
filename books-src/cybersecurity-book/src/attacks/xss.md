@@ -31,7 +31,7 @@ Client-side JavaScript on the page writes to DOM unsafely
 
 ## Sinks
 
-* `.innerHtml`
+* `.innerHtml` - goes together with CSP header `Content-Security-Policy: script-src 'self' ...`
 * `.src`
 * `eval(...)`
 * `setTimeout(..)`
