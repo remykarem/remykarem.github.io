@@ -155,5 +155,6 @@
     - [Same-Site cookie attribute](./mitigation/same-site-cookie-attribute.md)
     - [Capturing user intent](./mitigation/capturing-user-intent.md)
     - [Signed request](./mitigation/signed-request.md)
+    - [Content Security Policy](./mitigation/content-security-policy.md)
     - [Rate-limiting]()
     - [Sanitise]()
