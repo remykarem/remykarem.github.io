@@ -29,6 +29,12 @@
 
 ---
 
+# Static analysis
+- [Static analysis](./static-analysis.md)
+- [Taint analysis](./taint-analysis.md)
+
+---
+
 # Confidentiality
 
 - [Symmetric encryption]()
