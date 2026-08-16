@@ -18,8 +18,6 @@ Cholesterol production is highest overnight.
 
 Glycogen, vitamins, cholesteryl esters
 
-Excess glucose is stored as glycogen. But the liver only stores up to about 100g of glycogen. After that, the liver converts glucose into fatty acids ("**lipogenesis**"). This may be stored in the liver, or get sent out into the blood as triglycerides.
-
 Cholesterol can also be stored. They are esterified into cholesteryl esters.
 
 ~~~admonish tip="How long can it last?"
@@ -39,21 +37,9 @@ Source: [NCBI](https://www.ncbi.nlm.nih.gov/books/NBK549820/#:~:text=However%2C%
 
 Bile acids is used to digest fats. Converted from **cholesterol** via an enzyme. 
 
-### Cholesterol production
-
-Has an enzyme HMG CoA reductase required for mevalonate pathway.
-
 ### Cholesterol elimination
 
 Some **cholesterol** is secreted into bile directly, which will get removed from the body.
-
-### VLDL production
-
-The liver packages
-* triglycerides — from excess glucose and free fatty acids
-* cholesterol 
-
-into VLDL, which is released into the bloodstream.
 
 ### HDL production
 

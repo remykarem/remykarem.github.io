@@ -73,56 +73,56 @@
 
 # Biochemistry
 
-- [Fats](./biochemistry/fats/index.md)
-  - [Unsaturated fats](./biochemistry/unsaturated-fats.md)
-    - [Cis fats]()
-      - [Monounsaturated fats](./biochemistry/monounsaturated-fats.md)
-      - [Polyunsaturated fats](./biochemistry/polyunsaturated-fats.md)
-    - [Trans fats](./biochemistry/trans-fats.md)
-  - [Saturated fats](./biochemistry/saturated-fats.md)
-- [Protein](./biochemistry/protein.md)
-    - [Amino acid](./biochemistry/amino-acid.md)
-- [Carbohydrates](./biochemistry/carbohydrates.md)
-    - [Simple sugars]()
-      - [Glucose](./biochemistry/glucose.md)
-      - [Fructose](./biochemistry/fructose.md)
-      - [Sucrose](./biochemistry/sucrose.md)
-    - [Complex sugars](./biochemistry/complex-sugars/index.md)
-      - [Starches](./biochemistry/complex-sugars/starches.md)
-      - [Fiber](./biochemistry/complex-sugars/fiber.md)
-- [Cholesterol](./biochemistry/cholesterol.md)
-- [Vitamins]()
-  - [Vitamin A](./biochemistry/vitamins/vitamin-a.md)
-  - [Vitamin B]()
-    - [Vitamin B3 (Niacinamide)](./biochemistry/vitamins/vitamin-b3.md)
-    - [Vitamin B7 (Biotin)](./biochemistry/vitamins/vitamin-b7.md)
-    - [Vitamin B9 (Folate)](./biochemistry/vitamins/vitamin-b9.md)
-    - [Vitamin B12](./biochemistry/vitamins/vitamin-b12.md)
-  - [Vitamin C](./biochemistry/vitamins/vitamin-c.md)
-  - [Vitamin D](./biochemistry/vitamins/vitamin-d.md)
-  - [Vitamin E](./biochemistry/vitamins/vitamin-e.md)
-  - [Vitamin K](./biochemistry/vitamins/vitamin-k.md)
-- [Phytochemicals]()
-  - [Polyphenols](./biochemistry/phytochemicals/polyphenols.md)
-  - [Carotenoids](./biochemistry/phytochemicals/carotenoids.md)
-  - [Terpenoids]()
-  - [Phytosterols](./biochemistry/phytochemicals/sterols.md)
-- [Micronutrients](./biochemistry/micronutrients/index.md)
-  - [Manganese](./biochemistry/micronutrients/manganese.md)
-  - [Potassium](./biochemistry/micronutrients/potassium.md)
-  - [Magnesium](./biochemistry/micronutrients/magnesium.md)
-  - [Calcium](./biochemistry/micronutrients/calcium.md)
-  - [Phosphate](./biochemistry/micronutrients/phosphate.md)
-  - [Iron](./biochemistry/micronutrients/iron.md)
-  - [Zinc](./biochemistry/micronutrients/zinc.md)
-- [Purines](./biochemistry/purines.md)
-- [Live culture](./biochemistry/live-culture.md)
-- [Melatonin](./biochemistry/melatonin.md)
+- Fats
+  - Unsaturated fats
+    - Cis fats
+      - Monounsaturated fats
+      - Polyunsaturated fats
+    - Trans fats
+  - Saturated fats
+- Protein
+    - Amino acid
+- Carbohydrates
+    - Simple sugars
+      - Glucose
+      - Fructose
+      - Sucrose
+    - Complex sugars
+      - Starches
+      - Fiber
+- Cholesterol
+- Vitamins
+  - Vitamin A
+  - Vitamin B
+    - Vitamin B3 (Niacinamide)
+    - Vitamin B7 (Biotin)
+    - Vitamin B9 (Folate)
+    - Vitamin B12
+  - Vitamin C
+  - Vitamin D
+  - Vitamin E
+  - Vitamin K
+- Phytochemicals
+  - Polyphenols
+  - Carotenoids
+  - Terpenoids
+  - Phytosterols
+- Micronutrients
+  - Manganese
+  - Potassium
+  - Magnesium
+  - Calcium
+  - Phosphate
+  - Iron
+  - Zinc
+- Purines
+- Live culture
+- Melatonin
  
 # Properties
 
-- [Antinutrient](./biochemistry/antinutrients.md)
-- [Antioxidants]()
+- [Antinutrient]()
+- [Antioxidants])
 
 # Biochemistry
 
@@ -160,10 +160,6 @@
 
 - [Ratios](./nutrition/ratios-scores/ratios.md)
 - [Scores](./nutrition/ratios-scores/scores.md)
-
-# Medicine: Drugs
-
-- [Statins](./medicine/statins.md)
 
 # Medicine: Tests
 
@@ -227,11 +223,6 @@
 
 # Biology: In circulation
 
-- [VLDL](./biology/circulation/vldl.md)
-- [LDL](./biology/circulation/ldl.md)
-- [HDL](./biology/circulation/hdl.md)
-- [Chylomicrons](./biology/circulation/chylomicrons.md)
-- [LPL](./biology/circulation/lpl.md)
 - [Free fatty acids](./biology/circulation/ffas.md)
 - [Glycerol]()
 - [Haemoglobin]()
@@ -256,10 +247,6 @@
 
 - [Glucose metabolism](./biology/metabolism/glucose-metabolism.md)
 - [Adenosine receptor](./biology/metabolism/adenosine-receptor.md)
-
-# Biology: Immune system
-
-- [Immune cells]()
 
 # Biology: Cell
 
