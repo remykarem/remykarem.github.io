@@ -122,7 +122,7 @@
 # Properties
 
 - [Antinutrient]()
-- [Antioxidants])
+- [Antioxidants]()
 
 # Biochemistry
 
