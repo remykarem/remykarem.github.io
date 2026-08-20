@@ -15,5 +15,5 @@ Keywords:
 * chain-of-responsibility pattern
 * idempotency
 * error-handling
-* saga-agnostic participants
+* saga-agnostic participants: compensation is the orchestrator's concern (in orchestrator pattern)
 
