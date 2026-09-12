@@ -70,60 +70,7 @@
 - [Others](./foods/others.md)
 
 ---
-
-# Biochemistry
-
-- Fats
-  - Unsaturated fats
-    - Cis fats
-      - Monounsaturated fats
-      - Polyunsaturated fats
-    - Trans fats
-  - Saturated fats
-- Protein
-    - Amino acid
-- Carbohydrates
-    - Simple sugars
-      - Glucose
-      - Fructose
-      - Sucrose
-    - Complex sugars
-      - Starches
-      - Fiber
-- Cholesterol
-- Vitamins
-  - Vitamin A
-  - Vitamin B
-    - Vitamin B3 (Niacinamide)
-    - Vitamin B7 (Biotin)
-    - Vitamin B9 (Folate)
-    - Vitamin B12
-  - Vitamin C
-  - Vitamin D
-  - Vitamin E
-  - Vitamin K
-- Phytochemicals
-  - Polyphenols
-  - Carotenoids
-  - Terpenoids
-  - Phytosterols
-- Micronutrients
-  - Manganese
-  - Potassium
-  - Magnesium
-  - Calcium
-  - Phosphate
-  - Iron
-  - Zinc
-- Purines
-- Live culture
-- Melatonin
  
-# Properties
-
-- [Antinutrient]()
-- [Antioxidants]()
-
 # Biochemistry
 
 - [Triglyceride](./biochemistry/triglyceride.md)
@@ -208,19 +155,6 @@
 - [Inflammation](./biology/inflammation/index.md)
 - [Molecules](./biology/inflammation/molecules.md)
 
-# Biology: Hormones
-
-- [Insulin](./biology/hormones/insulin.md)
-- [Glucagon](./biology/hormones/glucagon.md)
-- [Testosterone](./biology/hormones/testosterone.md)
-- [Growth hormone](./biology/hormones/growth-hormone.md)
-- [IGF-1](./biology/hormones/igf-1.md)
-- [Cortisol](./biology/hormones/cortisol.md)
-- [Adrenaline](./biology/hormones/adrenaline.md)
-- [Ghrelin](./biology/hormones/ghrelin.md)
-- [Seratonin](./biology/hormones/seratonin.md)
-- [Melatonin](./biology/hormones/melatonin.md)
-
 # Biology: In circulation
 
 - [Free fatty acids](./biology/circulation/ffas.md)
@@ -232,22 +166,6 @@
 - [Free radicals](./biology/circulation/free-radicals.md)
 - [Other molecules](./biology/circulation/other-molecules.md)
 
-# Biology: Organs
-
-- [Muscles](./biology/organs/muscles.md)
-- [Liver](./biology/organs/liver.md)
-- [Skin](./biology/organs/skin.md)
-- [Pancreas](./biology/organs/pancreas.md)
-- [Fat](./biology/organs/fat.md)
-- [Kidney](./biology/organs/kidney.md)
-- [Heart](./biology/organs/heart.md)
-- [Brain](./biology/organs/brain.md)
-
 # Biology: Metabolism
 
 - [Glucose metabolism](./biology/metabolism/glucose-metabolism.md)
-- [Adenosine receptor](./biology/metabolism/adenosine-receptor.md)
-
-# Biology: Cell
-
-- [Cell](./biology/cell.md)
