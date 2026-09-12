@@ -1,3 +1,0 @@
-# Ghrelin
-
-Hunger hormone
