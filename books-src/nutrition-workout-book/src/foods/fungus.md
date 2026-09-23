@@ -1,5 +1,0 @@
-# Fungus
-
-* Portobello
-* Shiitake
-* Enoki
