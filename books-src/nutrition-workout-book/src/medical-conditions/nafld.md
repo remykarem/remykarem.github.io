@@ -1,1 +1,0 @@
-# Fatty liver disease
