@@ -77,21 +77,26 @@
 - [Facial recognition]()
 - [MFA]()
 - [Public key]()
+- [PINs]()
+- [OAuth 2.0](./authorisation/oauth2-0.md)
+  - [Authorization Code Flow](./oauth2-0/authorization-code-flow.md)
+  - [Client Credentials Flow]()
+  - [Hybrid Flow]()
 
 ---
 
 # Authorisation
 
-- [OAuth 2.0](./authorisation/oauth2-0.md)
-  - [Authorization Code Flow](./oauth2-0/authorization-code-flow.md)
-  - [Client Credentials Flow]()
-  - [Hybrid Flow]()
 - [OIDC](./authorisation/oidc.md)
 - [SAML](./authorisation/saml.md)
 - [Kerberos]()
 - [JWT]()
 - [SCIM]()
 - [LDAP]()
+- [Role]()
+- [Group]()
+- [Permission list]()
+- [API key]()
 
 ---
 
