@@ -37,7 +37,7 @@ A problem X (in NP) is NP-complete if every problem in NP **reduces** to X.
 
 the reducability property is probably owed to two problems being *mathematically* linked.
 
-~~~admonish tip title=”Analogy”
+~~~admonish tip title="Analogy"
 
 Imagine a building with 100 locked rooms. 
 
@@ -63,7 +63,7 @@ solving an NP-complete problem = Finding its key
 
 ~~~
 
-~~~admonish tip title=“Mental model”
+~~~admonish tip title="Mental model"
 
 Identifying a problem as similar to another (already solved problem) has its benefits in real life. You might have already solved it. 
 
