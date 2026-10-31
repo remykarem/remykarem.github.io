@@ -185,4 +185,9 @@ So how is this useful? To estimate the mean of a distribution, we simply sample 
 
 Central limit theorem
 
+
+$$
+\bar{X}_n = N(\mu, \frac{\sigma^2}{n}
+$$
+
 Like the law of large numbers, but it says that the distribution of the **sample mean** converges to a normal standard normal distribution.
