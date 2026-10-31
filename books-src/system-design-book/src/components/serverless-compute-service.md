@@ -13,8 +13,8 @@ Characteristics:
 Features:
 * [Auto-scalable](../strategies/auto-scaling.md)
 * Reserved concurrency — you can limit the no. of concurrent invocations (i.e. control the rate of processing)
-* [Rate limiting](../strategies/rate-limiting.md)
-* [Retry mechanism](../strategies/retry-mechanism.md) — **concurrency limit**
+* [Rate limiting](../strategies/rate-limiting.md) — **concurrency limit**
+* [Retry mechanism](../strategies/retry-mechanism.md)
 * Integration
   * With other services via Event source mapping (from SQS etc.); batches
   * DLQ integration
